@@ -1,0 +1,39 @@
+{
+  "id": "brightcove-video",
+  "title": "Brightcove Video",
+  "description": "Full-width Brightcove video with caption",
+  "icon": "▶",
+  "section": {
+    "type": "section",
+    "props": {},
+    "blocks": [
+      {
+        "type": "brightcove-video",
+        "props": {
+          "accountId": "2157889325001",
+          "playerId": "Lj7UrCc1z",
+          "videoId": "6384197454112",
+          "playerMode": "single",
+          "videoContentLayout": "bottom",
+          "overlayButtonLabel": "Watch video",
+          "overlayButtonFontIcon": "play",
+          "overlayButtonIconKind": "icon-font",
+          "iconPosition": "left",
+          "captionHeading": "Video Title",
+          "captionDescription": "A brief description of what this video is about.",
+          "posterImage": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:5a9c2977-854d-47d0-8f91-8ce403453389/as/bts-jorge-thumbnail.jpg?format=webp",
+          "posterVariant": "custom",
+          "enablePlayerControls": true,
+          "transcriptSource": "brightcove",
+          "transcriptClickBehavior": "new-tab",
+          "showTranscriptLabel": "transcript",
+          "hideTranscriptLabel": "transcript",
+          "transcriptShowFontIcon": "play",
+          "transcriptHideFontIcon": "play",
+          "transcriptButtonIconKind": "icon-font",
+          "transcriptLinkIconPosition": "after"
+        }
+      }
+    ]
+  }
+}

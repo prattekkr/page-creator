@@ -1,0 +1,57 @@
+{
+  "id": "grid-image-text-alternating",
+  "title": "Grid: Image + Text Alternating Row (5+1+5)",
+  "description": "Grid row with image in 5-col, spacer in 1-col, and eyebrow+title+text in 5-col; repeatable for alternating layouts",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "bg-f1f3ff,no-bottom-margin,regular-padding",
+      "style_bg-color": "bg-f1f3ff",
+      "style_contentWidth": "content-wide",
+      "style_padding": "no-bottom-padding",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-5",
+          "style_customDynamicClass": "grid-cols-5,order-1",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "custom-image", "props": {} }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-1",
+          "style_customDynamicClass": "grid-cols-1,order-2",
+          "filter": "grid-section"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-5",
+          "style_customDynamicClass": "grid-cols-5,order-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "eyebrow-text", "props": { "filter": "eyebrow-text" } },
+          { "type": "custom-title", "props": { "filter": "custom-title" } },
+          {
+            "type": "text-container",
+            "props": { "filter": "text-container" },
+            "children": [
+              { "type": "text-container-text", "props": {} }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

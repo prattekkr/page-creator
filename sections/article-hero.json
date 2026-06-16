@@ -1,0 +1,79 @@
+{
+  "id": "article-hero",
+  "title": "Article Hero (Story Page)",
+  "description": "Full-width story article hero with back CTA, story metadata card, H1 title, and intro body text",
+  "icon": "📰",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-wide,large-radius"
+    },
+    "blocks": [
+      {
+        "type": "hero-container",
+        "props": {
+          "filter": "hero-container",
+          "classes_customDynamicClass": "height-default,overlay-height-short"
+        },
+        "children": [
+          {
+            "type": "hero-container-item",
+            "props": {
+              "image": "https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:breaking-rules-hero/as/breaking-rules-hero.jpg",
+              "imageAlt": "Researchers in a science lab",
+              "imageMimeType": "image/jpeg",
+              "videoId": ""
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "props": {
+          "ctaTarget": "_self",
+          "classes_customDynamicClass": "default-cta,back-cta",
+          "linkText": "All Stories",
+          "iconFont": "chevron",
+          "link": "/who-we-are/our-stories.html"
+        },
+        "children": []
+      },
+      {
+        "type": "story-card",
+        "props": {
+          "storyCardVariant": "storyCardInfo",
+          "hideImage": false,
+          "openInNewTab": false
+        },
+        "children": []
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h1",
+          "classes_customDynamicClass": "h1-size",
+          "title": "Breaking the rules of science to treat cancer"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "body-unica-32-reg"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>How AbbVie researchers toppled widely held scientific beliefs to create new possibilities for patients with cancer.</p>"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

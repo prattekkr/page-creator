@@ -1,0 +1,58 @@
+{
+  "id": "article-body-toc-layout",
+  "title": "Article Body: TOC + Content (2+8 col)",
+  "description": "Grid layout with a 2-column TOC/sidebar column and 8-column main content column for long-form article body",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "grid-container,content-regular",
+      "style_container": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-section,grid-cols-2",
+          "style_container": "grid-section"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-section,grid-cols-8",
+          "style_container": "grid-section"
+        },
+        "children": [
+          {
+            "type": "custom-title",
+            "props": {
+              "filter": "custom-title",
+              "titleType": "h2",
+              "classes_customDynamicClass": "h5-size,width-large",
+              "title": "Section heading"
+            },
+            "children": []
+          },
+          {
+            "type": "text-container",
+            "props": {
+              "filter": "text-container",
+              "classes_customDynamicClass": "spacing-bottom,width-large"
+            },
+            "children": [
+              {
+                "type": "text-container-text",
+                "props": {
+                  "text": "<p>When it comes to creating more time for patients with debilitating diseases, AbbVie's goals are ambitious. Here are five ways the company is driving efficiency across the clinical development process.</p>"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "grid-text-video",
+  "title": "Grid: Text + Video (4+1+7)",
+  "description": "Asymmetric 2-col: narrow text left, 1-col gap, wide video right",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_container": "grid-container",
+      "style_contentWidth": "content-wide",
+      "style_padding": "no-bottom-padding",
+      "style_bg-color": "bg-f4f4f4",
+      "style_customDynamicClass": "content-wide,bg-f4f4f4,no-bottom-margin,regular-padding"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-4",
+          "style_customDynamicClass": "grid-cols-4,order-1",
+          "style_order": "order-1"
+        },
+        "children": [
+          {
+            "type": "custom-title",
+            "props": {
+              "title": "Section heading",
+              "titleType": "h2",
+              "classes_customDynamicClass": "h3-size,medium-weight"
+            }
+          },
+          {
+            "type": "text-container",
+            "props": {},
+            "children": [
+              {
+                "type": "text-container-text",
+                "props": {
+                  "text": "<p>Add your supporting text here to describe the video content on the right.</p>"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-1",
+          "style_customDynamicClass": "grid-cols-1,order-2"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-7",
+          "style_customDynamicClass": "grid-cols-7,order-3"
+        },
+        "children": [
+          {
+            "type": "video",
+            "props": {
+              "videoContentLayout": "bottom",
+              "overlayHeading": "Video Title",
+              "overlayButtonLabel": "Watch video",
+              "overlayButtonFontIcon": "play",
+              "overlayButtonIconKind": "icon-font",
+              "classes_overlayBtnStyle": "video-btn-outline",
+              "classes_overlayColor": "video-overlay-navy",
+              "enablePlayerControls": true,
+              "enableFullscreen": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

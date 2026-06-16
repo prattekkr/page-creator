@@ -1,0 +1,24 @@
+{
+  "id": "related-stories-gray-bg",
+  "title": "Related Stories (Gray Background, 6-col Cards)",
+  "description": "Gray background section header followed by a grid of 6-column-wide related story cards linking to other articles",
+  "icon": "📚",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-wide,no-bottom-margin,section-padding,bg-f4f4f4"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h5",
+          "classes_customDynamicClass": "h5-size,width-large",
+          "title": "Related Articles"
+        },
+        "children": []
+      }
+    ]
+  }
+}

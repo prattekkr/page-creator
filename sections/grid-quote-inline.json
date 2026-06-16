@@ -1,0 +1,28 @@
+{
+  "id": "grid-quote-inline",
+  "title": "Grid: Inline Quote (1+9+2 or 12-col)",
+  "description": "Editorial layout with a quote block in a narrow 12-column or offset 9-column section, used inline within article flows",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "content-wide,no-padding",
+      "style_contentWidth": "content-wide",
+      "style_padding": "no-padding",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-12",
+          "style_customDynamicClass": "grid-cols-12,large-radius",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "quote", "props": {} }
+        ]
+      }
+    ]
+  }
+}

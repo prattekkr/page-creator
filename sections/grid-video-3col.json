@@ -1,0 +1,88 @@
+{
+  "id": "grid-video-3col",
+  "title": "Grid: 3-Column Videos (4+4+4)",
+  "description": "Equal 3-column grid, each column holds a video card",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_container": "grid-container",
+      "style_contentWidth": "content-wide",
+      "style_padding": "no-top-bottom-padding",
+      "style_margin": "no-bottom-margin",
+      "style_bg-color": "bg-f4f4f4",
+      "style_customDynamicClass": "content-wide,bg-f4f4f4,no-bottom-margin,regular-padding,no-top-padding"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-4",
+          "style_customDynamicClass": "grid-cols-4"
+        },
+        "children": [
+          {
+            "type": "video",
+            "props": {
+              "videoContentLayout": "bottom",
+              "overlayHeading": "Video 1 Title",
+              "overlayButtonLabel": "Watch video",
+              "overlayButtonFontIcon": "play",
+              "overlayButtonIconKind": "icon-font",
+              "classes_overlayBtnStyle": "video-btn-outline",
+              "classes_overlayColor": "video-overlay-navy",
+              "enablePlayerControls": true,
+              "enableFullscreen": true
+            }
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-4",
+          "style_customDynamicClass": "grid-cols-4"
+        },
+        "children": [
+          {
+            "type": "video",
+            "props": {
+              "videoContentLayout": "bottom",
+              "overlayHeading": "Video 2 Title",
+              "overlayButtonLabel": "Watch video",
+              "overlayButtonFontIcon": "play",
+              "overlayButtonIconKind": "icon-font",
+              "classes_overlayBtnStyle": "video-btn-outline",
+              "classes_overlayColor": "video-overlay-navy",
+              "enablePlayerControls": true,
+              "enableFullscreen": true
+            }
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-4",
+          "style_customDynamicClass": "grid-cols-4"
+        },
+        "children": [
+          {
+            "type": "video",
+            "props": {
+              "videoContentLayout": "bottom",
+              "overlayHeading": "Video 3 Title",
+              "overlayButtonLabel": "Watch video",
+              "overlayButtonFontIcon": "play",
+              "overlayButtonIconKind": "icon-font",
+              "classes_overlayBtnStyle": "video-btn-outline",
+              "classes_overlayColor": "video-overlay-navy",
+              "enablePlayerControls": true,
+              "enableFullscreen": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

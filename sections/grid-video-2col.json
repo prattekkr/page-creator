@@ -1,0 +1,40 @@
+{
+  "id": "grid-video-2col",
+  "title": "Grid: 2-Column Brightcove Videos (5+5)",
+  "description": "Light-background grid with two equal 5-column Brightcove video panels, used for side-by-side video storytelling",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "bg-f1f3ff,no-bottom-margin,regular-padding,no-top-padding",
+      "style_bg-color": "bg-f1f3ff",
+      "style_contentWidth": "content-wide",
+      "style_padding": "no-top-bottom-padding",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-5",
+          "style_customDynamicClass": "grid-cols-5",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "brightcove-video", "props": { "filter": "brightcove-video" } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-5",
+          "style_customDynamicClass": "grid-cols-5",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "brightcove-video", "props": { "filter": "brightcove-video" } }
+        ]
+      }
+    ]
+  }
+}

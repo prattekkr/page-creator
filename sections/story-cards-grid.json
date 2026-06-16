@@ -1,0 +1,35 @@
+{
+  "id": "story-cards-grid",
+  "title": "Story Cards Grid",
+  "description": "Section containing a story-cards block (e.g. leadership/people cards) that auto-renders linked page cards",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "large-radius"
+    },
+    "blocks": [
+      {
+        "type": "story-cards",
+        "props": {
+          "filter": "story-cards",
+          "classes": "leader-cards-grid"
+        },
+        "children": [
+          {
+            "type": "story-card",
+            "props": {
+              "storyCardVariant": "leaderInfo",
+              "hideImage": false,
+              "hideDescription": false,
+              "hideReadTime": false,
+              "hidePublicationDate": false,
+              "hideRole": false,
+              "openInNewTab": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

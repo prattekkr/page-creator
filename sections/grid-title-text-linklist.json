@@ -1,0 +1,64 @@
+{
+  "id": "grid-title-text-linklist",
+  "title": "Grid: Title + Text + Link List (5+1+6)",
+  "description": "Grid with image/title in 5-col, spacer in 1-col, and text+link-list in 6-col; used for contextual link navigation",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "content-regular,regular-padding",
+      "style_contentWidth": "content-regular",
+      "style_padding": "regular-padding",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-5",
+          "style_customDynamicClass": "grid-cols-5",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "custom-title", "props": { "filter": "custom-title" } },
+          { "type": "separator", "props": { "filter": "separator" } },
+          { "type": "custom-image", "props": {} }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-1",
+          "style_customDynamicClass": "grid-cols-1",
+          "filter": "grid-section"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-6",
+          "style_customDynamicClass": "grid-cols-6",
+          "filter": "grid-section"
+        },
+        "children": [
+          {
+            "type": "text-container",
+            "props": { "filter": "text-container" },
+            "children": [
+              { "type": "text-container-text", "props": {} }
+            ]
+          },
+          {
+            "type": "linklist",
+            "props": { "filter": "linklist" },
+            "children": [
+              { "type": "linklist-item", "props": {} },
+              { "type": "linklist-item", "props": {} }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

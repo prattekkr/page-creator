@@ -1,0 +1,91 @@
+{
+  "id": "grid-image-6col-text-cta-5col-no-bottom",
+  "title": "Grid: Image (6col) + Spacer (1col) + Title + Text + CTA (5col) — No Bottom Padding",
+  "description": "Same 6+1+5 grid split as grid-image-6col-text-cta-5col but with no-bottom-padding added; used when the section is followed immediately by another section without spacing",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_container": "grid-container",
+      "style_customDynamicClass": "grid-container,bg-f1f3ff,content-wide,no-bottom-margin,regular-padding,no-bottom-padding"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-section,grid-cols-6"
+        },
+        "children": [
+          {
+            "type": "custom-image",
+            "props": {
+              "image": "https://abbvie.scene7.com/is/image/abbviecorp/woman-man-conference-square?ts=1745750381003&dpr=off",
+              "imageAlt": "two men scientist whiteboard",
+              "imageMimeType": "image/unknown",
+              "enableLink": false,
+              "getAltFromDAM": false,
+              "displayCaptionBelowImage": false,
+              "imageIsDecorative": false,
+              "clickBehavior": "_self"
+            }
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-section,grid-cols-1"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-section,grid-cols-5"
+        },
+        "children": [
+          {
+            "type": "custom-title",
+            "props": {
+              "filter": "custom-title",
+              "title": "A career at AbbVie",
+              "titleType": "h3",
+              "classes_customDynamicClass": "medium-weight"
+            }
+          },
+          {
+            "type": "text-container",
+            "props": {
+              "filter": "text-container",
+              "classes_customDynamicClass": "-"
+            },
+            "children": [
+              {
+                "type": "text-container-text",
+                "props": {
+                  "text": "<p>As one company, our ~55,000 employees around the world focus on discovering and delivering transformational medicines and products.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "type": "cta",
+            "props": {
+              "linkText": "search open jobs",
+              "link": "https://careers.abbvie.com",
+              "ctaTarget": "_self",
+              "classes_customDynamicClass": "default-cta,light-theme",
+              "iconFont": "chevron",
+              "iconPosition": "before",
+              "iconVariation": "icon-font",
+              "ariaHidden": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

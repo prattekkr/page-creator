@@ -1,0 +1,57 @@
+{
+  "id": "linklist-section",
+  "title": "Link List",
+  "description": "Heading with a list of navigation links",
+  "icon": "🔗",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-wide"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "title": "Related Content",
+          "titleType": "h2",
+          "classes_alignment": "align-left"
+        }
+      },
+      {
+        "type": "linklist",
+        "props": {
+          "variant": "rows-with-arrows",
+          "layout": "single-column",
+          "linkSource": "custom",
+          "maxItems": 25,
+          "childDepth": 1,
+          "sortOrder": "asc",
+          "orderBy": "content-tree",
+          "excludeCurrentPage": true
+        },
+        "children": [
+          {
+            "type": "linklist-item",
+            "props": {
+              "linkText": "Community of Science",
+              "link": "/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science/our-people/community-of-science",
+              "fontIcon": "icon-abbvie-chevron-right",
+              "iconPosition": "after",
+              "classes": "linklist-item"
+            }
+          },
+          {
+            "type": "linklist-item",
+            "props": {
+              "linkText": "Discovery Files",
+              "link": "/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science/our-people/discovery-files",
+              "fontIcon": "icon-abbvie-chevron-right",
+              "iconPosition": "after",
+              "classes": "linklist-item"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

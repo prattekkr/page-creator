@@ -1,0 +1,31 @@
+{
+  "id": "full-width-video",
+  "title": "Full-Width Video (12-col)",
+  "description": "Grid section spanning all 12 columns with an embedded video block (HTML5 or iframe video)",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "no-bottom-margin,no-side-margin",
+      "style_contentWidth": "content-wide",
+      "style_padding": "no-padding",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-12",
+          "style_customDynamicClass": "grid-cols-12",
+          "filter": "grid-section"
+        },
+        "children": [
+          {
+            "type": "video",
+            "props": { "filter": "video" }
+          }
+        ]
+      }
+    ]
+  }
+}

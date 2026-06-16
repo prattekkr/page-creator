@@ -1,0 +1,25 @@
+{
+  "id": "related-story-card-6col",
+  "title": "Related Story Card (6-col Grid Row)",
+  "description": "A single 6-column grid section containing a related content story card, used in pairs within a gray-background related articles layout",
+  "icon": "🗂️",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-6",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "story-card",
+        "props": {
+          "storyCardVariant": "relatedContent",
+          "hideImage": false,
+          "openInNewTab": false,
+          "page": "/content/abbvie-nextgen-eds/corporate/abbvie-com/us/en/who-we-are/our-stories/three-ways-ai-is-changing-drug-discovery-at-abbvie"
+        },
+        "children": []
+      }
+    ]
+  }
+}

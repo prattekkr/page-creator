@@ -1,0 +1,66 @@
+{
+  "id": "grid-cta-band",
+  "title": "Grid: CTA Band (7+2+3)",
+  "description": "Coloured promo band: wide heading left, CTA button pushed right",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_container": "grid-container",
+      "style_contentWidth": "content-wide",
+      "style_padding": "regular-padding",
+      "style_borderRadius": "radius-medium",
+      "style_bg-color": "bg-8a2ecc",
+      "style_customDynamicClass": "content-wide,bg-8a2ecc,height-short,medium-radius,no-bottom-margin,regular-padding,padding-bottom"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-7",
+          "style_customDynamicClass": "grid-cols-7"
+        },
+        "children": [
+          {
+            "type": "custom-title",
+            "props": {
+              "title": "Join the team working to transform patient care",
+              "titleType": "h4",
+              "classes_customDynamicClass": "h4-size,theme-dark",
+              "classes_theme": "theme-dark"
+            }
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-2",
+          "style_customDynamicClass": "grid-cols-2"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-3",
+          "style_customDynamicClass": "grid-cols-3"
+        },
+        "children": [
+          {
+            "type": "cta",
+            "props": {
+              "linkText": "Explore R&D opportunities",
+              "link": "https://www.abbvie.com/join-us/opportunities/research-and-development.html",
+              "ctaTarget": "_self",
+              "classes": "default-cta",
+              "classes_theme": "dark-theme",
+              "classes_customDynamicClass": "dark-theme",
+              "iconPosition": "after"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

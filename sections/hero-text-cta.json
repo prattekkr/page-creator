@@ -1,0 +1,62 @@
+{
+  "id": "hero-text-cta",
+  "title": "Hero + Text + CTA",
+  "description": "Hero with breadcrumb, heading, intro paragraph and call-to-action",
+  "icon": "🦸",
+  "section": {
+    "type": "section",
+    "props": {},
+    "blocks": [
+      {
+        "type": "hero-container",
+        "props": { "classes_customDynamicClass": "height-short" },
+        "children": [
+          {
+            "type": "hero-container-item",
+            "props": {
+              "backgroundVariant": "image",
+              "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c4f67901-0125-4693-9d7e-59a4f751854c/as/behind-the-science-hero-v2.jpg",
+              "imageAlt": "AbbVie Behind the Science hero",
+              "imageMimeType": "image/jpeg"
+            }
+          }
+        ]
+      },
+      {
+        "type": "breadcrumb",
+        "props": {
+          "enableBreadcrumb": true,
+          "enableCurrentPage": true,
+          "enableHiddenItems": true,
+          "useRedirectPageName": true,
+          "homePagePath": "/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science"
+        }
+      },
+      {
+        "type": "custom-title",
+        "props": { "title": "The People Behind Progress", "titleType": "h1" }
+      },
+      {
+        "type": "text-container",
+        "props": {},
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Science is only as bold as the people who drive it. Meet the scientists turning curiosity into therapies, working together across disciplines and pushing through challenges that aim to deliver the next generation of medicines.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "props": {
+          "linkText": "Learn More",
+          "link": "#",
+          "ctaTarget": "_self",
+          "classes": "default-cta"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "faq-accordion",
+  "title": "FAQ Accordion",
+  "description": "Section heading with expandable FAQ items",
+  "icon": "☰",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-wide,large-radius"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "title": "Frequently Asked Questions",
+          "titleType": "h2",
+          "classes_alignment": "align-center"
+        }
+      },
+      {
+        "type": "accordion",
+        "props": {
+          "expandAllLabel": "Expand All",
+          "collapseAllLabel": "Collapse All",
+          "expandIcon": "plus",
+          "collapseIcon": "minus",
+          "expandAllIcon": "plus",
+          "collapseAllIcon": "minus",
+          "classes_showExpandCollapseAll": true,
+          "classes_allowMultipleOpen": true,
+          "classes_iconType": "accordion-icon-font",
+          "classes_desktopWidth": "accordion-m",
+          "classes_customDynamicClass": "h5-size,align-center,cmp-accordion-large"
+        },
+        "children": [
+          {
+            "type": "accordion-item",
+            "props": {
+              "summary": "What is AbbVie's Community of Science?",
+              "text": "<p>AbbVie's Community of Science connects scientists worldwide to collaborate, innovate, and turn bold ideas into the next generation of medicines.</p>"
+            }
+          },
+          {
+            "type": "accordion-item",
+            "props": {
+              "summary": "How does AbbVie support scientific innovation?",
+              "text": "<p>AbbVie scientists partner across disciplines and engage in a constant exchange of ideas, fostering a community committed to advancing research and delivering breakthrough therapies.</p>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

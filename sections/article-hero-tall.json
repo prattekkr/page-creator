@@ -1,0 +1,81 @@
+{
+  "id": "article-hero-tall",
+  "title": "Article Hero Tall (Story Page)",
+  "description": "Tall-height story article hero with video background option, back CTA, story info card, H1 and intro text",
+  "icon": "📰",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-wide,large-radius"
+    },
+    "blocks": [
+      {
+        "type": "hero-container",
+        "props": {
+          "filter": "hero-container",
+          "classes_customDynamicClass": "height-tall,overlay-height-short"
+        },
+        "children": [
+          {
+            "type": "hero-container-item",
+            "props": {
+              "image": "https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:quest-cures-hero/as/quest-cures-hero.jpg",
+              "imageAlt": "Quest for cures hero",
+              "imageMimeType": "image/jpeg",
+              "videoId": "",
+              "ctaUrl": "",
+              "ctaAlt": ""
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "props": {
+          "ctaTarget": "_self",
+          "classes_customDynamicClass": "default-cta,back-cta",
+          "linkText": "All Stories",
+          "iconFont": "chevron",
+          "link": "/who-we-are/our-stories.html"
+        },
+        "children": []
+      },
+      {
+        "type": "story-card",
+        "props": {
+          "storyCardVariant": "storyCardInfo",
+          "hideImage": false,
+          "openInNewTab": false
+        },
+        "children": []
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h1",
+          "classes_customDynamicClass": "h1-size",
+          "title": "Can we find cures faster?"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "body-unica-32-reg"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Learn how AbbVie researchers find and advance ideas that have the potential to cure.</p>"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "article-sidebar-story-card",
+  "title": "Article Sidebar: Related Story Card (2-col)",
+  "description": "2-column grid section with an eyebrow divider label and a side-panel story card, used as an in-article related content sidebar",
+  "icon": "📎",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-2",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "eyebrow-text",
+        "props": {
+          "filter": "eyebrow-text",
+          "classes_customDynamicClass": "divider",
+          "language": "none",
+          "eyebrowText": "Related"
+        },
+        "children": []
+      },
+      {
+        "type": "story-card",
+        "props": {
+          "storyCardVariant": "sidePanel",
+          "hideImage": false,
+          "openInNewTab": false,
+          "page": "/content/abbvie-nextgen-eds/corporate/abbvie-com/us/en/who-we-are/our-stories/how-abbvies-integrated-operations-help-prevent-drug-shortages"
+        },
+        "children": []
+      }
+    ]
+  }
+}

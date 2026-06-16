@@ -1,0 +1,91 @@
+{
+  "id": "grid-4up-feature-cards",
+  "title": "Grid: 4-Up Feature Cards (3+3+3+3)",
+  "description": "Four equal 3-column cards each with image, eyebrow, text, and CTA; used for topic/theme navigation tiles",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "content-regular",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "custom-image", "props": { "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ee1644ae-c3ae-4715-86dd-a1edc9d222e1/as/science-postdoctoral.jpg", "imageMimeType": "image/jpeg", "imageAlt": "AbbVie science postdoctoral", "clickBehavior": "_self", "presetType": "smart-crop" } },
+          { "type": "eyebrow-text", "props": { "filter": "eyebrow-text", "text": "<p><strong>ADVANCING RESEARCH</strong></p>" } },
+          {
+            "type": "text-container",
+            "props": { "filter": "text-container" },
+            "children": [
+              { "type": "text-container-text", "props": { "text": "<p>AbbVie scientists partner across disciplines to foster a community committed to advancing research.</p>" } }
+            ]
+          },
+          { "type": "cta", "props": { "linkText": "Learn More", "ctaTarget": "_self", "classes": "default-cta" } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "custom-image", "props": { "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:885b4ca0-c18b-496a-a4d1-b8a976cd076a/as/highlights-section-scout.jpg", "imageMimeType": "image/jpeg", "imageAlt": "Inspiring Science highlights", "clickBehavior": "_self", "presetType": "smart-crop" } },
+          { "type": "eyebrow-text", "props": { "filter": "eyebrow-text", "text": "<p><strong>INSPIRING SCIENCE</strong></p>" } },
+          {
+            "type": "text-container",
+            "props": { "filter": "text-container" },
+            "children": [
+              { "type": "text-container-text", "props": { "text": "<p>Celebrating the bold ideas and discoveries that are shaping the future of medicine at AbbVie.</p>" } }
+            ]
+          },
+          { "type": "cta", "props": { "linkText": "Learn More", "ctaTarget": "_self", "classes": "default-cta" } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "custom-image", "props": { "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fe03924-99a3-4ca2-9062-62fb60a2b63c/as/volwiler-awards.jpg", "imageMimeType": "image/jpeg", "imageAlt": "ACOS Volwiler Honorees", "clickBehavior": "_self", "presetType": "smart-crop" } },
+          { "type": "eyebrow-text", "props": { "filter": "eyebrow-text", "text": "<p><strong>HONORING EXCELLENCE</strong></p>" } },
+          {
+            "type": "text-container",
+            "props": { "filter": "text-container" },
+            "children": [
+              { "type": "text-container-text", "props": { "text": "<p>Recognizing AbbVie scientists whose dedication and ingenuity exemplify the spirit of scientific excellence.</p>" } }
+            ]
+          },
+          { "type": "cta", "props": { "linkText": "Learn More", "ctaTarget": "_self", "classes": "default-cta" } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "custom-image", "props": { "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:32db5d5e-2fe6-4943-a039-f6c9a2501d9a/as/pathway-to-cure.jpg", "imageMimeType": "image/jpeg", "imageAlt": "Pathway to Cures", "clickBehavior": "_self", "presetType": "smart-crop" } },
+          { "type": "eyebrow-text", "props": { "filter": "eyebrow-text", "text": "<p><strong>SPARKING BREAKTHROUGHS</strong></p>" } },
+          {
+            "type": "text-container",
+            "props": { "filter": "text-container" },
+            "children": [
+              { "type": "text-container-text", "props": { "text": "<p>Explore AbbVie's pathway to cures — from early discovery to the therapies that change patients' lives.</p>" } }
+            ]
+          },
+          { "type": "cta", "props": { "linkText": "Learn More", "ctaTarget": "_self", "classes": "default-cta" } }
+        ]
+      }
+    ]
+  }
+}

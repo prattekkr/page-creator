@@ -1,0 +1,35 @@
+{
+  "id": "cta-blue",
+  "title": "CTA Banner (Blue)",
+  "description": "Blue background section with heading and call-to-action button",
+  "icon": "🔗",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-wide,bg-f1f3ff,small-padding"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "title": "Ready to get started?",
+          "titleType": "h2",
+          "classes_alignment": "align-center",
+          "classes_theme": "theme-light"
+        }
+      },
+      {
+        "type": "cta",
+        "props": {
+          "linkText": "Explore Opportunities",
+          "link": "https://www.abbvie.com/join-us/opportunities/research-and-development.html",
+          "ctaTarget": "_self",
+          "classes": "default-cta",
+          "classes_theme": "dark-theme",
+          "classes_customDynamicClass": "dark-theme",
+          "iconPosition": "after"
+        }
+      }
+    ]
+  }
+}

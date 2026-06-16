@@ -1,0 +1,77 @@
+{
+  "id": "article-body-with-quote",
+  "title": "Article Body with Inline Pull Quote",
+  "description": "8-column article content section with alternating H5 headings, body text, and an inline pull quote",
+  "icon": "💬",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-8",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h2",
+          "classes_customDynamicClass": "h5-size,width-large",
+          "title": "Toppling a fundamental belief in cancer research"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Instead of trying to find all the pieces at once, we thought, let's look here first and find a more focused approach to target this protein.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "props": {
+          "classes_contentAlignment": "quote-align-none",
+          "quotation": "<p>Instead of trying to find all the pieces at once, we thought, let’s look here first and find a more focused approach to target this protein.</p>",
+          "quoteVariant": "quote-standard",
+          "language": "quote-standard,quote-h4"
+        },
+        "children": []
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h2",
+          "classes_customDynamicClass": "h5-size,width-large",
+          "title": "Inventing a new tool to solve the problem"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>We had a problem. The right tool to solve the problem didn’t exist, so we invented the tool, which is really exciting.</p>"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

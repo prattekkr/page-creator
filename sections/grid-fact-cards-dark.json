@@ -1,0 +1,79 @@
+{
+  "id": "grid-fact-cards-dark",
+  "title": "Grid: Fact Cards on Dark Background (6x3-col)",
+  "description": "Dark navy background grid container with six 3-column fact-card tiles, used for R&D statistics or highlights",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "content-wide,bg-071d49,large-radius,no-side-margin",
+      "style_bg-color": "bg-071d49",
+      "style_contentWidth": "content-wide",
+      "style_borderRadius": "radius-large",
+      "style_margin": "no-side-margin",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "fact-card", "props": { "classes_cardColor": "dark-theme", "hideImage": false } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "fact-card", "props": { "classes_cardColor": "dark-theme", "hideImage": false } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "fact-card", "props": { "classes_cardColor": "dark-theme", "hideImage": false } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "fact-card", "props": { "classes_cardColor": "dark-theme", "hideImage": false } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "fact-card", "props": { "classes_cardColor": "dark-theme", "hideImage": false } }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-3",
+          "filter": "grid-section"
+        },
+        "children": [
+          { "type": "fact-card", "props": { "classes_cardColor": "dark-theme", "hideImage": false } }
+        ]
+      }
+    ]
+  }
+}

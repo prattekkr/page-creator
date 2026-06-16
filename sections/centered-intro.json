@@ -1,0 +1,28 @@
+{
+  "id": "centered-intro",
+  "title": "Centered Intro (Title + Text)",
+  "description": "Centered, narrow-container section with an H3 title and one or two text-container paragraphs; used for section introductions",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "align-center,container-x-small,content-wide"
+    },
+    "blocks": [
+      {
+        "type": "title",
+        "props": {
+          "titleType": "h3"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": { "filter": "text-container" },
+        "children": [
+          { "type": "text-container-text", "props": {} }
+        ]
+      }
+    ]
+  }
+}

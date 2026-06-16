@@ -1,0 +1,91 @@
+{
+  "id": "grid-image-6col-text-cta-5col",
+  "title": "Grid: Image (6col) + Spacer (1col) + Title + Text + CTA (5col)",
+  "description": "Grid split with full-width image on the left (6 cols), spacer (1 col), and title + body text + CTA on the right (5 cols); light blue background with regular padding",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_container": "grid-container",
+      "style_customDynamicClass": "grid-container,bg-f1f3ff,regular-padding,no-bottom-margin,content-wide"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-section,grid-cols-6"
+        },
+        "children": [
+          {
+            "type": "custom-image",
+            "props": {
+              "image": "https://abbvie.scene7.com/is/image/abbviecorp/shutterstock_303618281_mod?ts=1745759447587&dpr=off,1&bfc=on&wid=655&hei=522&fit=crop&dpr=off",
+              "imageAlt": "female playing guitar",
+              "imageMimeType": "image/unknown",
+              "enableLink": false,
+              "getAltFromDAM": false,
+              "displayCaptionBelowImage": false,
+              "imageIsDecorative": false,
+              "clickBehavior": "_self"
+            }
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-section,grid-cols-1"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-section,grid-cols-5"
+        },
+        "children": [
+          {
+            "type": "custom-title",
+            "props": {
+              "filter": "custom-title",
+              "title": "Immunology",
+              "titleType": "h3",
+              "classes_customDynamicClass": "h1-size,medium-weight"
+            }
+          },
+          {
+            "type": "text-container",
+            "props": {
+              "filter": "text-container",
+              "classes_customDynamicClass": "-"
+            },
+            "children": [
+              {
+                "type": "text-container-text",
+                "props": {
+                  "text": "<p>A trusted leader dedicated to transforming the lives of people with immune-mediated diseases, today and tomorrow.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "type": "cta",
+            "props": {
+              "linkText": "Explore",
+              "link": "/science/areas-of-focus/immunology",
+              "ctaTarget": "_self",
+              "classes_customDynamicClass": "default-cta,light-theme",
+              "iconFont": "chevron",
+              "iconPosition": "before",
+              "iconVariation": "icon-font",
+              "ariaHidden": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

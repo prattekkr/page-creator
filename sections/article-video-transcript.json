@@ -1,0 +1,85 @@
+{
+  "id": "article-video-transcript",
+  "title": "Article Video with Transcript Accordion",
+  "description": "8-column article section with an embedded video followed by a collapsible transcript accordion",
+  "icon": "📋",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-8",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h3",
+          "classes_customDynamicClass": "h3-size,width-large",
+          "title": "Voices of AbbVie: Reflecting on a Decade of Impact"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>As we recognize 10 years as a company, what makes working at AbbVie unique? Global employees weigh in.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "props": {
+          "filter": "video",
+          "analytics_id": "-",
+          "overlayHeading": "Voices of AbbVie: Reflecting on a Decade of Impact",
+          "overlayDescription": "-"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Three words I would use to describe AbbVie's culture are transparency, equality, and resilience.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "accordion",
+        "props": {
+          "filter": "accordion",
+          "collapseAllIcon": "minus",
+          "language": "none"
+        },
+        "children": [
+          {
+            "type": "accordion-item",
+            "props": {
+              "summary": "Video Transcript",
+              "text": "<p>Full transcript of the video...</p>"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "hero-breadcrumb-text",
+  "title": "Hero + Breadcrumb + Title + Text",
+  "description": "Full-width hero image section with breadcrumb, H1 title, and introductory body text (no CTA)",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_contentWidth": "content-wide",
+      "style_borderRadius": "radius-medium",
+      "style_padding": "section-bottom-margin",
+      "style_customDynamicClass": "content-wide,large-radius"
+    },
+    "blocks": [
+      {
+        "type": "hero-container",
+        "props": { "filter": "hero-container" },
+        "children": [
+          { "type": "hero-container-item", "props": {} }
+        ]
+      },
+      {
+        "type": "breadcrumb",
+        "props": {
+          "enableBreadcrumb": true,
+          "enableCurrentPage": true,
+          "enableHiddenItems": true,
+          "useRedirectPageName": true
+        },
+        "children": []
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h1",
+          "classes_customDynamicClass": "medium-weight,h1-size"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_textBottomSpacing": "mb-comfortable",
+          "classes_commonCustomClass": "body-unica-32-reg"
+        },
+        "children": [
+          { "type": "text-container-text", "props": {} }
+        ]
+      }
+    ]
+  }
+}

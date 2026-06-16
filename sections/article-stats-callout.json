@@ -1,0 +1,81 @@
+{
+  "id": "article-stats-callout",
+  "title": "Article Stats Callout (Inline Data Highlights)",
+  "description": "8-column article section displaying short statistic or data-highlight text blocks alongside body copy, used for impactful numbers mid-article",
+  "icon": "📊",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-8",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h2",
+          "classes_customDynamicClass": "h5-size,width-large",
+          "title": "By the numbers"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>participants in the Innovation Challenge</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>participants in Pathway to Cures Hackathons, strengthening ideas and networks across R&amp;D</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p><strong>Curious for more?</strong> Check out our first-ever podcast series for more insightful conversations from AbbVie scientists.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "props": {
+          "filter": "separator",
+          "showLine": false
+        },
+        "children": []
+      }
+    ]
+  }
+}

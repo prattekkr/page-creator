@@ -1,0 +1,21 @@
+{
+  "id": "separator-spacer-section",
+  "title": "Separator Spacer Section",
+  "description": "Section containing only a tall separator (96px) with no visible line; used to add vertical breathing room between sections on a light blue background",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "section-padding,content-wide,bg-f1f3ff,no-bottom-margin"
+    },
+    "blocks": [
+      {
+        "type": "separator",
+        "props": {
+          "classes_customDynamicClass": "separator-height-96",
+          "showLine": false
+        }
+      }
+    ]
+  }
+}

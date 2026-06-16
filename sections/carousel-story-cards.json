@@ -1,0 +1,45 @@
+{
+  "id": "carousel-story-cards",
+  "title": "Carousel: Story Cards",
+  "description": "Full-width (12-col) grid section containing a carousel block with story-card slides",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "content-wide",
+      "filter": "grid-container"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_customDynamicClass": "grid-cols-12",
+          "filter": "grid-section"
+        },
+        "children": [
+          {
+            "type": "carousel",
+            "props": {
+              "filter": "carousel",
+              "carouselVariant": "static",
+              "classes_customDynamicClass": "carousel-default",
+              "enableDotNavigation": true,
+              "enableLooping": true,
+              "enableNextPreviousControls": true,
+              "centerActiveSlide": true,
+              "autoplay": false,
+              "slideTransitionTime": 3000
+            }
+          },
+          {
+            "type": "story-card",
+            "props": {
+              "storyCardVariant": "leaderInfo",
+              "hideImage": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

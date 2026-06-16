@@ -1,0 +1,79 @@
+{
+  "id": "article-body-with-image",
+  "title": "Article Body with Inline Image",
+  "description": "8-column article content section with H5 headings, body text paragraphs, and an inline editorial image mid-article",
+  "icon": "🖼️",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-8",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h2",
+          "classes_customDynamicClass": "h5-size,width-large",
+          "title": "The discovery that changed everything"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Discovering and developing new medicines is not easy. But it is an aspiration that drives our scientists every day to push forward and find answers for patients.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "custom-image",
+        "props": {
+          "clickBehavior": "_self",
+          "enableWarnOnLeave": false,
+          "getCaptionFromDAM": false,
+          "image": "https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:rd-investment/as/scientist-lab.jpg",
+          "imageAlt": "scientist in lab",
+          "imageMimeType": "image/jpeg"
+        },
+        "children": []
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h2",
+          "classes_customDynamicClass": "h5-size,width-large",
+          "title": "Building on decades of investment"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Over the past decade, AbbVie has invested more than $50 billion in research and development, building capabilities across oncology, immunology, and neuroscience.</p>"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

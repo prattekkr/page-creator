@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\pratteks\\\\Desktop\\\\manual\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell($path = \"C:\\\\Users\\\\pratteks\\\\Desktop\\\\manual\"; if \\(Test-Path $path\\) { Write-Host \"Directory exists\"; Get-ChildItem -Path $path -Recurse -Force | ForEach-Object { $_.FullName } } else { Write-Host \"Directory does not exist\" })",
+      "PowerShell($settingsPath = \"C:\\\\Users\\\\pratteks\\\\Desktop\\\\manual\\\\.claude\\\\settings.local.json\"; Write-Host \"File size: $\\(Get-Item $settingsPath | Select-Object -ExpandProperty Length\\) bytes\"; Write-Host \"Last modified: $\\(Get-Item $settingsPath | Select-Object -ExpandProperty LastWriteTime\\)\")",
+      "Bash(curl -s -u \"migration:migration\" \"https://author-p157365-e1665873.adobeaemcloud.com/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science.2.json\")",
+      "Bash(curl -s -u \"migration:migration\" \"https://author-p157365-e1665873.adobeaemcloud.com/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science/jcr:content.infinity.json\")",
+      "Bash(curl -s -u \"migration:migration\" \"https://author-p157365-e1665873.adobeaemcloud.com/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science/our-people/jcr:content.infinity.json\")",
+      "Bash(curl -s -u \"migration:migration\" \"https://author-p157365-e1665873.adobeaemcloud.com/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science/areas-of-innovation/jcr:content.infinity.json\")"
+    ]
+  }
+}

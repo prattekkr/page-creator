@@ -1,0 +1,101 @@
+{
+  "id": "article-body-with-video",
+  "title": "Article Body with Embedded Brightcove Video",
+  "description": "8-column article content section with H2 heading, body text, an embedded Brightcove video, and a follow-on pull quote",
+  "icon": "🎬",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-8",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Explore how artificial intelligence can accelerate discovery of new drug targets, optimize drug design, and bring treatments to patients faster.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h2",
+          "title": "AI #1: Identifying new drug targets"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Machine learning models can analyze vast genomic datasets to surface novel targets that human researchers might miss.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "brightcove-video",
+        "props": {
+          "filter": "brightcove-video",
+          "accountId": "2157889325001",
+          "projectNumber": "",
+          "captionDescription": ""
+        },
+        "children": []
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h3",
+          "title": "From data to discovery"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>By integrating multi-omic data sources with AI-powered predictive models, researchers can prioritize only the most promising target candidates.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "props": {
+          "quoteVariant": "quote-standard",
+          "language": "quote-standard,quote-h4",
+          "classes_contentAlignment": "quote-align-none",
+          "quotation": "<p>What was previously a once-in-a-lifetime moment will hopefully become a reality for every scientist at AbbVie.</p>"
+        },
+        "children": []
+      }
+    ]
+  }
+}

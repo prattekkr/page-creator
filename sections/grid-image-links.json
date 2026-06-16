@@ -1,0 +1,104 @@
+{
+  "id": "grid-image-links",
+  "title": "Grid: Image + Links (5+1+6)",
+  "description": "Image & title left, gap, text & link list right",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_container": "grid-container",
+      "style_customDynamicClass": "content-regular,regular-padding,section-bottom-margin"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-5",
+          "style_customDynamicClass": "grid-cols-5"
+        },
+        "children": [
+          {
+            "type": "custom-title",
+            "props": {
+              "title": "Section Heading",
+              "titleType": "h3",
+              "classes_customDynamicClass": "h3-size,medium-weight"
+            }
+          },
+          {
+            "type": "custom-image",
+            "props": {
+              "imageMimeType": "image/jpeg",
+              "imageAlt": "section image",
+              "clickBehavior": "_self"
+            }
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-1",
+          "style_customDynamicClass": "grid-cols-1"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-6",
+          "style_customDynamicClass": "grid-cols-6"
+        },
+        "children": [
+          {
+            "type": "text-container",
+            "props": {},
+            "children": [
+              {
+                "type": "text-container-text",
+                "props": {
+                  "text": "<p>From quick insights to in-depth stories, explore all the ways AbbVie science is advancing patient care.</p>"
+                }
+              }
+            ]
+          },
+          {
+            "type": "linklist",
+            "props": {
+              "variant": "rows-with-arrows",
+              "layout": "single-column",
+              "linkSource": "custom",
+              "maxItems": 25,
+              "childDepth": 1,
+              "sortOrder": "asc",
+              "orderBy": "content-tree",
+              "excludeCurrentPage": true
+            },
+            "children": [
+              {
+                "type": "linklist-item",
+                "props": {
+                  "linkText": "Link 1",
+                  "link": "#",
+                  "fontIcon": "icon-abbvie-chevron-right",
+                  "iconPosition": "after",
+                  "classes": "linklist-item"
+                }
+              },
+              {
+                "type": "linklist-item",
+                "props": {
+                  "linkText": "Link 2",
+                  "link": "#",
+                  "fontIcon": "icon-abbvie-chevron-right",
+                  "iconPosition": "after",
+                  "classes": "linklist-item"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "highlight-fact-cards",
+  "title": "Highlight: Fact Cards (6+3+3)",
+  "description": "Full-page highlight section with background image and three fact-cards arranged in a 6+3+3 split",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_contentWidth": "content-wide",
+      "style_borderRadius": "radius-large",
+      "style_padding": "section-padding",
+      "style_alignment": "align-center",
+      "style_margin": "no-side-margin",
+      "style_customDynamicClass": "grid-full-page-5-v1,section-padding,large-radius,content-wide,no-bottom-margin,no-side-margin",
+      "style_container": "highlight"
+    },
+    "blocks": [
+      {
+        "type": "fact-card",
+        "props": {
+          "classes_cardColor": "medium-theme",
+          "hideImage": false
+        },
+        "children": []
+      },
+      {
+        "type": "fact-card",
+        "props": {
+          "classes_cardColor": "medium-theme",
+          "hideImage": false
+        },
+        "children": []
+      },
+      {
+        "type": "fact-card",
+        "props": {
+          "classes_cardColor": "medium-theme",
+          "hideImage": false
+        },
+        "children": []
+      }
+    ]
+  }
+}

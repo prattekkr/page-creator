@@ -1,0 +1,22 @@
+{
+  "id": "teaser-section",
+  "title": "Teaser Section",
+  "description": "Content-regular section with a single teaser block (eyebrow + bold title + description + optional link)",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-regular"
+    },
+    "blocks": [
+      {
+        "type": "teaser",
+        "props": {
+          "classes_customDynamicClass": "teaser-h2",
+          "linkTarget": "_self"
+        },
+        "children": []
+      }
+    ]
+  }
+}

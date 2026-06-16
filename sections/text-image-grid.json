@@ -1,0 +1,33 @@
+{
+  "id": "text-image-grid",
+  "title": "Text + Image (Grid)",
+  "description": "Two-column grid: text on the left, image on the right",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "style_customDynamicClass": "content-wide,no-padding",
+      "style_contentWidth": "content-wide",
+      "style_padding": "no-padding",
+      "style_borderRadius": "no-radius"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-6",
+          "style_customDynamicClass": "grid-cols-6"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "style_gridCols": "grid-cols-6",
+          "style_customDynamicClass": "grid-cols-6"
+        },
+        "children": []
+      }
+    ]
+  }
+}

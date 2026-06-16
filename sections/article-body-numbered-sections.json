@@ -1,0 +1,93 @@
+{
+  "id": "article-body-numbered-sections",
+  "title": "Article Body: Numbered Sections (H2 + Text)",
+  "description": "8-column article body with multiple H2 subheadings each followed by a text block, ideal for numbered listicle-style stories",
+  "icon": "📝",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-8",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h2",
+          "classes_customDynamicClass": "h5-size,width-large",
+          "title": "Introduction"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Here are five ways the company is driving efficiency across the clinical development process:</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h5",
+          "classes_customDynamicClass": "h5-size,format-raised,width-large",
+          "title": "1. Smarter patient matching"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>By using AI-driven trial matching, AbbVie can identify the right patients for clinical trials in a fraction of the time it once took.</p>"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "titleType": "h5",
+          "classes_customDynamicClass": "h5-size,format-outdented,width-large",
+          "title": "2. Decentralized trial infrastructure"
+        },
+        "children": []
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>Remote monitoring and digital endpoints let patients participate from home, broadening diversity and accelerating enrollment.</p>"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

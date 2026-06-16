@@ -1,0 +1,92 @@
+{
+  "id": "related-content-footer",
+  "title": "Related Content - Footer",
+  "description": "Related Content heading + 6+6 story cards grid + separator — 3 sections added at once",
+  "icon": "⊞",
+  "sections": [
+    {
+      "type": "section",
+      "props": {
+        "style_customDynamicClass": "bg-f4f4f4,no-bottom-margin,section-padding,content-wide"
+      },
+      "blocks": [
+        {
+          "type": "custom-title",
+          "props": {
+            "title": "Related Content",
+            "titleType": "h2"
+          }
+        }
+      ]
+    },
+    {
+      "type": "grid-container",
+      "props": {
+        "style_container": "grid-container",
+        "style_customDynamicClass": "bg-f4f4f4,regular-padding,no-top-padding,no-bottom-margin",
+        "filter": "grid-container"
+      },
+      "blocks": [
+        {
+          "type": "grid-section",
+          "props": {
+            "style_container": "grid-section",
+            "style_customDynamicClass": "grid-cols-6",
+            "filter": "grid-section"
+          },
+          "children": [
+            {
+              "type": "story-card",
+              "props": {
+                "storyCardVariant": "relatedContent",
+                "openInNewTab": true,
+                "hidePublicationDate": false,
+                "hideReadTime": false,
+                "hideRole": false,
+                "hideDescription": false,
+                "hideImage": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "grid-section",
+          "props": {
+            "style_container": "grid-section",
+            "style_customDynamicClass": "grid-cols-6",
+            "filter": "grid-section"
+          },
+          "children": [
+            {
+              "type": "story-card",
+              "props": {
+                "storyCardVariant": "relatedContent",
+                "openInNewTab": true,
+                "hidePublicationDate": false,
+                "hideReadTime": false,
+                "hideRole": false,
+                "hideDescription": false,
+                "hideImage": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "props": {
+        "style_customDynamicClass": "bg-f4f4f4,no-bottom-margin,section-padding,content-wide"
+      },
+      "blocks": [
+        {
+          "type": "separator",
+          "props": {
+            "classes_customDynamicClass": "separator-height-112",
+            "showLine": false
+          }
+        }
+      ]
+    }
+  ]
+}

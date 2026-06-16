@@ -1,0 +1,31 @@
+{
+  "id": "article-media-inquiries",
+  "title": "Article Footer: Media Inquiries",
+  "description": "Small-text block at the end of a story article with media/press contact information and email link",
+  "icon": "✉️",
+  "section": {
+    "type": "grid-section",
+    "props": {
+      "style_customDynamicClass": "grid-section,grid-cols-8",
+      "style_container": "grid-section"
+    },
+    "blocks": [
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom,width-large,body-unica-20-reg"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p><strong>Media inquiries:</strong><br> <br> Email: <a href=\"mailto:abbviemediarelations@abbvie.com\">abbviemediarelations@abbvie.com</a></p>"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "page-builder",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js"],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "aem-page-creator",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["aem-page-creator/server.js"],
+      "port": 3002
+    },
+    {
+      "name": "migrator",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:/Users/pratteks/Desktop/migrator/server.js"],
+      "port": 3001
+    }
+  ]
+}

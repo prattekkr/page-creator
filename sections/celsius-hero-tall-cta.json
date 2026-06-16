@@ -1,0 +1,77 @@
+{
+  "id": "celsius-hero-tall-cta",
+  "title": "Hero Tall + Left Title + Text + CTA (Light Font)",
+  "description": "Full-page tall hero with short overlay, left-aligned H1, body text, and external CTA link — used for acquisition/partnership announcement pages",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "style_customDynamicClass": "content-wide,large-radius",
+      "style_customClass": "light-font body-unica-32-reg"
+    },
+    "blocks": [
+      {
+        "type": "hero-container",
+        "props": {
+          "filter": "hero-container",
+          "classes_overlayHeight": "overlay-height-short",
+          "classes": ["height-tall"]
+        },
+        "children": [
+          {
+            "type": "hero-container-item",
+            "props": {
+              "backgroundVariant": "image",
+              "image": "https://abbvie.scene7.com/is/image/abbviecorp/woman-in-lab-looking-down?fmt=webp",
+              "imageMimeType": "image/jpeg"
+            }
+          }
+        ]
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "filter": "custom-title",
+          "title": "Celsius Therapeutics is now a part of AbbVie",
+          "titleType": "h1",
+          "classes_alignment": "align-left",
+          "classes_customDynamicClass": "h1-size,medium-weight",
+          "classes_fontWeight": "weight-medium",
+          "classes_theme": "theme-light"
+        }
+      },
+      {
+        "type": "text-container",
+        "props": {
+          "filter": "text-container",
+          "classes_customDynamicClass": "spacing-bottom",
+          "classes_textBottomSpacing": "mb-comfortable",
+          "classes_commonCustomClass": "body-unica-32-reg"
+        },
+        "children": [
+          {
+            "type": "text-container-text",
+            "props": {
+              "text": "<p>We aim to develop and deliver innovative medicines that have an impact on people's lives.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "props": {
+          "linkText": "Read the announcement",
+          "link": "https://news.abbvie.com/2024-06-27-AbbVie-Acquires-Celsius-Therapeutics",
+          "ctaTarget": "_blank",
+          "classes": "default-cta",
+          "classes_customDynamicClass": "light-theme",
+          "iconFont": "chevron",
+          "iconPosition": "before",
+          "iconVariation": "none",
+          "aria-label": "Read the announcement",
+          "ariaHidden": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "hero-intro",
+  "title": "Hero + Intro",
+  "description": "Hero image with breadcrumb and H1 heading",
+  "icon": "🦸",
+  "section": {
+    "type": "section",
+    "props": {},
+    "blocks": [
+      {
+        "type": "hero-container",
+        "props": { "classes_customDynamicClass": "height-short" },
+        "children": [
+          {
+            "type": "hero-container-item",
+            "props": {
+              "backgroundVariant": "image",
+              "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:961661d9-2d38-4860-afc3-4e8e90645b5f/as/cos-hero-v2.jpg",
+              "imageAlt": "AbbVie Community of Science hero",
+              "imageMimeType": "image/jpeg"
+            }
+          }
+        ]
+      },
+      {
+        "type": "breadcrumb",
+        "props": {
+          "enableBreadcrumb": true,
+          "enableCurrentPage": true,
+          "enableHiddenItems": true,
+          "useRedirectPageName": true,
+          "homePagePath": "/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science"
+        }
+      },
+      {
+        "type": "custom-title",
+        "props": {
+          "title": "A Community Built to Drive Science Further",
+          "titleType": "h1"
+        }
+      }
+    ]
+  }
+}
