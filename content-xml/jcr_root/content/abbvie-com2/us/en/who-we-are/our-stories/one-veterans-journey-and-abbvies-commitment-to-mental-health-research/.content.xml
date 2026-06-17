@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-11-22T11:22:09.839-05:00"
+        cq:lastModifiedBy="chiucx"
+        cq:tags="[abbvie-com-2:categories/neuroscience-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Stories like Josh Barker's drive us to innovate in mental health research "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-11-21T16:40:22.360-05:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="From Darkness to Hope: One Veteran's Journey and AbbVie's Commitment to Mental Health Research "
+        jcr:uuid="1f3779a6-f794-49a2-9972-d3660ddfa442"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="Stories like Josh Barker's drive us to innovate in mental health research "
+        fileReference="/content/dam/abbvie-com2/images/stories/one-veteran's-journey/wa-post-mental-health-hero.jpg"
+        hideInNav="true"
+        imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+        navTitle="From Darkness to Hope: One Veteran's Journey and AbbVie's Commitment to Mental Health Research "
+        ogimage="/content/dam/abbvie-com2/images/stories/one-veteran's-journey/wa-post-mental-health-hero.jpg"
+        pageTitle="One Veteran's Journey with Depression and AbbVie's Commitment to Mental Health Research "
+        publishDate="{Date}2024-11-22T15:33:00.000-06:00"
+        readTime="6"
+        readWatchTimeSel="read-time"
+        title="One Veteran's Journey and AbbVie's Commitment to Mental Health Research ">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2024-11-14T12:26:16.524-05:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/one-veteran's-journey/wa-post-mental-health-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-18T12:17:10.085-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-11-14T12:27:34.663-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="From Darkness to Hope: One Veteran's Journey and AbbVie's Commitment to Mental Health Research"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-11-14T12:28:05.009-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Stories like Josh Barker's drive us to innovate in mental health research.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <video
+                            jcr:created="{Date}2024-11-20T16:16:06.232-05:00"
+                            jcr:createdBy="VALENSX5"
+                            jcr:lastModified="{Date}2024-11-20T16:16:06.232-05:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/video/v2/video"/>
+                        <video_copy
+                            cq:styleIds="[1]"
+                            jcr:created="{Date}2024-11-18T13:30:55.091-05:00"
+                            jcr:createdBy="VALENSX5"
+                            jcr:lastModified="{Date}2024-11-22T11:22:09.832-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/video/v2/video"
+                            brightcoveAutoPlay="false"
+                            btnText="Watch 3:37"
+                            descriptiveIframeTitle="Changing Minds"
+                            fileReference="/content/dam/abbvie-com2/images/stories/one-veteran's-journey/wa-post-video-poster.jpg"
+                            imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                            imgAlt="changing minds video"
+                            loopVideo="false"
+                            showBrightcoveControls="false"
+                            showPlayerControls="false"
+                            showRelatedContent="false"
+                            showVideoInfo="false"
+                            textIsRich="[true,true]"
+                            title="One Veteran’s Mental Health Journey and AbbVie’s Unwavering Commitment to Research"
+                            videoType="youtube"
+                            youtubeAutoPlay="false"
+                            youtubeUrl="https://www.youtube-nocookie.com/embed/cAsnYxyFoc0?rel=0"/>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-11-14T12:44:56.259-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>From the outside, things seemed to be going well for Josh Barker. He had received a number of commendations in his military career and was honored for serving with distinction. But internally, he felt like he was falling apart. After watching his friends and fellow airmen get injured, or even killed, it became a struggle just to show up to work. Some mornings he could barely get out of bed.&lt;/p>&#xd;&#xa;&lt;p>“My condition progressed to the point where I generally had an outlook on life, like, ‘Why are we even here? What am I even doing?’” Josh said. “At the darkest point of my experience, I felt so isolated, so alone.”&lt;/p>&#xd;&#xa;&lt;p>Eventually, Josh hit rock bottom. After an attempt to take his own life and a stay in a psychiatric care unit, he was given a diagnosis: Major Depressive Disorder. He spent years working toward stability—seeing therapists, taking medications, consulting with various doctors—until, eventually, he came to feel like he had regained control of his life.&lt;/p>&#xd;&#xa;&lt;p>Josh’s struggle is far from uncommon. One in five U.S. adults live with some form of mental illness, according to &lt;a href=&quot;https://www.nimh.nih.gov/health/statistics/mental-illness&quot; target=&quot;_blank&quot;>the National Institutes of Health&lt;/a>. It’s a widespread issue affecting 57.8 million Americans—and one that AbbVie has dedicated itself to addressing.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <quote
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2024-11-14T12:26:35.391-05:00"
+                                jcr:createdBy="VALENSX5"
+                                jcr:lastModified="{Date}2024-11-14T12:42:53.143-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="A.J. Cannon"
+                                attributionTitle="Medical Director in Neuroscience Clinical Development at AbbVie"
+                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                fileReference="/content/dam/abbvie-com2/images/stories/one-veteran's-journey/ajc-headshot.jpg"
+                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                quote="It’s personal for us. There are people out there that need the medicines we are working to develop. You know them, I know them, everybody in this company knows them."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-11-14T12:30:39.316-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2024-11-14T12:44:26.702-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“Progress in psychiatric drug development has historically been slow due to the limited understanding of the brain and lack of advanced technologies and methods. However, breakthroughs in this field are happening now,” said A.J. Cannon, a physician-neuroscientist who designs and executes clinical trials evaluating novel treatments for mental illnesses. “It's an exciting time for the field and we believe that we have the tools to help transform the lives of people living with mental illness.”&lt;/p>&#xd;&#xa;&lt;p>AbbVie has invested heavily in the mental health space, building a vast in-house network of clinicians, researchers, pharmacologists, and other scientists who work collaboratively to develop cutting-edge medications for mental illnesses. According to Cannon, it’s a uniquely difficult, complicated area of practice.&lt;/p>&#xd;&#xa;&lt;p>The likelihood of drug approval in psychiatry is just &lt;a href=&quot;https://go.bio.org/rs/490-EHZ-999/images/Clinical%20Development%20Success%20Rates%202006-2015%20-%20BIO%2C%20Biomedtracker%2C%20Amplion%202016.pdf&quot; target=&quot;_blank&quot;>6.2 percent&lt;/a>, Cannon said—one of the lowest success rates in drug development outside of oncology. That’s due in part to the complexity of brain pathology, limitations of preclinical models and clinical trial design. But Cannon and his colleagues are working to overcome those hurdles—addressing them across all stages of drug development.&lt;/p>&#xd;&#xa;&lt;p>“Every single person is different. And that individuality is also something that makes designing clinical trials challenging,” said Cannon. “We have to figure out the best way to objectively measure if a drug is working, which is very difficult, especially in psychiatry.” From biosensors and wearable technologies to searching for new biomarkers, AbbVie is pushing beyond traditional methods used to measure psychiatric disorders in clinical research.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <image_copy
+                                jcr:created="{Date}2024-11-14T12:31:18.165-05:00"
+                                jcr:createdBy="VALENSX5"
+                                jcr:lastModified="{Date}2024-11-15T15:28:13.429-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="true"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/images/stories/one-veteran's-journey/wa-post-data-infographic.jpg"
+                                isDecorative="false"
+                                openInNewWindow="false"
+                                titleValueFromDAM="true"/>
+                            <text
+                                jcr:created="{Date}2024-11-21T16:28:10.474-05:00"
+                                jcr:createdBy="VALENSX5"
+                                jcr:lastModified="{Date}2024-11-21T16:41:16.017-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Source:&amp;nbsp;&lt;a href=&quot;https://www.nimh.nih.gov/health/statistics/mental-illness&quot; target=&quot;_blank&quot;>https://www.nimh.nih.gov/health/statistics/mental-illness&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-11-14T12:30:39.316-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2024-11-21T16:48:18.666-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>The work Cannon and AbbVie do can have a life-changing impact on patients. Without a holistic approach to care, Josh said, it’s hard to know where he’d be today.&lt;/p>&#xd;&#xa;&lt;p>“With the help from my providers and my support network, I was able to get over that hill and go out and explore and enjoy the world,” Josh said. “It’s crucial to know that companies like AbbVie are working towards treatment solutions for people who are going through these types of things.”&lt;/p>&#xd;&#xa;&lt;p>AbbVie’s mission, Cannon said, is to have a “remarkable impact” on the lives of patients. “That’s the aspirational goal that we have set as a company.”&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/abbvie-com2/us/en/who-we-are/our-stories/a-legacy-of-leadership-in-mental-health.html&quot;>Learn more about AbbVie’s commitment to mental health research&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Content created for AbbVie by &lt;a href=&quot;https://www.washingtonpost.com/creativegroup/archive/&quot; target=&quot;_blank&quot;>WP Creative Group.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>References&lt;/b>&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>National Institute of Mental Health “Mental Illness.”&amp;nbsp; &lt;a href=&quot;https://www.nimh.nih.gov/health/statistics/mental-illness&quot; target=&quot;_blank&quot;>https://www.nimh.nih.gov/health/statistics/mental-illness&lt;/a>, Accessed 30 October 2024&lt;/li>&#xd;&#xa;&lt;li>Clinical Development Success Rates 2006-2015:&amp;nbsp; &lt;a href=&quot;https://go.bio.org/rs/490-EHZ-999/images/Clinical%20Development%20Success%20Rates%202006-2015%20-%20BIO%2C%20Biomedtracker%2C%20Amplion%202016.pdf&quot; target=&quot;_blank&quot;>https://go.bio.org/rs/490-EHZ-999/images/Clinical%20Development%20Success%20Rates%202006-2015%20-%20BIO%2C%20Biomedtracker%2C%20Amplion%202016.pdf&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text2_copy_copy_5593
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-10-29T12:22:00.447-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Media inquiries:&lt;/b>&lt;br>&#xd;&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

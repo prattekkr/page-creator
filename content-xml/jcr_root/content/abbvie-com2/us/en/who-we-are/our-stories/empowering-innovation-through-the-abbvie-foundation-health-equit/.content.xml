@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-03-17T10:37:50.649-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/philanthropy-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Learn how the AbbVie Foundation accelerator supports nonprofits tackling health disparities with mentorship, resources and funding to scale their impact. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-02-02T14:34:30.103-05:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Empowering Innovation Through the AbbVie Foundation Health Equity Accelerator    "
+        jcr:uuid="93ba160d-8b72-4fa2-ae74-eb376842f8f9"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read story"
+        ctaText="Read story"
+        description="Community-led organizations receive mentorship and funding to scale health equity solutions through the AbbVie Foundation's accelerator program. "
+        fileReference="/content/dam/abbvie-com2/images/stories/accelerator/accelerator-story-hero.jpg"
+        hideInNav="true"
+        navTitle="Empowering Innovation Through the AbbVie Foundation Health Equity Accelerator    "
+        pageTitle="Empowering Innovation Through the AbbVie Foundation Health Equity Accelerator    "
+        publishDate="{Date}2026-01-29T15:06:00.000-06:00"
+        readTime="4"
+        readWatchTimeSel="read-time"
+        title="Empowering Innovation Through the Health Equity Accelerator ">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2026-01-26T16:06:39.502-05:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/accelerator/accelerator-story-hero.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="true"
+                        enableLazyLoading="false"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2026-02-03T12:05:51.603-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2026-01-26T16:14:40.313-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Empowering Innovation Through the AbbVie Foundation Health Equity Accelerator "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-01-28T14:46:41.277-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Learn about the program’s continued support for community-led solutions to advance health equity.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-29T12:29:27.434-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>In Puerto Rico, health outcomes and access to nutritious food are inseparable. Facing the&amp;nbsp;&lt;a href=&quot;https://hdpulse.nimhd.nih.gov/data-portal/social/table?age=001&amp;amp;age_options=ageall_1&amp;amp;demo=00007&amp;amp;demo_options=poverty_3&amp;amp;race=00&amp;amp;race_options=race_7&amp;amp;sex=0&amp;amp;sex_options=sexboth_1&amp;amp;socialtopic=080&amp;amp;socialtopic_options=social_6&amp;amp;statefips=00&amp;amp;statefips_options=area_states&quot; target=&quot;_blank&quot;>highest poverty and food insecurity rates in the U.S.&lt;/a>, vulnerable Puerto Rican populations, including older adults, face limited resources and gaps in essential services.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>“They don’t have a way to get to the hospital or treatment, much less to a supermarket half an hour away to get healthy food,” explained Mari Jo Laborde, president and CEO of Banco de Alimentos de Puerto Rico. “You put that together with less access to support from their families and you really do create a perfect storm for untreated medical conditions.”&lt;/p>&#xd;&#xa;&lt;p>While these challenges are acute in Puerto Rico, they echo the realities of underserved communities across the U.S., where health outcomes are shaped not only by clinical care, but also by complex factors such as geography, access to education, food, financial resources and more.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>But within these communities lie the seeds of transformation: nonprofit organizations with deep local knowledge, trusted relationships and innovative ideas that are uniquely positioned to tackle disparities and increase access to care. While these organizations have a strong vision, they often lack the&amp;nbsp;resources,&amp;nbsp;networks&amp;nbsp;and strategic support needed to scale their impact.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-01-28T14:44:28.919-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-01-28T14:44:28.919-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2026-01-26T16:09:22.841-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-01-28T14:42:49.639-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Catalyzing Innovation to Tackle Disparities"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-03-17T10:12:35.500-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Recognizing this gap, the&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/sustainability/abbvie-foundation.html&quot;>AbbVie Foundation&lt;/a>&amp;nbsp;in partnership with&amp;nbsp;&lt;a href=&quot;https://matter.health/&quot; target=&quot;_blank&quot;>MATTER&lt;/a>, the premier health care incubator and innovation hub, launched the &lt;a href=&quot;https://matter.health/challenges/abbvie-foundation-health-equity-accelerator-2026/&quot;>AbbVie Foundation Health Equity Accelerator.&lt;/a> The accelerator brings together a cohort of organizations building innovative solutions to address health care disparities in their communities. The 10-week program provides a structured environment offering tailored mentorship, strategic&amp;nbsp;guidance&amp;nbsp;and access to resources, helping nonprofits develop actionable plans to strengthen their solutions and drive long-term impact.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>The program provides:&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Expert guidance:&lt;/b>&amp;nbsp;Tailored mentorship and strategic advice from subject matter experts and seasoned industry leaders.&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Powerful networking:&lt;/b>&amp;nbsp;New connections with a curated cohort of peers and direct access to a network of health care systems,&amp;nbsp;investors&amp;nbsp;and philanthropic partners.&amp;nbsp;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Increased visibility:&lt;/b>&amp;nbsp;The opportunity to&amp;nbsp;showcase&amp;nbsp;solutions, potentially resulting in&amp;nbsp;additional&amp;nbsp;funding,&amp;nbsp;partnerships&amp;nbsp;and support.&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Financial support&lt;/b>:&amp;nbsp;A $10,000 stipend for each organization to support their efforts and an&amp;nbsp;additional&amp;nbsp;$50,000 unrestricted grant for one organization to scale their solution.&amp;nbsp;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Five organizations addressing issues including food access, chronic disease and other critical barriers to care were selected to&amp;nbsp;participate&amp;nbsp;in the inaugural 2025 accelerator:&amp;nbsp;&lt;a href=&quot;https://alimentospr.org/&quot; target=&quot;_blank&quot;>Banco de Alimentos de Puerto Rico&lt;/a>,&amp;nbsp;&lt;a href=&quot;https://healingca.org/&quot; target=&quot;_blank&quot;>Healing California&lt;/a>,&amp;nbsp;&lt;a href=&quot;https://hbi-dc.org/&quot; target=&quot;_blank&quot;>Health Betterment Initiative&lt;/a>,&amp;nbsp;&lt;a href=&quot;https://www.healthyhoodchi.com/&quot; target=&quot;_blank&quot;>Healthy Hood Chicago&lt;/a>&amp;nbsp;and&amp;nbsp;&lt;a href=&quot;https://vecinos.org/&quot; target=&quot;_blank&quot;>Vecinos&lt;/a>.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_1579579545
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-01-28T14:44:28.919-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-01-28T14:44:28.919-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_148961524
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2026-01-26T16:09:22.841-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-03-17T10:16:46.996-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="What the program provides:"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h2"
+                                    variant="h"/>
+                                <image_copy_copy_copy
+                                    jcr:created="{Date}2026-01-26T16:15:33.772-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-01-26T16:15:39.824-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/accelerator/accelerator-story-infographic.jpg"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                                <separator_copy_15795
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-01-28T14:44:28.919-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-01-28T14:44:28.919-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_533958857
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2026-01-26T16:09:22.841-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-01-26T16:11:47.768-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Innovating Together: The Power of Collaboration "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_757537449
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-28T14:43:43.647-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>By bringing together community-based organizations, offering expert mentorship and resources, along with structured opportunities for strategy building, the accelerator is catalyzing a new era of innovation in health equity.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>For Banco de Alimentos de Puerto Rico, participation in the AbbVie Foundation Health Equity Accelerator was vital in strengthening the nonprofit’s strategy and impact.&amp;nbsp;At the conclusion of the program, the organization received a $50,000 grant for their innovative solution to advance health equity.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>“Being a participant in the program and the support we’ve gotten, I feel like I’ve just left with a bachelor’s degree in Medicare, health care management 101,” said Laborde.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Through the accelerator, the organization has been able to enhance the impact of their “Food as Medicine” initiative. The program provides monthly food prescriptions, in-home health check-ins, nutrition&amp;nbsp;education&amp;nbsp;and exercise activities to older adults in underserved Puerto Rican communities.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Catalyzed by the mentorship and support received through the accelerator, Banco de Alimentos de Puerto Rico recently secured a public grant to scale its impact. The organization will soon open the first three ‘food pharmacies’ within community health clinics across the island, addressing not only hunger, but other key factors in shaping long-term health outcomes.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>By investing in innovative solutions, the accelerator is empowering nonprofits across the U.S. with the support and resources needed to forge new pathways to better health outcomes – driving transformative change and strengthening communities along the way.&lt;/p>&#xd;&#xa;&lt;p>Learn more about the&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/sustainability/abbvie-foundation/innovative-impact.html&quot;>AbbVie Foundation’s approach to driving innovative impact&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

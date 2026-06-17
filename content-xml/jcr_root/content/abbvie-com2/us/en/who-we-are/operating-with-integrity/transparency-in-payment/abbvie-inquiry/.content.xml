@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-02-15T00:46:57.384-05:00"
+        cq:lastModifiedBy="kumarvx60"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="If you have a question or inquiry about AbbVie’s Physician &amp; Other Payments policy, fill out this form and we’ll get back to you shortly."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie Inquiry"
+        jcr:uuid="ec0aee4e-0c18-4f22-9ef4-95b14cf3eeeb"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        navTitle="AbbVie Inquiry"
+        pageTitle="AbbVie Inquiry">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2022-12-09T19:05:12.001-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835861,1653545825685,1653545847150,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2022-12-09T19:05:31.586-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie Inquiry"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-09T19:05:48.454-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>If you have a question or inquiry about AbbVie’s Physician &amp;amp; Other Payments policy, fill out this form and we’ll get back to you shortly.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:created="{Date}2023-02-01T05:45:21.579-05:00"
+                        jcr:createdBy="kumarvx60"
+                        jcr:lastModified="{Date}2023-02-01T05:50:04.159-05:00"
+                        jcr:lastModifiedBy="kumarvx60"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="2"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy
+                                jcr:created="{Date}2023-02-01T05:13:51.434-05:00"
+                                jcr:createdBy="kumarvx60"
+                                jcr:lastModified="{Date}2023-02-15T00:46:57.369-05:00"
+                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/form/container/v2/container"
+                                action="/content/usergenerated/abbvie-com2/us/en/who-we-are/operating-with-integrity/transparency-in-payment/abbvie-inquiry/cq-gen1675246431437/"
+                                actionType="foundation/components/form/actions/store"
+                                customActionType="kana"
+                                errorPage="/content/abbvie-com2/us/en/who-we-are/operating-with-integrity/transparency-in-payment/abbvie-inquiry/failure"
+                                thankYouPage="/content/abbvie-com2/us/en/who-we-are/operating-with-integrity/transparency-in-payment/abbvie-inquiry/thank-you">
+                                <hidden
+                                    jcr:created="{Date}2023-02-01T09:01:50.920-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T09:02:17.988-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="frh.form"
+                                    name="frh.form"
+                                    value="sunshine_inquiry"/>
+                                <hidden_copy
+                                    jcr:created="{Date}2023-02-01T09:01:50.920-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T09:02:57.392-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="msg_source"
+                                    name="Msg Source"
+                                    value="sunshine_inquiry"/>
+                                <hidden_copy_copy
+                                    jcr:created="{Date}2023-02-01T09:01:50.920-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T09:03:28.616-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="subject"
+                                    name="subject"
+                                    value="Sunshine Inquiry"/>
+                                <hidden_copy_copy_cop
+                                    jcr:created="{Date}2023-02-01T09:01:50.920-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T09:04:18.175-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    enableRequest="true"
+                                    id="BUID"
+                                    name="BUID"
+                                    queryParamName="BUID"/>
+                                <hidden_copy_copy_cop_314700286
+                                    jcr:created="{Date}2023-02-01T09:01:50.920-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T09:04:50.064-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    enableRequest="true"
+                                    id="CUID"
+                                    name="CUID"
+                                    queryParamName="CUID"/>
+                                <hidden_copy_copy_cop_1326030788
+                                    jcr:created="{Date}2023-02-01T09:01:50.920-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T09:05:47.744-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    enableRequest="true"
+                                    id="acid"
+                                    name="acid"
+                                    queryParamName="acid"/>
+                                <hidden_copy_copy_cop_618171410
+                                    jcr:created="{Date}2023-02-01T09:01:50.920-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T09:06:22.996-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    enableRequest="true"
+                                    id="formReferal"
+                                    name="formReferal"
+                                    queryParamName="redirect_referrer"
+                                    referer="true"/>
+                                <text_1136493156
+                                    jcr:created="{Date}2023-02-01T05:14:12.003-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:16:12.887-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Your question may have been addressed in our&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/us/en/who-we-are/operating-with-integrity/transparency-in-payment/frequently-asked-questions-physician-and-other-payments.html&quot;>FAQs&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_2115301810
+                                    jcr:created="{Date}2023-02-01T05:16:31.478-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:17:12.836-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>Contact Information&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_744997565
+                                    jcr:created="{Date}2023-02-01T05:17:29.896-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:17:46.396-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>We are collecting this personal information in order to respond to the inquiry you are sending via this form.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text
+                                    jcr:created="{Date}2023-02-01T05:14:04.647-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:18:47.516-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="First Name"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="firstName"
+                                    name="firstName"
+                                    numberFieldLimit="100000000"
+                                    required="true"
+                                    requiredMessage="This field is required"
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <text_copy
+                                    jcr:created="{Date}2023-02-01T05:14:04.647-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:19:39.494-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Middle Initial"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="middleInitial"
+                                    name="middleInitial"
+                                    numberFieldLimit="100000000"
+                                    requiredMessage="This field is required"
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <text_copy_copy
+                                    jcr:created="{Date}2023-02-01T05:14:04.647-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:20:25.912-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Last Name"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="lastName"
+                                    name="lastName"
+                                    numberFieldLimit="100000000"
+                                    required="true"
+                                    requiredMessage="This field is required"
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <text_copy_copy_copy
+                                    jcr:created="{Date}2023-02-01T05:14:04.647-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:21:10.377-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Suffix"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="suffix"
+                                    name="suffix"
+                                    numberFieldLimit="100000000"
+                                    requiredMessage="This field is required"
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <text_copy_copy_copy_
+                                    jcr:created="{Date}2023-02-01T05:14:04.647-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:22:05.783-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Email"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="email"
+                                    name="emailAddress"
+                                    numberFieldLimit="100000000"
+                                    required="true"
+                                    requiredMessage="This field is required"
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="email"/>
+                                <text_copy_copy_copy__575898708
+                                    jcr:created="{Date}2023-02-01T05:14:04.647-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:23:03.408-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Verify Email"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="email2"
+                                    idDataMatch="#email"
+                                    name="email2"
+                                    numberFieldLimit="100000000"
+                                    required="true"
+                                    requiredMessage="This field is required"
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="email"/>
+                                <text_copy_copy_copy__1524326808
+                                    jcr:created="{Date}2023-02-01T05:14:04.647-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-14T09:07:41.131-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Phone Number"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="phone"
+                                    name="phone"
+                                    numberFieldLimit="100000000"
+                                    requiredMessage="This field is required"
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="tel"/>
+                                <text_1046884682
+                                    jcr:created="{Date}2023-02-01T05:24:14.582-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:24:35.285-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>Additional Information&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <options
+                                    jcr:created="{Date}2023-02-01T05:24:51.347-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:26:05.187-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Who are you?"
+                                    sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                    name="whoAreYou"
+                                    required="true"
+                                    requiredMessage="This field is required"
+                                    source="local"
+                                    type="drop-down">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            value="Empty"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Doctor"
+                                            value="Doctor"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Teaching Hospital"
+                                            value="Teaching Hospital"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Other"
+                                            value="Other"/>
+                                    </items>
+                                </options>
+                                <options_132530893
+                                    jcr:created="{Date}2023-02-01T05:26:23.103-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:27:43.414-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Inquiry Type"
+                                    sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                    id="inquiryType"
+                                    name="inquiryType"
+                                    required="true"
+                                    requiredMessage="This field is required"
+                                    source="local"
+                                    type="drop-down">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            value="Empty"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Specific Transaction"
+                                            value="Specific Transaction"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="General Inquiry"
+                                            value="General Inquiry"/>
+                                    </items>
+                                </options_132530893>
+                                <subcontainer
+                                    jcr:created="{Date}2023-02-01T05:28:00.980-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:28:33.405-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/subcontainer/v2/subcontainer"
+                                    constraintMessage="&quot;Author Message&quot;: This container is hidden unless the Doctor option and Specific Transaction option are selected in above dropdowns respectivly"
+                                    hideShowAttribute="Doctor+Specific Transaction">
+                                    <text
+                                        jcr:created="{Date}2023-02-01T05:28:48.376-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T05:29:22.663-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>﻿&lt;/b>Your Professional Information&lt;/span>&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <text_1442537162
+                                        jcr:created="{Date}2023-02-01T05:29:36.113-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-15T00:36:05.003-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="NPI#"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ A-Za-z0-9]*$"
+                                        id="npiNum"
+                                        name="npiNum"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="text"/>
+                                    <text_492672492
+                                        jcr:created="{Date}2023-02-01T05:30:22.309-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-15T00:36:35.581-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="State of License"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ A-Za-z0-9]*$"
+                                        id="state"
+                                        name="state"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="text"/>
+                                    <text_492672492_copy
+                                        jcr:created="{Date}2023-02-01T05:30:22.309-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-15T00:37:13.030-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="State of License #"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ A-Za-z0-9]*$"
+                                        id="licenseNum"
+                                        name="licenseNum"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="text"/>
+                                </subcontainer>
+                                <subcontainer_353452520
+                                    jcr:created="{Date}2023-02-01T05:33:38.582-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:35:11.868-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/subcontainer/v2/subcontainer"
+                                    constraintMessage="&quot;Author Message&quot;: This container is hidden unless the Teaching Hospital option and Specific Transaction option are selected in above dropdowns respectivly"
+                                    hideShowAttribute="Teaching Hospital+Specific Transaction">
+                                    <text
+                                        jcr:created="{Date}2023-02-01T05:35:24.816-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T05:35:47.734-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>Teaching Hospital Identifier&lt;/span>&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <text_40288709
+                                        jcr:created="{Date}2023-02-01T05:36:12.653-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-15T00:40:15.682-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="TIN"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ A-Za-z0-9]*$"
+                                        id="tinNum"
+                                        name="tinNum"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="text"/>
+                                </subcontainer_353452520>
+                                <subcontainer_3534525
+                                    jcr:created="{Date}2023-02-01T05:33:38.582-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:37:31.371-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/subcontainer/v2/subcontainer"
+                                    constraintMessage="&quot;Author Message&quot;: This container is hidden unless the Specific Transaction option is selected in Inquiry type dropdown."
+                                    hideShowAttribute="Specific Transaction">
+                                    <text
+                                        jcr:created="{Date}2023-02-01T05:35:24.816-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T05:37:56.342-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>Transaction Information&lt;/span>&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <options
+                                        jcr:created="{Date}2023-02-01T05:38:15.730-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T05:40:16.154-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Transaction Type"
+                                        sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                        name="transaction_type"
+                                        source="local"
+                                        type="drop-down">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="true"
+                                                value="Empty"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Consulting"
+                                                value="Consulting"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Educational Items"
+                                                value="Educational Items"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Food"
+                                                value="Food"/>
+                                            <item4
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Grant"
+                                                value="Grant"/>
+                                            <item5
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Honoraria"
+                                                value="Honoraria"/>
+                                            <item6
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Research"
+                                                value="Research"/>
+                                            <item7
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Travel"
+                                                value="Travel"/>
+                                            <item8
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="Other - Please specify below"
+                                                value="Other - Please specify below"/>
+                                        </items>
+                                    </options>
+                                    <text_40288709
+                                        jcr:created="{Date}2023-02-01T05:36:12.653-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-15T00:42:49.574-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Date of Transaction (mm/dd/yyyy)"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ A-Za-z0-9]*$"
+                                        id="dateTransaction"
+                                        name="dateTransaction"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="text"/>
+                                    <text_40288709_copy
+                                        jcr:created="{Date}2023-02-01T05:36:12.653-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-15T00:41:40.840-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Amount"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ A-Za-z0-9]*$"
+                                        id="amount"
+                                        name="amount"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="text"/>
+                                </subcontainer_3534525>
+                                <subcontainer_3534525_385919513
+                                    jcr:created="{Date}2023-02-01T05:33:38.582-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-01T05:53:48.324-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/subcontainer/v2/subcontainer"
+                                    constraintMessage="&quot;Author Message&quot;: This container is visible when any of the Inquiry type option is selected"
+                                    hideShowAttribute="Specific Transaction,General Inquiry">
+                                    <text_40288709
+                                        jcr:created="{Date}2023-02-01T05:36:12.653-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T05:59:27.426-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Question"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ a-zA-Z]*$"
+                                        id="questionComment"
+                                        name="questionComment"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="textarea"/>
+                                    <options
+                                        jcr:created="{Date}2023-02-01T05:59:51.686-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T06:00:58.684-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Privacy Policy"
+                                        sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                        name="privacyPolicy"
+                                        required="true"
+                                        requiredMessage="This field is required"
+                                        source="local"
+                                        type="checkbox">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                disablesubmit="false"
+                                                selected="false"
+                                                text="You agree your information will be governed by our Privacy Policy."
+                                                value="1"/>
+                                        </items>
+                                    </options>
+                                    <text
+                                        jcr:created="{Date}2023-02-01T06:01:17.232-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T06:02:46.878-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>By clicking the Privacy Policy box, you agree that your information will be governed by our site&amp;nbsp;&lt;a href=&quot;https://privacy.abbvie/privacy-policies/us-privacy-policy.html&quot;>Privacy Policy&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <captcha
+                                        jcr:created="{Date}2023-02-01T06:03:21.136-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T06:03:21.136-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/form/captcha/v2/captcha"/>
+                                    <button
+                                        jcr:created="{Date}2023-02-01T06:03:41.247-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T06:03:41.247-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/form/button/v2/button"/>
+                                    <separator
+                                        jcr:created="{Date}2023-02-01T06:05:15.947-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T06:05:15.947-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                    <text_1161953742
+                                        jcr:created="{Date}2023-02-01T06:03:56.351-05:00"
+                                        jcr:createdBy="kumarvx60"
+                                        jcr:lastModified="{Date}2023-02-01T06:04:09.894-05:00"
+                                        jcr:lastModifiedBy="kumarvx60"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>AbbVie and AbbVie partners understand the importance of protecting your information and will use your information for the sole purpose of responding to your inquiry.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Technical problem with this form? Please email&amp;nbsp;&lt;a href=&quot;mailto:webmaster@abbvie.com&quot;>webmaster@abbvie.com&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </subcontainer_3534525_385919513>
+                            </container_copy>
+                        </par_12>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <thank-you/>
+    <failure/>
+</jcr:root>

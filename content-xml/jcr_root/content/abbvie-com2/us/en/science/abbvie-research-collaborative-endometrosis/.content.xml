@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-10-24T14:27:22.397-04:00"
+        cq:lastModifiedBy="chiucx"
+        cq:redirectTarget="https://www.abbvieresearchcollaborative.com/?cohort=endo"
+        cq:robotsTags="[noindex,nofollow]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Advance Endometrosis Treatment - Help scientists uncover new treatments for endometrosis relief."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-10-24T14:27:22.379-04:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="\[removed] AbbVie Research Collaborative Endometrosis"
+        jcr:uuid="018748b3-7609-4215-b759-6c47ef0251cb"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        navTitle="AbbVie Research Collaborative - Endometrosis"
+        pageTitle="AbbVie Research Collaborative - Endometrosis">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-01-22T16:40:09.289-05:00"
+                    jcr:lastModifiedBy="chiucx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/landing-page-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
+                        jcr:lastModified="{Date}2023-02-17T16:07:34.821-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/landing/arc/woman-in-forest-endo.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <image
+                                cq:styleIds="[1402843082815]"
+                                jcr:created="{Date}2023-01-22T16:40:33.583-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-22T16:40:43.979-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/logos/abbvie-researchrollab-logo.svg"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-02-17T14:12:47.596-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="The journey to treating endometriosis starts with you."
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-02-17T14:13:01.021-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Help scientists uncover new solutions.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <button
+                                jcr:created="{Date}2023-01-22T16:47:05.421-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-21T13:12:08.895-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Join now"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="join the research collaborative now"
+                                linkTarget="_self"
+                                linkURL="#join"/>
+                        </container3>
+                    </container2>
+                    <grid_copy_copy_copy_
+                        cq:styleIds="[0]"
+                        jcr:created="{Date}2022-12-09T17:42:24.988-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-10T17:40:40.965-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <image
+                                jcr:created="{Date}2022-12-09T17:59:50.941-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-17T16:07:28.814-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/landing/arc/two-women-at-table.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                        </par_11>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <title_copy_copy
+                                cq:styleIds="[1659545825678,1651545825678]"
+                                jcr:created="{Date}2022-11-07T18:27:00.399-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-17T14:13:28.152-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Endometriosis research takes teamwork."
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-12-10T17:16:00.094-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-17T14:13:51.662-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>The journey to&amp;nbsp;improve endometriosis care starts with research. And everyone deserves a voice in that process.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;b>That’s where you come in.&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-12-10T17:16:00.094-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-17T14:14:25.923-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Our scientists are on a mission to improve lives. Join the AbbVie Research Collaborative to help uncover new insights and get updates on the latest research opportunities.&amp;nbsp;&lt;b style=&quot;font-size: 0.8125rem;&quot;>Joining is easy and free.&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <button_copy
+                                jcr:created="{Date}2023-01-22T16:47:05.421-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-21T13:12:12.808-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Join now"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="joining is easy"
+                                linkTarget="_self"
+                                linkURL="#join"/>
+                        </par_13>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="5"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="6"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_copy_copy_copy_>
+                    <container_193836164
+                        cq:styleIds="[1653545825688]"
+                        jcr:created="{Date}2023-01-22T16:53:33.670-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-22T16:53:33.670-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <accordion_copy
+                            cq:styleIds="[1,8]"
+                            jcr:created="{Date}2023-01-22T16:54:15.475-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-02-17T14:15:36.941-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            heading="Frequently asked questions"
+                            headingElement="h5"
+                            singleExpansion="false">
+                            <item_1674424493787
+                                cq:panelTitle="What is the purpose of the AbbVie Research Collaborative?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-02-17T14:08:39.517-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>AbbVie’s mission is to discover and develop new medicines for patients like you. We’re here to connect everyday people with more research opportunities and chances to infuence future treatments.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1674424499871
+                                cq:panelTitle="Do I need to be diagnosed with endometriosis to participate in the Collaborative?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-02-17T14:16:15.008-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>No, you do not need to have an official diagnosis of endometriosis to join the Collaborative and contribute to this research. If you choose to enroll in a&amp;nbsp;endometriosis clinical research study offered by AbbVie, a diagnosis from your physician may be required for participation in the study.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1674424502611
+                                cq:panelTitle="Are there any requirements to join the AbbVie Research Collaborative?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-02-17T14:10:04.490-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>You must be 18 years old and living in the US.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1674424517045
+                                cq:panelTitle="Will I be paid to participate in the AbbVie Research Collaborative?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-02-17T14:10:17.061-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>There is no compensation for joining the Collaborative. However, we will notify you as clinical research studies become available, and if you are eligible to participate, you may receive related compensation for participation in the study.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1674424573736
+                                cq:panelTitle="Who can I contact to learn more information about the AbbVie Research Collaborative?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-02-17T14:10:29.953-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>We're here to help. If you have any questions or concerns regarding participating in the AbbVie Research Collaborative, please email us at &lt;a href=&quot;mailto:research_collaborative@abbvie.com&quot;>research_collaborative@abbvie.com&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion_copy>
+                        <separator
+                            cq:styleIds="[1662756456518]"
+                            jcr:created="{Date}2023-01-22T16:56:22.127-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-02-17T14:16:33.758-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"
+                            id="join"/>
+                    </container_193836164>
+                    <container_146719568
+                        cq:styleIds="[1653545825683,1653545835879]"
+                        jcr:created="{Date}2023-01-22T17:02:12.638-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-22T17:04:08.681-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F1F3FF">
+                        <container
+                            cq:styleIds="[1653545847150,1653545835982,1653545825688]"
+                            jcr:created="{Date}2023-01-22T17:02:27.014-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-22T17:02:27.014-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:created="{Date}2023-01-22T17:02:39.070-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-22T17:02:58.847-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Be part of tomorrow’s solution. Join today."
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-22T17:03:05.391-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-17T14:17:22.716-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>By signing up, you’ll receive information about clinical trials, research opportunities and other endometriosis resources to help you on your journey.&lt;/p>&#xd;&#xa;&lt;p>You must be 18 years or older and live in the US to participate.&lt;/p>&#xd;&#xa;&lt;p>All fields with (*) are required.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <container_865727039
+                                jcr:created="{Date}2023-02-17T04:13:57.274-05:00"
+                                jcr:createdBy="kumarvx60"
+                                jcr:lastModified="{Date}2023-02-23T15:50:20.667-05:00"
+                                jcr:lastModifiedBy="sharmrx18"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/form/container/v2/container"
+                                action="/content/usergenerated/abbvie-com2/us/en/science/abbvie-research-collaborative-migraine/cq-gen1676625237291/"
+                                actionType="foundation/components/form/actions/store"
+                                customActionType="email"
+                                emailTemplatePath="/apps/abbvie-com2/email-templates/migraineform.txt"
+                                errorPage="/content/abbvie-com2/us/en/science/abbvie-research-collaborative-endometrosis/failure"
+                                thankYouPage="/content/abbvie-com2/us/en/science/abbvie-research-collaborative-endometrosis/thank-you">
+                                <separator
+                                    cq:styleIds="[1662756409908]"
+                                    jcr:created="{Date}2023-02-17T04:28:24.352-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-17T04:28:24.352-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy
+                                    jcr:created="{Date}2023-01-09T17:11:03.262-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-09T17:12:06.810-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Personal information"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"/>
+                                <text_copy
+                                    jcr:created="{Date}2023-01-06T16:45:12.089-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-02-23T17:19:33.683-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="First Name"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="firstName"
+                                    name="firstName"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <text_1657141772_copy
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-06T16:48:30.939-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Last Name"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    id="lastName"
+                                    name="lastName"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    type="text"/>
+                                <copy_of_text_1657141
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-19T19:27:55.686-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Email"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    id="email"
+                                    name="email"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="email"/>
+                                <copy_of_copy_of_text
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-25T18:16:29.416-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Verify Email"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="email2"
+                                    idDataMatch="#email"
+                                    name="email2"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="email"/>
+                                <copy_of_copy_of_copy
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-19T19:33:18.265-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Zip Code/Postal Code"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    id="zipcode"
+                                    name="zipcode"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <options_1912374525_c
+                                    jcr:created="{Date}2023-01-19T19:42:45.461-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-02-20T09:11:48.424-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Privacy Policy"
+                                    sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                    id="agree"
+                                    name="agree"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    source="local"
+                                    type="checkbox">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Privacy Policy"
+                                            value="1"/>
+                                    </items>
+                                </options_1912374525_c>
+                                <text_1455751134_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-01-09T17:14:20.345-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-02-20T09:18:48.487-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-14-reg&quot;>By clicking the box, you agree that your information will be governed by our sites&amp;nbsp;&lt;a href=&quot;https://privacy.abbvie/privacy-policies/us-privacy-policy.html&quot;>Privacy Policy&lt;/a>.&amp;nbsp;If you have a privacy inquiry, please&amp;nbsp;&lt;a href=&quot;https://abbv.force.com/AbbvieDSRM/s/?language=en_US&quot; target=&quot;_blank&quot;>click here&lt;/a>.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <captcha_copy
+                                    jcr:created="{Date}2023-01-19T19:45:23.750-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-19T19:45:50.012-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/captcha/v2/captcha"
+                                    requiredMessage="This field is required"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756409908]"
+                                    jcr:created="{Date}2023-02-17T04:28:24.352-05:00"
+                                    jcr:createdBy="kumarvx60"
+                                    jcr:lastModified="{Date}2023-02-17T04:28:24.352-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <button_copy
+                                    jcr:created="{Date}2023-01-06T16:56:53.179-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-02-14T08:07:42.929-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/button/v2/button"
+                                    type="submit"/>
+                                <text_504246989_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-01-19T19:46:29.988-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-02-17T04:21:45.671-05:00"
+                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-14-reg&quot;>We’re here to help. If you have any questions or concerns regarding participating in the AbbVie&amp;nbsp;Research Collaborative, please email us at &lt;a href=&quot;mailto:e%E2%80%99re%20here%20to%20help.%20If%20you%20have%20any%20questions%20or%20concerns%20regarding%20participating%20in%20the%20AbbVie%20Research%20Collaborative,%20please%20email%20us%20at%20research_collaborative@abbvie.com.&quot;>research_collaborative@abbvie.com&lt;/a>.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <email_config jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        emailSubject="Form Submission: Endometriosis - AbbVie Research Collaborative"
+                                        runmode="prod"
+                                        toEmail="research_collaborative@abbvie.com"/>
+                                </email_config>
+                            </container_865727039>
+                        </container>
+                        <separator
+                            cq:styleIds="[1662756486159]"
+                            jcr:created="{Date}2023-01-22T17:04:17.364-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-22T17:04:17.364-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </container_146719568>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

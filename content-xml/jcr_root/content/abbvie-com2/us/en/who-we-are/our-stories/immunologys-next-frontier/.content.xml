@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-05-08T10:12:55.287-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-13T16:28:23.564-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/immunology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-19T11:18:19.453-04:00"
+        jcr:lastModifiedBy="KANCHRX3"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Immunology’s Next Frontier "
+        jcr:uuid="004521a3-4c56-418e-b540-626f00b5552a"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="How AbbVie is working to elevate the standards of care for patients with autoimmune diseases"
+        fileReference="/content/dam/abbvie-com2/images/stories/immunologys-next-frontier/imm-innovation-article-hero.jpg"
+        hideInNav="true"
+        navTitle="Immunology’s Next Frontier "
+        ogimage="/content/dam/abbvie-com2/images/stories/immunologys-next-frontier/imm-innovation-article-hero.jpg"
+        pageTitle="Immunology’s Next Frontier "
+        publishDate="{Date}2023-05-31T10:41:00.000-05:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="Immunology’s Next Frontier ">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-05-30T12:36:09.205-04:00"
+                        jcr:lastModifiedBy="SCHAFSM"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/immunologys-next-frontier/imm-innovation-article-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-05-08T10:12:05.086-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-05-30T12:07:11.181-04:00"
+                                jcr:lastModifiedBy="SCHAFSM"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Immunology’s Next Frontier "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-05-30T12:50:35.102-04:00"
+                                jcr:lastModifiedBy="SCHAFSM"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Learn how AbbVie is working to reimagine the standards of care for patients with autoimmune diseases &lt;/span>&lt;/span>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2_copy_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:12:14.163-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="How it all began"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-05-30T13:29:47.304-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Twenty years ago, Tim Radstake, M.D., saw history in the making – the results of a new treatment for patients with rheumatoid arthritis (RA), a chronic, autoimmune disease.    &lt;/p>&#xa;&lt;p>At the hospital where he worked at the time, the treatment was administered to one of its very first patients. Later, the patient’s husband came back, filled with emotion.  &lt;/p>&#xa;&lt;p>“When we saw him, everyone feared something was wrong, but what actually happened was his wife was able to do something she hadn’t done in years – get out of her wheelchair and work in the garden,” Radstake recalled.&lt;/p>&#xa;&lt;p>This pivotal discovery went on to impact millions of patients and usher in a new wave of approaches for treating immune-mediated diseases. Yet, despite these scientific advancements, today areas of unmet need &lt;a href=&quot;https://www.niehs.nih.gov/health/topics/conditions/autoimmune/index.cfm&quot; target=&quot;_blank&quot; title=&quot;Immunology&quot;>still persist&lt;/a>. &lt;sup>1 &lt;/sup>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:12:22.374-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="The challenge today "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-05-30T13:30:06.515-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Autoimmune diseases like RA, psoriasis, and inflammatory bowel disease (IBD) impact one in 10 people globally, &lt;a title=&quot;UK Study&quot; href=&quot;https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(23)00457-9.pdf&quot; target=&quot;_blank&quot;>according to a recent UK study&lt;/a>.&lt;sup>2&lt;/sup> With these diseases, the body’s immune system mistakenly attacks healthy cells, causing inflammation.  &amp;nbsp;  &amp;nbsp;&lt;/p>&#xa;&lt;p>Existing treatments don’t always work optimally for every patient. In the best-case scenario, patients get matched to a therapy that works on the first try, but at worst, the process becomes a game of trial and error, one that can cost patients precious time, energy and resources. &lt;/p>&#xa;&lt;p>This real-world challenge affects patients, their loved ones and care providers. And it proves more work is needed to address existing gaps and in turn raise standards of care. But how do you push innovation even further in a field where so much progress has already been achieved?  AbbVie scientists share three areas of research they’re exploring to propel immunology research to its next new plateau. &lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_69626959
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:12:30.931-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Getting at the root drivers of disease "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-06-16T12:52:52.513-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Gaps in our understanding of the root cause of autoimmune diseases are a barrier to the development of better treatments for patients. Getting at the root is hard because of how complex our immune systems are and how&amp;nbsp;heterogeneous autoimmune diseases are. Disorders such as RA which look the same clinically, may actually be a diverse group of diseases at the molecular level. However, scientists at AbbVie are getting closer to the root of these diseases everyday with access to data from clinical trials, advances in genomics research and technologies like AI and machine learning.   &lt;/p>&#xd;&#xa;&lt;p> To address the root cause of disease, AbbVie scientists are building “molecular profiles” of patients to understand how they can treat immune-mediated disease at the molecular level. These profiles tell researchers what genes, proteins, or other molecules are involved in a disease pathway, so they can get an even deeper understanding of what is driving the disease – information they can use to find new targets for therapies and work toward potential cures. &lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <video
+                                cq:styleIds="[0,10]"
+                                jcr:created="{Date}2024-02-07T17:47:24.001-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-02-15T14:15:09.497-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 6:00"
+                                description="&lt;p>Finding the Molecular Drivers of Autoimmune Diseases&lt;/p>&#xd;&#xa;"
+                                fileReference="/content/dam/abbvie-com2/images/stories/immunologys-next-frontier/immunology-discovery-thumbnail.jpg"
+                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="[true,true]"
+                                title="Discovery Files"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/uIxRed5Xegw"/>
+                            <quote
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2023-05-30T12:15:56.728-04:00"
+                                jcr:createdBy="SCHAFSM"
+                                jcr:lastModified="{Date}2024-02-21T10:56:45.678-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Tim Radstake"
+                                attributionTitle=" M.D., vice president, immunology discovery research, AbbVie "
+                                fileReference="/content/dam/abbvie-com2/images/stories/immunologys-next-frontier/timothy-radstake-headshot.jpg"
+                                quote="I anticipate that in five to 10 years from now, treatment decisions in the clinic will be based on real-time molecular profiles of a patient and so, we have to build a drug discovery organization based on that."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:12:45.799-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Exploring the biology of immune tolerance"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-05-30T12:19:33.836-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>One of the ways AbbVie is addressing the root cause of disease is by exploring the biology of immune tolerance. Scientists believe that by inducing immune tolerance, they can restore a patient’s own immune system.&amp;nbsp; &lt;/p>&#xa;&lt;p>In healthy immune systems, immune tolerance is normal, meaning the body is able to tolerate its own constituents. But among patients with autoimmune diseases, tolerance breaks down and the body attacks itself. Within AbbVie's Immunology Discovery Research group, scientists are working closely to put forward assets that are designed to help restore this function.  &lt;/p>&#xa;&lt;p>“We believe that the failure of immune tolerance is one of the root causes of immune diseases. Very simply, if we can understand how this fails, we can think about it from a therapeutic perspective and develop medicines that aim to restore immune tolerance,” said Kevin White, Ph.D., senior principal research scientist, AbbVie. &lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_69626959_287681779
+                                    cq:styleIds="[1659545825678,1651545824678]"
+                                    jcr:lastModified="{Date}2023-05-30T12:25:20.962-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Matching the right patient to the right therapy  "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="h"/>
+                                <text2_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-05-30T12:25:46.518-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>To get targeted therapies to the patients most likely to benefit from them, health care professionals need tools to help them find the patients who are a best match.&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <text2_copy_47599025
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-05-30T13:37:05.865-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“In immunology, there is a growing number of therapies available for patients, but it’s not always clear which medicine is the most appropriate one for a clinician to prescribe to a patient. So, we are working on developing strategies to help clinicians be more informed so they can select the right drug for each patient,” says Heath Guay, Ph.D., executive director of precision medicine immunology, AbbVie. &lt;/p>&#xa;&lt;p>Developing companion diagnostics is one such strategy. Companion diagnostics are biomarker tests that can help match patients to a specific therapy or drug. They’re a part of precision medicine, an innovative approach centered on tailoring disease treatment based on an individual’s genetics, environment and lifestyle. &lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote_copy
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2023-05-30T12:15:56.728-04:00"
+                                jcr:createdBy="SCHAFSM"
+                                jcr:lastModified="{Date}2023-05-30T13:06:21.383-04:00"
+                                jcr:lastModifiedBy="SCHAFSM"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Heath Guay"
+                                attributionTitle="Ph.D., executive director, precision medicine immunology, AbbVie "
+                                fileReference="/content/dam/abbvie-com2/images/stories/immunologys-next-frontier/dr-heath-guay-headshot.jpg"
+                                quote="We are working on developing strategies to help clinicians be more informed so they can select the right drug for each patient."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-05-30T13:38:05.283-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>A major benefit of companion diagnostic tests is their potential to help reduce the amount of guesswork in finding the right treatment for patients, which can improve the quality of their care. They can be developed for existing therapies as well as future ones. &lt;/p>&#xa;&lt;p>Companion diagnostics are an uncharted territory in immunology, but one where AbbVie researchers have begun to tread.&amp;nbsp;&lt;/p>&#xa;&lt;p>“The work that we do on companion diagnostics creates a road map of sorts for patients. So, if a companion diagnostic test shows they have a certain biomarker, we now have the potential to see what the odds for success are for certain treatments,” says Ken Emancipator, M.D., executive director and head of precision medicine companion diagnostics development, AbbVie. &lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1469403978
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-05-30T12:20:03.508-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_69626959
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:12:55.281-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Looking to the future"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-05-30T12:29:29.692-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>With these new tools and leading-edge techniques at the ready, scientists at AbbVie are equipped to make better and faster decisions, which can accelerate the development process and in turn aim to bring new solutions to patients faster. &lt;/p>&#xa;&lt;p>“These new tools and approaches, combined with our legacy of research in immunology, give us a real opportunity to help redefine what transformative treatment really means, and uncover new ways to help make life better for people living with immune-mediated diseases,” White concludes. &lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <accordion_copy
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2022-12-26T20:10:34.641-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-02-13T13:32:42.201-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    headingElement="h6"
+                                    singleExpansion="false">
+                                    <item_1672103541000
+                                        cq:panelTitle="References"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2023-06-08T01:12:32.929-04:00"
+                                        jcr:lastModifiedBy="sharmrx18"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;ol>&#xd;&#xa;&lt;li>&lt;p>Autoimmune diseases. (2022). National Institute of Environmental Health Sciences.&amp;nbsp;&lt;a href=&quot;https://www.niehs.nih.gov/health/topics/conditions/autoimmune/index.cfm&quot; title=&quot;Autoimmune disease&quot;>https://www.niehs.nih.gov/health/topics/conditions/autoimmune/index.cfm&lt;/a>. Accessed May 19, 2023.&lt;/p>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>&lt;p>Conrad, N. et al. (2023) “Incidence, prevalence, and co-occurrence of autoimmune disorders over time and by age, sex, and socioeconomic status: a population-based cohort study of 22 million individuals in the UK.” The Lancet.&amp;nbsp;&lt;a href=&quot;https://doi.org/10.1016/s0140-6736(23)00457-9&quot; title=&quot;doi.org&quot;>https://doi.org/10.1016/s0140-6736(23)00457-9&lt;/a>. Accessed May 19, 2023. &lt;/p>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion_copy>
+                                <text_354147214_copy_
+                                    jcr:created="{Date}2022-12-05T16:14:00.148-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-02-13T13:48:39.766-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Media Inquiries:&lt;/b>&lt;br>&#xd;&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header_copy
+                                    cq:styleIds="2"
+                                    jcr:created="{Date}2023-01-24T17:20:00.538-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-24T17:20:00.538-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related content"/>
+                                <cardpagestory_copy
+                                    cq:styleIds="[1111111111110,1111111111112,1111111111117]"
+                                    jcr:created="{Date}2023-01-06T16:05:11.351-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-05-30T13:24:30.847-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/precision-medicine-its-not-just-for-oncology-anymore"/>
+                            </container5>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

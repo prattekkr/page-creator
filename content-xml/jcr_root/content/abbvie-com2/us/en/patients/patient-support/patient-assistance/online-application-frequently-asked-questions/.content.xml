@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-04-25T18:00:09.841-04:00"
+        cq:lastModifiedBy="chiucx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Online Application Frequently Asked Questions"
+        jcr:uuid="6091cdd3-de1f-4d61-af3c-d8c3b85c2446"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        navTitle="Online Application Frequently Asked Questions"
+        pageTitle="Online Application Frequently Asked Questions">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2022-12-23T10:45:36.960-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2022-12-23T10:46:17.831-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Online PAP Patient Portal Frequently Asked Questions"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:46:31.445-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>For additional questions, please call us at 1-800-222-6885 Monday–Friday, 8am–5pm CST.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <accordion_copy
+                            cq:styleIds="[3,8]"
+                            jcr:created="{Date}2022-12-10T17:59:38.948-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-23T10:49:04.181-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            headingElement="h5"
+                            singleExpansion="false">
+                            <item_1670713218905
+                                cq:panelTitle="How long does it take for my application to be processed when I complete it online?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:49:24.695-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>We will receive your submitted application right away and usually complete the evaluation within two business days.&amp;nbsp; We will contact you and your health care provider with the outcome.&amp;nbsp; Please review the application closely before submitting as missing or incomplete information or documentation often causes delays.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1670713221584
+                                cq:panelTitle="How do I know if my application was submitted?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:49:40.487-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>You will receive a message on your screen right away indicating that your application was submitted. You can also view your Dashboard to check your application status.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1670713228568
+                                cq:panelTitle="Once I submit my application, how will I know if any information is missing or incomplete?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-04-25T17:58:11.948-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Log into our website with your User Name and Password to display your Dashboard. Here you will see any notifications that we have sent to you.&amp;nbsp; We may also send you an email or text message based on your preferences chosen in your Profile.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1670713232031
+                                cq:panelTitle="How will my Provider be notified to fill out their portion of the application?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:50:09.756-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Once we have reviewed the application that you submitted, we will fax an application to your Provider to complete.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1670713236887
+                                cq:panelTitle="Can I check the status of my application online?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:50:19.761-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Yes.&amp;nbsp; Log into our website with your User Name and Password to check your Dashboard. Here you will see any notifications that we have sent you as well as the status of your application and order history. We may also send you an email or text message based on your preferences chosen in your Profile.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1670713240836
+                                cq:panelTitle="How do I know if my document was successfully uploaded?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:50:29.596-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>You will receive a message on your screen right away indicating that the document was successfully uploaded.&amp;nbsp; You can also go to your Dashboard, click on the Application Number and navigate to the Document Upload Tab.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810491256
+                                cq:panelTitle="Can I receive notification when my order has shipped and will the tracking number be available?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-04-25T18:00:09.838-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Yes.&amp;nbsp; You can log into our website with your Username and Password and check your Dashboard. We may also send you an email or text message based on your preferences chosen in your Profile.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810494373
+                                cq:panelTitle="How can I attach additional documents after my application has already been submitted?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-04-25T18:00:02.409-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>If you forgot to attach a document, log onto our website with your Username and Password to display your Dashboard. Click on the Application Number and navigate to the Document Upload Tab.&amp;nbsp; If we notified you of missing information, the notification link will allow you to upload additional documents.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810497334
+                                cq:panelTitle="If I was notified that I need to provide additional information, how long will it take to process?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:50:56.941-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Once you have submitted a missing document online, it will be added to your application right away and we typically review the information within two business days.&amp;nbsp; You can log into our website with your User Name and Password and check your Dashboard to see when your application status changes.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810509021
+                                cq:panelTitle="Is my User Name or Password case sensitive?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-04-25T17:59:39.368-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Your User Name is not case sensitive, but your password is case sensitive.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810512826
+                                cq:panelTitle="Can I apply using my mobile device?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-04-25T17:59:30.684-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Yes. Our website is compatible with most mobile applications such as mobile phones and tablets.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810524597
+                                cq:panelTitle="How long do I have to wait before I can reset my password?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-04-25T17:59:24.958-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Please give us 15 minutes before resetting your password.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810527858
+                                cq:panelTitle="What types of files can I upload to my documents?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-04-25T17:59:20.400-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>We support the following file types:  JPEG, JPG and PDF.  If applying from a mobile phone, you may take a picture of your document and upload.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671810531567
+                                cq:panelTitle="What is the largest file size I can upload?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:51:41.987-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>4.5 MB is the largest file that we can accept.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion_copy>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

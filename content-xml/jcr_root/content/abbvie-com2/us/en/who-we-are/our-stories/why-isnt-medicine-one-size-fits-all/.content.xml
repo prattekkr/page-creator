@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-04-09T13:07:14.625-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/science-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Precision medicine explained: Breaking down how this unique approach and commitment could fundamentally change how we treat disease."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-08-23T08:23:12.396-04:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Why isn’t medicine one size fits all?"
+        jcr:uuid="f7abd072-f6af-4c0f-8db7-86398d9eb558"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        description="Precision medicine explained: Breaking down how this unique approach and commitment could fundamentally change how we treat disease."
+        fileReference="/content/dam/abbvie-com2/images/stories/why-isnt-medicine-one-size-fits-all/vox-explainer-pmed-hero.png"
+        hideInNav="true"
+        navTitle="Why isn’t medicine one size fits all?"
+        ogimage="/content/dam/abbvie-com2/images/stories/why-isnt-medicine-one-size-fits-all/why-isnt-medicine-one-size-fits-all/vox-explainer-pmed-hero.jpg"
+        pageTitle="Why isn’t medicine one size fits all?"
+        publishDate="{Date}2022-11-22T15:00:00.000-06:00"
+        readTime="4"
+        readWatchTimeSel="read-time"
+        title="Why isn’t medicine one size fits all?">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
+                        jcr:lastModified="{Date}2024-08-23T08:22:52.396-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/why-isnt-medicine-one-size-fits-all/vox-explainer-pmed-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-01-25T09:36:20.705-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                jcr:lastModified="{Date}2023-01-24T17:53:59.632-05:00"
+                                jcr:lastModifiedBy="fusznx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Why Isn’t Medicine One Size Fits All?"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2022-12-17T16:03:37.485-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Precision medicine explained: Breaking down how this unique approach and commitment&amp;nbsp;could fundamentally change how&amp;nbsp;we treat disease.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-04-22T13:47:46.310-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="The age of precision medicine"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-12-17T16:04:19.132-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Within AbbVie’s walls, a team of nearly 200 researchers around the globe are focused on untangling the complex nature of disease. They’re in the clinic, working to identify biomarkers used to provide insights into the effects of therapies on disease, as well as determine which patients may respond to therapies.&lt;/p>&#xd;&#xa;&lt;p>This key area of innovation is called precision medicine, or “PMed,” spearheaded by Ian McCaffery, Ph.D.&lt;/p>&#xd;&#xa;&lt;p>&amp;quot;We’re now at a point where we can understand the drivers of disease and target them with highly selective therapies,” says McCaffery. “The age of precision medicine is upon us, where using genetic and other molecular data, and ultimately companion diagnostic tests, can&amp;nbsp;help us target medicines to patients who we think could respond to them.&amp;quot;&lt;/p>&#xd;&#xa;&lt;p>The company’s tools and expertise continue to advance critical work in precision medicine, with understanding genetic variation serving as a fundamental building block.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <video
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2022-12-17T16:04:41.007-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-09-08T03:41:29.256-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 4:32"
+                                description="&lt;p>Precision medicine, explained&lt;/p>&#xd;&#xa;"
+                                fileReference="/content/dam/abbvie-com2/images/pmed-explained-yt-thumbnail.jpg"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Why isn’t medicine one size fits all?"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/KNVX97thgak"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-04-22T13:47:55.256-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Filling in the genetic gaps"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-12-17T16:09:05.370-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Let’s rewind to see how genetic variation plays a key role in precision medicine. In the 1990s, scientists from all over the world set out to map the first human genome, helping us understand what makes us human at the molecular level.&lt;/p>&#xd;&#xa;&lt;p>Fast forward to today: News recently broke that the human genome had finally been fully sequenced. These discoveries filled in 8% of the missing map — what amounted to 200 million missing base pairs of DNA.&lt;/p>&#xd;&#xa;&lt;p>Besides teaching us about what makes us tall, what could make us live longer, and what helps dictate whether we’ll be future Olympians, genes can tell us how we’ll respond to medicines on a molecular level — and we’re already seeing some of the results of that today through a tailored approach to science and medicine called precision medicine.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2022-12-17T16:10:54.890-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T16:10:54.890-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-04-22T13:48:03.806-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="How do genetics play into precision medicine?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-04-09T13:07:14.617-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Now let’s back up a bit more to understand the human genome.&lt;/p>&#xd;&#xa;&lt;p>Your genome is &amp;nbsp;&lt;i>you&lt;/i>: More than &lt;a href=&quot;https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project&quot; target=&quot;_blank&quot;>3 billion base&lt;/a>&lt;sup>1&amp;nbsp;&lt;/sup>pairs of DNA that live in all of your cells. If you stretched out the DNA in just one cell, it would measure about two meters tall.&lt;/p>&#xd;&#xa;&lt;p>Even though we’re made of 3 billion base pairs of DNA, humans are still, genetically, 99.9%&lt;sup>2&lt;/sup>  identical. It’s that last 0.1% that dictates what makes us unique, whether that’s to indicate if we’ll be tall enough to dunk a basketball, or how our bodies respond to certain medicines.&lt;/p>&#xd;&#xa;&lt;p>That last bit is where it gets interesting.&lt;/p>&#xd;&#xa;&lt;p>“In my particular case, there’s 50 different medications that are modified or I can’t take because of my DNA,” says Howard Jacob, Ph.D., vice president for genomic research at AbbVie, who sequenced his own genome. “In some cases I actually will metabolize [certain medications] faster, which means my body chews it up. So the dose I take is actually not the dose that my body sees.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-12-17T16:12:08.059-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-17T16:12:25.208-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Sunhwa Kim, Ph.D."
+                                attributionTitle="associate scientific director, precision medicine"
+                                quote="I want to be part of this journey for the patients who are not responding to existing medicines,” Kim says. “Solving that puzzle, it’s exciting"
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-04-22T13:48:13.351-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Maximizing our understanding and patient benefit"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-12-17T16:13:18.301-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>How our bodies respond to different treatments is the core question for scientists who work on precision medicine — and helps us understand more about a disease than just the symptoms.&lt;/p>&#xd;&#xa;&lt;p>“My son developed autoimmune disease when he was three months old,” says Sunhwa Kim, Ph.D., associate scientific director, precision medicine at AbbVie. “The pediatric specialist applied precision medicine for my son. I experienced the values and I want other parents to experience the maximized benefit from precision medicine. That’s why I’m doing this.”&lt;/p>&#xd;&#xa;&lt;p>For Jacob, knowing how his body interacts with certain medicines means his doctors can tailor his treatment for him — and pick a prescription that he won’t need to alter. But what does that mean for finding medical solutions for everyone else? Well, to understand how treatments will affect a huge group of people, you need a huge group of data. The tools to make that science possible exist at AbbVie today.&lt;/p>&#xd;&#xa;&lt;p>“One of the things I’m very excited about at AbbVie is we have a million genomes,” Jacob says. “That’s an amazing amount of data. We have the ability now to go in and start asking questions at a large scale.”&lt;/p>&#xd;&#xa;&lt;p>But science is still evolving. Scientists are hard at work collecting the biomarkers they need to understand how our bodies react to treatment — and, hopefully, creating a deeper understanding of how to find the right treatment faster.&lt;a name=&quot;Video-transcript&quot; id=&quot;Video-transcript&quot;>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>“I want to be part of this journey for the patients who are not responding to existing medicines,” Kim says. “Solving that puzzle, it’s exciting.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2022-12-17T16:10:54.890-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T16:10:54.890-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2022-12-17T16:13:46.723-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T16:15:14.258-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    headingElement="h5"
+                                    singleExpansion="false">
+                                    <item_1671311651369
+                                        cq:panelTitle="Video Transcript"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2022-12-17T16:15:22.189-05:00"
+                                        jcr:lastModifiedBy="chiucx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>In March 2022, news broke that the human genome had finally been fully sequenced. This discovery added 200 million missing base pairs to the map — DNA technology from 20 years ago couldn’t reach. Researchers don’t know yet what they’ll find in the unearthed data. But our genes have already helped us navigate so much of the world: They’re helping scientists make new biofuels, police identify suspects based on crime scene evidence, and doctors predict how people will respond to medicines on a molecular level. That tailored approach is known as precision medicine — and it could help countless people who haven’t seen relief from standard treatments. There’s a long voyage ahead to perfecting it. But now we have a map to help answer an important question:&lt;/p>&#xd;&#xa;&lt;p>Why isn’t medicine one size fits all?&lt;/p>&#xd;&#xa;&lt;p>To understand where we are with precision medicine, we first need to understand the human genome.&lt;/p>&#xd;&#xa;&lt;p>Howard Jacob: The genome is another way of saying a human blueprint.&lt;/p>&#xd;&#xa;&lt;p>Your genome is you: 3 billion base pairs of DNA that all live in your cells. If you stretched out the DNA in just one cell, it would measure about 2 meters tall — or roughly one Blackbeard the Pirate.&lt;/p>&#xd;&#xa;&lt;p>Even though we’re made of more than 3 billion base pairs of DNA, humans are, genetically, 99.9% identical.&lt;/p>&#xd;&#xa;&lt;p>But those 3 million unique pairs — just point one percent — account for things like hair color, if you’d make a good basketball player, or even the diseases we’re more likely to get.&lt;/p>&#xd;&#xa;&lt;p>Howard Jacob: It's the blueprint for each cell. It's the blueprint of what makes you who you are. It gives you your characteristics.&lt;/p>&#xd;&#xa;&lt;p>That’s Dr. Howard Jacob, Head of Genomic Research at AbbVie. Who, of course, has sequenced his own genome.&lt;/p>&#xd;&#xa;&lt;p>Howard Jacob: There's 50 different medications that are modified or I can't take because of my DNA. And that's kind of an important piece of information, right?&lt;/p>&#xd;&#xa;&lt;p>In some cases, I actually will metabolize it faster, which means my body chews it up. So the dose I take is actually not the dose that my body sees.&lt;/p>&#xd;&#xa;&lt;p>So how does that help a patient dealing with a complex illness?&lt;/p>&#xd;&#xa;&lt;p>Sunhwa Kim: When our loved ones are sick, what we want is medicine works for them, medicine delivers benefits for them, how they feel, how they function. That's precision.&lt;/p>&#xd;&#xa;&lt;p>Precision medicine, what that means is, tailored treatment for patients. Deeply understand disease, patient, and treatment.&lt;/p>&#xd;&#xa;&lt;p>We are identifying different types of biomarkers to really bring the right medicine to the right patient at the right time.&lt;/p>&#xd;&#xa;&lt;p>By looking at our genes and not just symptoms, we can see more than the disease in its current stage.&lt;/p>&#xd;&#xa;&lt;p>We hope to see where it’s going — and how to treat it.&lt;/p>&#xd;&#xa;&lt;p>Sunhwa Kim: Precision medicine is building our data, our knowledge, how patients are responding for medicine, how disease is responding for those medicines.&lt;/p>&#xd;&#xa;&lt;p>So ultimately, what we are looking for - clinical data and biomarkers beautifully assemble each other, and in the end, make one nice picture for patients.&lt;/p>&#xd;&#xa;&lt;p>Because in order to know how treatments will affect a huge group of people, you need a huge group of data.&lt;/p>&#xd;&#xa;&lt;p>The tools that make that science possible exist at AbbVie today.&lt;/p>&#xd;&#xa;&lt;p>Howard Jacob: One of the things I'm very excited about is we have a million genomes. And that's an amazing amount of data.&lt;/p>&#xd;&#xa;&lt;p>And so we have the ability now to go in and start asking questions at a large scale.&lt;/p>&#xd;&#xa;&lt;p>A blueprint, large number of patients that we have information on, and now having clinical trials where we can get that information. That triangulation between those gives us an amazing power to understand disease and how to build better medicines.&lt;/p>&#xd;&#xa;&lt;p>Let’s go back to the genome news again. A mapped genome is just the first step. The puzzle is how to use this information best.&lt;/p>&#xd;&#xa;&lt;p>Which goes to show: Like the ocean around us, there’s still so much to understand about our genes.&lt;/p>&#xd;&#xa;&lt;p>Sunhwa Kim: Science still is evolving. …&lt;/p>&#xd;&#xa;&lt;p>I want to be part of this journey for the patients who are not responding the existing medicines, who are partially responding, because ultimately, the lingering disease, because they are not responding fully, will drive them to the certain point where we cannot treat them anymore. So solving puzzle, it's exciting.&lt;/p>&#xd;&#xa;&lt;p>In other words: The more we know about ourselves, the more precise our medicine can be. And as more people share their genetic maps, the closer we get to understanding who we are.&lt;/p>&#xd;&#xa;&lt;p>All 3 billion base pairs of us.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-17T16:15:33.610-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-02-20T17:19:10.486-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>References:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>National Human Genome Research Institute; National Human Genome Research Institute (NHGRI) Homepage; https://www.genome.gov/glossary/index.cfm?id=93;30/01/2019;N/A&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>National Institute of General Medical Sciences; National Institute of General Medical Sciences Homepage; https://www.nigms.nih.gov/; 05/10/2020&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Media inquiries:&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

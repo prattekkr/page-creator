@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2026-01-30T13:50:25.683-05:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/patient-support-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="3 ways AbbVie helps patients overcome challenges so they can get their prescribed medications"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-01-30T13:50:25.661-05:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Living with an illness is hard. Getting your medicine shouldn’t be"
+        jcr:uuid="347c4584-7fe2-4cee-bc22-82fda85602fe"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="3 ways AbbVie makes it easier for patients to get the medications their doctor has prescribed"
+        fileReference="/content/dam/abbvie-com2/images/stories/living-with-an-illness-is-hard/living-with-an-illness-hero.jpg"
+        hideInNav="true"
+        navTitle="Living with an illness is hard. Getting your medicine shouldn’t be"
+        ogimage="/content/ dam/abbvie-com2/images/stories/living-with-an-illness-is-hard/living-with-an-illness-hero.jpg"
+        pageTitle="How AbbVie makes medications more accessible"
+        publishDate="{Date}2026-01-29T08:55:00.000-06:00"
+        readTime="6"
+        readWatchTimeSel="read-time"
+        title="Making medicine more accessible">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-31T11:26:09.388-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/living-with-an-illness-is-hard/living-with-an-illness-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-01-24T17:21:18.736-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2025-04-15T18:27:18.893-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="3 Ways AbbVie Makes Breakthrough Medicines More Accessible"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-04-14T16:39:15.891-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Explore how we’re helping patients get their prescribed treatments through our innovative patient programs.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:lastModified="{Date}2022-11-29T10:09:22.464-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-01-15T11:38:49.495-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>After a medical diagnosis, patients often find themselves on a unique journey. The first step is to work with their healthcare provider to decide the right treatment. Next comes figuring out how to access the medicine that’s right for them. Can they afford it? Do they need to go to a specialty pharmacy to get it? Is there a copay card or coupon that can help?&lt;/p>&#xd;&#xa;&lt;p>Along the way, patients must navigate an insurance landscape that is both complex and ever evolving. Some patients might also be dealing with changes in their own lives. For example, a new job or other life event can impact their insurance coverage or ability to pay for medication. There’s also the physical and emotional impact of a new diagnosis to consider. &lt;/p>&#xd;&#xa;&lt;p>All these factors can make the process of getting medications stressful. But the good news is, it doesn’t have to be.&lt;/p>&#xd;&#xa;&lt;p>AbbVie offers a variety of support resources and programs to help eligible patients access, manage and adhere to their prescribed treatment plan. This includes helping patients understand health information, how to use their medicines and, when questions or issues arise, how to speak with their physician.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <container
+                                cq:styleIds="[1653545835982]"
+                                jcr:created="{Date}2026-01-27T12:28:00.490-05:00"
+                                jcr:createdBy="VALENSX5"
+                                jcr:lastModified="{Date}2026-01-27T12:28:00.490-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <image_copy_copy_copy
+                                    cq:styleIds="[1402843082832]"
+                                    jcr:created="{Date}2022-11-29T10:12:04.819-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2025-01-15T11:43:42.983-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/living-with-an-illness-is-hard/living-with-an-illness-infographic.jpg"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                            </container>
+                            <container4_copy_918455298
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982,1653545835879]"
+                                jcr:lastModified="{Date}2025-01-15T11:49:56.922-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-27T12:20:55.967-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“I understand the medication. I understand how to use it. I understand the cost,” said an Illinois patient enrolled in an AbbVie support program. “I don't have any anxiety going into my treatment or taking my medicine or changing medication, because I've been so well supported along the way.”&lt;/p>&#xd;&#xa;&lt;p>AbbVie also has a variety of financial solutions for patients who are insured, underinsured or not insured.&amp;nbsp;Continue reading to learn&amp;nbsp;about&amp;nbsp;some of the&amp;nbsp;ways&amp;nbsp;AbbVie helps patients get the medication they need.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_918455298>
+                            <quote_copy
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2025-01-15T11:23:44.578-05:00"
+                                jcr:createdBy="VALENSX5"
+                                jcr:lastModified="{Date}2026-01-29T18:05:03.925-05:00"
+                                jcr:lastModifiedBy="stromkx1"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Alexander Williams"
+                                attributionTitle="Director, copay center of excellence, AbbVie"
+                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                quote="We often hear from patients who may not get their medication on time. Many of them are scared and frustrated. When we can help, our teams can hear the relief in their voice."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835879,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2025-01-15T11:46:24.822-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-01-15T11:46:24.822-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-11-29T10:16:54.954-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2025-01-15T11:25:40.123-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Savings cards to reduce out-of-pocket expenses"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-29T18:05:58.800-05:00"
+                                    jcr:lastModifiedBy="stromkx1"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Treatments covered by insurance vary among providers and can change every year. As a result, some patients might find that medication previously covered by their insurance is no longer covered. Or, after changing plans, their new insurance plan might cover their medication differently.&lt;/p>&#xd;&#xa;&lt;p>“It’s this financial uncertainty that frustrates many patients and prevents them from getting help, asking questions or even going to the doctor to begin with. Supporting them through those pain points is a big deal,” said Lisa Peiser, vice president of patient services at AbbVie. “Patients often don’t know that manufacturers provide support so they can more easily get and stay on their prescribed treatments. That’s why it’s important to reach out and ask about available resources.”&lt;/p>&#xd;&#xa;&lt;p>For patients with commercial insurance, AbbVie offers:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Savings cards to reduce their out-of-pocket costs&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Rebates that reimburse patients for out-of-pocket expenses&lt;/li>&#xd;&#xa;&lt;li>Other savings solutions to help eligible patients taking AbbVie treatments&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>AbbVie also employs trained insurance specialists who work with patients one-on-one, with some support services available 24/7 by phone. These specialists can help patients understand their insurance coverage and find the best available savings opportunities.&lt;/p>&#xd;&#xa;&lt;p>“Cost should be the last thing patients have to worry about once they’ve found a treatment that works for them,” said Alexander Williams, director, copay center of excellence at AbbVie.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2022-11-23T15:07:39.170-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-23T15:07:39.170-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_1418332829
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-11-29T10:19:05.545-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2025-01-15T11:27:27.083-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Bridge programs ensure no patients wait for access"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-27T12:31:58.415-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Delays are another pain point for patients. Many insurance providers require doctors to complete prior authorization – the healthcare provider must get approval from a patient’s health plan first to ensure coverage – before they will cover a medicine. But if they don’t receive the right information, or if forms are not completed fully or are sent to the wrong department, there could be a delay in access. Sometimes, insurance companies won't cover a new treatment for a period of time after it’s been approved, creating even more delays and stress for the patient.&lt;/p>&#xd;&#xa;&lt;p>“When manual errors occur, it’s often difficult to figure out where things went wrong,” Williams says. “Without any sort of intervention, patients who are dealing with painful and even life-threatening diseases may end up waiting a long time for their medications.”&lt;/p>&#xd;&#xa;&lt;p>To mitigate these kinds of delays, in some cases, AbbVie can offer a bridge program. The program allows qualified patients to receive their medication for free from AbbVie’s specialty pharmacy until they can obtain it through their commercial insurance.&lt;/p>&#xd;&#xa;&lt;p>&amp;quot;We often hear from patients who may not get their medication on time. Many of them are scared and frustrated,” Williams says. “When we can help, our teams can hear the relief in their voice.”&lt;/p>&#xd;&#xa;&lt;p>To&amp;nbsp;further&amp;nbsp;support patients navigating the prior authorization&amp;nbsp;process, AbbVie published&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/prior-authorization-fact-sheet.pdf&quot;>an easy-to-follow guide&lt;/a>&amp;nbsp;that explains&amp;nbsp;what&amp;nbsp;it&amp;nbsp;is, why&amp;nbsp;it’s&amp;nbsp;required, how long it typically takes and what patients can do if their&amp;nbsp;request for medication is delayed or denied. Designed to&amp;nbsp;educate patients and&amp;nbsp;help&amp;nbsp;them&amp;nbsp;feel more informed and prepared, the guide offers practical tips and sample language&amp;nbsp;to&amp;nbsp;use when speaking with&amp;nbsp;a&amp;nbsp;healthcare provider or insurance company.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__575096249
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2022-11-23T15:07:39.170-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-23T15:07:39.170-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-11-29T10:16:54.954-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2025-01-13T09:57:59.700-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Free medication for qualified patients"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_1714778176
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-27T12:34:28.589-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Sudden life changes, like job loss or loss of health insurance, can make accessing medication even more stressful. To help patients who have difficulty paying for medication, AbbVie offers &lt;a href=&quot;/content/abbvie-com2/us/en/patients/patient-support/patient-assistance.html&quot;>myAbbVie Assist&lt;/a>, a patient assistance program that provides free AbbVie medicine to qualifying patients with limited or no health insurance coverage. In 2024, AbbVie provided more than 235,000 patients in the U.S. with access to medicines at no cost through the program.&lt;/p>&#xd;&#xa;&lt;p>“To say that this helps my family is an understatement. The financial assistance and the mental relief this program provides really cannot be put into words,” said one Illinois patient.&lt;/p>&#xd;&#xa;&lt;p>According&amp;nbsp;to&amp;nbsp;Manish Setia, AbbVie’s director of global patient access programs,&amp;nbsp;“MyAbbVie&amp;nbsp;Assist provides a vital safety net, helping patients access our medicines so they can focus on what matters&amp;nbsp;most&amp;nbsp;—&amp;nbsp;their wellbeing.”&lt;/p>&#xd;&#xa;&lt;p>Whether through savings cards, bridge programs or free medication, AbbVie’s goal is to make it easier and less frustrating for patients to get the medications they need.&lt;/p>&#xd;&#xa;&lt;p>“We want patients to feel empowered and to take ownership of their treatment,” said Peiser. “We’re committed to making sure we give them the support they need when they need it most.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-23T15:07:39.170-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-23T15:07:39.170-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_836080047
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-23T16:46:55.248-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-05-03T16:43:51.203-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xa;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

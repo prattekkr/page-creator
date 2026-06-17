@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-05-08T10:28:46.652-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-10T10:04:42.926-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/science-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-11-27T10:10:54.279-05:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Meet the ARCH, a time-saving tool for researchers focused on finding cures"
+        jcr:uuid="a88206c2-e0fb-4828-a9ae-35e239e0586b"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="An inside look at the creation of a search engine to help solve science’s toughest questions."
+        fileReference="/content/dam/abbvie-com2/images/stories/meet-arch/arch-hero.jpg"
+        hideInNav="true"
+        navTitle="Meet the ARCH, a time-saving tool for researchers focused on finding cures"
+        ogimage="/content/dam/abbvie-com2/images/stories/meet-arch/arch-hero.jpg"
+        pageTitle="Meet the ARCH, a time-saving tool for researchers focused on finding cures"
+        publishDate="{Date}2023-11-27T11:19:00.000-06:00"
+        readTime="6"
+        readWatchTimeSel="read-time"
+        title="Meet the ARCH, a time-saving tool for researchers focused on finding cures">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-11-20T13:20:54.706-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/meet-arch/arch-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-05-08T10:28:08.608-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-11-20T13:39:05.187-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Meet the ARCH, a time-saving tool for researchers focused on finding cures"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-11-20T12:36:20.557-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>An inside look at the creation of a search engine to help solve science’s toughest questions.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:28:18.308-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Connecting the dots of data"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-11-27T11:06:37.327-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>What if a few clicks on a keyboard could get you access to rich information about a disease you’re researching? Not just the basics, but related diseases, safety information, molecular insights and potential connections to other diseases or biomarkers?&lt;/p>&#xd;&#xa;&lt;p>For the thousands of scientists at AbbVie, this scenario is not hypothetical. It’s happening in a platform called the ARCH, and it’s changed the way teams across discovery research and chemistry all the way through clinical trial design leverage integrated data to work more efficiently and ultimately accelerate a pipeline of novel medicines.&lt;/p>&#xd;&#xa;&lt;p>The ARCH, which stands for AbbVie R&amp;amp;D Convergence Hub, is part of the company’s convergence organization’s mission to bring data and people together. It is an industry-leading analytics platform that harmonizes and extracts insights, helping R&amp;amp;D teams connect the dots of data like never before.&lt;/p>&#xd;&#xa;&lt;p>In just two short years, the ARCH has already amassed so much data – 450 terabytes, to be exact – that if converted to digital music files, it would be enough to play songs without stopping for 873 years. But it’s not just about the volume of data, according to Phil Hajduk, Ph.D., AbbVie’s vice president of R&amp;amp;D information research. &lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>“A real focus of how we've built the ARCH is sitting with experts on each data set to layer an interpretation and build a knowledge graph,” Hajduk says. “What do we know about this compound or this disease based on the underlying data? That’s what our end users get, not just access to raw data that doesn’t tell a story.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <image
+                                cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                jcr:created="{Date}2023-11-20T12:37:13.149-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-02-15T12:55:41.091-05:00"
+                                jcr:lastModifiedBy="sharmrx18"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/images/stories/meet-arch/arch-process.jpg"
+                                imageModifiers="scl=1&amp;size=3583,2017"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:28:28.526-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Putting the ARCH into action"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-11-27T11:06:56.327-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Just one example of the ARCH’s vast capabilities can be seen within AbbVie’s discovery science group, where every chemist uses industry-leading predictive models to design drug-like molecules. The models are now run on the ARCH, where the data is collated and analyzed on 30-day cycles. That means each month, chemists gain new insights from the prior cycle that informs their next models and over time, decrease the overall design time.&lt;/p>&#xd;&#xa;&lt;p>Insights for predictive modeling have also been critical in the clinical operations group, where the ARCH platform is leveraged to help choose clinical trial sites. The optimized models have resulted in accelerated trial enrollment rates, Hajduk says.&lt;/p>&#xd;&#xa;&lt;p>Additionally, within key innovation areas like immuno-oncology, teams can now assess an early target using ARCH-interpreted data and either validate a hypothesis or disprove it. In one instance, scientists were seeking information on how existing medications targeting one gene and protein behave in the body for people with immune-mediated diseases. An ARCH report showed the potential for increased immune response, leading the team to advance more quickly to different targets.&lt;/p>&#xd;&#xa;&lt;p>With case studies like these coming in from many teams, the next step is driving larger organizational change, explains Jake Harrell, head of R&amp;amp;D data &amp;amp; digital convergence, AbbVie.&lt;/p>&#xd;&#xa;&lt;p>“We are working to maximize the full potential of what happens when you share data and insights and create knowledge together,” Harrell says. “This work impacts the key measures for our R&amp;amp;D organization overall and for patients – how likely are we to identify a target we can pull all the way through to an on-market medication?”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote
+                                cq:styleIds="[1000000000040,1000000000000]"
+                                jcr:created="{Date}2023-11-20T12:38:01.405-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-11-20T12:38:52.473-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Phil Hajduk, Ph.D."
+                                attributionTitle="VP, R&amp;D information research, AbbVie"
+                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                fileReference="/content/dam/abbvie-com2/images/employee/rdlt/phil-hajduk-headshot-square.jpg"
+                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                quote="You really cannot understate the importance of AI/ML as the end game for how we make a difference for patients, faster and more efficiently.”"
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:28:46.644-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Imagining the future of AI"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-11-27T12:13:03.225-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>The progression of data convergence efforts, including the ARCH, are critical to advancing artificial intelligence (AI) and machine learning (ML) overall, Hajduk says. The rise of programs like ChatGPT, a large language model now broadly available around the world, helps shine a light on the established AI/ML strategy at AbbVie and even accelerates the work. In fact, the company’s generative AI platform is being embedded into the ARCH, creating an even more powerful tool.&lt;/p>&#xd;&#xa;&lt;p>AI experts working across the organization are now collaborating and contributing to the ARCH’s 1.7 billion knowledge graphs and counting, Hajduk says. Hosting algorithms on a central platform allows for learning and relearning on a much larger, organizational scale – potentially even reaching the company’s 14,500 employees in R&amp;amp;D.&lt;/p>&#xd;&#xa;&lt;p>The positive response from scientists about the impact of data convergence has been overwhelming, Hajduk says, who are saving time by not having to manually bring disparate data sets together. Coupled with continued advancements across technology and analysis, the potential of the ARCH continues to grow.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>“You really cannot understate the importance of AI/ML as the end game for how we make a difference for patients, faster and more efficiently,” Hajduk says. “The ARCH is just one piece in our broader organizational vision to cut in half the time it takes to get a medicine from the lab to patients.”&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__44393455
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_759260103_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-23T16:46:55.248-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-27T11:07:12.126-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header_copy
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2023-06-12T18:48:53.854-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T18:49:00.743-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related Content"/>
+                                <cardpagestory_copy
+                                    cq:styleIds="[1111111111110,1111111111112,1111111111115]"
+                                    jcr:created="{Date}2023-06-12T18:49:19.828-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-11-20T13:25:58.277-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/everyones-talking-about-data-science"/>
+                            </container5>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

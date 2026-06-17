@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2024-03-20T10:59:19.727-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-04-03T16:13:00.721-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/aesthetics-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-20T02:59:55.984-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Inside The DREAM Initiative"
+        jcr:uuid="368bd9de-4829-4ee0-803b-24fb3d408fa1"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        description="Why we’re reimagining beauty standards in the aesthetics industry"
+        fileReference="/content/dam/abbvie-com2/images/stories/dream-initiative-hero_2880x1620.jpg"
+        hideInNav="true"
+        navTitle="Inside The DREAM Initiative"
+        ogimage="/content/dam/abbvie-com2/images/stories/dream-initiative-hero_2880x1620.jpg"
+        pageTitle="Inside The DREAM Initiative"
+        publishDate="{Date}2022-09-28T16:48:00.000-05:00"
+        readTime="3"
+        readWatchTimeSel="read-time"
+        title="Inside The DREAM Initiative®">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2022-11-30T17:51:37.627-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/dream-initiative-hero_2880x1620.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-01-24T18:28:42.252-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-01-26T15:31:15.516-05:00"
+                                jcr:lastModifiedBy="fusznx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Inside the DREAM Initiative®"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2022-11-30T17:52:39.558-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Why we’re reimagining beauty standards in the aesthetics industry.&lt;/span>&lt;/span>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-03-20T10:59:00.343-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Understanding inclusive and representative beauty"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-11-30T17:53:37.616-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>When Simone Hopes started her career in the medical aesthetics field, she didn’t find many other physician assistants or providers who looked like her: a woman of color with a round face, bold features and unique skin care needs.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;And that meant that those providers may not be equipped to understand and treat her and other people of different ethnic backgrounds and skin types. For Hopes, this realization sparked a journey for her to eventually open her own inclusive aesthetics practice, where she works to erase unrealistic beauty standards and instead help people enhance their natural look.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Our nation’s demographics are becoming increasingly more diverse, and the beauty industry hasn’t grasped that concept yet,” Hopes says. “The concept of beauty, the perception of beauty and the standard of beauty has been the same since before I can remember.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Hopes’ personal experience and perceptions are mirrored in findings from a recent DREAM: Driving Racial Equity in Aesthetic Medicine® Forces of Beauty®&amp;nbsp;&lt;a href=&quot;https://www.dreamforequity.com/&quot; target=&quot;_blank&quot;>report&lt;/a>&amp;nbsp;focused on the unique dynamic between racial/ethnic diversity and beauty in the U.S. The study was fielded by Allergan Aesthetics, part of AbbVie, and in partnership with skinbetter science®, with 4,000 female and non-binary respondents representing different ethnicities, ages and backgrounds. Hopes is an ambassador with the DREAM Initiative®.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Key results from the study include:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Nearly a quarter (22%) of women believe there are stigmas around beauty related to their race, culture and/or religion – this is especially true among Black women (34%) and Hispanic women (23%).&lt;/li>&#xd;&#xa;&lt;li>33% of multiracial and 31% of Caucasian women did not grow up feeling beautiful; nearly all of these respondents said unrealistic and unattainable beauty standards set by the media drove their beauty insecurities.&lt;/li>&#xd;&#xa;&lt;li>The change women most want in the beauty industry is “real women in beauty and advertising” (38%).&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <video
+                                cq:styleIds="[0]"
+                                jcr:created="{Date}2022-11-30T17:53:46.796-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-09-08T03:59:19.254-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 3:24"
+                                description="&lt;p>Forces of Beauty® - A Lens Into Inclusivity in Aesthetics&lt;/p>&#xd;&#xa;"
+                                fileReference="/content/dam/abbvie-com2/images/stories/dream-initiative-video-thumbnail.jpg"
+                                imgAlt="The DREAM Initiative® | Forces of Beauty® - A Lens Into Inclusivity in Aesthetics"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="The DREAM Initiative®"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/T_up1joThrA"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-03-20T10:59:07.003-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Turning results into action"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-11-30T17:59:34.893-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>The ongoing DREAM Initiative® and action plan includes a broader commitment to furthering the principles of racial and ethnic diversity, inclusion, respect, and understanding in the field.&lt;/p>&#xd;&#xa;&lt;p>Facilitating the Forces of Beauty® report serves as a foundational step in understanding how women think about inclusive and representative beauty.&lt;/p>&#xd;&#xa;&lt;p>The study highlighted the need for better representation in media, resulting in the DREAM Initiative’s® new collection of thousands of royalty-free stock images with hundreds of real women from all walks of life. In partnership with Shutterstock Studios, these images are now available and accessible to all.&lt;/p>&#xd;&#xa;&lt;p>“Historically, the industry hasn’t included all women in its definition of beauty,” says Carrie Strom, senior vice president, AbbVie, and president, Global Allergan Aesthetics. “As industry leaders, our goal is to create a more equitable beauty and aesthetics industry that focuses on diversity, representation, and inclusion. That is what Forces of Beauty® is about, impacting change and creating a space where the origins of beauty are honored, the definition of beauty is vastly expanded upon, and where uniqueness is the standard.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-11-30T17:59:43.557-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-11-30T18:05:56.194-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Simone Hopes"
+                                attributionTitle="PA-C, DREAM Initiative® ambassador"
+                                fileReference="/content/dam/abbvie-com2/images/stories/simone-hopes-headshot.jpg"
+                                quote="There is no one standard of beauty, no cookie cutter, one-size-fits-all. Once we stop imagining the world to be that place, it'll become more inclusive."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-03-20T10:59:19.709-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Equipping physicians with tools and training"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-11-30T18:07:13.226-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Allergan Aesthetics and skinbetter science® have also endorsed and are supporting the rollout of two educational initiatives for physicians.&lt;/p>&#xd;&#xa;&lt;p>The first, Curriculum for Advancing Racial Equity (CARE) is designed to equip physicians with the tools and knowledge to recognize and address racism in medicine. Developed specifically for dermatology and plastic surgery residency programs, the curriculum consists of five virtual workshops.&lt;/p>&#xd;&#xa;&lt;p>Topics covered in the curriculum include identity, power and privilege, microaggressions and bias, structural racism, and institutional racism in healthcare.&lt;/p>&#xd;&#xa;&lt;p>The American Academy of Dermatology and other leading dermatology societies are supporting the curriculum’s inaugural implementation in five highly regarded dermatology residency programs.&lt;/p>&#xd;&#xa;&lt;p>The second tool for physicians is a unique full-color atlas called The Full Spectrum of Dermatology: A Diverse and Inclusive Atlas. This tool is intended to visually teach dermatologists, dermatology residents, and other clinicians to recognize various skin conditions in different skin tones.&lt;/p>&#xd;&#xa;&lt;p>Leaders from academic dermatology and education have joined together to create this comprehensive atlas that will help to address what has become a well-documented gap in dermatology education. This tool is intended to help dermatologists, dermatology residents, and other clinicians recognize and diagnose various skin conditions in different skin tones.&lt;/p>&#xd;&#xa;&lt;p>Hopes believes that increased education will help aesthetics providers have open, honest conversations about how they can better serve clients.&lt;/p>&#xd;&#xa;&lt;p>“It’s recognizing that it’s time for a change, that there is no standard of beauty, no cookie cutter, one-size-fits-all,” Hopes says. “Once we stop imagining the world to be that place, it’ll become more inclusive.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2022-11-30T18:08:31.915-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-30T18:08:31.915-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-23T16:46:55.248-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-11T17:21:31.840-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2023-01-25T23:10:19.401-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-01-25T23:10:37.988-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related Content"/>
+                                <cardpagestory
+                                    cq:styleIds="[1111111111112,1111111111117]"
+                                    jcr:created="{Date}2023-01-25T23:10:28.849-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-01-25T23:11:37.624-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/magnified-featuring-darin-messina"/>
+                            </container5>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

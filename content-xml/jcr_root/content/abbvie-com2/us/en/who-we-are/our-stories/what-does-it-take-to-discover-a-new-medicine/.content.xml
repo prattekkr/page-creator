@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-03-27T14:45:25.606-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-04-03T16:13:20.570-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/science-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="In oncology, immunology, virology and beyond, researchers strive to turn breakthrough science into new medicines. See how in AbbVie’s Discovery Files series."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-19T03:48:37.919-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="What does it take to discover a new medicine? "
+        jcr:uuid="f00ab6e8-86f0-44b8-87f0-35f197588ecb"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="In oncology, immunology, virology and beyond, researchers strive to turn science into breakthrough medicines. See how in AbbVie’s Discovery Files series. "
+        fileReference="/content/dam/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/discoveryfiles-hero.jpg"
+        hideInNav="true"
+        navTitle="What does it take to discover a new medicine? "
+        ogimage="/ content/dam/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/ discoveryfiles-hero.jpg"
+        pageTitle="What does it take to discover a new medicine? "
+        publishDate="{Date}2023-06-17T01:10:00.000-05:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="What does it take to discover a new medicine?">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-06-12T02:28:24.641-04:00"
+                        jcr:lastModifiedBy="SCHAFSM"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/discoveryfiles-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-06-12T02:28:53.800-04:00"
+                                jcr:lastModifiedBy="SCHAFSM"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-06-12T02:14:10.954-04:00"
+                                jcr:lastModifiedBy="SCHAFSM"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="What does it take to discover a new medicine? "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-06-12T02:14:46.998-04:00"
+                                jcr:lastModifiedBy="SCHAFSM"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Discovery Files: An inside look at why we persevere in the lab every day &lt;/span>&lt;/span>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-03-20T10:54:00.619-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Turning science into breakthrough medicines "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-03-27T14:08:17.290-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>From blood cancers to Hepatitis C virus, our Discovery Files series reveals how we create new possibilities for patients turning breakthrough science into new medicines.&lt;/p>&#xd;&#xa;&lt;p>These scientific scenarios may seem distinctly different, but they have one thing in common: After years of perseverance, scientists reached a “eureka” moment in the lab that helped make a molecule a reality to form the basis of a transformative medicine. Now, a new documentary series – The Discovery Files — reveals the behind-the-scenes stories that resulted in these pivotal moments.&lt;/p>&#xd;&#xa;&lt;p>Discovery science can be a long, arduous process, plagued by a high failure rate. But the Discovery Files episodes demonstrate the tenacity, rigor and out-of-the-box thinking of AbbVie scientists as they chase bold goals to help patients get the solution they need, every single day.&lt;/p>&#xd;&#xa;&lt;p>Part of what drives AbbVie scientists is the core purpose and aspiration of our company’s robust discovery research group: to turn science into cures.&lt;/p>&#xd;&#xa;&lt;p>“We are not interested in therapies that are iterative in their benefit for patients. Rather we aim to invent breakthrough medicines,” says Jonathon Sedgwick, VP &amp;amp; global head of discovery research, AbbVie. “That comes with many years of experimenting, failing, learning, but always persisting, to find therapies that are truly impactful.”&lt;/p>&#xd;&#xa;&lt;p>Though we strive for “cures”, these remain elusive. However, AbbVie scientists always aim to elevate the standard of care, aspiring to have the majority of AbbVie’s medicines considered first-in-kind, meaning they target a novel disease pathway or use a new or unique therapeutic modality that provides benefit for patients. &lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <video_714167463
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2023-06-12T02:16:50.415-04:00"
+                                jcr:createdBy="SCHAFSM"
+                                jcr:lastModified="{Date}2023-06-15T09:48:05.287-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 2:33"
+                                descriptiveIframeTitle="Discovery Files: The Eureka Moment Behind a Scientific Discovery"
+                                fileReference="/content/dam/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/discoveryfiles-mitchel-yt.jpg"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Discovery Files: The Eureka Moment Behind a Scientific Discovery"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/45GzoyuWP2I?rel=0"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-06-12T02:18:52.472-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T02:18:52.472-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-03-20T10:54:12.851-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Motivated by patient impact"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-03-27T14:45:25.596-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Scientists aren’t satisfied by the status quo, especially when they know a better option may be possible, according to longtime cancer researcher Andy Souers, Ph.D., a distinguished research fellow within AbbVie’s oncology discovery research team. Souers and his team are behind a blood cancer discovery featured in the second episode of “Discovery Files”, which targets a family of proteins many in the pharmaceutical industry previously considered “undruggable.” The drive to find another option beyond chemotherapy for people with certain kinds of leukemias motivated the team to keep experimenting for years before ultimately finding their “eureka” moment.  &lt;/p>&#xd;&#xa;&lt;p>“One huge advantage we had was this culture at AbbVie, which basically allowed us to do any sort of exploration we needed to reach the objective,” Souers explains in the episode. &lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2023-06-12T02:19:39.627-04:00"
+                                jcr:createdBy="SCHAFSM"
+                                jcr:lastModified="{Date}2024-03-27T14:03:22.787-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Seble Wagaw"
+                                attributionTitle=" VP, development sciences, AbbVie"
+                                quote="The journey showed us that we have the capability and the drive to keep working every day to discover and develop new treatments for people who need them. "
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-06-12T02:18:52.472-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T02:18:52.472-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-03-20T10:54:22.570-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="The same patient drive, across disease areas"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-06-14T17:12:21.461-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Visit any AbbVie lab or research hub and you’ll hear similar stories, whether it’s from immunology scientists chasing a better way to treat different autoimmune diseases or practicing physicians searching for new medicines that could help relieve devastating movement disorders.&amp;nbsp;&amp;nbsp;&lt;/p>&#xa;&lt;p>“Discovery Files” examines how these teams stay motivated and use creativity and persistence to create patient impact.&amp;nbsp;&amp;nbsp;&lt;/p>&#xa;&lt;p>In episode three, for example, we meet an AbbVie virology team on a quest to end Hepatitis C virus (HCV) infection, a prevalent disease &lt;a href=&quot;https://www.who.int/en/news-room/fact-sheets/detail/hepatitis-c&quot; target=&quot;_blank&quot;>affecting about 58 million people worldwide&lt;/a>.&amp;nbsp;&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                            <video
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2023-06-12T02:23:56.602-04:00"
+                                jcr:createdBy="SCHAFSM"
+                                jcr:lastModified="{Date}2023-06-15T09:48:48.532-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 4:24"
+                                descriptiveIframeTitle="Discovery Files: Hepatitis C Virus"
+                                fileReference="/content/dam/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/discoveryfiles-hepatitis-c-virus-yt.png"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Discovery Files: Hepatitis C Virus"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/rMy4Bo6Go7U?rel=0"/>
+                            <container4_copy_copy_712417177
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-06-12T02:18:52.472-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T02:18:52.472-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-06-14T17:15:51.663-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Building off their own research around HIV, the team aimed to find a way to stop the virus from replicating, lowering the viral load in the body and blocking proteins necessary for the virus’ survival. But the journey didn’t end there – it took years and many iterations until the real “aha” moment; the team had to work counter-intuitively, building molecules larger instead of smaller and targeting all major HCV genotypes instead of just some.&amp;nbsp;&lt;/p>&#xa;&lt;p>The stories of the Discovery Files series demonstrate that “good enough” is never good enough, for those at AbbVie searching for tomorrow’s scientific breakthroughs. One of the series’ featured scientists, Seble Wagaw, VP, development sciences, AbbVie, explains it best. “The journey show(s) us that we have the capability and the drive to keep working every day to discover and develop new treatments for people who need them.”&amp;nbsp;&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1438601535
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2023-06-12T19:40:35.890-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T19:40:35.890-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text
+                                    jcr:created="{Date}2023-06-12T19:38:18.115-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T19:41:00.043-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy_712417177>
+                        </par_12>
+                        <separator
+                            cq:styleIds="[1662756423318]"
+                            jcr:created="{Date}2023-06-12T02:18:52.472-04:00"
+                            jcr:createdBy="SCHAFSM"
+                            jcr:lastModified="{Date}2023-06-12T02:18:52.472-04:00"
+                            jcr:lastModifiedBy="SCHAFSM"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2023-06-12T18:48:53.854-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T18:49:00.743-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related Content"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-06-12T18:49:19.828-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T19:15:44.713-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/discovery-files-vision-for-blood-cancer-patients"/>
+                            </container5>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

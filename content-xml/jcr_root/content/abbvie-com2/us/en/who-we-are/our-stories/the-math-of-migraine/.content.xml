@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-09-24T10:23:35.011-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/neuroscience-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="One billion people impacted. Millions of workdays missed. Countless events skipped. The toll of migraine adds up. But so does progress in care."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-19T05:24:17.065-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="The math of migraine"
+        jcr:uuid="f62ae29d-2c99-4384-a44b-7961716f66bc"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        description="One billion people impacted. Millions of workdays missed. Countless events skipped. The toll of migraine adds up. But so does progress in care."
+        fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine-hero"
+        hideInNav="true"
+        navTitle="The math of migraine"
+        ogimage="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine-hero"
+        pageTitle="The math of migraine"
+        publishDate="{Date}2021-06-02T14:28:00.000-05:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="The math of migraine">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835860,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-03-18T13:54:56.937-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/se/images/se-3-0-images/nya-bilder-2023/SE-Migraine_Hero_Asset-new-color.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545825685,1653242825678,1653545835855,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-01-24T19:04:47.750-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2022-12-02T17:59:07.631-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="The math of migraine"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2022-12-02T17:59:37.705-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>One billion people impacted. Millions of workdays missed. Countless events skipped. The toll of migraine adds up. But so does progress in care.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-04-15T10:24:24.611-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="A common denominator"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-12-02T18:00:15.064-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Brett Dabruzzo’s first migraine hit when she was in high school. Pounding headaches and overwhelming nausea weren’t diagnosed as migraine until almost a decade later when Dabruzzo, Pharm.D., director, medical affairs, AbbVie, began working for a pharmaceutical company in its neurology department. A week into her job as a medical science liaison in Parkinson’s disease, epilepsy and migraine, she recognized the signs of migraine and sought help, receiving a diagnosis for the neurological disease shortly after.&lt;/p>&#xd;&#xa;&lt;p>Dabruzzo says she tries not to let migraine stop her – but there are times where she can’t fight it off. Missed kids’ hockey games and date nights often add up to disappointment and guilt.&lt;/p>&#xd;&#xa;&lt;p>“I feel like I would be a better mom if I didn't have migraine,” Dabruzzo says. “I feel like I would be a better wife if I didn't have migraine.”&lt;/p>&#xd;&#xa;&lt;p>Like Dabruzzo, Michael Gold, M.D., vice president, neuroscience development, AbbVie, is familiar with migraine. But while he doesn’t face migraine himself, Gold watches his wife and adult children battle debilitating attacks.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <image
+                                jcr:created="{Date}2022-12-02T18:06:12.710-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-02T18:15:37.593-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Despite living with migraine, Michael Gold’s family – which includes his wife, Fanny, and children, Alexander and Ariel – loves to travel. In 2019, they and Gold explored Bryce Canyon National Park."
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="The math of migraine"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/The Math of Migranie.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-12-02T18:16:36.075-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-02T18:18:24.060-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;i>Despite living with migraine, Michael Gold’s family – which includes his wife, Fanny, and children, Alexander and Ariel – loves to travel. In 2019, they and Gold explored Bryce Canyon National Par&lt;span class=&quot;body-unica-14-reg&quot;>&lt;/span>k.&lt;/i>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                            <separator_copy_copy_
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <container
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-02T18:18:50.677-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-02T18:18:50.677-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-02T18:19:40.218-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-02T18:21:49.681-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>As a neurologist, Gold says he understands the mechanics of migraine – but it doesn’t make it any less difficult to see his family, who has experienced migraine for four generations, struggle.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>“We’ve&amp;nbsp;seen it; we live it,” Gold says. “It’s humbling.”&lt;/p>&#xd;&#xa;&lt;p>Based on his clinical and personal experience, Gold has seen the long journey people with migraine trek from symptom onset to accurate diagnosis and developing an appropriate treatment plan for them. He says delays in finding a tailored therapy can be spurred in part by lack of open discussion about symptoms.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <title
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-02T18:22:05.265-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2024-04-15T14:55:39.946-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Making a difference"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="h"/>
+                                <text_1123155212
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-02T18:22:57.142-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-02T18:23:07.942-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Gold believes there’s an opportunity to improve migraine care, but it’ll take teamwork from patients, researchers and healthcare providers.&lt;/p>&#xd;&#xa;&lt;p>Patients, he says, can try to observe how early stages of migraine manifest and potentially avoid triggers or intervene earlier with a plan geared toward prevention in addition to acute therapy. It’s important that they share not only their symptoms with their healthcare providers but also ask questions. Researchers must continue to investigate alternative treatment avenues. Clinicians should familiarize themselves with migraine symptoms to become more comfortable addressing them.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                            <carousel
+                                cq:styleIds="[3]"
+                                jcr:created="{Date}2022-12-02T18:26:54.205-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-02T18:40:00.925-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                autopauseDisabled="false"
+                                autoplay="false"
+                                carouselType="static"
+                                delay="5000">
+                                <item_1670023635414
+                                    cq:panelTitle="Migraine 1"
+                                    jcr:lastModified="{Date}2023-01-31T00:47:10.663-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="The math of migraine"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine-s1.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1670023639351
+                                    cq:panelTitle="Migraine 2"
+                                    jcr:lastModified="{Date}2023-01-31T00:47:35.930-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="The math of migraine"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine_carousel_860x484-02.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1670023642270
+                                    cq:panelTitle="Migraine 3"
+                                    jcr:lastModified="{Date}2023-01-31T00:48:12.949-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="The math of migraine"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine_carousel_860x484-03.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1670023644492
+                                    cq:panelTitle="Migraine 4"
+                                    jcr:lastModified="{Date}2023-01-31T00:53:39.476-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="The math of migraine"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine_carousel_860x484-04.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1670023647664
+                                    cq:panelTitle="Mirgraine 5"
+                                    jcr:lastModified="{Date}2023-01-31T00:56:43.878-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="The math of migraine"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine_carousel_860x484-05.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                            </carousel>
+                            <container_475451310
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-02T18:53:33.679-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-02T18:53:33.679-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-02T18:54:03.288-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-02T18:54:10.161-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Gold says that for decades, AbbVie researchers have been striving to help people achieve migraine freedom through innovative research and providing a range of therapeutic options. And with AbbVie’s deep migraine legacy, multiple therapies available and more assets in clinical trials, Gold says he thinks AbbVie has the foundation to continue improving migraine care. He adds that it is essential to adapt alongside evolving knowledge of migraine and how to tackle it.&lt;/p>&#xd;&#xa;&lt;p>“We are interested in finding ways to actually move the needle from symptomatic therapies to disease&amp;nbsp;prevention,” Gold says. “We are committed to bringing forward our migraine expertise but remain purely open to learning and understanding where things are moving, how things are shifting, and to be prepared to help address those needs.”&lt;/p>&#xd;&#xa;&lt;p>Based on her experience with migraine, Dabruzzo says doctors can help not just by administering care but by employing empathy. She urges healthcare providers to visualize themselves amid debilitating migraine days – where there’s no eating, no working and no human interaction due to pain – and use that to help patients.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-02T18:54:35.553-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-02T18:54:47.757-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Combating limits"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"/>
+                                <text_914944258
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-02T18:54:54.692-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-02T18:55:35.856-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Elena Ruiz de la Torre, migraine advocate and executive director of the European Migraine and Headache Alliance, has also witnessed how migraine can disrupt all aspects of life – including work.&lt;/p>&#xd;&#xa;&lt;p>As someone who has faced migraine most of her life, Ruiz de la Torre says migraine hasn’t just interfered with tasks her jobs have required but also her chances of employment. She once missed a job interview because of an attack that left her sick and immobile. She called the company, explained that she had migraine and asked for another chance. To Ruiz de la Torre’s frustration, the company declined.&lt;/p>&#xd;&#xa;&lt;p>Ruiz de la Torre is not alone in experiencing negative consequences in the workplace because of migraine. According to a 2019 EMHA&amp;nbsp;&lt;a href=&quot;https://www.emhalliance.org/wp-content/uploads/EMHA-Migraine-at-work.pdf&quot; target=&quot;_blank&quot; title=&quot;Combating Limits&quot;>study&lt;/a>&amp;nbsp;assessing how migraine has impacted work for European patients, nearly 42% of respondents (N = 3,342)&amp;nbsp;reported having difficulties in their company due to the disease while only around 30% of workers report that migraine doesn’t affect labor productivity.1&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_475451310>
+                            <image_872185350
+                                jcr:created="{Date}2022-12-02T18:56:04.777-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-02T18:56:29.692-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/the-math-of-migraine/math-of-migraine_stats_860x484.png"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                            <container_598586051
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678]"
+                                jcr:created="{Date}2022-12-02T18:56:48.253-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-02T18:56:48.253-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-02T18:57:07.891-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-02T18:57:23.041-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Above all, Ruiz de la Torre says awareness about how migraine impacts people – not just at work but everywhere – can help combat its stigma and bring hope to those who live with it.&lt;/p>&#xd;&#xa;&lt;p>“We don’t have to be shamed for it,” Ruiz de la Torre says about migraine. “I want [people with migraine] to live a future life in a much easier way than the one I have had to live because there was no understanding.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_598586051>
+                            <container_1652960311
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-26T18:39:20.295-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-26T18:39:20.295-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2022-12-26T17:59:29.574-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-26T18:07:10.869-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    heading="References"
+                                    headingElement="h6"
+                                    singleExpansion="false">
+                                    <item_1672095835660
+                                        cq:panelTitle="Ruiz de la Torre, E. R., Vicente-Herrero, T., Ramírez-Iñiguez de la Torre, V., &amp; Capdevila-García, L. (2019)."
+                                        jcr:lastModified="{Date}2022-12-26T18:54:18.031-05:00"
+                                        jcr:lastModifiedBy="schafsm"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>Available at:&amp;nbsp;&lt;a href=&quot;https://www.emhalliance.org/wp-content/uploads/EMHA-Migraine-at-work.pdf&quot; target=&quot;_blank&quot; title=&quot;Migraine at Work&quot;>https://www.emhalliance.org&lt;/a>&lt;br>&#xa;Accessed on May 10, 2021.&lt;/p>&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                                <text_copy_copy
+                                    jcr:created="{Date}2023-05-04T21:50:15.089-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-05-04T21:50:29.689-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xa;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container_1652960311>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

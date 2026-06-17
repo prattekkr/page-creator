@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-05-08T09:34:48.534-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-14T13:34:36.200-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/oncology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-20T07:38:22.990-04:00"
+        jcr:lastModifiedBy="KANCHRX3"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Discovery Files: A Vision for Blood Cancer Patients"
+        jcr:uuid="030abe5d-1591-4586-82ae-6fe737ee727c"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article about blood cancer"
+        description="In this episode, veteran chemist Andy Souers rewinds to the “eureka” moment behind a cancer discovery and the 20-year journey to becoming a medicine. "
+        fileReference="/content/dam/abbvie-com2/images/stories/discovery-files-vision-for-blood-cancer-patients/discovery-files_2880x1620.jpg"
+        hideInNav="true"
+        navTitle="Discovery Files: A Vision for Blood Cancer Patients"
+        ogimage="/content/dam/abbvie-com2/images/stories/discovery-files-vision-for-blood-cancer-patients/discovery-files_2880x1620.jpg"
+        pageTitle="Discovery Files: A Vision for Blood Cancer Patients"
+        publishDate="{Date}2022-12-08T15:33:00.000-06:00"
+        readTime="2"
+        readWatchTimeSel="read-time"
+        title="Discovery Files: A Vision for Blood Cancer Patients">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-06T17:11:41.516-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/discovery-files-vision-for-blood-cancer-patients/discovery-files_2880x1620.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-05-08T09:34:32.040-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-01-06T17:11:52.160-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Discovery Files: A Vision for Blood Cancer Patients"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-01-06T17:12:08.640-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>In this episode, veteran chemist Andy Souers rewinds to the “eureka” moment behind a cancer discovery and the 20-year journey to becoming a medicine. &lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545829678,1651545825692]"
+                                    jcr:lastModified="{Date}2024-05-08T09:34:48.529-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="How does a molecule become a medicine?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-06T17:13:30.597-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>In this episode of Discovery Files, we hear from veteran chemist Andy Souers, Ph.D., distinguished research fellow, AbbVie oncology discovery research, on how his team made a blood cancer discovery.&lt;/p>&#xd;&#xa;&lt;p>As Souers details in the episode, the story begins in the mid-90s, motivated by a need to find a different option for patients with blood cancer.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <video
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2023-01-06T17:12:27.445-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-09-08T03:35:06.025-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 4:43"
+                                description="&lt;p>A Vision for Blood Cancer Patients&lt;/p>&#xd;&#xa;"
+                                fileReference="/content/dam/abbvie-com2/images/stories/discovery-files-vision-for-blood-cancer-patients/discovery-files-yt-thumbnail.jpg"
+                                imgAlt="Turn back the clock to the “eureka” moment on a molecule’s journey to becoming a medication. In this episode, the lead chemist behind a discovery for blood cancer gives an inside look at the quest to help people with leukemia."
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Discovery Files"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/cOIxTT89eXE"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-06T17:17:42.208-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-06T17:17:46.120-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Turn back the clock to the “eureka” moment on a molecule’s journey to becoming a medication. In this episode, the lead chemist behind a discovery for blood cancer gives an inside look at the quest to help people with leukemia.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756486159]"
+                                jcr:created="{Date}2023-01-06T17:41:22.060-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-06T17:41:22.060-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <quote
+                                cq:styleIds="[1000000000000,1000000000040]"
+                                jcr:created="{Date}2023-01-06T17:40:39.177-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-06T17:41:02.477-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Andy Souers, Ph.D."
+                                attributionTitle="oncology discovery research, AbbVie"
+                                quote="At the time that we started this effort, chemotherapy dominated treatment, in these leukemias. Our vision was to give them another option."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-06T17:42:03.199-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>The research team zeroed in on understanding the processes within a cancer cell that might lead them to something that could kill the cells. They soon focused on apoptosis, a normal process where aged or damaged cells undergo a programmed death. Apoptosis allows cancer cells to multiply and build up, crowding out normal, healthy cells.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“We asked ourselves, ‘Could we actually come up with a molecule that could get into that cancer cell and turn that cell death process back on?’” Souers says.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;That’s what took the team down the road of targeting BCL-2 family of proteins, also called B-cell lymphoma two, a pro survival protein that keeps a cell alive.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;After many months of experimenting and failing, the tenacity of the scientific team, working around the clock, led to a thrilling discovery, according to Souers.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2023-01-06T17:42:41.584-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T17:43:02.745-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    headingElement="h5"
+                                    singleExpansion="false">
+                                    <item_1673044970930
+                                        cq:panelTitle="Video transcript"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2023-01-06T17:43:34.276-05:00"
+                                        jcr:lastModifiedBy="chiucx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>ANDY: My name is Andy Souers and I'm originally trained as a chemist.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;I've been working in oncology research for 13 years.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Cancer has impacted the lives of many, and so we were incredibly motivated to try to improve the lives of cancer patients. &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;At the time that we started this effort, chemotherapy dominated treatment, in these leukemias.  Our vision was to give them another option.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;What we became very interested in is trying to understand all of the different processes within the cell that might ultimately lead us to an idea capable of killing cancer cells. &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Apoptosis is a normal process whereby aged or damaged cells will actually undergo a programmed cell death. &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;And that allows these cancer cells to continue to multiply and build up in the body, crowding out some of those normal, healthy cells.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;We asked ourselves, “Could we actually come up with a molecule that could get into that cancer cell and turn that cell death process back on.&amp;quot;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;That's what took us down the road of really trying to target BCL-2 or B-cell lymphoma two,   a pro survival protein that acts to keep a cell alive. &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The challenge was even finding a place to start. The BCL-2 family of proteins were considered to be undruggable by almost the entire industry.   &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;One huge advantage we had was this culture at AbbVie, which basically allowed us to do any sort of exploration we needed to reach the objective. Ultimately, what we wound up doing was nurturing some novel technologies, basically, new ways of trying to find a starting point outside of those normal rules that we would use in chemistry or biology.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;This effort took several years and took incredible tenacity from countless numbers of scientists, doctors, and different staff.   &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The challenge of what we were trying to accomplish was reflected by how many times we ultimately failed.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;We eventually found molecules that could actually kill these cancer cells, and it was really the first time that we were convinced that this strategy could actually work. &lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa;Now, the challenge is that the molecule did not just inhibit BCL-2, but also inhibited another very similar protein.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;On paper, this was a straightforward exercise.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“How do we go after a compound that just hits BCL-2 since the cancers really relied on that single protein for survival?”  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;However, in reality, this is incredibly difficult, it had never been done before. So, we were now going back to the drawing board, basically trying to find a key to a lock that we couldn't even see.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;After eight months of failing with almost everything we tried, one of our incredible scientists created an X-ray structure that completely altered the trajectory of our program.   &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;A closer picture of what that lock actually looked like — those very subtle differences between the two proteins — that's what gave us clues of how to design the specific key.&lt;br>&#xd;&#xa;  &lt;br>&#xd;&#xa;We went back to the lab and spent the next two months trying to make molecules that would mimic what we saw in that x-ray structure.   &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;All of a sudden we had it, what we'd been looking for all this time — a molecule that could actually hit this protein.   &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Now that we had this prototype, we still had a journey ahead of us to bring this to patients.  &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Throughout this process, we were working around the clock seven days a week, nights and weekends.   &lt;br>&#xd;&#xa;Once we had this prototype, we were convinced that ultimately our objective could be met. &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;As thrilling as the chemistry journey had been, the most important part was next, and that’s when we brought this treatment to the first patient.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;This is really the dream of any cancer researcher — to have the opportunity to make a difference in the lives of patients. &lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                                <text_copy_copy_copy
+                                    jcr:created="{Date}2023-01-06T13:18:57.054-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T17:44:58.454-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Media inquires:&lt;/b>&lt;br>&#xd;&#xa;Name: Mabel Martinez&lt;br>&#xd;&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:mabel.martinez@abbvie.com&quot;>mabel.martinez@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;Call: 847 937 2700&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-11-16T17:15:38.269-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T17:15:44.854-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related content"/>
+                                <cardpagestory
+                                    cq:styleIds="[1111111111110,1111111111112,1111111111117]"
+                                    jcr:created="{Date}2023-01-06T16:05:11.351-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T17:45:54.920-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/then-and-now-renaissance-in-blood-cancer-treatment"/>
+                            </container5_copy>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

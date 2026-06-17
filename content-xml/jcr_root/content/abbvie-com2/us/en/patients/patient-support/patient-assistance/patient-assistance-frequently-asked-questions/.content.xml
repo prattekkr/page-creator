@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-10-03T15:57:44.266-04:00"
+        cq:lastModifiedBy="chiucx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-12-06T12:28:27.026-05:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Frequently asked questions"
+        jcr:uuid="2da1f1aa-ad56-45e3-99c0-cc9b0ac9cdde"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        description="Applying for patient assistance programs can be confusing. We've answered patients' most frequently asked questions below."
+        eyebrow="Patient Assistance"
+        fileReference="/content/dam/abbvie-com2/images/pap/holding-hands-close-up.jpg"
+        navTitle="Frequently asked questions"
+        pageTitle="Frequently asked questions"
+        title="Patient Assistance FAQs">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2022-12-23T10:53:22.374-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2022-12-23T10:53:31.686-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="You asked. We answered."
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-23T10:53:50.197-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Applying for patient assistance programs can be confusing. We've answered patients' most frequently&amp;nbsp;asked&amp;nbsp;questions below.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_103328284
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-12-23T10:54:33.489-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-23T10:54:37.200-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>If you have a question that isn't answered, please call us at 1-800-222-6885.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:created="{Date}2024-07-08T14:24:53.828-04:00"
+                        jcr:createdBy="VALENSX5"
+                        jcr:lastModified="{Date}2024-07-08T14:25:46.578-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="9"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <accordion_copy_copy_
+                                cq:styleIds="[3,8]"
+                                jcr:created="{Date}2022-12-10T17:59:38.948-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-23T10:55:48.595-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                headingElement="h5"
+                                singleExpansion="false">
+                                <item_1670713218905
+                                    cq:panelTitle="What is myAbbVie Assist?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:57:33.638-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>myAbbVie Assist provides free AbbVie medicine to qualifying patients. The program was launched in 1991 and each year has helped tens of thousands of patients.&amp;nbsp;Learn about program eligibility by reviewing these&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/us/en/patients/patient-support/patient-assistance.html&quot;>requirements&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1670713221584
+                                    cq:panelTitle="Can anyone apply for myAbbVie Assist?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:57:40.118-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>If you’re being treated by a licensed U.S. health care provider on an outpatient basis and have been prescribed an AbbVie medicine that is part of the program, meet our requirements, and live in the U.S., you can apply for myAbbVie Assist.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1670713228568
+                                    cq:panelTitle="How do I apply?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2024-07-16T10:26:49.203-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Eligibility for myAbbVie Assist may be initiated through AbbVie Patient Access Support, which will review financial support opportunities for all AbbVie programs, including myAbbVie Assist. Start by&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/us/en/patients/patient-support/patient-assistance/eligibility-criteria.html&quot;>selecting your medicine on this page&lt;/a>. Instructions on how to apply can be found on the application. You can also call 1-800-222-6885 to ask us to mail or fax you an application.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1670713232031
+                                    cq:panelTitle="If I qualify, how long can I receive free medicine?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:58:15.829-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>If you qualify, you will receive free medicine for up to one year. At the end of your enrollment, you can re-apply for continued assistance.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1670713236887
+                                    cq:panelTitle="Is there a fee to apply?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:58:20.292-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>It is free to apply.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1670713240836
+                                    cq:panelTitle="Do I have to pay a copay for my medicine?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:58:48.309-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Medicines provided through myAbbVie Assist are 100% free; no co-pays or shipping costs.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810491256
+                                    cq:panelTitle="How long will it take to process my application?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2023-02-04T15:49:23.399-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Once we receive all the information needed, we usually review applications within two business days. After that, we’ll contact you and your health care provider to let you know if you qualify.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810494373
+                                    cq:panelTitle="Do I need to provide proof of income?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2023-04-25T17:52:10.092-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>myAbbVie Assist will assess your estimated income that we obtain from a third party when you provide written instructions to the Program under the Fair Credit Reporting Act, solely to verify patient assistance program eligibility. If the program is unable to verify eligibility based on your estimated income, you may be asked to provide additional financial documentation such as your most recent tax return or similar document that reflects your actual income.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810497334
+                                    cq:panelTitle="What if I have no income?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:59:07.994-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>If you don’t have an income, please include a letter describing your current financial situation (e.g., if you recently lost your job, retired, etc.).&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810509021
+                                    cq:panelTitle="I lost my job, so my income is lower than my tax return shows. Can I still apply?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:59:16.778-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Yes. If you are experiencing a financial hardship, such as a job loss, that isn’t reflected in your tax return, please include this in a letter attached to your application.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810512826
+                                    cq:panelTitle="How will I know if I qualify?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2023-05-01T12:10:38.940-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie Patient Access Support may review your application for all AbbVie programs, including myAbbVie Assist. Once we review your application, we will send you a letter, email or text message depending on your preference. We will also notify your health care provider who can also let you know of the outcome.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810524597
+                                    cq:panelTitle="How long before I receive my medicine?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:59:38.593-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>While delivery time varies by medicine, we try to ship medicine within a few business days.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810527858
+                                    cq:panelTitle="Will I have to pay for shipping?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T10:59:47.720-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>myAbbVie Assist covers shipping costs for all medicines.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1671810531567
+                                    cq:panelTitle="Can I apply for more than one medicine?"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2022-12-23T11:00:13.104-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Yes. You are welcome to apply for any medicine you qualify for. Keep in mind that most medicines have different applications. Use the&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/us/en/patients/patient-support/patient-assistance/eligibility-criteria.html&quot;>medicine selection page&lt;/a>&amp;nbsp;to see what applications you need.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </accordion_copy_copy_>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835982]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-12T11:17:18.672-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related content"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2022-12-20T18:08:07.549-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2025-01-13T15:37:57.049-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/us/en/patients/patient-support/patient-assistance/eligibility-criteria"/>
+                                <separator_639551634
+                                    cq:styleIds="[1662756409908]"
+                                    jcr:created="{Date}2022-12-20T18:23:09.648-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-20T18:23:09.648-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator
+                                    cq:styleIds="[1662756387452,1662756756047]"
+                                    jcr:created="{Date}2022-12-14T13:10:41.556-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:10:41.556-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_639551634_
+                                    cq:styleIds="[1662756409908]"
+                                    jcr:created="{Date}2022-12-20T18:23:09.648-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-20T18:23:09.648-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <header_1821235473_co
+                                    cq:styleIds="[3]"
+                                    jcr:created="{Date}2022-12-14T13:11:04.446-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:11:38.712-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Topics"/>
+                                <linklist_copy
+                                    cq:styleIds="[1663000023794,1]"
+                                    jcr:created="{Date}2022-12-14T13:11:54.007-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2025-10-03T15:57:33.682-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                    childDepth="1"
+                                    excludeCurrentPage="true"
+                                    linkItems="true"
+                                    listFrom="static"
+                                    sortOrder="asc"
+                                    tagsMatch="any">
+                                    <pages jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Online Application Overview"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/us/en/patients/patient-support/patient-assistance/online-application-overview"
+                                            oneTrustEnabled="false"
+                                            text="Online Application Overview"
+                                            textIconTarget="_self"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/us/en/patients/patient-support/patient-assistance/online-application-frequently-asked-questions"
+                                            oneTrustEnabled="false"
+                                            text="Online Application Frequently Asked Questions"
+                                            textIconTarget="_self"/>
+                                    </pages>
+                                </linklist_copy>
+                            </container_copy_copy_>
+                        </par_13>
+                    </grid>
+                    <copy_of_container_co
+                        cq:styleIds="[1653545825683,1653545847149,1653545835879]"
+                        jcr:created="{Date}2022-12-05T12:55:26.609-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-17T11:23:52.423-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F1F3FF">
+                        <grid_1839283064_copy
+                            jcr:created="{Date}2022-11-21T16:08:15.932-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-11-21T16:08:39.533-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="1"
+                                    dataPriority="1"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="5"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <image_copy_copy
+                                    jcr:created="{Date}2022-11-07T18:51:21.727-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-21T09:19:46.784-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/employee/woman-at-desk-square.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                            </par_11>
+                            <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <title_copy
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2022-11-07T18:49:15.140-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-23T10:56:23.601-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Looking for help?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"/>
+                                <button_copy
+                                    cq:styleIds="[1659997740832]"
+                                    jcr:created="{Date}2022-11-07T18:49:51.025-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-26T16:40:40.431-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="See if I qualify"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="See if I qualify"
+                                    linkTarget="_self"
+                                    linkURL="/content/abbvie-com2/us/en/patients/patient-support/patient-assistance/eligibility-criteria"/>
+                                <text_copy_copy_copy_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-07T18:20:48.523-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-21T09:19:18.789-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>If you have any additional questions, please call us at 1-800-222-6885.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </par_13>
+                        </grid_1839283064_copy>
+                        <separator
+                            cq:styleIds="[1662756486159]"
+                            jcr:created="{Date}2022-12-14T17:32:19.346-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-14T17:32:19.346-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </copy_of_container_co>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

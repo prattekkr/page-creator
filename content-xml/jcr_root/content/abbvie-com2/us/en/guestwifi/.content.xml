@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-09-10T10:04:29.981-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:robotsTags="noindex"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/primary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-04-21T10:48:23.003-04:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Guest Wi-Fi"
+        jcr:uuid="85da0421-b956-42c1-9293-d9c7114e5442"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        sling:sitemapRoot="excludeSitemapNoCanonical"
+        hideInNav="true"
+        navTitle="Guest Wi-Fi"
+        pageTitle="Guest Wi-Fi">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-08T16:29:07.095-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/male/man-on-laptop-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879,1653545847150]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-01-08T16:24:21.150-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Welcome to AbbVie"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-08T16:27:41.259-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Be our guest in a simple, safe, and secure environment.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container_1402075392
+                        cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825688]"
+                        jcr:created="{Date}2022-12-21T10:05:17.701-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-21T10:05:17.701-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2023-01-08T15:01:41.504-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-08T16:28:22.613-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Thank you for visiting AbbVie. We’re excited to have you here!"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"/>
+                        <separator
+                            cq:styleIds="[1662756423318]"
+                            jcr:created="{Date}2023-01-08T16:40:04.689-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-08T16:40:04.689-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <container
+                            cq:styleIds="[1653545835982,1653545825687]"
+                            jcr:created="{Date}2023-01-08T16:31:15.607-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-08T16:31:15.607-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <title_copy
+                                cq:styleIds="[1659545825678,1651545829678]"
+                                jcr:created="{Date}2023-01-08T15:01:41.504-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-08T16:34:07.692-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="I’m sponsored"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h5"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-08T16:32:14.327-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-16T11:30:36.370-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p style=&quot;margin-left: 40px;&quot;>1. An email was sent to you with your login credentials.&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 80px;&quot;>&lt;u>Example credentials:&lt;/u>&lt;br>&#xd;&#xa;Wi-Fi Name:&amp;nbsp;&lt;i>AbbVie-Guest&lt;/i>&lt;br>&#xd;&#xa;Wi-Fi Username:&lt;b>&amp;nbsp;pbak5&lt;/b>&lt;br>&#xd;&#xa;Wi-Fi Password:&amp;nbsp;&lt;b>2462&lt;/b>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>2. On your device, go to&amp;nbsp;&lt;b>Wi-Fi settings&lt;/b>.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>3. Select&amp;nbsp;&lt;i>&lt;b>AbbVie-Guest&lt;/b>.&lt;/i>&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>4. On the&amp;nbsp;&lt;b>Guest Wi-Fi Login screen&lt;/b>, enter the&amp;nbsp;&lt;b>login credentials&lt;/b>&amp;nbsp;provided in the email.&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>5. Read AbbVie’s Acceptable Use Policy and click&amp;nbsp;&lt;b>Accept&lt;/b>.&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>6. Click Done to confirm you have access to&amp;nbsp;&lt;b>AbbVie’s Guest Wi-Fi.&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2023-01-08T16:33:39.784-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-08T16:33:39.784-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <title_copy_copy
+                                cq:styleIds="[1659545825678,1651545829678]"
+                                jcr:created="{Date}2023-01-08T15:01:41.504-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-08T16:34:01.897-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="I’m not sponsored"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h5"/>
+                            <text_803076704
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-08T16:33:50.611-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-16T11:30:53.644-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>This means the AbbVie employee or third-party worker you are visiting has NOT preregistered you for guest Wi-Fi access.&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>1. On your device, go to&amp;nbsp;&lt;b>Wi-Fi settings&lt;/b>.&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>2. Select&amp;nbsp;&lt;i>&lt;b>AbbVie-Guest&lt;/b>.&lt;/i>&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>3. On the Guest Wi-Fi Login screen, select&amp;nbsp;&lt;b>Register for Guest Access&lt;/b>.&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>4. Complete the Registration form and click&amp;nbsp;&lt;b>Register.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>&lt;b>5. An email&amp;nbsp;&lt;/b>will be sent to your sponsoring AbbVie employee or third-party worker, who must be onsite or on VPN to approve your access.&lt;/p>&#xd;&#xa;&lt;p style=&quot;margin-left: 40px;&quot;>6. Once your sponsor approves your request, you will receive a&amp;nbsp;&lt;b>confirmation email&lt;/b>&amp;nbsp;with your login credentials.&amp;nbsp;&lt;b>Follow the steps&lt;/b>&amp;nbsp;listed under I’m Sponsored to access AbbVie’s guest Wi-Fi.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container>
+                        <text_1950456619
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2023-01-08T16:39:07.485-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-08T16:39:39.303-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;b>Need assistance?&lt;/b> Contact your AbbVie sponsoring employee/third-party worker.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_1402075392>
+                    <container_442359883
+                        cq:styleIds="[1653545825683,1653545835879]"
+                        jcr:created="{Date}2023-01-08T16:36:06.609-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-08T16:36:17.039-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F1F3FF">
+                        <accordion_copy_copy_
+                            cq:styleIds="[3,8]"
+                            jcr:created="{Date}2022-12-20T16:08:57.224-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-08T16:37:15.092-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            heading="Frequently asked questions"
+                            headingElement="h5"
+                            singleExpansion="false">
+                            <item_1671570554123
+                                cq:panelTitle="How many devices can I connect to AbbVie-Guest Wi-Fi?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-08T16:37:45.968-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>You can connect up to three separate devices.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671570557396
+                                cq:panelTitle="How do I know if I’m sponsored?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-08T16:37:51.748-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>If you were sponsored for guest Wi-Fi access ahead of your visit, you should have received an email with your login credentials. If the email didn’t appear in your inbox, it may be in your spam folder.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671570603045
+                                cq:panelTitle="How long does it take to get guest Wi-Fi access?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-08T16:37:59.473-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Your access time depends on your sponsorship status.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>If you’re already sponsored, you’ll have guest Wi-Fi access as soon as you enter your login credentials on&amp;nbsp;&lt;i>AbbVie-Guest&lt;/i>. These are found in your sponsorship email.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>If you’re not sponsored, you’ll need to submit your request to the person you’re visiting. Once they’ve approved your request, you’ll automatically receive your sponsorship email and can log in.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1671570607019
+                                cq:panelTitle="What should I do if I can’t get online?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-08T16:38:07.074-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Contact the person you’re visiting at AbbVie and they will be able to help.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1672933046685
+                                cq:panelTitle="Will I have access to protected AbbVie information when I’m connected to AbbVie-Guest?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-08T16:38:13.079-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>No. You will be able to get online, and access websites and content approved by the company.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1672933056191
+                                cq:panelTitle="I am planning on going to another AbbVie building. Will I have AbbVie-Guest Wi-Fi access there, too?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-08T16:38:19.531-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>If you’re still within your approved Wi-Fi access timeframe, which is up to five days, then yes. Once your access expires, you will lose your connection.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion_copy_copy_>
+                        <separator
+                            cq:styleIds="[1662756526578]"
+                            jcr:created="{Date}2023-01-08T16:41:17.237-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-08T16:41:17.237-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </container_442359883>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

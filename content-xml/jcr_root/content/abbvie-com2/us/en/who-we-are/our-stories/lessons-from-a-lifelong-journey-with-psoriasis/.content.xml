@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-02-21T13:20:54.432-05:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/immunology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="One person with psoriasis shares her journey — from childhood to working parent — and how her struggles with the disease have empowered her."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-20T01:45:53.370-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Lessons from a lifelong journey with psoriasis"
+        jcr:uuid="69863d51-d589-4647-a46b-44e96ef18cb0"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        description="One person with psoriasis shares her journey — from childhood to working parent — and how her struggles with the disease have empowered her."
+        fileReference="/content/dam/abbvie-com2/images/stories/lessons-from-a-lifelong-journey-with-psoriasis/lessons-from-lifelong-journey-hero.jpeg"
+        hideInNav="true"
+        navTitle="Lessons from a lifelong journey with psoriasis"
+        ogimage="/content/ dam/ abbvie-com2/images/stories/lessons-from-a-lifelong-journey-with-psoriasis/lessons-from-lifelong-journey-hero.jpeg"
+        pageTitle="Lessons from a lifelong journey with psoriasis"
+        publishDate="{Date}2020-10-22T12:10:00.000-05:00"
+        readTime="6"
+        readWatchTimeSel="read-time"
+        title="Lessons from a lifelong journey with psoriasis"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/us/en/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-02-15T20:19:23.447-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/lessons-from-a-lifelong-journey-with-psoriasis/lessons-from-lifelong-journey-hero.jpeg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787460,1659997787459]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2022-12-11T18:05:13.959-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Lessons from a lifelong journey with psoriasis"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2022-12-11T18:05:46.543-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>One person with psoriasis shares her journey — from childhood to working parent — and how her struggles with the disease have empowered her.&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-04-22T13:38:27.101-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="A fateful pool party"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-12-11T18:07:04.212-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Lianne Hunter still vividly remembers the day when psoriasis changed her life. She was 13 and swimming with her younger sister at a public swimming pool. As Lianne was enjoying a day in the sun, other swimmers were complaining about the patches of red, flaky skin that her bathing suit revealed. Acting on the concerns of other swimmers, a lifeguard ordered her out of the pool, demanding to know if she was “contagious.”&lt;/p>&#xa;&lt;p>Angry and humiliated, she tried to explain to the lifeguard that her psoriasis wasn't contagious, but it didn't work. Lianne was asked to leave.&lt;/p>&#xa;&lt;p>“To be singled out like that, it shaped how I let psoriasis take over my life in those early years,” Lianne says. In daily life, she learned to hide both her skin and her naturally outgoing personality. Once a leader, she started to drift to the back of the crowd.&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <video
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2022-12-11T18:07:51.638-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-09-08T06:18:36.299-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 0:28"
+                                description="&lt;p>Animation of Let Me Be Clear patient storyteller of what she’s learned from her journey with psoriasis.&lt;/p>&#xd;&#xa;"
+                                descriptiveIframeTitle="Psoriasis Patient’s Message to Patients"
+                                fileReference="/content/dam/abbvie-com2/images/stories/lessons-from-a-lifelong-journey-with-psoriasis/psoriasis-video-thumbnail.jpg"
+                                imgAlt="Animation of Let Me Be Clear patient storyteller of what she’s learned from her journey with psoriasis."
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Psoriasis Patient’s Message to Patients"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/2Zkn57w8M1c"/>
+                            <container
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-11T18:09:51.067-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T18:09:51.067-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T18:10:34.146-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-11T18:11:13.118-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Now in her 30s and a working parent, Lianne has lived through moments like these her entire life, each one reopening old emotional wounds. But rather than succumb to embarrassment or shame, she’s learned valuable lessons from her journey, which she shares on social media.&lt;/p>&#xa;&lt;p>Whether confronted with lifestyle or environmental factors that can cause her psoriasis to flare, she has learned to respect and harness her journey. She understands how it has strengthened her resolve to become informed and empowered to seek better care for her autoimmune disease.&lt;/p>&#xa;&lt;p>As a result of how people have treated her from childhood to parenthood — the stares, judging and invasive questions — she has learned to extract power from these interactions, which now fuels her confidence and resilience to help her navigate life no matter what comes her way.&lt;/p>&#xa;&lt;p>“Today I have the confidence to talk to people about my psoriasis,” she says. “It’s taken me a long time and many painful moments to learn how to do that, so I’m hopeful that other people can learn from my experiences across so many different stages of life.”&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-12-11T18:11:21.434-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2024-04-22T13:38:37.596-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Never known ‘normal’"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_1305274947
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T20:37:26.778-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-11T20:45:27.818-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Lianne doesn’t remember life before psoriasis. She was diagnosed at the age of five, so she has no memories of life without the disease.&lt;/p>&#xa;&lt;p>For her entire life, she has lived with a disease that affects more than 125 million people around the world.1&amp;nbsp;The disease can cause inflammation throughout the body, resulting in raised plaques or “scaly” skin.&lt;sup>2&lt;/sup>&amp;nbsp;However, the effects of psoriasis can extend further, and the inflammation can put patients at greater risk for developing serious health conditions including cardiovascular disease, diabetes, depression, Crohn’s disease, or psoriatic arthritis, a form of arthritis.&lt;sup>1&lt;/sup>&lt;/p>&#xa;&lt;p>Despite the early age of her diagnosis, what Lianne does remember are the stares and probing questions from her teenage years into adulthood. Her experience at the swimming pool was just one of the reactions that would happen again and again: The stare across the grocery store, the parent who pulled their child closer when she walked nearby, the people who seemed genuinely concerned but didn’t know how to ask if she was okay.&lt;/p>&#xa;&lt;p>For Lianne and many patients, psoriasis manifests in the fingernails and can be hard to hide. When she became a parent herself, she caught people staring at her nails as she fed her child a bottle in public.&lt;/p>&#xa;&lt;p>“When you’re a mother, you have so many things to worry about, and having people stare at you in public was a really hard thing to handle,” she says. “But I learned that you can either let it make you crumble, or you can try to connect with the people who are staring at you.”&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                            <image
+                                jcr:created="{Date}2022-12-11T20:45:44.048-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T21:20:17.884-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Psoriasis Affects More"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/lessons-from-a-lifelong-journey-with-psoriasis/StatGraphic_125M_80P_PsO.png"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                            <container_704123844
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-11T21:20:30.763-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T21:20:30.763-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T21:20:54.292-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-11T21:37:25.770-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>As she entered the working world, where colleagues knew about her psoriasis, she encountered a different challenge. When her skin was seemingly clear, co-workers assumed she felt great, but she was exhausted. She was still battling psoriasis-related fatigue. Though she appeared to be fine on the surface, her disease still affected her daily.&lt;/p>&#xa;&lt;p>“One of the biggest misconceptions is that psoriasis is all about the skin,” she says. “The fatigue that comes with it is something that not many people know about, but I wish they understood.”&lt;/p>&#xa;&lt;p>Throughout all these moments, Lianne has learned to heed the lesson her parents taught her at an early age. Be aware of your psoriasis, they said, but don’t let it consume your life. It’s a lesson that she’s grateful for and one that she passes on to her social media followers.&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container_704123844>
+                            <image_797287356
+                                jcr:created="{Date}2022-12-11T21:37:45.971-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T21:38:11.106-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Chronic Fatigue"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/lessons-from-a-lifelong-journey-with-psoriasis/StatGraphic_ChronicFatigue_PsO.png"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                            <container_1631480110
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-11T21:38:25.151-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T21:38:25.151-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-12-11T21:38:59.648-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2024-04-22T13:38:50.642-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Information underload"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T21:39:35.430-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-11T21:40:02.743-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>What Lianne still finds frustrating is the lack of awareness about psoriasis — which is something she tries to thwart via social media by promoting psoriasis education.&lt;/p>&#xa;&lt;p>Most people don’t understand that the effects of psoriasis are more than what is obvious on the skin, Lianne says. The effects of uncontrolled psoriasis, for example, can accumulate and may impact perceived quality of life over time.&lt;sup>4&lt;/sup>&lt;/p>&#xa;&lt;p>“Psoriasis is a complex disease that can manifest and affect patients in different ways,” says Stefan Florentinus, PhD, PharmD, dermatology lead, global medical affairs, AbbVie. “That’s why conversations between patient and health care provider are so important. Clear communication is the cornerstone for setting treatment goals and understanding the impact of disease beyond the physical symptoms.”&lt;/p>&#xa;&lt;p>To combat the lack of reliable information available to people living with psoriasis, Lianne advises people who have recently been diagnosed to simply ask for help.&lt;/p>&#xa;&lt;p>“Don’t be afraid to ask for help online, through social media, or from a doctor,” she says. “Ask the questions you need to figure out next steps so you can find confidence and be resilient no matter the situation. Speak up, don’t settle for mediocre, especially when it comes to managing your psoriasis.”&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_1174564846
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-29T16:43:32.595-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_566399854
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-12-11T21:40:12.871-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2024-04-22T13:38:59.703-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Smiling back at ‘the stare’"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_1166329313
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T21:42:41.015-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-11T21:42:58.833-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>When people stare at Lianne’s skin today, she still finds it frustrating, but instead of getting annoyed, she smiles back. She engages. She educates. She says it’s important to remember that no one knows everything – everyone is different.&lt;/p>&#xa;&lt;p>“Don’t judge someone for what they look like, but also don’t judge the person who’s looking at you,” she says. “You never know what battle or stigma someone may be fighting inside at any given moment.”&lt;/p>&#xa;&lt;p>That’s a message Lianne shares with her followers on social media. Rather than being afraid of strangers’ stares, people with psoriasis can simply smile, feeling strong and empowered by what makes them different.&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container_1631480110>
+                            <image_842117474
+                                jcr:created="{Date}2022-12-11T23:08:58.884-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T23:09:48.614-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Let me be Clear"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/lessons-from-a-lifelong-journey-with-psoriasis/PsOQuoteCardArticle.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-12-11T21:44:07.080-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2024-05-22T11:24:42.254-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;i>Lianne is a&amp;nbsp;Let Me Be Clear Psoriasis Storyteller, working in partnership with AbbVie.&lt;/i>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756486159]"
+                                jcr:created="{Date}2022-12-11T23:07:08.477-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T23:07:08.477-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <container_1149311694
+                                jcr:created="{Date}2022-12-11T23:10:44.679-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T23:10:44.679-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2022-12-11T21:59:49.785-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2025-02-21T13:20:54.419-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    heading="References"
+                                    headingElement="h6"
+                                    singleExpansion="false">
+                                    <item_1670817674303
+                                        cq:panelTitle="National Psoriasis Foundation. About Psoriasis. “What Is Psoriasis?”"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2022-12-11T23:12:58.153-05:00"
+                                        jcr:lastModifiedBy="schafsm"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>&lt;a href=&quot;https://www.psoriasis.org/about-psoriasis/&quot; target=&quot;_blank&quot; title=&quot;About- Psoriasis&quot;>https://www.psoriasis.org/about-psoriasis/&lt;/a>. Accessed: 21 Sept. 2020.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1670817730348
+                                        cq:panelTitle="Verhoeven EW, Kraaimatt FW, van de Kerkhof PC, et al"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2022-12-11T23:13:34.825-05:00"
+                                        jcr:lastModifiedBy="schafsm"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>&amp;nbsp;Prevalence of physical symptoms of itch, pain and fatigue in patients with skin diseases in general practice. Br J Dermatol. 2007;156:1346-1349.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1670817746353
+                                        cq:panelTitle="Warren, R., Kleyn, C. and Gulliver, W. Cumulative life course impairment in psoriasis:"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2022-12-11T23:14:00.084-05:00"
+                                        jcr:lastModifiedBy="schafsm"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>Patient perception of disease?related impairment throughout the life course. Br J Dermatol. 2010; 164:1-14.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                            </container_1149311694>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

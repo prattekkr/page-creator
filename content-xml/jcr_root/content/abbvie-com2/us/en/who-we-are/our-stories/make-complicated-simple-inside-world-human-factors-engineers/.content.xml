@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-04-22T13:37:59.860-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-08T12:58:48.543-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/science-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Experts in psychology, ergonomics, engineering and user experience, this team’s job is to solve problems before they exist."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-20T01:38:28.557-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Make the complicated simple: Inside the world of Human Factors Engineers"
+        jcr:uuid="b8ee342c-0441-4fd9-a7df-69fc527cf962"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        description="Meet the team whose job is to solve problems before they exist"
+        fileReference="/content/dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/make-the-complicated-simple-hero.jpeg"
+        hideInNav="true"
+        navTitle="Make the complicated simple: Inside the world of Human Factors Engineers"
+        ogimage="/content/ dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/Make-The-Complicated-Hero.jpg"
+        pageTitle="Make the complicated simple: Inside the world of Human Factors Engineers"
+        publishDate="{Date}2020-11-09T22:03:00.000-06:00"
+        readTime="6"
+        readWatchTimeSel="read-time"
+        title="Inside the world of human factors engineers">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-31T01:31:10.963-05:00"
+                        jcr:lastModifiedBy="schafsm"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/Make-The-Complicated-Hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835861,1653545825685,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-01-25T09:37:47.815-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-01-27T12:24:48.220-05:00"
+                                jcr:lastModifiedBy="fusznx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Make the Complicated Simple: Inside the World of Human Factors Engineers"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2022-12-09T23:09:35.337-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Experts in psychology, ergonomics, engineering and user experience, this team’s job is to solve problems before they exist.&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-27T12:30:06.219-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Ask Joy Borgardt about her job and she is reminded of a quote from Sherlock Holmes. “No Watson, this was not done by accident, but by design.”&lt;/p>&#xd;&#xa;&lt;p>Borgardt is a principal research engineer in AbbVie’s Human Factors group. She uses the Holmes quote a lot because her job is all about design. Her job is to be the patient before there ever is a patient. Nothing she does is by accident. She has pored over every icon and pull tab on a potential medicine’s packaging. Today she is working on devices to make sure they can deliver medicine in a way that is easy and simple for patients to understand. A package or device for a Parkinson’s disease patient will be very different than a package or device to deliver medicine to a rheumatoid arthritis patient.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <image
+                                jcr:created="{Date}2022-12-09T23:12:08.673-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-09T23:12:51.696-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Joy Borgardt, a Principal Research Engineer, was on the team that designed a novel medicine bottle cap for a rheumatoid arthritis treatment."
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Joy Borgardt, a Principal Research Engineer"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/1.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <container
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-09T23:13:02.738-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-09T23:13:02.738-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-09T23:13:19.734-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-01-27T12:29:42.090-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie’s Human Factors team is based in Lake County but supports drug delivery development teams all over the world. They are part experts in psychology, ergonomics, engineering, and user experience design and are a critical part of the research and development process.&lt;/p>&#xd;&#xa;&lt;p>Above all, they are curious.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-12-09T23:13:57.929-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2024-04-22T13:37:37.076-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Lessons from setting up a printer"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_1746645187
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-09T23:14:30.149-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-09T23:15:33.296-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Back in high school Mick Rakauskas, Ph.D., took his friends’ class schedules and figured out the longest time they could cross paths and hangout while still heading to their separate classes. It was an exercise that was part logistics; part human behavior prediction and the result was more time with his friends. Today he is a Principal Research Engineer working to help patients find the best path to their medicines.&lt;/p>&#xd;&#xa;&lt;p>“I found that the scientific methods within cognitive psychology and an understanding of human perceptual capabilities could be applied in a similar way to improve the use of medical devices through human factors design practices,” he said.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                            <image_224750936
+                                jcr:created="{Date}2022-12-09T23:16:20.844-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-09T23:17:14.248-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="In high school, Mick Rakauskas, Ph.D., a Principal Research Engineer, figured out a way for his friends to hang out and get to class on time. Today he works to help patients find the best path to their medicines."
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Mick Rakauskas, Ph.D., a Principal Research Engineer"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/2.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <container_1435862719
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-09T23:17:19.646-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-09T23:17:19.646-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-09T23:17:43.474-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-09T23:17:59.810-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Members of the Human Factors team focus on the interactions between patients and their medicines. They also take safety into account, playing an important role in regulatory compliance. There is a lot of data gathered and analyzed to make sure that happens and as part of their research, the team talks to health care providers, caregivers, and patients themselves to understand what they are going through. The team uses this research, conducts usability tests and goes back to make design changes if needed.&lt;/p>&#xa;&lt;p>They typically get involved in the clinical trial process at phase 2, and while clinical trial teams work to make sure a drug is safe and effective, the Human Factors team works to ensure patients, caregivers and healthcare providers can safely and effectively use the devices to take the drug. “This could include finding the right buttons or the best way to remind them if they miss a dose,” said Paul Blowers, Director of the Human Factors team.&lt;/p>&#xa;&lt;p>“From the moment a patient picks up a device or opens a medicine package we want them to be able to correctly use it,” Blowers said. “The goal is to make it easy to learn and use.”&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container_1435862719>
+                            <image_984445328
+                                jcr:created="{Date}2022-12-09T23:18:13.578-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-09T23:18:58.807-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Paul Blowers, Director of the Human Factors team, said his team works to ensure patients, caregivers and healthcare providers can safely and effectively use the devices to take the drug."
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Paul Blowers, Director of the Human Factors team"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/3.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <container_88337223
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-09T23:19:08.938-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-09T23:19:08.938-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-09T23:19:41.667-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-09T23:19:51.028-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>When Rakauskas explains his job to his friends, he has them picture a frustrating experience they had setting up a printer or following complicated instructions that were not clear. “My job is to understand how people interact with products and apply that knowledge to improve the design, resulting in less confusion.”&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-12-11T12:22:39.266-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2024-04-22T13:37:49.326-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Thinking beyond the typical"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_1750219818
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T12:23:38.024-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-11T12:23:51.512-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>In college, Borgardt majored in anthropology and today her office is full of examples how humans behave when they take medication. There are medicine packaging samples, prototypes of medicine bottles and gloves that help simulate what it is like to have arthritis.&lt;/p>&#xa;&lt;p>Borgardt was recently on the team that designed a novel medicine bottle cap for a rheumatoid arthritis treatment. Many medicines typically come in bottles with a safety seal, that is both a foil and plastic covering over the bottle’s opening. For most patients, the seal is broken easily, but it is often more difficult for rheumatoid arthritis patients. Borgardt and her team came up with a way to build a seal opener inside the medicine cap.&lt;/p>&#xa;&lt;p>“We spend a lot of time putting ourselves in the patient’s shoes,” she said. “You learn a lot about people, how they act and what they need. It’s rewarding when someone uses your design and says that whoever designed this really understands me.”&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container_88337223>
+                            <image_1755871521
+                                jcr:created="{Date}2022-12-11T12:24:09.593-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T12:26:28.012-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Sujani Nannapaneni, a Human Factors Research Engineer works to deliver medicine in a way that is easy and simple for patients to understand."
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Sujani Nannapaneni, a Human Factors Research Engineer"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/4.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <container_2065364888
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-11T12:26:41.176-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T12:26:41.176-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T12:27:31.388-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-01-27T12:28:48.817-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Sujani Nannapaneni, a human factors research engineer, has an MBA and a background in biochemistry and chemistry. She got interested in human factors when she worked in the clinical supply group and conducted a human factors study to test blister pack designs and was fortunate enough to be an early member of the Human Factors group in 2013.&lt;/p>&#xd;&#xa;&lt;p>“As a kid, I knew that when I grew up, I wanted to be in a job where I was helping people,” Nannapaneni said. “But working in the Human Factors group, I feel really close to the patient – and how they interact with the product. It is my job to help ensure that it’s as easy and safe as possible for them to use.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-12-11T12:27:12.388-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2024-04-22T13:37:59.854-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Smart phones, the internet and drug delivery"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_1721689968
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T12:28:53.505-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-01-27T12:27:24.024-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>How people act and what they expect out of their devices and technology in general has changed drastically over the past 25 years or so. There was a time when phones were used only to talk to people, and the internet was used mainly to share research within the scientific community. Not anymore. Today both are woven into the daily lives of everyone from preschoolers to senior citizens. The effect is “an explosion in the need to have usable and compelling applications,” said Ed Halpern, Ph.D., a senior principal research engineer in the Human Factors group.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_2065364888>
+                            <image_2005418478
+                                jcr:created="{Date}2022-12-11T12:29:27.320-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-01-31T01:38:03.895-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Ed Halpern, Ph.D., a Senior Principal Research Engineer, said today technology is woven into our daily lives and the result “an explosion in the need to have usable and compelling applications.”"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Ed Halpern, Ph.D., a Senior Principal Research Engineer"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/make-the-complicated-simple--inside-the-world-of-human-factors-engineers/5.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <container_156673752
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-11T12:30:55.253-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-11T12:30:55.253-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-11T12:31:28.469-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-01-27T12:26:28.675-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“Consumers often don’t talk about well-designed devices,” Halpern said. “because they are easy to operate, woven into your life, seamless and nothing stands out. That is a success story in the world of human factors. I’m lucky. I really love what I do. I get to work on teams and solve problems. I get to figure out a way to do something that has never been done before.”&lt;/p>&#xd;&#xa;&lt;p>Shuhong Zhang, Ph.D., vice president, development sciences, oversees the Human Factors team and a global organization of more than 2,200 people.&lt;/p>&#xd;&#xa;&lt;p>“Putting patients at the front and center of everything we do is essential to our business and this team plays a key role in making sure AbbVie products are developed with patients’ needs in mind,” Zhang said. “Human-centered design helps ensure that AbbVie demonstrates our products are not only safe, effective but also usable. It’s the right thing to do from a business standpoint and it’s the right thing to do for our patients.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_693196948
+                                    jcr:created="{Date}2022-12-11T12:34:52.797-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2023-01-27T12:26:59.876-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_156673752>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

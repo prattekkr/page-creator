@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-10-22T12:32:42.647-04:00"
+        cq:lastModifiedBy="chiucx"
+        cq:tags="[abbvie-com-2:categories/science-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="5 courageous voices on why investment in new medicines matters."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-20T03:10:06.223-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="They won’t back down"
+        jcr:uuid="5bfb00de-d19a-460d-bff9-b991c723f5ec"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        description="5 courageous voices on why investment in new medicines matters."
+        fileReference="/content/dam/abbvie-com2/images/stories/they-wont-back-down/they-wont-back-down-hero.jpg"
+        hideInNav="true"
+        navTitle="They won’t back down"
+        ogimage="/content/dam/abbvie-com2/images/stories/they-wont-back-down/they-wont-back-down_hero_1440x800.jpg"
+        pageTitle="They won’t back down"
+        publishDate="{Date}2021-11-19T10:34:00.000-06:00"
+        readTime="4"
+        readWatchTimeSel="read-time"
+        title="They won’t back down">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-31T00:19:31.912-05:00"
+                        jcr:lastModifiedBy="schafsm"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/they-wont-back-down/they-wont-back-down_hero_1440x800.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-01-24T18:59:34.190-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2022-12-01T22:19:10.599-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="They won’t back down"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-01-29T15:58:10.922-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>5 courageous voices on why investment in new medicines matters.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756456518]"
+                                jcr:created="{Date}2023-01-08T17:50:19.850-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-08T17:50:19.850-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <text2_copy
+                                cq:styleIds="[1659545835858,1659545825678]"
+                                jcr:lastModified="{Date}2022-12-01T22:22:03.632-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>The scientists who develop new medicines and the patients who live with disease all have one thing in common – tenacity. In their own words, hear how curiosity, creativity, and resilience help them achieve every major breakthrough and overcome each setback. Because good enough is never enough.&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <image
+                                cq:styleIds="[1402843082832]"
+                                jcr:created="{Date}2022-12-01T21:34:38.880-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-01T21:34:55.514-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/they-wont-back-down/they-wont-back-down_ahmed_1792x1008.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                            <separator_copy_copy_
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_copy_copy__1997917627
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <quote
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-12-01T21:35:33.160-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-01-08T17:40:05.993-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Ahmed Kotb, M.D."
+                                attributionTitle="Vice President, U.S. Medical Affairs, Oncology, AbbVie"
+                                quote="We have to follow the science."
+                                quoteType="regular"
+                                textSize="h5"/>
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825687]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text_1297569737
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-01-29T15:58:44.498-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-29T15:58:57.350-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“The way we’re accelerating science is unbelievable. In two or three years, things may look very different than they do today.&lt;/p>&#xd;&#xa;&lt;p>So we follow the science. Science means experiments and some experiments work, some don’t. But what happens is you learn. You learn why it didn’t work. You learn how to make it better.&lt;/p>&#xd;&#xa;&lt;p>We have to continue to invest in our vision, learn from failures and build on our successes. Because as long as patients are still suffering from disease, nothing’s good enough.”&lt;/p>&#xd;&#xa;&lt;p>&lt;i>– Ahmed Kotb, M.D., Vice President, U.S. Medical Affairs, Oncology, AbbVie&lt;/i>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <separator
+                                jcr:created="{Date}2022-12-01T21:56:57.491-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-01T21:56:57.491-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <video
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2022-12-01T21:46:01.393-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-09-08T06:02:03.144-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 0:15"
+                                description="&lt;p>Ben, a person living with chronic lymphocytic leukemia shares what new treatment options could mean for him.&lt;/p>&#xd;&#xa;"
+                                descriptiveIframeTitle="Medicines of Tomorrow"
+                                fileReference="/content/dam/abbvie-com2/images/stories/they-wont-back-down/ben-video-thumbnail.jpg"
+                                imgAlt="Medicines of Tomorrow"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="true"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Medicines of Tomorrow"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/LtquQc6GIMI"/>
+                            <quote_613455000
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-12-01T22:42:29.384-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-01-08T17:44:18.736-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Ben"
+                                attributionTitle="lives with chronic lymphocytic leukemia"
+                                quote="My mindset is to be a problem solver."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container
+                                cq:styleIds="[1653545825687,1653545835982,1653545847150,1653242825678]"
+                                jcr:created="{Date}2022-12-01T22:42:19.043-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-01T22:42:19.043-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-01T22:43:17.058-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-01T22:43:25.568-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“When I first heard the word ‘cancer,’ I immediately started thinking ‘I’m not going to see my kids grow up.’ It was a really hard thing to grapple with emotionally. But I’m an engineer, my mindset is to be a problem solver. I took my oncologist’s paperwork and I looked up all of the options. I started compiling my own data, creating a database where I could cross-reference genetic markers, treatments and age. My wife and I spent time looking into doctors who specialized in this type of cancer in younger patients.&lt;/p>&#xd;&#xa;&lt;p>If I need treatment again in the future, I think there will be one that is right for me down the road, because I have seen how the field for this cancer has advanced in the time I've had it.”&lt;/p>&#xd;&#xa;&lt;p>–&amp;nbsp;&lt;i>Ben, lives with chronic lymphocytic leukemia&lt;/i>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                            <video_1177837687
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2022-12-01T22:46:11.552-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-09-08T06:02:26.838-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 0:16"
+                                description="&lt;p>Aubrey Adams, Ph.D. Area Lead, TNT &amp;amp; Migraine, U.S. Medical Affairs at AbbVie explains what it takes to move forward in science.&lt;/p>&#xd;&#xa;"
+                                descriptiveIframeTitle="Tenacity is the anchor of solving any real challenge."
+                                fileReference="/content/dam/abbvie-com2/images/stories/they-wont-back-down/aubrey-video-thumbnail.jpg"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="true"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Tenacity is the anchor of solving any real challenge."
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/SAWV5Y2m3Ks"/>
+                            <separator_copy_copy__1633129924
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <quote_736454255
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-12-01T22:48:02.608-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-01-08T17:47:27.639-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Aubrey Adams, Ph.D."
+                                attributionTitle="Area Lead TNT &amp; Migraine, U.S. Medical Affairs, AbbVie"
+                                quote="Tenacity is the anchor of solving any real challenge."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container_525522024
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-01T22:47:31.777-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-01T22:47:31.777-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-01T22:48:30.264-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-01T22:48:40.431-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“I have spent a lot of time as an epidemiologist trying to understand the burden of disease. So much of science is quantifying the world around us and finding answers to unanswered questions. The investment in the future is critical because, in the work we do, things don’t happen overnight. You have to think today about what the questions are tomorrow.&lt;/p>&#xa;&lt;p>Innovation requires a vision and the way to innovate is to take small steps each day. It’s that willingness to learn and ask the next question. Tenacity is the anchor of solving any real challenge. It’s what keeps you there, keeps you trying, keeps you driven to find that answer.”&lt;/p>&#xa;&lt;p>–&lt;i>&amp;nbsp;Aubrey Adams, Ph.D., Area Lead TNT &amp;amp; Migraine, U.S. Medical Affairs, AbbVie&lt;/i>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container_525522024>
+                            <image_1009551120
+                                jcr:created="{Date}2022-12-01T22:49:24.322-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-01T22:49:45.503-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/stories/they-wont-back-down/they-wont-back-down_will_1792x1008.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                            <separator_1279197482
+                                cq:styleIds="[1662756486159]"
+                                jcr:created="{Date}2023-01-08T17:47:54.151-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-08T17:47:54.151-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <quote_1117775182
+                                cq:styleIds="[1000000000000,1000000000040]"
+                                jcr:created="{Date}2022-12-01T22:50:33.578-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-01-08T17:48:35.301-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Will"
+                                attributionTitle="lives with hidradenitis suppurativa"
+                                quote="Challenges or failures happen, and it is not a reason to stop."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container_1023517219
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-01T22:50:06.015-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-01T22:50:06.015-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-01T22:50:53.781-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-01T22:51:14.367-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“For so long, it hurt to move. Nobody knew what was wrong with me, that I had an autoimmune skin disease. I went seven years from when the symptoms started to when I actually found out what it was: hidradenitis suppurativa. What kept me going and kept me positive through the years was hope for a better, more comfortable life where I wouldn’t have to deal with pain and discomfort.&lt;/p>&#xd;&#xa;&lt;p>Challenges or failures happen, and it is not a reason to stop.”&lt;/p>&#xd;&#xa;&lt;p>–&amp;nbsp;&lt;i>Will, lives with hidradenitis suppurativa&lt;/i>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_1023517219>
+                            <video_1375430269
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2022-12-01T22:52:10.025-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-09-08T06:02:51.835-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 0:16"
+                                description="&lt;p>Mudra Kapoor, M.D., Global Medical Affairs, Neuroscience at AbbVie explains why investment in early science and discovery is critical.&lt;/p>&#xd;&#xa;"
+                                descriptiveIframeTitle="Answering Tough Questions Begins with R&amp;D Investment"
+                                fileReference="/content/dam/abbvie-com2/images/stories/they-wont-back-down/mudra-video-thumbnail.jpg"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="true"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Answering Tough Questions Begins with R&amp;D Investment"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/0VnGF9mx7hA"/>
+                            <separator_copy_copy__1639515811
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <quote_333211495
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-12-01T22:53:35.675-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2023-01-08T17:48:55.326-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Mudra Kapoor, M.D."
+                                attributionTitle="Global Medical Affairs, Neuroscience, AbbVie"
+                                quote="Today’s needs are different from yesterday’s."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container_565038402
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982]"
+                                jcr:created="{Date}2022-12-01T22:53:14.455-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2022-12-01T22:53:14.455-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-01T22:54:15.137-05:00"
+                                    jcr:createdBy="schafsm"
+                                    jcr:lastModified="{Date}2022-12-01T22:55:00.541-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>“Each disease impacts different patients in different ways, so the same treatment won’t work for everyone. And when science and our understanding of disease changes, so does our thinking on how we want to impact patients. The target is constantly evolving.&lt;/p>&#xd;&#xa;&lt;p>We’re all working collectively to find that next frontier, to pioneer that next transformational medicine. Discovery scientists, chemists, pharmacists, statisticians and data scientists. It takes a village.&lt;/p>&#xd;&#xa;&lt;p>Today’s needs are different from yesterday’s and tomorrow’s needs will be different still. We must keep pushing forward to help more patients live the way they want to live. There’s no better reward than to be part of that revolution.”&lt;/p>&#xd;&#xa;&lt;p>-&amp;nbsp;&lt;i>Mudra Kapoor, M.D.,Global Medical Affairs, Neuroscience, AbbVie&lt;/i>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2023-01-08T17:49:06.354-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-08T17:49:06.354-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_copy_copy_
+                                    jcr:created="{Date}2023-06-12T19:38:18.115-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T19:41:00.043-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container_565038402>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

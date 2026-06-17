@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-04-22T13:46:28.530-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-08T12:57:47.335-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/oncology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="See how scientists have nearly doubled some survival rates in a generation, with even more scientific discoveries on the horizon."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-19T03:42:44.245-04:00"
+        jcr:lastModifiedBy="KANCHRX3"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Then and now: A renaissance in blood cancer treatment"
+        jcr:uuid="1b301bb0-ff4f-4814-85f6-5be20dd6f898"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="See how scientists have nearly doubled some survival rates, and why we’re not done yet."
+        fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_hero_2880x1620.png"
+        hideInNav="true"
+        navTitle="Then and now: A renaissance in blood cancer treatment"
+        ogimage="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_hero_2880x1620.png"
+        pageTitle="Then and now: A renaissance in blood cancer treatment"
+        publishDate="{Date}2023-08-31T16:28:00.000-05:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="Then and now: A renaissance in blood cancer treatment">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545825683,1653545835879,1653545835859]"
+                        jcr:lastModified="{Date}2022-12-12T22:46:40.297-05:00"
+                        jcr:lastModifiedBy="sharmrx18"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_hero_2880x1620.png"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-04-27T10:34:59.196-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title_copy
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2022-12-01T17:45:27.421-05:00"
+                                jcr:lastModifiedBy="sharmrx18"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Then and now: A renaissance in blood cancer treatment"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-08-29T12:09:42.088-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>See how scientists have nearly doubled some survival rates, and why we’re not done yet.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid_copy
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-04-22T13:45:51.246-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Building new possibilities in cancer research"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-08-29T12:05:28.679-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span>Just a decade or two ago, a person diagnosed with blood cancer faced a narrow path forward: chemotherapy, radiation, perhaps a bone marrow transplant. Treatment was delivered in a hospital setting, with a 5-year survival rate in the teens.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span>Flash forward to today. Scientific innovation has greatly changed the treatment landscape for blood cancer, driven primarily by targeted therapies that disrupt cancer cell growth and survival.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>Five-year survival rates for leukemia alone have nearly doubled from 34 percent in the mid-1970s to 66 percent in the early-mid 2000s, according to the&amp;nbsp;&lt;a href=&quot;https://www.lls.org/facts-and-statistics/facts-and-statistics-overview&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255,255,255);&quot;>Leukemia &amp;amp; Lymphoma Society.&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Treatment advancements in the past 10 years have proven life-changing for people with chronic lymphocytic leukemia (CLL), particularly for Ben Greenlee. At his time of diagnosis over a decade ago, his doctor did something that may seem counterintuitive: he told Ben not to treat his blood cancer.&lt;/p>&#xd;&#xa;&lt;p>“He said, ‘Well, we don’t really have options now, but by the time you need it, there’ll be better options out there,’” Greenlee says. “Which didn’t sound as hopeful as he meant it. It felt like a death sentence.”&lt;/p>&#xd;&#xa;&lt;p>As it turns out, Greenlee’s doctor was indeed correct and now he has the right treatment plan.&lt;/p>&#xd;&#xa;&lt;p>While great strides have occurred, cancer researchers are motivated to continue advancing science for those with more aggressive and difficult-to-treat diseases, according to Andy Souers, Ph.D., distinguished research fellow, AbbVie.&lt;/p>&#xd;&#xa;&lt;p>“The field of oncology is really in a renaissance time right now,” he says. “While there has been progress over the last decade, there is still a ton of unmet need and work ahead of us. At AbbVie, we won't settle for incremental progress. We will continue to transform standards of care for every single patient.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <quote jcr:primaryType="nt:unstructured"/>
+                            </container4>
+                            <carousel
+                                cq:styleIds="[3,1653545835882]"
+                                jcr:created="{Date}2022-12-01T17:54:03.536-05:00"
+                                jcr:createdBy="sharmrx18"
+                                jcr:lastModified="{Date}2023-08-29T12:10:51.082-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                accessibilityAutoItemTitles="false"
+                                autopauseDisabled="false"
+                                autoplay="false"
+                                carouselType="static"
+                                delay="5000">
+                                <item_1669935271417
+                                    cq:panelTitle="Image 1"
+                                    jcr:lastModified="{Date}2023-01-31T00:31:25.737-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer-what-is-carousel-sl1"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1669935350759
+                                    cq:panelTitle="Image 2"
+                                    jcr:lastModified="{Date}2023-01-31T00:34:22.174-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt=" A renaissance in blood cancer treatment"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_what-is_carousel_2_860x484.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1669935352238
+                                    cq:panelTitle="Image 3"
+                                    jcr:lastModified="{Date}2023-01-31T00:34:47.049-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt=" A renaissance in blood cancer treatment"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_what-is_carousel_3_860x484.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1669935353790
+                                    cq:panelTitle="Image 4"
+                                    jcr:lastModified="{Date}2023-01-31T00:35:16.686-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_types_carousel_1_860x484.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1669935355814
+                                    cq:panelTitle="Image 5"
+                                    jcr:lastModified="{Date}2023-01-31T00:35:56.519-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt=" A renaissance in blood cancer treatment"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_types_carousel_2_860x484.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1669935361032
+                                    cq:panelTitle="Image 7"
+                                    jcr:lastModified="{Date}2023-01-31T00:36:49.572-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt=" A renaissance in blood cancer treatment"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_types_carousel_3_860x484.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1669935357640
+                                    cq:panelTitle="Image 6"
+                                    jcr:lastModified="{Date}2023-01-31T00:36:22.642-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt=" A renaissance in blood cancer treatment"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/then-and-now--a-renaissance-in-blood-cancer-treatment/blood-cancer_types_carousel_4_860x484.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                            </carousel>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_copy_copy__1191691936
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_copy_copy__1760838600
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-04-22T13:46:01.007-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Changing the treatment paradigm"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-08-29T12:06:08.033-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Most blood cancers start in the bone marrow, where they affect how blood cells are produced and function. Blood cancers are represented by three main types: leukemia, lymphoma and myeloma, with over 100 subtypes.&lt;/p>&#xd;&#xa;&lt;p>In acute myeloid leukemia (AML), cancer starts in the bone marrow. It most often develops from cells that would eventually become white blood cells. In another type of leukemia, chronic lymphocytic leukemia (CLL), cancer develops within a specific type of white blood cell called B cells.&lt;/p>&#xd;&#xa;&lt;p>The long-established standard of care for blood cancer, chemotherapy, wipes out not only cancer cells but also other healthy cells. AbbVie researchers saw a need—for better outcomes and less treatment burden for patients—and an opportunity to do things differently. This challenge prompted researchers studying both blood cancers and solid tumors to find ways to target only cancer cells.&lt;/p>&#xd;&#xa;&lt;p>AbbVie’s unique strategy and emphasis on cellular biology is what led to uncovering a new field of regulated cell death in certain leukemias, Souers says.&lt;/p>&#xd;&#xa;&lt;p>“We look at mechanisms that are essential for cancer cells to survive and propagate, and that may take us to hematological malignancies or to solid tumors,” he says. “It’s a matter of being tenacious so we can reveal the really interesting molecules.”&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__1113506846
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy_1709608982
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-04-22T13:46:10.090-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Accelerating science because patients can’t wait"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-08-29T12:06:36.959-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Scientific progress isn’t a given once discoveries are made. That’s where the AbbVie clinical team comes in to advance a molecule along its journey to becoming a medicine, according to Jalaja Potluri, M.D., executive medical director, AbbVie.&lt;/p>&#xd;&#xa;&lt;p>A hematologist-oncologist by training, Potluri and her team are focused on designing clinical trials in areas of unmet patient need, such as rare cancers with limited existing treatment options. When it comes to scientific progress, setting big goals is key, because these patients can’t wait, Potluri says. One project her team worked on went from the clinical program to approved medication in four years—a process that can typically take 10 years or more.&lt;/p>&#xd;&#xa;&lt;p>“Being a leukemia doctor, I can’t say enough how exhilarating that experience was,” Potluri says. “We were able to make a meaningful impact in a disease with many subtypes and great unmet medical need and advancing care for patients who really need it.”&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <quote jcr:primaryType="nt:unstructured"/>
+                            </container4_copy>
+                            <quote_1954297659
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-12-12T22:52:45.241-05:00"
+                                jcr:createdBy="sharmrx18"
+                                jcr:lastModified="{Date}2023-08-29T12:07:13.543-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Jalaja Potluri, M.D., "
+                                attributionTitle="executive medical director, AbbVie"
+                                quote="We were able to make a meaningful impact in a disease with many subtypes and great unmet medical need and advancing care for patients who really need it."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <quote jcr:primaryType="nt:unstructured"/>
+                                <title_copy_copy_copy_740812110
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-04-22T13:46:28.521-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="The future must be built"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="h"/>
+                                <text2_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-08-29T12:07:40.716-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>New technologies and approaches have accelerated the pace of science, enabling the development of novel therapies that have allowed us to reimagine the treatment of blood cancer, according to AbbVie executive medical director and global development lead for hematology, Jim Dean.&lt;/p>&#xd;&#xa;&lt;p>“A greater understanding of disease and investment in laboratory research helps us design more efficient clinical trials and get new treatments to patients faster,” Dean says. “The science fiction of my childhood is science reality today.”&lt;/p>&#xd;&#xa;&lt;p>Scientists are driven to increase understanding even further, probing all that science has to offer to answer the biggest questions we face in blood cancer, through innovation in genetics, genomics and precision medicine, Souers adds. For example, scientists can now dig deeper into the genetic differences between subsets of people with a particular type of cancer, which can help inform a tailored treatment approach.&lt;/p>&#xd;&#xa;&lt;p>More advancements are on the horizon with both antibody and cell-based therapies along with what Souers calls “the next generation of agents” that cause cancer cells to undergo alternative forms of regulated cell death.&lt;/p>&#xd;&#xa;&lt;p>“Our teams are determined to change the treatment paradigm,” he says. “That’s what gets us up in the morning. You begin to think of new science, new possibilities to discover and deliver innovative medicines that have the potential to transform people’s lives.”&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__933234329
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-23T16:46:55.248-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-01T20:32:57.699-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>References:&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;SEER (Surveillance, Epidemiology and End Results) Cancer Statistics Review, 1975-77; National Cancer Institute; 2020.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__1481875789
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-08-11T16:43:28.455-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-08-11T16:48:56.484-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__1427575058
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <container5_copy_copy
+                                    cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container">
+                                    <header
+                                        cq:styleIds="[2]"
+                                        jcr:created="{Date}2023-08-11T16:47:25.462-04:00"
+                                        jcr:createdBy="SCHAFSM"
+                                        jcr:lastModified="{Date}2023-08-11T16:47:55.374-04:00"
+                                        jcr:lastModifiedBy="SCHAFSM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/header/v2/header"
+                                        eyebrow="Related Content"/>
+                                    <cardpagestory
+                                        jcr:created="{Date}2023-08-11T16:47:42.295-04:00"
+                                        jcr:createdBy="SCHAFSM"
+                                        jcr:lastModified="{Date}2023-08-29T12:08:55.243-04:00"
+                                        jcr:lastModifiedBy="chiucx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                        hideImage="false"
+                                        linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/breaking-the-rules-of-science-to-treat-cancer"/>
+                                </container5_copy_copy>
+                            </container5>
+                        </par_13>
+                    </grid_copy>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

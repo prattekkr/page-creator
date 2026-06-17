@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-05-08T10:26:55.990-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-10T10:05:07.685-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/eye-care-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="AbbVie leaders are aiming to elevate the standard of care for patients with diabetes and serious vision complications."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-10-03T09:51:21.862-04:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Sharpening focus on eye diseases caused by diabetes"
+        jcr:uuid="2783f352-6957-4f2a-85ce-9cd7a34a173f"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="The experiences of these AbbVie leaders are aiming to elevate the standard of care for patients with diabetes and vision complications."
+        fileReference="/content/dam/abbvie-com2/images/stories/sharpening-focus-eye-disease/sharpening-focus-eye-disease.jpg"
+        hideInNav="true"
+        navTitle="Sharpening focus on eye diseases caused by diabetes"
+        pageTitle="Sharpening focus on eye diseases caused by diabetes"
+        publishDate="{Date}2023-10-03T08:58:00.000-05:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="Sharpening focus on eye diseases caused by diabetes">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-09-27T12:50:11.170-04:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/sharpening-focus-eye-disease/sharpening-focus-eye-disease-fill.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-05-08T10:22:12.514-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-09-27T10:00:41.184-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Sharpening focus on eye diseases caused by diabetes"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-09-27T10:00:59.886-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>The experiences of these AbbVie leaders are aiming to elevate the standard of care for patients with diabetes and vision complications.&lt;/span>&lt;/span>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:22:34.891-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Exploring how inflammation impacts the eye"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-09-27T10:01:31.348-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>When picturing a patient living with diabetes, blindness might not be the first thing that comes to mind. However, diabetic macular edema, or DME, the leading cause of vision loss and blindness in people with diabetes, affects up to 7.9% of people with type 1 diabetes and up to 12.8% of people with type 2 diabetes.&lt;sup>1&lt;/sup> It is characterized by inflammation along with swelling of the macula, which is the central area of the retina, and thickening of the retina, which is a thin layer of tissue at the back of the eye that transmits light to the brain via the optic nerve.&lt;/p>&#xd;&#xa;&lt;p>DME develops from diabetic retinopathy (DR), which can be a common complication for people living with diabetes. Early-stage DR may have no symptoms but could cause vision loss and blindness as it affects blood vessels in the retina.&lt;/p>&#xd;&#xa;&lt;p>At AbbVie, researchers are committed to preserving and protecting vision for people, including the large population of patients living with diabetes. As part of this commitment, AbbVie recruits not just ophthalmologists but experts from diverse backgrounds and perspectives to come up with innovative solutions. Meet three such experts and explore how their unique perspectives are shaping the future of research and innovation.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:22:52.778-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Physician turned R&amp;D leader"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-10-02T10:30:23.860-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>One key expert among AbbVie’s eye care R&amp;amp;D team is Francisco “Paco” J. López. As a physician in Spain, he also worked closely with patients with diabetes. He earned his PhD in neuroendocrinology, a subspecialty that focuses on hormones and how they interact with the brain. With that early connection,&amp;nbsp;Lopez is eager to elevate the standard of care for those people whose sight might be impacted by diabetes. While his area of medicine wasn’t focused on the eyes, his background provides a unique insight into eye diseases and the need to elevate the standard of care for patients.&lt;/p>&#xd;&#xa;&lt;p>“Diabetic retinopathy is like a ticking time bomb in the eye,” described López. “If your glucose is too high, it will have some effect on the vascular network including small vessels of the retina in the back of the eye. Those vessels could leak, swelling the retina (DME) or even burst, leading to hemorrhages, and resulting in impaired vision. Therefore, strategies to manage the effects of DR early could help reduce visual threatening complications and help patients.”&lt;/p>&#xd;&#xa;&lt;p>The pathogenesis of DR/DME is complex because it’s governed by multiple cellular pathways and induces inflammation, oxidation stress, and vascular dysfunction.&lt;sup>2&lt;/sup> AbbVie researchers are focused on studying the role inflammation plays in the physiopathology of DR and DME.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:23:16.888-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="In the clinic with diabetic patients"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-09-27T10:03:11.355-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>In Belgium, Mathias Schifflers, head of eye care, global medical affairs, AbbVie, was drawn to medicine because of a passion for people. In his early days as a general practitioner in the clinic, diabetes was one of the main conditions he treated in his community. And he saw many more of those patients when he briefly stepped away from the biopharmaceutical industry to volunteer during the first waves of COVID-19.&lt;/p>&#xd;&#xa;&lt;p>“At that time, patients’ access to care for their diabetes shifted because hospitals and clinics were busy treating patients during the pandemic. Vision screenings sometimes fell behind,” remembers Schifflers. “These patients experienced different emotions, from anxiety to depression, if their eyesight worsened due to their diabetes.”&lt;/p>&#xd;&#xa;&lt;p>This acute understanding of the risks plays an important part in Schifflers’ role at AbbVie. Physicians often approach diabetes care by prioritizing the many complications that could come with the chronic disease’s impact on the blood and insulin levels. Managing glucose may rank highly, but Mathias always educated patients on the additional risk with their eyes. Today, he partners with eye care professionals to conduct educational programs which highlights the importance of more accurate and precise diagnoses of retinal diseases.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:23:31.108-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Personalized approaches for detecting and treating retinal diseases"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-09-27T10:04:34.735-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>López and Schifflers are joined by many others at AbbVie whose work is centered on the high unmet need in DME and DR. Those colleagues include Tim Schwartz, PhD., senior scientific director of precision medicine, AbbVie.&lt;/p>&#xd;&#xa;&lt;p>Coming from a family of firefighters, Tim took a different path and pursued a career in biological science. He’s taking learnings from years in personalized medicine in oncology and applying it to eye care.&lt;/p>&#xd;&#xa;&lt;p>“I had my own retinal scare 10 years ago, and learned how precious your vision really is,” Schwartz recalls. “To be able to make an impact on such a broad population who are not only battling one illness but at risk of also losing their sight inspires me to deliver.”&lt;/p>&#xd;&#xa;&lt;p>With precision medicine Schwartz believes we can move toward care that matches the right patient with the right therapy at the right time. And artificial intelligence, he argues, can help advance the process.&lt;/p>&#xd;&#xa;&lt;p>“Using a computer as a tool to assess images of the retina to look for differences is something that we couldn’t possibly see with the naked eye,” explained Schwartz. “We might be able to diagnose patients earlier and get them on the best path for care for their condition.”&lt;/p>&#xd;&#xa;&lt;p>To get those images, Schifflers says it is critical for diabetic patients to get annual screenings, and perform, when appropriate, optical coherence tomography (OCT) scans. OCT is a non-invasive imaging method that uses reflected light to create pictures of the retina. These images, similar to an ultrasound of the back of the eye, provide the right picture of inflammation status for eye care practitioners.&lt;/p>&#xd;&#xa;&lt;p>“The OCT scan allows clinicians to deliver the right course of action for DME, but they need also the right time to read the scans,” says Schifflers. “Artificial intelligence software could be a game changer to aide in physician identification of certain aspects and what should be considered in their personal treatment plan.”&lt;/p>&#xd;&#xa;&lt;p>Working with a robust team of research scientists and medical experts, Schwartz, López and Schifflers remain true to AbbVie’s promise of providing innovative solutions to meet patient needs from the front to the back of the eye, a long-standing commitment to preserving and protecting vision.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-09-27T10:01:44.307-04:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop_236852267
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T10:25:59.883-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="References"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-09-27T10:06:07.432-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-08T10:26:55.983-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;ol>&#xd;&#xa;&lt;li>Lee R, Wong TY, Sabanayagam C. Epidemiology of diabetic retinopathy, diabetic macular edema and related vision loss. Eye and vision. 2015 Sept; 2(17):1-25. &lt;a href=&quot;https://doi.org/10.1186/s40662-015-0026-2&quot; target=&quot;_blank&quot;>https://doi.org/10.1186/s40662-015-0026-2&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>Starace V, Battista M, Brambati M, Cavalleri M, Bertuzzi F, Amato A, Lattanzio R, Bandello F, Cicinelli MV. The role of inflammation and neurodegeneration in diabetic macular edema. Therapeutic Advances in Ophthalmology. 2021 Dec; 13:25158414211055963. &lt;a href=&quot;https://doi.org/10.1177/25158414211055963&quot; target=&quot;_blank&quot;>https://doi.org/10.1177/25158414211055963&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1438601535
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2023-06-12T19:40:35.890-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T19:40:35.890-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_copy
+                                    jcr:created="{Date}2023-06-12T19:38:18.115-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-06-12T19:41:00.043-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

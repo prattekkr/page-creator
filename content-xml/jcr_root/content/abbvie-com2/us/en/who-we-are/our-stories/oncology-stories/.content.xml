@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-01-27T17:40:41.918-05:00"
+        cq:lastModifiedBy="chiucx"
+        cq:lastReplicated="{Date}2023-01-27T17:40:48.771-05:00"
+        cq:lastReplicatedBy="chiucx"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/category-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-01-07T10:53:02.309-05:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Oncology Stories"
+        jcr:uuid="bf6a3618-8a55-468b-9824-5412d065102d"
+        sling:resourceType="abbvie-com2/components/categorypage"
+        hideInNav="true"
+        navTitle="Oncology Stories"
+        pageTitle="Oncology Stories">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-07T10:27:08.441-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#8A2ECC"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835861,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459]"
+                                jcr:lastModified="{Date}2023-01-07T11:01:05.288-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                link="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <title
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-07T10:53:15.312-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Oncology Stories"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-27T17:40:41.906-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Our scientific research in oncology has led to critical discoveries in the treatment of blood cancer. Now, we continue to leverage our deep understanding of human biology and cutting-edge research technologies to find new ways to improve the lives of people with cancer.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <editorialfeed
+                            jcr:lastModified="{Date}2023-01-07T10:29:48.136-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/editorialfeed/v1/editorialfeed"
+                            listFrom="tags"
+                            tags="[abbvie-com-2:categories/oncology-stories]"
+                            tagsMatch="any"
+                            tagsSearchRoot="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                    </container2>
+                    <separator_copy
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2022-12-27T20:18:03.710-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2022-12-27T20:18:03.710-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

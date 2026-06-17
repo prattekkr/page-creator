@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2024-05-08T09:43:19.658-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-14T13:34:31.783-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Explore what makes AbbVie a family-friendly workplace"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-22T02:56:43.784-04:00"
+        jcr:lastModifiedBy="KANCHRX3"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Putting our people first AbbVie’s family benefits"
+        jcr:uuid="b9bae9f0-dcab-464d-819c-f0ca09caa995"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read the article &quot;AbbVie’s family benefits&quot;"
+        description="Explore what makes AbbVie a family-friendly workplace"
+        fileReference="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/family-benefits-hero.jpg"
+        hideInNav="true"
+        id="Putting our people first AbbVie’s family benefits"
+        navTitle="Putting our people first AbbVie’s family benefits"
+        ogimage="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/family-benefits-hero.jpg"
+        pageTitle="Putting our people first AbbVie’s family benefits"
+        publishDate="{Date}2022-10-17T18:47:00.000-05:00"
+        readTime="4"
+        readWatchTimeSel="read-time"
+        title="AbbVie’s family benefits">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-24T09:22:34.147-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/family-benefits-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835861,1653545825685,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:lastModified="{Date}2024-05-06T12:08:18.312-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-05-08T09:41:15.714-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-01-24T09:22:46.124-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Putting our people first: AbbVie’s family benefits"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-01-24T09:22:58.792-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Explore what makes AbbVie a family-friendly workplace.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-24T09:23:58.484-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Families can look different from one person to the next, yet we all understand their importance. Over time, we learn and grow within our current family roles, take on new roles, find joy and often face new challenges. At all these different stages, AbbVie is there to support its people—and their families.&lt;/p>&#xd;&#xa;&lt;p>Because of AbbVie’s family benefits and commitment to well-being, the company has been named #1 on Seramount’s list of 100 Best Companies this year, and consistently ranks on Fortune’s and Great Place to Work’s list of 100 Best Companies to Work For. From generous leave polices to advice and counseling on personal issues, explore some of the top benefits AbbVie employees rely on to help their families thrive.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-24T09:24:28.534-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-24T09:24:28.534-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2023-01-24T09:24:07.848-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-08T09:41:24.629-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Generous parental leave supporting new families"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-24T09:25:03.048-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>For new mothers, fathers, adoptive and foster parents in the U.S., AbbVie offers generous time off to focus on welcoming a new child. And, to ease the transition back to the workplace, new parents can phase back to work on a reduced schedule for up to a full year.&lt;/p>&#xd;&#xa;&lt;p>Director Jody Alde, who’s been at AbbVie for nearly 20 years, has leveraged the company’s maternity leave for the birth of all three of her children – and plans to do so again with the new child she has on the way.&lt;/p>&#xd;&#xa;&lt;p>“I'm very grateful for the maternity leave benefits at AbbVie. Even compared to several years ago, they’ve gotten better and better. I'm very appreciative of being able to have that time as a family to adjust to a fourth child,” she says.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <carousel
+                                cq:styleIds="[3]"
+                                jcr:created="{Date}2023-01-24T09:25:24.018-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-24T09:27:15.229-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                accessibilityAutoItemTitles="false"
+                                autopauseDisabled="false"
+                                autoplay="false"
+                                carouselType="static"
+                                delay="5000">
+                                <item_1674570404999
+                                    cq:panelTitle="image 1"
+                                    cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                    jcr:lastModified="{Date}2023-01-24T09:36:57.182-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/Family_Benefits_Story_Assets_Carousel_01.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1674570408046
+                                    cq:panelTitle="image 2"
+                                    cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                    jcr:lastModified="{Date}2023-01-24T09:37:18.873-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/Family_Benefits_Story_Assets_Carousel_02.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1674570410757
+                                    cq:panelTitle="image 3"
+                                    cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                    jcr:lastModified="{Date}2023-01-24T09:37:39.349-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/Family_Benefits_Story_Assets_Carousel_03.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1674570412136
+                                    cq:panelTitle="image 4"
+                                    cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                    jcr:lastModified="{Date}2023-01-24T09:37:59.705-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/Family_Benefits_Story_Assets_Carousel_04.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <item_1674570414292
+                                    cq:panelTitle="image 5"
+                                    cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                    jcr:lastModified="{Date}2023-01-24T09:38:18.594-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/images/stories/putting-our-people-first-abbvies-family/Family_Benefits_Story_Assets_Carousel_05.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                            </carousel>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2023-01-24T09:24:07.848-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-08T09:41:36.930-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Time away to care for sick loved ones"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-24T09:27:54.582-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie support also includes employees’ extended families. Through the company’s caregiver leave program, employees in the U.S. receive up to 4 weeks of paid time off and 8 weeks of unpaid time off to look after not only a spouse or child of any age, but also parents, in-laws, grandparents, grandchildren, and siblings with a serious health condition.&lt;/p>&#xd;&#xa;&lt;p>The caregiver leave benefit supported Monica Swanzy, a senior account consultant at Allergan Aesthetics, when her son was diagnosed with aplastic anemia in 2021.&lt;/p>&#xd;&#xa;&lt;p>“He needed blood, platelets, and intravenous immunoglobulin every week to stay alive,” Swanzy explained. Leveraging the benefit, Swanzy was able to take 30 days off work while she stayed at the hospital to care for her son.&lt;/p>&#xd;&#xa;&lt;p>“I never thought I would have needed to use the caregiver benefit, but it’s a true gift,” she says.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote
+                                cq:styleIds="[1000000000000,1000000000040]"
+                                jcr:created="{Date}2023-01-24T09:28:03.025-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-24T09:28:21.083-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Monica Swanzy"
+                                attributionTitle="Senior Account Consultant, Allergan Aesthetics, an AbbVie company"
+                                quote="I never thought I would have needed to use the caregiver benefit, but it's a true gift."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2023-01-24T09:24:07.848-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-08T09:41:46.856-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Flexible ways of working to help you balance life and work"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-24T09:28:52.606-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>To attend to family matters such as medical appointments or parent-teacher meetings, a strict 9-to-5 schedule can be challenging. This is one of the many reasons AbbVie employees use flexibility – both in where and when they work.&lt;/p>&#xd;&#xa;&lt;p>Employees can use AbbVie’s flexibility to help them manage their work and responsibilities at home. One way is Where We Work, AbbVie’s hybrid work model for office-based employees that provides predictable flexibility without sacrificing in-person collaboration. The hybrid work model typically consists of 3 days in the office and 2 days remote. Other kinds of flexibility, which vary by role, include flex-time, part-time, remote work, job sharing, shift changes, compressed work weeks and more.&lt;/p>&#xd;&#xa;&lt;p>Flexibility proved essential for AbbVie director Katie Kalivoda as she was raising her two kids, both of whom have ADHD.&lt;/p>&#xd;&#xa;&lt;p>“I had to figure things out with my oldest especially, so I needed flexibility to be able to go to doctor’s appointments and talk to teachers. My manager said to me: ‘I trust you to get the job done, you have whatever flexibility you need.’ To have that stated so clearly to me – I could never repay that,” said Kalivoda.&lt;/p>&#xd;&#xa;&lt;p>“AbbVie’s Where We Work model has given me the space to be the type of parent that I want to be. If I need to be in school for an event, I block my calendar. If I need to work, my kids understand. It’s a matter of finding what works for you, and AbbVie has allowed me to do that.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-24T09:24:28.534-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-24T09:24:28.534-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy
+                                    cq:styleIds="[1659545825678,1651545825694]"
+                                    jcr:created="{Date}2023-01-24T09:24:07.848-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-08T09:43:19.652-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Flexible ways of working to help you balance life and work"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-24T09:29:19.543-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Whether dealing with the stress of parenting or being a caregiver, grieving the loss of a loved one or improving emotional well-being, employees at AbbVie have a variety of resources to help them with their mental health and well-being. One key program is AbbVie’s Employee Assistance Program (EAP).&lt;/p>&#xd;&#xa;&lt;p>EAP is a free, confidential counseling service, available 24/7 to employees globally and to anyone in their households. Over one in 10 families have accessed AbbVie’s EAP counseling services in the past year. This includes unlimited access to resources for a range of personal or work-related concerns such as parenting, stress, child/elder care, grief, relationships, and work/career related matters.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text
+                                    jcr:created="{Date}2023-01-24T09:29:51.478-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-24T09:30:25.186-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Media Inquiries:&lt;br>&#xd;&#xa;&lt;/b>Name: Lily Fragoso&lt;br>&#xd;&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:sara.weitz@abbvie.com&quot;>lily.fragoso@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2023-01-24T09:30:42.579-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-24T09:30:48.594-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related content"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-01-24T09:30:58.555-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-24T09:31:26.562-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    linkURL="/content/abbvie-com2/us/en/join-us/life-at-abbvie/benefits"/>
+                            </container5>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

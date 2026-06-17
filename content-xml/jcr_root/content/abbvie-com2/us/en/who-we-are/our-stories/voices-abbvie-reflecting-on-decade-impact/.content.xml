@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-05-08T09:37:56.055-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:lastReplicated="{Date}2024-05-14T13:34:34.185-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-03-06T17:17:11.018-05:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Voices of AbbVie: Reflecting on a decade of impact"
+        jcr:uuid="dd758fe4-35e5-4491-bac1-9af13a2aeed3"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Learn more about our 10 year anniversary"
+        description="As we recognize 10 years as a company, what makes working at AbbVie unique? Global employees weigh in."
+        fileReference="/content/dam/abbvie-com2/images/stories/voices-abbvie-reflecting-on-decade-impact/voices-of-abbvie-hero_16x9.jpg"
+        hideInNav="true"
+        navTitle="Voices of AbbVie: Reflecting on a decade of impact"
+        ogimage="/content/dam/abbvie-com2/images/stories/voices-abbvie-reflecting-on-decade-impact/voices-of-abbvie-hero_16x9.jpg"
+        pageTitle="Voices of AbbVie: Reflecting on a decade of impact"
+        publishDate="{Date}2023-01-04T17:35:00.000-06:00"
+        readTime="2"
+        readWatchTimeSel="read-time"
+        title="Voices of AbbVie: Reflecting on a decade of impact">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-06T18:38:43.537-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/voices-abbvie-reflecting-on-decade-impact/voices-of-abbvie-hero_16x9.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-05-08T09:37:16.294-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-01-06T18:36:30.719-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Voices of AbbVie: Reflecting on a decade of impact"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2023-01-06T18:36:49.629-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>As we recognize 10 years as a company, what makes working at AbbVie unique? Global employees weigh in.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825692]"
+                                    jcr:lastModified="{Date}2024-05-08T09:37:27.742-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Looking toward a bright future"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-06T18:37:13.128-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Since our inception in 2013, we’ve focused on taking on tough health challenges to make a real difference in people’s lives. In the past 10 years, we’ve invested over $50 billion to research, develop and discover new medicines and solutions. We’ve also expanded to over 50,000 employees who are focused every day on making a remarkable impact that lasts.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;While we have made great progress, it’s only the beginning. As we recognize a decade of impact, we turned to our employees around the globe to reflect on what motivates their work, how culture plays a part and what they see for the future of our company.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <video
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2023-01-06T18:37:28.508-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-09-08T13:00:39.865-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="Watch 1:46"
+                                descriptiveIframeTitle="Voices of AbbVie: Reflecting on a Decade of Impact"
+                                fileReference="/content/dam/abbvie-com2/images/stories/voices-abbvie-reflecting-on-decade-impact/voices-of-abbvie-video-thumbnail.jpg"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="true"
+                                title="Voices of AbbVie: Reflecting on a Decade of Impact"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/HzrRUMajS7s"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T09:37:37.036-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Innovating for patients"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-06T18:39:20.308-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Supportive colleagues and mentors driving toward the same goal of innovating for patients sets the experience of working at AbbVie apart, according to Ammar Alsheikh, a senior scientist at the AbbVie Bioresearch Center in Massachusetts. He specializes in researching autoimmune diseases, working with a team to design experiments that unlock a deeper understanding of autoimmune diseases.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“It is essential for me, not only as a physician but also as a scientist, that the work I am doing is impactful,” he says.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Making a difference every day has kept Jason Cohan, a specialist in scientific compliance, motivated during his long career. He celebrates 25 years with the company in 2023. Cohan’s current role focuses on training and compliance for our growing R&amp;amp;D function.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“In my role, I’m making an impact on patients’ lives by ensuring that our employees are qualified and trained to perform their jobs,” he says.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-06T18:39:25.338-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T18:39:25.338-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T09:37:46.413-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Embracing diverse thinking"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-06T18:39:49.960-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Teams across the company bring their unique perspectives and diverse thinking to their work, according to Katrina Borissova, an operational excellence lead within clinical development at Allergan Aesthetics in the United Kingdom. Diverse perspectives are valued, with all voices heard equally.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote
+                                cq:styleIds="[1000000000040,1000000000000]"
+                                jcr:created="{Date}2023-01-06T18:39:55.725-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-06T18:40:09.942-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Katrina Borissova"
+                                attributionTitle="Clinical Development, Allergan Aesthetics"
+                                quote="Three words I would use to describe AbbVie’s culture are transparency, equality, and resilience."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-05-08T09:37:56.047-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Driven by dedicated people"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2023-01-06T18:40:34.857-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Regardless of which part of the company you represent, we are all dedicated to the same mission, according to Binta Beard, director of global philanthropy.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“When I explain to family and friends what AbbVie does, it’s really pretty simple.” she says. “We’re an innovative, global biopharma company that makes transformative therapies.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;A quest to seek out opportunities and act with aspiration is what will drive AbbVie into the future, according to Elena Dianova, a public affairs director at our Russia site.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“I believe in the strong, bright future of AbbVie because I see people who are dedicated and have the highest mission and the ambition to seize as many opportunities for patients as possible,” she says.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Want to learn more about AbbVie’s history of impact? Check out the&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/landing/a-history-of-impact.html&quot;>interactive timeline&lt;/a>&amp;nbsp;of our first 10 years.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2023-01-06T18:39:25.338-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T18:39:25.338-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2023-01-06T18:40:47.702-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T18:41:28.358-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    headingElement="h5"
+                                    singleExpansion="false">
+                                    <item_1673048480008
+                                        cq:panelTitle="Video Transcript"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2023-01-06T18:41:56.613-05:00"
+                                        jcr:lastModifiedBy="chiucx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;h4>Ammar Alsheikh, Discovery Science&lt;/h4>&#xd;&#xa;&lt;p>What excites you about the work you do each day?&lt;/p>&#xd;&#xa;&lt;p>Among the most exciting aspects of my work every day is that I am surrounded by amazing supportive colleagues and mentors, and together we are really pushing the boundaries of science.&lt;/p>&#xd;&#xa;&lt;h4>Katrina Borissova, Clinical Development&lt;/h4>&#xd;&#xa;&lt;p>In your role, how do you make an impact on patients’ lives?&lt;/p>&#xd;&#xa;&lt;p>How I make an impact on patients’ lives is by getting the most of our incredible diversity. Each of us can be authentic, feel like we belong, and be encouraged to fully participate and contribute our best to achieve a remarkable impact for patients.&lt;/p>&#xd;&#xa;&lt;h4>Jason Cohan, Scientific Compliance&lt;/h4>&#xd;&#xa;&lt;p>What are three words you’d use to describe AbbVie’s culture?&lt;/p>&#xd;&#xa;&lt;p>Three words I would use to describe AbbVie’s culture are progressive, transparent and welcoming.&lt;/p>&#xd;&#xa;&lt;h4>Binta Beard, Global Philanthropy&lt;/h4>&#xd;&#xa;&lt;p>How do you explain to family and friends what AbbVie does?&lt;/p>&#xd;&#xa;&lt;p>When I explain to family and friends what AbbVie does, it’s really pretty simple. We’re an innovative, global biopharma company that makes transformative therapies.&lt;/p>&#xd;&#xa;&lt;h4>Elena Dianova, Public Affairs&lt;/h4>&#xd;&#xa;&lt;p>As we celebrate AbbVie’s 10th anniversary, what do you hope we accomplish together in the next 10 years?&lt;/p>&#xd;&#xa;&lt;p>I believe in the strong, bright future of the AbbVie company because I see people who are dedicated, have a highest mission and the ambition to seize as many opportunities for our patients as possible.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                                <text_copy_copy_copy_
+                                    jcr:created="{Date}2023-01-06T13:18:57.054-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T18:42:20.693-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Media inquires:&lt;/b>&lt;br>&#xd;&#xa;Name:&amp;nbsp;Alissa Bolton&lt;br>&#xd;&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:Alissa.bolton@abbvie.com&quot;>Alissa.bolton@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-11-16T17:15:38.269-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T17:15:44.854-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related content"/>
+                                <cardpagestory
+                                    cq:styleIds="[1111111111110,1111111111112,1111111111117]"
+                                    jcr:created="{Date}2023-01-06T16:05:11.351-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-06T18:45:33.433-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/three-factors-that-drove-transformational-integration-abbvie-allergan"/>
+                            </container5_copy_copy>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

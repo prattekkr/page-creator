@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-09-22T02:20:37.063-04:00"
+        cq:lastModifiedBy="KANCHRX3"
+        cq:tags="[abbvie-com-2:categories/profile-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="From neuroscience to ophthalmology to bioengineering, see how our head of aesthetic science follows his passions to bring new opportunities to patients."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-09-22T02:20:36.976-04:00"
+        jcr:lastModifiedBy="KANCHRX3"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Magnified featuring Darin Messina"
+        jcr:uuid="44756a23-a6ec-48ba-9a1f-7ddaba7fc4b9"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="From neuroscience to ophthalmology to bioengineering, see how our head of aesthetic science follows his passions to bring new opportunities to patients."
+        fileReference="/content/dam/abbvie-com2/images/stories/magnified-featuring-darin-messina/Magnified-Hero-Static_Darin-Messina_Homepage_16x9.jpg"
+        hideInNav="true"
+        navTitle="Magnified featuring Darin Messina"
+        ogimage="/content/dam/abbvie-com2/images/stories/magnified-featuring-darin-messina/magnified-hero-gif_darinmessina_2880x1620.gif"
+        pageTitle="Magnified featuring Darin Messina"
+        publishDate="{Date}2022-04-14T13:38:00.000-05:00"
+        readTime="4"
+        readWatchTimeSel="read-time"
+        title="Magnified featuring Darin Messina">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847148]"
+                        jcr:lastModified="{Date}2022-12-09T14:39:55.892-05:00"
+                        jcr:lastModifiedBy="sharmrx18"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/magnified-featuring-darin-messina/magnified-hero-gif_darinmessina_2880x1620.gif"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835861,1653545825685,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787460,1659997787459]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2023-01-26T16:11:13.905-05:00"
+                                jcr:lastModifiedBy="fusznx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Magnified Featuring Darin Messina"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2022-12-28T15:09:36.816-05:00"
+                                jcr:lastModifiedBy="schafsm"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>From neuroscience to ophthalmology to bioengineering, see how our head of aesthetic science follows his passions to bring new opportunities to patients.&lt;/span>&lt;/span>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2022-12-09T14:42:18.357-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;i>In the “Magnified” series, we take a closer look at the life experiences and career journeys that have shaped AbbVie’s leaders. Meet Darin Messina, Ph.D., our senior vice president, Allergan Aesthetics R&amp;amp;D, as he talks career reinvention, leadership lessons in rock climbing and how his science-forward team is pushing on new discoveries across the landscape of aesthetics and regenerative medicine.&lt;/i> &lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy
+                                    cq:styleIds="[1651545825668,1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:42:28.898-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Q: When did you first become interested in science – specifically bioengineering and neurology?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:01:41.718-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:42:39.578-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Ever since I was a kid, I loved science and technology. I was enamored with surgery from a pretty young age. This was in the 1980s when I was growing up in Chicago, and I remember watching educational TV programs where they showed surgeries, like a knee replacement. It was also a time when significant research was taking place to better understand the brain. Scientists were exploring new areas around brain function, such as the concept of “consciousness” and how you could potentially treat diseases like Parkinson’s or Alzheimer’s. I was reading journal articles for fun, especially around the potential of stem cell therapy and that really excited me.&lt;/p>&#xd;&#xa;&lt;p>I originally thought I’d be a neurosurgeon, but when I spent more time in the lab as an undergrad I discovered that I could help many more people by helping to develop therapies versus treating people individually. It may have been a simple view but it led me to graduate school. And eventually, the opportunity to bring together my passions for neuroscience and bioengineering, while also satisfying my deep-seated need to help others.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__613734442
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy
+                                    cq:styleIds="[1651545825668,1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:43:01.151-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Q: How did your early career journey lead you to head up aesthetics R&amp;D?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"/>
+                                <text_copy_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:01:41.718-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:43:11.549-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>My career path has not been straight, but I think atypical experiences can help you bring a unique perspective to a role. In my early career, at the same company I worked on everything from preclinical pharmacology to developing a delivery device in the ophthalmology field for a cell therapy. This diversity of experience helped me understand the pharmaceutical business more broadly, from development to clinical trials to manufacturing.&lt;/p>&#xd;&#xa;&lt;p>When I was ready to try something new, I was originally drawn to Allergan (now AbbVie) because of its ophthalmology expertise. However, I ended up applying for and accepting a project leadership position in aesthetic medical devices. This took me out of my comfort zone but still allowed me to lean on my experience in cell therapy and tissue engineering. That was over a decade ago and now I oversee the broader aesthetics R&amp;amp;D organization to develop new products in everything from facial aesthetics to regenerative medicine. The one constant has been the many, varied opportunities. I’ve learned so much from each one.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                            <quote_copy_copy_copy
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2022-11-16T17:03:32.882-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-26T16:12:22.959-05:00"
+                                jcr:lastModifiedBy="fusznx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Darin Messina, Ph.D."
+                                attributionTitle="SVP, Allergan Aesthetics R&amp;D, AbbVie"
+                                quote="Whenever I have a tough day, I think about who I get to work with, what I get to do and how I'm always learning. That allows me to reset.&quot;"
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title_copy_copy
+                                    cq:styleIds="[1651545825668,1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:45:08.801-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Q: What about your job and the field of aesthetics excites you most?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:01:41.718-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:45:19.312-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Three things to come mind – first, I love that science is at the core of everything we do. Second, that we have the ability to leverage people’s diverse skillsets and intellectual firepower to do things that others cannot. The ability to find solutions for patients has really been strengthened when Allergan became part of AbbVie in 2020. It’s bringing together innovation, technology and technical expertise to achieve our goals - and you can see this in our developing pipeline.&lt;/p>&#xd;&#xa;&lt;p>Third, I get to work with people I care for and respect while having the opportunity to continually learn from them. Whenever I have a tough day, I think about who I get to work with, what I get to do and how I’m always learning. That allows me to reset.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__613734442
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy
+                                    cq:styleIds="[1651545825668,1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:21:54.789-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Q: You mentioned resilience: What does that word mean to you and how you approach your work at AbbVie?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"/>
+                                <text_copy_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:01:41.718-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:22:06.102-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Resilience is being able to see success in failure. Every time we test a hypothesis, we may not succeed. However, by nature, scientists have a curiosity and a desire to find out the “why.” We may learn and discover something new that will help us advance our understanding and our science. It’s our resilience that propels us forward and I am continually inspired by my colleagues, who share this same resolve.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__1193155509
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy_1473594847
+                                    cq:styleIds="[1651545825668,1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:00:58.796-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-09T14:45:59.642-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Q: How would you describe your leadership style?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"/>
+                                <text_copy_copy_copy__2073827771
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-16T17:01:41.718-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-28T15:09:58.950-05:00"
+                                    jcr:lastModifiedBy="schafsm"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>I’m a coach at heart, conveying my thoughts or sharing business perspective so that a person or team can define the best path forward. Having an open dialogue allows me to help team members become more strategic and analytical.&lt;/p>&#xa;&lt;p>I also relate my approach to leadership to how I think about rock climbing, one of my favorite activities. Rock climbing challenges me to think strategically – you may take a different route than another climber, but we all top out at the same place. The most amazing thing is watching another climber, because you think about things with a new perspective and learn something new. Climbers are always seeking ways to be more efficient and effective. You need this same agile mentality when you’re managing a team. Many situations will arise that require you to be creative, calm and adaptable.&lt;br>&#xa;&lt;br>&#xa;&amp;nbsp;&lt;/p>&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/our-science/our-rd-leaders/darin-messina.html&quot; target=&quot;_blank&quot; title=&quot;Learn more about Darin&quot;>Learn more about Darin&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__585472023
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-11-16T10:43:45.922-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_759260103_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-23T16:46:55.248-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-26T16:13:37.916-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

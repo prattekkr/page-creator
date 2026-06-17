@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-11-07T10:33:02.185-05:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/eedi-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Learn about AbbVie’s employee resource groups and see how they drive change at AbbVie and beyond."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-11-05T15:51:22.132-05:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="How Employee Resource Groups Create Meaningful Impact at AbbVie"
+        jcr:uuid="97514fd8-d8aa-4a91-8ca5-c5392e9bdf10"
+        sling:resourceType="abbvie-com2/components/storypage"
+        description="From helping AbbVie advance patient outcomes to supporting veterans, see how employee groups are driving change.  "
+        fileReference="/content/dam/abbvie-com2/images/stories/erg/erg-story-hero.jpg"
+        hideInNav="true"
+        navTitle="How Employee Resource Groups Create Meaningful Impact at AbbVie "
+        ogimage="/content/dam/abbvie-com2/images/stories/erg/erg-story-hero.jpg"
+        pageTitle="Employee Resource Groups Drive Inclusion and Change at AbbVie"
+        publishDate="{Date}2025-11-11T14:29:00.000-06:00"
+        readTime="2"
+        readWatchTimeSel="read-time"
+        title="Voices That Drive Innovation: AbbVie’s ERGs Make an Impact">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
+                        jcr:lastModified="{Date}2025-11-05T15:30:35.401-05:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/erg/erg-story-hero.jpg"
+                        dmPresetType="imagePreset"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2025-11-05T15:30:28.505-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2025-11-05T15:30:58.671-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="How Employee Resource Groups Create Meaningful Impact at AbbVie "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-11-05T15:31:13.408-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>From helping AbbVie advance patient outcomes to supporting veterans, see how employee groups are driving change.&lt;i> &lt;/i>&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982,1653545835879]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:31:54.802-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>At AbbVie, our mission to make a positive impact for patients goes beyond the laboratory. It lives in the everyday actions of our Employee Resource Groups (ERGs) – seven communities that advocate for how we approach health care inclusion and innovation.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>With more than 150 chapters worldwide, our ERGs are open to all employees. ERG members bring diverse perspectives that drive meaningful business impact.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <quote_copy_copy
+                                cq:styleIds="[1000000000000]"
+                                jcr:created="{Date}2025-09-15T12:27:55.487-04:00"
+                                jcr:createdBy="VALENSX5"
+                                jcr:lastModified="{Date}2025-11-07T10:33:02.169-05:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Brittany Winstead"
+                                attributionTitle="PharmD RPh, Associate Director, Program Management Solid Tumor, AbbVie, and BBN Global Chair"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/images/stories/erg/brittany-winstead-quote-thumbnail.jpg"
+                                quote="Through consistent community involvement, we highlight AbbVie’s dedication to transforming lives and empower potential patients by building lasting connections based on integrity and trust."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2_copy_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:02.214-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Ability at AbbVie: Supporting Every Journey "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:18.352-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Ability at AbbVie creates space for employees and caregivers impacted by neurodiversity, mental health and physical disabilities. These focus areas form Ability’s innovative &amp;quot;Circles” approach, which provides crucial peer support and shares insights and suggested enhancements with leadership.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>For example, when the ERG discovered a gap in wheelchair accessibility for large events with stages, they didn't just identify the problem – they secured approval and funding for equipment that now benefits the entire organization.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>“Our ERG members live with the same disabilities as our patients,” said Jeff C. Mohr, director, Global Portfolio Management, AbbVie, and Ability at AbbVie chair. “Improving employees’ lives is analogous to helping our patients live with their disability.”&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:51.400-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="AHORA: Creating Inclusive Innovation "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:37:01.615-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AHORA recognizes, celebrates and educates others about&amp;nbsp;Latino and Hispanic culture. It has expanded from a cultural networking group into a community that helps employees by harnessing collective strengths and supporting personal and professional journeys – and drives impact by sharing insights with AbbVie business teams.&lt;/p>&#xd;&#xa;&lt;p>&amp;quot;We are seeing leaders gain confidence and operate with a larger impact focus versus just a business focus,&amp;quot; said Nelson Caudillo, associate director, BTS Workforce Enablement, AbbVie, and AHORA chair. “Through our efforts we have raised awareness of AbbVie in the community, which helps us expand our talent pool.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop_1541639023
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2025-11-05T15:37:23.810-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Asian Leadership Network: Building Bridges to Better Health "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:37:40.077-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Asian Leadership Network (ALN) exemplifies how ERGs help AbbVie advance clinical trial awareness through a partnership with AbbVie's Patient Inclusion team.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&amp;quot;It is through communication, engagement and education that we can connect with our communities and patient populations that represent the real world,&amp;quot; said Kavita R. Sail, senior director, Health Economics Outcomes Research, AbbVie, and ALN co-chair. The ERG's recent clinical trial awareness event drew nearly 300 attendees.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop_1120408144
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2025-11-05T15:38:02.112-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Black Business Network: Amplifying Our Voices "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:38:16.560-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Black Business Network (BBN) demonstrates the power of authentic community engagement. Its partnership with the African American Male Wellness Agency, which works to expand the life expectancy of African American men, goes beyond traditional corporate outreach.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>“Through consistent community involvement, we highlight AbbVie’s dedication to transforming lives and empower potential patients by building lasting connections based on integrity and trust,” said Brittany Winstead, PharmD RPh, Associate Director, Program Management Solid Tumor, AbbVie, and BBN Global Chair.&lt;/p>&#xd;&#xa;&lt;p>BBN’s approach helps AbbVie understand health disparities and cultural factors that impact health care access, informing more effective outreach strategies.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop_1601242586
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2025-11-05T15:39:23.487-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="AbbVie PRIDE: Celebrating Authentic Selves "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy_copy_422964809
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:39:34.248-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie PRIDE supports employees, including LGBTQ+, through meaningful community engagement. During Pride Month in June 2025, PRIDE leaders marched in seven parades globally, from Tokyo to Chicago. Additionally, they created a playbook to help managers better understand the LGBTQ+ talent experience.&lt;/p>&#xd;&#xa;&lt;p>“At the Out for Undergrad conference, we connected with high-achieving LGBTQ+ students from 76 schools to help build AbbVie’s future pipeline,” said Debbie Tan, director, Regulatory Portfolio Management, AbbVie, and PRIDE chair.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__143223646
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop_580624910
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2025-11-05T15:39:55.155-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="AbbVie Veterans: Serving in a New Way "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy_copy_556000115
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:40:08.799-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie Veterans ERG (VERG) has embedded something truly meaningful: the SkillBridge program from the U.S. Department of Defense. The initiative helps transitioning service members find their place at AbbVie, with a 63% hire rate in 2024.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&amp;quot;This is just one of the life-changing opportunities AbbVie provides,&amp;quot; said one manager of a recent SkillBridge associate.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__446164148
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-11-05T15:36:32.117-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop_1655769388
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2025-11-05T15:40:26.663-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Women Leaders in Action: Leading Global Change "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_copy_copy_322319298
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-11-05T15:40:40.801-05:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Women Leaders in Action (WLA) is AbbVie's largest ERG with chapters around the world. Beyond its global mentorship programs, WLA is ensuring its communications are translated in multiple languages, enabling its reach to broader audiences.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&amp;quot;Knowledge and awareness are empowering, and that's precisely what we achieve through multilingual communications,&amp;quot; said Christine M. Coulombe, vice president, Parkinson’s Disease, AbbVie, and WLA chair. “One ERG’s innovation can amplify our collective impact.”&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

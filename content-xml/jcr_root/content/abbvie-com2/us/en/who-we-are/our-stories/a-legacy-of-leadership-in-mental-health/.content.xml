@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-09-27T11:17:11.342-04:00"
+        cq:lastModifiedBy="chiucx"
+        cq:tags="[abbvie-com-2:categories/neuroscience-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Leveraging years of research and development, AbbVie scientists look to help patients with mental illnesses."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-09-27T11:17:11.330-04:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="How AbbVie is working to push boundaries in mental health research"
+        jcr:uuid="67bc9906-7db1-4050-9363-e744a87f60c3"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="Leveraging years of research and development, AbbVie scientists look to help patients with mental illnesses."
+        fileReference="/content/dam/abbvie-com2/images/stories/leadership-in-mental-health/mental-health-expertise-hero.jpg"
+        hideInNav="true"
+        navTitle="How AbbVie is working to push boundaries in mental health research"
+        ogimage="/content/dam/abbvie-com2/images/stories/leadership-in-mental-health/mental-health-expertise-hero.jpg"
+        pageTitle="How AbbVie is working to push boundaries in mental health research"
+        publishDate="{Date}2024-09-27T13:26:00.000-05:00"
+        readTime="6"
+        readWatchTimeSel="read-time"
+        title="How AbbVie is working to push boundaries in mental health research">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2023-08-28T14:49:37.313-04:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/leadership-in-mental-health/mental-health-expertise-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-09-20T17:18:38.738-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-09-27T08:52:02.383-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="How AbbVie is working to push boundaries in mental health research"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-09-20T11:10:16.274-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Leveraging years of research and development, AbbVie scientists look to help patients with mental illnesses.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-09-20T12:26:54.313-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Scientists seek new medicines in psychiatry"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-09-20T11:11:57.898-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>It’s hard to escape talk about mental health these days. It’s splashed across media headlines in publications worldwide and in conversations on social media. Celebrities, athletes and politicians are opening up more about their struggles with mental illnesses, which affect almost 970 million people globally.&lt;/p>&#xd;&#xa;&lt;p>Roughly, one in eight people around the world are living with a mental illness, with anxiety and depressive disorders being the most common, according to the World Health Organization.&lt;sup>1&lt;/sup>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>To help people manage those illnesses, AbbVie is exploring novel mechanisms of action and research platforms to develop next-generation medicines. The company is also pushing beyond traditional methods used to measure psychiatric disorders in clinical research by looking for novel biomarkers to give scientists more information about the disorders. And that’s only some of the work the company is doing to help address some of the most difficult challenges in psychiatry.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2024-09-20T14:42:28.595-04:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2024-09-20T14:42:28.595-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825694]"
+                                    jcr:lastModified="{Date}2024-09-20T12:27:05.976-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="What are we doing amid the challenges"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-09-20T14:46:41.422-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Unraveling the complexities in psychiatry&amp;nbsp;&lt;br>&#xd;&#xa;&lt;/b>Despite decades of research and development, the science surrounding mental illness remains notoriously difficult.&lt;/p>&#xd;&#xa;&lt;p>“We can't measure mood in a mouse the same way you might measure a tumor,” said Julie Adams, M.D., executive medical director and global development lead of psychiatry, AbbVie. “Further, lab-grown neurons may teach us how a particular molecule influences an isolated neuron. But in a brain that neuron is influenced by hundreds of molecules and thousands of other neurons. It is a bit like trying to learn about the galaxy by studying the fragments of an asteroid.”&lt;/p>&#xd;&#xa;&lt;p>Another challenge is the way psychiatrists diagnose patients. Whereas other specialties have vast laboratory methods to determine valuable information about a patient’s health — and make related diagnoses and treatment decisions — psychiatrists have to consider what patients tell them and how they behave.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Additionally, finding the right treatment option can also prove challenging. For example, many people diagnosed with depression still have unresolved symptoms after beginning treatment. Moreover, some medications can take weeks to take effect. Others come with myriad side effects, often leading to treatment discontinuation.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>These challenges have made exiting psychiatry the more accessible option for many companies. But those living with mental health conditions worldwide depend on the medical and scientific community to continue researching and developing new treatment options.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>That’s why AbbVie researchers are unwavering in their commitment. They are embarking on a new frontier in psychiatric drug development where innovative treatments are on the horizon.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <quote_copy
+                                cq:styleIds="[1000000000040,1000000000000]"
+                                jcr:created="{Date}2023-08-28T14:51:37.270-04:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-08-30T10:29:29.051-04:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Julie Adams, M.D. "
+                                attributionTitle="Executive Medical Director and Global Development Lead of Psychiatry, AbbVie"
+                                fileReference="/content/dam/abbvie-com2/images/stories/leadership-in-mental-health/adams-julie-headshot.jpg"
+                                quote="We can't measure mood in a mouse the same way you might measure a tumor."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-09-20T14:51:57.801-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>New frontiers in psychiatric research and development&lt;br>&#xd;&#xa;&lt;/b>To bring forth the next generation of therapies, AbbVie is addressing the challenges of psychiatric drug development from multiple fronts.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Most recently, the company acquired Cerevel Therapeutics which is developing treatments for psychiatric and neurological conditions, including investigating novel mechanisms of action.&lt;/p>&#xd;&#xa;&lt;p>The company is also collaborating with Gilgamesh Pharmaceuticals to advance the development of novel neuroplastogens.&lt;/p>&#xd;&#xa;&lt;p>AbbVie scientists are also looking for psychiatric biomarkers using advanced tools such as high-frequency data sampling of mood and behavior, AI-enabled analysis of older methods such as EEG (recordings of electrical patterns in the brain), and functional imaging (visual recordings of various brain activities taken while people are doing specific tasks).&amp;nbsp;&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Leveraging precision medicine and advances in genetic analyses and other physiologic parameters, AbbVie is discovering connections between biology and behavior in ways previously unavailable to psychiatric drug discovery.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Psychiatry remains a complex field, but AbbVie is committed to unraveling these complexities and focused on uncovering new insights to help drive meaningful and impactful change for patients.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>&lt;br>&#xd;&#xa;References:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>World Health Organization, “Mental Disorders.”&amp;nbsp; &lt;a href=&quot;https://www.who.int/news-room/fact-sheets/detail/mental-disorders&quot;>https://www.who.int/news-room/fact-sheets/detail/mental-disorders&lt;/a> Accessed 28 September 2024&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-08-11T16:43:28.455-04:00"
+                                    jcr:createdBy="SCHAFSM"
+                                    jcr:lastModified="{Date}2023-08-11T16:48:56.484-04:00"
+                                    jcr:lastModifiedBy="SCHAFSM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <container5_copy_copy
+                                    cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container">
+                                    <header
+                                        cq:styleIds="[2]"
+                                        jcr:created="{Date}2023-08-11T16:47:25.462-04:00"
+                                        jcr:createdBy="SCHAFSM"
+                                        jcr:lastModified="{Date}2023-08-11T16:47:55.374-04:00"
+                                        jcr:lastModifiedBy="SCHAFSM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/header/v2/header"
+                                        eyebrow="Related Content"/>
+                                    <cardpagestory
+                                        jcr:created="{Date}2023-08-11T16:47:42.295-04:00"
+                                        jcr:createdBy="SCHAFSM"
+                                        jcr:lastModified="{Date}2023-08-28T14:57:11.256-04:00"
+                                        jcr:lastModifiedBy="chiucx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                        hideImage="false"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/neuroscience"/>
+                                </container5_copy_copy>
+                            </container5>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-09-08T17:12:28.531-04:00"
+        cq:lastModifiedBy="SCHAFSM"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-01-24T17:54:14.543-05:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Reasonable Accommodations"
+        jcr:uuid="6fb73744-abd7-41d9-8471-faa384ec5cf1"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        navTitle="Reasonable Accommodations"
+        pageTitle="Reasonable Accommodations">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2023-01-24T17:54:34.896-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879,1653545847150]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-01-24T17:54:25.312-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Reasonable Accommodations"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <container_1646644969
+                        cq:styleIds="[1653545835982,1653545825689]"
+                        jcr:created="{Date}2023-01-24T17:55:13.475-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-24T17:55:13.475-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2023-01-24T17:55:55.007-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-09-08T17:12:28.529-04:00"
+                            jcr:lastModifiedBy="SCHAFSM"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>AbbVie is committed to working with and providing reasonable accommodations to job applicants with disabilities, including but not limited to, providing access and accommodations to all individuals who are seeking to use our online application resources.&lt;/p>&#xa;&lt;p>For US and Puerto Rico, applicants with a disability who require a reasonable accommodation for any part of the application, interview or hiring process can contact us by sending an email to &lt;a href=&quot;mailto:%20talentacquisition@abbvie.com&quot;>talentacquisition@abbvie.com&lt;/a>.&lt;br>&#xa;&lt;/p>&#xa;&lt;p>In addition, any individual using assistive technology (such as a screen reader, braille reader, etc.) who experiences difficulty with the website should send an email to the above email address.&lt;/p>&#xa;&lt;p>Please note that this email address is intended solely for requesting an accommodation in connection with the application, interview/selection process. Please contact the assigned recruiter or AbbVie’s Talent Acquisition team for any other inquiries you may have.&lt;/p>&#xa;"
+                            textIsRich="true"/>
+                    </container_1646644969>
+                    <separator_copy
+                        cq:styleIds="[1662756502570]"
+                        jcr:created="{Date}2023-01-24T17:36:28.363-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-24T17:36:28.363-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

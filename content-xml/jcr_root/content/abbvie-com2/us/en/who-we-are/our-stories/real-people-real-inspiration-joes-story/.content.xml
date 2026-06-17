@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-29T09:21:01.859-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/oncology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Meet Joe: New Yorker first, cancer patient second. See how stories like Joe’s inspire us to create medicines for people, not just &quot;the patient.&quot;  "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-07-29T09:21:01.839-04:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Real People, Real Inspiration: Joe’s Story"
+        jcr:uuid="a9d868bf-3b5d-4a14-8962-c5a3ce9f54e5"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read story"
+        ctaText="Read story"
+        description="New Yorker first. Cancer patient second."
+        fileReference="/content/dam/abbvie-com2/images/stories/joes-story/joe-ppp-card-image.jpg"
+        hideInNav="true"
+        navTitle="Real People, Real Inspiration: Joe’s Story"
+        ogimage="/content/dam/abbvie-com2/images/stories/joes-story/real-people-real-inspiration-joes-story-hero.jpg"
+        pageTitle="Real People, Real Inspiration: Joe’s Story"
+        publishDate="{Date}2025-07-28T13:57:00.000-05:00"
+        readTime="2"
+        readWatchTimeSel="read-time"
+        title="Meet Joe">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1_copy_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2025-07-28T14:02:54.589-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/stories/joes-story/joes-patient-story-hero.jpg"
+                        dmPresetType="imagePreset"/>
+                    <container2_copy_copy_464039889
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2023-01-24T18:58:51.832-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2025-07-09T09:13:11.141-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Real People, Real Inspiration: Joe’s Story "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-07-09T09:17:44.377-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>A diagnosis could have taken Joe out of the game. Instead, it made him even more determined.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2_copy_copy_464039889>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545829678,1651545825693]"
+                                    jcr:lastModified="{Date}2025-07-09T09:18:41.168-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Meet Joe: Father. Husband. Golfer. Software engineer. "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-07-28T15:15:30.047-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>On weekends? You’ll find him walking 18 holes with his golf buddies. Simmering a pot of traditional Italian Sunday gravy from his grandma’s secret recipe. Or catching live music with his daughter.&lt;/p>&#xd;&#xa;&lt;p>When Joe was diagnosed with a rare blood cancer called chronic lymphocytic leukemia (CLL) in 2008, everything shifted.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“You hear the big C-word and you really think really the worst,” he says.&lt;/p>&#xd;&#xa;&lt;p>Joe was only 45 years old. His kids were young. And he was worried he wouldn’t be around long enough to see them through their elementary school years.&lt;/p>&#xd;&#xa;&lt;p>The next decade was filled with fear — and lots of bloodwork. Joe remained asymptomatic, but his levels were increasing. When his CLL progressed to stage two, his oncologist started treatment.&lt;/p>&#xd;&#xa;&lt;p>“Knowing that there's companies like AbbVie out there that care about patients makes me feel comfortable,” Joe says. “And they make me feel that it's okay to live with this condition.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2025-03-26T11:06:55.077-04:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-03-26T11:06:55.077-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            </container4>
+                            <quote_copy_copy_copy
+                                cq:styleIds="[1000000000040,1000000000000]"
+                                jcr:created="{Date}2023-08-25T16:36:55.059-04:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2025-07-28T15:22:35.982-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Joe"
+                                attributionTitle="Oncology Patient"
+                                fileReference="/content/dam/abbvie-com2/images/stories/joes-story/joe-ppp-card-image.jpg"
+                                quote="CLL is part of my life… but it doesn’t define me."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <container4_copy
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-07-28T15:15:52.990-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>What does define him is everything he’s been able to hold onto — and keep building.&lt;/p>&#xd;&#xa;&lt;p>“I want people to see me as a person, not just a patient,” Joe says.&lt;/p>&#xd;&#xa;&lt;p>His diagnosis is still part of his story — but it’s no longer the part he’s most focused on.&lt;/p>&#xd;&#xa;&lt;p>“I’m a certain age now that I could retire... but I don’t think I will,” he says. “I’m focused on being a father, a grandfather, a tenured worker.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <button
+                                    cq:styleIds="[1659997756584]"
+                                    jcr:created="{Date}2025-07-28T14:04:38.954-04:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-07-28T14:05:33.721-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="See more stories that inspire us"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="See more stories that inspire us."
+                                    linkTarget="_self"
+                                    linkURL="/content/abbvie-com2/us/en/patients"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2025-03-26T11:06:55.077-04:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2025-03-26T11:06:55.077-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy_1261287400
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-23T16:46:55.248-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-11T11:26:03.951-05:00"
+                                    jcr:lastModifiedBy="fusznx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;b>Media inquiries:&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;Email:&amp;nbsp;&lt;a href=&quot;mailto:jaquelin.finley@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4_copy>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <container5_copy
+                                    cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container">
+                                    <container5_copy_1205
+                                        cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                        jcr:lastModified="{Date}2024-05-01T11:52:21.446-04:00"
+                                        jcr:lastModifiedBy="VALENSX5"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                                        <header_1222016147
+                                            cq:styleIds="2"
+                                            jcr:created="{Date}2025-07-09T16:37:41.571-04:00"
+                                            jcr:createdBy="VALENSX5"
+                                            jcr:lastModified="{Date}2025-07-09T16:37:41.571-04:00"
+                                            jcr:lastModifiedBy="VALENSX5"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/header/v2/header"
+                                            eyebrow="Related Content"/>
+                                        <cardpagestory
+                                            cq:styleIds="[1111111111117]"
+                                            jcr:created="{Date}2023-12-20T12:22:09.698-05:00"
+                                            jcr:createdBy="chiucx"
+                                            jcr:lastModified="{Date}2025-07-09T09:49:28.327-04:00"
+                                            jcr:lastModifiedBy="VALENSX5"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                            hideImage="false"
+                                            imageModifiers="resMode=sharp2&amp;op_sharpen=1&amp;qlt=90"
+                                            linkURL="/content/abbvie-com2/us/en/patients"/>
+                                    </container5_copy_1205>
+                                </container5_copy>
+                            </container5>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>
