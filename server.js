@@ -1,8 +1,54 @@
 'use strict';
 
-const express = require('express');
-const path    = require('path');
-const fs      = require('fs');
+const express   = require('express');
+const path      = require('path');
+const fs        = require('fs');
+const multer    = require('multer');
+const { XMLParser } = require('fast-xml-parser');
+
+// ── Migration map (AEM Sites resourceType → EDS block) ───────────────────────
+let migrationMap = { componentMap: {}, layoutResources: [], metaKeys: [], jcrSystemProps: [] };
+try {
+  migrationMap = JSON.parse(fs.readFileSync(path.join(__dirname, 'migration-map.json'), 'utf8'));
+} catch (_) { console.warn('[migration] migration-map.json not found'); }
+
+// ── Path map (AEM → EDS path/asset transformations) ──────────────────────────
+let pathMap = { contentPrefixRules: [], damPrefixRules: [], assetMap: [] };
+try {
+  pathMap = JSON.parse(fs.readFileSync(path.join(__dirname, 'path-map.json'), 'utf8'));
+} catch (_) { console.warn('[paths] path-map.json not found, using identity transform'); }
+
+// Transforms a single AEM path value to its EDS equivalent.
+// DAM paths: apply prefix rule first → look up updated path in assetMap for DM Open API URL → fallback to updated path.
+// Content paths: apply prefix rule → fallback to original.
+function transformPath(value, pm) {
+  if (!pm || typeof value !== 'string' || !value.startsWith('/content/')) return value;
+
+  if (value.startsWith('/content/dam/')) {
+    // 1. Apply DAM prefix rule to get the updated path
+    let updatedPath = value;
+    for (const rule of (pm.damPrefixRules || [])) {
+      if (rule.aemPrefix && value.startsWith(rule.aemPrefix)) {
+        updatedPath = (rule.edsPrefix || '') + value.slice(rule.aemPrefix.length);
+        break;
+      }
+    }
+    // 2. Check asset map (keyed by updated path) for DM Open API URL
+    const assetMap = pm.assetMap || {};
+    const dmUrl = assetMap[updatedPath];
+    return (dmUrl && dmUrl.trim()) ? dmUrl.trim() : updatedPath;
+  }
+
+  // Content paths: prefix rule only
+  for (const rule of (pm.contentPrefixRules || [])) {
+    if (rule.aemPrefix && value.startsWith(rule.aemPrefix)) {
+      return (rule.edsPrefix || '') + value.slice(rule.aemPrefix.length);
+    }
+  }
+  return value;
+}
+
+const xmlUpload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
@@ -306,7 +352,7 @@ function extractJcrProps(node) {
   const props = {};
   for (const [k, v] of Object.entries(node)) {
     if (JCR_SYS_PROPS.has(k) || (v !== null && typeof v === 'object')) continue;
-    props[k] = v;
+    props[k] = transformPath(v, pathMap);
   }
   return props;
 }
@@ -441,6 +487,205 @@ app.post('/api/import-page', async (req, res) => {
     console.error('[import] error:', err.message);
     res.status(502).json({ error: err.message });
   }
+});
+
+// ── JCR XML migration parser ──────────────────────────────────────────────────
+const JCR_XML_PARSER = new XMLParser({
+  ignoreAttributes:    false,
+  attributeNamePrefix: '@',
+  parseAttributeValue: false,   // keep all values as strings
+  trimValues:          true,
+  isArray:             () => false,
+});
+
+const JCR_SYS_SET = new Set(migrationMap.jcrSystemProps || []);
+
+function isMigrationLayout(rt) {
+  if (!rt) return true;
+  if (migrationMap.layoutResources.includes(rt)) return true;
+  const last = rt.split('/').pop().toLowerCase();
+  return last === 'parsys' || last === 'iparsys' || last === 'responsivegrid' ||
+    rt.startsWith('wcm/foundation/') || rt.startsWith('foundation/components/') ||
+    rt.startsWith('core/wcm/');
+}
+
+function extractPropsFromXmlNode(attrs, mapping, pm) {
+  const renames  = mapping?.propRenames  || {};
+  const skipSet  = new Set([...(mapping?.skipProps || []), ...JCR_SYS_SET]);
+  const props = {};
+  for (const [k, v] of Object.entries(attrs)) {
+    const key = k.replace(/^@/, '');  // strip attribute prefix
+    if (skipSet.has(key)) continue;
+    if (key.startsWith('xmlns:')) continue;
+    const targetKey = renames[key] || key;
+    if (v !== '' && v !== null && v !== undefined) props[targetKey] = transformPath(v, pm);
+  }
+  return props;
+}
+
+function walkXmlNode(node, ordered, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 20) return;
+  for (const [key, child] of Object.entries(node)) {
+    if (key.startsWith('@') || key === '#text') continue;
+    if (!child || typeof child !== 'object') continue;
+    const rt = (child['@sling:resourceType'] || '').trim();
+    if (!rt || isMigrationLayout(rt)) {
+      // skip this node but descend into its children
+      walkXmlNode(child, ordered, depth + 1);
+      continue;
+    }
+    const mapping = migrationMap.componentMap[rt];
+    const type    = mapping?.edsType || rt.split('/').pop();
+    const props   = extractPropsFromXmlNode(child, mapping, pathMap);
+
+    // If this component should render its main content as a child block
+    if (mapping?.childType && mapping?.childProp && props[mapping.childProp] !== undefined) {
+      const childVal = props[mapping.childProp];
+      delete props[mapping.childProp];
+      ordered.push({
+        type, resourceType: rt, props,
+        children: [{ type: mapping.childType, props: { [mapping.childProp]: childVal }, children: [] }]
+      });
+    } else {
+      ordered.push({ type, resourceType: rt, props, children: [] });
+    }
+    walkXmlNode(child, ordered, depth + 1);
+  }
+}
+
+// Collect every sling:resourceType found in the tree (for diagnostics)
+function collectAllResourceTypes(node, found = new Set(), depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 30) return found;
+  for (const [key, child] of Object.entries(node)) {
+    if (key.startsWith('@') || key === '#text') continue;
+    if (!child || typeof child !== 'object') continue;
+    // Try both possible attribute key forms
+    const rt = child['@sling:resourceType'] || child['sling:resourceType'] || '';
+    if (rt) found.add(rt.trim());
+    collectAllResourceTypes(child, found, depth + 1);
+  }
+  return found;
+}
+
+app.post('/api/parse-jcr-xml', xmlUpload.single('jcrFile'), (req, res) => {
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
+  try {
+    const xml  = req.file.buffer.toString('utf8');
+    const tree = JCR_XML_PARSER.parse(xml);
+
+    // Log top-level keys to help diagnose structure issues
+    const topKeys = Object.keys(tree);
+    console.log('[parse-jcr-xml] top-level keys:', topKeys);
+
+    // Handle both jcr:root wrapping cq:Page, and bare jcr:content
+    const jcrRoot    = tree['jcr:root'] || tree;
+    const jcrContent = jcrRoot['jcr:content'] || jcrRoot;
+
+    // Log jcr:content keys
+    const contentKeys = Object.keys(jcrContent);
+    console.log('[parse-jcr-xml] jcr:content keys:', contentKeys.slice(0, 30));
+
+    // Extract page-level metadata
+    const meta = {};
+    const metaKeySet = new Set(migrationMap.metaKeys || []);
+    for (const [k, v] of Object.entries(jcrContent)) {
+      if (!k.startsWith('@')) continue;
+      const key = k.replace(/^@/, '');
+      if (metaKeySet.has(key) && v) meta[key] = v;
+    }
+
+    // Walk the content tree
+    const ordered = [];
+    walkXmlNode(jcrContent, ordered);
+
+    if (ordered.length === 0) {
+      // Collect all resource types found for diagnostics
+      const allRt = [...collectAllResourceTypes(jcrContent)].sort();
+      console.log('[parse-jcr-xml] all resourceTypes found:', allRt);
+      return res.status(422).json({
+        error: 'No migratable components found.',
+        hint:  'See allResourceTypes below — add any content types to migration-map.json',
+        allResourceTypes: allRt,
+        topLevelKeys: contentKeys.slice(0, 40),
+      });
+    }
+
+    // Build summary (grouped by type with count)
+    const typeIndex = {};
+    for (const blk of ordered) {
+      if (!typeIndex[blk.type]) typeIndex[blk.type] = { type: blk.type, resourceType: blk.resourceType, count: 0, blocks: [] };
+      typeIndex[blk.type].count++;
+      typeIndex[blk.type].blocks.push({ props: blk.props, children: blk.children });
+    }
+    const summary = Object.values(typeIndex).sort((a, b) => b.count - a.count);
+
+    res.json({ ok: true, sourceType: 'sites-xml', meta, ordered, summary });
+  } catch (err) {
+    console.error('[parse-jcr-xml] error:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Path map endpoints ────────────────────────────────────────────────────────
+app.get('/api/path-map', (_req, res) => res.json(pathMap));
+
+app.post('/api/path-map', express.json(), (req, res) => {
+  try {
+    const updated = {
+      contentPrefixRules: req.body.contentPrefixRules || [],
+      damPrefixRules:     req.body.damPrefixRules     || [],
+      assetMap:           pathMap.assetMap             || {}, // preserve existing asset map (flat object)
+    };
+    fs.writeFileSync(path.join(__dirname, 'path-map.json'), JSON.stringify(updated, null, 2), 'utf8');
+    Object.assign(pathMap, updated);
+    res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+// CSV format (from asset-map export):
+//   path, uuid, scene7Name, scene7File, damStatus, openApiUrl
+//   col 0: path       — updated DAM path (/content/dam/corporate/abbvie-com2/...)
+//   col 5: openApiUrl — DM Open API URL (https://...). If it's a /content/ path or blank, treated as no DM URL.
+// Also accepts a simple 2-column format: path, openApiUrl
+app.post('/api/path-map/import-csv', xmlUpload.single('csvFile'), (req, res) => {
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
+  try {
+    const lines = req.file.buffer.toString('utf8')
+      .split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+    // Skip header row if first cell looks like a column name
+    const firstLower = (lines[0] || '').toLowerCase();
+    const start = (firstLower.startsWith('path') || firstLower.startsWith('newdampath') || firstLower.startsWith('dam')) ? 1 : 0;
+    const existing = (pathMap.assetMap && !Array.isArray(pathMap.assetMap)) ? { ...pathMap.assetMap } : {};
+    let imported = 0;
+    let withDmUrl = 0;
+    for (let i = start; i < lines.length; i++) {
+      const cols = lines[i].split(',').map(c => c.trim());
+      const damPath = cols[0] || '';
+      if (!damPath || !damPath.startsWith('/')) continue;
+      // Prefer col 5 (openApiUrl from 6-col export), fall back to col 1 (simple 2-col format)
+      const rawUrl = cols.length >= 6 ? (cols[5] || '') : (cols[1] || '');
+      // Only use as DM URL if it's a real https URL (not a /content/ fallback path)
+      const dmUrl = rawUrl.startsWith('https://') ? rawUrl : '';
+      existing[damPath] = dmUrl;
+      if (dmUrl) withDmUrl++;
+      imported++;
+    }
+    pathMap.assetMap = existing;
+    fs.writeFileSync(path.join(__dirname, 'path-map.json'), JSON.stringify(pathMap, null, 2), 'utf8');
+    res.json({ ok: true, imported, withDmUrl, total: Object.keys(existing).length });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+// ── Migration map endpoint (served to client for auto-suggest) ────────────────
+app.get('/api/migration-map', (_req, res) => res.json(migrationMap));
+
+app.post('/api/migration-map', express.json(), (req, res) => {
+  try {
+    const existing = JSON.parse(fs.readFileSync(path.join(__dirname, 'migration-map.json'), 'utf8'));
+    existing.componentMap = req.body.componentMap || existing.componentMap;
+    fs.writeFileSync(path.join(__dirname, 'migration-map.json'), JSON.stringify(existing, null, 2), 'utf8');
+    res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: err.message }); }
 });
 
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));

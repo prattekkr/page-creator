@@ -2,23 +2,70 @@
 
 // ── State ────────────────────────────────────────────────────────────────────
 const S = {
-  config:      null,   // { defs, modelMap, filterMap, compMap }
-  conn:        { aemHost: '', username: '', password: '', parentPath: '', pageName: '', ueOrg: 'abbviecommercial', ok: false },
-  meta:        {},     // page metadata values (jcr:title, navTitle, …)
-  sections:    [],     // [{ id, type, props, blocks: [{ id, type, props, children: [] }] }]
-  collapsed:   new Set(), // secIds that are collapsed
-  sel:         null,   // { secId, blkId?, childId? } — selected item
-  modal:       null,   // 'settings' | 'block-picker' | 'preview'
-  pickCtx:     null,   // { secId, blkId? } — where to add picked item
-  result:      null,
-  creating:    false,
-  saveTplSecId: null,
-  paletteTab:  'sections',  // 'components' | 'sections'
-  sectionsLib: [],     // predefined sections loaded from /api/sections
+  config:         null,   // { defs, modelMap, filterMap, compMap }
+  migrationMap:   null,   // loaded from /api/migration-map
+  pathMap:        null,   // loaded from /api/path-map
+  conn:           { aemHost: '', username: '', password: '', parentPath: '', pageName: '', ueOrg: 'abbviecommercial', ok: false },
+  meta:           {},     // page metadata values (jcr:title, navTitle, …)
+  sections:       [],     // [{ id, type, props, blocks: [{ id, type, props, children: [] }] }]
+  collapsed:      new Set(), // secIds that are collapsed
+  sel:            null,   // { secId, blkId?, childId? } — selected item
+  modal:          null,   // 'settings' | 'block-picker' | 'preview'
+  pickCtx:        null,   // { secId, blkId? } — where to add picked item
+  result:         null,
+  creating:       false,
+  saveTplSecId:   null,
+  paletteTab:     'sections',  // 'components' | 'sections'
+  sectionsLib:    [],     // predefined sections loaded from /api/sections
 };
 
 let _uid = 0;
 const uid = () => `id_${++_uid}`;
+
+let _settingsTab = 'connection';
+let _mappingExpanded = null; // currently expanded resourceType string
+let _view = 'canvas'; // 'canvas' | 'settings'
+
+// ── Canvas persistence ────────────────────────────────────────────────────────
+const CANVAS_KEY = 'aem_canvas_draft';
+
+function saveCanvas() {
+  try {
+    localStorage.setItem(CANVAS_KEY, JSON.stringify({
+      sections:  S.sections,
+      meta:      S.meta,
+      collapsed: [...S.collapsed],
+    }));
+  } catch (_) {}
+}
+
+function loadCanvas() {
+  try {
+    const raw = localStorage.getItem(CANVAS_KEY);
+    if (!raw) return false;
+    const { sections, meta, collapsed } = JSON.parse(raw);
+    if (Array.isArray(sections) && sections.length > 0) {
+      S.sections  = sections;
+      S.meta      = meta || {};
+      S.collapsed = new Set(collapsed || []);
+      // keep _uid ahead of any restored ids
+      sections.forEach(function bump(sec) {
+        const n = parseInt((sec.id || '').replace('id_', ''), 10);
+        if (n > _uid) _uid = n;
+        (sec.blocks || []).forEach(b => {
+          const nb = parseInt((b.id || '').replace('id_', ''), 10);
+          if (nb > _uid) _uid = nb;
+          (b.children || []).forEach(c => {
+            const nc = parseInt((c.id || '').replace('id_', ''), 10);
+            if (nc > _uid) _uid = nc;
+          });
+        });
+      });
+      return true;
+    }
+  } catch (_) {}
+  return false;
+}
 
 // ── Boot ─────────────────────────────────────────────────────────────────────
 (async () => {
@@ -27,15 +74,24 @@ const uid = () => `id_${++_uid}`;
     const saved = localStorage.getItem('aem_conn');
     if (saved) Object.assign(S.conn, JSON.parse(saved));
   } catch (_) {}
+  const hasDraft = loadCanvas();
 
-  const [configRes, sectionsRes] = await Promise.all([fetch('/api/config'), fetch('/api/sections')]);
-  if (configRes.ok)   S.config      = await configRes.json();
-  if (sectionsRes.ok) S.sectionsLib = await sectionsRes.json();
+  const [configRes, sectionsRes, migrRes, pathMapRes] = await Promise.all([
+    fetch('/api/config'), fetch('/api/sections'), fetch('/api/migration-map'), fetch('/api/path-map')
+  ]);
+  if (configRes.ok)    S.config       = await configRes.json();
+  if (sectionsRes.ok)  S.sectionsLib  = await sectionsRes.json();
+  if (migrRes.ok)      S.migrationMap = await migrRes.json();
+  if (pathMapRes.ok)   S.pathMap      = await pathMapRes.json();
+
+  if (hasDraft) S.sel = S.sections.length > 0 ? { secId: S.sections[0].id } : null;
+  S._draftRestored = hasDraft;
   render();
 })();
 
 // ── Render ───────────────────────────────────────────────────────────────────
 function render() {
+  saveCanvas();
   document.getElementById('root').innerHTML = html();
   bind();
 }
@@ -43,28 +99,42 @@ function render() {
 function html() {
   return `
     ${S.result ? resultOverlayHtml() : ''}
-    ${S.modal === 'settings'      ? settingsModalHtml()    : ''}
-    ${S.modal === 'block-picker'  ? blockPickerModalHtml() : ''}
-    ${S.modal === 'save-template' ? saveTemplateModalHtml() : ''}
-    ${S.modal === 'bundle-save'   ? bundleSaveModalHtml()  : ''}
-    <div class="topbar">
-      <h1>⚡ AEM Page Builder</h1>
-      ${S.conn.pageName
-        ? `<span class="page-slug">${x(S.conn.parentPath)}/<strong>${x(S.conn.pageName)}</strong></span>`
-        : `<span class="page-slug" style="opacity:.5">no page name set</span>`}
-      <span class="conn-badge ${S.conn.ok ? 'ok' : 'idle'}" style="margin-left:4px">
-        ${S.conn.ok ? '✓ Connected' : '○ Not tested'}
-      </span>
-      <button class="btn btn-ghost btn-sm" style="color:#fff;border-color:rgba(255,255,255,.5)" id="btn-settings">⚙ Settings</button>
-      <button class="btn btn-primary btn-sm" id="btn-create" ${S.creating ? 'disabled' : ''}>
-        ${S.creating ? '<span class="spinner"></span> Creating…' : '▶ Create Page'}
-      </button>
-    </div>
-    <div class="workspace">
+    ${S.modal === 'block-picker'      ? blockPickerModalHtml()     : ''}
+    ${S.modal === 'save-template'     ? saveTemplateModalHtml()    : ''}
+    ${S.modal === 'bundle-save'       ? bundleSaveModalHtml()      : ''}
+    ${topbarHtml()}
+    ${S._draftRestored ? `<div class="draft-banner" id="draft-banner">
+      Draft restored — ${S.sections.length} section${S.sections.length !== 1 ? 's' : ''} reloaded from your last session.
+      <button class="draft-dismiss" id="btn-dismiss-draft">✕</button>
+    </div>` : ''}
+    ${S._migrResult ? `<div class="draft-banner migr-banner">
+      ✓ Filled <strong>${S._migrResult.filled} block${S._migrResult.filled !== 1 ? 's' : ''}</strong> from <em>${x(S._migrResult.fileName)}</em>${S._migrResult.skipped > 0 ? ` — ${S._migrResult.skipped} skipped (no XML match)` : ''}. Review the canvas then click Create.
+      <button class="draft-dismiss" id="btn-dismiss-migr">✕</button>
+    </div>` : ''}
+<div class="workspace">
       ${paletteHtml()}
-      ${canvasHtml()}
-      ${propsHtml()}
+      ${_view === 'canvas' ? canvasHtml() + propsHtml() : settingsViewHtml()}
     </div>`;
+}
+
+function topbarHtml() {
+  return `<div class="topbar">
+    <h1>⚡ AEM Page Builder</h1>
+    <div class="view-tabs">
+      <button class="vtab ${_view === 'canvas' ? 'vtab-active' : ''}" id="vtab-canvas">Canvas</button>
+      <button class="vtab ${_view === 'settings' ? 'vtab-active' : ''}" id="vtab-settings">⚙ Settings</button>
+    </div>
+    ${S.conn.pageName
+      ? `<span class="page-slug">${x(S.conn.parentPath)}/<strong>${x(S.conn.pageName)}</strong></span>`
+      : `<span class="page-slug" style="opacity:.5">no page name set</span>`}
+    <span class="conn-badge ${S.conn.ok ? 'ok' : 'idle'}" style="margin-left:4px">
+      ${S.conn.ok ? '✓ Connected' : '○ Not tested'}
+    </span>
+    ${S.sections.length > 0 ? `<button class="btn btn-ghost btn-sm draft-clear-btn" id="btn-clear-draft" title="Discard all sections">✕ Clear</button>` : ''}
+    <button class="btn btn-primary btn-sm" id="btn-create" ${S.creating ? 'disabled' : ''}>
+      ${S.creating ? '<span class="spinner"></span> Creating…' : '▶ Create Page'}
+    </button>
+  </div>`;
 }
 
 // ── Palette ───────────────────────────────────────────────────────────────────
@@ -354,7 +424,7 @@ function blockChipHtml(blk, sec, bi) {
 
   const childrenHtml = hasChildren ? `
     <div class="block-children">
-      ${(blk.children || []).map((ch, ci) => childChipHtml(ch, blk, ci)).join('')}
+      ${(blk.children || []).map((ch, ci) => childChipHtml(ch, blk, sec, ci)).join('')}
       <button class="add-child-btn" data-pick-child="${blk.id}" data-sec="${sec.id}">${addChildLabel}</button>
     </div>` : '';
 
@@ -373,13 +443,29 @@ function blockChipHtml(blk, sec, bi) {
   </div>`;
 }
 
-function childChipHtml(ch, blk, ci) {
+function childChipHtml(ch, blk, sec, ci) {
   const isSel = S.sel?.childId === ch.id;
   const label = S.config?.compMap?.[ch.type]?.title || ch.type;
   const hint  = getPropHint(ch);
-  return `<div class="child-chip ${isSel ? 'selected' : ''}" data-sel-child="${ch.id}" data-blk="${blk.id}">
-    <span class="cc-label">${x(label)}${hint ? ` — <em style="font-weight:400;color:var(--muted)">${x(hint)}</em>` : ''}</span>
-    <button class="icon-btn" data-del-child="${ch.id}" data-blk="${blk.id}">×</button>
+  const allowedSub = S.config?.filterMap?.[ch.type] || [];
+  const subChildrenHtml = allowedSub.length > 0 ? `
+    <div class="block-children" style="margin-left:36px">
+      ${(ch.children || []).map(sub => {
+        const subLabel = S.config?.compMap?.[sub.type]?.title || sub.type;
+        const subHint  = getPropHint(sub);
+        return `<div class="child-chip" data-sel-child="${sub.id}" data-blk="${ch.id}">
+          <span class="cc-label">${x(subLabel)}${subHint ? ` — <em style="font-weight:400;color:var(--muted)">${x(subHint)}</em>` : ''}</span>
+          <button class="icon-btn" data-del-child="${sub.id}" data-blk="${ch.id}">×</button>
+        </div>`;
+      }).join('')}
+      <button class="add-child-btn" data-pick-child="${ch.id}" data-sec="${sec.id}">+ Add item</button>
+    </div>` : '';
+  return `<div>
+    <div class="child-chip ${isSel ? 'selected' : ''}" data-sel-child="${ch.id}" data-blk="${blk.id}">
+      <span class="cc-label">${x(label)}${hint ? ` — <em style="font-weight:400;color:var(--muted)">${x(hint)}</em>` : ''}</span>
+      <button class="icon-btn" data-del-child="${ch.id}" data-blk="${blk.id}">×</button>
+    </div>
+    ${subChildrenHtml}
   </div>`;
 }
 
@@ -416,14 +502,28 @@ function propsHtml() {
     </div>
     <div class="props-scroll">
       ${formHtml || `<div class="props-empty">No editable fields for this component.</div>`}
-      ${S.sel.blkId && !S.sel.childId ? `
-        <div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--border)">
+      ${S.sel.blkId && !S.sel.childId ? (() => {
+        const allowedIds = S.config?.filterMap?.[item.type] || [];
+        const addItemBtn = allowedIds.length > 0
+          ? `<button class="btn btn-ghost btn-sm" style="margin-bottom:8px"
+               data-pick-child="${item.id}" data-sec="${S.sel.secId}">+ Add Item</button>`
+          : '';
+        return `<div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--border)">
+          ${addItemBtn}
           <button class="btn btn-danger btn-sm" data-del-blk="${item.id}" data-sec="${S.sel.secId}">Remove block</button>
-        </div>` : ''}
-      ${S.sel.childId ? `
-        <div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--border)">
+        </div>`;
+      })() : ''}
+      ${S.sel.childId ? (() => {
+        const childAllowed = S.config?.filterMap?.[item?.type] || [];
+        const childAddBtn = childAllowed.length > 0
+          ? `<button class="btn btn-ghost btn-sm" style="margin-bottom:8px"
+               data-pick-child="${item.id}" data-sec="${S.sel.secId}">+ Add Item</button>`
+          : '';
+        return `<div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--border)">
+          ${childAddBtn}
           <button class="btn btn-danger btn-sm" data-del-child="${item.id}" data-blk="${S.sel.blkId}">Remove item</button>
-        </div>` : ''}
+        </div>`;
+      })() : ''}
     </div>
   </aside>`;
 }
@@ -520,64 +620,84 @@ function fieldHtml(f, val, itemId) {
   }
 }
 
-// ── Settings modal ────────────────────────────────────────────────────────────
-function settingsModalHtml() {
-  const { aemHost, username, password, parentPath, pageName, ok } = S.conn;
-  return `<div class="modal-overlay" id="modal-overlay">
-    <div class="modal">
-      <div class="modal-header">
-        <h2>⚙ AEM Settings</h2>
-        <span class="conn-badge ${ok ? 'ok' : 'idle'}" style="margin-right:8px">${ok ? '✓ Connected' : '○ Not tested'}</span>
-        <button class="modal-close" id="modal-close">✕</button>
+// ── Settings view (full-panel) ────────────────────────────────────────────────
+function settingsViewHtml() {
+  return `<div class="settings-view">
+    <div class="sv-tabs">
+      <button class="sv-tab ${_settingsTab === 'connection' ? 'sv-tab-active' : ''}" id="stab-settings">Connection</button>
+      <button class="sv-tab ${_settingsTab === 'mappings'   ? 'sv-tab-active' : ''}" id="stab-mappings">Mappings</button>
+      <button class="sv-tab ${_settingsTab === 'paths'      ? 'sv-tab-active' : ''}" id="stab-paths">Paths</button>
+    </div>
+    <div class="sv-body">
+      ${_settingsTab === 'connection' ? connectionTabHtml()
+      : _settingsTab === 'mappings'  ? mappingTabHtml()
+      :                                pathsTabHtml()}
+    </div>
+  </div>`;
+}
+
+function connectionTabHtml() {
+  const { aemHost, username, password, parentPath, pageName } = S.conn;
+  return `<div class="conn-grid">
+    <div class="conn-card">
+      <div class="sv-section-title">AEM Connection</div>
+      <div id="conn-alert"></div>
+      <div class="settings-field">
+        <label>AEM Author Host</label>
+        <input id="s-host" type="text" value="${x(aemHost)}" placeholder="https://author-p12345-e67890.adobeaemcloud.com"/>
       </div>
-      <div class="modal-body">
-        <div id="conn-alert"></div>
+      <div class="settings-row">
         <div class="settings-field">
-          <label>AEM Author Host</label>
-          <input id="s-host" type="text" value="${x(aemHost)}" placeholder="https://author-p12345-e67890.adobeaemcloud.com"/>
-        </div>
-        <div class="settings-row">
-          <div class="settings-field">
-            <label>Username</label>
-            <input id="s-user" type="text" value="${x(username)}" placeholder="admin"/>
-          </div>
-          <div class="settings-field">
-            <label>Password</label>
-            <input id="s-pass" type="password" value="${x(password)}" placeholder="admin"/>
-          </div>
+          <label>Username</label>
+          <input id="s-user" type="text" value="${x(username)}" placeholder="admin"/>
         </div>
         <div class="settings-field">
-          <label>Parent Path</label>
-          <input id="s-parent" type="text" value="${x(parentPath)}" placeholder="/content/my-site/en/section"/>
+          <label>Password</label>
+          <input id="s-pass" type="password" value="${x(password)}" placeholder="admin"/>
         </div>
-        <div class="settings-field">
-          <label>UE Organisation <span style="font-weight:400;color:var(--muted)">(IMS tenant, e.g. abbviecommercial)</span></label>
-          <input id="s-ueorg" type="text" value="${x(S.conn.ueOrg)}" placeholder="abbviecommercial"/>
-        </div>
-        <div class="settings-field">
-          <label>New Page Name (slug)</label>
-          <input id="s-name" type="text" value="${x(pageName)}" placeholder="my-new-page"/>
-        </div>
-        <div id="page-meta-fields">${metaFieldsHtml()}</div>
-        <hr style="margin:14px 0;border-color:var(--border)"/>
-        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--brand);margin-bottom:10px">Import existing page</div>
-        <div class="settings-field" style="margin-bottom:4px">
-          <label>Page Path <span style="font-weight:400;color:var(--muted)">(replaces current canvas)</span></label>
-          <div style="display:flex;gap:8px;align-items:center">
-            <input id="s-import-path" type="text" style="flex:1" placeholder="/content/abbvie-nextgen-eds/…/my-page"/>
-            <button class="btn btn-ghost btn-sm" id="btn-import-page" style="white-space:nowrap">⬇ Load</button>
-            <button class="btn btn-ghost btn-sm" id="btn-diagnose-page" style="white-space:nowrap;color:var(--muted)">🔍 Diagnose</button>
-          </div>
-        </div>
-        <div id="import-alert"></div>
-        <div id="diagnose-out" style="display:none;margin-top:8px;background:#f8f9fa;border:1px solid var(--border);border-radius:4px;padding:10px;font-size:11px;font-family:monospace;white-space:pre-wrap;max-height:240px;overflow-y:auto;color:#1a1a2e;"></div>
       </div>
-      <div class="modal-footer">
+      <div class="settings-field">
+        <label>Parent Path</label>
+        <input id="s-parent" type="text" value="${x(parentPath)}" placeholder="/content/my-site/en/section"/>
+      </div>
+      <div class="settings-field">
+        <label>UE Organisation</label>
+        <input id="s-ueorg" type="text" value="${x(S.conn.ueOrg)}" placeholder="abbviecommercial"/>
+      </div>
+      <div class="settings-field">
+        <label>New Page Name (slug)</label>
+        <input id="s-name" type="text" value="${x(pageName)}" placeholder="my-new-page"/>
+      </div>
+      <div class="sv-card-footer">
         <button class="btn btn-ghost btn-sm" id="btn-test-conn">Test Connection</button>
         <button class="btn btn-primary btn-sm" id="btn-save-settings">Save</button>
       </div>
     </div>
-  </div>`;
+    <div class="conn-card">
+      <div class="sv-section-title">Import Existing Page</div>
+      <div class="settings-field" style="margin-bottom:4px">
+        <label>Page Path <span style="font-weight:400;color:var(--muted)">(replaces current canvas)</span></label>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input id="s-import-path" type="text" style="flex:1" placeholder="/content/abbvie-nextgen-eds/…/my-page"/>
+          <button class="btn btn-ghost btn-sm" id="btn-import-page" style="white-space:nowrap">⬇ Load</button>
+          <button class="btn btn-ghost btn-sm" id="btn-diagnose-page" style="white-space:nowrap;color:var(--muted)">🔍 Diagnose</button>
+        </div>
+      </div>
+      <div id="import-alert"></div>
+      <div id="diagnose-out" style="display:none;margin-top:8px;background:#f8f9fa;border:1px solid var(--border);border-radius:4px;padding:10px;font-size:11px;font-family:monospace;white-space:pre-wrap;max-height:200px;overflow-y:auto;color:#1a1a2e;"></div>
+      <div class="sv-section-title" style="margin-top:16px">Fill from AEM Sites XML</div>
+      <div style="font-size:.75rem;color:var(--muted);margin-bottom:10px">Build your canvas structure first, then upload a JCR XML from CRX Package Manager. Props fill into matching blocks by type.</div>
+      <div class="settings-field" style="margin-bottom:4px">
+        <label>JCR XML file</label>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input id="s-migrate-file" type="file" accept=".xml" style="flex:1;font-size:.8rem"/>
+          <button class="btn btn-sm" id="btn-fill-xml" style="white-space:nowrap;background:#0d9488;color:#fff;border-color:#0d9488">⬆ Fill</button>
+        </div>
+      </div>
+      <div id="migrate-alert"></div>
+    </div>
+  </div>
+  ${metaFieldsHtml()}`;
 }
 
 function metaFieldsHtml() {
@@ -596,6 +716,101 @@ function metaFieldsHtml() {
         <input type="text" data-meta="${f.name}" value="${x(String(val))}" placeholder="${x(f.description || '')}"/>
       </div>`;
     }).join('')}`;
+}
+
+// ── Mapping tab ───────────────────────────────────────────────────────────────
+function mappingTabHtml() {
+  const cmap = S.migrationMap?.componentMap || {};
+  const allBlockIds = Object.keys(S.config?.compMap || {}).sort();
+
+  const rows = Object.entries(cmap).map(([rt, mapping]) => {
+    const short = rt.split('/').pop();
+    const edsType = mapping.edsType || '';
+    const renames = mapping.propRenames || {};
+    const isExp = _mappingExpanded === rt;
+
+    const renameRows = Object.entries(renames).map(([src, dst]) => `
+      <div class="mr-rename">
+        <input class="mr-src-inp" value="${x(src)}" data-rt="${x(rt)}" data-oldsrc="${x(src)}" placeholder="AEM prop"/>
+        <span class="mr-arr">→</span>
+        <input class="mr-dst-inp" value="${x(dst)}" data-rt="${x(rt)}" data-src="${x(src)}" placeholder="EDS prop"/>
+        <button class="icon-btn mr-del-rename" data-rt="${x(rt)}" data-src="${x(src)}">×</button>
+      </div>`).join('');
+
+    const typeOpts = `<option value="">— skip —</option>` +
+      allBlockIds.map(id => `<option value="${x(id)}" ${id === edsType ? 'selected' : ''}>${x(id)}</option>`).join('');
+
+    return `<div class="mapping-row">
+      <div class="mr-header">
+        <div class="mr-names">
+          <span class="mr-short">${x(short)}</span>
+          <span class="mr-full">${x(rt)}</span>
+        </div>
+        <span class="mr-chevron">→</span>
+        <select class="sm-select mr-type-sel" data-rt="${x(rt)}">${typeOpts}</select>
+        <button class="icon-btn mr-expand-btn" data-expand-rt="${x(rt)}">${isExp ? '▲' : '▼'} props</button>
+      </div>
+      ${isExp ? `<div class="mr-body">
+        <div class="mr-renames">${renameRows}</div>
+        <button class="btn btn-ghost btn-sm mr-add-rename" data-rt="${x(rt)}" style="margin-top:4px;font-size:.72rem">+ Add rename</button>
+      </div>` : ''}
+    </div>`;
+  }).join('');
+
+  return `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+    <span style="font-size:.75rem;color:var(--muted)">${Object.keys(cmap).length} component mappings</span>
+    <button class="btn btn-primary btn-sm" id="btn-save-mapping">Save Mappings</button>
+  </div>
+  <div class="mapping-list">${rows || '<div class="props-empty" style="padding:20px;text-align:center">No migration map loaded.</div>'}</div>`;
+}
+
+// ── Paths tab ─────────────────────────────────────────────────────────────────
+function pathsTabHtml() {
+  const pm = S.pathMap || { contentPrefixRules: [], damPrefixRules: [], assetMap: [] };
+  const ruleRows = (rules, section) => rules.map((r, i) => `
+    <tr>
+      <td><input class="pm-aem-inp" data-section="${section}" data-idx="${i}" value="${x(r.aemPrefix || '')}" placeholder="/content/abbvie-com2/us/en"/></td>
+      <td><input class="pm-eds-inp" data-section="${section}" data-idx="${i}" value="${x(r.edsPrefix || '')}" placeholder="/us/en"/></td>
+      <td style="width:32px;text-align:center"><button class="icon-btn pm-del-rule" data-section="${section}" data-idx="${i}" title="Remove">×</button></td>
+    </tr>`).join('');
+
+  return `<div class="paths-tab">
+    <div class="sv-section-title">Content Path Rules</div>
+    <div style="font-size:.74rem;color:var(--muted);margin-bottom:8px">Rewrite page/link paths that start with the AEM prefix. First match wins.</div>
+    <table class="pm-table">
+      <thead><tr><th>AEM prefix</th><th>EDS prefix</th><th></th></tr></thead>
+      <tbody id="pm-content-rows">${ruleRows(pm.contentPrefixRules || [], 'contentPrefixRules')}</tbody>
+    </table>
+    <button class="btn btn-ghost btn-sm" id="btn-add-content-rule" style="margin-top:4px">+ Add rule</button>
+
+    <div class="sv-section-title" style="margin-top:20px">DAM Path Rules</div>
+    <div style="font-size:.74rem;color:var(--muted);margin-bottom:8px">Rewrite asset paths under <code>/content/dam/</code>. DM Open API URLs in the asset map take priority over these rules.</div>
+    <table class="pm-table">
+      <thead><tr><th>AEM prefix</th><th>EDS prefix</th><th></th></tr></thead>
+      <tbody id="pm-dam-rows">${ruleRows(pm.damPrefixRules || [], 'damPrefixRules')}</tbody>
+    </table>
+    <button class="btn btn-ghost btn-sm" id="btn-add-dam-rule" style="margin-top:4px">+ Add rule</button>
+
+    <div class="sv-section-title" style="margin-top:20px">Asset Mappings (DM Open API)</div>
+    <div style="font-size:.74rem;color:var(--muted);margin-bottom:8px">
+      Import your asset-map CSV (<code>path, uuid, scene7Name, scene7File, damStatus, openApiUrl</code>).
+      Assets with a real <code>https://</code> Open API URL use it; others fall back to the updated DAM path.
+      ${Object.keys(pm.assetMap || {}).length
+        ? `<strong>${Object.keys(pm.assetMap).length} asset${Object.keys(pm.assetMap).length !== 1 ? 's' : ''} loaded.</strong>`
+        : 'No assets loaded yet.'}
+    </div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <input id="pm-csv-file" type="file" accept=".csv,.txt" style="font-size:.8rem;flex:1;min-width:0"/>
+      <button class="btn btn-ghost btn-sm" id="btn-import-csv" style="white-space:nowrap">⬆ Import CSV</button>
+      ${Object.keys(pm.assetMap || {}).length ? `<button class="btn btn-ghost btn-sm" id="btn-clear-asset-map" style="color:var(--danger);white-space:nowrap">Clear all</button>` : ''}
+    </div>
+    <div id="pm-csv-alert" style="margin-top:6px"></div>
+
+    <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+      <button class="btn btn-primary btn-sm" id="btn-save-paths">Save Path Rules</button>
+      <div id="pm-save-alert" style="font-size:.8rem"></div>
+    </div>
+  </div>`;
 }
 
 // ── Block picker modal ────────────────────────────────────────────────────────
@@ -772,6 +987,66 @@ async function dodiagnosePage() {
   }
 }
 
+// ── Fill canvas blocks from uploaded JCR XML ─────────────────────────────────
+async function doFillFromXml() {
+  const fileInput = document.getElementById('s-migrate-file');
+  const alertEl   = document.getElementById('migrate-alert');
+  const file = fileInput?.files?.[0];
+  if (!file) { if (alertEl) alertEl.innerHTML = `<div class="alert alert-error">Select a JCR XML file first.</div>`; return; }
+  if (S.sections.length === 0) { if (alertEl) alertEl.innerHTML = `<div class="alert alert-error">Build your canvas structure first, then fill from XML.</div>`; return; }
+
+  const fd = new FormData();
+  fd.append('jcrFile', file);
+  if (alertEl) alertEl.innerHTML = `<div class="alert alert-info"><span class="spinner spinner-dark"></span> Parsing XML…</div>`;
+  try {
+    const r    = await fetch('/api/parse-jcr-xml', { method: 'POST', body: fd });
+    const data = await r.json();
+    if (!r.ok) {
+      let msg = `<div class="alert alert-error"><strong>${x(data.error || 'Parse failed')}</strong>`;
+      if (data.allResourceTypes?.length) {
+        msg += `<br><br><strong>resourceTypes found in this XML</strong> (add content ones to migration-map.json):<br>`;
+        msg += `<code style="font-size:.7rem;line-height:1.8">${data.allResourceTypes.map(x).join('<br>')}</code>`;
+      }
+      msg += `</div>`;
+      if (alertEl) alertEl.innerHTML = msg;
+      return;
+    }
+
+    // Build pool: EDS block type → [{ props, children }, ...]  (type already mapped by server)
+    const pool = {};
+    for (const comp of (data.ordered || [])) {
+      (pool[comp.type] = pool[comp.type] || []).push({ props: comp.props, children: comp.children || [] });
+    }
+
+    // Walk canvas and fill blocks by type (sequential)
+    let filled = 0, skipped = 0;
+    function fillBlock(canvasBlk) {
+      const queue = pool[canvasBlk.type];
+      if (!queue?.length) { skipped++; return; }
+      const src = queue.shift();
+      Object.assign(canvasBlk.props, src.props);
+      if (src.children.length > 0) {
+        canvasBlk.children = src.children.map(ch => ({ ...ch, id: uid(), children: [] }));
+      }
+      filled++;
+    }
+    for (const sec of S.sections) {
+      for (const blk of (sec.blocks || [])) {
+        fillBlock(blk);
+        for (const child of (blk.children || [])) fillBlock(child);
+      }
+    }
+
+    if (data.meta) Object.assign(S.meta, data.meta);
+
+    S.modal = null;
+    S._migrResult = { filled, skipped, fileName: file.name };
+    render();
+  } catch (e) {
+    if (alertEl) alertEl.innerHTML = `<div class="alert alert-error">${x(e.message)}</div>`;
+  }
+}
+
 // ── Bundle save modal ─────────────────────────────────────────────────────────
 function bundleSaveModalHtml() {
   const rows = S.sections.map((sec, i) => {
@@ -872,8 +1147,17 @@ function resultOverlayHtml() {
 // ── Events ────────────────────────────────────────────────────────────────────
 function bind() {
   // Topbar
-  on('btn-settings', 'click', () => { S.modal = 'settings'; render(); });
   on('btn-create', 'click', doCreate);
+  on('vtab-canvas',   'click', () => { _view = 'canvas';   render(); });
+  on('vtab-settings', 'click', () => { _view = 'settings'; render(); });
+  on('btn-clear-draft', 'click', () => {
+    if (!confirm('Clear all sections and start fresh?')) return;
+    S.sections = []; S.meta = {}; S.collapsed.clear(); S.sel = null;
+    localStorage.removeItem(CANVAS_KEY);
+    render();
+  });
+  on('btn-dismiss-draft', 'click', () => { S._draftRestored = false; render(); });
+  on('btn-dismiss-migr',  'click', () => { S._migrResult = null; render(); });
 
   // Canvas
   on('btn-add-section', 'click', () => addSection('section'));
@@ -1000,6 +1284,8 @@ function bind() {
   qAll('[data-sel-child]').forEach(el =>
     el.addEventListener('click', e => {
       if (e.target.closest('[data-del-child]')) return;
+      if (e.target !== el && e.target.closest('[data-sel-child]') !== el) return; // inner chip handles it
+      e.stopPropagation();
       S.sel = { secId: findSecIdForBlk(el.dataset.blk), blkId: el.dataset.blk, childId: el.dataset.selChild };
       render();
     }));
@@ -1071,6 +1357,103 @@ function bind() {
   on('btn-test-conn',     'click', testConn);
   on('btn-import-page',   'click', doImportPage);
   on('btn-diagnose-page', 'click', dodiagnosePage);
+  on('btn-fill-xml',   'click', doFillFromXml);
+
+  on('stab-settings', 'click', () => { _settingsTab = 'connection'; render(); });
+  on('stab-mappings', 'click', () => { _settingsTab = 'mappings';   render(); });
+  on('stab-paths',    'click', () => { _settingsTab = 'paths';      render(); });
+
+  // Paths tab
+  if (_settingsTab === 'paths') {
+    on('btn-add-content-rule', 'click', () => {
+      if (!S.pathMap) S.pathMap = { contentPrefixRules: [], damPrefixRules: [], assetMap: [] };
+      S.pathMap.contentPrefixRules.push({ aemPrefix: '', edsPrefix: '' });
+      render();
+    });
+    on('btn-add-dam-rule', 'click', () => {
+      if (!S.pathMap) S.pathMap = { contentPrefixRules: [], damPrefixRules: [], assetMap: [] };
+      S.pathMap.damPrefixRules.push({ aemPrefix: '', edsPrefix: '' });
+      render();
+    });
+    qAll('.pm-del-rule').forEach(el => el.addEventListener('click', () => {
+      const section = el.dataset.section;
+      const idx     = parseInt(el.dataset.idx, 10);
+      if (S.pathMap?.[section]) { S.pathMap[section].splice(idx, 1); render(); }
+    }));
+    qAll('.pm-aem-inp').forEach(el => el.addEventListener('input', () => {
+      const section = el.dataset.section;
+      const idx     = parseInt(el.dataset.idx, 10);
+      if (S.pathMap?.[section]?.[idx]) S.pathMap[section][idx].aemPrefix = el.value;
+    }));
+    qAll('.pm-eds-inp').forEach(el => el.addEventListener('input', () => {
+      const section = el.dataset.section;
+      const idx     = parseInt(el.dataset.idx, 10);
+      if (S.pathMap?.[section]?.[idx]) S.pathMap[section][idx].edsPrefix = el.value;
+    }));
+    on('btn-import-csv', 'click', doImportPathCsv);
+    on('btn-clear-asset-map', 'click', () => {
+      if (confirm('Clear all asset mappings?')) {
+        if (S.pathMap) { S.pathMap.assetMap = {}; render(); }
+      }
+    });
+    on('btn-save-paths', 'click', savePathMap);
+  }
+
+  // Mapping tab
+  on('btn-save-mapping', 'click', saveMigrationMap);
+
+  qAll('[data-expand-rt]').forEach(el =>
+    el.addEventListener('click', () => {
+      _mappingExpanded = _mappingExpanded === el.dataset.expandRt ? null : el.dataset.expandRt;
+      render();
+    }));
+
+  qAll('.mr-type-sel').forEach(el =>
+    el.addEventListener('change', () => {
+      if (S.migrationMap?.componentMap?.[el.dataset.rt])
+        S.migrationMap.componentMap[el.dataset.rt].edsType = el.value;
+    }));
+
+  qAll('.mr-dst-inp').forEach(el =>
+    el.addEventListener('input', () => {
+      const m = S.migrationMap?.componentMap?.[el.dataset.rt];
+      if (m) m.propRenames[el.dataset.src] = el.value;
+    }));
+
+  qAll('.mr-src-inp').forEach(el =>
+    el.addEventListener('blur', () => {
+      const m = S.migrationMap?.componentMap?.[el.dataset.rt];
+      if (!m) return;
+      const oldSrc = el.dataset.oldsrc;
+      const newSrc = el.value.trim();
+      if (newSrc && newSrc !== oldSrc) {
+        const val = m.propRenames[oldSrc] ?? '';
+        delete m.propRenames[oldSrc];
+        m.propRenames[newSrc] = val;
+        el.dataset.oldsrc = newSrc;
+        // update sibling dst input's data-src
+        const row = el.closest('.mr-rename');
+        if (row) { const dst = row.querySelector('.mr-dst-inp'); if (dst) dst.dataset.src = newSrc; }
+      }
+    }));
+
+  qAll('.mr-del-rename').forEach(el =>
+    el.addEventListener('click', () => {
+      const m = S.migrationMap?.componentMap?.[el.dataset.rt];
+      if (m) { delete m.propRenames[el.dataset.src]; render(); }
+    }));
+
+  qAll('.mr-add-rename').forEach(el =>
+    el.addEventListener('click', () => {
+      const m = S.migrationMap?.componentMap?.[el.dataset.rt];
+      if (m) {
+        let key = 'newProp';
+        let i = 1;
+        while (m.propRenames[key]) key = `newProp${i++}`;
+        m.propRenames[key] = '';
+        render();
+      }
+    }));
 
   // Block picker items
   qAll('[data-pick]').forEach(el =>
@@ -1106,6 +1489,70 @@ function bind() {
 
   // Result overlay
   on('btn-close-result', 'click', () => { S.result = null; render(); });
+}
+
+async function saveMigrationMap() {
+  try {
+    const res = await fetch('/api/migration-map', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ componentMap: S.migrationMap?.componentMap || {} }),
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Save failed');
+    const btn = document.getElementById('btn-save-mapping');
+    if (btn) { btn.textContent = '✓ Saved'; btn.disabled = true; setTimeout(() => { btn.textContent = 'Save Mappings'; btn.disabled = false; }, 2000); }
+  } catch (err) {
+    alert('Could not save mappings: ' + err.message);
+  }
+}
+
+async function doImportPathCsv() {
+  const fileInput = document.getElementById('pm-csv-file');
+  const alertEl   = document.getElementById('pm-csv-alert');
+  if (!fileInput?.files?.length) {
+    if (alertEl) alertEl.innerHTML = `<div class="alert alert-error">Please select a CSV file first.</div>`;
+    return;
+  }
+  const fd = new FormData();
+  fd.append('csvFile', fileInput.files[0]);
+  if (alertEl) alertEl.innerHTML = `<div class="alert alert-info"><span class="spinner spinner-dark"></span> Importing…</div>`;
+  try {
+    const r = await fetch('/api/path-map/import-csv', { method: 'POST', body: fd });
+    const d = await r.json();
+    if (!d.ok) throw new Error(d.error || 'Import failed');
+    // Refresh pathMap from server
+    const pm = await fetch('/api/path-map');
+    if (pm.ok) S.pathMap = await pm.json();
+    render(); // re-render shows updated asset count
+    const newAlertEl = document.getElementById('pm-csv-alert');
+    if (newAlertEl) newAlertEl.innerHTML = `<div class="alert alert-success">✓ Imported ${d.imported} asset${d.imported !== 1 ? 's' : ''} — ${d.withDmUrl ?? 0} with DM Open API URL, ${d.imported - (d.withDmUrl ?? 0)} fallback to DAM path. ${d.total} total.</div>`;
+  } catch (err) {
+    const el = document.getElementById('pm-csv-alert');
+    if (el) el.innerHTML = `<div class="alert alert-error">✗ ${x(err.message)}</div>`;
+  }
+}
+
+async function savePathMap() {
+  const alertEl = document.getElementById('pm-save-alert');
+  try {
+    const r = await fetch('/api/path-map', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contentPrefixRules: S.pathMap?.contentPrefixRules || [],
+        damPrefixRules:     S.pathMap?.damPrefixRules     || [],
+      }),
+    });
+    const d = await r.json();
+    if (!d.ok) throw new Error(d.error || 'Save failed');
+    if (alertEl) {
+      alertEl.innerHTML = `<span style="color:var(--success)">✓ Saved</span>`;
+      setTimeout(() => { if (alertEl) alertEl.innerHTML = ''; }, 2000);
+    }
+  } catch (err) {
+    if (alertEl) alertEl.innerHTML = `<span style="color:var(--danger)">✗ ${x(err.message)}</span>`;
+  }
 }
 
 function closeModal() { S.modal = null; S.pickCtx = null; render(); }
@@ -1163,7 +1610,6 @@ function saveSettings() {
     password: S.conn.password, parentPath: S.conn.parentPath,
     ueOrg: S.conn.ueOrg
   })); } catch (_) {}
-  S.modal = null;
   render();
 }
 
@@ -1198,7 +1644,7 @@ function buildUeUrl(pagePath) {
 async function doCreate() {
   const { aemHost, username, password, parentPath, pageName } = S.conn;
   if (!aemHost || !username || !password || !parentPath || !pageName) {
-    S.modal = 'settings'; render(); return;
+    _view = 'settings'; render(); return;
   }
   S.creating = true; render();
   try {
@@ -1314,8 +1760,8 @@ function moveBlock(secId, blkId, dir) {
 }
 
 function findSec(id)  { return S.sections.find(s => s.id === id); }
-function findBlk(id)  { for (const s of S.sections) { const b = s.blocks.find(b => b.id === id); if (b) return b; } return null; }
-function findSecIdForBlk(blkId) { for (const s of S.sections) { if (s.blocks.find(b => b.id === blkId)) return s.id; } return null; }
+function findBlk(id)  { for (const s of S.sections) { const b = s.blocks.find(b => b.id === id); if (b) return b; for (const blk of s.blocks) { const ch = (blk.children || []).find(c => c.id === id); if (ch) return ch; } } return null; }
+function findSecIdForBlk(blkId) { for (const s of S.sections) { if (s.blocks.find(b => b.id === blkId)) return s.id; for (const blk of s.blocks) { if ((blk.children||[]).find(c=>c.id===blkId)) return s.id; } } return null; }
 
 // ── Utility ───────────────────────────────────────────────────────────────────
 function on(id, ev, fn) { const el = document.getElementById(id); if (el) el.addEventListener(ev, fn); }
