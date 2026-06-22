@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:01.324Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/science-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="How patient voices are changing medicine"
+        jcr:uuid="f7b347ce-2175-47a9-bfe7-9b44d6dc4308"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/how-patient-voices-are-changing-medicine/how-patient-voices-hero.jpeg"
+        cardTitle="How patient voices are changing medicine"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/ abbvie-com2/images/stories/how-patient-voices-are-changing-medicine/how-patient-voices-hero.jpeg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="How patient voices are changing medicine"
+        publicationDate="May 02, 2019"
+        readWatchTime="read-time"
+        storyReadTime="8">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c897979b-0ced-431a-8db2-137ffeb5144d/as/how-patient-voices-hero.jpeg"
+                        imageAlt="How patient voices"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/science-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="How Patient Voices are Changing Medicine"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>An AbbVie leader in patient-centered research helps us to hear and consider the patient voice.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Understanding the value of patient centricity"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>How well are you able to carry out your usual social activities? How does your sleep issue affect your ability to do things with your family? Do you &lt;em>feel&lt;/em> like you’re getting better?&lt;br> &lt;br> These questions may seem unusual, but the answers are critical in understanding a patient’s disease burden, specifically, the health-related quality of life impact of a treatment, according to one of AbbVie’s leaders in patient-centered outcomes research.&lt;br> &lt;br> This leader may be new to AbbVie, but her focus in patient experience isn’t. Katy Benjamin, Ph.D., director, health economics and outcomes research, leverages her expertise in developing tools to measure treatment outcomes from the patients’ perspective. She digs into what patients think and feel, combining this valuable information with more traditional clinical data to understand the burden of disease and how our molecules and medicines may reduce that burden – ultimately, to help create better treatments for patients.&lt;br> &lt;br> We sat down with Katy to understand the role of the patient-centered research (PCR) group within AbbVie and how some critical insights are discovered outside of the lab.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Understanding the value of patient centricity"
+                    titleType="h2"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>How well are you able to carry out your usual social activities? How does your sleep issue affect your ability to do things with your family? Do you &lt;em>feel&lt;/em> like you’re getting better?&lt;br> &lt;br> These questions may seem unusual, but the answers are critical in understanding a patient’s disease burden, specifically, the health-related quality of life impact of a treatment, according to one of AbbVie’s leaders in patient-centered outcomes research.&lt;br> &lt;br> This leader may be new to AbbVie, but her focus in patient experience isn’t. Katy Benjamin, Ph.D., director, health economics and outcomes research, leverages her expertise in developing tools to measure treatment outcomes from the patients’ perspective. She digs into what patients think and feel, combining this valuable information with more traditional clinical data to understand the burden of disease and how our molecules and medicines may reduce that burden – ultimately, to help create better treatments for patients.&lt;br> &lt;br> We sat down with Katy to understand the role of the patient-centered research (PCR) group within AbbVie and how some critical insights are discovered outside of the lab.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How did you first become interested in patient behavior?"
+                    titleType="h5"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Katy Benjamin, Ph.D.: I’ve always been interested in patient behavior – what motivates someone to go to the doctor, to stick with a treatment. To answer the question: What are the factors that make people believe they’re getting better?&lt;br> &lt;br> My background is in psychiatric social work, with a master’s in that area, and a master’s from Harvard in public policy. Before earning my doctorate at Johns Hopkins, I worked as a social scientist for the Agency for Healthcare Research &amp;#x26; Quality, a U.S. public health agency, leading early efforts to understand how to measure the patients’ perspective when evaluating the effectiveness of medical care. I then worked in consulting for many years to develop and validate questionnaires to measure how patients viewed their health and their medical treatments, mainly for use in clinical trials. Over the course of my career, I’ve had the opportunity to talk to hundreds of patients with a wide variety of medical conditions.&lt;br> &lt;br> I had to understand the “what” and “why” for patient outcomes. And as a social worker, I was trained to talk to people. My research training gave me the tools to turn these insights into questionnaires to measure what’s important to patients.&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:f03d8381-6859-466b-9846-9e1983e45f00/as/how_patient_voices_heor_16x9.jpg?dpr=1"
+                    imageAlt="AbbVie_Story_How_Patient_Voices_16x9"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: You’re part of the patient-centered research (PCR) team at AbbVie, within our Health Economics and Outcomes Research (HEOR) group. Can you explain what all of that really means?"
+                    titleType="h5"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Benjamin:&lt;/strong> The role of the PCR team is to help bring patient centricity – the voice of the patient – to AbbVie. That can be applied in a broader sense, like how we approach unmet need in medical care based on what patients can tell us. It’s also applied to how we build our clinical program and specific clinical trials, ensuring we put measures in place to help us understand patient perspective in terms of evaluating the efficacy of our treatments.&lt;br> &lt;br> Patient reported outcomes (PROs), or data that comes directly from the patient, are an important way to measure their experience. They can be assessed in clinical trials, and analyzed relative to clinical data. They can also be assessed in real world studies. Real world evidence (RWE) is becoming increasingly important for us to truly understand the complexity of diseases and the burdens patients face. We need to tie our programs to the real world, and that’s why AbbVie recently created an evidence generation team within HEOR to strengthen our approach. We in PCR work closely with our RWE colleagues to understand the whole picture of people’s medical care experiences – what’s happening and why.&lt;/p>"/>
+                </block_8>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c8e213e8-d351-40f1-b7ee-cf1d285d14bd/as/how_patient_voices_pcr_16x9.jpg?dpr=1"
+                    imageAlt="AbbVie_Story_How_Patient_Voices_16x9"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: What can we learn when we consider patient experience?"
+                    titleType="h5"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Benjamin:&lt;/strong> This hits on one of my personal passions, and that’s really listening to what the patient has to say. If we look back at the history of drug development, the voices of patients typically weren’t considered important. Instead, we focused on the voice of the medical community and clinical outcomes – e.g., whether the tumor shrinks or if a laboratory value changes.&lt;br> &lt;br> But, these types of clinical outcomes may not be something patients are noticing themselves. Instead, they may be having other experiences that we don’t know about unless we ask. A great way to do patient-centric research is by working with patient organizations. For example, we may learn of a symptom people are experiencing, which isn’t being picked up by clinicians who are instead focusing on a more prominent symptom. We can also understand more comprehensively which symptoms are most important to measure because they impact the aspects of patients’ lives that are most important to them. We gain this initially through qualitative research studies and in turn get a broader understanding beyond specific groups in clinical trials. Regulators and Health Technology Assessment (HTA) authorities are increasingly requiring that we understand and demonstrate to them the impact our novel medicines are having on patients.&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How are regulators like the FDA in the U.S. and the EMA in Europe looking at patient experience data?"
+                    titleType="h5"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Benjamin:&lt;/strong> We’re seeing a growing awareness for how important the patient point of view is to understand the quality and value of medical treatments across the world, reflected in government initiatives that include patient perspective when assessing the value of both new and existing medical treatments.&lt;br> &lt;br> In the U.S., building on previous initiatives like workshops with patient advocacy groups, the FDA is developing guidance documents on how to appropriately collect, analyze and report data on patient experience. These insights on how patients view their condition, treatment and participation in clinical studies are important to us in industry as well as to regulators. These guidances illustrate that regulators recognize the value of patient-reported outcomes and offer practical information on how this information can impact product labeling, including the uses and effectiveness of treatments.&lt;br> &lt;br> The European Medicines Agency (EMA), which evaluates new drug applications across the European Union, takes patient-centered outcomes evidence into account in its evaluation of treatment efficacy and approval, as do most country regulatory agencies. The EMA and FDA are collaborating on strategies to include the patient voice in their regulator decision-making.&lt;/p>"/>
+                </block_13>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Katy Benjamin, Ph.D."
+                    attributionRole="Director, Health Economics and Outcomes Research, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Beyond the clinical benefits, we have to ask ourselves, ‘What is this experience going to be like for the patient?&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c8e213e8-d351-40f1-b7ee-cf1d285d14bd/as/how_patient_voices_pcr_16x9.jpg?dpr=1"
+                    imageAlt="AbbVie_Story_How_Patient_Voices_16x9"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How have advancements in patient experience studies contributed to oncology, one of AbbVie’s focus areas?"
+                    titleType="h5"/>
+                <block_17
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Benjamin:&lt;/strong> Oncology has become a focus for stakeholders like the FDA, which established The Oncology Center of Excellence to explore measurement of the patient experience in both the clinical trial and real-world setting to inform the risks and benefits of cancer therapies.&lt;br> &lt;br> New cancer research and potential treatments being developed across the industry leverage people’s genetic properties. Within oncology, this means non-chemotherapy treatments and an increased focus on immuno-oncology, which is the study and development of treatments that use the immune system to fight cancer. Because these treatments are so new and have the potential to be so groundbreaking in treating these serious conditions, it’s especially important to understand how patients are feeling and functioning and how their health-related quality of life is impacted by the treatments, especially compared to older therapies.&lt;br> &lt;br> Beyond the traditional clinical benefits, we have to ask ourselves, “What is this experience going to be like for the patient?”&lt;/p>"/>
+                </block_17>
+                <block_18
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How does the rise of digital health factor into the work of your team?"
+                    titleType="h5"/>
+                <block_19
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Benjamin:&lt;/strong> Digital health offers us new opportunities to “listen” to the patients and to incorporate novel ways of data collection in our research.&lt;br> &lt;br> On listening to patients, we are increasingly mindful of how patients are interacting with and sharing their experiences with other patients. Patients today are a lot more active in their health care decision-making, and they’re seeking and finding information themselves, whether that’s though an advocacy group or by researching on their own. Observing how patients share their experiences in online communities offers the research community the chance to understand how patients are experiencing their disease and the current treatment landscape.&lt;br> &lt;br> Digital health also offers new ways to stay connected with patients, like technology that helps doctors follow their patients long-term and without physical visits. For example, at AbbVie we are using an actigraphy device, which measures rest and activity cycles, in a clinical trial.&lt;br> &lt;br> It’ll be interesting to see what we can learn from those devices, which are focused on important aspects of a condition, but it’s only one piece of the patient experience. Also valuable will be seeing how those data are interpreted by the patient, in his or her words.&lt;/p>"/>
+                </block_19>
+                <block_20
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Email:&lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_20>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/%20abbvie-com2/images/stories/how-patient-voices-are-changing-medicine/how-patient-voices-hero.jpeg"/>
+    </jcr:content>
+</jcr:root>

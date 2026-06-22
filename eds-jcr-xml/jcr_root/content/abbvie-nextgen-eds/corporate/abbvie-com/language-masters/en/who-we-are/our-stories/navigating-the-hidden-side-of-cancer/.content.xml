@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:06.732Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/philanthropy-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="A cancer diagnosis can upend families’ budgets. Nonprofit Family Reach brings financial relief, and now they’re expanding to help even more families."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Navigating the hidden side of cancer"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="A cancer diagnosis can upend families’ budgets. Nonprofit Family Reach brings financial relief, and now they’re expanding to help even more families."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/navigating-the-hidden-side-of-cancer/Weinburgers_Family_Abstract_v3.jpg"
+        cardTitle="Navigating the hidden side of cancer"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        eyebrowText="Philanthropy"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/navigating-the-hidden-side-of-cancer/Weinburgers_Family_Abstract_v3.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Navigating the hidden side of cancer"
+        publicationDate="September 05, 2019"
+        readWatchTime="read-time"
+        storyReadTime="3">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:04160777-82b7-4556-ab35-286a7e06a294/as/Weinburgers_Family_Abstract_v3.jpg"
+                        imageAlt="Weinburgers family members"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/philanthropy-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Navigating the hidden side of cancer"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>A cancer diagnosis can upend families’ budgets. Nonprofit Family Reach brings financial relief, and now they’re expanding to help even more families.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="An unknown, untold world"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>At first glance, Whitaker Weinburger seems like any other kid. He loves to swim, he’s making friends in preschool and his shirt is often stained with melted popsicles.&lt;/p>&lt;p>Whitaker will soon blow out four candles on his birthday cake. But if you rewind the clock back a few years, he was facing a much different scenario.&lt;/p>&lt;p>In fall 2016, Whitaker was diagnosed with neuroblastoma, a rare form of cancer. His sudden and serious illness propelled the entire family into an unknown world of intensive treatment, hospital stays and high-risk surgeries with long recovery periods.&lt;/p>&lt;p>The Weinburgers, who live in Arlington, Virginia, also experienced the often untold side of cancer – the devastating impact on family finances, created by taking time off work and growing non-medical expenses that include transportation and housing.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch"
+                    overlayDescription="A cancer diagnosis can impact family finances, from taking time off work to housing and transportation. Our nonprofit partner Family Reach answers the call, and now they’re expanding to help even more families with a $5 million gift from AbbVie. Watch how they’re creating an impact."
+                    overlayHeading="Navigating the hidden side of cancer"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:bd3bc388-c221-4b24-967b-ec11f09a8aa8/as/navigating-the-hidden-side-of-cancer.png"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="Navigating Hidden Cancer"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/NPtTMDy4pXE?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fnavigating-the-hidden-side-of-cancer.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="A financial lifeline for families"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Mom Erin Weinburger left her job as Whitaker went through treatment, while her husband Seth continued working. The couple began their new normal, splitting apart so one parent could always be with Whitaker and the other with their now 9-year-old daughter, Lakeland.&lt;/p>&lt;p>Expenses piled up, from parking at the hospital and meals out to medical bills, compounded by a reduction in income.&lt;/p>&lt;p>The scenario faced by the Weinburgers is not uncommon; in fact, it’s a widespread problem often overshadowed by the focus on treatment, says Carla Tardif, CEO of &lt;a href=&quot;https://familyreach.org/&quot; title=&quot; Family Reach&quot;>Family Reach&lt;/a>, a nonprofit with a 23-year history serving as a financial lifeline for families fighting cancer in the U.S.&lt;/p>&lt;p>Over 40 percent of people diagnosed with cancer will deplete their life’s savings within two years, according to a study published in &lt;a href=&quot;https://www.amjmed.com/article/S0002-9343(18)30509-6/fulltext&quot; title=&quot;The American Journal of Medicine.&quot;>The American Journal of Medicine&lt;/a>. By working with over 400 top-tier hospitals and cancer centers nationwide, Family Reach’s Financial Treatment Program equips families with financial education, planning and assistance before they hit a critical breaking point.&lt;/p>&lt;p>“Hospitals take care of the disease, and Family Reach takes care of the family,” says Tardif.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:105f059e-9b35-41eb-af03-164cf494378a/as/Whitaker_Weinburger_Body.jpg?dpr=1"
+                    imageAlt="Whitaker Weinburger was diagnosed with neuroblastoma in fall 2016. Today, the family is celebrating one year post-treatment."
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Expanding financial support programs"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The Weinburgers were connected with Family Reach and local nonprofit partner JUST TRYAN IT, who helped the family pay rent while Whitaker was undergoing treatment.&lt;/p>&lt;p>“Family Reach’s support during that time in our lives really gave us the headspace, the breathing room, just to quit worrying about those financial obligations and just focus on the kids and taking care of them,” says Seth Weinburger.&lt;/p>&lt;p>Family Reach is expanding its services to support even more people with help from a &lt;a href=&quot;https://news.abbvie.com/2018-09-21-AbbVie-Announces-5-Million-Donation-to-Family-Reach-to-Support-Children-Battling-Cancer-and-Their-Families&quot;>$5 million donation from AbbVie&lt;/a>. The donation has enabled Family Reach to partner with 25 more hospitals in 23 states, helping an additional 4,400 families access its tools and financial support programs.&lt;/p>&lt;p>Working with hospital social workers, Family Reach’s navigators help families access local resources and support, as well as provide direct assistance to cover everyday needs like housing, transportation expenses and utilities. These interventions may actually help improve adherence to care and treatment and in turn help patients achieve optimal health outcomes, according to a &lt;a href=&quot;https://familyreach.org/white-paper/&quot; title=&quot; Family Reach white paper.&quot;>Family Reach white paper&lt;/a>.&lt;/p>&lt;p>Each family has unique needs, but one theme is clear: early intervention is key to helping more families in a meaningful way, Tardif says. To connect families with support sooner, Family Reach is launching the LiFT Network and uniting hundreds of nonprofits with a shared vision of eliminating cancer-related financial toxicity. The LiFT Network is anchored by an online portal with financial tools and resources, providing benefits to members such as a streamlined grant distribution process and collaboration with like-minded organizations. JUST TRYAN IT accessed this process to support the Weinburgers.&lt;/p>&lt;p>“This network is all about learning and early intervention, magnifying the people we’ve not been able to reach,” says Tardif. “Family Reach has gone from being in two hospitals to 440, but we know the demand is even greater.”&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:62ee7acc-185c-4386-aafe-5ca96993d28d/as/Whitaker_and_Lakeland_Body.jpg?dpr=1"
+                    imageAlt="Whitaker Weinburger, pictured with his sister Lakeland, 9, is now going to preschool and enjoying life as a regular kid."
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The best summer"
+                    titleType="h2"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The Weinburgers are celebrating one year since Whitaker’s last treatment, but the memory of support they received through Family Reach, JUST TRYAN IT and their community remains fresh.&lt;/p>&lt;p>At a recent blood drive, Whitaker drew thank you notes for everyone who participated, most scribbled in black and yellow, the colors of his favorite Transformers character, Bumblebee.&lt;/p>&lt;p>Whitaker’s cancer journey has taught the family to treasure their time together, and to say “yes” more often, Seth Weinburger says. While they remain positive about Whitaker’s recovery, they recognize that recurrence of his cancer is a possibility.&lt;/p>&lt;p>“We’re making this summer the best one for our kids,” he says.&lt;/p>"/>
+                </block_10>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> Name: Mary Kathryn Steel&lt;br> Email: &lt;a href=&quot;mailto:mk.steel@abbvie.com&quot;>mk.steel@abbvie.com&lt;/a>&lt;br> Call: +1 847-937-4111&lt;/p>"/>
+                </block_11>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/navigating-the-hidden-side-of-cancer/Weinburgers_Family_Abstract_v3.jpg"/>
+    </jcr:content>
+</jcr:root>

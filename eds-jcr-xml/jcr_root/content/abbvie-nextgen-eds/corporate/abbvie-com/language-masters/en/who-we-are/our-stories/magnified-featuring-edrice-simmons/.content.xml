@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:03.733Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/profile-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="AbbVie's vice president of commercial oncology breaks down her career journey and inclusive approach to leadership."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Magnified featuring Edrice Simmons"
+        jcr:uuid="ea364f6d-c1c2-442b-b28e-8fd4cf201be7"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="AbbVie's vice president of commercial oncology breaks down her career journey and inclusive approach to leadership."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/magnified-featuring-edrice-simmons/magnified-edricesimmons-hero.jpg"
+        cardTitle="Magnified featuring Edrice Simmons"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        eyebrowText="Profile"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/magnified-featuring-edrice-simmons/magnified-edricesimmons-hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Magnified featuring Edrice Simmons"
+        publicationDate="November 08, 2023"
+        readWatchTime="read-time"
+        storyReadTime="7">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ee5a0e7e-81ef-4bbd-8887-4ebcd2b05a68/as/magnified-edricesimmons-hero.gif"
+                        imageAlt="Edrice Simmons"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/profile-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Magnified Featuring Edrice Simmons"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Explore the unexpected twists and turns Edrice chartered to become our vice president of U.S. commercial oncology.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;em>In the “Magnified” series, we take a closer look at the life experiences &amp;#x26; career journeys that have shaped AbbVie’s leaders. In this episode, we drop in on Edrice Simmons, AbbVie’s vice president of U.S. commercial oncology. Explore how her inclusive leadership style and appreciation for what makes each us different drove her to the helm of one of AbbVie’s largest commercial teams.&lt;/em>&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Tell us about your upbringing."
+                    titleType="h5"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>I grew up on a farm in a rural town in Indiana called Noblesville. My mom was trained as a chemist but worked in finance for the Army, and my dad was an engineer. We were one of the first brown families to live in our town, and because we looked different, we weren’t always accepted. But we never let that deter us. We remained close as a family and traveled a lot because of my mom’s work and that gave us opportunities to see and experience different cultures and people. I see that as one of the real strengths of how I grew up: though we lived in a place where we weren’t always accepted, we grew up appreciating difference.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Edrice Simmons"
+                    attributionRole="VP U.S. Commercial Oncology, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>I know what it feels like to feel left out or like you don’t belong, and I work to create a space where no one ever feels that way.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: What led you to a career in pharma?"
+                    titleType="h5"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For me it all started when I was seven years old. I was on the way to school in Indianapolis and passed by a building with these big bold red letters that spelled &quot;Lilly.&quot; I asked my mom what the building was and she said that’s where she used to work as a chemist, and that it was a place where they make medicine to help people feel better. At that point I made up it in my mind - I was going to work there. Though I was just a child and didn’t really understand what it meant to develop medicines or really drive a business, this idea of being able to help people just resonated with me. So from seven years old until I finally joined the company in my twenties, that was my goal.&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How did your career journey progress and eventually lead you to AbbVie?"
+                    titleType="h5"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>I went to college to study medical social work, which focused on helping people who were in hospitals transition home. After that, I went on to get a business degree, then started working in sales at Eli Lilly. After 16 years there, working a range of different roles, I found an opportunity to make even a greater impact on patients here at AbbVie and that opportunity brought me here.&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: At AbbVie, you’ve worked across immunology, oncology, aesthetics and other therapeutic areas. How did you navigate these different career opportunities?"
+                    titleType="h5"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>At different stages in my career, I either took a leap, broadened my view or charted the course. When I’ve taken leaps, those were moments that felt like jumping into cold water, diving into something totally new and trusting myself to figure out how to swim once I landed. Moving to California during COVID was one of those moments when fear set in but rising to the challenge and joining the Aesthetics Family was a memorable experience I will cherish.&lt;/p>&lt;p>When I’ve taken the scenic route to broaden my view, it’s been about pursuing a non-linear path to gain experiences and knowledge that would help me accelerate elsewhere faster. And charting the course for me really means progressing along the traditional career path.&lt;/p>&lt;p>At each stage, I’ve gained new knowledge, skills or perspectives that have helped me be a better leader. The key thing is to know where you are and where you want to be. From there, you can figure out what you need to do to close the gap, whether that means continuing to chart the course or deciding it’s time to take a detour or make a leap.&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>My personal vision for my life is to help people reach their full potential.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Today you lead U.S. commercial oncology. As a commercial leader, how would you describe your team’s impact on patients?"
+                    titleType="h5"/>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Our mission in commercial is to accelerate demand for our life changing-medicines. My team is responsible for ensuring that our hematology portfolio realizes its full value for patients and AbbVIe. It is also critical to uncover what is next, where we are is promising; however, we must be relentless to pursue the next generations of treatments because the lives of patients depend on it.&lt;/p>&lt;p>We all want every patient who's living with cancer to have as much time off treatment while extending their quality of life to look forward to their next birthday, vacation or graduation.&lt;/p>"/>
+                </block_12>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How would you describe the way you lead?"
+                    titleType="h5"/>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>I think what my teams would say is that I’m a purpose-driven leader. I focused on getting teams to really connect to a greater purpose. Here, we’re reaching patients who are very sick and often very isolated, and our purpose is to make sure that we can transform their lives for the better. Keeping that at the forefront of my teams' minds is what I strive to do.&lt;/p>&lt;p>I would also say that I strive to be inclusive in how I lead. Because of my childhood experience, I know what it feels like to feel left out or like you don’t belong, and I work to create a space where no one ever feels that way.&lt;/p>"/>
+                </block_14>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: What keeps you motivated in your work?"
+                    titleType="h5"/>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>My personal vision for my life is to help people reach their full potential. Working to understand what motivates each person I work with—and help them reach their potential based on those drivers—motivates me.&lt;/p>&lt;p>I'm also driven by the purpose-driven impact that we make with our medicines. At end of my life, I want to be able to look back and say that I made a meaningful impact on someone's life or extended the quality of their life, helped them reach their potential or gave them a voice. Those are things that really motivate me.&lt;/p>"/>
+                </block_16>
+                <block_17
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_17>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related Content&lt;/p>"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/magnified-featuring-nicholas-donoghoe"
+                    storyCardVariant="sidePanel"/>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/magnified-featuring-edrice-simmons/magnified-edricesimmons-hero.jpg"/>
+    </jcr:content>
+</jcr:root>

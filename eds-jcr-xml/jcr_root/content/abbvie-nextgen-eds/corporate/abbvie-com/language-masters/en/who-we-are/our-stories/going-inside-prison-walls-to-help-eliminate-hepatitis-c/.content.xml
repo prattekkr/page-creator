@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:13:59.772Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/virology-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Going inside prison walls to help eliminate hepatitis C"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/going-inside-prison-walls-to-help-eliminate-hepatitis-c/landscape_image_hero.jpg"
+        cardTitle="Going inside prison walls to help eliminate hepatitis C"
+        ctaAltText="Read article about hep c elimination"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/going-inside-prison-walls-to-help-eliminate-hepatitis-c/landscape_image_hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Going inside prison walls to help eliminate hepatitis C"
+        publicationDate="July 15, 2019"
+        readWatchTime="read-time"
+        storyReadTime="5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:3ae59f7c-0d8d-498a-b566-2fcd73d9d291/as/landscape_image_hero.jpg"
+                        imageAlt="A young traveler or a tourist with a backpack on the waterfront in Lisbon in Portugal next to the 25th of April Bridge; Shutterstock ID 1135012901; Purchase Order: -"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/virology-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Going inside prison walls to help eliminate hepatitis C"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>A former inmate returns to the prisons of Portugal to help those on the inside focus on hepatitis C care.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Painful memories motivate mission"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Every time João Semedo Tavares goes back inside the prison where he spent 10 years of his life, it’s déjà vu. He painfully relives his past – the haunting memories of life on the inside and every misstep on the outside.&lt;/p>&lt;p>But he willingly goes back inside prison walls, again and again, for a purpose that is bigger than himself. Tavares, is the founder of Johnson’s Academy, where he helps inmates learn how to re-enter society while they are still serving time. Now, Johnson’s Academy has a new mission. They have partnered with other organizations, including AbbVie, to launch a program called One Step More to help tackle a problem that plagues people who are incarcerated in prisons around the world – hepatitis C virus infection.&lt;/p>&lt;p>Through peer-to-peer counseling inside prisons, One Step More is educating people in prison on hepatitis C and helping connect them to the medical care available to them. The program helps people in prison prioritize their hepatitis C care and stay in treatment once they are no longer incarcerated.&lt;/p>&lt;p>“I was in prison for 10 years, and today I bring to prisons something I did not have in there,” Tavares says. “That's what motivates me in the day-to-day. Our presence is very important to people inside prisons and we really make a difference in their lives.”&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="André Bengala"
+                    attributionRole="hepatology business unit manager, AbbVie Portugal"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>It's a small group, but it's very important from an elimination perspective. People in prison are deprived of their freedom, but they don't have to be deprived of their health.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="One Step More"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Hepatitis C infection is a common public health challenge in Portugal’s prisons, as it is in institutions around the world, for a variety of complex reasons. The practice of risky behaviors inside the prisons, such as sharing needles or having unprotected sex, is one reason that infection and re-infection rates are high.&lt;div>1,2&lt;/div> Portugal’s prison population includes an estimated 2,000 people infected with hepatitis C, a rate of infection that is nearly 20-times the general population.3&lt;/p>&lt;p>“It’s a small group, but it’s very important from an elimination perspective,” says André Bengala, the hepatology business unit manager for AbbVie Portugal, which partners with One Step More. “People in prison are deprived of their freedom, but they don’t have to be deprived of their health.”&lt;/p>&lt;p>To help solve this problem, all inmates are screened for hepatitis C when they enter a Portuguese prison, and the government provides funding for teams of health care professionals to travel to hospitals to diagnose and treat inmates. Still, up to 15 percent of those who test positive for the hepatitis C virus refuse treatment for various reasons, such as they don’t have any symptoms or they don’t trust the doctors and nurses, Bengala says.&lt;/p>&lt;p>“In the minds of many inmates, hepatitis C is not a problem that exists,” Tavares said.&lt;/p>&lt;p>Joana Dias, senior patient relations and strategic health initiatives manager, AbbVie Portugal, works with One Step More to develop training and educational lectures that help motivate people who are incarcerated to curb risky health behaviors so that after they have served their time, they are better prepared to thrive in life beyond the prison walls, and working toward a reduction in the spread of hepatitis C. “But some of the biggest hurdles are the prisons themselves,” Tavares said. Sometimes prisons will deny treatment or offer it only in exchange for good behavior, a practice that One Step More hopes to end.&lt;/p>&lt;p>“The biggest challenges for caring for people with hepatitis C who are incarcerated often relate to empathy,” says Guilherme Macedo, MD, a physician who has worked for decades to treat hepatitis C in Portugal’s prisons. “Micro-elimination projects like One Step More are a realistic way of overcoming this challenge so that we can truly achieve elimination.”&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Helping others help themselves"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The inspiration for One Step More hit Tavares after he was released from prison.&lt;/p>&lt;p>“I was motivated to change my life, but every time I tried to open a door, things did not go well,” Tavares says.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="João Semedo Tavares, founder, Johnson’s Academy, during a peer-to-peer counseling session."
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="true"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:58216ee7-5024-438b-a4a9-c6d757ae7025/as/Esc_Jose_Cardoso_Pires_body_low.jpg?dpr=1"
+                    imageAlt="Jose_Cardoso_Pires"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>So he sought something that he didn’t have on the inside – help. He joined a community that guided him on how to reflect on his past, realize who he is today, and help others avoid his path. Through this process of self-reflection, Tavares realized that his experience could be used to help others. After founding Johnson’s Academy, Tavares teamed up with AbbVie to broaden his program’s scope to include the problem of hepatitis C.&lt;/p>&lt;p>At the core of One Step More is the idea that people in prisons are more likely to listen to their peers when it comes to frank discussions about personal matters, such as health. The foundation for these educational discussions starts with the development of a peer-to-peer counseling network, drawn from leaders in formal and informal prison programs, for example heads of the various prison sports teams.&lt;/p>&lt;p>“This is what makes the project unique. The awareness and motivation to seek treatment is made by peers and not by outsiders,” Dias says.&lt;/p>&lt;p>“The doctors and nurses who go inside prisons to provide care can’t help patients if the patients are not ready to help themselves,” Tavares said. “This is why peer-to-peer education is so important to fight apathy or mistrust about hepatitis C care.” Without this education, he has seen little motivation on the part of those who are in prison to prioritize their health.&lt;/p>&lt;p>According to Tavares, One Step More also partnered with the prison division of Portugal’s Ministry of Justice and will launch a new pilot program for two institutions – working with both men and women – with the goal of expanding the project so that it can be replicated anywhere in the world.&lt;/p>"/>
+                </block_8>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:e638961b-8463-4888-9465-a722d4168377/as/ABV_SL_MicroElimination_StatGraphic_A011.gif?dpr=1"
+                    imageAlt="MicroElimination_StatGraphic"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Walking the red line"
+                    titleType="h2"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Once people are released from prison, One Step More keeps in touch to help them navigate a common hurdle of re-integrating into society. It’s this critical time known as the “red line period” where One Step More continues working with former inmates so they maintain treatment and medical care after leaving prison. During this seven-month probationary period, where many people fall out of care, One Step More helps them stay in treatment while avoiding the bureaucratic pitfalls of the red line period and the dangers that are in their community, such as the enticement of illicit drugs, that could put them back behind bars.&lt;/p>&lt;p>Today, Tavares is accompanying one such young man, who has hepatitis C, during his red line period. This young man was formerly reclusive and reluctant to treat his hepatitis C. Through One Step More, he received a hepatitis C consultation, and Tavares is shepherding him through the treatment process because he understands elimination is possible. He feels it’s his job to remove the barriers that have stopped so many before him.&lt;/p>&lt;p>“These people need me,” Tavares says. “So for me, this project is a dream come true.”&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_allowMultipleOpen="false,accordion-icon-font,h5-size,width-large"
+                    collapseAllIcon="minus"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="plus"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading,classes_allowMultipleOpen,classes_showExpandCollapseAll,expandAllLabel,collapseAllLabel,expandAllIcon,collapseAllIcon,expandIcon,collapseIcon,expandAllIconImage,collapseAllIconImage,expandIconImage,collapseIconImage,ariaExpandAllLabel,ariaCollapseAllLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="References"
+                        text="&lt;p>1 &lt;a href=&quot;https://www.cdc.gov/hepatitis/hcv/pdfs/hepcincarcerationfactsheet.pdf&quot;>https://www.cdc.gov/hepatitis/hcv/pdfs/hepcincarcerationfactsheet.pdf&lt;/a>&lt;/p>&lt;p>2 &lt;a href=&quot;https://www.who.int/news-room/fact-sheets/detail/hepatitis-c&quot;>https://www.who.int/news-room/fact-sheets/detail/hepatitis-c&lt;/a>&lt;/p>&lt;p>3 Palladino et al., “Epidemic history of hepatitis C virus genotypes and subtypes in Portugal.” Scientific Reports, August 16, 2018. &lt;a href=&quot;https://www.nature.com/articles/s41598-018-30528-0&quot;>https://www.nature.com/articles/s41598-018-30528-0&lt;/a>&lt;/p>"/>
+                </block_12>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/going-inside-prison-walls-to-help-eliminate-hepatitis-c/landscape_image_hero.jpg"/>
+    </jcr:content>
+</jcr:root>

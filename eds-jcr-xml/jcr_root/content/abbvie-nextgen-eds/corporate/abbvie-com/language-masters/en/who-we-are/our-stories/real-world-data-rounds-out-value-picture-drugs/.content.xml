@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:08.613Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/science-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Medical records and insurance claims data help companies, regulators, payers and physicians better understand how medicines perform in the real world."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Real-world data rounds out value picture of drugs"
+        jcr:uuid="c7c35b58-b91a-42a6-8371-b1b9ee0f4024"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Medical records and insurance claims data help companies, regulators, payers and physicians better understand how medicines perform in the real world."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/real-world-data-rounds-out-value-picture-of-drugs/real-world-data-rounds-hero.jpeg"
+        cardTitle="Real-world data rounds out value picture of drugs"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/real-world-data-rounds-out-value-picture-of-drugs/real-world-data-rounds-hero.jpeg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Real-world data rounds out value picture of drugs"
+        publicationDate="June 08, 2016"
+        readWatchTime="read-time"
+        storyReadTime="6">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:014eaf67-e3b9-4872-86ae-4382851ae79d/as/real-world-data-rounds-hero.jpeg"
+                        imageAlt="Real world data rounds hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/science-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Real-world data rounds out value picture of drugs"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Medical records and insurance claims data help companies, regulators, payers and physicians better understand how medicines perform in the real world.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For decades, randomized clinical trials have been the gold standard for demonstrating a potential new medicine is safe and effective.&lt;br> &lt;br> Nowadays, however, payers, policymakers and even patients are demanding more. They want to know how that drug will behave in the complex, unpredictable real world – in which patients it will be most effective, how it compares with other treatments, and which treatments are most cost effective.&lt;br> &lt;br> “Real-world evidence is saying, rather than just looking at the effects of the drug in a controlled (clinical trial) environment, let's understand what happens in actual clinical practice,” and use that to inform treatment and reimbursement decisions, says Glen Schumock, Pharm.D., Ph.D., professor and head of the Department of Pharmacy Systems, Outcomes and Policy at the University of Illinois at Chicago.&lt;br> &lt;br> That’s why biopharmaceutical companies and academic institutions increasingly are employing teams of researchers and analysts, with access to terabytes of data, to better understand how prescription drugs are being used by physicians and patients in clinics, hospitals and patients’ homes.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Randomized clinical trials remain important"
+                    titleType="h2"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>That doesn’t mean randomized clinical trials are going away. They remain the gold standard for determining whether a new drug is safe and efficacious. They are required by global regulatory bodies, including the U.S. Food and Drug Administration, the European Medicines Agency and many others for the approval of new medicines.&lt;br> &lt;br> Clinical trials are carefully designed, focusing on very specific types of patients. Those patients take their medicines according to a pre-defined schedule, attend frequent follow-up visits and have routine lab tests. This enables clinical trials to answer the questions, “is this medicine safe and effective for its intended use?”&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:76088bf2-a5f1-4a70-a501-b6b0e25bf3f9/as/real_world_body1.jpg"
+                    imageAlt="Real-world studies"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;div>Real-world studies can help us better understand how a treatment is used in everyday clinical practice.&lt;/div>&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Real-world evidence answers different questions"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Once a new medicine is approved, doctors may choose to prescribe it for patients who differ in some ways from participants in the clinical trials. They might have other health conditions besides the approved indication or disease, for example, or they might take additional medications that clinical trial participants were not allowed to take. As a result, clinical trials don’t perfectly predict what will happen in the real world. The new drug may work better in some patients than others, and patients may notice different side effects than those observed in clinical trials.&lt;br> &lt;br> That creates challenges for payers, who must decide whether to include newly approved drugs on their formularies and what co-pays to charge. The limited information from clinical trials may not be enough to make these decisions. This is where real-world evidence can play a role.&lt;br> &lt;br> “Studies using real-world data answer the question `does this drug work under actual conditions, and how does it compare to what is already available?’ ” Schumock says.&lt;br> &lt;br> Additionally, regulators and biopharmaceutical companies use real-world evidence to monitor the safety profile of prescription medicines. Such evidence can lead to label enhancements and extensions.&lt;br> &lt;br> “In the end you really need both kinds of studies. We will continue to have randomized clinical trials as the gold standard for drug development, but we also need to have these Phase 4 or comparative effectiveness or real-world evidence studies,” Schumock says.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Hunting or big data"
+                    titleType="h2"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Real-world data falls into three broad buckets:&lt;/p>&lt;p>&lt;ul> &lt;li>Clinical data, which helps evaluate a drug’s safety and effectiveness&lt;/li> &lt;li>Economic data, used to evaluate its value&lt;/li> &lt;li>Humanistic data, typically focused on quality of life measures important to patients&lt;/li> &lt;/ul>&lt;/p>&lt;p>Researchers buy much of the anonymized raw data from insurance companies, health care systems or national payers. Such systems provide significant amounts of data.&lt;br> &lt;br> That allows analysts to look for patterns by posing questions, such as “what is the value of medicine X or medicine Y?” Or “are all physicians prescribing the medication to the appropriate patients” and “what dosage is used most often?”&lt;/p>"/>
+                </block_8>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Real-world data isn't perfect"
+                    titleType="h2"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Real-world data has limitations, however. If all the patients in an insurance company’s database come from one area of the country, for example, or are of a particular socioeconomic status, the results might not apply to other areas or groups of patients.&lt;br> &lt;br> Also, most real-world data isn’t as reliable or clean as clinical trial data. It typically is collected to enable payment of insurance claims or to help doctors track an individual patient’s progress.&lt;br> &lt;br> Also, most commercial databases don’t include much quality of life or other humanistic data, “and that’s a problem,” says Jeremy Gilbert, vice president of PatientsLikeMe, an online patient social network and research platform.&lt;br> &lt;br> Most databases focus primarily on clinical data. “The patient is going to look and ask `what does this do for me? Does it help me live a longer or better life as a result?’” Gilbert adds.&lt;/p>"/>
+                </block_10>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Including patients' perspectives"
+                    titleType="h2"/>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>That’s why researchers increasingly are looking to newer, more innovative sources of data, including patient networks, to supplement traditional data sources. PatientsLikeMe uses science-based principles to collect and analyze patient-reported data from more than 400,000 members about the things that matter to them. “It puts the value of a drug in the context of a disease,&quot; Gilbert says.&lt;br> &lt;br> “We hope that there is patient-generated evidence that can be journal worthy and even find its way into regulatory submissions for new products,” Gilbert says. &quot;If we can get that trifecta of patient-generated data, outcomes data and medical records all in the mix, we'll have a really amazing real-world evidence base to use for all kinds of decisions.&quot;&lt;/p>"/>
+                </block_12>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="watch 2:30"
+                    overlayDescription="-"
+                    overlayHeading="What is Real-World Evidence?"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:7caf4c11-ad79-403d-8cbc-1c5befe13076/as/real-world-data-rounds-yt-screenshot.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="What is Real-World Evidence?"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/yuzuBChwCx8?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Freal-world-data-rounds-out-value-picture-drugs.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/real-world-data-rounds-out-value-picture-of-drugs/real-world-data-rounds-hero.jpeg"/>
+    </jcr:content>
+</jcr:root>

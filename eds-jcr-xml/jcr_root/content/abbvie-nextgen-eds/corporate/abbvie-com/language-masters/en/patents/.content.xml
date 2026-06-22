@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-08T12:11:23.416Z"
+        cq:lastModifiedBy="swatijain@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="patents"
+        jcr:uuid="939e455e-4516-459b-8fd7-5b0136481405"
+        sling:resourceType="core/franklin/components/page/v1/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-08T12:11:23.357Z"
+                jcr:lastModifiedBy="swatijain@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="large-radius">
+                <hero_container
+                    jcr:created="{Date}2026-06-05T13:35:57.652Z"
+                    jcr:createdBy="swatijain@adobe.com"
+                    jcr:lastModified="{Date}2026-06-08T12:11:01.949Z"
+                    jcr:lastModifiedBy="swatijain@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="hero-container"
+                    classes_customDynamicClass="height-default"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Hero Container">
+                    <hero_container_item
+                        jcr:created="{Date}2026-06-05T13:36:04.624Z"
+                        jcr:createdBy="swatijain@adobe.com"
+                        jcr:lastModified="{Date}2026-06-08T12:10:44.039Z"
+                        jcr:lastModifiedBy="swatijain@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        aueComponentId="hero-container-item"
+                        backgroundType="color"
+                        backgroundVariant="color"
+                        classes_customDynamicClass="navy"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant@select,image@custom-asset-namespace:custom-asset,imageMimeType@custom-asset-namespace:custom-asset-mimetype,imageAlt@text,accountId@select,playerId@text,videoId@text,text@richtext,ctaLabel@text,ctaUrl@aem-content,ctaAlt@text,classes_customDynamicClass@ngaem:dynamic-picklist]"
+                        name="Hero Container Item"/>
+                </hero_container>
+                <custom_title
+                    jcr:created="{Date}2026-06-05T13:36:29.105Z"
+                    jcr:createdBy="swatijain@adobe.com"
+                    jcr:lastModified="{Date}2026-06-05T13:36:49.091Z"
+                    jcr:lastModifiedBy="swatijain@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="custom-title"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Patent Notices"
+                    titleType="h1"/>
+                <text_container
+                    jcr:created="{Date}2026-06-05T13:38:27.075Z"
+                    jcr:createdBy="swatijain@adobe.com"
+                    jcr:lastModified="{Date}2026-06-05T13:40:42.394Z"
+                    jcr:lastModifiedBy="swatijain@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    classes_commonCustomClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-05T13:38:33.939Z"
+                        jcr:createdBy="swatijain@adobe.com"
+                        jcr:lastModified="{Date}2026-06-05T13:38:48.916Z"
+                        jcr:lastModifiedBy="swatijain@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>This web page satisfies the virtual patent marking provisions of various jurisdictions including the relevant provisions of the America Invents Act and provides the necessary notice under 35 U.S.C. § 287(a).&lt;/p>"/>
+                </text_container>
+            </section>
+            <section_1839721587
+                jcr:created="{Date}2026-06-05T13:42:00.433Z"
+                jcr:createdBy="swatijain@adobe.com"
+                jcr:lastModified="{Date}2026-06-05T13:42:00.433Z"
+                jcr:lastModifiedBy="swatijain@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                aueComponentId="section"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]">
+                <text_container
+                    jcr:created="{Date}2026-06-05T13:42:22.746Z"
+                    jcr:createdBy="swatijain@adobe.com"
+                    jcr:lastModified="{Date}2026-06-05T13:42:22.746Z"
+                    jcr:lastModifiedBy="swatijain@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-05T13:42:44.918Z"
+                        jcr:createdBy="swatijain@adobe.com"
+                        jcr:lastModified="{Date}2026-06-05T13:42:56.821Z"
+                        jcr:lastModifiedBy="swatijain@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>Certain Allergan Aesthetics, over-the-counter (OTC) and other products and their associated U.S. patents are set forth in the table below, the contents of which are subject to change due to issuance, licensing or expiration of patent rights, product changes or launches and other circumstances.&amp;nbsp; The absence of a product or a U.S. Patent number from this list does not constitute a waiver of AbbVie or Allergan’s patent, trademark, or other intellectual property rights concerning that product or patent.&lt;/p>"/>
+                </text_container>
+            </section_1839721587>
+            <grid_container
+                jcr:created="{Date}2026-06-05T13:57:13.524Z"
+                jcr:createdBy="swatijain@adobe.com"
+                jcr:lastModified="{Date}2026-06-05T13:58:21.609Z"
+                jcr:lastModifiedBy="swatijain@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                aueComponentId="grid-container"
+                filter="grid-container"
+                identifier="Grid Container"
+                language="none"
+                model="grid-container"
+                modelFields="[name@text,style_container@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                name="Grid Container"
+                style_container="grid-container"/>
+            <grid_section
+                jcr:created="{Date}2026-06-05T13:57:19.657Z"
+                jcr:createdBy="swatijain@adobe.com"
+                jcr:lastModified="{Date}2026-06-05T14:01:01.672Z"
+                jcr:lastModifiedBy="swatijain@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                aueComponentId="grid-section"
+                filter="grid-section"
+                identifier="Grid Section"
+                language="none"
+                model="grid-section"
+                modelFields="[name@text,style_container@text,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                name="Grid Section 6"
+                style_container="grid-section"
+                style_customDynamicClass="grid-cols-6">
+                <text_container
+                    jcr:created="{Date}2026-06-05T14:20:52.731Z"
+                    jcr:createdBy="swatijain@adobe.com"
+                    jcr:lastModified="{Date}2026-06-05T14:20:52.731Z"
+                    jcr:lastModifiedBy="swatijain@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-05T14:21:00.266Z"
+                        jcr:createdBy="swatijain@adobe.com"
+                        jcr:lastModified="{Date}2026-06-05T14:21:00.266Z"
+                        jcr:lastModifiedBy="swatijain@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat consequat dui, sit amet ..."/>
+                </text_container>
+            </grid_section>
+            <grid_section_12720331
+                jcr:created="{Date}2026-06-05T13:57:19.657Z"
+                jcr:createdBy="swatijain@adobe.com"
+                jcr:lastModified="{Date}2026-06-05T14:01:15.124Z"
+                jcr:lastModifiedBy="swatijain@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                aueComponentId="grid-section"
+                filter="grid-section"
+                identifier="Grid Section"
+                language="none"
+                model="grid-section"
+                modelFields="[name@text,style_container@text,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                name="Grid Section 6"
+                style_container="grid-section"
+                style_customDynamicClass="grid-cols-6"/>
+        </root>
+    </jcr:content>
+</jcr:root>

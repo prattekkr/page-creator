@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-06-16T12:32:10.109Z"
+        cq:lastModifiedBy="migration"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Eye Care"
+        jcr:uuid="16810c96-8bbc-481c-828e-4ddfd79f9eb5"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardTitle="Eye Care Stories"
+        hideFromNavigation="true"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Eye Care">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="large-radius,no-bottom-margin">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-short,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-16T12:13:07.087Z"
+                        jcr:lastModifiedBy="tgupta@abbvie.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="color"
+                        classes_customDynamicClass="purple"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="\0"
+                        imageAlt="\0"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant@select,image@custom-asset-namespace:custom-asset,imageMimeType@custom-asset-namespace:custom-asset-mimetype,imageAlt@text,accountId@select,playerId@text,videoId@text,text@richtext,ctaLabel@text,ctaUrl@aem-content,ctaAlt@text,classes_customDynamicClass@ngaem:dynamic-picklist]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="back-cta"
+                    ctaTarget="_self"
+                    iconFont="\0"
+                    iconImage="\0"
+                    iconPosition="after"
+                    iconVariation="none"
+                    language="none"
+                    link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories"
+                    linkAriaLabel="\0"
+                    linkText="All stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Eye Care Stories"
+                    titleType="h1"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Blindness and vision loss impact over 1 billion people around the world. From our first discovery in 1948 at Allergan, now part of AbbVie, see how our scientists are building on a legacy of preserving and protecting vision.&lt;/p>"/>
+                </block_3>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="container-xx-large,section-padding,no-top-padding">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="cols-2-8-2"
+                    filter="inner-grid"
+                    language="none"
+                    model="inner-grid"
+                    modelFields="[name,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Inner Grid"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaLabel="\0"
+                    blockId="\0"
+                    browseCategoriesPlaceholder="\0"
+                    categoryTags="[corporate:abbvie-com-2/categories/eye-care-stories]"
+                    classes="\0"
+                    classes_commonCustomClass="col-2"
+                    filter="editorial-feed"
+                    hideDate="false"
+                    hideDescription="false"
+                    hideFilters="true"
+                    hideImage="false"
+                    hideTags="false"
+                    language="none"
+                    listSource="category-tag"
+                    match="any"
+                    model="editorial-feed"
+                    modelFields="[listSource,parentPage,hideDescription,hideTags,hideImage,hideDate,hideFilters,categoryTags,match,storyPagesToExclude,browseCategoriesPlaceholder,searchPlaceholder,searchIconVariant,searchFontIcon,searchImageIcon,ariaLabel,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Editorial Feed"
+                    parentPage="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories"
+                    searchFontIcon="\0"
+                    searchIconVariant="none"
+                    searchImageIcon="\0"
+                    searchPlaceholder="\0"
+                    storyPagesToExclude="\0"/>
+            </section_1>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

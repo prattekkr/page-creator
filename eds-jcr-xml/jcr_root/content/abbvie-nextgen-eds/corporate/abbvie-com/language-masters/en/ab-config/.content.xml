@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-05-18T11:33:12.532Z"
+        cq:lastModifiedBy="hay15584@adobe.com"
+        cq:lastReplicated="{Date}2026-05-11T20:41:12.220Z"
+        cq:lastReplicated_publish="{Date}2026-05-11T20:41:12.220Z"
+        cq:lastReplicatedBy="campbell.john@abbvie.com"
+        cq:lastReplicatedBy_publish="campbell.john@abbvie.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_preview="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="abbvie config"
+        jcr:uuid="229ba2d8-03dc-4034-915e-1ace26226c61"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Key,Value]"
+        hideInNav="{Boolean}true">
+        <row_1773234386847
+            jcr:primaryType="nt:unstructured"
+            Key="cfBaseUrl"
+            Value="/graphql/execute.json/abbvie-com2/dashboardCardByPath;path="/>
+        <row_1774862281254
+            jcr:primaryType="nt:unstructured"
+            Key="gtm-id"
+            Value="GTM-TGXMQFF"/>
+        <row_1775801673393
+            jcr:primaryType="nt:unstructured"
+            Key="cfFactsBaseUrl"
+            Value="/graphql/execute.json/abbvie-com2/dashboardCardFactFragmentByPath;path="/>
+        <row_1776336548442
+            jcr:primaryType="nt:unstructured"
+            Key="stock-ticker-url"
+            Value="https://stock-ticker.abbvie-sandbox-309.workers.dev/"/>
+        <row_1778660672817
+            jcr:primaryType="nt:unstructured"
+            Key="cfPipelineDeviceBaseUrl"
+            Value="/graphql/execute.json/abbvie-com2/devicePipelines;rootPath="/>
+        <row_1778660728115
+            jcr:primaryType="nt:unstructured"
+            Key="cfPipelinePharmaBaseUrl"
+            Value="/graphql/execute.json/abbvie-com2/allpipelines;rootPath="/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-04T07:14:35.919Z"
+        cq:lastModifiedBy="indranih@adobe.com"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="warn-on-departure"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[allowedDomains,reverseMapping]"
+        hideInNav="{Boolean}true">
+        <row_1780557141413
+            jcr:primaryType="nt:unstructured"
+            allowedDomains="humira.com"
+            reverseMapping="false"/>
+        <row_1780557265008
+            jcr:primaryType="nt:unstructured"
+            allowedDomains="rinvoq.com"/>
+        <row_1780557275918
+            jcr:primaryType="nt:unstructured"
+            allowedDomains="skyrizi.com"/>
+    </jcr:content>
+</jcr:root>

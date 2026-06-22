@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:00.782Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/company-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Learn how AbbVie’s distribution systems, data-driven forecasting and sustainability initiatives help patients get life-changing treatments on time."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie’s Resilient Global Distribution Network Helps Prevent Drug Shortages"
+        jcr:uuid="7a7784d9-612a-46bc-8332-6e0ec0530fbe"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Learn how AbbVie’s distribution systems, data-driven forecasting and sustainability initiatives help patients get life-changing treatments on time."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/global-supply-chain/global-supply-chain-hero.jpg"
+        cardTitle="How AbbVie's Integrated Operations Help Prevent Drug Shortages"
+        ctaAltText="Read story"
+        ctaText="Read story"
+        hideFromNavigation="true"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="AbbVie’s Resilient Global Distribution Network Helps Prevent Drug Shortages"
+        publicationDate="September 04, 2025"
+        readWatchTime="read-time"
+        storyReadTime="3">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:f59c2532-2baa-4f65-b96e-4676fc35b433/as/global-supply-chain-hero.jpg"
+                        imageAlt="global supply chain hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/company-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Behind Every Product: How AbbVie's Integrated Operations Help Prevent Drug Shortages"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Advanced planning systems, robust manufacturing capabilities and strategic redundancies help ensure patients worldwide receive life-changing medications.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For patients with diseases that interfere with their daily lives, like a father who wasn't sure he could attend his daughter's wedding due to his Parkinson's disease, receiving medication on time isn't just convenient. It's life-altering. Behind every treatment lies AbbVie's sophisticated global operations network designed with one uncompromising purpose: ensuring patients never miss a critical dose.&lt;/p>&lt;p>&quot;Our goal is to ensure our patients never go without the medicines they depend on,” said Azita Saleki-Gerhardt, AbbVie EVP, Chief Operations Officer. &quot;One of our fundamental pillars of operations is assurance of supply and we have a comprehensive, multi-layered approach designed to meet the needs of patients, even in unpredictable or unforeseen circumstances. Our manufacturing sites and distribution centers are strategically located so that critical products and components are manufactured at multiple geographically diverse sites operating with resilient and redundant systems.”&lt;/p>&lt;p>In an industry where drug shortages globally have become an increasing public health concern, AbbVie's strategic, cross-functional approach to assurance of supply has become even more important. For patients, drug shortages pose a serious threat that can delay, and in some cases even prevent, critically needed care.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="A Zero-Fail Mission"
+                    titleType="h2"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&quot;We have to supply our patients with the medicines they need – it's a zero-fail mission,&quot; says Marc J. O'Donoghue, VP of Supply Chain, AbbVie. &quot;Even in markets facing significant challenges, we look at how we can divert products under special dispensation to ensure patients get their treatments.”&lt;/p>&lt;p>This patient-first mindset drives AbbVie's holistic approach to Operations, which has been tested by everything from a global pandemic and canal blockages to airspace closures due to regional conflicts.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Robust Manufacturing Network"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Since AbbVie delivers vital lifesaving medicines to patients, building and maintaining a stable, prepared and resilient supply chain is vital. Under its assurance of supply program, AbbVie has developed a robust and diversified global operations network that is platform-based and end-to-end, characterized by geographic balance, multiple supply sites, an inventory strategy, risk prevention, crisis management and real-time monitoring.&lt;/p>&lt;p>Manufacturing sites and distribution centers are strategically located so that critical products and components are produced at multiple, geographically diverse sites that operate with resilient and redundant systems.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Early Warning Systems Prevent Shortages"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>By implementing and maintaining robust quality controls from end to end, patients, customers and regulators can rely on AbbVie to deliver a consistent supply of innovative, safe and effective products.&lt;/p>&lt;p>AbbVie's Quality Assurance team provides global product quality oversight and continuous improvement across the supply chain and product lifecycle. The company strives to deliver a best-in-class Quality System for products across the lifecycle, requiring a robust and effective governance structure, supported by tools, technology and training.&lt;/p>&lt;p>At AbbVie, quality is everyone’s responsibility. Kevin Fitzpatrick, AbbVie SVP of Quality Assurance, says, “We hold ourselves to the highest standards of quality and safety. By implementing and maintaining robust quality controls from end to end, our patients, customers and regulators can rely on us to deliver a consistent supply of innovative, safe and effective products.”&lt;/p>&lt;p>AbbVie employs multiple systems to detect potential supply disruptions before they impact patients. These range from long-range planning that forecasts demand years in advance to monthly supply meetings that analyze real-time sales performance.&lt;/p>&lt;p>&quot;We assess the current capacity and capabilities of our manufacturing sites regularly and analyze the forecasts for production volumes on a monthly basis,&quot; O'Donoghue explains. To maintain assurance of supply, Operations is responsible for end-to-end management of the product lifecycle.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:fb3490eb-ab9f-4cfc-acd0-12078bf88f72/as/supply-chain-infographic-final.svg?dpr=1"
+                    imageAlt="supply chain infographic"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Redundancy by Design"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>When global supply chains faced unprecedented strain in the past, AbbVie reinforced redundancies throughout its supply chain, global manufacturing and distribution network.&lt;/p>&lt;p>&quot;Having a network that creates redundancy and flexibility to move materials around is essential,&quot; says Patrick J. Kenefick, AbbVie's VP of Global Distribution &amp;#x26; Central Services. &quot;When natural disasters or geopolitical events occur, we move material from affected warehouses to other hubs, effectively nullifying the risk.&quot;&lt;/p>&lt;p>To supply medicines, AbbVie purchases raw materials from multiple sources to support manufacturing facilities spread across different geographical regions. This allows the company to distribute products to patients, regardless of what happens in a particular location.&lt;/p>&lt;p>AbbVie constantly monitors and assesses the supply chain to proactively reduce a range of sustainability risks, from climate change and extreme weather events to geopolitical situations.&lt;/p>&lt;p>The company’s risk-averse approach to delivering quality raw materials, services and products on time involves the Global Security team, as well as other functions such as Procurement and Supply Chain, constantly monitoring events and escalating any emergencies that may require an immediate response. When disruptions occur, AbbVie can quickly switch between air and sea freight or find alternative routes through established partnerships with global carriers.&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Data-Driven Decision Making"
+                    titleType="h2"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Statistical forecasting now drives a significant portion of AbbVie's product planning. While human oversight remains important, automated systems that analyze historical performance help predict future needs more accurately.&lt;/p>&lt;p>For new medication launches, AbbVie applies data from similar previous launches to better anticipate demand. This proved crucial during the European launch of a medication for Parkinson's disease, where demand exceeded initial forecasts.&lt;/p>&lt;p>&quot;Within three days of getting the medication to one patient in the U.S., he wasn't just planning to attend his daughter's wedding — he was out buying sneakers to go running again,&quot; O'Donoghue recalls.&lt;/p>&lt;p>As AbbVie looks ahead, investments in digital control towers will further enhance visibility and responsiveness. &quot;When something happens downstream, it triggers notifications further upstream through our planning systems,&quot; says Kenefick, describing how a disruption will soon automatically initiate contingency plans throughout the supply chain.&lt;/p>&lt;p>AbbVie's comprehensive, multi-layered Assurance of Supply program is designed to meet the needs of patients, prescribers, health care facilities and public health authorities, even in unpredictable or unforeseen circumstances. AbbVie's Quality Assurance organization also has a dedicated team responsible for preventing, identifying, triaging, mitigating and notifying regulators of potential drug shortages.&lt;/p>&lt;p>For the millions of patients who depend on AbbVie medications daily, these behind-the-scenes efforts are designed to ensure their treatment remains uninterrupted, regardless of global challenges.&lt;/p>&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_11>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

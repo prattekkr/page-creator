@@ -1,0 +1,128 @@
+{
+  "id": "related-content-left-with-accordion-in-center",
+  "title": "Related Content Left With Accordion in Center",
+  "description": "",
+  "icon": "⊞",
+  "section": {
+    "type": "grid-container",
+    "props": {
+      "language": "none",
+      "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+      "style_container": "grid-container",
+      "style_customDynamicClass": "content-regular",
+      "style_contentWidth": "content-wide",
+      "cq:lastRolledoutBy": "gra08388@adobe.com"
+    },
+    "blocks": [
+      {
+        "type": "grid-section",
+        "props": {
+          "language": "none",
+          "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-cols-2",
+          "cq:lastRolledoutBy": "gra08388@adobe.com"
+        },
+        "children": [
+          {
+            "type": "eyebrow-text",
+            "props": {
+              "language": "none",
+              "classes_customDynamicClass": "regular-font,divider",
+              "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+              "text": "<p><strong>Related content</strong></p>",
+              "cq:lastRolledoutBy": "gra08388@adobe.com"
+            },
+            "children": []
+          },
+          {
+            "type": "story-card",
+            "props": {
+              "hideRole": false,
+              "language": "none",
+              "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+              "hidePublicationDate": false,
+              "imageAlt": "AbbVie scientist",
+              "hideReadTime": false,
+              "imageMimeType": "image/jpeg",
+              "page": "/content/abbvie-nextgen-eds/corporate/abbvie-com/us/en//sustainability/environmental-social-and-governance",
+              "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:e03c1f1c-a951-4521-89db-80af07486398/as/bts-evan-thumbnail.jpg",
+              "title": "Our mission to improve lives starts at the top.",
+              "storyCardType": "leaderInfo",
+              "hideImage": false,
+              "hideDescription": false,
+              "cq:lastRolledoutBy": "gra08388@adobe.com",
+              "storyCardVariant": "sidePanel",
+              "openInNewTab": false
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "language": "none",
+          "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-cols-1",
+          "cq:lastRolledoutBy": "gra08388@adobe.com"
+        },
+        "children": []
+      },
+      {
+        "type": "grid-section",
+        "props": {
+          "language": "none",
+          "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+          "style_container": "grid-section",
+          "style_customDynamicClass": "grid-cols-7",
+          "cq:lastRolledoutBy": "gra08388@adobe.com"
+        },
+        "children": [
+          {
+            "type": "custom-title",
+            "props": {
+              "titleType": "h2",
+              "language": "none",
+              "classes_customDynamicClass": "medium-weight,h3-size",
+              "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+              "title": "Ethics & compliance",
+              "cq:lastRolledoutBy": "gra08388@adobe.com"
+            },
+            "children": []
+          },
+          {
+            "type": "text-container",
+            "props": {
+              "language": "none",
+              "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+              "cq:lastRolledoutBy": "gra08388@adobe.com"
+            },
+            "children": []
+          },
+          {
+            "type": "accordion",
+            "props": {
+              "collapseAllIcon": "minus",
+              "language": "none",
+              "classes_iconType": "accordion-icon-font",
+              "classes_customDynamicClass": "h5-size,align-center,cmp-accordion-large",
+              "cq:lastRolledout": "Fri Jun 19 2026 06:28:01 GMT+0000",
+              "collapseAllLabel": "Collapse All",
+              "expandAllIcon": "plus",
+              "classes_allowMultipleOpen": true,
+              "blockHeading": "focus areas",
+              "expandAllLabel": "Expand All",
+              "expandIcon": "plus",
+              "cq:lastRolledoutBy": "gra08388@adobe.com",
+              "classes_showExpandCollapseAll": true,
+              "collapseIcon": "minus"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

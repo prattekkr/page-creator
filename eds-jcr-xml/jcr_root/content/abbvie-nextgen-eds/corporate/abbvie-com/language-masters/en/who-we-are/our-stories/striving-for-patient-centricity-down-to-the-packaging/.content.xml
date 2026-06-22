@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:10.565Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/science-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Striving for patient centricity, down to the packaging"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/striving-patient-centricity-hero.jpg"
+        cardTitle="Striving for patient centricity, down to the packaging"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/ content/dam/abbvie-com2/images/stories/striving-patient-centricity-hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Striving for patient centricity, down to the packaging"
+        publicationDate="August 08, 2018"
+        readWatchTime="read-time"
+        storyReadTime="4">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:0ce56fa0-c267-485a-aac9-17e0247ef0b7/as/striving-patient-centricity-hero.jpg"
+                        imageAlt="striving patient centricity"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/science-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Striving for Patient Centricity, Down to the Packaging"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Understand the future of packaging and how it’s evolving to be more about the patient.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>People have enough to worry about when living with a chronic or life-threatening disease. They shouldn’t have to struggle to open a box or bottle for their medication, question if they are taking the right medicine at the right time and the right amount, or draw attention to themselves with a bulky container.&lt;/p>&lt;p>Listening to their pain points, getting feedback and modifying packaging presentations to meet their needs is a critical component to helping people and, in many cases, caregivers, live with their disease. AbbVie and others in the pharmaceutical industry have evolved packaging practices during the past 10 years, turning what historically was simply a repository for medicine to an important enabler of treatments. The days where all medicine bottles are the same, is becoming a thing of the past.&lt;/p>&lt;p>“For us, packaging has evolved from being less about what’s good for distribution and more about what’s best for the patient,” says James Hughes, director, packaging and device center of excellence, AbbVie. “Our intent is to put the patient first when it comes to the design of our packaging.”&lt;/p>&lt;p>“It’s really about being tapped in to what patients want from listening to market research provided by patient advocacy groups, clinical trial feedback, direct comments from patients, to learning through senior-friendly and child resistance testing,” Hughes says.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="James Hughes"
+                    attributionRole="Director, Packaging and Device Center of Excellence, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Simple changes in design packaging can sometimes make a huge difference for our patients.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>“Our own human factors testing has become a large and valuable source of feedback, where the patient voice is directly influencing package designs,” he adds. “This enables us to better understand situations relating to their diseases, and/or challenges they may have with taking their therapy, we use this information to design packaging solutions to really make a positive impact.”&lt;/p>&lt;p>Many things go into making sure patients feel comfortable with the packaging for their treatments. Making the packaging easy to open for people with dexterity issues, providing directions that are simple to follow and being visually appealing are just a few criteria critical for designing effective packaging. Or just providing smaller containers so they aren’t as noticeable when carrying in your purse or that don’t take up too much space in the refrigerator. “Simple changes in design packaging can sometimes make a huge difference for our patients,” Hughes says.&lt;/p>&lt;p>Cindy T. McDaniel, senior vice president Consumer Health &amp;#x26; Impact, Arthritis Foundation, says they often hear from their constituents that difficult-to-open packaging and difficult-to-use products create significant challenges in daily living.&lt;/p>&lt;p>“We applaud manufacturers who are working to make their products and packaging easier for people with arthritis to use,” McDaniel says. “For pharmaceutical products, we hope this more accessible packaging will enhance ease of use and improve patient adherence.”&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:bde5784c-98fe-4b79-8428-62a304f54594/as/future_of_packaging.jpg?dpr=1"
+                    imageAlt="future of packaging"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Packaging for safety, security"
+                    titleType="h2"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Beyond keeping in mind patient needs or comfort, treatments require packaging that delivers complete product protection so that the quality of the medicine inside is never at risk. Innovations happening with the treatments themselves directly impact the packaging needed.&lt;/p>&lt;p>With the ever evolving treatments available, many need added protection so they are safe and viable when they reach patients. “We work closely with our research and development team to make sure we’re developing the appropriate packaging for our treatments, including protecting from moisture, oxygen, light or more,” Hughes adds. “All to be sure the treatments make it to our patients as intended.”&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="At the forefront of packaging for the future"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>“As treatments become more specialized or personalized, packaging design will only increase in importance. In addition, RFID (Radio-Frequency Identification), Bluetooth technology and smart packaging will become more prevalent so we’re better able to track and secure our treatments on the way to patients,” Hughes says. Using updated technology will also help with counterfeit prevention.&lt;/p>&lt;p>Besides patient-centric solutions and the potential of new technology, decreasing waste is an important consideration for the future of packaging overall. It’s important to use the best materials for being recyclable, light weight and durable, all the while making sure it meets our patients’ needs.&lt;/p>&lt;p>“To understand what’s up and coming in packaging, we take cues from the consumer goods packaging industry, participate in industry forums and benchmark with peer companies and suppliers,” Hughes says.&lt;/p>&lt;p>And top of mind is always patients. “We’re constantly looking at what we can do better,” Hughes says. “Patients’ journeys are difficult enough. Packaging is just one way we can help them on that journey.”&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Email: &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_8>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/%20content/dam/abbvie-com2/images/stories/striving-patient-centricity-hero.jpg"/>
+    </jcr:content>
+</jcr:root>

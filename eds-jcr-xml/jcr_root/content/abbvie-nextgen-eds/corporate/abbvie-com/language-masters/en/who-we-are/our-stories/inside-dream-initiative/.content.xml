@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:02.736Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/aesthetics-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Inside The DREAM Initiative"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/dream-initiative-hero_2880x1620.jpg"
+        cardTitle="Inside The DREAM Initiative"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/dream-initiative-hero_2880x1620.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Inside The DREAM Initiative"
+        publicationDate="September 28, 2022"
+        readWatchTime="read-time"
+        storyReadTime="3">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1cf53ca8-bea2-40ef-af2a-e0793c6ad7f3/as/dream-initiative-hero_2880x1620.jpg"
+                        imageAlt="Four women in a row"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/aesthetics-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Inside the DREAM Initiative®"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Why we’re reimagining beauty standards in the aesthetics industry.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Understanding inclusive and representative beauty"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>When Simone Hopes started her career in the medical aesthetics field, she didn’t find many other physician assistants or providers who looked like her: a woman of color with a round face, bold features and unique skin care needs.&lt;br> &lt;br> And that meant that those providers may not be equipped to understand and treat her and other people of different ethnic backgrounds and skin types. For Hopes, this realization sparked a journey for her to eventually open her own inclusive aesthetics practice, where she works to erase unrealistic beauty standards and instead help people enhance their natural look.&lt;br> &lt;br> “Our nation’s demographics are becoming increasingly more diverse, and the beauty industry hasn’t grasped that concept yet,” Hopes says. “The concept of beauty, the perception of beauty and the standard of beauty has been the same since before I can remember.”&lt;br> &lt;br> Hopes’ personal experience and perceptions are mirrored in findings from a recent DREAM: Driving Racial Equity in Aesthetic Medicine® Forces of Beauty® &lt;a href=&quot;https://www.dreamforequity.com/&quot;>report&lt;/a> focused on the unique dynamic between racial/ethnic diversity and beauty in the U.S. The study was fielded by Allergan Aesthetics, part of AbbVie, and in partnership with skinbetter science®, with 4,000 female and non-binary respondents representing different ethnicities, ages and backgrounds. Hopes is an ambassador with the DREAM Initiative®.&lt;br> &lt;br> Key results from the study include:&lt;/p>&lt;p>&lt;ul> &lt;li>Nearly a quarter (22%) of women believe there are stigmas around beauty related to their race, culture and/or religion – this is especially true among Black women (34%) and Hispanic women (23%).&lt;/li> &lt;li>33% of multiracial and 31% of Caucasian women did not grow up feeling beautiful; nearly all of these respondents said unrealistic and unattainable beauty standards set by the media drove their beauty insecurities.&lt;/li> &lt;li>The change women most want in the beauty industry is “real women in beauty and advertising” (38%).&lt;/li> &lt;/ul>&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 3:24"
+                    overlayDescription="Forces of Beauty® - A Lens Into Inclusivity in Aesthetics"
+                    overlayHeading="The DREAM Initiative®"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:14991da3-3f91-4ba1-9b92-3bbccfc9c019/as/dream-initiative-video-thumbnail.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="The DREAM Initiative® | Forces of Beauty® - A Lens Into Inclusivity in Aesthetics"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/T_up1joThrA?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Finside-dream-initiative.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Turning results into action"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The ongoing DREAM Initiative® and action plan includes a broader commitment to furthering the principles of racial and ethnic diversity, inclusion, respect, and understanding in the field.&lt;/p>&lt;p>Facilitating the Forces of Beauty® report serves as a foundational step in understanding how women think about inclusive and representative beauty.&lt;/p>&lt;p>The study highlighted the need for better representation in media, resulting in the DREAM Initiative’s® new collection of thousands of royalty-free stock images with hundreds of real women from all walks of life. In partnership with Shutterstock Studios, these images are now available and accessible to all.&lt;/p>&lt;p>“Historically, the industry hasn’t included all women in its definition of beauty,” says Carrie Strom, senior vice president, AbbVie, and president, Global Allergan Aesthetics. “As industry leaders, our goal is to create a more equitable beauty and aesthetics industry that focuses on diversity, representation, and inclusion. That is what Forces of Beauty® is about, impacting change and creating a space where the origins of beauty are honored, the definition of beauty is vastly expanded upon, and where uniqueness is the standard.”&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:a8e9257a-97d1-4a4e-8ea1-a971c90f88bf/as/simone-hopes-headshot.jpg"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Simone Hopes"
+                    attributionRole="PA-C, DREAM Initiative® ambassador"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>There is no one standard of beauty, no cookie cutter, one-size-fits-all. Once we stop imagining the world to be that place, it'll become more inclusive.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Equipping physicians with tools and training"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Allergan Aesthetics and skinbetter science® have also endorsed and are supporting the rollout of two educational initiatives for physicians.&lt;/p>&lt;p>The first, Curriculum for Advancing Racial Equity (CARE) is designed to equip physicians with the tools and knowledge to recognize and address racism in medicine. Developed specifically for dermatology and plastic surgery residency programs, the curriculum consists of five virtual workshops.&lt;/p>&lt;p>Topics covered in the curriculum include identity, power and privilege, microaggressions and bias, structural racism, and institutional racism in healthcare.&lt;/p>&lt;p>The American Academy of Dermatology and other leading dermatology societies are supporting the curriculum’s inaugural implementation in five highly regarded dermatology residency programs.&lt;/p>&lt;p>The second tool for physicians is a unique full-color atlas called The Full Spectrum of Dermatology: A Diverse and Inclusive Atlas. This tool is intended to visually teach dermatologists, dermatology residents, and other clinicians to recognize various skin conditions in different skin tones.&lt;/p>&lt;p>Leaders from academic dermatology and education have joined together to create this comprehensive atlas that will help to address what has become a well-documented gap in dermatology education. This tool is intended to help dermatologists, dermatology residents, and other clinicians recognize and diagnose various skin conditions in different skin tones.&lt;/p>&lt;p>Hopes believes that increased education will help aesthetics providers have open, honest conversations about how they can better serve clients.&lt;/p>&lt;p>“It’s recognizing that it’s time for a change, that there is no standard of beauty, no cookie cutter, one-size-fits-all,” Hopes says. “Once we stop imagining the world to be that place, it’ll become more inclusive.”&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Email: &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_8>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related Content&lt;/p>"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/magnified-featuring-darin-messina"
+                    storyCardVariant="sidePanel"/>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/dream-initiative-hero_2880x1620.jpg"/>
+    </jcr:content>
+</jcr:root>

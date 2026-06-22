@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:14.351Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/science-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="In oncology, immunology, virology and beyond, researchers strive to turn breakthrough science into new medicines. See how in AbbVie’s Discovery Files series."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="What does it take to discover a new medicine?"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="In oncology, immunology, virology and beyond, researchers strive to turn breakthrough science into new medicines. See how in AbbVie’s Discovery Files series."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/discoveryfiles-hero.jpg"
+        cardTitle="What does it take to discover a new medicine? "
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        hideFromNavigation="true"
+        image="/ content/dam/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/ discoveryfiles-hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="What does it take to discover a new medicine? "
+        publicationDate="June 17, 2023"
+        readWatchTime="read-time"
+        storyReadTime="5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ea3a2baf-9479-4db3-ae1a-cc420889c6da/as/discoveryfiles-hero.jpg"
+                        imageAlt="What does it take to discover a new medicine?"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/science-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="What does it take to discover a new medicine?"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Discovery Files: An inside look at why we persevere in the lab every day&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Turning science into breakthrough medicines"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>From blood cancers to Hepatitis C virus, our Discovery Files series reveals how we create new possibilities for patients turning breakthrough science into new medicines.&lt;/p>&lt;p>These scientific scenarios may seem distinctly different, but they have one thing in common: After years of perseverance, scientists reached a “eureka” moment in the lab that helped make a molecule a reality to form the basis of a transformative medicine. Now, a new documentary series – The Discovery Files — reveals the behind-the-scenes stories that resulted in these pivotal moments.&lt;/p>&lt;p>Discovery science can be a long, arduous process, plagued by a high failure rate. But the Discovery Files episodes demonstrate the tenacity, rigor and out-of-the-box thinking of AbbVie scientists as they chase bold goals to help patients get the solution they need, every single day.&lt;/p>&lt;p>Part of what drives AbbVie scientists is the core purpose and aspiration of our company’s robust discovery research group: to turn science into cures.&lt;/p>&lt;p>“We are not interested in therapies that are iterative in their benefit for patients. Rather we aim to invent breakthrough medicines,” says Jonathon Sedgwick, VP &amp;#x26; global head of discovery research, AbbVie. “That comes with many years of experimenting, failing, learning, but always persisting, to find therapies that are truly impactful.”&lt;/p>&lt;p>Though we strive for “cures”, these remain elusive. However, AbbVie scientists always aim to elevate the standard of care, aspiring to have the majority of AbbVie’s medicines considered first-in-kind, meaning they target a novel disease pathway or use a new or unique therapeutic modality that provides benefit for patients.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 2:33"
+                    overlayDescription="-"
+                    overlayHeading="Discovery Files: The Eureka Moment Behind a Scientific Discovery"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:5d29b958-c829-4505-bcc9-dec5192adde1/as/discoveryfiles-mitchel-yt.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="Discovery Files: The Eureka Moment Behind a Scientific Discovery"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/45GzoyuWP2I?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fwhat-does-it-take-to-discover-a-new-medicine.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Motivated by patient impact"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Scientists aren’t satisfied by the status quo, especially when they know a better option may be possible, according to longtime cancer researcher Andy Souers, Ph.D., a distinguished research fellow within AbbVie’s oncology discovery research team. Souers and his team are behind a blood cancer discovery featured in the second episode of “Discovery Files”, which targets a family of proteins many in the pharmaceutical industry previously considered “undruggable.” The drive to find another option beyond chemotherapy for people with certain kinds of leukemias motivated the team to keep experimenting for years before ultimately finding their “eureka” moment.&lt;/p>&lt;p>“One huge advantage we had was this culture at AbbVie, which basically allowed us to do any sort of exploration we needed to reach the objective,” Souers explains in the episode.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Seble Wagaw"
+                    attributionRole="VP, development sciences, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>The journey showed us that we have the capability and the drive to keep working every day to discover and develop new treatments for people who need them.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The same patient drive, across disease areas"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Visit any AbbVie lab or research hub and you’ll hear similar stories, whether it’s from immunology scientists chasing a better way to treat different autoimmune diseases or practicing physicians searching for new medicines that could help relieve devastating movement disorders.&lt;/p>&lt;p>“Discovery Files” examines how these teams stay motivated and use creativity and persistence to create patient impact.&lt;/p>&lt;p>In episode three, for example, we meet an AbbVie virology team on a quest to end Hepatitis C virus (HCV) infection, a prevalent disease &lt;a href=&quot;https://www.who.int/en/news-room/fact-sheets/detail/hepatitis-c&quot;>affecting about 58 million people worldwide&lt;/a>.&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 4:24"
+                    overlayDescription="-"
+                    overlayHeading="Discovery Files: Hepatitis C Virus"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:291c562f-6fee-425f-9207-2023c490e566/as/discoveryfiles-hepatitis-c-virus-yt.png"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="Discovery Files Hepatitis C Virus"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/rMy4Bo6Go7U?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=2&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fwhat-does-it-take-to-discover-a-new-medicine.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Building off their own research around HIV, the team aimed to find a way to stop the virus from replicating, lowering the viral load in the body and blocking proteins necessary for the virus’ survival. But the journey didn’t end there – it took years and many iterations until the real “aha” moment; the team had to work counter-intuitively, building molecules larger instead of smaller and targeting all major HCV genotypes instead of just some.&lt;/p>&lt;p>The stories of the Discovery Files series demonstrate that “good enough” is never good enough, for those at AbbVie searching for tomorrow’s scientific breakthroughs. One of the series’ featured scientists, Seble Wagaw, VP, development sciences, AbbVie, explains it best. “The journey show(s) us that we have the capability and the drive to keep working every day to discover and develop new treatments for people who need them.”&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Email: &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_10>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related Content&lt;/p>"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/discovery-files-vision-for-blood-cancer-patients"
+                    storyCardVariant="sidePanel"/>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/%20content/dam/abbvie-com2/images/stories/what-does-it-take-to-discover-a-new-medicine/%20discoveryfiles-hero.jpg"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-21T23:55:45.183Z"
+        cq:lastModifiedBy="gra08388@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/patient-support-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="3 ways AbbVie helps patients overcome challenges so they can get their prescribed medications"
+        jcr:lastModified="{Date}2026-06-21T23:55:45.160Z"
+        jcr:lastModifiedBy="gra08388@adobe.com"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="How AbbVie makes medications more accessible"
+        jcr:uuid="920e1eaf-6be3-4f9f-95b0-e10a50cffe34"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="3 ways AbbVie helps patients overcome challenges so they can get their prescribed medications"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/living-with-an-illness-is-hard/living-with-an-illness-hero.jpg"
+        cardTitle="Living with an illness is hard. Getting your medicine shouldn’t be"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        hideFromNavigation="true"
+        image="/content/ dam/abbvie-com2/images/stories/living-with-an-illness-is-hard/living-with-an-illness-hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="Living with an illness is hard. Getting your medicine shouldn’t be"
+        publicationDate="January 29, 2026"
+        readWatchTime="read-time"
+        storyReadTime="6"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:62f02e72-f56d-4368-b377-4f94b08c3666/as/living-with-an-illness-hero.jpg"
+                        imageAlt="living with an illness hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/patient-support-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="3 Ways AbbVie Makes Breakthrough Medicines More Accessible"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Explore how we’re helping patients get their prescribed treatments through our innovative patient programs.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>After a medical diagnosis, patients often find themselves on a unique journey. The first step is to work with their healthcare provider to decide the right treatment. Next comes figuring out how to access the medicine that’s right for them. Can they afford it? Do they need to go to a specialty pharmacy to get it? Is there a copay card or coupon that can help?&lt;/p>&lt;p>Along the way, patients must navigate an insurance landscape that is both complex and ever evolving. Some patients might also be dealing with changes in their own lives. For example, a new job or other life event can impact their insurance coverage or ability to pay for medication. There’s also the physical and emotional impact of a new diagnosis to consider.&lt;/p>&lt;p>All these factors can make the process of getting medications stressful. But the good news is, it doesn’t have to be.&lt;/p>&lt;p>AbbVie offers a variety of support resources and programs to help eligible patients access, manage and adhere to their prescribed treatment plan. This includes helping patients understand health information, how to use their medicines and, when questions or issues arise, how to speak with their physician.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:fc59b591-f96c-4e99-8c44-ec41676d219d/as/living-with-an-illness-infographic.jpg"
+                    imageAlt="living with an illness infographic"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>“I understand the medication. I understand how to use it. I understand the cost,” said an Illinois patient enrolled in an AbbVie support program. “I don't have any anxiety going into my treatment or taking my medicine or changing medication, because I've been so well supported along the way.”&lt;/p>&lt;p>AbbVie also has a variety of financial solutions for patients who are insured, underinsured or not insured. Continue reading to learn about some of the ways AbbVie helps patients get the medication they need.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Alexander Williams"
+                    attributionRole="Director, copay center of excellence, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>We often hear from patients who may not get their medication on time. Many of them are scared and frustrated. When we can help, our teams can hear the relief in their voice.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Savings cards to reduce out-of-pocket expenses"
+                    titleType="h2"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Treatments covered by insurance vary among providers and can change every year. As a result, some patients might find that medication previously covered by their insurance is no longer covered. Or, after changing plans, their new insurance plan might cover their medication differently.&lt;/p>&lt;p>“It’s this financial uncertainty that frustrates many patients and prevents them from getting help, asking questions or even going to the doctor to begin with. Supporting them through those pain points is a big deal,” said Lisa Peiser, vice president of patient services at AbbVie. “Patients often don’t know that manufacturers provide support so they can more easily get and stay on their prescribed treatments. That’s why it’s important to reach out and ask about available resources.”&lt;/p>&lt;p>For patients with commercial insurance, AbbVie offers:&lt;/p>&lt;p>&lt;ul> &lt;li>Savings cards to reduce their out-of-pocket costs&lt;/li> &lt;li>Rebates that reimburse patients for out-of-pocket expenses&lt;/li> &lt;li>Other savings solutions to help eligible patients taking AbbVie treatments&lt;/li> &lt;/ul>&lt;/p>&lt;p>AbbVie also employs trained insurance specialists who work with patients one-on-one, with some support services available 24/7 by phone. These specialists can help patients understand their insurance coverage and find the best available savings opportunities.&lt;/p>&lt;p>“Cost should be the last thing patients have to worry about once they’ve found a treatment that works for them,” said Alexander Williams, director, copay center of excellence at AbbVie.&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Bridge programs ensure no patients wait for access"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Delays are another pain point for patients. Many insurance providers require doctors to complete prior authorization – the healthcare provider must get approval from a patient’s health plan first to ensure coverage – before they will cover a medicine. But if they don’t receive the right information, or if forms are not completed fully or are sent to the wrong department, there could be a delay in access. Sometimes, insurance companies won't cover a new treatment for a period of time after it’s been approved, creating even more delays and stress for the patient.&lt;/p>&lt;p>“When manual errors occur, it’s often difficult to figure out where things went wrong,” Williams says. “Without any sort of intervention, patients who are dealing with painful and even life-threatening diseases may end up waiting a long time for their medications.”&lt;/p>&lt;p>To mitigate these kinds of delays, in some cases, AbbVie can offer a bridge program. The program allows qualified patients to receive their medication for free from AbbVie’s specialty pharmacy until they can obtain it through their commercial insurance.&lt;/p>&lt;p>&quot;We often hear from patients who may not get their medication on time. Many of them are scared and frustrated,” Williams says. “When we can help, our teams can hear the relief in their voice.”&lt;/p>&lt;p>To further support patients navigating the prior authorization process, AbbVie published &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/prior-authorization-fact-sheet.pdf&quot;>an easy-to-follow guide&lt;/a> that explains what it is, why it’s required, how long it typically takes and what patients can do if their request for medication is delayed or denied. Designed to educate patients and help them feel more informed and prepared, the guide offers practical tips and sample language to use when speaking with a healthcare provider or insurance company.&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Free medication for qualified patients"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Sudden life changes, like job loss or loss of health insurance, can make accessing medication even more stressful. To help patients who have difficulty paying for medication, AbbVie offers &lt;a href=&quot;/patients/patient-support/patient-assistance.html&quot;>myAbbVie Assist&lt;/a>, a patient assistance program that provides free AbbVie medicine to qualifying patients with limited or no health insurance coverage. In 2024, AbbVie provided more than 235,000 patients in the U.S. with access to medicines at no cost through the program.&lt;/p>&lt;p>“To say that this helps my family is an understatement. The financial assistance and the mental relief this program provides really cannot be put into words,” said one Illinois patient.&lt;/p>&lt;p>According to Manish Setia, AbbVie’s director of global patient access programs, “MyAbbVie Assist provides a vital safety net, helping patients access our medicines so they can focus on what matters most — their wellbeing.”&lt;/p>&lt;p>Whether through savings cards, bridge programs or free medication, AbbVie’s goal is to make it easier and less frustrating for patients to get the medications they need.&lt;/p>&lt;p>“We want patients to feel empowered and to take ownership of their treatment,” said Peiser. “We’re committed to making sure we give them the support they need when they need it most.”&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_10>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/%20dam/abbvie-com2/images/stories/living-with-an-illness-is-hard/living-with-an-illness-hero.jpg"/>
+    </jcr:content>
+</jcr:root>

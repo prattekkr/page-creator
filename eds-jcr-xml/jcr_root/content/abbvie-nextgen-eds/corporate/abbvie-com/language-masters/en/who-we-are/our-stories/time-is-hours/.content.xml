@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:13.228Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/neuroscience-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Learn how AbbVie is partnering with the migraine community in Latin America to raise awareness of and help reduce the multi-billion-dollar global impact of migraine."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Time is Hours"
+        jcr:uuid="8a933d3f-3606-4749-b45d-d73cc5d83ae6"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Learn how AbbVie is partnering with the migraine community in Latin America to raise awareness of and help reduce the multi-billion-dollar global impact of migraine."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/time-is-ours/timeisours-hero-v2.jpg"
+        cardTitle="Time is Hours"
+        ctaAltText="Read article"
+        ctaText="Read article"
+        hideFromNavigation="true"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Time is Hours"
+        publicationDate="September 04, 2025"
+        readWatchTime="read-time"
+        storyReadTime="4">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:535492ca-636b-4a1b-bb74-239159ab29e4/as/timeisours-hero-v2.jpg"
+                        imageAlt="time is hours hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/neuroscience-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="AbbVie Teams Up With Latin America Migraine Community on Policy Solutions"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The true cost of migraine can go far beyond individual burden, and inaction is something we can’t afford.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Migraine can be a debilitating disease.&lt;div>1&lt;/div> It affects people in every corner of the world&lt;div>1&lt;/div>, touching family and communities in ways that are difficult to convey. That’s why AbbVie is partnering with the migraine community, advocates and policymakers to make known the true cost.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Living With Migraine"
+                    titleType="h5"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Antonia Cancino from Chile has been living with migraine for more than two decades – since she was 8 years old. Her journey to get help relief mirrors that of many patients: long and full of hurdles.&lt;/p>&lt;p>At first, she struggled to convince doctors that she was experiencing her symptoms. “My mother was a migraine sufferer,” she explained. “They said that I was copying her, that I was imitating her symptoms. Maybe I was not having that pain.” That doubt – even from medical professionals – is something experienced by many migraine patients.&lt;/p>&lt;p>Even after finding a doctor who would treat her as a pediatric patient, she spent 10 years dealing with different treatments and side effects before finding something that worked for her. “I saw that this type of medicine was [in Chile] for more than 30 years. And no one [told me] that they exist,” she said.&lt;/p>&lt;p>Many health care providers and patients are not aware that migraine-specific treatments exist in their country.&lt;div>2&lt;/div> What’s more, even after learning of these treatments, it can be difficult to access those therapies. Antonia’s treatment, for example, was not covered by insurance, which meant she had to pay out-of-pocket.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Barriers to Treatment"
+                    titleType="h5"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For neurologist Mario Peres, Antonia’s story is common. Dr. Peres is both the founder of the São Paulo Headache Center and president of the International Headache Society. He sees firsthand the devastating impact migraine can have on patients.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d525445d-aa2b-470a-9f4f-98f4017f00a8/as/mario-peres-headshot.jpg"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Dr. Mario Peres"
+                    attributionRole="Neurologist"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>If we understand the burden that migraine imposes onto patients, then we will understand how much this disorder has to be addressed in public health.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The socioeconomic burden of migraine is comparable to conditions like cardiovascular diseases and diabetes&lt;div>3&lt;/div>, but treatment options are hard to access in much of the world.2 Dr. Peres sees the issue as being twofold: “It’s important to have the diagnosis. It’s important to have access to treatment.”&lt;/p>&lt;p>Part of this is because of the stigma surrounding migraine. According to a recent study from the European Migraine &amp;#x26; Headache Alliance, 93% of migraine sufferers believe that their condition is misunderstood by the general public.&lt;div>4&lt;/div> In both health care and workplace settings, they feel their symptoms are minimized or even dismissed.&lt;div>4&lt;/div>&lt;/p>&lt;p>This stigma compounds the problems for migraine sufferers. According to the study:&lt;/p>&lt;p>&lt;ul> &lt;li>73% feel health care providers lack understanding of their experience &lt;div>4&lt;/div>&lt;/li> &lt;li>35% of severe migraine patients said they’re embarrassed to seek medical advice &lt;div>4&lt;/div>&lt;/li> &lt;/ul>&lt;/p>&lt;p>Migraine advocates like Dr. Peres agree there is more to be done to support patients. “We have to improve those indicators by advocacy, by health care provider education, by [increasing] access to medications and other treatments,” he said.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The Hidden Cost"
+                    titleType="h5"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>So, what is that cost? To find out, the WifOR Institute* (a German-based independent economic research institute) worked with international partners to study the socioeconomic burden of various conditions, including migraine. Looking at the data over a 10-year period, the results were eye-opening:&lt;/p>&lt;p>&lt;ul> &lt;li>Across countries in Europe, Asia and Latin America, the socioeconomic burden of migraine represented about 1.2% to 2% of the annual GDP from 2011-2022. &lt;div>3,5,6&lt;/div>&lt;/li> &lt;li>Migraine was the leading disease with the highest socioeconomic burden compared to other diseases in Brazil, Colombia and Peru. &lt;div>6&lt;/div>&lt;/li> &lt;li>Countries like Mexico, Chile, Colombia, Costa Rica and Ecuador faced an average socioeconomic burden of 1.2%, reaching 1.6% in Brazil and 1.8% in Argentina. &lt;div>6&lt;/div>&lt;/li> &lt;/ul>&lt;/p>&lt;p>This represents billions of dollars lost due to disability and productivity declines.&lt;div>6&lt;/div>&lt;/p>"/>
+                </block_8>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://www.abbvie.com/who-we-are/our-stories/time-is-hours/_jcr_content/root/responsivegrid/responsivegrid1/grid/par_12/image_copy_copy.coreimg%7B.width%7D.svg/1756910213606/timeisours-infographic.svg"
+                    imageAlt="time is ours infographic"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Finding Solutions"
+                    titleType="h5"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>AbbVie is pursuing innovative approaches that could help the future of migraine treatment. This includes:&lt;/p>&lt;p>&lt;ul> &lt;li>Evaluating both acute and preventive therapies targeting the underlying mechanisms of migraine&lt;/li> &lt;li>Advancing next-generation therapies that may help non-responders&lt;/li> &lt;/ul>&lt;/p>&lt;p>And that’s just the beginning. “We’re fostering collaboration among those impacted by migraine and medical professionals to address the complex challenges presented by this neurological disease,” said Karen Carr, Scientific Director, Migraine, International Medical Affairs, AbbVie.&lt;/p>&lt;p>In São Paulo, AbbVie will host the first LATAM migraine advocacy event, supported by the IHC organizing committee, convening medical professionals like Dr. Peres and patient advocates like Antonia to uncover the burden and regional barriers that exist in Latin America.&lt;/p>&lt;p>AbbVie is organizing a standalone event to ensure barriers can be addressed and solutions are surfaced. The event aims to set actionable courses leading to meaningful policy changes, emphasizing education and resource allocation.&lt;/p>&lt;p>Through targeted messaging and media engagement, participants will work to shift perceptions and help improve migraine management across the region. “We want to foster a better understanding of migraine and its impact, as well as expand access to treatments to improve patients' lives,” said Carr.&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Coming Together for Migraine Relief"
+                    titleType="h5"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>But, as Antonia acknowledges, the battle can’t be won alone. Driven by feelings of isolation and a desire to connect with others, Antonia took to social media to share her journey, creating content that resonates deeply with those who also feel isolated. Through platforms like Instagram and TikTok, she has cultivated a vibrant community and earns millions of views.&lt;/p>&lt;p>By founding a patient advocacy group, Antonia has connected migraine sufferers around the globe. Her efforts display the power of collective action, showing that open discussions among medical societies, policymakers and patient communities can support those impacted by migraine overcome experiences of stigma.&lt;/p>"/>
+                </block_13>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:06aacab3-ed3c-4338-a465-c3ce40c5f021/as/antonia-cancino-headshot.jpg"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Antonia Cancino"
+                    attributionRole="Founder of a Patient Advocacy Group"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Migraine should be accepted like any other disease and seen as important for making more policies.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Providing better care for patients not only improves their lives but can help reduce the multi-billion-dollar global impact. The time is ours to ensure the right people are at the table. We can’t afford to wait any longer.&lt;/p>"/>
+                </block_15>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>* This initiative was funded by AbbVie. All content was designed and delivered by WifOR. AbbVie has had no input into the content, management, preparation, or creation of these materials.&lt;/p>"/>
+                </block_16>
+                <block_17
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>References&lt;/strong>&lt;/p>&lt;p>&lt;ol> &lt;li>Martelletti, Paolo, et al. My Migraine Voice Survey: a global study of disease burden among individuals for whom preventive treatment have failed. The Journal of Headache and Pain. 2018. 19:115.&lt;/li> &lt;li>Access to Care Survey. European Migraine &amp;#x26; Headache Alliance. 2021. &lt;a href=&quot;https://www.emhalliance.org/wp-content/uploads/EMHA-Julio-2021-1.pdf&quot;>https://www.emhalliance.org/wp-content/uploads/EMHA-Julio-2021-1.pdf&lt;/a>&lt;/li> &lt;li>WifOR. Calculating the Socioeconomic Burden of Migraine: The Case of 6 European Countries. Available at: [&lt;a href=&quot;https://www.wifor.com/en/download/the-socioeconomic-burden-of-migraine-the-case-of-6-european-countries/?wpdmdl=358249&amp;#x26;refresh=687823f915e751752703993&quot;>https://www.wifor.com/en/download/the-socioeconomic-burden-of-migraine-the-case-of-6-european-countries/?wpdmdl=358249&amp;#x26;refresh=687823f915e751752703993&lt;/a>].&lt;/li> &lt;li>Migraine &amp;#x26; Stigma Survey. European Migraine &amp;#x26; Headache Alliance. 2023. &lt;a href=&quot;https://www.emhalliance.org/project/stigma-survey-2023/&quot;>https://www.emhalliance.org/project/stigma-survey-2023/&lt;/a>&lt;/li> &lt;li>WifOR. The Socioeconomic Burden of Migraine in China, Japan, South Korea, and Taiwan. Available at: [&lt;a href=&quot;https://www.wifor.com/en/download/the-socioeconomic-burden-of-migraine-in-china-japan-south-korea-and-taiwan/?wpdmdl=359157&amp;#x26;refresh=689141ecc0fec1754350060&quot;>https://www.wifor.com/en/download/the-socioeconomic-burden-of-migraine-in-china-japan-south-korea-and-taiwan/?wpdmdl=359157&amp;#x26;refresh=689141ecc0fec1754350060&lt;/a>].&lt;/li> &lt;li>WifOR. The Socioeconomic Burden of Migraine in Latin America: A Hidden Brake on Economic Growth?. Available at: [&lt;a href=&quot;https://www.wifor.com/en/download/the-socioeconomic-burden-of-migraine-in-latin-america-a-hidden-brake-on-economic-growth/?wpdmdl=353133&amp;#x26;refresh=6891422be50e01754350123&quot;>https://www.wifor.com/en/download/the-socioeconomic-burden-of-migraine-in-latin-america-a-hidden-brake-on-economic-growth/?wpdmdl=353133&amp;#x26;refresh=6891422be50e01754350123&lt;/a>].&lt;/li> &lt;li>Pescador Ruschel MA, De Jesus O. Migraine Headache. [Updated 2024 Jul 5]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; Jan 2025. Available at: &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/books/NBK560787/&quot;>https://www.ncbi.nlm.nih.gov/books/NBK560787/&lt;/a>&lt;/li> &lt;li>Amiri, P., Kazeminasab, S., Nejadghaderi, S. A., Mohammadinasab, R., Pourfathi, H., Araj-Khodaei, M., Sullman, M. J. M., Kolahi, A. A., &amp;#x26; Safiri, S. (2022). Migraine: A Review on Its History, Global Epidemiology, Risk Factors, and Comorbidities. Frontiers in neurology, 12, 800605. &lt;a href=&quot;https://doi.org/10.3389/fneur.2021.800605&quot;>https://doi.org/10.3389/fneur.2021.800605&lt;/a>&lt;/li> &lt;li>Steiner TJ, Stovner LJ, Jensen R, et al. Lifting The Burden: the Global Campaign against Headache. Migraine remains second among the world's causes of disability, and first among young women: findings from GBD2019. J Headache Pain. 2020;21(1):1375&lt;/li> &lt;li>Viticchi G, Silvestrini M, Falsetti L, et al. Time delay from onset to diagnosis of migraine. Headache. 2011;51(2):232-236. doi:10.1111/j.1526-4610.2010.01778.x&lt;/li> &lt;li>Monterrey P, González M, Ramírez D, et al. Characteristics of migraine in patients with headache disorders: A clinic-based study from Central American and Caribbean countries. Headache. 2022;62(8):1029-1038. doi:10.1111/head.14375&lt;/li> &lt;/ol>&lt;/p>"/>
+                </block_17>
+                <block_18
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_18>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

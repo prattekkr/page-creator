@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:15.212Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/profile-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Meet the two AbbVie employees named 2023 Working Parents of the Year and explore how they’re making a meaningful impact on their children, peers and respective communities."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Working Parents 2023: Finding comfort in community"
+        jcr:uuid="ade406fc-0d98-407f-831a-e18ca4d54543"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Meet the two AbbVie employees named 2023 Working Parents of the Year and explore how they’re making a meaningful impact on their children, peers and respective communities."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/working-parent-2023/workingparents-2023-hero.jpg"
+        cardTitle="Working Parents 2023: Finding comfort in community"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        eyebrowText="Profile"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/working-parent-2023/workingparents-2023-hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Working Parents 2023: Finding comfort in community"
+        publicationDate="November 02, 2023"
+        readWatchTime="read-time"
+        storyReadTime="6">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:b6b519aa-7217-4bb7-85a9-c075e2f8d082/as/workingparents-2023-hero.jpg"
+                        imageAlt="working parents hero collage"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/profile-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Working Parents 2023: Finding comfort in community"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>This year’s working parents have overcome personal hurdles as well as a sudden tragedy, all while supporting their families and being a major part of their communities.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Being present with those around you"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Meet our 2023 Working Parents of the Year, Lisa Mathews and Sofie Berg. They were nominated by their peers and selected for making a meaningful impact on the lives of their children, peers and respective communities.&lt;/p>&lt;p>AbbVie has been recognized as one of the 100 Best Companies by Seramount (formerly known as Working Mother Media), a strategic professional services and research firm dedicated to supporting high-performing, inclusive workplaces. The 100 Best Companies are recognized for their ongoing commitment to forward-thinking workplace programs in the areas of women’s advancement, parental leave, childcare assistance, mentorship and flexibility. As part of this recognition, AbbVie is shining the spotlight on two of our working parents.&lt;/p>&lt;p>Out of more than 100 nominations submitted by AbbVie colleagues, these two honorees are indicative of what makes AbbVie such an excellent place to work for working parents. Lisa and Sofie fulfill different roles at AbbVie, balancing their success as professionals with their responsibilities as working parents. Both are incredibly driven and focused, highly respected among their colleagues, and contribute a great deal to their families and communities outside&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:6110173d-fe3d-4ee3-9fd7-871a83bb8b7e/as/workingparents-2023-collage.jpg"
+                    imageAlt="working parents collage"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Lisa and her husband, Justin, care for their daughter Maddy and son Tommy. Tommy is on the autism spectrum and requires specialized care throughout his day-to-day life. Lisa’s experience raising Tommy has connected her to other families with neurodiverse children, allowing her to share her experience in the hopes that it will support others on a similar journey.&lt;/p>&lt;p>Sofie is raising two sons, Victor and Hugo, to be the best versions of themselves they can be. She is a single mother after the sudden passing of her husband Mattias in the spring of 2022. Both of her children are avid soccer players, and while it can be difficult to juggle their schedules with her professional life, the community and soccer families have supported Sofie to provide extra help and flexibility where needed.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: What is your role at AbbVie?"
+                    titleType="h5"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Lisa Mathews:&lt;/strong> I direct integrated communications, strategic planning, and operations in AbbVie’s corporate responsibility, brand and communications organization. I’ve been a part of AbbVie for six years, and previously worked in marketing on the patient services side of the business, but this role is brand new to me. I feel fortunate that I get to continue growing from a communications perspective and learn a new part of the business at the same time.&lt;/p>&lt;p>&lt;strong>Sofie Berg:&lt;/strong> I am the therapeutic area head of the gastroenterology team in global medical affairs. My team is responsible for pipeline and on-market assets within the gastroenterology franchise. I’ve been working in this field since earning my Ph.D. in gastroenterology approximately 20 years ago and am deeply engaged with the unmet needs impacting patients. Hearing their stories and knowing that our medicines are changing lives every day is incredibly rewarding.&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How would you describe your family and their passions?"
+                    titleType="h5"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Lisa:&lt;/strong> Collectively, we love being around people! We’re always hosting dinner parties and backyard gatherings, as building community with small groups of people is very important to us. Over time, this has become especially true for Tommy, which many people assume isn’t a trait for someone who is on the autism spectrum. Both of our kids are energized by company, so when we have a chance to connect with people, we jump at the opportunity.&lt;/p>&lt;p>&lt;strong>Sofie:&lt;/strong> We are a tight trio. My two boys are both very focused, high achieving students and soccer fanatics. Hugo, my eldest, has qualified for the Chicago Fire Academy and Victor, my youngest, is playing for a premier travel team. They love the sport and all the friends they’ve made while playing. Watching them have fun on the pitch brings me great joy. When the boys aren’t busy with schoolwork and sports, we also love to cook, hang out with friends, watch movies and travel together.&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: In your own words, what would you say is the most difficult thing about being a working parent?"
+                    titleType="h5"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Lisa:&lt;/strong> The hardest part is trusting yourself that you’ve done a great job with your kids in the time that you have with them so that you can rest assured that they’re prepared for whatever new environment they may come across. I’ve heard that if you find yourself second-guessing whether or not you’re a good parent, then you’re already ahead of the curve.&lt;/p>&lt;p>&lt;strong>Sofie:&lt;/strong> Finding time to be with my family, but also learning how to reconcile guilty feelings about the time I do and don’t have. When those feelings come, I focus on reframing them in a more positive light, reminding myself that it’s okay to take time to do what I need to do, whether that’s putting work aside to make sure I’m available to attend my sons’ soccer games or taking a late-night phone call to help my team during a pivotal moment. When all is said and done, you’re doing it for the good of those around you.&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Lisa, can you speak on your experience as a mother of a child on the autism spectrum and how it shaped you?"
+                    titleType="h5"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Lisa:&lt;/strong> Realizing that Tommy has different learning and communication abilities gave me a new perspective on approaching personal and professional relationships. For example, Tommy has so many skillsets and, if someone takes the time to work with him in a way where he can shine, he will absolutely shine. He’ll show them things that they might not have known as a person without that different ability.&lt;br> &lt;br> This specifically changed how I manage people and develop my teams. From tailoring communication, not just verbally but also writing things down, to how I give direction, I strive to work with everyone in a way that allows them to shine their brightest. I do this with both Tommy and Maddy, communicating in ways that empower them to be their best selves, and with my colleagues and peers. I also talk openly about my kids and who they are as people. This makes it easier to ask for and receive support from those I work with each day.&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="Working Parent Lisa Mathews and her family love to build community, and support and advocate for people with disabilities."
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="true"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:143aa1b9-8776-4fcf-9970-129b7817043b/as/lisa-mathews-family.jpg?dpr=1"
+                    imageAlt="lisa mathews family"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Describe the work you do to support other families of those with special needs."
+                    titleType="h5"/>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>At first, I was talking one-on-one to parents who also had children on the autism spectrum, offering advice and support, but in more recent years giving back has become a family affair, which I’m so proud of. Together we’ve raised money to support organizations helping people with disabilities and have volunteered in various capacities. When Maddy was 8, she even set up a lemonade stand to raise money in support of her brother’s future care, raising over $2,000 for new smart boards at his school.&lt;/p>&lt;p>I’ve also gotten involved at AbbVie by becoming a member and contributor to &lt;a href=&quot;/join-us/life-at-abbvie/employee-resource-groups/ability-at-abbvie.html&quot;>Ability at AbbVie&lt;/a>, an employee resource group that's all about community, advocacy and driving awareness for people with disabilities. This past year, I signed up to be the community chair for Ability, leading volunteer and philanthropy efforts. If I can help in any way to make that path less stressful for somebody else, it makes it worth it.&lt;/p>"/>
+                </block_14>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:f062452e-e29a-4d41-b764-930d63f53bde/as/lisa-mathews-quote.jpg"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Lisa Mathews"
+                    attributionRole="Director, Integrated Communications, Strategic Planning and Operations"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>I strive to work with everyone in a way that allows them to shine their brightest.”&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Sofie, what are some ways in which you support your children’s hobbies and how do you prioritize this from the perspective of a single parent?"
+                    titleType="h5"/>
+                <block_17
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Sofie&lt;/strong>: I do everything I can to be a part of my sons’ extracurricular activities. My husband Mattias had previously driven the boys to and from most of their soccer practices and games. I now utilize Excel to manage my weekly schedule–ensuring the boys have transportation and that I can help to carpool while also attending important events. I often try to work in calls with my colleagues in Asia and Australia while sitting in my car at the pitch during practices, which is beneficial for my global role.&lt;/p>&lt;p>By sharing the carpooling with the other parents, I can best prioritize my evening obligations between the two boys, business travel and business events. I am very fortunate in that the carpooling families have given me the opportunity to be flexible, allowing me to choose days that work best within my schedule.&lt;/p>&lt;p>While the schedules and traffic can be challenging, I treasure hearing my sons and their friends joke around, sing to the radio and even talk about the girls they like. I know these moments are fleeting and am grateful for this time with my boys and their friends.&lt;/p>"/>
+                </block_17>
+                <block_18
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="Working Parent Sofie Berg and her two sons Hugo and Victor connect through a love of soccer, cooking and travel."
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="true"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:416c53ab-918b-4391-8638-6ac250a49dab/as/sofie-berg-family.jpg?dpr=1"
+                    imageAlt="sofie berg family"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_19
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How has living in other countries with different cultures impacted you and your children?"
+                    titleType="h5"/>
+                <block_20
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Sofie&lt;/strong>: Growing up in Sweden, I rarely saw families with one parent who stayed at home, additionally everyone contributed to the household in some way regardless of status or profession, whether it was working, cooking, laundry, etc. Because of our upbringing, Mattias and I were adamant about teaching our sons how to take care of themselves and the spaces they live in. It really shows in their love of cooking and offers to help around the home (and even with our neighbors). I’ve had other parents tell me how impressed they are when my boys visit their friends and help in the kitchen!&lt;/p>"/>
+                </block_20>
+                <block_21
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:e7af4778-fec5-4751-9f56-f5218ce1ddc7/as/sofie-berg-quote.jpg"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Sofie Berg"
+                    attributionRole="Therapeutic Area Head, Global Medical Affairs"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>By being myself with my colleagues, they’re able to see me as not only a co-worker but a strong, single parent.”&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_22
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Do you have any words of guidance or support that you’d like to share with other working parents at AbbVie?"
+                    titleType="h5"/>
+                <block_23
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Lisa:&lt;/strong> One piece of advice I received is to remember that “wherever you are, be all there”. When you’re at work, focus on the task at hand, but when you’re at home, it’s okay to turn off that part of your brain and be in the moment with your family. Your kids might not remember all the good times or the bad times, but they’ll remember when you were present with them.&lt;/p>&lt;p>&lt;strong>Sofie:&lt;/strong> Be authentic because you never know who you might help with your story and how they might be able to help you too. Using myself as an example, I haven’t spoken much about my struggle, and it’s been an incredibly tough year. But by being myself with my colleagues, they’re able to see me as not only a co-worker but a strong, single parent. If the doctor or school calls about my sons, there isn’t anybody else to answer and because I’ve shared that part of my life authentically, my team has been so caring and empathetic. I’m very grateful for the support I received from AbbVie when my life suddenly was turned upside down and I want to thank my manager and team for supporting me and my needs for occasional flexibility.&lt;/p>"/>
+                </block_23>
+                <block_24
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Email: &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_24>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related Content&lt;/p>"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/day-in-life-meet-director-clearing-path-for-patient-access"
+                    storyCardVariant="sidePanel"/>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/working-parent-2023/workingparents-2023-hero.jpg"/>
+    </jcr:content>
+</jcr:root>

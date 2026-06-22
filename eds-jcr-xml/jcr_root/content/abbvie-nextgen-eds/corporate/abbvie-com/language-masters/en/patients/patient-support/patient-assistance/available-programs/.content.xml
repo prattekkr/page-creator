@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-15T14:32:09.941Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Available Programs"
+        jcr:uuid="e5bfdd36-1952-4a07-b07b-fa249e9f0cf1"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        modelFields="[jcr:title,jcr:description,keywords,cq:tags,pageSubtitle,image,hideFromNavigation,navigationalOrder,cardDescription,cardImage,cardImageAlt,cardImageMimeType,publicationDate,readWatchTime,storyReadTime,storyWatchTime,warndeparturemodalpath,warnarrivalmodalpath]">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-15T07:59:51.414Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="content-wide,large-radius,no-bottom-margin">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-short,overlay-height-short,purple"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="color"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="\0"
+                        imageAlt="\0"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-15T14:32:09.885Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    enableBreadcrumb="true"
+                    enableCurrentPage="true"
+                    enableHiddenItems="false"
+                    language="none"
+                    model="breadcrumb"
+                    modelFields="[homePagePath@aem-content,homeDisplayName@text,enableBreadcrumb@boolean,enableHiddenItems@boolean,enableCurrentPage@boolean,useRedirectPageName@boolean,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Breadcrumb"
+                    useRedirectPageName="false"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Available Programs"
+                    titleType="h1"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Find the right support programs for your medicine below.&lt;/p>"/>
+                </block_3>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-1"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-9">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,width-large,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="myAbbVie Assist Program"
+                    titleType="h3"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>If you are uninsured, receiving coverage through Medicare, or your health insurance isn't enough to cover the cost of my medicine, you may be eligible to receive free medicine.  See available medicines below:&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-24"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_3
+                    jcr:lastModified="{Date}2026-06-15T08:54:58.263Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockHeading="Available medicines"
+                    blockId="\0"
+                    classes_allowMultipleOpen="{Boolean}true"
+                    classes_commonCustomClass="width-large"
+                    classes_customDynamicClass="h5-size"
+                    classes_iconType="accordion-icon-font"
+                    classes_showExpandCollapseAll="{Boolean}true"
+                    collapseAllIcon="chevron-up"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="chevron-down"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading@text,classes_allowMultipleOpen@boolean,classes_showExpandCollapseAll@boolean,expandAllLabel@text,collapseAllLabel@text,classes_iconType@select,expandAllIcon@text,collapseAllIcon@text,expandIcon@text,collapseIcon@text,expandAllIconImage@reference,collapseAllIconImage@reference,expandIconImage@reference,collapseIconImage@reference,ariaExpandAllLabel@text,ariaCollapseAllLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="ALLODERM SELECT™ Regenerative Tissue Matrix"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics.pdf&quot;>ALLODERM SELECT™ Regenerative Tissue Matrix&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics-spanish.pdf&quot;>ALLODERM SELECT™ Regenerative Tissue Matrix&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="ALLODERM SELECT RESTORE™ Regenerative Tissue Matrix"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics.pdf&quot;>ALLODERM SELECT RESTORE™ Regenerative Tissue Matrix&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics-spanish.pdf&quot;>ALLODERM SELECT RESTORE™ Regenerative Tissue Matrix&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Alphagan® P (brimonidine tartrate) ophthalmic solution"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application.pdf&quot;>Alphagan® P (brimonidine tartrate) ophthalmic solution&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application-spanish.pdf&quot;>Alphagan® P (brimonidine tartrate) ophthalmic solution&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_3
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Armour Thyroid® (thyroid tablets, USP) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Armour Thyroid application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Armour Thyroid application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_4
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Avycaz® (avibactam, ceftazidime) powder"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/critical-care-application.pdf&quot;>Avycaz® (avibactam, ceftazidime) powder&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/critical-care-application-spanish.pdf&quot;>Avycaz® (avibactam, ceftazidime) powder&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_5
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="BOTOX® (onabotulinumtoxinA)"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/botox-patient-assistance-application.pdf&quot;>BOTOX® (onabotulinumtoxinA)&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/botox-patient-assistance-application-spanish.pdf&quot;>BOTOX® (onabotulinumtoxinA)&lt;/a> (Spanish)&lt;/p>"/>
+                    <item_6
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="CREON® (pancrelipase) Delayed- Release Capsules"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application.pdf&quot;>Creon application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application-spanish.pdf&quot;>Creon application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_7
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Crinone® (progesterone) gel"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Crinone application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Crinone application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_8
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Dalvance® (dalbavancin) lyophilisate"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/critical-care-application.pdf&quot;>Dalvance® (dalbavancin) lyophilisate&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/critical-care-application-spanish.pdf&quot;>Dalvance® (dalbavancin) lyophilisate&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_9
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Depakote® (divalproex sodium)"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/depakote-application.pdf&quot;>Depakote application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/depakote-application-spanish.pdf&quot;>Depakote application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_10
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="DUOPA (carbidopa and levodopa) enteral suspension"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/duopa-application.pdf&quot;>Duopa application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/duopa-application-spanish.pdf&quot;>Duopa application&lt;/a> (Spanish)&lt;/p>"/>
+                    <item_11
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Durysta® (bimatoprost) ocular implant"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application.pdf&quot;>Durysta application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application-spanish.pdf&quot;>Durysta application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_12
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="ELAHERE® (mirvetuximab soravtansine-gynx)"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/elahere-application.pdf&quot;>Elahere application&lt;/a>&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_13
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="EMRELIS™ (telisotuzumab vedotin-tllv)"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/emrelis-application.pdf&quot;>Emrelis application&lt;/a>&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_14
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Fetzima® (levomilnacipran) Extended Release Capsules and Titration Pack"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Fetzima application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Fetzima application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_15
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="GENGRAF®Capsules (cyclosporine capsules, USP [MODIFIED])"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Gengraf application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Gengraf application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_16
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="HUMIRA® (adalimumab)"
+                        text="&lt;p>&lt;strong>IMPORTANT - &lt;a href=&quot;/patients/patient-support/patient-assistance/available-programs/humira-program-update.html&quot;>CLICK HERE&lt;/a> FOR AN IMPORTANT PROGRAM UPDATE&lt;/strong>&lt;/p>&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/humira-eng-final-11-20-25.pdf&quot;>HUMIRA application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/humira-spanish-final-11-20-25.pdf&quot;>HUMIRA application&lt;/a> (Spanish)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/humira-english-large-font-final-11-20-25.pdf&quot;>HUMIRA application&lt;/a> (English - LARGE FONT)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_17
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="IMBRUVICA® (ibrutinib)"
+                        text="&lt;p>&lt;a href=&quot;https://ihabbviemyassist.my.site.com/enrollmentportal/s/?productname=imbruvica&quot;>Apply Online Now&lt;/a>&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/imbruvica-application.pdf&quot;>IMBRUVICA application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/imbruvica-application-spanish.pdf&quot;>IMBRUVICA application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_18
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="KALETRA® (lopinavir/ritonavir) Tablets"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>KALETRA application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>KALETRA application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_19
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="KELLER FUNNEL® 2"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics.pdf&quot;>Keller Funnel application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics-spanish.pdf&quot;>Keller Funnel application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_20
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Linzess® (linaclotide) capsules"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application.pdf&quot;>Linzess application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application-spanish.pdf&quot;>Linzess application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_21
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Lumigan® (bimatoprost 0.01%) opthalmic solution"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application.pdf&quot;>Lumigan application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application-spanish.pdf&quot;>Lumigan application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_22
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="LUPRON DEPOT® (leuprolide acetate for depot suspension)"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/lupron-application.pdf&quot;>LUPRON DEPOT® (leuprolide acetate for depot suspension)&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/lupron-application-spanish.pdf&quot;>LUPRON DEPOT® (leuprolide acetate for depot suspension)&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_23
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="LUPRON DEPOT-PED® (leuprolide acetate for depot suspension)"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/lupron-application.pdf&quot;>LUPRON DEPOT-PED® (leuprolide acetate for depot suspension)&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/lupron-application-spanish.pdf&quot;>LUPRON DEPOT-PED® (leuprolide acetate for depot suspension)&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_24
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="MAVYRET® (glecaprevir/pibrentasvir)"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply online&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/mavyret-application.pdf&quot;>MAVYRET application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/mavyret-application-spanish.pdf&quot;>MAVYRET application&lt;/a> (Spanish)&lt;/p>"/>
+                    <item_25
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Namzaric® (memantine HCl extended-release and donepezil HCl) capsule"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Namzaric application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Namzaric application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_26
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="NATRELLE®"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics.pdf&quot;>Natrelle application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics-spanish.pdf&quot;>Natrelle Funnel application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_27
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="NORVIR® (ritonavir) tablets and oral solution"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Norvir application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Norvir application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_28
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Oriahnn™ (elagolix/estradiol/norethindrone acetate)"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/women-health-application.pdf&quot;>Oriahnn application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/women-health-application-spanish.pdf&quot;>Oriahnn application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_29
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="ORILISSA™ (elagolix) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/women-health-application.pdf&quot;>Orilissa application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/women-health-application-spanish.pdf&quot;>Orilissa application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_30
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Ozurdex® (dexamethasone) ocular implant"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application.pdf&quot;>Ozurdex application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application-spanish.pdf&quot;>Ozurdex application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_31
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="QULIPTA™ (atogepant) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/qulipta-ubrelvy-patient-assistance-application.pdf&quot;>Qulipta application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/qulipta-ubrelvy-patient-assistance-application-sp.pdf&quot;>Qulipta application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_32
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Rectiv® (nitroglycerin) ointment"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Rectiv application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Rectiv application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_33
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Restasis® (cyclosporine) ophthalmic emulsion"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application.pdf&quot;>Restasis application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application-spanish.pdf&quot;>Restasis application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_34
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="REVOLVE™ System Advanced Adipose System"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics.pdf&quot;>REVOLVE™ System Advanced Adipose System&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics-spanish.pdf&quot;>REVOLVE™ System Advanced Adipose System&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_35
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="RINVOQ™ (upadacitinib)"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/rinvoq-patient-assistance-application.pdf&quot;>RINVOQ application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/rinvoq-patient-assistance-application-spanish.pdf&quot;>RINVOQ application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_36
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Saphris® (asenapine maleate) sublingual tablet"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Saphris application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Saphris application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_37
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Savella® (milnacipran HCl) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Savella application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Savella application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_38
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="SKYRIZI™ (risankizumab-rzaa)"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/skyrizi-patient-assistance-application.pdf&quot;>SKYRIZI application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/skyrizi-patient-assistance-application-spanish.pdf&quot;>SKYRIZI application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_39
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="STRATTICE™ and STRATTICE™ BPS Reconstructive Tissue Matrix"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics.pdf&quot;>STRATTICE™ and STRATTICE™ BPS Reconstructive Tissue Matrix&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/application-for-allergan-aesthetics-spanish.pdf&quot;>STRATTICE™ and STRATTICE™ BPS Reconstructive Tissue Matrix&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_40
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Synthroid® (levothyroxine sodium) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Synthroid application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Synthroid application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_41
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Teflaro® (ceftaroline fosamil) powder for injection"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/critical-care-application.pdf&quot;>Teflaro® (ceftaroline fosamil) powder for injection&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/critical-care-application-spanish.pdf&quot;>Teflaro® (ceftaroline fosamil) powder for injection&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_42
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Ubrelvy® (ubrogepant) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/qulipta-ubrelvy-patient-assistance-application.pdf&quot;>Ubrelvy application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/qulipta-ubrelvy-patient-assistance-application-sp.pdf&quot;>Ubrelvy application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_43
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="VENCLEXTA™ (venetoclax tablets)"
+                        text="&lt;p>For information about patient assistance for VENCLEXTA please &lt;a href=&quot;https://www.genentech-access.com/patient/brands/venclexta.html&quot;>click&lt;/a> or call 1-888-249-4918.&lt;/p>"/>
+                    <item_44
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Viberzi® (eluxadoline) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application.pdf&quot;>Viberzi application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application-spanish.pdf&quot;>Viberzi application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_45
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Viibryd® (vilazodone HCl) tablets"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application.pdf&quot;>Viibryd application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/general-product-patient-assistance-application-spanish.pdf&quot;>Viibryd application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_46
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Vraylar® (cariprazine) capsules"
+                        text="&lt;p>&lt;a href=&quot;https://pap.my.site.com/PAS/s/register&quot;>Apply Online&lt;/a>&lt;/p>&lt;p>Already registered? &lt;a href=&quot;https://pap.my.site.com/PAS&quot;>Sign in&lt;/a>&lt;/p>&lt;p>If the online application is not right for you and you would prefer to apply by fax or mail, please download the application below.&lt;/p>&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/vraylar-patient-assistance-application.pdf&quot;>Vraylar application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/vraylar-patient-assistance-application-sp.pdf&quot;>Vraylar application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                    <item_47
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Vyalev™ (foscarbidopa/foslevodopa)"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/vyalev-patient-assistance-application.pdf&quot;>Vyalev application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/vyalev-patient-assistance-application-spanish.pdf&quot;>Vyalev application&lt;/a> (Spanish)&lt;/p>"/>
+                    <item_48
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Xen® Gel Stent"
+                        text="&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application.pdf&quot;>Xen application&lt;/a> (English)&lt;br> &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/eye-care-application-spanish.pdf&quot;>Xen application&lt;/a> (Spanish)&lt;/p>&lt;p>Medicare patients may qualify for &lt;a href=&quot;https://www.medicare.gov/basics/costs/help/drug-costs&quot;>Extra Help from Medicare.&lt;/a>&lt;/p>"/>
+                </block_3>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:lastModified="{Date}2026-06-15T08:13:45.803Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="standard-header-with-divider,divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text@richtext,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related content&lt;/p>"/>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-15T14:24:40.698Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="true"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="{Boolean}true"
+                    hideReadTime="{Boolean}true"
+                    hideRole="false"
+                    language="lang:none"
+                    model="story-card"
+                    modelFields="[storyCardVariant@select,hidePublicationDate@boolean,hideReadTime@boolean,hideRole@boolean,hideDescription@boolean,hideImage@boolean,page@aem-content,openInNewTab@boolean,ctaLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Story Card"
+                    openInNewTab="{Boolean}false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/eligibility-criteria"
+                    storyCardVariant="sidePanel"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-16"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-8,separator-divider"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-24"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_5
+                    jcr:lastModified="{Date}2026-06-15T08:14:43.556Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="mini-header,mini"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text@richtext,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Eyebrow Text"
+                    text="&lt;p>TOPICS&lt;/p>"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaLabel="Topics"
+                    childDepth="1"
+                    enableDate="false"
+                    enableDescription="false"
+                    enableSubtitle="false"
+                    enableTags="false"
+                    excludeCurrentPage="true"
+                    filter="linklist"
+                    language="none"
+                    layout="single-column"
+                    linkSource="custom"
+                    maxItems="25"
+                    model="linklist"
+                    modelFields="[variant,linkSource,parentPage,childDepth,excludeCurrentPage,enableDescription,enableTags,enableSubtitle,enableDate,orderBy,sortOrder,maxItems,layout,fontIcon,ariaLabel,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Linklist"
+                    orderBy="content-tree"
+                    sortOrder="asc"
+                    variant="standard">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-15T14:08:56.371Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        language="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/savings-card"
+                        linkText="Savings Card"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                    <item_1
+                        jcr:lastModified="{Date}2026-06-15T14:09:16.812Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/income-criteria"
+                        linkText="Income criteria"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                    <item_2
+                        jcr:lastModified="{Date}2026-06-15T14:09:40.637Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        language="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/online-application-overview"
+                        linkText="Patient Assistance Overview"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                    <item_3
+                        jcr:lastModified="{Date}2026-06-15T14:10:07.607Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        language="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/patient-assistance-frequently-asked-questions"
+                        linkText="Patient Assistance FAQs"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                </block_6>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

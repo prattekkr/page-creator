@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:13:57.080Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/patient-support-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="From cabs to counseling, see how innovative programs across the globe help address patient needs and ensure continuity of care."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Connecting patients with care: 3 lessons learned during COVID-19"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="From cabs to counseling, see how innovative programs across the globe help address patient needs and ensure continuity of care."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/connecting-patients-with-care-3-lessons-learned-during-covid-19/connecting-patients_hero_2880x1620.jpeg"
+        cardTitle="Connecting Patients with Care:3 Lessons Learned During Covid-19"
+        ctaAltText="Read Article"
+        eyebrowText="Patient Support"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/connecting-patients-with-care-3-lessons-learned-during-covid-19/connecting-patients_hero_2880x1620.jpeg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Connecting patients with care: 3 lessons learned during COVID-19"
+        publicationDate="August 05, 2021"
+        readWatchTime="read-time"
+        storyReadTime="5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:dfd53324-87ca-471e-a3fb-e68f2fa75fb6/as/connecting-patients_hero_2880x1620.jpeg"
+                        imageAlt="Connecting patients with care: 3 lessons learned during COVID-19"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/patient-support-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Connecting patients with care: 3 lessons learned during COVID-19"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>From cabs to counseling, see how innovative programs across the globe help address patient needs and ensure continuity of care.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The COVID-19 pandemic left people around the globe unsure about how to continue their current treatment for a chronic condition or whether it was safe to see a doctor for a new medical issue. In the U.S. alone, more than 40% of people surveyed by the American Medical Association1 between March and mid-July 2020 said they skipped medical care in the early months of the pandemic.&lt;/p>&lt;p>Committed to ensuring continuity of care, the global medical community including patient advocacy groups, hospitals and clinics, and companies like AbbVie sprang into action to help close gaps in health care, increase access and meet patients where they were. From introducing mental health services to launching medication delivery, leading advocacy groups reflect on lessons learned during the height of the pandemic and explain why many programs are here to stay.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Lesson 1: Think beyond the traditional trip to the doctor"
+                    titleType="h2"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>“Will I be able to get my medication from the hospital pharmacy? Should I avoid going to see my doctor?” These questions early in the pandemic sparked a creative solution from Portuguese patient support group ANDAR, which advocates for people with rheumatoid arthritis.&lt;/p>&lt;p>Enter a fleet of volunteers on motorbikes, who stepped up to deliver hospital pharmacy medications to patients at their homes. The program has already expanded from two major cities, Lisbon and Oporto, to nearly 20 hospitals across the whole country.&lt;/p>&lt;p>Quick thinking on the part of ANDAR helped reduce in-person visits to the hospital and in turn, risk of infection for vulnerable patients. But when in-person visits are necessary, another advocacy group found a way to help address patient worries about risks of taking public transportation to their appointments.&lt;/p>&lt;p>Polish oncology support group The Alivia Foundation launched Onkotaxi, a free and safe transportation service with on-demand, disinfected taxis for people with malignant tumors. With over 10,000 rides given since April 2020, the service has helped fill a gap for cancer patients like Piotr, who has two types of cancer.&lt;/p>&lt;p>“This is the first time someone has extended a helping hand to me,” says Piotr, who used the Onkotaxi service.&lt;/p>&lt;p>In Italy, patients with rheumatic and dermatological conditions needed in-person care but were hesitant to enter the hospital setting. The nonprofit group Italian Relief Corps (CISOM) stepped in to help. With support from two patient advocacy groups, a scientific society and companies including AbbVie, the group erected mobile clinics on hospital grounds. The first event took place in Palermo, Sicily, with more than 600 rheumatic and dermatology patients receiving a medical visit. An additional three events are scheduled for September in other Italian regions.&lt;/p>&lt;p>&lt;strong>Bottom line&lt;/strong>: Bridge the physical divide to support continuity of care.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Lesson 2: Prioritize mental health"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For many people, the pandemic has impacted mental health, most notably during lockdown periods when access to social and health services became limited. Close to 40% of respondents in a survey of rheumatic patients in Spain2 conducted April-July 2020 reported an increase in negative thoughts and in lack of sleep and energy, according to patient advocacy group ASEPAR.&lt;/p>&lt;p>“We are facing a very vulnerable group: anxiety, uncertainty, fear, chronic pain, disability, depression… which requires a specialized psychological approach,” says Mangeles Fernandez, president of ASEPAR.&lt;/p>&lt;p>The advocacy group established a remote mental health program for patients and caregivers, tailored to help address concerns around treatment and offer tools for managing anxiety.&lt;/p>&lt;p>In Greece, leading advocacy group Greek Patients Association identified a need to support people with chronic conditions who were struggling with mental health and navigating the health care system to get their medications. Their solution was to establish a helpline with a simple number to remember and immediate access to a trained counselor. These counselors with the “Together” helpline fielded nearly 11,000 calls in the first 16 months of the program.&lt;/p>&lt;p>&lt;strong>Bottom line&lt;/strong>: Find ways to care for the whole person with programs that are easy and accessible.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Lesson 3: Stay connected in a digital world"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Around the globe, people flocked to social media to stay connected with family and friends, and to seek out COVID-19 health information. In Germany alone, since the start of the pandemic, 75% of residents use social platforms more extensively, according to a survey published by German digital association Bitkom3 conducted in April 2020.&lt;/p>&lt;p>This insight helped the healthcare community reach patients and caregivers via channels like Facebook and Instagram. For example, an effort to help seniors with Parkinson’s and their caregivers reconnect with their physicians proved successful through tailored posts on Facebook, says Jutta Ulbrich, director of patient engagement for AbbVie in Germany. The key is understanding where patients are spending their time and going there to meet their needs, she says.&lt;/p>&lt;p>An increased emphasis on virtual connections led to a powerful and ongoing program in Colombia and Central America for people with chronic diseases. Conversaciones Con Sentido, or Meaningful Conversations, focuses on helping people play a more active role in the management of their health.&lt;/p>&lt;p>Interactive virtual workshops were introduced before COVID-19 hit, and then during the pandemic topics like emotional health and how to navigate telehealth were added to reflect patient needs.&lt;/p>&lt;p>&lt;strong>Bottom line&lt;/strong>: Meet patients where they are to empower meaningful conversations.&lt;/p>&lt;p>The pandemic brought new challenges for people across the globe, presenting uncharted territory for those facing immunological diseases, chronic conditions or progressive diseases. Patient advocacy groups, government and health care groups have worked hard to connect people with doctors and medications, foster community and provide resources during this critical time. What may have been envisioned as temporary programs or pivots are now here to stay, from telehealth to door-to-door medication delivery. One thing is certain: Ensuring continuity of care remains a key priority for the global medical community.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Name: Dana Harville&lt;br> Email: &lt;a href=&quot;mailto:dana.harville@abbvie.com&quot;>dana.harville@abbvie.com&lt;/a>&lt;br> Call: + 847-935-0580&lt;/p>"/>
+                </block_7>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/connecting-patients-with-care-3-lessons-learned-during-covid-19/connecting-patients_hero_2880x1620.jpeg"/>
+    </jcr:content>
+</jcr:root>

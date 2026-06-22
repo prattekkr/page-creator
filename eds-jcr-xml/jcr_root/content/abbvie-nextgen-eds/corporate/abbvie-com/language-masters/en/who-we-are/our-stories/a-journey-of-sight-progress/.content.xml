@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:13:53.492Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/philanthropy-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="From river blindness to malaria, pro bono research and public-private partnerships create an impact on global public health."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-06-12T10:34:37.566Z"
+        jcr:lastModifiedBy="tgupta@abbvie.com"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="A journey of sight: Progress toward treating neglected tropical diseases"
+        jcr:uuid="5cc803aa-1ad2-42c9-a860-fb3f29d3e898"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="From river blindness to malaria, pro bono research and public-private partnerships create an impact on global public health."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/a-journey-of-sight-progress-toward-treating-neglected-tropical-diseases/a-journey-of-sight_hero_1080x1920.png"
+        cardTitle="A Journey of Sight: Progress Toward Treating Neglected Tropical Diseases"
+        ctaAltText="Read Article"
+        hideFromNavigation="{Boolean}true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/a-journey-of-sight-progress-toward-treating-neglected-tropical-diseases/a-journey-of-sight_hero_1080x1920.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="A journey of sight: Progress toward treating neglected tropical diseases"
+        publicationDate="January 25, 2022"
+        readWatchTime="read-time"
+        storyReadTime="4"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2b656fa1-674f-422c-8fff-06950893d858/as/a-journey-of-sight_hero_1080x1920.jpg"
+                        imageAlt="a journey of sight hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/philanthropy-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="A Journey of Sight: Progress Toward Treating Neglected Tropical Diseases"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>From river blindness to malaria, pro bono research and public-private partnerships create an impact on global public health.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Malaria: More than 240 million cases per year around the globe. Chagas disease: Parasitic, mild at first but can lead to congestive heart failure if left untreated. Tuberculosis: Dates to the Middle Ages but still the world’s deadliest infectious disease.&lt;/p>&lt;p>These are examples of neglected diseases, named so because existing treatments are either not readily available or accessible, or no treatment exists.&lt;/p>&lt;p>These diseases impact close to 2 billion people globally and disproportionately affect people in low- and middle-income countries. With this devastating toll worldwide, it’s not hard to see why the pharma industry, nonprofits and endemic countries have banded together to help.&lt;/p>&lt;p>At AbbVie alone, more than 400 scientists have given over 170,000 hours of their time toward advancing research and potential medications to treat neglected diseases, according to Trudi Veldman, Ph.D., head of the company’s neglected disease program.&lt;/p>&lt;p>At the center of this effort are the individual strengths of scientists, whether they work in chemistry, biologics, clinical trials or development, and the expertise of public and nonprofit health organizations aiming to improve health outcomes around the globe.&lt;/p>&lt;p>“This work involves people at all different levels, from trying to find new compounds to studies to evaluate the safety of potential medications,” Veldman says. “We’re joining forces to do this in collaboration with other groups, because one partner or another would not be able to achieve this on their own.”&lt;/p>&lt;p>Watch the documentary &quot;A Journey of Sight: The Long Road Toward Treating River Blindness,&quot; created in partnership with Vox Media, for an inside look at how our scientists are helping to advance research in onchocerciasis, or river blindness.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 7:25"
+                    overlayDescription="The Long Road Toward Treating River Blindness"
+                    overlayHeading="A Journey of Sight"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c21a6a5a-dd5b-4fd7-867e-7e1c8526c94b/as/journey-of-sight-yt-screenshot.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="A Journey of Sight: The Long Road Toward Treating River Blindness"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/26emN_6lm2Q?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fa-journey-of-sight-progress.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The strength of public-private partnership"
+                    titleType="h2"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>A key initiative within AbbVie’s pro bono program is advancing research of a potential medication for river blindness. This debilitating disease affects 18 million people, 99 percent of whom live in Africa, &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1705929/&quot; title=&quot;A Jounery&quot;>according to the National Institutes of Health&lt;/a>.&lt;/p>&lt;p>Onchocerciasis is one of the diseases prioritized by the London Declaration on Neglected Tropical Diseases (NTDs), which in 2022 marks 10 years working to eliminate or control NTDs. AbbVie is an original signatory to the Declaration in 2012, 3 years after the company established its neglected tropical disease program focused initially on malaria, Chagas disease and leishmaniasis.&lt;/p>&lt;p>River blindness quickly became a priority as AbbVie scientists jumped in to figure out how they could target the bacteria attached to the parasite that causes river blindness. This kicked off a decade-plus journey with partners including Liverpool School of Tropical Medicine and nonprofit &lt;a href=&quot;https://dndi.org/&quot; title=&quot;A Journey&quot;>Drugs for Neglected Diseases initiative&lt;/a> (DNDi) with clinical trials ongoing.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:3d996d84-9e12-406d-baef-6c68ffccc9c6/as/NDT_River_Blindness_Stat_Card_v2_1750x1400.jpg?dpr=1"
+                    imageAlt="A Journey"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="An inside look at river blindness"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The river blindness infection happens after a person is bitten by a black fly that deposits microfilaria, or larvae, that mature into parasitic worms and produce additional larvae. The adult worms invade a person’s tissue and circulatory system, causing skin inflammation and pain. If microfilaria penetrate the eye, they can cause blindness.&lt;/p>&lt;p>An existing treatment must be applied repetitively, which can be a barrier for the nearly 125 million people worldwide at risk for the disease, with many living in rural and remote areas.&lt;/p>&lt;p>New treatment options are critical not only because of the devastating physical effects of river blindness, but also the social stigma and impact on the whole family, according to Wilfried Mutombo Kalonji, M.D., clinical project leader and medical manager, DNDi. His team is running a clinical trial in the Democratic Republic of the Congo for a potential river blindness medication developed by AbbVie.&lt;/p>&lt;p>“For any blind people, you actually need someone they are going to use as a guide,” Kalonji says. “If you are a parent, your guide will be one of your children…which will affect the life of this child because they will not be going to school.”&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Niki Alami, M.D."
+                    attributionRole="Group Medical Director, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>If we can impact individual patients, this will translate to impact on their families and the whole community.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Collaborating for a bright future"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The power of partnerships is critical to advance treatment options for many neglected tropical diseases beyond river blindness, according to Sabine Specht, head of filarial programs, DNDi.&lt;/p>&lt;p>By nature, neglected diseases often lack a robust drug pipeline or interest from companies focused in other areas of science. But coming together can create a great impact for public health, as seen through vaccine development for COVID-19, Specht says.&lt;/p>&lt;p>“In the NTD space, we need to continue joining forces to bring medications to our patients in need,” she says. “That requires engagement from funders, stakeholders and partners like AbbVie with expertise in drug development.&quot;&lt;/p>&lt;p>While the story for people with river blindness is still unfolding, moving forward with the clinical trial in the Democratic Republic of the Congo is a bright spot for not only just the people participating, says Niki Alami, M.D., group medical director and AbbVie’s clinical development lead for the trial’s design.&lt;/p>&lt;p>“It’s not just the patients that we’re treating,” she says. “If we can impact individual patients, this will translate to impact on their families and the whole community.”&lt;/p>&lt;p>Watch the panel discussion and world premiere of our &quot;Journey of Sight&quot; documentary to learn more about the power of partnerships to help advance research work for NTDs. &lt;a href=&quot;https://www.youtube.com/watch?v=FzhO_tyLT8Q&quot; title=&quot;Watch Now&quot;>Watch now&lt;/a>.&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media Inquiries:&lt;/strong>&lt;br> Email: &lt;a href=&quot;mailto:%20abbviemediarelations@abbvie.com&quot;>abbviemediarelations&lt;/a>&lt;a href=&quot;&quot;>@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_10>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related Content&lt;/p>"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/the-story-behind-our-50-billion-rd-investment"
+                    storyCardVariant="sidePanel"/>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/a-journey-of-sight-progress-toward-treating-neglected-tropical-diseases/a-journey-of-sight_hero_1080x1920.jpg"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:00.438Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/virology-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hepatitis C: the mysterious virus that met its match"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/hepatitis-c-the-mysterious-virus-that-met-its-match/hepatitis-c-the-mysterious-virus-hero.jpeg"
+        cardTitle="Hepatitis C: the mysterious virus that met its match"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/hepatitis-c-the-mysterious-virus-that-met-its-match/hepatitis-c-the-mysterious-virus-hero.jpeg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Hepatitis C: the mysterious virus that met its match"
+        publicationDate="April 13, 2017"
+        readWatchTime="read-time"
+        storyReadTime="8">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:7793fb7e-85dd-42f9-bb17-44769df525b4/as/hepatitis-c-the-mysterious-virus-hero.jpeg"
+                        imageAlt="Hepatitis C: the mysterious virus that met its match"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/virology-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Hepatitis C: the mysterious virus that met its match"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The virus that brims with unanswered questions never stopped researchers from solving a few of its mysteries over the last 25 years.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;div>Soldiers at Ft. Jackson, S.C., in the 1940s. © National Archives (111-SC-176661)&lt;/div>&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="1989"
+                    titleType="h2"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The Berlin Wall fell, Taylor Swift was born, and a DeLorean took us from nostalgia in 1955 to the possibilities of 2015. That very same year, scientists looked back in time and pressed forward. Their challenge? To better understand a soon-to-be-named virus, where it came from and search for ways to treat it.&lt;/p>&lt;p>While the &quot;how to treat it&quot; question has been pretty much answered, others about the origins and the historical spread of the virus remain.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Putting the C next to A and B"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The virus was relegated to non-A, non-B hepatitis in the 70s when a division of the U.S. National Institutes of Health (NIH) showed that some cases of hepatitis were neither hepatitis A nor hepatitis B.1 While the virus was contracted through blood and could damage the liver, it acted very differently – people rarely exhibited any symptoms at its onset.&lt;div>2&lt;/div>&lt;/p>&lt;p>In 1989, biotechnology scientists who partnered with the Centers for Disease Control and Prevention (CDC) identified and officially named the virus hepatitis C.&lt;/p>&lt;p>With the new moniker, scientists put the virus on notice. They quickly developed screenings to detect it in blood supplies, estimated its prevalence, and identified its molecular structure and genetic makeup so that specific treatments could be developed.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="Destruction of hepatitis C virus, computer illustration. Conceptual image for hepatitis C treatment and prevention. © Kateryna Kon / Science Photo Library"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="true"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:4ee01d21-d63b-4ca0-88a4-733c82d751ca/as/hc_virus.jpg?dpr=1"
+                    imageAlt="F017/3847"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The more researchers dug in, the more they discovered.&lt;/p>&lt;p>Chronic hepatitis C infection could be caused by one of a number of genetic variations of the virus, called genotypes,&lt;div>1&lt;/div> which could differ in prevalence and geographical reach.&lt;div>2&lt;/div>&lt;/p>&lt;p>Today the virus affects &lt;a href=&quot;https://www.who.int/en/news-room/fact-sheets/detail/hepatitis-c&quot;>an estimated 58 million people have chronic hepatitis C virus infection worldwide&lt;/a>,&lt;div>3&lt;/div> and approximately 80 percent do not have any symptoms.&lt;div>6&lt;/div> Because of this, the virus commonly remains undiagnosed until serious and frequently irreversible liver damage has occurred,&lt;div>7&lt;/div> which is why it’s sometimes referred to as the “silent killer.”&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The mysterious hep C"
+                    titleType="h2"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>As researchers hunted for effective treatments, more questions sprang up about the virus itself.&lt;/p>&lt;p>How old was it? Where did it come from? How did it spread?&lt;/p>&lt;p>“The typical approach would be to go back through historical medical records to try to find sets of symptoms that match a particular disease. If the disease is smallpox then that’d be fine,” says Oliver Pybus, professor of evolution and infectious disease, University of Oxford. “You could find historical descriptions that match symptoms of smallpox infection, but for hepatitis C there are no specific symptoms; there’s no way we can go back through either the historical records or medical case reports and determine which people might have got these viruses and when and where.”&lt;/p>"/>
+                </block_8>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Oliver Pybus,"
+                    attributionRole="professor of evolution and infectious disease, University of Oxford"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>There’s no way we can go back through either the historical records or medical case reports and determine which people might have got these viruses and when and where.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Clues from a cooler"
+                    titleType="h2"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>One clue was hiding in a cooler in Cleveland, Ohio, U.S.A., having originated on a military base in Wyoming, U.S.A.&lt;/p>&lt;p>In the late 40s and early 50s, Warren Air Base collected blood samples from soldiers to study the prevention of rheumatic heart disease. The renowned lead researcher who, with his research team, eventually discovered how to prevent the disease and treat strep throat, Dr. Charles Rammelkamp, kept the collection and eventually moved it to Case Western Reserve in Ohio.&lt;/p>&lt;p>Approaching retirement, he called someone else interested in the samples, Dr. Edward Kaplan.&lt;/p>&lt;p>“He (Rammelkamp) showed me this walk-in freezer and there in the middle of the walk-in freezer was an iceberg. It was 83 trays of sera collection. It had been sitting under a dripping condenser, just frozen into a huge block of ice. Long story made short, he asked if I would take them because he wanted somebody he knew would protect them and use them for scientific research,” says Edward Kaplan, M.D., professor emeritus, department of pediatrics, University of Minnesota Medical School in Minneapolis.&lt;/p>&lt;p>Kaplan lived in Minnesota and needed to transport them from Ohio to his lab at the University of Minnesota. “I worked a deal with a trucking company who was taking frozen pizzas out to the east coast and coming back empty and I got them to stop in Cleveland. The deal was that they would bring the samples for nothing if I would write in one of the trucking industry journals how they and their drivers were supporting biomedical research.”&lt;br> &lt;br> Kaplan knew the samples had the potential to unlock modern-day medical mysteries, like HIV, but it wasn’t until the 90s that someone took him up on the challenge for hepatitis C.&lt;/p>&lt;p>“We did the initial screening (for hepatitis C) at my lab at the University of Minnesota. There’s a joke with one of my colleagues … He told me when we started ‘if you find any positives I’ll give you a bottle of champagne.’ Of course we found positives and I still don’t have my bottle of champagne,” Kaplan recalls.&lt;/p>&lt;p>Those positive screens for HCV, 17 samples, became the oldest known &lt;a href=&quot;http://rstb.royalsocietypublishing.org/content/368/1626/20130168&quot;>genetic evidence&lt;/a>&lt;div>8&lt;/div> of the virus in the world.&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Creating the timeline"
+                    titleType="h2"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Researchers at the NIH began to map the genome sequence of the samples, but it wasn’t until Pybus at the University of Oxford retrieved them that more of the story came to light.&lt;/p>&lt;p>Pybus developed a method called the “molecular clock” to find and count the genetic changes that occur during viral transmission, which act as a genetic footprint.&lt;/p>&lt;p>“Using the right kinds of mathematical models and evolutionary techniques, we can analyze the pattern of differences amongst the genomes we see and use that to reconstruct how fast the virus has been changing,&quot; Pybus says. &quot;This enables us to estimate the time scale over which the evolutionary process has occurred. For the case of hepatitis C, we’re a little more uncertain, but it’s almost certainly been spreading in human populations for hundreds of years and probably thousands of years, yet we didn’t discover it until 1989. That’s absolutely astonishing.”&lt;/p>&lt;p>In the case of the blood samples from the 50s, Pybus discovered that a particular genotype, 1b, to be descended from a strain around the turn of the 20th century, which is in line with his research on other genotypes and tracing their spread.&lt;/p>"/>
+                </block_13>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="watch 1:00"
+                    overlayDescription="-"
+                    overlayHeading="A History of Hepatitis C"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9f19f97d-4d93-4a65-84ef-216a8dd6074a/as/hepatitis-c-the-mysterious-virus-yt-screenshot.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="A History of Hepatitis C"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/bWdSRh3j4GY?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fhepatitis-c-mysterious-virus-that-met-its-match.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Pybus posits through this study and his other research that the spread of hepatitis C likely relates to the increasing use of injections through public health campaigns in the first half of the 20th century. At the time, injections would have been given using glass syringes rather than disposable syringes.&lt;/p>&lt;p>In his quest to map each genotype, Pybus observed something else, too. “Each genotype has a different story, which is often linked to social history in the 20th century: how flows of people moved around countries and continents, and how new types of behavior – such as treating diseases with injections – led to the spread of hepatitis C.”&lt;/p>&lt;p>Finding the origin of hepatitis C, however, remains elusive. “A single scientific achievement in my scientific career, I would love to say, ‘I found out where hepatitis C came from,’” Pybus says.&lt;/p>&lt;p>To date, Pybus has mapped five genotypes with plans to map the others.&lt;/p>"/>
+                </block_15>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="One mystery solved"
+                    titleType="h5"/>
+                <block_17
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The questions about hepatitis C didn’t get in the way of finding answers as the medical research community relentlessly pursued ways to treat it.&lt;/p>&lt;p>“What you need to know is the virus, what its life cycle is and what mechanisms that virus uses to replicate or perpetuate itself within the human. If you can disrupt that, then you have a great opportunity for cure,” says Andrew Campbell, M.D., senior project leader, HCV and hepatology pharmaceutical development, AbbVie.&lt;/p>&lt;p>In less than 25 years, a number of treatments have become available9 that have increased the likelihood of patients achieving undetectable levels of hepatitis C in their blood, while reducing treatment time and side effects.&lt;div>10&lt;/div>&lt;/p>&lt;p>“HCV has evolved from a virus that we didn’t even know what it was to one in which we’re curing the majority of patients who have it,” Campbell says. “It’s just remarkable how quickly we were able to adapt to a problem.”&lt;/p>&lt;p>While understanding of hepatitis C history comes together as Pybus continues to crack the code on the origins and spread of the virus, the clues to tomorrow’s challenges may be sitting in a freezer. Or on a delivery truck. Or in human migration patterns.&lt;/p>&lt;p>Preserving collections like the one that uncovered clues to hepatitis C may help.&lt;/p>&lt;p>“There are many other things we don’t know. There’s a new Zika virus somewhere that may be around and if you save collections like this you can do research and will helps us solve problems in the future that, right now, we may not know about,” Kaplan says.&lt;/p>"/>
+                </block_17>
+                <block_18
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> David Freundel&lt;br> Email: &lt;a href=&quot;mailto:david.freundel@abbvie.com&quot;>david.freundel@abbvie.com&lt;/a>&lt;br> Call: +1 847-937-4522&lt;/p>"/>
+                </block_18>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/hepatitis-c-the-mysterious-virus-that-met-its-match/hepatitis-c-the-mysterious-virus-hero.jpeg"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:13:55.018Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/working-at-abbvie-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Assembling the pieces of a blockbuster corporate culture."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Ambassadors in action"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Assembling the pieces of a blockbuster corporate culture."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/ambassadors-in-action/ambassadors-in-action_hero.jpg"
+        cardTitle="Ambassadors in action"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/ambassadors-in-action/ambassadors-in-action_hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Ambassadors in action"
+        publicationDate="July 23, 2020"
+        readWatchTime="read-time"
+        storyReadTime="8">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:06122f1b-f08d-42ce-92c6-ffcc335476f6/as/ambassadors-in-action_hero.jpg"
+                        imageAlt="Ambassadors in action hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/working-at-abbvie-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Ambassadors in action"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Assembling the pieces of a blockbuster corporate culture.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Ambassadors at large"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Ambassadors come in all shapes and sizes. Whether it’s the &lt;em>brand ambassador&lt;/em> dedicated to raising brand awareness by providing stakeholders with a memorable experience, the &lt;em>goodwill ambassador&lt;/em> advocating for a specific cause or global issue, or the &lt;em>diplomatic ambassador&lt;/em> acting as representative to an entire nation, all share one crucial trait. Each must embody the multi-dimensional characteristics of mentor, influencer, advocate, and cheerleader -- all rolled into one.&lt;/p>&lt;p>What exactly, then, is a &lt;strong>culture ambassador&lt;/strong>? And why might this type of ambassador be a gamechanger when it comes to ensuring positive outcomes in a corporate setting, while also helping to reinforce the way employees feel toward their organization?&lt;/p>&lt;p>At AbbVie, perhaps the answer lies with one-time medical professional and current employee, Loretta O’Brien. Feeling compelled to help others from as far back as she can remember, O’Brien’s kind-hearted nature and heroic dedication to caregiving began with a nursing career in the late 1990s.&lt;/p>&lt;p>For years working in a large Irish hospital as a clinical nurse specialist in Inflammatory Bowel Disease (IBD), she provided support, encouragement, and advocacy for her many patients. More importantly, she was able to help empower her patients to actively self-manage their disease (where appropriate), as well as help them advocate for rapid access to necessary medical information and clinical care.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d90cfc9f-2ae5-4cb0-add3-54aed913a950/as/ambassadors-in-action-loretta-obrien.png"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Loretta O’Brien"
+                    attributionRole="Senior Brand Manager, Rheumatology, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>As an IBD nurse specialist, the patient was central to the work I did,” O’Brien recalls. “Wanting the best for every single patient, I was an ambassador on their behalf to ensure my patients’ care package always reflected that.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>One of the biggest life lessons learned from her many years in the medical field: everyone has the power within to become an agent for cultural change. With a little passion, and a lot of determination, her years in nursing taught her to embrace her inner ambassador, resulting in positive change for those patients lucky enough to be in her care.&lt;br> &lt;br> Currently spending her days as a senior brand manager of rheumatology at AbbVie, and extracurricular hours as an Ireland-based culture ambassador, she maintains this unique vision of being a devoted advocate for others. She continues to use her caregiving ‘superpowers’ to help guide and empower AbbVie employees to become the champions of culture the company aspires each to be.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="AbbVie Way Ambassadors: profile &amp; purpose"
+                    titleType="h2"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>How exactly do Loretta and her fellow culture ambassadors accomplish this seemingly daunting task? The company provides her and her colleagues worldwide with a unique platform to make possibilities real via the company’s &lt;strong>AbbVie Way Ambassadors&lt;/strong>, advisors whose sole purpose is to ensure culture remains priority number one throughout the halls of AbbVie.&lt;/p>&lt;p>The &lt;strong>AbbVie Way Ambassador (AWA)&lt;/strong> program provides an internal network across AbbVie with a unique opportunity to align, promote and nurture a foundation of culture and to reinforce the company’s core &lt;a href=&quot;/who-we-are/our-principles.html&quot;>Principles&lt;/a>. It not only provides insight into the diversity and culture at different AbbVie locations, but also helps to foster engagement and amplification of culture across the organization.&lt;/p>&lt;p>A global team of diverse, highly engaged employees, AWA’s are, at heart, champions of culture. Tasked with going above and beyond their busy day jobs, and armed with the necessary tools and resources, AWA’s are expected to assess gaps and define plans to execute the enterprise strategy of amplifying and driving culture at both the global and local levels.&lt;/p>&lt;p>To become an AWA is no easy feat. Candidates are assessed against a rigorous set of qualifications and competencies to ensure ambassadors are strong culture leaders and exemplars of the company’s core behaviors. Duties include anything from reinforcing AbbVie’s core set of behaviors; to partnering with leadership on localizing global initiatives; exchanging insights and best practices across the AWA network; and highlighting successes and elevating support needed to address challenges.&lt;/p>&lt;p>Currently boasting more than 140 members, with representation from 46 countries and across all functions, this group of qualified leaders serve as role models and catalysts on the ground (locally) to ultimately help drive the desired culture.&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Amplifying culture via ‘The Ways We Work’"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>At AbbVie, how employees work to achieve results matters. Behaviors matter. The company’s cultural framework is not only rooted in who AbbVie is as a company (mission, vision, and core &lt;a href=&quot;/who-we-are/our-principles.html&quot;>Principles&lt;/a>), but is reflected in how each individual shows up to work every single day. The company culture is meant to guide the way 47,000 employees around the world work, innovate, collaborate, and treat one another; it reflects the company’s collective set of voices and enables the company as a whole to have a remarkable impact on lives of patients worldwide.&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:0d8475c2-68b1-45aa-b86e-447d287de9ab/as/the-way-we-work.jpg?dpr=1"
+                    imageAlt="The Way We Work"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>A few months after AbbVie’s inception in 2013, the company rolled out a core set of behaviors that all employees are to aspire to: &lt;strong>The Ways We Work&lt;/strong>. This set of overarching behavioral guidelines fully embody AbbVie’s working culture and were created to help reinforce one important mantra: &lt;strong>how employees achieve results is equally as important as actually achieving those results&lt;/strong>. Not only have these behaviors become a guiding force in the way employees hold one other accountable for how they reach business goals, but they are firmly embedded in the company’s talent and development practices.&lt;/p>&lt;p>For Switzerland-based AbbVie Way Ambassador and talent development manager, Skrollan Schwyn, culture has become a part of her DNA. She prides herself in walking the talk by not only living and breathing the company’s &lt;strong>The Ways We Work&lt;/strong> behaviors, but by inspiring others to do the same.&lt;/p>&lt;p>In her role as culture ambassador, Skrollan takes a page from the 70/20/10 model of learning and development to help teach and reinforce the company’s core set of behaviors: 70% through experience, 20% through relationships and 10% through training.&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:7c8ff642-00a0-4975-acc4-2ea2a79af802/as/ambassadors-in-action-skrollan-schwyn.png"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Skrollan Schwyn"
+                    attributionRole="Talent Development Manager, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Every training, every workshop and every leadership program is fully aligned with and designed to maximize learning, development and to support AbbVie’s vibrant culture.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>So what exactly does a day in the life of an AWA look like?&lt;/p>&lt;p>For O’Brien, being an influencer of culture often takes the form of elevating support, addressing challenges, providing input and guidance (where necessary), and working to lay the framework for culture in her Irish affiliate. She is also tasked with identifying the necessary resources to support the implementation, monitoring and sustainability of global initiatives by acting as role model and promoter for driving culture at the local level.&lt;/p>&lt;p>Most recently, it meant connecting (virtually), and on a regular basis, to assess feedback and share insights on how culture may have been impacted by the COVID-19 pandemic. She, along with her team of cross-functional Irish colleagues, were inspired to course-correct quickly and create several virtual classes – mindfulness, TRX exercise, and chair/floor yoga programs – to help advocate for her fellow colleagues. Seasonal recipes were also shared for people to attempt at home during lockdown.&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>In the United States, AbbVie Way Ambassador, Reema Raghavendra, spends her days focused on strategic planning in AbbVie’s R&amp;#x26;D discovery strategic portfolio management department. An AWA since 2017, her passion stems from the infinite number of extraordinary ideas present at the grass-roots level of the organization.&lt;/p>&lt;p>One shining example of how Reema works to influence and drive culture: a networking open house held bi-monthly at AbbVie’s Bioresearch Center (ABC) in Worcester, Massachusetts. These informal sessions are meant to provide employees with a platform with which to showcase their science, ask questions, seek advice, and discuss hot topics.&lt;/p>"/>
+                </block_12>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1e1ca35d-4106-4653-8fa1-6445e447d35d/as/ambassadors-in-action-reema-raghavendra.png"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Reema Raghavendra"
+                    attributionRole="Strategic Planner, Discovery Strategic Portfolio Management, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>The popularity of this program has not only flourished since its inception in 2016,” Raghavendra recounts, “but has provided an outlet for employees to share on-going innovations with other groups, as well as work together to solve problems, solicit ideas and collaborate in an effective and valuable way.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Celebration of culture"
+                    titleType="h2"/>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Built from the ground up, with input from employees across the country and around the globe, AbbVie’s diverse work culture has enabled the company to establish a collaborative environment where all voices are heard, all ideas are welcome, and everyone pushes boundaries to find innovative ways to combat pressing global health threats.&lt;/p>&lt;p>To acknowledge these admirable efforts, the company is proud to hold its first-ever Celebration of Culture week in July 2020, dedicated to honoring the culture AbbVie has developed over the last seven years. Among the large volume of available workshops and virtual events, highlights include: 1) a special appearance by Great Place to Work CEO Michael Bush sharing personal insights about the importance of culture in today's modern business landscape; 2) members of AbbVie's executive leadership team hosting an interactive panel discussion on why equality, diversity, and inclusion is critical to AbbVie’s culture and business; and 3) a conversation with the AWA Leadership Team providing insight into how AbbVie employees are continuing to promote the diverse workplace culture at the center of the organization.&lt;/p>"/>
+                </block_15>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Accountability is key"
+                    titleType="h2"/>
+                <block_17
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>At AbbVie, employees are often reminded that accountability is key to the cultural success of the company. AbbVie employees are the driving force in amplifying the culture -- what employees do every day impacts the company’s culture.&lt;/p>&lt;p>Held equally accountable, AbbVie Way Ambassadors continue to work diligently to help steer the course, provide support, and ultimately ensure culture remains a top priority across the organization.&lt;/p>&lt;p>“AbbVie culture, as I perceive it, is multifaceted, ambitious, innovative, curious, fresh, playful, brave, and thus – human,” Schwyn says. “Culture at AbbVie does not just happen; it has been deliberately designed and has become an integral and exciting part of our daily lives.”&lt;/p>"/>
+                </block_17>
+                <block_18
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_18>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/ambassadors-in-action/ambassadors-in-action_hero.jpg"/>
+    </jcr:content>
+</jcr:root>

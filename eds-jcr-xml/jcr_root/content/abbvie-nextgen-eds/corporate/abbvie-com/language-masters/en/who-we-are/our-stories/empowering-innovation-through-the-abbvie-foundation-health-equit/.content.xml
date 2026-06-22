@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-19T05:48:47.564Z"
+        cq:lastModifiedBy="hay15584@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/philanthropy-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Learn how the AbbVie Foundation accelerator supports nonprofits tackling health disparities with mentorship, resources and funding to scale their impact."
+        jcr:lastModified="{Date}2026-06-19T05:48:47.522Z"
+        jcr:lastModifiedBy="hay15584@adobe.com"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Empowering Innovation Through the AbbVie Foundation Health Equity Accelerator"
+        jcr:uuid="966fe065-ed1f-44b2-8aa9-599b1cc0f2ab"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Community-led organizations receive mentorship and funding to scale health equity solutions through the AbbVie Foundation's accelerator program. "
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/accelerator/accelerator-story-hero.jpg"
+        cardTitle="Empowering Innovation Through the Health Equity Accelerator "
+        ctaAltText="Read story"
+        ctaText="Read story"
+        eyebrowText="Philanthropy"
+        hideFromNavigation="true"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="Empowering Innovation Through the AbbVie Foundation Health Equity Accelerator    "
+        publicationDate="January 29, 2026"
+        readWatchTime="readTime"
+        storyReadTime="4"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:fd158f50-d090-476d-9dc2-4db9f5320054/as/accelerator-story-hero.jpg"
+                        imageAlt="Two health care workers"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/philanthropy-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Empowering Innovation Through the AbbVie Foundation Health Equity Accelerator"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Learn about the program’s continued support for community-led solutions to advance health equity.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>In Puerto Rico, health outcomes and access to nutritious food are inseparable. Facing the &lt;a href=&quot;https://hdpulse.nimhd.nih.gov/data-portal/social/table?age=001&amp;#x26;age_options=ageall_1&amp;#x26;demo=00007&amp;#x26;demo_options=poverty_3&amp;#x26;race=00&amp;#x26;race_options=race_7&amp;#x26;sex=0&amp;#x26;sex_options=sexboth_1&amp;#x26;socialtopic=080&amp;#x26;socialtopic_options=social_6&amp;#x26;statefips=00&amp;#x26;statefips_options=area_states&quot;>highest poverty and food insecurity rates in the U.S.&lt;/a>, vulnerable Puerto Rican populations, including older adults, face limited resources and gaps in essential services.&lt;/p>&lt;p>“They don’t have a way to get to the hospital or treatment, much less to a supermarket half an hour away to get healthy food,” explained Mari Jo Laborde, president and CEO of Banco de Alimentos de Puerto Rico. “You put that together with less access to support from their families and you really do create a perfect storm for untreated medical conditions.”&lt;/p>&lt;p>While these challenges are acute in Puerto Rico, they echo the realities of underserved communities across the U.S., where health outcomes are shaped not only by clinical care, but also by complex factors such as geography, access to education, food, financial resources and more.&lt;/p>&lt;p>But within these communities lie the seeds of transformation: nonprofit organizations with deep local knowledge, trusted relationships and innovative ideas that are uniquely positioned to tackle disparities and increase access to care. While these organizations have a strong vision, they often lack the resources, networks and strategic support needed to scale their impact.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Catalyzing Innovation to Tackle Disparities"
+                    titleType="h2"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Recognizing this gap, the &lt;a href=&quot;https://www.abbvie.com/sustainability/abbvie-foundation.html&quot;>AbbVie Foundation&lt;/a> in partnership with &lt;a href=&quot;https://matter.health/&quot;>MATTER&lt;/a>, the premier health care incubator and innovation hub, launched the &lt;a href=&quot;https://matter.health/challenges/abbvie-foundation-health-equity-accelerator-2026/&quot;>AbbVie Foundation Health Equity Accelerator.&lt;/a> The accelerator brings together a cohort of organizations building innovative solutions to address health care disparities in their communities. The 10-week program provides a structured environment offering tailored mentorship, strategic guidance and access to resources, helping nonprofits develop actionable plans to strengthen their solutions and drive long-term impact.&lt;/p>&lt;p>The program provides:&lt;/p>&lt;p>&lt;ul> &lt;li>&lt;strong>Expert guidance:&lt;/strong> Tailored mentorship and strategic advice from subject matter experts and seasoned industry leaders.&lt;/li> &lt;li>&lt;strong>Powerful networking:&lt;/strong> New connections with a curated cohort of peers and direct access to a network of health care systems, investors and philanthropic partners.&lt;/li> &lt;li>&lt;strong>Increased visibility:&lt;/strong> The opportunity to showcase solutions, potentially resulting in additional funding, partnerships and support.&lt;/li> &lt;li>&lt;strong>Financial support&lt;/strong>: A $10,000 stipend for each organization to support their efforts and an additional $50,000 unrestricted grant for one organization to scale their solution.&lt;/li> &lt;/ul>&lt;/p>&lt;p>Five organizations addressing issues including food access, chronic disease and other critical barriers to care were selected to participate in the inaugural 2025 accelerator: &lt;a href=&quot;https://alimentospr.org/&quot;>Banco de Alimentos de Puerto Rico&lt;/a>, &lt;a href=&quot;https://healingca.org/&quot;>Healing California&lt;/a>, &lt;a href=&quot;https://hbi-dc.org/&quot;>Health Betterment Initiative&lt;/a>, &lt;a href=&quot;https://www.healthyhoodchi.com/&quot;>Healthy Hood Chicago&lt;/a> and &lt;a href=&quot;https://vecinos.org/&quot;>Vecinos&lt;/a>.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="What the program provides:"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:df778733-0c44-434e-83d1-6c71c294db34/as/accelerator-story-infographic.jpg?dpr=1"
+                    imageAlt="accelerator story infographic"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Innovating Together: The Power of Collaboration"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>By bringing together community-based organizations, offering expert mentorship and resources, along with structured opportunities for strategy building, the accelerator is catalyzing a new era of innovation in health equity.&lt;/p>&lt;p>For Banco de Alimentos de Puerto Rico, participation in the AbbVie Foundation Health Equity Accelerator was vital in strengthening the nonprofit’s strategy and impact. At the conclusion of the program, the organization received a $50,000 grant for their innovative solution to advance health equity.&lt;/p>&lt;p>“Being a participant in the program and the support we’ve gotten, I feel like I’ve just left with a bachelor’s degree in Medicare, health care management 101,” said Laborde.&lt;/p>&lt;p>Through the accelerator, the organization has been able to enhance the impact of their “Food as Medicine” initiative. The program provides monthly food prescriptions, in-home health check-ins, nutrition education and exercise activities to older adults in underserved Puerto Rican communities.&lt;/p>&lt;p>Catalyzed by the mentorship and support received through the accelerator, Banco de Alimentos de Puerto Rico recently secured a public grant to scale its impact. The organization will soon open the first three ‘food pharmacies’ within community health clinics across the island, addressing not only hunger, but other key factors in shaping long-term health outcomes.&lt;/p>&lt;p>By investing in innovative solutions, the accelerator is empowering nonprofits across the U.S. with the support and resources needed to forge new pathways to better health outcomes – driving transformative change and strengthening communities along the way.&lt;/p>&lt;p>Learn more about the &lt;a href=&quot;https://www.abbvie.com/sustainability/abbvie-foundation/innovative-impact.html&quot;>AbbVie Foundation’s approach to driving innovative impact&lt;/a>.&lt;/p>"/>
+                </block_6>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

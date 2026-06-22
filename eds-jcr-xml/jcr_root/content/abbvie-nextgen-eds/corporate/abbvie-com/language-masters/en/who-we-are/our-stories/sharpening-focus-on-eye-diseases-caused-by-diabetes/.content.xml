@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:09.702Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/eye-care-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="AbbVie leaders are aiming to elevate the standard of care for patients with diabetes and serious vision complications."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Sharpening focus on eye diseases caused by diabetes"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="AbbVie leaders are aiming to elevate the standard of care for patients with diabetes and serious vision complications."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/sharpening-focus-eye-disease/sharpening-focus-eye-disease.jpg"
+        cardTitle="Sharpening focus on eye diseases caused by diabetes"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        hideFromNavigation="true"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Sharpening focus on eye diseases caused by diabetes"
+        publicationDate="October 03, 2023"
+        readWatchTime="read-time"
+        storyReadTime="5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:b6555082-c5e5-422b-a7c0-291e61ab8c8d/as/sharpening-focus-eye-disease-fill.jpg"
+                        imageAlt="man in workshop"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/eye-care-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Sharpening focus on eye diseases caused by diabetes"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The experiences of these AbbVie leaders are aiming to elevate the standard of care for patients with diabetes and vision complications.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Exploring how inflammation impacts the eye"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>When picturing a patient living with diabetes, blindness might not be the first thing that comes to mind. However, diabetic macular edema, or DME, the leading cause of vision loss and blindness in people with diabetes, affects up to 7.9% of people with type 1 diabetes and up to 12.8% of people with type 2 diabetes.&lt;div>1&lt;/div> It is characterized by inflammation along with swelling of the macula, which is the central area of the retina, and thickening of the retina, which is a thin layer of tissue at the back of the eye that transmits light to the brain via the optic nerve.&lt;/p>&lt;p>DME develops from diabetic retinopathy (DR), which can be a common complication for people living with diabetes. Early-stage DR may have no symptoms but could cause vision loss and blindness as it affects blood vessels in the retina.&lt;/p>&lt;p>At AbbVie, researchers are committed to preserving and protecting vision for people, including the large population of patients living with diabetes. As part of this commitment, AbbVie recruits not just ophthalmologists but experts from diverse backgrounds and perspectives to come up with innovative solutions. Meet three such experts and explore how their unique perspectives are shaping the future of research and innovation.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Physician turned R&amp;D leader"
+                    titleType="h2"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>One key expert among AbbVie’s eye care R&amp;#x26;D team is Francisco “Paco” J. López. As a physician in Spain, he also worked closely with patients with diabetes. He earned his PhD in neuroendocrinology, a subspecialty that focuses on hormones and how they interact with the brain. With that early connection, Lopez is eager to elevate the standard of care for those people whose sight might be impacted by diabetes. While his area of medicine wasn’t focused on the eyes, his background provides a unique insight into eye diseases and the need to elevate the standard of care for patients.&lt;/p>&lt;p>“Diabetic retinopathy is like a ticking time bomb in the eye,” described López. “If your glucose is too high, it will have some effect on the vascular network including small vessels of the retina in the back of the eye. Those vessels could leak, swelling the retina (DME) or even burst, leading to hemorrhages, and resulting in impaired vision. Therefore, strategies to manage the effects of DR early could help reduce visual threatening complications and help patients.”&lt;/p>&lt;p>The pathogenesis of DR/DME is complex because it’s governed by multiple cellular pathways and induces inflammation, oxidation stress, and vascular dysfunction.&lt;div>2&lt;/div> AbbVie researchers are focused on studying the role inflammation plays in the physiopathology of DR and DME.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="In the clinic with diabetic patients"
+                    titleType="h2"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>In Belgium, Mathias Schifflers, head of eye care, global medical affairs, AbbVie, was drawn to medicine because of a passion for people. In his early days as a general practitioner in the clinic, diabetes was one of the main conditions he treated in his community. And he saw many more of those patients when he briefly stepped away from the biopharmaceutical industry to volunteer during the first waves of COVID-19.&lt;/p>&lt;p>“At that time, patients’ access to care for their diabetes shifted because hospitals and clinics were busy treating patients during the pandemic. Vision screenings sometimes fell behind,” remembers Schifflers. “These patients experienced different emotions, from anxiety to depression, if their eyesight worsened due to their diabetes.”&lt;/p>&lt;p>This acute understanding of the risks plays an important part in Schifflers’ role at AbbVie. Physicians often approach diabetes care by prioritizing the many complications that could come with the chronic disease’s impact on the blood and insulin levels. Managing glucose may rank highly, but Mathias always educated patients on the additional risk with their eyes. Today, he partners with eye care professionals to conduct educational programs which highlights the importance of more accurate and precise diagnoses of retinal diseases.&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Personalized approaches for detecting and treating retinal diseases"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>López and Schifflers are joined by many others at AbbVie whose work is centered on the high unmet need in DME and DR. Those colleagues include Tim Schwartz, PhD., senior scientific director of precision medicine, AbbVie.&lt;/p>&lt;p>Coming from a family of firefighters, Tim took a different path and pursued a career in biological science. He’s taking learnings from years in personalized medicine in oncology and applying it to eye care.&lt;/p>&lt;p>“I had my own retinal scare 10 years ago, and learned how precious your vision really is,” Schwartz recalls. “To be able to make an impact on such a broad population who are not only battling one illness but at risk of also losing their sight inspires me to deliver.”&lt;/p>&lt;p>With precision medicine Schwartz believes we can move toward care that matches the right patient with the right therapy at the right time. And artificial intelligence, he argues, can help advance the process.&lt;/p>&lt;p>“Using a computer as a tool to assess images of the retina to look for differences is something that we couldn’t possibly see with the naked eye,” explained Schwartz. “We might be able to diagnose patients earlier and get them on the best path for care for their condition.”&lt;/p>&lt;p>To get those images, Schifflers says it is critical for diabetic patients to get annual screenings, and perform, when appropriate, optical coherence tomography (OCT) scans. OCT is a non-invasive imaging method that uses reflected light to create pictures of the retina. These images, similar to an ultrasound of the back of the eye, provide the right picture of inflammation status for eye care practitioners.&lt;/p>&lt;p>“The OCT scan allows clinicians to deliver the right course of action for DME, but they need also the right time to read the scans,” says Schifflers. “Artificial intelligence software could be a game changer to aide in physician identification of certain aspects and what should be considered in their personal treatment plan.”&lt;/p>&lt;p>Working with a robust team of research scientists and medical experts, Schwartz, López and Schifflers remain true to AbbVie’s promise of providing innovative solutions to meet patient needs from the front to the back of the eye, a long-standing commitment to preserving and protecting vision.&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="References"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;ol> &lt;li>Lee R, Wong TY, Sabanayagam C. Epidemiology of diabetic retinopathy, diabetic macular edema and related vision loss. Eye and vision. 2015 Sept; 2(17):1-25. &lt;a href=&quot;https://doi.org/10.1186/s40662-015-0026-2&quot;>https://doi.org/10.1186/s40662-015-0026-2&lt;/a>&lt;/li> &lt;li>Starace V, Battista M, Brambati M, Cavalleri M, Bertuzzi F, Amato A, Lattanzio R, Bandello F, Cicinelli MV. The role of inflammation and neurodegeneration in diabetic macular edema. Therapeutic Advances in Ophthalmology. 2021 Dec; 13:25158414211055963. &lt;a href=&quot;https://doi.org/10.1177/25158414211055963&quot;>https://doi.org/10.1177/25158414211055963&lt;/a>&lt;/li> &lt;/ol>&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Email: &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_10>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

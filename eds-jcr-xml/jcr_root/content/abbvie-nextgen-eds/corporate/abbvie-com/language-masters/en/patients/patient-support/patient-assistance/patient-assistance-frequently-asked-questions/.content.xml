@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-17T14:00:12.619Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Frequently asked questions"
+        jcr:uuid="46b7d3c9-fadd-4b89-838f-1f95c37a9193"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        modelFields="[jcr:title,jcr:description,keywords,cq:tags,pageSubtitle,image,hideFromNavigation,navigationalOrder,cardDescription,cardImage,cardImageAlt,cardImageMimeType,publicationDate,readWatchTime,storyReadTime,storyWatchTime,warndeparturemodalpath,warnarrivalmodalpath]">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-15T08:19:55.285Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="content-wide,large-radius,section-bottom-margin">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-short,overlay-height-short,navy"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="color"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="\0"
+                        imageAlt="\0"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-15T14:49:12.752Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    enableBreadcrumb="true"
+                    enableCurrentPage="true"
+                    enableHiddenItems="false"
+                    language="none"
+                    model="breadcrumb"
+                    modelFields="[homePagePath@aem-content,homeDisplayName@text,enableBreadcrumb@boolean,enableHiddenItems@boolean,enableCurrentPage@boolean,useRedirectPageName@boolean,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Breadcrumb"
+                    useRedirectPageName="false"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="You asked. We answered."
+                    titleType="h1"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Applying for patient assistance programs can be confusing. We've answered patients' most frequently asked questions below.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:lastModified="{Date}2026-06-15T08:19:00.691Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="width-large,align-left"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>If you have a question that isn't answered, please call us at 1-800-222-6885.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-1"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-9">
+                <block
+                    jcr:lastModified="{Date}2026-06-17T13:58:54.111Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_allowMultipleOpen="{Boolean}true"
+                    classes_customDynamicClass="align-center,h5-size,accordion-large"
+                    classes_iconType="accordion-icon-font"
+                    classes_showExpandCollapseAll="{Boolean}true"
+                    collapseAllIcon="chevron-up"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="chevron-down"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading@text,classes_allowMultipleOpen@boolean,classes_showExpandCollapseAll@boolean,expandAllLabel@text,collapseAllLabel@text,classes_iconType@select,expandAllIcon@text,collapseAllIcon@text,expandIcon@text,collapseIcon@text,expandAllIconImage@reference,collapseAllIconImage@reference,expandIconImage@reference,collapseIconImage@reference,ariaExpandAllLabel@text,ariaCollapseAllLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="What is myAbbVie Assist?"
+                        text="&lt;p>myAbbVie Assist provides free AbbVie medicine to qualifying patients. The program was launched in 1991 and each year has helped tens of thousands of patients. Learn about program eligibility by reviewing these &lt;a href=&quot;/patients/patient-support/patient-assistance.html&quot;>requirements&lt;/a>.&lt;/p>"/>
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Can anyone apply for myAbbVie Assist?"
+                        text="&lt;p>If you’re being treated by a licensed U.S. health care provider on an outpatient basis and have been prescribed an AbbVie medicine that is part of the program, meet our requirements, and live in the U.S., you can apply for myAbbVie Assist.&lt;/p>"/>
+                    <item_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How do I apply?"
+                        text="&lt;p>Eligibility for myAbbVie Assist may be initiated through AbbVie Patient Access Support, which will review financial support opportunities for all AbbVie programs, including myAbbVie Assist. Start by &lt;a href=&quot;/patients/patient-support/patient-assistance/eligibility-criteria.html&quot;>selecting your medicine on this page&lt;/a>. Instructions on how to apply can be found on the application. You can also call 1-800-222-6885 to ask us to mail or fax you an application.&lt;/p>"/>
+                    <item_3
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="If I qualify, how long can I receive free medicine?"
+                        text="&lt;p>If you qualify, you will receive free medicine for up to one year. At the end of your enrollment, you can re-apply for continued assistance.&lt;/p>"/>
+                    <item_4
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Is there a fee to apply?"
+                        text="&lt;p>It is free to apply.&lt;/p>"/>
+                    <item_5
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Do I have to pay a copay for my medicine?"
+                        text="&lt;p>Medicines provided through myAbbVie Assist are 100% free; no co-pays or shipping costs.&lt;/p>"/>
+                    <item_6
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How long will it take to process my application?"
+                        text="&lt;p>Once we receive all the information needed, we usually review applications within two business days. After that, we’ll contact you and your health care provider to let you know if you qualify.&lt;/p>"/>
+                    <item_7
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Do I need to provide proof of income?"
+                        text="&lt;p>myAbbVie Assist will assess your estimated income that we obtain from a third party when you provide written instructions to the Program under the Fair Credit Reporting Act, solely to verify patient assistance program eligibility. If the program is unable to verify eligibility based on your estimated income, you may be asked to provide additional financial documentation such as your most recent tax return or similar document that reflects your actual income.&lt;/p>"/>
+                    <item_8
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="What if I have no income?"
+                        text="&lt;p>If you don’t have an income, please include a letter describing your current financial situation (e.g., if you recently lost your job, retired, etc.).&lt;/p>"/>
+                    <item_9
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="I lost my job, so my income is lower than my tax return shows. Can I still apply?"
+                        text="&lt;p>Yes. If you are experiencing a financial hardship, such as a job loss, that isn’t reflected in your tax return, please include this in a letter attached to your application.&lt;/p>"/>
+                    <item_10
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How will I know if I qualify?"
+                        text="&lt;p>AbbVie Patient Access Support may review your application for all AbbVie programs, including myAbbVie Assist. Once we review your application, we will send you a letter, email or text message depending on your preference. We will also notify your health care provider who can also let you know of the outcome.&lt;/p>"/>
+                    <item_11
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How long before I receive my medicine?"
+                        text="&lt;p>While delivery time varies by medicine, we try to ship medicine within a few business days.&lt;/p>"/>
+                    <item_12
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Will I have to pay for shipping?"
+                        text="&lt;p>myAbbVie Assist covers shipping costs for all medicines.&lt;/p>"/>
+                    <item_13
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Can I apply for more than one medicine?"
+                        text="&lt;p>Yes. You are welcome to apply for any medicine you qualify for. Keep in mind that most medicines have different applications. Use the &lt;a href=&quot;/patients/patient-support/patient-assistance/eligibility-criteria.html&quot;>medicine selection page&lt;/a> to see what applications you need.&lt;/p>"/>
+                </block>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:lastModified="{Date}2026-06-15T08:26:33.753Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="standard-header-with-divider,divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text@richtext,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related content&lt;/p>"/>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-15T14:10:58.387Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="true"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="{Boolean}true"
+                    hideReadTime="{Boolean}true"
+                    hideRole="false"
+                    language="lang:none"
+                    model="story-card"
+                    modelFields="[storyCardVariant@select,hidePublicationDate@boolean,hideReadTime@boolean,hideRole@boolean,hideDescription@boolean,hideImage@boolean,page@aem-content,openInNewTab@boolean,ctaLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/eligibility-criteria"
+                    storyCardVariant="sidePanel"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-16"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-8,separator-divider"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-24"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_5
+                    jcr:lastModified="{Date}2026-06-15T08:26:55.407Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="mini-header,mini"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text@richtext,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Eyebrow Text"
+                    text="&lt;p>TOPICS&lt;/p>"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaLabel="Topics"
+                    childDepth="1"
+                    enableDate="false"
+                    enableDescription="false"
+                    enableSubtitle="false"
+                    enableTags="false"
+                    excludeCurrentPage="true"
+                    filter="linklist"
+                    language="none"
+                    layout="single-column"
+                    linkSource="custom"
+                    maxItems="25"
+                    model="linklist"
+                    modelFields="[variant,linkSource,parentPage,childDepth,excludeCurrentPage,enableDescription,enableTags,enableSubtitle,enableDate,orderBy,sortOrder,maxItems,layout,fontIcon,ariaLabel,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Linklist"
+                    orderBy="content-tree"
+                    sortOrder="asc"
+                    variant="standard">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-15T14:05:05.602Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        language="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/online-application-overview"
+                        linkText="Online Application Overview"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                    <item_1
+                        jcr:lastModified="{Date}2026-06-15T14:05:47.188Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        language="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/online-application-frequently-asked-questions"
+                        linkText="Online Application Frequently Asked Questions"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                </block_6>
+            </section_4>
+            <section_5
+                jcr:lastModified="{Date}2026-06-16T14:46:23.212Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name@text,style_container@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-wide,no-bottom-margin,bg-f1f3ff,regular-padding,no-side-margin"/>
+            <section_6
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-6">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:f07fe5f9-d5c3-4626-a25b-8c376875b4f3/as/woman-at-desk-square.jpg"
+                    imageAlt="woman at desk"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+            </section_6>
+            <section_7
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-1"/>
+            <section_8
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-5">
+                <block
+                    jcr:lastModified="{Date}2026-06-17T14:00:12.570Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Looking for help?"
+                    titleType="h3"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/patients/patient-support/patient-assistance/eligibility-criteria.html"
+                    linkAriaLabel="\0"
+                    linkText="See if I qualify"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="-"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>If you have any additional questions, please call us at 1-800-222-6885.&lt;/p>"/>
+                </block_2>
+            </section_8>
+            <section_9
+                jcr:lastModified="{Date}2026-06-16T14:46:06.541Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="content-wide,bg-f1f3ff,no-bottom-margin,padding-bottom,no-side-margin">
+                <block
+                    jcr:lastModified="{Date}2026-06-15T08:28:01.820Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-48"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="false"/>
+            </section_9>
+        </root>
+    </jcr:content>
+</jcr:root>

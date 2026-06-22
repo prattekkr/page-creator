@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:16:33.130Z"
+        cq:lastModifiedBy="migration"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:lastModified="{Date}2026-06-10T13:08:59.060Z"
+        jcr:lastModifiedBy="hay15584@adobe.com"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Well-Being in the Workplace"
+        jcr:uuid="d5d67648-5e46-4502-ae94-c9b96c7da29e"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/employee/tanya-jonathas-sitting-courtyard-hero.jpg"
+        cardTitle="Well-Being in the Workplace"
+        ctaAltText="Learn more about well-being in the workplace"
+        eyebrowText="Join Us"
+        hideFromNavigation="{Boolean}false"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="Well-Being in the Workplace"
+        readWatchTime="readTime"
+        storyReadTime="{Long}5"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundAlt,sectionId,style_desktopWidth,style_contentWidth,style_height,style_borderRadius,style_transparency,style_alignment,style_margin,style_padding,style_bg-color,style_customClass,language]">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/title/v1/title"
+                    title="Well-Being in the Workplace"
+                    titleType="h1"/>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/text/v1/text"
+                    text="&lt;p>This page is a placeholder for the Well-Being in the Workplace section.&lt;/p>"/>
+            </section>
+        </root>
+    </jcr:content>
+</jcr:root>

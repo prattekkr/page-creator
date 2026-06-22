@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-25T06:56:54.348Z"
+        cq:lastModifiedBy="indranih@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Modal Fragment"
+        jcr:uuid="2c0cb48d-46f6-4614-b7d0-085dbece814d"
+        sling:resourceType="core/franklin/components/page/v1/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"/>
+        </root>
+    </jcr:content>
+    <warn-on-arrival/>
+    <warn-departure-modal/>
+</jcr:root>

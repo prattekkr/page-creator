@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-22T04:09:06.388Z"
+        cq:lastModifiedBy="shanmukasaisaran.chilukuri@abbvie.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Learn more about AbbVie’s neuroscience pipeline, which consists of innovative, investigative therapies across neurological and psychiatric disorders."
+        jcr:lastModified="{Date}2026-06-22T04:06:25.655Z"
+        jcr:lastModifiedBy="shanmukasaisaran.chilukuri@abbvie.com"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Neuroscience"
+        jcr:uuid="0f9d04de-6da7-4b33-a855-56d5288eb50c"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Why we focus on preserving personhood."
+        cardImage="/content/dam/abbvie-com2/images/cell/neuroscience-cell-feature.jpg"
+        cardTitle="Neuroscience"
+        ctaAltText="Learn more about neuroscience at AbbVie"
+        eyebrowText="science"
+        hideFromNavigation="{Boolean}false"
+        image="/content/dam/corporate/abbvie-com2/images/cell/neuroscience-cell-feature.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="Neuroscience"
+        readWatchTime="readTime"
+        storyReadTime="{Long}5"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-22T04:06:46.559Z"
+                jcr:lastModifiedBy="shanmukasaisaran.chilukuri@abbvie.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="large-radius">
+                <hero_container
+                    jcr:created="{Date}2026-06-22T04:07:45.295Z"
+                    jcr:createdBy="shanmukasaisaran.chilukuri@abbvie.com"
+                    jcr:lastModified="{Date}2026-06-22T04:08:03.649Z"
+                    jcr:lastModifiedBy="shanmukasaisaran.chilukuri@abbvie.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="hero-container"
+                    classes_customDynamicClass="height-default,overlay-height-short,medium-radius"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Hero Container">
+                    <hero_container_item
+                        jcr:created="{Date}2026-06-22T04:08:13.153Z"
+                        jcr:createdBy="shanmukasaisaran.chilukuri@abbvie.com"
+                        jcr:lastModified="{Date}2026-06-22T04:09:06.372Z"
+                        jcr:lastModifiedBy="shanmukasaisaran.chilukuri@abbvie.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        aueComponentId="hero-container-item"
+                        backgroundVariant="image"
+                        image="/content/dam/corporate/abbvie-com2/images/cell/neuroscience-cell-feature.jpg"
+                        imageMimeType="image/jpeg"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant@select,image@custom-asset-namespace:custom-asset,imageMimeType@custom-asset-namespace:custom-asset-mimetype,imageAlt@text,accountId@select,playerId@text,videoId@text,text@richtext,ctaLabel@text,ctaUrl@aem-content,ctaAlt@text,classes_customDynamicClass@ngaem:dynamic-picklist]"
+                        name="Hero Container Item"/>
+                </hero_container>
+            </section>
+        </root>
+    </jcr:content>
+</jcr:root>

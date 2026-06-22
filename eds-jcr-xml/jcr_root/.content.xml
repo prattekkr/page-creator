@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:mixinTypes="[rep:AccessControllable,rep:RepoAccessControllable]"
+    jcr:primaryType="rep:root"
+    sling:resourceType="sling:redirect"
+    sling:target="/index.html"
+    principalId="corp-default-aem-sites-users"
+    privilege_x0040_jcr_x0025_3Aread="denied"/>

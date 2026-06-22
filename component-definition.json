@@ -420,6 +420,23 @@
           }
         },
         {
+          "title": "Dashboard Card Link List",
+          "id": "dashboard-card-link-list",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Dashboard Card Link List",
+                  "model": "dashboard-card-link-list",
+                  "language": "none",
+                  "blockId": ""
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Editorial Feed",
           "id": "editorial-feed",
           "plugins": {
@@ -1064,6 +1081,22 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Inner Grid",
+          "id": "inner-grid",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Inner Grid",
+                  "model": "inner-grid",
+                  "filter": "inner-grid"
                 }
               }
             }

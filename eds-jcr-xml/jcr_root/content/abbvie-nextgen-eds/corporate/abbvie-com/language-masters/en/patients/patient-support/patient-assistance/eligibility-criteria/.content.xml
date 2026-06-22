@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-15T13:36:56.617Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-06-15T13:36:56.514Z"
+        jcr:lastModifiedBy="inf44580@adobe.com"
+        jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Check your eligibility"
+        jcr:uuid="d31c5c43-6ed1-48a0-8b93-8daec69589d2"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Start here to learn more about myAbbVie Assist eligibility criteria."
+        cardImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d11cb1c7-6235-4bb4-8279-9ed5c5ce0009/as/man-woman-walking-down-street.avif?assetname=man-woman-walking-down-street.jpg"
+        cardImageMimeType="image/jpeg"
+        cardTitle="myAbbVie Assist Eligibility"
+        ctaText="LEARN MORE"
+        eyebrowText="Patient Assistance"
+        hideFromNavigation="{Boolean}false"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        readWatchTime="readTime"
+        storyReadTime="{Long}5"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section">
+                <title
+                    jcr:created="{Date}2026-06-15T13:33:36.986Z"
+                    jcr:createdBy="inf44580@adobe.com"
+                    jcr:lastModified="{Date}2026-06-15T13:33:57.531Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/title/v1/title"
+                    aueComponentId="title"
+                    model="title"
+                    title="placeholder for Check your eligibility page"/>
+            </section>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-06-10T12:08:29.930Z"
+        cq:lastModifiedBy="indranih@adobe.com"
+        cq:lastReplicationAction_preview="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Internal server error - 500 error"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Internal Server Error"
+        jcr:uuid="8c02323b-305a-48dd-8813-e561a5e87777"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        initialContentRefTarget="false"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        unsetTitle="false">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-08T12:26:26.338Z"
+                jcr:lastModifiedBy="indranih@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="content-wide,regular-padding,large-radius,no-bottom-margin">
+                <block
+                    jcr:lastModified="{Date}2026-06-08T12:29:31.710Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="accent-blue,height-short,overlay-height-default"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-08T12:21:25.747Z"
+                        jcr:lastModifiedBy="indranih@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundType="image"
+                        backgroundVariant="color"
+                        classes_customDynamicClass="accent-blue"
+                        ctaAltText="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="color"
+                        imageMimeType="image/unknown"
+                        language="hero-container-item,accent-blue"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant@select,image@custom-asset-namespace:custom-asset,imageMimeType@custom-asset-namespace:custom-asset-mimetype,imageAlt@text,accountId@select,playerId@text,videoId@text,text@richtext,ctaLabel@text,ctaUrl@aem-content,ctaAlt@text,classes_customDynamicClass@ngaem:dynamic-picklist]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-08T12:15:34.387Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size,align-left"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Page Not Found"
+                    titleType="h1"/>
+                <block_2
+                    jcr:lastModified="{Date}2026-06-08T12:17:06.991Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="We're sorry, the page you're looking for cannot be found. Please search our site below."
+                    blockId="none"
+                    classes_commonCustomClass="body-unica-32-default"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-08T12:15:43.960Z"
+                        jcr:createdBy="indranih@adobe.com"
+                        jcr:lastModified="{Date}2026-06-08T12:16:02.104Z"
+                        jcr:lastModifiedBy="indranih@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>We’re sorry, the page you’re looking for cannot be found. Please search our site below.&lt;/p>"/>
+                </block_2>
+            </section>
+            <section_1
+                jcr:lastModified="{Date}2026-06-08T12:25:39.755Z"
+                jcr:lastModifiedBy="indranih@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="section-padding,padding-bottom,container-large,height-tall">
+                <search_input
+                    jcr:created="{Date}2026-06-08T12:19:44.498Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-08T12:20:19.049Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="search-input"
+                    filter="search-input"
+                    language="en"
+                    model="search-input"
+                    modelFields="[searchResultsPagePath@aem-content,searchButtonPlaceholder@text,searchButtonPlaceholderMobile@text,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Search Input"
+                    searchButtonPlaceholder="Search"
+                    searchButtonPlaceholderMobile="Search"
+                    searchResultsPagePath="/search-results"/>
+            </section_1>
+        </root>
+        <image
+            jcr:lastModified="{Date}2026-06-10T12:08:29.877Z"
+            jcr:lastModifiedBy="indranih@adobe.com"
+            jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:13:54.192Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/science-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie Research Collaborative"
+        jcr:uuid="fb16be81-a202-4ce8-ac49-70d867e9c03a"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/lab-of-future/lotf_arc_hero_2880x1620.jpg"
+        cardTitle="AbbVie Research CollaborativeAbbVie Research Collaborative: Going Beyond the Lab to Accelerate Treatment"
+        ctaAltText="Watch now"
+        ctaText="Watch now"
+        eyebrowText="Science"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/lab-of-future/lotf_arc_hero_2880x1620.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="AbbVie Research Collaborative"
+        publicationDate="April 02, 2024"
+        readWatchTime="read-time"
+        storyReadTime="4">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ea17d960-2a48-4ab7-ad3e-81c93ed2014a/as/lotf_arc_hero_2880x1620.jpg"
+                        imageAlt="AbbVie Research Collaborative: Going Beyond the Lab to Accelerate Treatment"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/science-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="AbbVie Research Collaborative: Going Beyond the Lab to Accelerate Treatment"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Medical director Patrick Lank sheds light on AbbVie’s answer to the need for more personal data to accelerate the development of new medicines.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 3:51"
+                    overlayDescription="AbbVie Research Collaborative"
+                    overlayHeading="Lab of the Future"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:58d4b908-76fc-4aa0-a9f0-35c65abf7822/as/ARC_Thumbnail.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="AbbVie Research Collaborative: Going Beyond the Lab to Accelerate Treatment"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/kiXDt_sRy7g?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fabbvie-research-collaborative.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The typical drug development process often overlooks the full picture of a person’s health. But the quality of research hinges on the comprehensiveness of the data that informs its development.&lt;/p>&lt;p>The AbbVie Research Collaborative is a groundbreaking initiative that allows people to share their unique health stories and contribute real-world data beyond the lab. By voluntarily and securely sharing their medical histories, lived experiences and other insights, participants are helping AbbVie scientists gain a deeper understanding of individual needs – and help accelerate the development of medicines that can make a greater difference.&lt;/p>&lt;p>Through this collaborative platform, AbbVie scientists are incorporating patient voices into the research process and seeing diseases through their point of view. This holistic approach enables us to uncover connections and patterns that may have been missed before, helping to accelerate the discovery and development of new medicines that more accurately address people's specific health needs.&lt;/p>&lt;p>Watch to see how AbbVie is harnessing technology, data and real-life experiences to create the medicines of the future. Visit &lt;a href=&quot;https://abbvieresearchcollaborative.com/?campaign=big-bets&quot;>abbvieresearchcollaborative.com&lt;/a> to learn more about how you can participate.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Patrick Lank"
+                    attributionRole="Medical Director, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Patient voices need to come through sooner in the development of new medicines.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_allowMultipleOpen="false,accordion-icon-font,h5-size,width-large"
+                    collapseAllIcon="minus"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="plus"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading,classes_allowMultipleOpen,classes_showExpandCollapseAll,expandAllLabel,collapseAllLabel,expandAllIcon,collapseAllIcon,expandIcon,collapseIcon,expandAllIconImage,collapseAllIconImage,expandIconImage,collapseIconImage,ariaExpandAllLabel,ariaCollapseAllLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Video transcript"
+                        text="&lt;p>Hi, my name is Patrick Lank, Medical Director for AbbVie, and I want to tell you about my lab.&lt;/p>&lt;p>You won’t find any test tubes or petri dishes here. Instead, it’s a virtual destination where real-time input from real patients comes together to form a powerful community.&lt;/p>&lt;p>A community that informs science. A community that helps us gain insights and test hypotheses to uncover connections that could lead to new medicines.&lt;/p>&lt;p>A community that’s invested in our work just as much as we are, transforming a traditional lab into an incubator of patient-centered innovation.&lt;/p>&lt;p>In the development of new medicines, the patient voice hasn’t always come through as clearly, and as early as it should. Instead, scientists have relied on historical clinical data from previously published research and new results collected during clinical trials ... when investigational medicines are evaluated for safety and efficacy. Typically, a patient’s full health profile and lived experience isn’t part of the picture. This leads to a fragmented, limited view of a disease that doesn’t help scientists understand the patient’s whole story.&lt;/p>&lt;p>At AbbVie, we’ve developed a different approach. We’re inviting patients to partner with our scientists to advance research and find new solutions by contributing their health experiences and data to accelerate the discovery and development of new medicines that more accurately address their needs.&lt;/p>&lt;p>The AbbVie Research Collaborative was built on pushing boundaries and using the latest advanced technology to help develop new – and better – medicines faster.&lt;/p>&lt;p>The Collaborative welcomes everyday people to voluntarily and securely share their medical history and experiences with AbbVie scientists. This gives our researchers real-time data and insights to help accelerate the development of medicines that can make a real difference in people’s lives.&lt;/p>&lt;p>Having these early insights helps our scientists ask the right questions and identify the most relevant endpoints in our clinical trials – so that we’re measuring what really matters to patients. The result – richer and more timely data on how a disease impacts a person’s life.&lt;/p>&lt;p>We can quickly assess the data, find unexpected disease patterns, make connections and contact patients for more details to go beyond what’s possible in a traditional clinical trial.&lt;/p>&lt;p>For example, we know that people with environmental allergies are more likely to suffer from migraine headaches.[i] Not only can we see this type of connection using data collected in the Collaborative, but we can follow up with our participants to carry research a few steps further. This enables us to learn more about their patterns, response to therapy and potential need for future therapies.&lt;/p>&lt;p>The Collaborative empowers scientists to zoom in on big data across diverse patient populations to capture a more holistic understanding of a disease and how to treat it – with the goal of gaining a better understanding of individual needs.&lt;/p>&lt;p>Thousands of patients have joined and their data-rich stories are already giving our scientists information they are using to create tomorrow’s medicines.&lt;/p>&lt;p>Through this platform we are empowering people to share their unique health stories. We’re incorporating their voices in the research process. And we’re seeing the disease through their vantage point. All so we can discover and develop new treatments that address the specific health needs of each unique person.&lt;/p>&lt;p>At AbbVie, we’re going beyond the lab, harnessing technology, data and real-life experiences to create the medicines of the future.&lt;/p>&lt;p>Want to know more about the AbbVie Research Collaborative? Interested in becoming part of a community that helps inform breakthrough treatments? Learn more about how to join our mission at &lt;a href=&quot;https://www.abbvieresearchcollaborative.com/&quot;>abbvieresearchcollaborative.com&lt;/a>.&lt;/p>&lt;p>[i] Ferretti A., et al. Migraine, Allergy, and Histamine: Is There a Link? J Clin Med. 2023;19;12(10):3566.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-24"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related Content&lt;/p>"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/science"
+                    storyCardVariant="sidePanel"/>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,no-bottom-margin,section-padding,bg-f4f4f4">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Related Content"
+                    titleType="h5"/>
+            </section_5>
+            <section_6
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-wide,no-bottom-margin,padding-bottom,bg-f4f4f4,regular-padding,no-top-padding"/>
+            <section_7
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-6">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/digital-science-lab"
+                    storyCardVariant="relatedContent"/>
+            </section_7>
+            <section_8
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-6">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/specialized-research-in-chaotic-systems-sparcs"
+                    storyCardVariant="relatedContent"/>
+            </section_8>
+            <section_9
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,bg-f4f4f4,no-bottom-margin">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-112"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+            </section_9>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/lab-of-future/lotf_arc_hero_2880x1620.jpg"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-17T12:29:51.198Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="We are a powerful catalyst that enables and empowers women globally to reach their full potential"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Women Leaders in Action"
+        jcr:uuid="99e0c740-df89-45b2-9187-1c0907457f36"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        modelFields="[jcr:title,jcr:description,keywords,cq:tags,pageSubtitle,image,hideFromNavigation,navigationalOrder,cardDescription,cardImage,cardImageAlt,cardImageMimeType,publicationDate,readWatchTime,storyReadTime,storyWatchTime,warndeparturemodalpath,warnarrivalmodalpath]">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:fe29a5eb-2396-4c6f-be25-44476d81dd91/as/wla-hero.jpg"
+                        imageAlt="smiling group of people on stage"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-17T11:17:47.644Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    enableBreadcrumb="true"
+                    enableCurrentPage="true"
+                    enableHiddenItems="false"
+                    language="none"
+                    model="breadcrumb"
+                    modelFields="[homePagePath@aem-content,homeDisplayName@text,enableBreadcrumb@boolean,enableHiddenItems@boolean,enableCurrentPage@boolean,useRedirectPageName@boolean,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Breadcrumb"
+                    useRedirectPageName="false"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Women Leaders in Action"
+                    titleType="h1"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>We are a powerful catalyst that enables and empowers employees to reach their full potential. Women Leaders in Action (WLA) is open to all employees.&lt;/p>"/>
+                </block_3>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="container-small">
+                <block
+                    jcr:lastModified="{Date}2026-06-17T04:15:11.107Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,medium-weight,align-left,width-small"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="There’s a future full of possibilities"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="-"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>We encourage all qualified candidates to apply for open positions. Join us and make a remarkable impact.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta"
+                    ctaTarget="_self"
+                    iconFont="\0"
+                    iconImage="\0"
+                    iconPosition="after"
+                    iconVariation="none"
+                    language="none"
+                    link="https://careers.abbvie.com/en/"
+                    linkAriaLabel="\0"
+                    linkText="Are you interested? Join Us."
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+            </section_1>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-1"/>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="What we stand for"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="-"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Women represent more than 50% of the world’s population – making this group an essential part of our workforce, communities, patients and customers.&lt;/p>&lt;p>Women Leaders in Action enables all employees to reach their full potential through:&lt;/p>&lt;p>&lt;ul> &lt;li>Empowering and inspiring employees to take charge of their career journey and achieve their full potential&lt;/li> &lt;li>Attracting and building future leaders&lt;/li> &lt;li>Delivering business results and value by accessing the unique insights women can provide&lt;/li> &lt;/ul>&lt;/p>"/>
+                </block_1>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-1"/>
+            <section_6
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>&lt;strong>Related content&lt;/strong>&lt;/p>"/>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-17T12:29:51.158Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="false"
+                    hideDescription="{Boolean}true"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="lang:none"
+                    model="story-card"
+                    modelFields="[storyCardVariant@select,hidePublicationDate@boolean,hideReadTime@boolean,hideRole@boolean,hideDescription@boolean,hideImage@boolean,page@aem-content,openInNewTab@boolean,ctaLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Story Card"
+                    openInNewTab="{Boolean}false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/abbvies-2024-working-parents-finding-purpose-in-adversity"
+                    storyCardVariant="sidePanel"/>
+            </section_6>
+            <section_7
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_8
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-1"/>
+            <section_9
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-9">
+                <block
+                    jcr:lastModified="{Date}2026-06-17T04:16:32.177Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Christine"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_customDynamicClass="quote-standard,quote-content-col-12,quote-h4"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="none"
+                    model="quote"
+                    modelFields="[quoteVariant@select,quotation@richtext,attributionName@text,attributionRole@text,attributionImage@custom-asset-namespace:custom-asset,attributionImageMimeType@custom-asset-namespace:custom-asset-mimetype,quoteFragment@aem-content,backgroundImage@custom-asset-namespace:custom-asset,backgroundImageMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundImageAlt@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Quote"
+                    quotation="&lt;p>By embracing diverse perspectives through ERGs, we are crafting networks within our AbbVie community that accelerate the business and unite us in our mission to deliver impactful therapies to patients.”  &lt;/p>"
+                    quoteVariant="basic"/>
+            </section_9>
+            <section_10
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_11
+                jcr:lastModified="{Date}2026-06-17T11:21:30.982Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="content-wide,no-bottom-margin,no-padding">
+                <inner_grid
+                    jcr:created="{Date}2026-06-17T11:21:03.801Z"
+                    jcr:createdBy="inf44580@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T11:21:51.603Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="inner-grid"
+                    classes_customDynamicClass="cols-12,regular-padding"
+                    filter="inner-grid"
+                    language="none"
+                    model="inner-grid"
+                    modelFields="[name@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Inner Grid"/>
+                <block
+                    jcr:lastModified="{Date}2026-06-17T11:22:16.576Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_commonCustomClass="col-1"
+                    classes_customDynamicClass="h3-size,medium-weight,width-medium"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Working at AbbVie"
+                    titleType="h2"/>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-17T11:22:29.545Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    classes_commonCustomClass="col-1"
+                    classes_customDynamicClass="-,width-medium"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Skill development is one of our strategic priorities. We do this through activities such as:&lt;/p>&lt;p>&lt;ul> &lt;li>Seminars to empower our members to activate their career development.&lt;/li> &lt;li>Informal networking and mentorship opportunities, which help improve retention and employee satisfaction.&lt;/li> &lt;/ul>&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:lastModified="{Date}2026-06-17T11:22:38.283Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_commonCustomClass="col-1"
+                    classes_customDynamicClass="separator-height-48"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_3
+                    jcr:lastModified="{Date}2026-06-17T11:22:47.107Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_commonCustomClass="col-1"
+                    classes_customDynamicClass="h3-size,medium-weight,width-medium"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Making an impact"
+                    titleType="h2"/>
+                <block_4
+                    jcr:lastModified="{Date}2026-06-17T11:22:56.573Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    classes_commonCustomClass="col-1"
+                    classes_customDynamicClass="-,width-medium"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>We are committed to helping employees achieve their full potential and support community organizations where we work and live. We focus on engaging with our local communities, amplifying our impact beyond bringing effective medicines to market. This includes volunteering for events that teach the importance of STEM-based curriculum with school-age children in underserved schools.&lt;/p>&lt;p>WLA is proud to support community organizations in partnership with the AbbVie Foundation.&lt;/p>"/>
+                </block_4>
+            </section_11>
+            <section_12
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,no-bottom-margin">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-112"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+            </section_12>
+            <section_13
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundAlt,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

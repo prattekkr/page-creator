@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-17T12:16:13.097Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/profile-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="AbbVie’s 2024 Working Parents honorees not only overcame major obstacles—they channeled their experience into helping others."
+        jcr:lastModified="{Date}2026-06-17T12:16:13.039Z"
+        jcr:lastModifiedBy="inf44580@adobe.com"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVies 2024 Working Parents Finding Purpose in Adversity"
+        jcr:uuid="382dfe3a-7207-42e3-a119-a218f014350e"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="AbbVie’s 2024 Working Parents honorees not only overcame major obstacles—they channeled their experience into helping others."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/working-parent-2024/working-parent-2024-hero.png"
+        cardTitle="AbbVies 2024 Working Parents Finding Purpose in Adversity"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        eyebrowText="Profile"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/working-parent-2024/working-parent-2024-hero.png"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="AbbVies 2024 Working Parents Finding Purpose in Adversity"
+        publicationDate="October 24, 2024"
+        readWatchTime="readTime"
+        storyReadTime="8"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:914ad070-91c5-4ec2-ab43-ff5fd4d9c898/as/working-parent-2024-hero.png"
+                        imageAlt="working parent 2024 hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/profile-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="AbbVie’s 2024 Working Parents: Finding Purpose in Adversity"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>AbbVie’s 2024 Working Parents honorees not only overcame major obstacles—they channeled their experience into helping others.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="A personal commitment"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Our 2024 Working Parents of the Year, Karin Mountain and Javier Maldonado, have one thing in common: They each turned a tragic, unimaginable situation into providing hope and support for others.&lt;/p>&lt;p>Karin, an account specialist for anti-infectives, uprooted her life to remove herself and her two young daughters from an abusive relationship. She found strength and community among others who had experienced domestic violence and now serves as a support to others who are starting fresh after leaving abusive relationships.&lt;/p>&lt;p>Rheumatology marketing manager Javier and his wife Judy experienced the unimaginable when their son passed away in 2010. Reeling from the experience while comforting their two young daughters, Javier and Judy turned their grief into action by working with an organization to provide respite care for babies.&lt;/p>&lt;p>Karin and Javier bring their time and energy to their roles at AbbVie and balance that with their commitments as working parents. Both are masters of making the most of their time and are highly motivated, well respected by their colleagues and make a difference in the world around them in very personal ways.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Tell us more about you. What’s your role at AbbVie? What’s your family situation?"
+                    titleType="h5"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Karin:&lt;/strong> I’ve been with AbbVie for eight and half years now, and I work with hospitals as part of the anti-infectives team. It’s a great place to work, and we interact with many different departments – with physicians, nurses and pharmacists. I came to AbbVie through the Allergan acquisition but had worked at the company years before.&lt;/p>&lt;p>I have two daughters in their teens, and one is starting college this fall. My younger daughter is in high school. They are busy kids with lots of extracurricular activities, and both work hard at their academics.&lt;/p>&lt;p>&lt;strong>Javier:&lt;/strong> I’m currently a marketing brand manager for rheumatology. I’ve been in this role for about eight months. I have been in marketing for more than two years, and I was a field sales representative for 10 years before that. My wife and I have been married for 23 years, and our kids range from eight months old to 21 years old. Our oldest daughter recently got married to our favorite son-in-law, our middle daughter is in college in Pittsburgh and our youngest daughter just started middle school. Our fourth child is an 8-month-old baby we’re hosting through Safe Families for Children. He came to live with us when he was 3 months old, and we’re working toward his healthy transition back to his mom in the months to come.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:dc10a513-dc30-4c6b-bf20-03b598fca0bf/as/javier-headshot.jpg"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Javier Maldonado"
+                    attributionRole="2024 AbbVie Working Parent of the Year"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Being able to work, to grow in my career, to be there for my family and to give back to the community takes effort, and it helps me to stay grounded in who I am and where I am.”&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: You’ve had a major life experience that’s shaped your family and career. Please tell us about that."
+                    titleType="h5"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Karin:&lt;/strong> Several years ago, I was a stay-at-home mom with two small daughters, but it wasn’t a healthy situation. I left my husband to remove the three of us from domestic violence. We started a new life in my home state, with the help of family and others who truly helped me get through every step.&lt;/p>&lt;p>At that point, I went back to work. I had been with Abbott before having kids, but there were no open roles in my area. So I did contract work for another company and proved that I could do the work. I later joined Allergan which then led me to AbbVie.&lt;/p>&lt;p>I was grateful to have support from my community and family when this happened, and it felt like God put some women who were like angels in my life. Before I could find a job, they helped me get different services like food stamps and childcare. Some went to court with me for moral support. And I realized that I want to help other women because a lot of people stepped up and helped me. So, I am a resource for others and have even been that person who goes to court with them to be a friendly face and someone to lean on.&lt;/p>&lt;p>&lt;strong>Javier:&lt;/strong> When our older girls were 5 and 7 years old back in 2010, we were blessed with the birth of our baby boy, Mateo. The day after he was born, he contracted an illness in the hospital and passed away when he was just a day old. We were completely blindsided and heartbroken, to say the least. Despite our grief, we had to figure out a way to move forward and care for our two girls while still finding a way to honor our son’s legacy.&lt;/p>&lt;p>We heard about Safe Families for Children through our church. It’s an organization that offers respite care to families who are in temporary crisis situations. It keeps the kids out of the DCFS system and helps reunite families in a healthy way.&lt;/p>&lt;p>We’ve had seven babies placed in our home over the past 10 years since we started volunteering with Safe Families. Our youngest daughter was our very first placement. Although the goal of Safe Families is not adoption, her situation was unique. We were blessed with the honor of becoming her forever family in 2020, six years after she first came to stay with us at 9 months old.&lt;/p>&lt;p>Safe Families has been such a blessing to us because we’re able to not only form relationships with the babies that we watch, but in most cases, we get to become an extended family and support system for their families. Two years ago, we brought home a sweet baby boy from the hospital when he was a few days old and raised him for the first 11 months of his life until he transitioned back to his mom. It was so hard to let him go at first, but his mom asked us to be his godparents, which has become one of the biggest blessings of our lives. He comes to spend the weekends with us a couple times a month and adds so much joy to our family. I like to think that loving each of the children that come into our home is a way of loving our Mateo.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:b9382a10-97ba-4e07-be16-0d1b232578e8/as/working-parent-2024-collage.jpg?dpr=1"
+                    imageAlt="working parent collage"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How does AbbVie help you be more effective at work and at home?"
+                    titleType="h5"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Karin:&lt;/strong> I’m really driven when it comes to my work, and I’m conscious every day about not being so focused on my work agenda that I miss an opportunity to be there for my kids and for others. Everybody has something hard that they’re working through – it’s up to us to be part of the community and provide support to our coworkers, customers and others in our lives.&lt;/p>&lt;p>For me, it comes down to the people and the leaders. My manager is amazing. She really looks at each person's strengths and wants to maximize who we are and help us to be better in our roles. She also encourages us to have good work-life balance and models it, as does my regional manager. I love that when we go on vacation, they really want us to shut down and step away because it makes us better employees, better parents, better human beings if we take that time to recharge.&lt;/p>&lt;p>&lt;strong>Javier:&lt;/strong> Our work at AbbVie makes such a difference in the world, and I give my all to everything I do. In addition to my work, I’m part of an AbbVie development program that focuses on leadership skills through workshops, conferences and coaching. That additional exposure outside of my current role is important. Being able to work, to grow in my career, to be there for my family and to give back to the community takes effort, and it helps me to stay grounded in who I am and where I am.&lt;/p>&lt;p>It’s great that AbbVie provides me with the opportunity for flexibility to help me meet my family’s needs. For example, my middle daughter plays basketball for Chatham University in Pittsburgh, and that flexibility means I can do my job AND travel to see my daughter play. We often get calls for babies that need to be picked up in a short amount of time, and my AbbVie team is always supportive of when I might need to feed a baby while on a call or bring them with me to a team outing.&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: How do you manage everything in your busy lives?"
+                    titleType="h5"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Karin:&lt;/strong> Organization comes easily to me. And for me, it’s about being mindful of my attitude. There’s a quote by Chuck Swindoll that I really like, and the short version of it is that “life is 10 percent what happens to you and 90 percent how you respond to it” – that your attitude is key. When things are overwhelming and busy, I try to make sure I have a positive attitude and also try to simplify things. Our kids are always watching, and when they see us choosing to do what’s right, that goes a long way.&lt;/p>&lt;p>For me, it’s important to give back when an opportunity comes across my path. For example, there was an older couple in our neighborhood who needed food, and they couldn’t get out to get groceries. I thought, I can’t save the world, but I can fix that need. I go a couple of times a month and help them get their groceries. There’s always someone who needs help more than we do, so how do you impact one person? It’s those little extra opportunities that make life more meaningful and more balanced. Try to think about your strengths and what you can do with them to help others.&lt;/p>&lt;p>&lt;strong>Javier:&lt;/strong> It’s partnership with my wife. I couldn’t do any of the things that I do without her. I think she’d say the same. We both work full time and are constantly in communication about how we can best support each other. We discuss how we can be there for each other to balance out our workloads and build intentional space in our schedules for our family.&lt;/p>&lt;p>And we both give as much as we can to all parts of our lives. I’ve always been enterprise-minded – it’s not just about my area of the business. For example, I decided to get involved with AHORA, our Hispanic/Latinx Employee Resource Group. I joined and saw they had some open roles and began by helping with Hispanic Heritage Month and then taking on some leadership roles. It gives me the opportunity to have an impact on the company, get involved with senior leadership and to discover areas for growth from different perspectives. It’s inspiring to find ways to give back and find new platforms for professional development.&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:7a9a59e1-4fd7-44a1-9540-8d4d514288c9/as/karin-headshot.jpg"
+                    attributionImageMimeType="image/unknown"
+                    attributionName="Karin Mountain"
+                    attributionRole="2024 AbbVie Working Parent of the Year"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Everybody has something hard that they’re working through – it’s up to us to be part of the community and provide support to our coworkers, customers and others in our lives.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,format-outdented,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Q: Do you have any words of guidance or support that you’d like to share with other working parents at AbbVie?"
+                    titleType="h5"/>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Karin:&lt;/strong> Keep a positive attitude and be aware that our kids are watching. They're watching how we work and they're watching our attitude about work. When we talk about work positively it gives our kids excitement about whatever career path they will take. Our kids will all be doing different types of jobs, but I think for them to be aware when we're excited about what we're doing makes a difference.&lt;/p>&lt;p>&lt;strong>Javier:&lt;/strong> Be fully present wherever you are and be intentional about creating work life balance. It’s important for parents to remember that even if they’re superheroes at work, they can’t take their cape off when they get home. My kids need me to be fully present when I get home and to go the extra mile for them just like I do at work. I love to tell my teammates about my family so that they can be part of our journey; it allows us to work at doing life together instead of just being people who work together.&lt;/p>"/>
+                </block_14>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;em>For the last six out of seven years, AbbVie has been recognized as one of the Top 10 of Seramount’s 100 Best Companies. Seramount 100 Best Companies are recognized for their ongoing commitment to forward-thinking workplace programs in the areas of women’s advancement, parental leave, childcare assistance, mentorship and flexibility.&lt;/em>&lt;/p>"/>
+                </block_15>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Email: &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_16>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/working-parent-2024/working-parent-2024-hero.png"/>
+    </jcr:content>
+</jcr:root>

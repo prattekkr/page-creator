@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-19T05:22:09.202Z"
+        cq:lastModifiedBy="hay15584@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/philanthropy-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Learn how the AbbVie Foundation and CARE are addressing health disparities through an innovative program offering coordinated support to pregnant people in underserved communities."
+        jcr:lastModified="{Date}2026-06-19T05:22:09.149Z"
+        jcr:lastModifiedBy="hay15584@adobe.com"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="An Innovative Approach to Improve Maternal Health"
+        jcr:uuid="c106fcad-612f-40a6-98b0-9578f1251fa9"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="From coordinated support to practical services, this collaborative effort bridges gaps in care for pregnant people in underserved communities."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/maternal-health/maternal-health-hero.jpg"
+        cardImageAlt="A pregnant woman in a white t-shirt and black pants stands in a park on a sunny day "
+        cardTitle="An InnovatInnovative Partnership Addresses Maternal Health Crisisve Approach to Improve Maternal Health"
+        ctaAltText="Read story"
+        ctaText="Read story"
+        eyebrowText="Philanthropy"
+        hideFromNavigation="true"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="An Innovative Approach to Improve Maternal Health"
+        publicationDate="December 15, 2025"
+        readWatchTime="readTime"
+        storyReadTime="4"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:996680e2-1ddf-4da5-b594-e68fa49a26d1/as/maternal-health-hero-v2.jpg"
+                        imageAlt="A pregnant woman in a white t-shirt and black pants stands in a park on a sunny day"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/philanthropy-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The Power of Partnership: An Innovative Approach to Improve Maternal Health"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>A collaborative pilot creates an ecosystem of support advancing health equity in underserved communities.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For one Atlanta mother, Erika, there was no celebration when she discovered she was pregnant.&lt;/p>&lt;p>She had no family support. No one to call with questions. She navigated it alone while working and managing medical appointments she couldn't always afford — or get to.&lt;/p>&lt;p>&quot;I was battling really, really, really, really hard,&quot; said Erika. &quot;I didn't have anywhere to turn.&quot;&lt;/p>&lt;p>Her experience isn't unique. Across the United States:&lt;/p>&lt;p>&lt;ul> &lt;li>&lt;a href=&quot;https://www.cdc.gov/maternal-mortality/preventing-pregnancy-related-deaths/index.html&quot;>More than 80%&lt;/a> of pregnancy-related deaths are preventable&lt;/li> &lt;li>&lt;a href=&quot;https://policycentermmh.org/maternal-mental-health-fact-sheet/&quot;>Nearly 1 in 5 pregnant women&lt;/a> experience mood and anxiety disorders during pregnancy, which can increase the risk of preterm birth &lt;a href=&quot;https://jamanetwork.com/journals/jamapsychiatry/fullarticle/210887&quot;>by up to 50%&lt;/a>&lt;/li> &lt;/ul>&lt;/p>&lt;p>But the crisis isn't just medical. It's a breakdown in how we think about care itself.&lt;/p>&lt;p>Health care operates in silos. A doctor treats medical symptoms. A social worker might offer referrals. Things like transportation, food security, housing stability and mental health support, while essential to individual health and wellbeing, aren’t typically included. Yet these needs shape whether someone can access and follow through on care in the first place. When they aren’t addressed, the burden falls on individuals, leaving them to navigate a maze of fragmented services alone while facing the very barriers those services are meant to solve.&lt;/p>&lt;p>&quot;Some people just need a hand up,&quot; Miryah, an Atlanta mother enrolled in the program, said simply.&lt;/p>&lt;p>What if health care could be something different?&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="A coordinated ecosystem of support"
+                    titleType="h2"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>A groundbreaking two-year pilot launching in Atlanta is working to answer that question. Developed by the &lt;a href=&quot;/sustainability/abbvie-foundation.html&quot;>AbbVie Foundation&lt;/a> and &lt;a href=&quot;https://www.care.org/&quot;>CARE&lt;/a> in partnership with &lt;a href=&quot;https://www.msm.edu/&quot;>Morehouse School of Medicine&lt;/a>, &lt;a href=&quot;https://www.lyft.com/&quot;>Lyft&lt;/a> and the &lt;a href=&quot;https://www.acfb.org/&quot;>Atlanta Community Food Bank&lt;/a>, the initiative creates something health care rarely achieves: a coordinated ecosystem of support.&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2f4e1851-b95f-4907-8a53-97c1214ec97e/as/maternal-health-infographic.jpg?dpr=1"
+                    imageAlt="Colorful graphic titled Addressing Maternal Health Care Gaps"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The AbbVie Foundation recognizes that improving health disparities requires going beyond traditional health care interventions. And the needs for maternal health are clear: practical resources, genuine advocacy and trusted relationships. Not referrals to navigate alone. Not siloed services. But a trusted, coordinated support system to help pregnant people throughout the entire journey.&lt;/p>&lt;p>“Improving maternal health disparities asks us to think differently about health care delivery,” said Keya Milla, AbbVie Foundation president. “This partnership addresses the real-world barriers pregnant people face every day. We're advancing a model that's built by communities, for communities, with the goal to expand it to address other pressing health equity challenges.”&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="How the program works"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Pregnant people in Atlanta zip codes with the highest unmet social needs who qualify for the program are paired with a community health worker — someone from their neighborhood who becomes their navigator and advocate.&lt;/p>&lt;p>Navigators receive specialized training from Morehouse School of Medicine in cultural competence, trauma-informed care and how to build trust and navigate complex systems. They connect mothers to four concrete resources:&lt;/p>&lt;p>&lt;ul> &lt;li>Pre- and post-natal support and education through Morehouse School of Medicine&lt;/li> &lt;li>Delivery of iron-rich foods from the Atlanta Community Food Bank&lt;/li> &lt;li>Reduced-cost transportation to appointments through Lyft&lt;/li> &lt;li>Cash assistance&lt;/li> &lt;/ul>&lt;/p>&lt;p>For Erika, Melvina and Miryah, everything changed when they enrolled.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Melvina"
+                    attributionRole="Program Participant"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Being in this program allowed me to see the different steps. It makes you feel heard, makes you feel listened to, makes you feel seen.&quot;&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Early data confirmed that the practical support is working. Funds to cover transportation costs mean they can attend prenatal appointments. Food deliveries mean they don't have to choose between buying groceries and paying other bills. &quot;I was like, oh, I can eat now. I felt happy,” Miryah said.&lt;/p>&lt;p>&quot;The challenges facing maternal health in this country require urgent, innovative action,” said Sarah Thompson, CARE’s associate vice president for U.S. programs. “This partnership embodies CARE's approach: locally led, culturally appropriate care that creates community networks of support. We're bringing 80 years of global expertise home to address one of America's most critical health equity challenges.&quot;&lt;/p>"/>
+                </block_8>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="A care model to replicate"
+                    titleType="h2"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The partnership was designed to be applied across communities and areas of health care with different needs and resources. Once this pilot phase shows success, the next step is adapting and scaling it for maternal health, and beyond.&lt;/p>&lt;p>The vision includes integrating this approach into existing systems of care: community health centers, birth centers and public health agencies. Future iterations may layer in additional mental health and housing support.&lt;/p>&lt;p>The program launched in January 2025 and continues to enroll participants, with the aim to support 150 expectant mothers and their families. For the families it serves directly, the impact is already transformative.&lt;/p>&lt;p>For the Atlanta mothers whose pregnancy began in isolation, the program offers more than transportation vouchers and food deliveries. It offers hope. It suggests that the future of maternal health lies not just in treating patients, but addressing barriers and creating communities of support where mothers and families can thrive.&lt;/p>"/>
+                </block_10>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;a href=&quot;/sustainability/abbvie-foundation/addressing-systemic-barriers.html&quot;>Learn more about the AbbVie Foundation’s efforts to address systemic barriers.&lt;/a>&lt;/p>"/>
+                </block_11>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

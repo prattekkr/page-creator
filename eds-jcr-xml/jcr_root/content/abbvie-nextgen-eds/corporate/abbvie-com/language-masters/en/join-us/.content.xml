@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-07T09:03:52.526Z"
+        cq:lastModifiedBy="diyas@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:lastModified="{Date}2026-05-07T09:03:52.513Z"
+        jcr:lastModifiedBy="diyas@adobe.com"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Join AbbVie"
+        jcr:uuid="a534d6b8-6658-4800-a098-eda1e0001757"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        hideFromNavigation="{Boolean}false"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,hideFromNavigation@boolean,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@reference,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text]"
+        navTitle="Join Us"
+        readWatchTime="readTime"
+        storyReadTime="{Long}5"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundAlt,sectionId,style_desktopWidth,style_contentWidth,style_height,style_borderRadius,style_transparency,style_alignment,style_margin,style_padding,style_bg-color,style_customClass,language]">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/title/v1/title"
+                    title="Join Us"
+                    titleType="h1"/>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/text/v1/text"
+                    text="&lt;p>This page is a placeholder for the Join Us section.&lt;/p>"/>
+            </section>
+        </root>
+    </jcr:content>
+    <life-at-abbvie/>
+    <opportunities/>
+    <reasonable-accommodations/>
+    <why-abbvie/>
+    <equal-employment-opportunity-employer/>
+    <student-and-new-graduates/>
+    <bay-area-opportunities/>
+    <postdoctoral-program/>
+    <internships/>
+    <student-programs/>
+</jcr:root>

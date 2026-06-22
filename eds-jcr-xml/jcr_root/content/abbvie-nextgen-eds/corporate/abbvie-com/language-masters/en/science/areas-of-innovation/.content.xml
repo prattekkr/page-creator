@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-06-20T14:25:33.888Z"
+        cq:lastModifiedBy="migration"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="At AbbVie, our innovation grows when we put patients first. Learn about our R&amp;D capabilities and expertise, from precision medicine to patient-focused drug development. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-06-10T07:19:03.826Z"
+        jcr:lastModifiedBy="inf44580@adobe.com"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Areas of Innovation"
+        jcr:uuid="62597cf9-0b77-4754-bebd-489854140fe6"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="At AbbVie, our innovation grows when we put patients first. "
+        cardImage="/content/dam/abbvie-com2/images/employee/woman-scientist-examining-hero.jpg"
+        cardImageAlt="woman scientist examining"
+        cardImageMimeType="image/jpeg"
+        cardTitle="Innovation That Raises the Bar"
+        ctaAltText="Learn more"
+        ctaText="Learn more"
+        eyebrowText="science"
+        hideFromNavigation="{Boolean}false"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navigationalOrder="{Long}0"
+        navTitle="Areas of Innovation"
+        readWatchTime="readTime"
+        storyReadTime="{Long}5"
+        storyWatchTime="{Long}5"
+        unsetTitle="false">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundAlt,sectionId,style_desktopWidth,style_contentWidth,style_height,style_borderRadius,style_transparency,style_alignment,style_margin,style_padding,style_bg-color,style_customClass,language]">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/title/v1/title"
+                    title="Areas of Innovation"
+                    titleType="h1"/>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/text/v1/text"
+                    text="&lt;p>This page is a placeholder for the Areas of Innovation section.&lt;/p>"/>
+            </section>
+        </root>
+        <image
+            jcr:lastModified="{Date}2026-05-24T06:54:27.833Z"
+            jcr:lastModifiedBy="shanmukasaisaran.chilukuri@abbvie.com"
+            jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+    <patient-focused-drug-development/>
+    <therapeutic-modalities-and-platforms/>
+    <precision-medicine/>
+    <ai-and-data-convergence/>
+    <genomics/>
+</jcr:root>

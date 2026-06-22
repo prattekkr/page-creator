@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:01.678Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/science-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="How uterine fibroids feel to a patient…who’s also a doctor"
+        jcr:uuid="d3b8ff14-8043-41b4-90b7-0f634d1ebeed"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/how-uterine-fibroids-feel-to-a-patient/UFStory_Hero.jpg"
+        cardTitle="How uterine fibroids feel to a patient…who’s also a doctor"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/how-uterine-fibroids-feel-to-a-patient/UFStory_Hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="How uterine fibroids feel to a patient…who’s also a doctor"
+        publicationDate="July 29, 2020"
+        readWatchTime="read-time"
+        storyReadTime="6">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:5b8d7517-590f-4357-8704-702f48d62f79/as/UFStory_Hero.jpg"
+                        imageAlt="UFStory Hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/science-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="How uterine fibroids feel to a patient…who’s also a doctor"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>An AbbVie researcher shares how her own struggles with uterine fibroids influenced her perspective as a doctor and scientist.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Mohita Kumar, M.D., understands the everyday burdens caused by uterine fibroids: She deals with the condition herself.&lt;/p>"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="A silent agony"
+                    titleType="h2"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>All the symptoms were there: menstrual pain and heavy bleeding. Fatigue. Anemia. But Mohita Kumar had become accustomed to a rocky “time of the month”…every month.&lt;/p>&lt;p>“You think that’s just the way you are,” she says.&lt;/p>&lt;p>One day, Kumar’s boss took one look at her ghostly-white complexion and told her, “You need to go home. You don’t look right.”&lt;/p>&lt;p>Kumar followed her boss’s advice. When she arrived home, she collapsed onto the floor and passed out. A few hours later, she woke up, light-headed, and knew the time had come to talk with her OB/GYN about her bleeding and other symptoms.&lt;/p>&lt;p>Her doctor ordered an ultrasound and that’s when the diagnosis came: uterine fibroids – non-cancerous masses of uterine tissue that made her normal menstruation a nightmare.&lt;/p>&lt;p>What surprised Kumar the most was that she had missed it: Kumar, herself, is a physician.&lt;/p>&lt;p>“I think doctors can be some of the most non-compliant patients in the world,” says Kumar, a physician and AbbVie researcher. Also, she admits she loves her work and doesn’t like taking time away for extra doctor’s visits.&lt;/p>&lt;p>But she believes there’s another reason she underestimated the problem.&lt;/p>&lt;p>“You’re told by your mom and your aunts, ‘Oh, this is normal,’” she explains. “You come to believe this is just what having a period is like. So you don’t make a big deal about it. And women don’t talk about their periods, in general.”&lt;/p>"/>
+                </block_2>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:36d536f1-76a4-4195-85dd-b4a6392abb03/as/UFStory_Graphic01.png?dpr=1"
+                    imageAlt="UFStory Graphic 01"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The cost of silence"
+                    titleType="h2"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Made of muscular uterine tissue, uterine fibroids can form within or outside the uterus. They can be smaller than a pea or larger than a full-term baby. Women can also have one uterine fibroid or multiple fibroids at one time. Every woman’s case is unique.&lt;/p>&lt;p>Kumar has noticed some myths that patients have been told:&lt;/p>&lt;p>&lt;ul> &lt;li>It’s “just” a heavy period, nothing serious.&lt;/li> &lt;li>Since it runs in the family, there’s nothing you can do about it.&lt;/li> &lt;li>Doesn’t everyone have period issues like this?&lt;/li> &lt;li>If I get pregnant, it will get rid of my uterine fibroids.&lt;/li> &lt;li>Just have a hysterectomy after your kids are born. You’ll be fine.&lt;/li> &lt;/ul>&lt;/p>&lt;p>“While it’s true that uterine fibroids could be hereditary, it’s not true that women have to suffer in silence,” Kumar says. “And a hysterectomy is not the only treatment option.”&lt;/p>&lt;p>“There are other choices, like medication or certain procedures,” Kumar says. “You don’t have to endure this until after your kids are born.”&lt;/p>&lt;p>Uterine fibroids can be a major health issue. Kumar says her period has lasted up to 19 days. She drinks 2 gallons of water every day, a habit that started as a way to keep her blood pressure up.&lt;/p>&lt;p>Anemia is a constant concern for Kumar, due to her heavy menstrual bleeding. Heavy periods lead to a greater loss of red blood cells, which deliver oxygen throughout the body. Without enough oxygen, the body suffers, leading to the potential for issues such as weakness, fatigue, dizziness, rapid heartbeat, irritability and headaches.&lt;/p>&lt;p>Sateria Venable, founder of The Fibroid Foundation, a nationwide advocacy group for uterine fibroid patients, had such severe problems with fibroid-related anemia that her doctor warned her she could pass out while driving.&lt;/p>&lt;p>“That was an eye-opener for me,” she says. Before treatment, Venable’s hemoglobin fell as low as 5.6 milligrams per deciliter; the normal level is at least 12 mg for women.&lt;/p>"/>
+                </block_5>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The impact on everyday life"
+                    titleType="h2"/>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Uterine fibroids also can make it tough to live life normally. Kumar has heard shocking stories from patients.&lt;/p>&lt;p>“Many women carry a backpack full of super tampons, pads and a change of clothing,” she says. “Many say their bleeding and pain keeps them in bed several days every month or forces them to miss work.”&lt;/p>&lt;p>Kumar is no stranger to challenges like these. She has had to plan around social events like weddings or parties. If she’s traveling during her period, she carriers a backpack of her own full of sanitary supplies and black leggings. “You never know when you’re going to stand up and have a gush of blood,” she says.&lt;/p>&lt;p>Too many women endure these symptoms without seeking help, Kumar says.&lt;/p>&lt;p>“As a society, we need to teach our daughters, friends, family about what’s normal and what’s not,” she says. “You’re not supposed to experience heavy periods consistently.”&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Be your best advocate"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Kumar says it’s critical for patients to be an advocate for themselves and discuss their symptoms and the impact they have on their lives openly with their doctors without being embarrassed.&lt;/p>&lt;p>“If I were treating women with uterine fibroids, I would want them to be proactive in a conversation,” she says. “I would want them to tell me about the symptoms they’re having, and how fibroids are affecting their lives.”&lt;/p>&lt;p>“Patients should also prepare and bring a list of questions for their doctor to help guide the conversation and make sure their concerns are being addressed,” says Kumar. “It is important that patients have meaningful conversations with their doctor where both sides are engaged, so that when, or if, treatment is considered, everyone feels confident in the treatment approach.”&lt;/p>&lt;p>She adds that there is reason for hope. Researchers are looking at many potential mechanisms that may lead to uterine fibroids. Kumar says hormonal therapy has helped with her symptoms, but new treatment options are also being developed and made available.&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:80aa103a-4d53-4dfb-abf0-f981c6b2156d/as/UFStory_Graphic02.png?dpr=1"
+                    imageAlt="UFStory Graphic 02"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>“We are doing a much better job today treating uterine fibroid symptoms with medication than we have done in the past,” Kumar says. “Some of our most exciting research focuses on reducing heavy menstrual bleeding in uterine fibroids patients.”&lt;/p>&lt;p>Kumar mentions other studies focusing on topics such as:&lt;/p>&lt;p>&lt;ul> &lt;li>Genetic risk factors (for example, why fibroids occur more often in African-American women than in Caucasian women)&lt;/li> &lt;li>Angiogenesis – the creation of blood vessels that “feed” fibroids&lt;/li> &lt;li>Signaling pathways involved in the creation and growth of fibroids&lt;/li> &lt;li>Environmental factors and how they may influence the development of uterine fibroids&lt;/li> &lt;/ul>&lt;/p>&lt;p>“I was at a National Institute of Environmental Health Sciences conference recently on uterine fibroids, and I was blown away by all of the studies going on worldwide,” Kumar says.&lt;/p>&lt;p>More uterine fibroid patients are coming forward to share their stories, as well. Venable says when she started The Fibroid Foundation in 2012, she worked alone. “Now we have 26,000 members in 48 countries,” she says.&lt;/p>&lt;p>“That makes me hopeful,” she says. “When I started out this work, I thought, “I thought, ‘Who’s going to listen to you?’ It turned out to be a lot of people.”&lt;/p>&lt;p>Kumar advises women with symptoms to see a physician immediately, and not to be afraid to be open about their situation.&lt;/p>&lt;p>“You’re not being dramatic or exaggerating when you say, ‘I’m bleeding a lot,’” she says. “Heavy menstrual bleeding is defined by the impact it has on your quality of life. If it bothers you, then the physician should be listening.”&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:65d36265-b8cd-48cc-ace1-64c8fcb89f19/as/UFStory_Graphic03.png?dpr=1"
+                    imageAlt="UFStory Graphic 03"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_allowMultipleOpen="false,accordion-icon-font,h5-size,width-large"
+                    collapseAllIcon="minus"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="plus"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading,classes_allowMultipleOpen,classes_showExpandCollapseAll,expandAllLabel,collapseAllLabel,expandAllIcon,collapseAllIcon,expandIcon,collapseIcon,expandAllIconImage,collapseAllIconImage,expandIconImage,collapseIconImage,ariaExpandAllLabel,ariaCollapseAllLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="References"
+                        text="&lt;p>&lt;div>1&lt;/div> Baird D et al. High cumulative incidence of uterine leiomyoma in black and white women: Ultrasound evidence. Am J Obstet Gynecol. 2003;188:100-107. &lt;a href=&quot;https://doi.org/10.1067/mob.2003.99&quot;>https://doi.org/10.1067/mob.2003.99&lt;/a>&lt;/p>&lt;p>&lt;div>2&lt;/div> Borah BJ, Nicholson WK, Bradley L, Stewart EA. The impact of uterine leiomyomas: a national survey of affected women. Am J Obstet Gynecol. 2013;209(4): 319.e1–319.e20&lt;/p>&lt;p>&lt;div>3&lt;/div> Keshavarz H, Hillis SD, Kieke BA, Marchbanks PA. Hysterectomy surveillance United States, 1994–1999. MMWR CDC Surveill Summ 2002;51:1–8.&lt;/p>&lt;p>&lt;div>4&lt;/div> Hysterectomy: Frequently Asked Questions: Special Procedures. American College of Obstetricians and Gynecologists. &lt;a href=&quot;https://www.acog.org/patient-resources/faqs/special-procedures/hysterectomy&quot;>https://www.acog.org/patient-resources/faqs/special-procedures/hysterectomy&lt;/a> Accessed July 6, 2020.&lt;/p>&lt;p>&lt;div>5&lt;/div> ACOG (2019). Uterine Fibroids. &lt;a href=&quot;https://www.acog.org/Patients/FAQs/Uterine-Fibroids?IsMobileSet=false&quot;>. https://www.acog.org/Patients/FAQs/Uterine-Fibroids?IsMobileSet=false&lt;/a> Accessed March 2020.&lt;/p>&lt;p>&lt;div>6&lt;/div> De La Cruz MS et al. Uterine Fibroids: Diagnosis and Treatment. Am Fam Physician. 2017;95(2):100-107.&lt;/p>&lt;p>&lt;div>7&lt;/div> ACOG. ACOG practice bulletin. Alternatives to hysterectomy in the management of leiomyomas. Obstet Gynecol. 2008;112(2 Pt 1):387-400.&lt;/p>"/>
+                </block_13>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;br> Raquel Powers&lt;br> Email: &lt;a href=&quot;mailto:raquel.powers@abbvie.com&quot;>raquel.powers@abbvie.com&lt;/a>&lt;br> Call: +1 847-935-6563&lt;/p>"/>
+                </block_14>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/how-uterine-fibroids-feel-to-a-patient/UFStory_Hero.jpg"/>
+    </jcr:content>
+</jcr:root>

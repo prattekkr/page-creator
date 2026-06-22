@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-17T13:21:03.191Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Online Application Frequently Asked Questions"
+        jcr:uuid="6b2eec96-f9ee-4ae1-8e12-93624b1d32ee"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        modelFields="[jcr:title,jcr:description,keywords,cq:tags,pageSubtitle,image,hideFromNavigation,navigationalOrder,cardDescription,cardImage,cardImageAlt,cardImageMimeType,publicationDate,readWatchTime,storyReadTime,storyWatchTime,warndeparturemodalpath,warnarrivalmodalpath]">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-short,overlay-height-short,navy"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="color"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="\0"
+                        imageAlt="\0"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-17T13:21:03.171Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    enableBreadcrumb="true"
+                    enableCurrentPage="true"
+                    enableHiddenItems="false"
+                    language="none"
+                    model="breadcrumb"
+                    modelFields="[homePagePath@aem-content,homeDisplayName@text,enableBreadcrumb@boolean,enableHiddenItems@boolean,enableCurrentPage@boolean,useRedirectPageName@boolean,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Breadcrumb"
+                    useRedirectPageName="false"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Online PAP Patient Portal Frequently Asked Questions"
+                    titleType="h1"/>
+                <block_3
+                    jcr:lastModified="{Date}2026-06-15T08:48:16.653Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg,spacing-bottom"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For additional questions, please call us at 1-800-222-6885 Monday–Friday, 8am–5pm CST.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:lastModified="{Date}2026-06-15T08:44:45.551Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_allowMultipleOpen="{Boolean}true"
+                    classes_commonCustomClass="width-medium"
+                    classes_customDynamicClass="h5-size"
+                    classes_iconType="accordion-icon-font"
+                    classes_showExpandCollapseAll="{Boolean}true"
+                    collapseAllIcon="chevron-up"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="chevron-down"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading@text,classes_allowMultipleOpen@boolean,classes_showExpandCollapseAll@boolean,expandAllLabel@text,collapseAllLabel@text,classes_iconType@select,expandAllIcon@text,collapseAllIcon@text,expandIcon@text,collapseIcon@text,expandAllIconImage@reference,collapseAllIconImage@reference,expandIconImage@reference,collapseIconImage@reference,ariaExpandAllLabel@text,ariaCollapseAllLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How long does it take for my application to be processed when I complete it online?"
+                        text="&lt;p>We will receive your submitted application right away and usually complete the evaluation within two business days.  We will contact you and your health care provider with the outcome.  Please review the application closely before submitting as missing or incomplete information or documentation often causes delays.&lt;/p>"/>
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How do I know if my application was submitted?"
+                        text="&lt;p>You will receive a message on your screen right away indicating that your application was submitted. You can also view your Dashboard to check your application status.&lt;/p>"/>
+                    <item_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Once I submit my application, how will I know if any information is missing or incomplete?"
+                        text="&lt;p>Log into our website with your User Name and Password to display your Dashboard. Here you will see any notifications that we have sent to you.  We may also send you an email or text message based on your preferences chosen in your Profile.&lt;/p>"/>
+                    <item_3
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How will my Provider be notified to fill out their portion of the application?"
+                        text="&lt;p>Once we have reviewed the application that you submitted, we will fax an application to your Provider to complete.&lt;/p>"/>
+                    <item_4
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Can I check the status of my application online?"
+                        text="&lt;p>Yes.  Log into our website with your User Name and Password to check your Dashboard. Here you will see any notifications that we have sent you as well as the status of your application and order history. We may also send you an email or text message based on your preferences chosen in your Profile.&lt;/p>"/>
+                    <item_5
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How do I know if my document was successfully uploaded?"
+                        text="&lt;p>You will receive a message on your screen right away indicating that the document was successfully uploaded. You can also go to your Dashboard, click on the Application Number and navigate to the Document Upload Tab.&lt;/p>"/>
+                    <item_6
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Can I receive notification when my order has shipped and will the tracking number be available?"
+                        text="&lt;p>Yes.  You can log into our website with your Username and Password and check your Dashboard. We may also send you an email or text message based on your preferences chosen in your Profile.&lt;/p>"/>
+                    <item_7
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How can I attach additional documents after my application has already been submitted?"
+                        text="&lt;p>If you forgot to attach a document, log onto our website with your Username and Password to display your Dashboard. Click on the Application Number and navigate to the Document Upload Tab.  If we notified you of missing information, the notification link will allow you to upload additional documents.&lt;/p>"/>
+                    <item_8
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="If I was notified that I need to provide additional information, how long will it take to process?"
+                        text="&lt;p>Once you have submitted a missing document online, it will be added to your application right away and we typically review the information within two business days.  You can log into our website with your User Name and Password and check your Dashboard to see when your application status changes.&lt;/p>"/>
+                    <item_9
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Is my User Name or Password case sensitive?"
+                        text="&lt;p>Your User Name is not case sensitive, but your password is case sensitive.&lt;/p>"/>
+                    <item_10
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Can I apply using my mobile device?"
+                        text="&lt;p>Yes. Our website is compatible with most mobile applications such as mobile phones and tablets.&lt;/p>"/>
+                    <item_11
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="How long do I have to wait before I can reset my password?"
+                        text="&lt;p>Please give us 15 minutes before resetting your password.&lt;/p>"/>
+                    <item_12
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="What types of files can I upload to my documents?"
+                        text="&lt;p>We support the following file types:  JPEG, JPG and PDF. If applying from a mobile phone, you may take a picture of your document and upload.&lt;/p>"/>
+                    <item_13
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="What is the largest file size I can upload?"
+                        text="&lt;p>4.5 MB is the largest file that we can accept.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

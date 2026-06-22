@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:13:55.405Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/oncology-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="How AbbVie researchers toppled widely held scientific beliefs to pioneer new treatment options for patients."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Breaking the rules of science to treat cancer"
+        jcr:uuid="835c4808-afd1-43ad-9675-7aef702ea834"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="How AbbVie researchers toppled widely held scientific beliefs to pioneer new treatment options for patients."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/breaking-the-rules-of-science-to-treat-cancer/breakingtherules-hero-graphic.jpg"
+        cardTitle="Breaking the rules of science to treat cancer"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        hideFromNavigation="true"
+        image="/content/ dam/ abbvie-com2/images/stories/breaking-the-rules-of-science-to-treat-cancer/ breakingtherules-hero-graphic.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Breaking the rules of science to treat cancer"
+        publicationDate="September 12, 2023"
+        readWatchTime="read-time"
+        storyReadTime="8">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:6739b059-0e32-47fb-b870-85393a82a887/as/breakingtherules-hero-graphic.jpg"
+                        imageAlt="Breaking the rules graphic"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/oncology-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Breaking the rules of science to treat cancer"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>How AbbVie researchers toppled widely held scientific beliefs to create new possibilities for patients.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Rebels with a cause"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Andrew Petros and Phil Hajduk are rebels, but you might not know it by looking at them.&lt;/p>&lt;p>As researchers who spent their careers—34 years and 24 years, respectively—developing medicines at AbbVie, they were trained to follow the rules and principles of science: ideas that are accepted to be true, until someone proves them wrong.&lt;/p>&lt;p>While science takes discipline, pioneering research relies on the ability to see where rules need to be challenged—or even broken. It takes bold risks and embarking on unchartered paths all in the name of transforming treatment options for patients. If Petros, Hajduk and their colleagues had been afraid to bet on themselves and stuck to conventional scientific “rules,” they wouldn’t have accomplished their goal: finding a way to force cancer cells to die.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Rule #1: Cancer cells don’t die"
+                    titleType="h2"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Back in the early 1990s, Petros and Hajduk were both discovery scientists at AbbVie (then Abbott). They were focused on understanding apoptosis, or programmed cell death, and mapping structures of proteins that were important to this cellular process.&lt;/p>&lt;p>Cancer cells differ from healthy cells in several ways, but the key difference is their ability to avoid death. All cells in the body are programmed to self-destruct at pre-determined times—when they get old, when their function is compromised or when they are no longer needed. This function is short-circuited in cancer cells, and without the ability to die, they continue to grow uncontrolled.&lt;/p>&lt;p>This resistance to death was a well-known hallmark of cancer cells. What to do about it, though, remained a mystery.&lt;/p>&lt;p>The AbbVie team had a theory. If they could find a treatment that targeted proteins known to be important in the apoptotic process, they might be able to reset the cell-death process and induce cancer cell death.&lt;/p>&lt;p>But like all uncharted areas of research, this work brought more questions than answers. With the right team, AbbVie researchers forged into the unknown and disproved some widely-held scientific beliefs in the process.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Philip Hajduk, Ph.D."
+                    attributionRole="VP, R&amp;D information research, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>Instead of trying to find all the pieces at once, we thought, let’s look here first and find a molecule that binds here. Then, we can find an adjacent site later.”&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Rule #2: Some targets are just “undruggable”"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>As the researchers knew, several proteins are part of the apoptotic process, and while some of these proteins prevent cell death, others trigger it. These proteins communicate with each other in a complex system. At the time, most believed these proteins were too difficult to target with small-molecule medicines, leading many to consider them “undruggable” targets.&lt;/p>&lt;p>For one thing, the surfaces of these proteins are large and relatively featureless compared to a typical small molecule binding site. Additionally, the way these proteins interact is different from that of enzymes or kinases (enzymes that alter the biological function of proteins), which are more typical targets of small molecules.&lt;/p>&lt;p>“Thinking we could design a small-molecule inhibitor that could disrupt a protein-protein interaction was unprecedented at the time, but we believed there was a way,” says Petros, Ph.D., research fellow, AbbVie. “We started by using high-powered analytical methods called nuclear magnetic resonance spectroscopy and X-ray crystallography to create a map of Bcl-xL, the easiest-to-access protein in the apoptotic process, so that we could figure out what ‘active’ sites on its surface we might be able to target with a medicine to block its function.”&lt;/p>&lt;p>Once the team had a map of the protein’s surface, they needed to find small molecules that could bind to, and inhibit, the function of these Bcl proteins on the surface of cancer cells.&lt;/p>&lt;p>“We took a step back to look at why protein-protein interactions were so difficult,” says Hajduk, Ph.D., vice president, R&amp;#x26;D information research, AbbVie. “Basically, we were looking for an existing molecule that was able to disrupt the interaction across multiple surface points—in a library of millions and millions of molecules.”&lt;/p>&lt;p>So, the team approached it like a jigsaw puzzle.&lt;/p>&lt;p>“Instead of trying to find all the pieces at once, we thought, let’s look here first and find a molecule that binds here. Then, we can find an adjacent site later,” Hajduk says. “And now you have a linear problem where you can solve problem one, then solve problem two, and then figure out how to hook all of these things together.”&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Andrew Petros, Ph.D."
+                    attributionRole="Research fellow, AbbVie"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>We had a problem. The right tool to solve the problem didn’t exist, so we invented the tool, which has become the industry standard.&quot;&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Rule #3: If you don’t have equipment to do something, you just can’t do it"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Scientists use different methods of screening compounds to see which ones might bind to a particular target and how tightly they bind. Traditional high-throughput methods—ways that allowed scientists to screen large numbers of compounds quickly—worked well for enzyme and kinase targets, but not for proteins.&lt;/p>&lt;p>Not having the necessary tool might lead some to abandon the job. Instead, Petros, Hajduk and their team set out with a big ambition: invent it.&lt;/p>&lt;p>They created a technology called SAR by NMR (structure-activity relationships by nuclear magnetic resonance), which uses NMR spectroscopy—a way of measuring the interactions between molecules using radio waves—to identify very small organic molecules, or fragments, that bound weakly to the target protein.&lt;/p>&lt;p>When those fragments that bound to Bcl-xL were identified, the team again used NMR spectroscopy to gather structural information on how the fragments were binding to the protein. They could then use chemistry to link these weak binders together, producing a larger molecule which bound tighter to the Bcl-xL protein.&lt;/p>&lt;p>The new tool not only allowed the team to solve their mystery but has since helped researchers around the world create innovative new medicines for a range of diseases.&lt;/p>&lt;p>“SAR by NMR has become an industry standard tool for finding a starting point,” Petros says. “In fact, there are entire companies devoted to what’s now known as fragment-based drug discovery.”&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Rule #4: You must follow the rule of four"
+                    titleType="h2"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Formulated by Pfizer scientist Christopher Lipinski in 1997, the “Rule of Four” is a set of four molecular properties that help researchers determine whether a compound might be used as a medicine. A biologically active compound that has these four traits—certain chemical and physical properties ranging from how it’s absorbed in the body to how it’s excreted—tends to be associated with a greater chance of success in the clinic.&lt;/p>&lt;p>“When we’d mapped the Bcl-xL protein structure and had a sense of what we were dealing with, we knew we wouldn’t get a Rule of Four-compliant molecule because of the nature of the binding site. But in the end, our research showed it was possible to develop a non-rule-of-four-compliant molecule and have it still be efficacious,” Petros says. “Not one of the molecules we ended up studying in the clinic abided by the usual rules of drug development.”&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:dde4379e-2900-4a37-90f0-4f7612e66812/as/breakingtherules-timeline.jpg?scale=1&amp;size=1720%2C978&amp;dpr=1"
+                    imageAlt="20242715_StoryLab_Blood_Cancer_Story_Updated"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Rule #5: If it doesn’t seem likely, it’s not worth trying"
+                    titleType="h2"/>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The discovery and development of new medicines is fraught with risk and failure rates are high. A new molecule entering clinical trials has about 12 percent chance of becoming a medicine that successfully makes its way to patients.&lt;div>1&lt;/div>&lt;/p>&lt;p>For AbbVie scientists, the road was even more uncertain. They spent 10 years pioneering a new area of research, which meant establishing the biology of the apoptotic process and the structures of proteins involved before they could even think about designing a medicine. But the team knew that, to build the future of medicine, they needed to pave the uncertain path—to be fearless.&lt;/p>&lt;p>“We were told time and time again throughout this process that it wasn’t going to work—that we wouldn’t be able to find an oral medicine to inhibit this protein-protein interaction and that we may as well not even try,” Petros says. “We never believed that we couldn’t do it, and we kept pushing forward.”&lt;/p>&lt;p>After the discovery of the first potent inhibitor of Bcl-xL, the journey to a drug was still far from over. What followed were years of dedication and more groundbreaking research in structural biology, medicinal chemistry, pharmacology and development sciences to produce a medicine.&lt;/p>&lt;p>In 2016, after nearly two decades of discovery work and clinical research conducted by AbbVie scientists, and later, in partnership with Genentech for clinical development, regulators in the United States and European Union approved a new medicine for patients with a certain form of chronic lymphocytic leukemia.&lt;/p>&lt;p>“My son Jason is now 24, but he was very young during the 10 years I was working on the Bcl family. Throughout those years, he would periodically ask me, ‘Dad, did you make a medicine yet?’” Hajduk says. “I kept telling him not yet, not yet.”&lt;/p>&lt;p>When the medication from his Bcl work was approved, the first thing Hajduk did was tell his son. “I said, ‘We did it, Jason. We now have a medicine for patients.’ It was just so cool to be able to tell him that.”&lt;/p>&lt;p>AbbVie continues to study the medicine in patients with other blood cancers, and the early work on Bcl-xL is now foundational to AbbVie’s ongoing discovery research into potential treatments for solid tumors.&lt;/p>&lt;p>For Petros, the journey from “undruggable” to groundbreaking science can be summed up simply.&lt;/p>&lt;p>“We had a problem. The right tool to solve the problem didn’t exist, so we invented the tool, which has become the industry standard,” he says. “And in the end, the best part is that we solved the right problem, allowing us to develop a medicine that is making a lasting impact for patients.”&lt;/p>"/>
+                </block_14>
+                <block_15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> Name: Ilke Limoncu&lt;br> Email: &lt;a href=&quot;mailto:ilke.limoncu@abbvie.com&quot;>ilke.limoncu@abbvie.com&lt;/a>&lt;br> Call: +1 847-243-7444&lt;/p>"/>
+                </block_15>
+                <block_16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_allowMultipleOpen="false,accordion-icon-font,h5-size,width-large"
+                    collapseAllIcon="minus"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="plus"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading,classes_allowMultipleOpen,classes_showExpandCollapseAll,expandAllLabel,collapseAllLabel,expandAllIcon,collapseAllIcon,expandIcon,collapseIcon,expandAllIconImage,collapseAllIconImage,expandIconImage,collapseIconImage,ariaExpandAllLabel,ariaCollapseAllLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="References"
+                        text="&lt;p>&lt;ol> &lt;li>Biopharmaceutical Research and Development: The Process Behind New Medicines. Pharmaceutical Research and Manufacturers of America. &lt;a href=&quot;http://phrma-docs.phrma.org/sites/default/files/pdf/rd_brochure_022307.pdf&quot;>http://phrma-docs.phrma.org/sites/default/files/pdf/rd_brochure_022307.pdf&lt;/a>; Accessed May 16, 2018.&lt;/li> &lt;/ol>&lt;/p>"/>
+                </block_16>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related Content&lt;/p>"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/then-and-now-renaissance-in-blood-cancer-treatment"
+                    storyCardVariant="sidePanel"/>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/%20dam/%20abbvie-com2/images/stories/breaking-the-rules-of-science-to-treat-cancer/%20breakingtherules-hero-graphic.jpg"/>
+    </jcr:content>
+</jcr:root>

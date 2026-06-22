@@ -1,9 +1,10 @@
 'use strict';
 
-const express   = require('express');
-const path      = require('path');
-const fs        = require('fs');
-const multer    = require('multer');
+const express    = require('express');
+const path       = require('path');
+const fs         = require('fs');
+const multer     = require('multer');
+const puppeteer  = require('puppeteer');
 const { XMLParser } = require('fast-xml-parser');
 
 // ── Migration map (AEM Sites resourceType → EDS block) ───────────────────────
@@ -11,6 +12,16 @@ let migrationMap = { componentMap: {}, layoutResources: [], metaKeys: [], jcrSys
 try {
   migrationMap = JSON.parse(fs.readFileSync(path.join(__dirname, 'migration-map.json'), 'utf8'));
 } catch (_) { console.warn('[migration] migration-map.json not found'); }
+
+// ── Section thumbnail directory ───────────────────────────────────────────────
+const THUMB_DIR = path.join(__dirname, 'public', 'section-thumbs');
+fs.mkdirSync(THUMB_DIR, { recursive: true });
+
+// ── Style map (AEM cq:styleId → EDS classes_customDynamicClass) ──────────────
+let styleMap = {};
+try {
+  styleMap = JSON.parse(fs.readFileSync(path.join(__dirname, 'style-map.json'), 'utf8'));
+} catch (_) {}
 
 // ── Path map (AEM → EDS path/asset transformations) ──────────────────────────
 let pathMap = { contentPrefixRules: [], damPrefixRules: [], assetMap: [] };
@@ -101,9 +112,18 @@ app.get('/api/sections', (_req, res) => {
   try {
     const dir = path.join(__dirname, 'sections');
     if (!fs.existsSync(dir)) return res.json([]);
+    const thumbFiles = new Set(fs.readdirSync(THUMB_DIR).map(f => path.parse(f).name));
     const sections = fs.readdirSync(dir)
       .filter(f => f.endsWith('.json'))
-      .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
+      .map(f => {
+        const sec = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+        if (thumbFiles.has(sec.id)) {
+          const ext = [...fs.readdirSync(THUMB_DIR)]
+            .find(tf => path.parse(tf).name === sec.id);
+          sec.thumbnailUrl = ext ? `/section-thumbs/${ext}` : null;
+        }
+        return sec;
+      });
     res.json(sections);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -510,17 +530,46 @@ function isMigrationLayout(rt) {
 }
 
 function extractPropsFromXmlNode(attrs, mapping, pm) {
-  const renames  = mapping?.propRenames  || {};
-  const skipSet  = new Set([...(mapping?.skipProps || []), ...JCR_SYS_SET]);
+  const renames    = mapping?.propRenames    || {};
+  const skipSet    = new Set([...(mapping?.skipProps || []), ...JCR_SYS_SET]);
+  const invertSet  = new Set(mapping?.invertBoolProps || []);
   const props = {};
   for (const [k, v] of Object.entries(attrs)) {
     const key = k.replace(/^@/, '');  // strip attribute prefix
     if (skipSet.has(key)) continue;
     if (key.startsWith('xmlns:')) continue;
     const targetKey = renames[key] || key;
-    if (v !== '' && v !== null && v !== undefined) props[targetKey] = transformPath(v, pm);
+    let val = v;
+    if (val !== null && typeof val === 'object') continue; // child nodes, not attributes
+    if (invertSet.has(key)) {
+      if (val === 'true' || val === '{Boolean}true')   val = 'false';
+      else if (val === 'false' || val === '{Boolean}false') val = 'true';
+    }
+    if (val !== '' && val !== null && val !== undefined) props[targetKey] = transformPath(val, pm);
   }
   return props;
+}
+
+// Collect XML child nodes of an accordion-style component into typed child items.
+// Only props listed in childPropRenames are included; everything else is ignored.
+function collectChildItems(node, mapping) {
+  const childPropRen = mapping.childPropRenames;
+  const childSkip = new Set([...JCR_SYS_SET, 'cq:styleIds', 'textIsRich']);
+  const items = [];
+  for (const [k, v] of Object.entries(node)) {
+    if (k.startsWith('@') || k === '#text') continue;
+    if (!v || typeof v !== 'object') continue;
+    const itemProps = {};
+    for (const [pk, pv] of Object.entries(v)) {
+      const bareKey = pk.replace(/^@/, '');
+      if (childSkip.has(bareKey) || bareKey.startsWith('xmlns:')) continue;
+      if (Object.prototype.hasOwnProperty.call(childPropRen, bareKey) && pv !== '' && pv !== null && pv !== undefined) {
+        itemProps[childPropRen[bareKey]] = transformPath(pv, pathMap);
+      }
+    }
+    items.push({ type: mapping.childType, props: itemProps, children: [] });
+  }
+  return items;
 }
 
 function walkXmlNode(node, ordered, depth = 0) {
@@ -534,22 +583,45 @@ function walkXmlNode(node, ordered, depth = 0) {
       walkXmlNode(child, ordered, depth + 1);
       continue;
     }
-    const mapping = migrationMap.componentMap[rt];
-    const type    = mapping?.edsType || rt.split('/').pop();
-    const props   = extractPropsFromXmlNode(child, mapping, pathMap);
+    const mapping  = migrationMap.componentMap[rt];
+    const props    = extractPropsFromXmlNode(child, mapping, pathMap);
+    // Allow a prop value to select a different EDS block type (e.g. videoType=youtube → "video")
+    const propEdsType = mapping?.propEdsType;
+    const rawPropVal  = propEdsType ? (child[`@${propEdsType.prop}`] || '').trim() : '';
+    const type = (propEdsType?.map?.[rawPropVal]) || mapping?.edsType || rt.split('/').pop();
+    // Translate AEM cq:styleIds → EDS classes_customDynamicClass via style-map
+    const rawStyleIds = child['@cq:styleIds'];
+    if (rawStyleIds && Object.keys(styleMap).length) {
+      const ids = String(rawStyleIds).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+      const edsClasses = ids.map(id => styleMap[id]?.edsClass).filter(Boolean);
+      if (edsClasses.length) props['classes_customDynamicClass'] = edsClasses.join(',');
+    }
 
+    // Count child component nodes and store as a prop (e.g. totalSlides for carousel)
+    if (mapping?.countChildrenAsProp) {
+      const childCount = Object.entries(child).filter(([k, v]) =>
+        !k.startsWith('@') && k !== '#text' && v && typeof v === 'object' && v['@sling:resourceType']
+      ).length;
+      props[mapping.countChildrenAsProp] = String(childCount);
+    }
+
+    // Accordion-style: collect XML children as typed sub-items; do not recurse further
+    if (mapping?.childType && mapping?.childPropRenames) {
+      const childItems = collectChildItems(child, mapping);
+      ordered.push({ type, resourceType: rt, props, children: childItems });
     // If this component should render its main content as a child block
-    if (mapping?.childType && mapping?.childProp && props[mapping.childProp] !== undefined) {
+    } else if (mapping?.childType && mapping?.childProp && props[mapping.childProp] !== undefined) {
       const childVal = props[mapping.childProp];
       delete props[mapping.childProp];
       ordered.push({
         type, resourceType: rt, props,
         children: [{ type: mapping.childType, props: { [mapping.childProp]: childVal }, children: [] }]
       });
+      walkXmlNode(child, ordered, depth + 1);
     } else {
       ordered.push({ type, resourceType: rt, props, children: [] });
+      walkXmlNode(child, ordered, depth + 1);
     }
-    walkXmlNode(child, ordered, depth + 1);
   }
 }
 
@@ -686,6 +758,664 @@ app.post('/api/migration-map', express.json(), (req, res) => {
     fs.writeFileSync(path.join(__dirname, 'migration-map.json'), JSON.stringify(existing, null, 2), 'utf8');
     res.json({ ok: true });
   } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+// ── Section thumbnail helpers ─────────────────────────────────────────────────
+
+// Convert a section template JSON def into the sections[] array buildJcr expects
+function buildSectionsFromDef(def) {
+  if (def.sections) return def.sections;   // bundle — all parts
+  if (def.section)  return [def.section];  // single section
+  return [];
+}
+
+// ── Section thumbnail endpoints ───────────────────────────────────────────────
+app.get('/api/section-thumbs', (_req, res) => {
+  try {
+    const available = fs.readdirSync(THUMB_DIR).map(f => path.parse(f).name);
+    res.json({ available });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.post('/api/section-thumbs/auto-generate', express.json(), async (req, res) => {
+  const { parentPath, folderName = 'section-samples', aemHost, username, password,
+          sectionIds, overwrite = false } = req.body;
+  if (!parentPath || !aemHost || !username || !password)
+    return res.status(400).json({ error: 'parentPath, aemHost, username, password required' });
+
+  const auth = Buffer.from(`${username}:${password}`).toString('base64');
+  const hdrs = { Authorization: `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' };
+  const host = aemHost.replace(/\/+$/, '');
+
+  // Load all section defs
+  const secDir = path.join(__dirname, 'sections');
+  let defs = fs.readdirSync(secDir).filter(f => f.endsWith('.json'))
+    .map(f => JSON.parse(fs.readFileSync(path.join(secDir, f), 'utf8')));
+  if (sectionIds?.length) defs = defs.filter(d => sectionIds.includes(d.id));
+
+  const { compMap, modelFieldsMap, contentDefaults } = loadConfig();
+  const results = [];
+  const thumbExts = ['jpg','jpeg','png','webp'];
+
+  // Ensure parent folder exists (ignore 409)
+  try {
+    const folderParams = new URLSearchParams({
+      cmd: 'createPage', parentPath, title: 'Section Samples', label: folderName,
+      template: '/libs/core/franklin/templates/page'
+    });
+    await fetch(`${host}/bin/wcmcommand`, { method: 'POST', headers: hdrs, body: folderParams.toString() });
+  } catch (_) {}
+
+  // Phase 1: create / update pages on AEM
+  for (const def of defs) {
+    // Skip if thumb exists and !overwrite
+    if (!overwrite && thumbExts.some(e => fs.existsSync(path.join(THUMB_DIR, `${def.id}.${e}`)))) {
+      results.push({ id: def.id, status: 'skipped' });
+      continue;
+    }
+    try {
+      const sections = buildSectionsFromDef(def);
+      const jcr = buildJcr({ 'jcr:title': def.title }, sections, compMap, modelFieldsMap, contentDefaults);
+
+      // Create page shell (ignore 409 — already exists)
+      const pageParams = new URLSearchParams({
+        cmd: 'createPage', parentPath: `${parentPath}/${folderName}`,
+        title: def.title, label: def.id,
+        template: '/libs/core/franklin/templates/page'
+      });
+      await fetch(`${host}/bin/wcmcommand`, { method: 'POST', headers: hdrs, body: pageParams.toString() });
+
+      // Import content
+      const importParams = new URLSearchParams({
+        ':operation': 'import', ':contentType': 'json',
+        ':replace': 'true', ':replaceProperties': 'true',
+        ':content': JSON.stringify(jcr)
+      });
+      const r = await fetch(`${host}${parentPath}/${folderName}/${def.id}/jcr:content`,
+        { method: 'POST', headers: hdrs, body: importParams.toString() });
+      if (!r.ok) {
+        const txt = await r.text();
+        results.push({ id: def.id, status: 'error', error: `import ${r.status}: ${txt.slice(0,120)}` });
+      } else {
+        results.push({ id: def.id, status: 'created' });
+      }
+    } catch (err) {
+      results.push({ id: def.id, status: 'error', error: err.message });
+    }
+  }
+
+  // Phase 2: screenshot all successfully created pages
+  const toShot = results.filter(r => r.status === 'created');
+  let screenshotted = 0;
+  let browser;
+  try {
+    browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
+    // setExtraHTTPHeaders sends Basic auth on every request (including initial HTML loads)
+    // page.authenticate() only responds to 401 challenges — AEM redirects to login page instead
+    await page.setExtraHTTPHeaders({
+      'Authorization': `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`
+    });
+    await page.setViewport({ width: 1440, height: 900 });
+
+    for (const entry of toShot) {
+      const url = `${host}${parentPath}/${folderName}/${entry.id}.html`;
+      try {
+        await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
+        // Small extra wait for late-rendered components
+        await new Promise(r => setTimeout(r, 1500));
+        const thumbPath = path.join(THUMB_DIR, `${entry.id}.jpg`);
+        const el = await page.$('main > div.section, main > div');
+        if (el) {
+          await el.screenshot({ path: thumbPath, type: 'jpeg', quality: 80 });
+        } else {
+          await page.screenshot({ path: thumbPath, type: 'jpeg', quality: 80,
+            clip: { x: 0, y: 0, width: 1440, height: 600 } });
+        }
+        entry.status = 'done';
+        entry.thumbUrl = `/section-thumbs/${entry.id}.jpg`;
+        screenshotted++;
+      } catch (err) {
+        entry.status = 'screenshot-failed';
+        entry.error = err.message;
+      }
+    }
+    await browser.close();
+  } catch (err) {
+    if (browser) await browser.close().catch(() => {});
+    // Mark all remaining toShot entries as failed
+    for (const e of toShot) if (e.status === 'created') { e.status = 'screenshot-failed'; e.error = err.message; }
+  }
+
+  const failed = results.filter(r => r.status === 'error' || r.status === 'screenshot-failed').length;
+  res.json({ ok: true, results, created: toShot.length, screenshotted, skipped: results.filter(r => r.status === 'skipped').length, failed });
+});
+
+app.post('/api/section-thumbs/capture', express.json(), async (req, res) => {
+  const { url, selector = 'main > div', sectionIds = [] } = req.body;
+  if (!url) return res.status(400).json({ error: 'url is required' });
+  if (!sectionIds.length) return res.status(400).json({ error: 'sectionIds is required' });
+  let browser;
+  try {
+    browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1440, height: 900 });
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
+    const elements = await page.$$(selector);
+    const n = Math.min(elements.length, sectionIds.length);
+    for (let i = 0; i < n; i++) {
+      const thumbPath = path.join(THUMB_DIR, `${sectionIds[i]}.jpg`);
+      await elements[i].screenshot({ path: thumbPath, type: 'jpeg', quality: 80 });
+    }
+    await browser.close();
+    res.json({ captured: n, ids: sectionIds.slice(0, n) });
+  } catch (err) {
+    if (browser) await browser.close().catch(() => {});
+    res.status(422).json({ error: err.message });
+  }
+});
+
+app.post('/api/section-thumbs/upload/:id', xmlUpload.single('thumb'), (req, res) => {
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
+  const id = req.params.id.replace(/[^a-z0-9-]/g, '-');
+  try {
+    const ext = req.file.mimetype === 'image/png' ? 'png'
+              : req.file.mimetype === 'image/webp' ? 'webp' : 'jpg';
+    // Remove any existing thumbnail for this id
+    ['jpg', 'jpeg', 'png', 'webp'].forEach(e => {
+      const f = path.join(THUMB_DIR, `${id}.${e}`);
+      if (fs.existsSync(f)) fs.unlinkSync(f);
+    });
+    const thumbPath = path.join(THUMB_DIR, `${id}.${ext}`);
+    fs.writeFileSync(thumbPath, req.file.buffer);
+    res.json({ ok: true, url: `/section-thumbs/${id}.${ext}` });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.delete('/api/section-thumbs/:id', (req, res) => {
+  const id = req.params.id.replace(/[^a-z0-9-]/g, '-');
+  try {
+    ['jpg', 'jpeg', 'png', 'webp'].forEach(e => {
+      const f = path.join(THUMB_DIR, `${id}.${e}`);
+      if (fs.existsSync(f)) fs.unlinkSync(f);
+    });
+    res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+// ── Mapping analyzer ─────────────────────────────────────────────────────────
+
+const AEM_XML_ROOT = path.join(__dirname, 'aem-content-xml');
+const EDS_XML_ROOT = path.join(__dirname, 'eds-jcr-xml');
+
+// Layout/structural resource types that should not be collected as content blocks
+const EDS_LAYOUT_RT = new Set([
+  'core/franklin/components/section/v1/section',
+  'core/franklin/components/page/v1/page',
+  'core/franklin/components/root/v1/root',
+  'core/franklin/components/columns/v1/columns',
+  'core/franklin/components/container/v1/container',
+]);
+
+function normalizeVal(v) {
+  if (typeof v !== 'string') return '';
+  // Strip JCR type prefix like {Long}42 or {Boolean}true
+  const stripped = v.replace(/^\{[A-Za-z:]+\}/, '').trim().toLowerCase();
+  return stripped;
+}
+
+function isTrivial(v) {
+  if (!v || v.length <= 1) return true;
+  if (v === 'true' || v === 'false') return true;
+  if (/^\d{1,2}$/.test(v)) return true;  // single/double-digit numbers
+  return false;
+}
+
+// Collect all content components from AEM XML tree (regardless of migration-map)
+function walkAllComponents(node, components, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 20) return;
+  for (const [key, child] of Object.entries(node)) {
+    if (key.startsWith('@') || key === '#text') continue;
+    if (!child || typeof child !== 'object') continue;
+    const rt = (child['@sling:resourceType'] || '').trim();
+    if (rt && !isMigrationLayout(rt)) {
+      const props = {};
+      for (const [k, v] of Object.entries(child)) {
+        const attrKey = k.replace(/^@/, '');
+        if (attrKey.startsWith('xmlns:') || JCR_SYS_SET.has(attrKey) || k === '#text') continue;
+        if (v !== null && typeof v === 'object') continue;
+        if (v !== '' && v !== null && v !== undefined) props[attrKey] = String(v);
+      }
+      components.push({ rt, props });
+    }
+    walkAllComponents(child, components, depth + 1);
+  }
+}
+
+// Collect EDS content blocks from EDS XML tree
+function walkEdsComponents(node, blocks, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 20) return;
+  for (const [key, child] of Object.entries(node)) {
+    if (key.startsWith('@') || key === '#text') continue;
+    if (!child || typeof child !== 'object') continue;
+    const model = (child['@model'] || '').trim();
+    const rt    = (child['@sling:resourceType'] || '').trim();
+    let blockType = null;
+    if (model) {
+      blockType = model;
+    } else if (rt && !EDS_LAYOUT_RT.has(rt)) {
+      const rtLast = rt.split('/').pop();
+      const skip = new Set(['block', 'section', 'root', 'page', 'item', 'container', 'blocks', 'franklin', 'core']);
+      if (!skip.has(rtLast)) blockType = rtLast;
+    }
+    if (blockType) {
+      const props = {};
+      for (const [k, v] of Object.entries(child)) {
+        const attrKey = k.replace(/^@/, '');
+        if (attrKey.startsWith('xmlns:') || k === '#text') continue;
+        // For EDS keep all non-system props (we want raw EDS prop names)
+        const skipEds = new Set(['jcr:primaryType','jcr:mixinTypes','jcr:uuid','jcr:created','jcr:createdBy',
+          'jcr:lastModified','jcr:lastModifiedBy','cq:lastModified','cq:lastModifiedBy',
+          'sling:resourceType','model','aueComponentId','modelFields','name','filter','cq:template']);
+        if (skipEds.has(attrKey)) continue;
+        if (v !== null && typeof v === 'object') continue;
+        if (v !== '' && v !== null && v !== undefined) props[attrKey] = String(v);
+      }
+      blocks.push({ blockType, props });
+    }
+    walkEdsComponents(child, blocks, depth + 1);
+  }
+}
+
+// Recursively find all .content.xml files under a root dir
+// Returns [{name: leafFolderName, filePath}]
+function findContentXmlFiles(dir) {
+  const results = [];
+  if (!fs.existsSync(dir)) return results;
+  function walk(d) {
+    let entries;
+    try { entries = fs.readdirSync(d, { withFileTypes: true }); } catch (_) { return; }
+    for (const e of entries) {
+      if (e.isDirectory()) walk(path.join(d, e.name));
+      else if (e.name === '.content.xml') {
+        results.push({ name: path.basename(d).toLowerCase(), filePath: path.join(d, e.name) });
+      }
+    }
+  }
+  walk(dir);
+  return results;
+}
+
+app.get('/api/analyze-mappings', (_req, res) => {
+  try {
+    const aemFiles = findContentXmlFiles(AEM_XML_ROOT);
+    const edsFiles = findContentXmlFiles(EDS_XML_ROOT);
+
+    const aemMap = {};
+    for (const f of aemFiles) aemMap[f.name] = f.filePath;
+    const edsMap = {};
+    for (const f of edsFiles) edsMap[f.name] = f.filePath;
+
+    const allAemNames = new Set(Object.keys(aemMap));
+    const allEdsNames = new Set(Object.keys(edsMap));
+    const pairedNames = [...allAemNames].filter(n => allEdsNames.has(n));
+
+    // ── Phase 1: Build type-keyed inventories across ALL pages ────────────────
+    // aemInventory[rt]         = [ {propName: rawValue, …}, … ]  one entry per component instance
+    // edsInventory[blockType]  = [ {propName: rawValue, …}, … ]  one entry per block instance
+    const aemInventory = {};  // rt → [{propName: value}]
+    const edsInventory = {};  // blockType → [{propName: value}]
+    const parseErrors = [];
+
+    for (const name of [...allAemNames]) {
+      const fp = aemMap[name];
+      let xml;
+      try { xml = fs.readFileSync(fp, 'utf8'); } catch (_) { continue; }
+      let tree;
+      try { tree = JCR_XML_PARSER.parse(xml); } catch (e) { parseErrors.push(`AEM ${name}: ${e.message}`); continue; }
+      const comps = [];
+      walkAllComponents(tree['jcr:root'] || tree, comps);
+      for (const { rt, props } of comps) {
+        if (!aemInventory[rt]) aemInventory[rt] = [];
+        aemInventory[rt].push(props);
+      }
+    }
+
+    for (const name of [...allEdsNames]) {
+      const fp = edsMap[name];
+      let xml;
+      try { xml = fs.readFileSync(fp, 'utf8'); } catch (_) { continue; }
+      let tree;
+      try { tree = JCR_XML_PARSER.parse(xml); } catch (e) { parseErrors.push(`EDS ${name}: ${e.message}`); continue; }
+      const blocks = [];
+      walkEdsComponents(tree['jcr:root'] || tree, blocks);
+      for (const { blockType, props } of blocks) {
+        if (!edsInventory[blockType]) edsInventory[blockType] = [];
+        edsInventory[blockType].push(props);
+      }
+    }
+
+    // ── Phase 2: For each known rt→edsType pair, compare all prop instances ──
+    // propVotes[rt][aemProp][edsProp] = count of value matches
+    // propTotal[rt][aemProp]          = total cross-instance comparisons where a match was possible
+    const propVotes = {};
+    const propTotal = {};
+    const cmap = migrationMap.componentMap || {};
+
+    // Build the set of (rt, edsType) pairs to compare:
+    // a) from migration-map  b) name-similarity for unmapped rts
+    const typePairs = [];
+    for (const [rt, mapping] of Object.entries(cmap)) {
+      if (mapping.edsType && aemInventory[rt] && edsInventory[mapping.edsType]) {
+        typePairs.push({ rt, edsType: mapping.edsType, source: 'map' });
+      }
+    }
+    // Name-similarity for AEM rts not yet in migration-map
+    const mappedRts = new Set(Object.keys(cmap));
+    const edsBlockTypes = Object.keys(edsInventory);
+    for (const rt of Object.keys(aemInventory)) {
+      if (mappedRts.has(rt)) continue;
+      const rtLast = rt.split('/').pop().toLowerCase();
+      // Find EDS block types whose name contains the AEM type's last segment or vice-versa
+      for (const bt of edsBlockTypes) {
+        const btNorm = bt.toLowerCase().replace(/-/g, '');
+        const rtNorm = rtLast.replace(/-/g, '');
+        if (btNorm.includes(rtNorm) || rtNorm.includes(btNorm)) {
+          typePairs.push({ rt, edsType: bt, source: 'similarity' });
+        }
+      }
+    }
+
+    for (const { rt, edsType } of typePairs) {
+      const aemInstances = aemInventory[rt] || [];
+      const edsInstances = edsInventory[edsType] || [];
+      if (!aemInstances.length || !edsInstances.length) continue;
+
+      // Pre-compute normalized EDS values: edsNorm[i][ek] = normalizedVal
+      const edsNorm = edsInstances.map(inst =>
+        Object.fromEntries(Object.entries(inst).map(([k, v]) => [k, normalizeVal(v)]))
+      );
+
+      // For each AEM instance, compare against every EDS instance
+      for (const aemInst of aemInstances) {
+        for (const [ak, av] of Object.entries(aemInst)) {
+          const nav = normalizeVal(av);
+          if (isTrivial(nav) || nav.length < 3) continue;
+          // Check if this value appears in any EDS instance of this type
+          for (let j = 0; j < edsInstances.length; j++) {
+            for (const [ek, nev] of Object.entries(edsNorm[j])) {
+              if (nav === nev) {
+                if (!propVotes[rt]) propVotes[rt] = {};
+                if (!propVotes[rt][ak]) propVotes[rt][ak] = {};
+                propVotes[rt][ak][ek] = (propVotes[rt][ak][ek] || 0) + 1;
+                if (!propTotal[rt]) propTotal[rt] = {};
+                propTotal[rt][ak] = (propTotal[rt][ak] || 0) + 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // ── Phase 3: Build suggestions ────────────────────────────────────────────
+    const suggestions = [];
+    // Only report rts that are in migration-map (improving known mappings)
+    // or that have similarity-based type pairs
+    const reportedRts = new Set([
+      ...Object.keys(cmap),
+      ...typePairs.filter(p => p.source === 'similarity').map(p => p.rt)
+    ]);
+
+    for (const rt of reportedRts) {
+      if (!propVotes[rt] && cmap[rt]) {
+        // Known mapping but no prop matches found — still report with empty renames
+        const existing = cmap[rt];
+        if (existing.edsType) {
+          suggestions.push({
+            rt,
+            edsType: existing.edsType,
+            edsTypeConf: 100,
+            propRenames: {},
+            propConfs: {},
+            status: 'no-data',
+            existingEdsType: existing.edsType,
+            aemInstances: (aemInventory[rt] || []).length,
+            edsInstances: (edsInventory[existing.edsType] || []).length,
+          });
+        }
+        continue;
+      }
+      if (!propVotes[rt]) continue;
+
+      // Determine edsType: from migration-map (preferred) or best similarity match
+      const existing = cmap[rt];
+      let edsType = existing?.edsType;
+      let edsTypeConf = 100;
+      let status = 'existing';
+
+      if (!edsType) {
+        // Pick the edsType from similarity pairs that has the most prop votes
+        const candidatePairs = typePairs.filter(p => p.rt === rt && p.source === 'similarity');
+        let bestCount = 0;
+        for (const { edsType: bt } of candidatePairs) {
+          const count = Object.values(propVotes[rt] || {})
+            .reduce((s, ekMap) => s + (ekMap[bt] || 0), 0);
+          if (count > bestCount) { bestCount = count; edsType = bt; }
+        }
+        edsTypeConf = 50;
+        status = 'new';
+      }
+
+      const propRenames = {};
+      const propConfs   = {};
+      for (const [ak, ekVotes] of Object.entries(propVotes[rt] || {})) {
+        const total  = propTotal[rt]?.[ak] || 0;
+        const sorted = Object.entries(ekVotes).sort((a, b) => b[1] - a[1]);
+        const [bestEk, bestCount] = sorted[0];
+        const conf = Math.round((bestCount / total) * 100);
+        if (bestCount >= 2 && conf >= 40) {
+          propRenames[ak] = bestEk;
+          propConfs[ak]   = conf;
+        }
+      }
+
+      // Only include if there's something useful to show
+      if (Object.keys(propRenames).length === 0 && status === 'existing') continue;
+
+      suggestions.push({
+        rt, edsType, edsTypeConf, propRenames, propConfs, status,
+        existingEdsType: existing?.edsType || null,
+        aemInstances: (aemInventory[rt] || []).length,
+        edsInstances: (edsInventory[edsType] || []).length,
+      });
+    }
+
+    // Sort: new first, then existing with renames, skip no-data
+    const order = { new: 0, existing: 1, 'no-data': 2 };
+    suggestions.sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3) || a.rt.localeCompare(b.rt));
+
+    res.json({
+      ok: true,
+      aemCount:    allAemNames.size,
+      edsCount:    allEdsNames.size,
+      pairedCount: pairedNames.length,
+      aemTypes:    Object.keys(aemInventory).length,
+      edsTypes:    Object.keys(edsInventory).length,
+      parseErrors: parseErrors.slice(0, 10),
+      suggestions
+    });
+  } catch (err) {
+    console.error('[analyze-mappings]', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/apply-mapping-analysis', express.json(), (req, res) => {
+  try {
+    const { accepted = [] } = req.body;
+    if (!accepted.length) return res.json({ ok: true, applied: 0 });
+
+    const mm = JSON.parse(fs.readFileSync(path.join(__dirname, 'migration-map.json'), 'utf8'));
+    if (!mm.componentMap) mm.componentMap = {};
+
+    let applied = 0;
+    for (const { rt, edsType, propRenames } of accepted) {
+      if (!rt) continue;
+      if (!mm.componentMap[rt]) {
+        mm.componentMap[rt] = { edsType, propRenames: propRenames || {}, skipProps: [] };
+      } else {
+        mm.componentMap[rt].edsType = edsType;
+        const existing = mm.componentMap[rt].propRenames || {};
+        mm.componentMap[rt].propRenames = { ...existing, ...(propRenames || {}) };
+      }
+      applied++;
+    }
+
+    fs.writeFileSync(path.join(__dirname, 'migration-map.json'), JSON.stringify(mm, null, 2), 'utf8');
+    Object.assign(migrationMap, mm);
+    res.json({ ok: true, applied });
+  } catch (err) {
+    console.error('[apply-mapping-analysis]', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ── Style map endpoints ───────────────────────────────────────────────────────
+app.get('/api/style-map', (_req, res) => res.json(styleMap));
+
+app.post('/api/style-map', express.json(), (req, res) => {
+  try {
+    // Mark all incoming entries as manually saved so rebuilds won't overwrite them
+    for (const [id, entry] of Object.entries(req.body)) {
+      styleMap[id] = { ...(styleMap[id] || {}), ...entry, source: 'manual' };
+    }
+    fs.writeFileSync(path.join(__dirname, 'style-map.json'), JSON.stringify(styleMap, null, 2), 'utf8');
+    res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+// Walks a parsed XML tree and collects every node with @cq:styleId
+function collectAemStyles(node, result = {}, groupLabel = '', depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 15) return result;
+  for (const [key, child] of Object.entries(node)) {
+    if (key.startsWith('@') || key === '#text' || !child || typeof child !== 'object') continue;
+    const childGroup = child['@cq:styleGroupLabel'] || groupLabel;
+    const styleId    = child['@cq:styleId'];
+    if (styleId) {
+      result[String(styleId)] = {
+        aemLabel:   child['@cq:styleLabel']   || '',
+        aemClass:   child['@cq:styleClasses'] || '',
+        groupLabel: childGroup,
+        edsClass:   '',
+        confidence: 0,
+      };
+    }
+    collectAemStyles(child, result, childGroup, depth + 1);
+  }
+  return result;
+}
+
+// Collect (styleId[], edsClasses[]) observations from paired AEM+EDS trees
+function collectStyleObservations(aemNode, edsNode, observations = [], depth = 0) {
+  if (!aemNode || !edsNode || depth > 20) return observations;
+  for (const [key, aemChild] of Object.entries(aemNode)) {
+    if (key.startsWith('@') || key === '#text' || !aemChild || typeof aemChild !== 'object') continue;
+    const aemRt      = (aemChild['@sling:resourceType'] || '').trim();
+    const rawIds     = aemChild['@cq:styleIds'];
+    if (!rawIds || !aemRt) { collectStyleObservations(aemChild, edsNode, observations, depth + 1); continue; }
+    const mapping    = migrationMap.componentMap[aemRt];
+    const edsType    = mapping?.edsType || aemRt.split('/').pop();
+    // find a matching EDS node by edsType (model attribute)
+    const edsMatch   = findEdsNodeByModel(edsNode, edsType);
+    if (edsMatch) {
+      const rawClasses = edsMatch['@classes_customDynamicClass'] || '';
+      const ids        = String(rawIds).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+      const classes    = rawClasses.split(',').map(c => c.trim()).filter(Boolean);
+      if (ids.length && classes.length) observations.push({ ids, classes });
+    }
+    collectStyleObservations(aemChild, edsNode, observations, depth + 1);
+  }
+  return observations;
+}
+
+function findEdsNodeByModel(node, model, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 20) return null;
+  for (const [key, child] of Object.entries(node)) {
+    if (key.startsWith('@') || key === '#text' || !child || typeof child !== 'object') continue;
+    if ((child['@model'] || '').toLowerCase() === model.toLowerCase()) return child;
+    const found = findEdsNodeByModel(child, model, depth + 1);
+    if (found) return found;
+  }
+  return null;
+}
+
+app.get('/api/build-style-map', async (req, res) => {
+  try {
+    const confPath = req.query.confPath;
+    if (!confPath || !fs.existsSync(confPath)) {
+      return res.status(400).json({ error: 'confPath not found: ' + confPath });
+    }
+
+    // Phase 1 — parse conf → AEM style definitions
+    const confXml   = fs.readFileSync(confPath, 'utf8');
+    const confTree  = JCR_XML_PARSER.parse(confXml);
+    const aemStyles = collectAemStyles(confTree);
+    console.log(`[build-style-map] found ${Object.keys(aemStyles).length} style IDs in conf`);
+
+    // Phase 2 — collect all known EDS class names from EDS pages
+    const edsDir = req.query.edsDir || path.join(__dirname, 'eds-jcr-xml');
+    const edsFiles = findContentXmlFiles(edsDir);
+    const edsClasses = new Set();
+    for (const ef of edsFiles) {
+      try {
+        const raw = fs.readFileSync(ef.filePath, 'utf8');
+        for (const m of raw.matchAll(/classes_customDynamicClass="([^"]+)"/g)) {
+          m[1].split(',').forEach(c => { const t = c.trim(); if (t) edsClasses.add(t); });
+        }
+      } catch (_) {}
+    }
+    const edsClassList = [...edsClasses];
+    console.log(`[build-style-map] found ${edsClassList.length} distinct EDS classes`);
+
+    // Phase 3 — map each AEM style to an EDS class:
+    // 3a: AEM CSS class name directly exists as an EDS class (high confidence)
+    // 3b: normalised label matches an EDS class name (medium confidence)
+    for (const [, entry] of Object.entries(aemStyles)) {
+      const aemCls = (entry.aemClass || '').trim().toLowerCase();
+      // 3a: direct name match
+      if (aemCls && edsClassList.includes(aemCls)) {
+        entry.edsClass = aemCls; entry.confidence = 90; continue;
+      }
+      // 3b: label similarity
+      const label = entry.aemLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const exact = edsClassList.find(c => c === label || c.endsWith('-' + label) || c.startsWith(label + '-'));
+      if (exact) { entry.edsClass = exact; entry.confidence = 65; continue; }
+      const words = label.split('-').filter(w => w.length > 2);
+      const partial = edsClassList.find(c => words.length >= 2 && words.every(w => c.includes(w)));
+      if (partial) { entry.edsClass = partial; entry.confidence = 45; }
+    }
+
+    // Merge: always use new auto-mapping, but preserve manually-saved edsClass values
+    for (const [id, entry] of Object.entries(aemStyles)) {
+      entry.source = 'auto';
+      const existing = styleMap[id];
+      if (existing?.source === 'manual' && existing.edsClass) {
+        // user manually set this — keep their value, just refresh metadata
+        styleMap[id] = { ...entry, edsClass: existing.edsClass, confidence: existing.confidence, source: 'manual' };
+      } else {
+        styleMap[id] = entry;
+      }
+    }
+
+    fs.writeFileSync(path.join(__dirname, 'style-map.json'), JSON.stringify(styleMap, null, 2), 'utf8');
+
+    const total    = Object.keys(styleMap).length;
+    const mapped   = Object.values(styleMap).filter(e => e.edsClass).length;
+    res.json({ ok: true, total, mapped, unmapped: total - mapped, styleMap });
+  } catch (err) {
+    console.error('[build-style-map]', err);
+    res.status(500).json({ error: err.message });
+  }
 });
 
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));

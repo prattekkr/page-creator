@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-17T18:38:11.774Z"
+        cq:lastModifiedBy="indranih@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Terms of Use"
+        jcr:uuid="91917242-4f85-4c1e-a5d2-696b46ccd6f5"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        initialContentRefTarget="false"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        unsetTitle="false">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-17T18:20:54.722Z"
+                jcr:lastModifiedBy="indranih@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="content-wide,large-radius,no-bottom-margin,no-side-margin">
+                <hero_container
+                    jcr:created="{Date}2026-06-17T10:56:34.649Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T10:57:39.058Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="hero-container"
+                    classes_customDynamicClass="height-short,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Hero Container">
+                    <hero_container_item
+                        jcr:created="{Date}2026-06-17T10:57:07.647Z"
+                        jcr:createdBy="indranih@adobe.com"
+                        jcr:lastModified="{Date}2026-06-17T10:57:49.305Z"
+                        jcr:lastModifiedBy="indranih@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        aueComponentId="hero-container-item"
+                        backgroundVariant="color"
+                        classes_customDynamicClass="navy"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant@select,image@custom-asset-namespace:custom-asset,imageMimeType@custom-asset-namespace:custom-asset-mimetype,imageAlt@text,accountId@select,playerId@text,videoId@text,text@richtext,ctaLabel@text,ctaUrl@aem-content,ctaAlt@text,classes_customDynamicClass@ngaem:dynamic-picklist]"
+                        name="Hero Container Item"/>
+                </hero_container>
+                <block
+                    jcr:lastModified="{Date}2026-06-17T10:58:14.209Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="h1-size"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="AbbVie Online Terms of Use"
+                    titleType="h1"/>
+                <text_container
+                    jcr:created="{Date}2026-06-17T10:58:27.821Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T10:59:19.726Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    classes_commonCustomClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-17T10:58:39.851Z"
+                        jcr:createdBy="indranih@adobe.com"
+                        jcr:lastModified="{Date}2026-06-17T10:58:57.782Z"
+                        jcr:lastModifiedBy="indranih@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>Effective Date: 1/1/2013&lt;/p>"/>
+                </text_container>
+            </section>
+            <section_5
+                jcr:lastModified="{Date}2026-06-17T18:23:26.843Z"
+                jcr:lastModifiedBy="indranih@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="section-padding,content-wide,container-small">
+                <block
+                    jcr:lastModified="{Date}2026-06-17T18:23:18.138Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>These Online Terms of Use govern your access to web sites controlled by AbbVie, including its subsidiaries and affiliates (together referred to as “AbbVie”), which link to these Online Terms of Use (together referred to as “AbbVie websites”). These Online Terms of Use do not apply to AbbVie websites that do not link to these Online Terms of Use, or to third-party websites to which AbbVie websites may link. Your use of AbbVie websites is subject to these Online Terms of Use and the &lt;a href=&quot;https://www.abbvie.com/privacy.html&quot;>Privacy Policy.&lt;/a>&lt;/p>&lt;p>Without prejudice to your rights under applicable law, AbbVie reserves the right to amend these Online Terms of Use to reflect technological advancements, legal and regulatory changes and good business practices. If AbbVie changes these Online Terms of Use, an updated version of these Online Terms of Use will reflect those changes and we will notify you of such changes by updating the effective date at the top of these Online Terms of Use. By accessing or using the AbbVie websites, you agree that you have read, understand, and agree to be bound to the current version of these Online Terms of Use which you may view when accessing the AbbVie websites. If you disagree with these Online Terms of Use, or are dissatisfied with the AbbVie websites, your sole and exclusive remedy is to discontinue using this AbbVie website.&lt;/p>"/>
+                </block>
+                <separator
+                    jcr:created="{Date}2026-06-17T17:47:44.148Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T18:35:52.480Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="separator"
+                    classes_customDynamicClass="separator-height-8"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="{Boolean}false"/>
+                <custom_title
+                    jcr:created="{Date}2026-06-17T17:57:23.180Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T17:57:51.776Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="custom-title"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Disclaimers"
+                    titleType="h3"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>You acknowledge and agree that:&lt;/p>&lt;p>Although we strive to provide on the AbbVie websites the latest developments relating to our products and services, and other information about AbbVie, we do not warrant the accuracy, effectiveness, and suitability of any information contained in the AbbVie websites. Each person assumes full responsibility and all risks arising from use of the AbbVie websites. The information is presented “AS IS” and may include technical inaccuracies or typographical errors. AbbVie reserves the right to make additions, deletions, or modifications to the information contained on the AbbVie websites at any time without any prior notification.&lt;/p>&lt;p>ABBVIE MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND OR NATURE WITH RESPECT TO THE INFORMATION OR CONTENT POSTED ON THE ABBVIE WEBSITES. ABBVIE HEREBY DISCLAIMS ALL REPRESENTATIONS AND WARRANTIES, WHETHER EXPRESS OR IMPLIED, CREATED BY LAW, CONTRACT OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-INFRINGEMENT. IN NO EVENT SHALL ABBVIE BE LIABLE FOR ANY DAMAGES OF ANY KIND OR NATURE, INCLUDING, WITHOUT LIMITATION, DIRECT, INDIRECT, SPECIAL (INCLUDING LOSS OF PROFIT) CONSEQUENTIAL OR INCIDENTAL DAMAGES ARISING FROM OR IN CONNECTION WITH THE EXISTENCE OR USE OF THE ABBVIE WEBSITES, AND/OR THE INFORMATION OR CONTENT POSTED ON THE ABBVIE WEBSITES, REGARDLESS OF WHETHER ABBVIE HAS BEEN ADVISED AS TO THE POSSIBILITY OF SUCH DAMAGES.&lt;/p>&lt;p>AbbVie is not responsible, and provides no warranty whatsoever, for the accuracy, effectiveness, timeliness and suitability of any information or content obtained from third parties, including any hyperlinks to or from third-party sites. Except as otherwise provided on the AbbVie websites, AbbVie will not edit, censor, or otherwise control any content provided by third parties on any bulletin board, chat room or other similar forums posted on the AbbVie websites. Such information should, therefore, be considered as suspect and is not endorsed by AbbVie.&lt;/p>&lt;p>The AbbVie websites may contain forward-looking statements that reflect AbbVie’s current expectation regarding future events and business development. The forward-looking statements involve risks and uncertainties. Actual developments or results could differ materially from those projected and depend on a number of factors including, but not limited to, the success of current research programs, results of pending or future clinical trials, ongoing commercialization of its products, regulatory approvals of pharmaceuticals, validity and enforcement of its patents, the stability of its commercial relationships, and the general economic conditions. AbbVie intends to update the AbbVie websites on a regular basis but assumes no obligation to update any of the content.&lt;/p>"/>
+                </block_2>
+                <separator_1985508557
+                    jcr:created="{Date}2026-06-17T18:00:35.129Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T18:36:03.756Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="separator"
+                    classes_customDynamicClass="separator-height-8"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="{Boolean}false"/>
+                <block_3
+                    jcr:lastModified="{Date}2026-06-17T18:01:33.368Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="h5-size,width-large"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Your Use"
+                    titleType="h4"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>You understand, acknowledge, and agree to the following:&lt;/p>&lt;p>By using the AbbVie websites, you agree not to disrupt or intercept our electronic information posted on the AbbVie websites or on any of our servers. You also agree not to attempt to circumvent any security features of the AbbVie websites, and to abide by all applicable, local, state, federal and international laws, rules, and regulations.&lt;/p>&lt;p>You grant to AbbVie the right to use all content you upload or otherwise transmit to the AbbVie websites, subject to these Online Terms of Use and AbbVie’s &lt;a href=&quot;https://www.abbvie.com/privacy.html&quot;>Privacy Policy&lt;/a> in any manner AbbVie chooses, including, but not limited, to copying, displaying, performing or publishing it in any format whatsoever, modifying it, incorporating it into other material, or making a derivative work based on it. To the extent allowed by applicable law you waive any moral rights you may have to content you upload or otherwise transmit to the AbbVie websites (if any).&lt;/p>&lt;p>Except as expressly stated and agreed upon in advance by AbbVie, no confidential relationship shall be established in the event that any user of the AbbVie websites should make any oral, written or electronic communication to AbbVie (such as feedback, questions, comments, suggestions, ideas, etc.). If any AbbVie websites require or request that such information be provided, and that such information contains personal identifying information (e.g., name, address, phone number, email address), AbbVie shall obtain, use, and maintain it in a manner consistent with our &lt;a href=&quot;https://www.abbvie.com/privacy.html&quot;>Privacy Policy&lt;/a>. Otherwise, such communication and any information submitted therewith shall be considered non-confidential, and AbbVie shall be free to reproduce, publish, or otherwise use such information for any purposes whatsoever including, without limitation, the research, development, manufacture, use, or sale of products incorporating such information. The sender of any information to AbbVie is fully responsible for its content, including its truthfulness and accuracy, and its non-infringement of any other person’s proprietary or privacy rights.&lt;/p>"/>
+                </block_4>
+                <separator_1985508557_756498988
+                    jcr:created="{Date}2026-06-17T18:00:35.129Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T18:36:13.191Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="separator"
+                    classes_customDynamicClass="separator-height-8"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="{Boolean}false"/>
+                <block_5
+                    jcr:lastModified="{Date}2026-06-17T18:06:46.683Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="h5-size,width-large"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Product Labeling"
+                    titleType="h4"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Product names, descriptions, and labeling may be of U.S. origin or of a third country’s origin which is not your country of residence. Products may not be available in all countries or may be available under a different brand name, in different strengths, or for different indications. Many of the products listed are available only by prescription through your local health care professional. Except as expressly stated and agreed upon in advance by AbbVie, no director, employee, agent, or representative of AbbVie, its subsidiaries and affiliates are engaged in rendering medical advice, diagnosis, treatment, or other medical services that in any way create a physician-patient relationship through the AbbVie websites.&lt;/p>"/>
+                </block_6>
+                <separator_1985508557_129673288
+                    jcr:created="{Date}2026-06-17T18:00:35.129Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T18:36:22.785Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="separator"
+                    classes_customDynamicClass="separator-height-8"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="{Boolean}false"/>
+                <block_7
+                    jcr:lastModified="{Date}2026-06-17T18:10:06.291Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="h5-size,width-large"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Intellectual Property"
+                    titleType="h4"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>The information, documents, and related graphics published in the AbbVie websites (the “Information”) are the sole property of AbbVie, except for information provided by third-party providers under contract to AbbVie. Permission to use the Information is granted, provided that (1) the above copyright notice appears on all copies; (2) use of the Information is for informational and non-commercial or personal use only; (3) the Information is not modified in any way; and (4) no graphics available from this AbbVie website are used separate from accompanying text. AbbVie is not responsible for content provided by third-party providers, and you are prohibited from distribution of such material without permission of the owner of the copyright therein. Except as permitted above, no license or right, express or implied, is granted to any person under any patent, trademark or other proprietary right of AbbVie. No use of any AbbVie trademark, trade names, trade dress, and products in the AbbVie websites may be made without the prior written authorization of AbbVie, except to identify the product or services of the company.&lt;/p>"/>
+                </block_8>
+                <separator_1985508557_1151188164
+                    jcr:created="{Date}2026-06-17T18:00:35.129Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T18:36:30.886Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="separator"
+                    classes_customDynamicClass="separator-height-8"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="{Boolean}false"/>
+                <block_9
+                    jcr:lastModified="{Date}2026-06-17T18:11:24.908Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="h5-size,width-large"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Privacy and Security"
+                    titleType="h4"/>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>AbbVie is committed to safeguarding your privacy online. We understand the importance of privacy to our customers and visitors to the AbbVie websites. Our use of personally identifiable information is governed by our &lt;a href=&quot;https://www.abbvie.com/privacy.html&quot;>Privacy Policy&lt;/a> and by accessing and using the AbbVie websites, you agree to be bound by that &lt;a href=&quot;https://www.abbvie.com/privacy.html&quot;>Privacy Policy&lt;/a>.&lt;/p>&lt;p>You recognize and agree that when submitting your personally identifiable information to the AbbVie websites, while AbbVie has safeguards in place to prevent unauthorized access or interception, there is no absolute guarantee of security.IN THE UNLIKELY EVENT OF AN INTERCEPTION OR UNAUTHORIZED ACCESS DESPITE OUR EFFORTS, ABBVIE SHALL NOT BE RESPONSIBLE FOR SUCH INTERCEPTIONS OR UNAUTHORIZED ACCESS, OR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES (INCLUDING LOST PROFITS) SUFFERED BY A CUSTOMER OR USER, EVEN IF ABBVIE HAS PREVIOUSLY BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, ABBVIE DOES NOT WARRANT, EITHER EXPRESSLY OR IMPLIED, THAT THE INFORMATION PROVIDED BY ANY CUSTOMER SHALL BE FREE FROM INTERCEPTION OR UNAUTHORIZED ACCESS, AND DOES NOT PROVIDE ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. EACH CUSTOMER IS RESPONSIBLE FOR MAINTAINING THE CONFIDENTIALITY OF HIS OR HER OWN PASSWORD.&lt;/p>"/>
+                </block_10>
+                <separator_1985508557_1937845161
+                    jcr:created="{Date}2026-06-17T18:00:35.129Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T18:36:38.876Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="separator"
+                    classes_customDynamicClass="separator-height-8"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="{Boolean}false"/>
+                <block_11
+                    jcr:lastModified="{Date}2026-06-17T18:12:46.478Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="h5-size,width-large"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Limitation of Liability"
+                    titleType="h4"/>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>AbbVie does not assume any liability for the materials, information and opinions provided on, posted to, or otherwise available through, the AbbVie websites. Reliance on these materials, information, and opinions is solely at your own risk. AbbVie disclaims any liability for injury or damages resulting from the use of the AbbVie websites, or the content contained thereon.&lt;/p>&lt;p>THE ABBVIE WEBSITES, THE SITE CONTENT, AND THE PRODUCTS AND SERVICES PROVIDED ON OR AVAILABLE THROUGH THE ABBVIE WEBSITES ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS, WITH ALL FAULTS. IN NO EVENT SHALL ABBVIE OR ITS VENDORS, OR THEIR RESPECTIVE DIRECTORS, EMPLOYEES OR AGENTS (HEREINAFTER “ABBVIE PARTIES”) BE LIABLE FOR ANY DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF, OR IN CONNECTION WITH YOUR USE OF, OR INABILITY TO USE, THE ABBVIE WEBSITES, THE SITE CONTENT, ANY SERVICES PROVIDED ON OR THROUGH THE ABBVIE WEBSITES, OR ANY LINKED SITE, INCLUDING ANY SPECIAL, INDIRECT, PUNITIVE, INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES, INCLUDING, BUT NOT LIMITED TO, PERSONAL INJURY, LOST PROFITS OR DAMAGES RESULTING FROM DELAY, INTERRUPTION IN SERVICE, VIRUSES, DELETION OF FILES OR ELECTRONIC COMMUNICATIONS, OR ERRORS, OMISSIONS OR OTHER INACCURACIES IN THE ABBVIE WEB SITES OR THE SITE CONTENT, WHETHER OR NOT THERE IS NEGLIGENCE BY ABBVIE AND WHETHER OR NOT ABBVIE HAS BEEN ADVISED OF THE POSSIBILITY OF ANY SUCH DAMAGES. You agree that regardless of any applicable law to the contrary, you cannot file a claim or cause of action arising out of or related to the AbbVie Web Sites or these Online Terms of Use more than one (1) year after such claim or cause of action arose. &lt;strong>PLEASE BE AWARE THAT ADDITIONAL LEGAL NOTICES, DISCLAIMERS, AND OTHER TERMS AND CONDITIONS MAY APPLY TO THE ABBVIE WEBSITES.&lt;/strong>&lt;/p>"/>
+                </block_12>
+                <separator_1985508557_248742366
+                    jcr:created="{Date}2026-06-17T18:00:35.129Z"
+                    jcr:createdBy="indranih@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T18:36:46.307Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="separator"
+                    classes_customDynamicClass="separator-height-8"
+                    filter="separator"
+                    language="none"
+                    model="separator"
+                    modelFields="[showLine@boolean,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Separator"
+                    showLine="{Boolean}false"/>
+                <block_13
+                    jcr:lastModified="{Date}2026-06-17T18:14:21.644Z"
+                    jcr:lastModifiedBy="indranih@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="h5-size,width-large"
+                    classes_customDynamicClass="medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="General"
+                    titleType="h4"/>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    blockId="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="-"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>You agree that these Online Terms of Use and the &lt;a href=&quot;https://www.abbvie.com/privacy.html&quot;>Privacy Policy&lt;/a> describe the entire agreement between us with respect to its subject matter. The AbbVie websites were created and are operated under the laws of the State of Illinois. The laws of the State of Illinois will control the terms provided in these Online Terms and Conditions, to the extent that the laws of the State of Illinois are not overridden by applicably mandatory law, e.g. consumer protection laws applying to you. If a court of competent jurisdiction finds that any provision of these Online Terms of Use is invalid or unenforceable, you agree that the other provisions of these Online Terms of Use will remain in full force and effect.&lt;/p>"/>
+                </block_14>
+            </section_5>
+        </root>
+        <image
+            jcr:lastModified="{Date}2026-06-17T18:38:11.562Z"
+            jcr:lastModifiedBy="indranih@adobe.com"
+            jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

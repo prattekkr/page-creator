@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-06-08T11:22:15.182Z"
+        cq:lastModifiedBy="migration"
+        cq:lastReplicated="{Date}2026-05-13T06:20:23.267Z"
+        cq:lastReplicated_preview="{Date}2026-05-15T11:19:00.463Z"
+        cq:lastReplicated_publish="{Date}2026-05-13T06:20:23.267Z"
+        cq:lastReplicatedBy="gra08388@adobe.com"
+        cq:lastReplicatedBy_preview="gra08388@adobe.com"
+        cq:lastReplicatedBy_publish="gra08388@adobe.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_preview="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-05-11T11:30:17.475Z"
+        jcr:lastModifiedBy="gra08388@adobe.com"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Teaser Picklist Test"
+        jcr:uuid="ea4a0d02-ac89-4cd4-ba77-2649290b6da5"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        hideFromNavigation="{Boolean}false"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,hideFromNavigation@boolean,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text]"
+        readWatchTime="readTime"
+        storyReadTime="{Long}5"
+        storyWatchTime="{Long}5">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-05-11T15:22:53.460Z"
+                jcr:lastModifiedBy="gra08388@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                modelFields="[name@text,background@reference,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]">
+                <teaser
+                    jcr:created="{Date}2026-05-08T10:10:36.903Z"
+                    jcr:createdBy="gra08388@adobe.com"
+                    jcr:lastModified="{Date}2026-05-12T15:05:10.489Z"
+                    jcr:lastModifiedBy="gra08388@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="teaser"
+                    blockId="tuyio888"
+                    buttonLabel="Button"
+                    buttonType="link-external"
+                    buttonURL="/content/abbvie-nextgen-eds/corporate"
+                    classes_commonCustomClass="ghjkl"
+                    classes_customDynamicClass="teaser-external-link,teaser-h3"
+                    description="&lt;p>Lorem Ipsum doleor sit, Ipsum doleor sit test description&lt;/p>"
+                    eyebrow="&lt;p>Subtitle&lt;/p>"
+                    language="none"
+                    linkTarget="_self"
+                    model="teaser"
+                    modelFields="[eyebrow@richtext,title@richtext,description@richtext,buttonLabel@text,buttonURL@aem-content,linkTarget@select,ariaLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Teaser"
+                    title="&lt;p>Lorem Ipsum doleor sit&lt;/p>"/>
+            </section>
+            <section_1126861953
+                jcr:created="{Date}2026-05-08T10:10:21.651Z"
+                jcr:createdBy="gra08388@adobe.com"
+                jcr:lastModified="{Date}2026-05-11T11:24:04.398Z"
+                jcr:lastModifiedBy="gra08388@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                aueComponentId="section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="bg-071d49">
+                <teaser_1778498586644
+                    jcr:created="{Date}2026-05-11T10:52:37.639Z"
+                    jcr:createdBy="gra08388@adobe.com"
+                    jcr:lastModified="{Date}2026-05-12T12:04:29.990Z"
+                    jcr:lastModifiedBy="gra08388@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="teaser"
+                    buttonLabel="Click here"
+                    buttonURL="#"
+                    classes_customDynamicClass="dark-theme,teaser-h5,teaser-internal-link"
+                    description="&lt;p>Teaser Description&lt;/p>"
+                    eyebrow="&lt;p>Teaser Subtitle&lt;/p>"
+                    language="none"
+                    linkTarget="_self"
+                    model="teaser"
+                    modelFields="[eyebrow@richtext,title@richtext,description@richtext,buttonLabel@text,buttonURL@aem-content,linkTarget@select,ariaLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Teaser"
+                    title="&lt;p>Teaser Heading&lt;/p>"/>
+                <teaser_882412747 jcr:primaryType="nt:unstructured"/>
+                <teaser_882412747_44088204 jcr:primaryType="nt:unstructured"/>
+            </section_1126861953>
+            <section_2056563949
+                jcr:created="{Date}2026-05-11T11:23:41.285Z"
+                jcr:createdBy="gra08388@adobe.com"
+                jcr:lastModified="{Date}2026-05-11T11:23:41.285Z"
+                jcr:lastModifiedBy="gra08388@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                aueComponentId="section"
+                model="section"
+                modelFields="[name@text,background@reference,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

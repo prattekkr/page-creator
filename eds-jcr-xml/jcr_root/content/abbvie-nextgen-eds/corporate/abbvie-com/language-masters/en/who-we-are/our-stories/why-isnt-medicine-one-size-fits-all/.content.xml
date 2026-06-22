@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:14.844Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/science-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Precision medicine explained: Breaking down how this unique approach and commitment could fundamentally change how we treat disease."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Why isn’t medicine one size fits all?"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Precision medicine explained: Breaking down how this unique approach and commitment could fundamentally change how we treat disease."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/why-isnt-medicine-one-size-fits-all/vox-explainer-pmed-hero.png"
+        cardTitle="Why isn’t medicine one size fits all?"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/why-isnt-medicine-one-size-fits-all/why-isnt-medicine-one-size-fits-all/vox-explainer-pmed-hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Why isn’t medicine one size fits all?"
+        publicationDate="November 22, 2022"
+        readWatchTime="read-time"
+        storyReadTime="4">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2d81f35d-fa37-47e5-ba2f-cfc7fa468957/as/vox-explainer-pmed-hero.jpg"
+                        imageAlt="vox explainer pmed hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/science-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Why Isn’t Medicine One Size Fits All?"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Precision medicine explained: Breaking down how this unique approach and commitment could fundamentally change how we treat disease.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The age of precision medicine"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Within AbbVie’s walls, a team of nearly 200 researchers around the globe are focused on untangling the complex nature of disease. They’re in the clinic, working to identify biomarkers used to provide insights into the effects of therapies on disease, as well as determine which patients may respond to therapies.&lt;/p>&lt;p>This key area of innovation is called precision medicine, or “PMed,” spearheaded by Ian McCaffery, Ph.D.&lt;/p>&lt;p>&quot;We’re now at a point where we can understand the drivers of disease and target them with highly selective therapies,” says McCaffery. “The age of precision medicine is upon us, where using genetic and other molecular data, and ultimately companion diagnostic tests, can help us target medicines to patients who we think could respond to them.&quot;&lt;/p>&lt;p>The company’s tools and expertise continue to advance critical work in precision medicine, with understanding genetic variation serving as a fundamental building block.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 4:32"
+                    overlayDescription="Precision medicine, explained"
+                    overlayHeading="Why isn’t medicine one size fits all?"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:f3ec6db7-abeb-4e30-a5a8-1b365a4bc064/as/pmed-explained-yt-thumbnail.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="precision medicine video thumbnail"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/KNVX97thgak?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fwhy-isnt-medicine-one-size-fits-all.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Filling in the genetic gaps"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Let’s rewind to see how genetic variation plays a key role in precision medicine. In the 1990s, scientists from all over the world set out to map the first human genome, helping us understand what makes us human at the molecular level.&lt;/p>&lt;p>Fast forward to today: News recently broke that the human genome had finally been fully sequenced. These discoveries filled in 8% of the missing map — what amounted to 200 million missing base pairs of DNA.&lt;/p>&lt;p>Besides teaching us about what makes us tall, what could make us live longer, and what helps dictate whether we’ll be future Olympians, genes can tell us how we’ll respond to medicines on a molecular level — and we’re already seeing some of the results of that today through a tailored approach to science and medicine called precision medicine.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="How do genetics play into precision medicine?"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Now let’s back up a bit more to understand the human genome.&lt;/p>&lt;p>Your genome is  &lt;em>you&lt;/em>: More than &lt;a href=&quot;https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project&quot;>3 billion base&lt;/a>&lt;div>1&lt;/div> pairs of DNA that live in all of your cells. If you stretched out the DNA in just one cell, it would measure about two meters tall.&lt;/p>&lt;p>Even though we’re made of 3 billion base pairs of DNA, humans are still, genetically, 99.9%&lt;div>2&lt;/div>  identical. It’s that last 0.1% that dictates what makes us unique, whether that’s to indicate if we’ll be tall enough to dunk a basketball, or how our bodies respond to certain medicines.&lt;/p>&lt;p>That last bit is where it gets interesting.&lt;/p>&lt;p>“In my particular case, there’s 50 different medications that are modified or I can’t take because of my DNA,” says Howard Jacob, Ph.D., vice president for genomic research at AbbVie, who sequenced his own genome. “In some cases I actually will metabolize [certain medications] faster, which means my body chews it up. So the dose I take is actually not the dose that my body sees.”&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Sunhwa Kim, Ph.D."
+                    attributionRole="associate scientific director, precision medicine"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>I want to be part of this journey for the patients who are not responding to existing medicines,” Kim says. “Solving that puzzle, it’s exciting&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Maximizing our understanding and patient benefit"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>How our bodies respond to different treatments is the core question for scientists who work on precision medicine — and helps us understand more about a disease than just the symptoms.&lt;/p>&lt;p>“My son developed autoimmune disease when he was three months old,” says Sunhwa Kim, Ph.D., associate scientific director, precision medicine at AbbVie. “The pediatric specialist applied precision medicine for my son. I experienced the values and I want other parents to experience the maximized benefit from precision medicine. That’s why I’m doing this.”&lt;/p>&lt;p>For Jacob, knowing how his body interacts with certain medicines means his doctors can tailor his treatment for him — and pick a prescription that he won’t need to alter. But what does that mean for finding medical solutions for everyone else? Well, to understand how treatments will affect a huge group of people, you need a huge group of data. The tools to make that science possible exist at AbbVie today.&lt;/p>&lt;p>“One of the things I’m very excited about at AbbVie is we have a million genomes,” Jacob says. “That’s an amazing amount of data. We have the ability now to go in and start asking questions at a large scale.”&lt;/p>&lt;p>But science is still evolving. Scientists are hard at work collecting the biomarkers they need to understand how our bodies react to treatment — and, hopefully, creating a deeper understanding of how to find the right treatment faster.&lt;/p>&lt;p>“I want to be part of this journey for the patients who are not responding to existing medicines,” Kim says. “Solving that puzzle, it’s exciting.”&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_allowMultipleOpen="false,accordion-icon-font,h5-size,width-large"
+                    collapseAllIcon="minus"
+                    collapseAllLabel="Collapse All"
+                    collapseIcon="minus"
+                    expandAllIcon="plus"
+                    expandAllLabel="Expand All"
+                    expandIcon="plus"
+                    filter="accordion"
+                    language="none"
+                    model="accordion"
+                    modelFields="[blockHeading,classes_allowMultipleOpen,classes_showExpandCollapseAll,expandAllLabel,collapseAllLabel,expandAllIcon,collapseAllIcon,expandIcon,collapseIcon,expandAllIconImage,collapseAllIconImage,expandIconImage,collapseIconImage,ariaExpandAllLabel,ariaCollapseAllLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Accordion">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="accordion-item"
+                        modelFields="[summary,text,classes_defaultOpen,ariaExpandLabel,ariaCollapseLabel]"
+                        name="Accordion Item"
+                        summary="Video Transcript"
+                        text="&lt;p>In March 2022, news broke that the human genome had finally been fully sequenced. This discovery added 200 million missing base pairs to the map — DNA technology from 20 years ago couldn’t reach. Researchers don’t know yet what they’ll find in the unearthed data. But our genes have already helped us navigate so much of the world: They’re helping scientists make new biofuels, police identify suspects based on crime scene evidence, and doctors predict how people will respond to medicines on a molecular level. That tailored approach is known as precision medicine — and it could help countless people who haven’t seen relief from standard treatments. There’s a long voyage ahead to perfecting it. But now we have a map to help answer an important question:&lt;/p>&lt;p>Why isn’t medicine one size fits all?&lt;/p>&lt;p>To understand where we are with precision medicine, we first need to understand the human genome.&lt;/p>&lt;p>Howard Jacob: The genome is another way of saying a human blueprint.&lt;/p>&lt;p>Your genome is you: 3 billion base pairs of DNA that all live in your cells. If you stretched out the DNA in just one cell, it would measure about 2 meters tall — or roughly one Blackbeard the Pirate.&lt;/p>&lt;p>Even though we’re made of more than 3 billion base pairs of DNA, humans are, genetically, 99.9% identical.&lt;/p>&lt;p>But those 3 million unique pairs — just point one percent — account for things like hair color, if you’d make a good basketball player, or even the diseases we’re more likely to get.&lt;/p>&lt;p>Howard Jacob: It's the blueprint for each cell. It's the blueprint of what makes you who you are. It gives you your characteristics.&lt;/p>&lt;p>That’s Dr. Howard Jacob, Head of Genomic Research at AbbVie. Who, of course, has sequenced his own genome.&lt;/p>&lt;p>Howard Jacob: There's 50 different medications that are modified or I can't take because of my DNA. And that's kind of an important piece of information, right?&lt;/p>&lt;p>In some cases, I actually will metabolize it faster, which means my body chews it up. So the dose I take is actually not the dose that my body sees.&lt;/p>&lt;p>So how does that help a patient dealing with a complex illness?&lt;/p>&lt;p>Sunhwa Kim: When our loved ones are sick, what we want is medicine works for them, medicine delivers benefits for them, how they feel, how they function. That's precision.&lt;/p>&lt;p>Precision medicine, what that means is, tailored treatment for patients. Deeply understand disease, patient, and treatment.&lt;/p>&lt;p>We are identifying different types of biomarkers to really bring the right medicine to the right patient at the right time.&lt;/p>&lt;p>By looking at our genes and not just symptoms, we can see more than the disease in its current stage.&lt;/p>&lt;p>We hope to see where it’s going — and how to treat it.&lt;/p>&lt;p>Sunhwa Kim: Precision medicine is building our data, our knowledge, how patients are responding for medicine, how disease is responding for those medicines.&lt;/p>&lt;p>So ultimately, what we are looking for - clinical data and biomarkers beautifully assemble each other, and in the end, make one nice picture for patients.&lt;/p>&lt;p>Because in order to know how treatments will affect a huge group of people, you need a huge group of data.&lt;/p>&lt;p>The tools that make that science possible exist at AbbVie today.&lt;/p>&lt;p>Howard Jacob: One of the things I'm very excited about is we have a million genomes. And that's an amazing amount of data.&lt;/p>&lt;p>And so we have the ability now to go in and start asking questions at a large scale.&lt;/p>&lt;p>A blueprint, large number of patients that we have information on, and now having clinical trials where we can get that information. That triangulation between those gives us an amazing power to understand disease and how to build better medicines.&lt;/p>&lt;p>Let’s go back to the genome news again. A mapped genome is just the first step. The puzzle is how to use this information best.&lt;/p>&lt;p>Which goes to show: Like the ocean around us, there’s still so much to understand about our genes.&lt;/p>&lt;p>Sunhwa Kim: Science still is evolving. …&lt;/p>&lt;p>I want to be part of this journey for the patients who are not responding the existing medicines, who are partially responding, because ultimately, the lingering disease, because they are not responding fully, will drive them to the certain point where we cannot treat them anymore. So solving puzzle, it's exciting.&lt;/p>&lt;p>In other words: The more we know about ourselves, the more precise our medicine can be. And as more people share their genetic maps, the closer we get to understanding who we are.&lt;/p>&lt;p>All 3 billion base pairs of us.&lt;/p>"/>
+                </block_10>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_11>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/why-isnt-medicine-one-size-fits-all/why-isnt-medicine-one-size-fits-all/vox-explainer-pmed-hero.jpg"/>
+    </jcr:content>
+</jcr:root>

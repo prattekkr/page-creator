@@ -327,6 +327,14 @@
         "name": "backgroundMimeType"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundAlt",
+        "label": "Background Image Alt Text",
+        "description": "Provide image alt text for assistive technology.",
+        "value": ""
+      },
+      {
         "component": "tab",
         "label": "Styles",
         "name": "styles"
@@ -740,6 +748,14 @@
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
         "name": "backgroundMimeType"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundAlt",
+        "label": "Background Image Alt Text",
+        "description": "Provide image alt text for assistive technology.",
+        "value": ""
       },
       {
         "component": "tab",
@@ -2083,11 +2099,11 @@
           },
           {
             "name": "Public",
-            "value": "public"
+            "value": "2157889328001"
           },
           {
             "name": "Commercial",
-            "value": "commercial"
+            "value": "1029485116001"
           }
         ]
       },
@@ -2105,7 +2121,8 @@
             },
             [
               "2157889325001",
-              "public"
+              "2157889328001",
+              "1029485116001"
             ]
           ]
         }
@@ -4506,6 +4523,198 @@
         "label": "Select Block Styles",
         "valueType": "string",
         "sourceAEMNodeName": "title-picklist-config",
+        "valueSeperator": ","
+      },
+      {
+        "component": "tab",
+        "label": "Advanced",
+        "name": "advanced"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "blockId",
+        "valueFormat": "regexp",
+        "label": "ID",
+        "value": "",
+        "description": "Unique identifier for this block",
+        "validation": {
+          "regExp": "^\\S*$",
+          "customErrorMsg": "ID must not contain spaces"
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "classes_commonCustomClass",
+        "label": "Custom Class",
+        "description": "Custom CSS class to apply to this block"
+      },
+      {
+        "component": "tab",
+        "label": "Accessibility",
+        "name": "accessibility"
+      },
+      {
+        "component": "select",
+        "name": "language",
+        "label": "Language",
+        "value": "none",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Bulgarian",
+            "value": "bg"
+          },
+          {
+            "name": "Chinese",
+            "value": "zh"
+          },
+          {
+            "name": "Chinese (Taiwan)",
+            "value": "zh-TW"
+          },
+          {
+            "name": "Czech",
+            "value": "cs"
+          },
+          {
+            "name": "Danish",
+            "value": "da"
+          },
+          {
+            "name": "Dutch",
+            "value": "nl"
+          },
+          {
+            "name": "English",
+            "value": "en"
+          },
+          {
+            "name": "Finnish",
+            "value": "fi"
+          },
+          {
+            "name": "French",
+            "value": "fr"
+          },
+          {
+            "name": "German",
+            "value": "de"
+          },
+          {
+            "name": "Greek",
+            "value": "el"
+          },
+          {
+            "name": "Hebrew",
+            "value": "he"
+          },
+          {
+            "name": "Hungarian",
+            "value": "hu"
+          },
+          {
+            "name": "Italian",
+            "value": "it"
+          },
+          {
+            "name": "Japanese",
+            "value": "ja"
+          },
+          {
+            "name": "Korean",
+            "value": "ko"
+          },
+          {
+            "name": "Norwegian",
+            "value": "no"
+          },
+          {
+            "name": "Polish",
+            "value": "pl"
+          },
+          {
+            "name": "Portuguese",
+            "value": "pt"
+          },
+          {
+            "name": "Russian",
+            "value": "ru"
+          },
+          {
+            "name": "Slovak",
+            "value": "sk"
+          },
+          {
+            "name": "Slovenian",
+            "value": "sl"
+          },
+          {
+            "name": "Spanish",
+            "value": "es"
+          },
+          {
+            "name": "Swedish",
+            "value": "sv"
+          },
+          {
+            "name": "Turkish",
+            "value": "tr"
+          },
+          {
+            "name": "Ukrainian",
+            "value": "uk"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Analytics",
+        "name": "analytics_tab"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "analytics_id",
+        "readOnly": true,
+        "value": "",
+        "label": "Analytics Interaction ID",
+        "description": "Analytics Interaction ID used for tracking interactions with this block."
+      }
+    ]
+  },
+  {
+    "id": "dashboard-card-link-list",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Overview",
+        "name": "overview"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "contentFragment",
+        "label": "List Content Fragment Path",
+        "description": "Select the Content Fragment that sources the Dashboard Card - Link List data (eyebrow, title, links)."
+      },
+      {
+        "component": "tab",
+        "label": "Style",
+        "name": "styles"
+      },
+      {
+        "component": "ngaem:dynamic-picklist",
+        "name": "classes_customDynamicClass",
+        "value": "",
+        "label": "Variant (Theme)",
+        "description": "Select a theme variant to apply to the block.",
+        "valueType": "string",
+        "sourceAEMNodeName": "dashboard-card-link-list-picklist-config",
         "valueSeperator": ","
       },
       {
@@ -10641,11 +10850,11 @@
           },
           {
             "name": "Public",
-            "value": "public"
+            "value": "2157889328001"
           },
           {
             "name": "Commercial",
-            "value": "commercial"
+            "value": "1029485116001"
           }
         ]
       },
@@ -10776,6 +10985,221 @@
         "value": "",
         "label": "Custom Class",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "inner-grid",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Overview",
+        "name": "overview"
+      },
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Inner Grid Name",
+        "id": "inner-grid",
+        "description": "The label shown for this block in the Content Tree. How to use: 1. Choose a Column Layout in the Styles tab (e.g. 6-6 for two equal columns, 8-4 for wide-left, 3-6-3 for wide centre). 2. Add blocks directly below this Inner Grid in the same section. 3. Set the Custom Class on each block to col-1, col-2, or col-3 to assign it to a column. NESTED INNER GRID: To place an Inner Grid inside a column of this grid, add a second Inner Grid below with its own Column Layout and set its Custom Class to col-1, col-2, or col-3. For blocks inside that nested Inner Grid, use ncol-1, ncol-2, or ncol-3 as the Custom Class instead of col-N — this prevents conflicts when both grids have the same number of columns.",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset",
+        "valueType": "string",
+        "name": "background",
+        "label": "Background Image",
+        "description": "Background image for this block.",
+        "configUrl": "/content/dam/config/image/asset-selector.json",
+        "multi": false
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset-mimetype",
+        "valueType": "string",
+        "name": "backgroundMimeType"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundAlt",
+        "label": "Background Image Alt Text",
+        "description": "Provide image alt text for assistive technology.",
+        "value": ""
+      },
+      {
+        "component": "tab",
+        "label": "Styles",
+        "name": "styles"
+      },
+      {
+        "component": "ngaem:dynamic-picklist",
+        "name": "classes_customDynamicClass",
+        "value": "",
+        "label": "Select Block Styles",
+        "valueType": "string",
+        "sourceAEMNodeName": "inner-grid-picklist-config",
+        "valueSeperator": ","
+      },
+      {
+        "component": "tab",
+        "label": "Advanced",
+        "name": "advanced"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "blockId",
+        "valueFormat": "regexp",
+        "label": "ID",
+        "value": "",
+        "description": "Unique identifier for this block",
+        "validation": {
+          "regExp": "^\\S*$",
+          "customErrorMsg": "ID must not contain spaces"
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "classes_commonCustomClass",
+        "label": "Custom Class",
+        "description": "Custom CSS class to apply to this block"
+      },
+      {
+        "component": "tab",
+        "label": "Accessibility",
+        "name": "accessibility"
+      },
+      {
+        "component": "select",
+        "name": "language",
+        "label": "Language",
+        "value": "none",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Bulgarian",
+            "value": "bg"
+          },
+          {
+            "name": "Chinese",
+            "value": "zh"
+          },
+          {
+            "name": "Chinese (Taiwan)",
+            "value": "zh-TW"
+          },
+          {
+            "name": "Czech",
+            "value": "cs"
+          },
+          {
+            "name": "Danish",
+            "value": "da"
+          },
+          {
+            "name": "Dutch",
+            "value": "nl"
+          },
+          {
+            "name": "English",
+            "value": "en"
+          },
+          {
+            "name": "Finnish",
+            "value": "fi"
+          },
+          {
+            "name": "French",
+            "value": "fr"
+          },
+          {
+            "name": "German",
+            "value": "de"
+          },
+          {
+            "name": "Greek",
+            "value": "el"
+          },
+          {
+            "name": "Hebrew",
+            "value": "he"
+          },
+          {
+            "name": "Hungarian",
+            "value": "hu"
+          },
+          {
+            "name": "Italian",
+            "value": "it"
+          },
+          {
+            "name": "Japanese",
+            "value": "ja"
+          },
+          {
+            "name": "Korean",
+            "value": "ko"
+          },
+          {
+            "name": "Norwegian",
+            "value": "no"
+          },
+          {
+            "name": "Polish",
+            "value": "pl"
+          },
+          {
+            "name": "Portuguese",
+            "value": "pt"
+          },
+          {
+            "name": "Russian",
+            "value": "ru"
+          },
+          {
+            "name": "Slovak",
+            "value": "sk"
+          },
+          {
+            "name": "Slovenian",
+            "value": "sl"
+          },
+          {
+            "name": "Spanish",
+            "value": "es"
+          },
+          {
+            "name": "Swedish",
+            "value": "sv"
+          },
+          {
+            "name": "Turkish",
+            "value": "tr"
+          },
+          {
+            "name": "Ukrainian",
+            "value": "uk"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Analytics",
+        "name": "analytics_tab"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "analytics_id",
+        "readOnly": true,
+        "value": "",
+        "label": "Analytics Interaction ID",
+        "description": "Analytics Interaction ID used for tracking interactions with this block."
       }
     ]
   },
@@ -12064,7 +12488,7 @@
         "component": "select",
         "name": "dashboardCardVariant",
         "label": "Dashboard Card Type",
-        "value": "light",
+        "value": "",
         "condition": {
           "in": [
             {
@@ -12076,6 +12500,10 @@
           ]
         },
         "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
           {
             "name": "Dark",
             "value": "dark"

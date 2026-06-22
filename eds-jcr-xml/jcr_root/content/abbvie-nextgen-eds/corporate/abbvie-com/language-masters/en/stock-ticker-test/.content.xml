@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-05-15T11:25:51.365Z"
+        cq:lastModifiedBy="gra08388@adobe.com"
+        cq:lastReplicated="{Date}2026-05-15T11:26:02.359Z"
+        cq:lastReplicated_preview="{Date}2026-05-15T11:26:07.559Z"
+        cq:lastReplicated_publish="{Date}2026-05-15T11:26:02.359Z"
+        cq:lastReplicatedBy="gra08388@adobe.com"
+        cq:lastReplicatedBy_preview="gra08388@adobe.com"
+        cq:lastReplicatedBy_publish="gra08388@adobe.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_preview="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="stock-ticker-test"
+        jcr:uuid="71d4aa54-c85d-4d2d-984c-0d38467ce903"
+        sling:resourceType="core/franklin/components/page/v1/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section">
+                <stock_ticker
+                    jcr:created="{Date}2026-05-15T11:25:51.311Z"
+                    jcr:createdBy="gra08388@adobe.com"
+                    jcr:lastModified="{Date}2026-05-15T11:25:51.311Z"
+                    jcr:lastModifiedBy="gra08388@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="stock-ticker"
+                    model="stock-ticker"
+                    modelFields="[id@text,classes@text,sourceLabel@text,analyticsInteractionId@text,language@select]"
+                    name="Stock Ticker"/>
+            </section>
+        </root>
+    </jcr:content>
+</jcr:root>

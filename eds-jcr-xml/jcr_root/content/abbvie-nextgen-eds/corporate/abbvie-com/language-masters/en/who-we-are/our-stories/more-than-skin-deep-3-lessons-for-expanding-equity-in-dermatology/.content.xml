@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:06.240Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/immunology-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Patients of color can face challenges when seeking care for skin conditions. See how we’re partnering with the dermatology community to help drive change."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="More than Skin Deep: 3 Lessons for Expanding Equity in Dermatology"
+        jcr:uuid="e1a6ed46-dcd3-49b5-8adf-4a07d15d43ff"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Patients of color can face challenges when seeking care for skin conditions. See how we’re partnering with the dermatology community to help drive change."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/more-than-skin-deep-3-lessons-for-expanding/health-equity-2880x1620.jpg"
+        cardTitle="More than Skin Deep: 3 Lessons for Expanding Equity in Dermatology"
+        ctaAltText="Read Article"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/more-than-skin-deep-3-lessons-for-expanding/health-equity-2880x1620.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="More than Skin Deep: 3 Lessons for Expanding Equity in Dermatology"
+        publicationDate="October 20, 2022"
+        readWatchTime="read-time"
+        storyReadTime="7">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-default,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:0d4055a7-929b-439e-b088-f7a809c6894c/as/health-equity-2880x1620.jpg"
+                        imageAlt="woman sitting"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/immunology-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="More Than Skin Deep: 3 Lessons for Expanding Equity in Dermatology"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Patients of color can face challenges when seeking care for skin conditions. See how we’re partnering with the dermatology community to help drive change.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Little things with big impact"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Brenda Kong considers herself lucky when it comes to medical care for her psoriasis and psoriatic arthritis. Though she’s lived with these conditions since childhood, she’s only been under the care of two incredible dermatologists – both of whom were people of color, like her. But that hasn’t kept her from experiencing unconscious bias and issues because she doesn’t look like most of the people in dermatology textbooks.&lt;/p>&lt;p>“It’s little things,” she explained to a group of fellow patient advocates during AbbVie’s Science of Skin: United Beyond the Surface event. “Just the tiny missteps here and there that made me go, ‘Okay, I am not patient A, B, C. I am patient Brenda.”&lt;/p>&lt;p>One of those “little things” had a rather big impact: when Brenda went to receive a skin treatment involving ultraviolet light, the staff at the clinic assumed her body would be able to tolerate a stronger form of the treatment based on her skin tone. “Because I'm so dark, they figured I could take a lot of light… (so) instead of starting me slowly as if I were a lighter-skinned person, they went, ‘instead of starting at level one, we'll go to level three because we think you can take it.’ But level three was way too much for me at that point, and I completely burned.”&lt;/p>&lt;p>Kong’s story was one of many shared at AbbVie’s Science of Skin: United Beyond the Surface event, which brought together integral members of the dermatology community – including expert dermatologists, patients, caregivers and advocates – to discuss the current state of diversity in dermatology and identify ways to affect change.&lt;/p>&lt;p>“Despite the efforts across the dermatology community today, there continue to be opportunities to close the gaps in racial disparities in our industry, and the time to do so is now,” said Chudy Nduaka, therapeutic area head of medical affairs for U.S. dermatology at AbbVie, during his opening remarks for the event. “And as leaders in dermatology, we know we must lead by example to ensure that we are doing everything possible that we can to better serve all patients, including patients of color.”&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 1:02:00"
+                    overlayDescription="How Skin Shapes Access, Care and Experience"
+                    overlayHeading="Seeing Color in Medical Dermatology"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:701595a8-a958-4524-a728-75448972f517/as/more-than-skin-deep-yt-screenshot.png"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="More Then Skin Deep"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/02xotOnU3AI?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fmore-than-skin-deep-3-lessons-for-expanding-equity-in-dermatology.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Lessons for today, learnings for tomorrow"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For Nduaka and the rest of the AbbVie dermatology team, leading by example means taking words and turning them into action. The Science of Skin: United Beyond the Surface event was only the beginning: AbbVie is developing measurable goals and actions coming out of the conversation.&lt;/p>&lt;p>But while we work towards a more equitable future in dermatology tomorrow, the Science of Skin: United Beyond the Surface event uncovered several insights that could help providers, researchers and patients ensure care is more than skin deep today.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Lesson 1: Visual representation matters"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Panelist Akilah Evans-Pigford, whose teenage son suffers from severe eczema, recalled asking her son if he’d seen anyone online who looked like him with his condition. “He said, 'actually no'… and I searched online and he was right. I did not see one Black boy, one Black man with eczema. There is no one that looks like him,” she said. “That makes me pause, because if there's no representation in terms of how it presents on different shades of brown skin, then how do dermatologists, pediatricians or primary care physicians know what it looks like?”&lt;/p>&lt;p>This is actually a very real problem for dermatologists, many of whom haven’t seen imagery of diverse patient populations with skin disease during their training, according to panelist Dr. Seemal R. Desai, founder of Innovative Dermatology and clinical assistant professor, dept. of dermatology at the University of Texas Southwestern Medical. “How do you diagnose a patient with psoriasis when everything you've learned about psoriasis doesn't fit to the patient who's sitting in your exam room?” Desai pointed out. “If you think of psoriasis as being an itchy red disease and you have a darker skin type patient come in, and it doesn't look red and flaky and scaly, it looks more brown and dark with no scale, is that psoriasis or is it not?”&lt;/p>&lt;p>Panelist Dr. Caroline Robinson, a dermatologist specializing in ethnic skin, shared how she’s been working with Allergan Aesthetics, an AbbVie company, and skinbetter science® to tackle this issue. As part of their DREAM Initiative®, which has been designed to address multiple effects of systemic racism in aesthetic medicine, “DREAM supported the development and distribution of an inclusive, full color atlas that visually teaches dermatologists (and) residents how to recognize those signs of skin conditions on different skin tones. It displays more than 650 side by side images of more than 85 commonly seen dermatologic conditions in an array of skin tones,” she said during the Science of Skin discussion.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analyticsInteractionId="\0"
+                    blockId="\0"
+                    caption="\0"
+                    classes_commonCustomClass="\0"
+                    clickBehavior="_self"
+                    displayCaptionBelowImage="false"
+                    enableLink="false"
+                    enableWarnOnLeave="false"
+                    getAltFromDAM="false"
+                    getCaptionFromDAM="false"
+                    image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:0a4d9db3-0904-4800-aa0f-734109d4f491/as/health-equity-stat-in-body-16x9.jpg?dpr=1"
+                    imageAlt="New Web In-body 16x9"
+                    imageIsDecorative="false"
+                    imageMimeType="image/unknown"
+                    language="none"
+                    linkAriaLabel="\0"
+                    modalPanelId="\0"
+                    model="custom-image"
+                    modelFields="[image,imageAlt,imageMimeType,getAltFromDAM,imageIsDecorative,caption,getCaptionFromDAM,displayCaptionBelowImage,enableLink,target,clickBehavior,modalPanelId,enableWarnOnLeave,warnOnLeavePath,linkAriaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Image"
+                    target="\0"
+                    warnOnLeavePath="\0"/>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Lesson 2: Skin is diverse, and so are experiences"
+                    titleType="h2"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Mike Rancourt, vice president, dermatology, AbbVie, often talks to his teams about the emotional impact of skin conditions. “While these conditions have visible effects on patients’ skin, they also bring a deeper impact to their everyday lives, which may look different for each patient,” he says. “As a result, it’s important that patients speak to their dermatologists about the full impact of their diseases – physical and emotional – so that they can achieve the care that best meets their goals and lifestyle.”&lt;/p>&lt;p>But as the Science of Skin panelists shared, it can be difficult to speak openly with a care provider about these sensitive topics, especially when you don’t feel seen as the unique individual you are.&lt;/p>&lt;p>“I really wish doctors would familiarize themselves with how dermatological diseases present on Black skin…knowing specifically how to treat that skin is important because that makes me feel like you care about me, and that makes me feel like I'm under the best care that I could possibly have,” said Jasmine Espy, a panelist who lives with hidradenitis suppurativa (HS), a chronic inflammatory condition that results in painful bumps and abscesses, often in areas where hair grows.&lt;/p>&lt;p>Kong echoed these sentiments. “I am not the case study. I am patient Brenda, and my experience and my journey with care and my flares and the way my body reacts to all things is different from someone else who may suffer from psoriasis and psoriatic arthritis,” she explained.&lt;/p>&lt;p>For Evans-Pigford, finding a physician who sees the whole picture – including the diversity of a patient’s experience – is key. “I would love for more clinicians, especially with patients of color, to be able to go in there (and think of the patient) as not just a date of birth in a folder,” she said. “This condition is chronic and it is not just a rash. There is so much more behind this condition that I hope that more clinicians think about when they go into the treatment room.”&lt;/p>&lt;p>Dr. Desai also advocated for a more nuanced approach. “Patients with skin disease suffer. You think about the skin being the largest organ,” he said. “The skin's also what everyone else in the world sees of you. And so if you think about the psychological impact and burden that skin disease has on an individual, I think that really helps to kind of reset and help us understand what these patients are experiencing.”&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Dr. Vivian Shi"
+                    attributionRole="Associate Professor, Dermatology, University of Arkansas Medical School"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>We’re in a renaissance-era now of understanding skin of color in dermatology. The entire industry is moving towards diversity and inclusivity.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Lesson 3: We need passionate change – but passion can be taught"
+                    titleType="h2"/>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>“Our diverse population is changing in the United States and our practices have to change, too,” said panelist Dr. Vivian Shi, associate professor in the dept. of dermatology at the University of Arkansas Medical School, who shared her concerns over a “profound disparity” between the time it takes for Caucasian patients to seek care for skin conditions versus patients of color, and the challenges they may face when they finally do see a doctor. But she remains optimistic: “We’re in a renaissance-era now of understanding skin of color in dermatology. The entire industry is moving towards diversity and inclusivity,” Shi said. “And what we can do (now) is teach passion early on… passion for (diversity and inclusion) can be taught, so when these students become residents, practitioners and become the leaders of our field, they can give back and teach back.”&lt;/p>&lt;p>“One of the things that I think is critically important is not only how do we deliver the care, but how do we (incorporate diversity into) research so that we can get products and treatments for many of these diseases,” said Dr. Desai. “But this is an issue that we are aware of and actively working to address; it's something that's been happening and continues to evolve into importance. “&lt;/p>"/>
+                </block_12>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>References:&lt;/strong>&lt;/p>&lt;p>&lt;ol> &lt;li>U.S. Census report, “Demographic Turning Points for the United States: Population Projections for 2020 to 2060. Population Estimates and Projections: Current Population Reports,” By Jonathan Vespa, Lauren Medina, and David M. Armstrong. P25-1144. Issued March 2018 Revised February 2020&lt;/li> &lt;li>Pandya AG, Alexis AF, Berger TG, Wintroub BU. Increasing racial and ethnic diversity in dermatology: A call to action. J Am Acad Dermatol. 2016 Mar;74(3):584-7. doi: 10.1016/j.jaad.2015.10.044. Epub 2016 Jan 8. PMID: 26774427.&lt;/li> &lt;/ol>&lt;/p>&lt;p>&lt;strong>Media inquiries:&lt;/strong>&lt;br> &lt;a href=&quot;mailto:abbviemediarelations@abbvie.com&quot;>abbviemediarelations@abbvie.com&lt;/a>&lt;/p>"/>
+                </block_13>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/more-than-skin-deep-3-lessons-for-expanding/health-equity-2880x1620.jpg"/>
+    </jcr:content>
+</jcr:root>

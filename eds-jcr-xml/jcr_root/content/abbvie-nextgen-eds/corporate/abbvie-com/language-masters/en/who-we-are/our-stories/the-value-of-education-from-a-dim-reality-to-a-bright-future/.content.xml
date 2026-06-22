@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-12T11:14:12.117Z"
+        cq:lastModifiedBy="nitinkuma@adobe.com"
+        cq:tags="[corporate:abbvie-com-2/categories/serving-communities-stories]"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:description="Communities In Schools helped a boy living without electricity grow into a man with a master’s degree. Now he’s paying it forward."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="The value of education: From a dim reality to a bright future"
+        jcr:uuid="b674a8e2-80ff-4673-becb-8b7b23705a84"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardDescription="Communities In Schools helped a boy living without electricity grow into a man with a master’s degree. Now he’s paying it forward."
+        cardImage="/content/dam/corporate/abbvie-com2/images/stories/the-value-of-education-from-a-dim-reality-to-a-bright-future/value_education_hero.jpg"
+        cardTitle="The value of education: From a dim reality to a bright future"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        eyebrowText="Serving Communities"
+        hideFromNavigation="true"
+        image="/content/dam/corporate/abbvie-com2/images/stories/the-value-of-education-from-a-dim-reality-to-a-bright-future/value_education_hero.jpg"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="The value of education: From a dim reality to a bright future"
+        publicationDate="March 14, 2019"
+        readWatchTime="read-time"
+        storyReadTime="4">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-tall,overlay-height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="image"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:bed1965a-6016-4847-a351-22435d00258e/as/value_education_hero.jpg"
+                        imageAlt="value of education hero"
+                        imageMimeType="image/unknown"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaHidden="false"
+                    blockId="\0"
+                    classes_customDynamicClass="default-cta,back-cta"
+                    ctaTarget="_self"
+                    iconFont="chevron"
+                    iconImage="\0"
+                    iconPosition="before"
+                    iconVariation="none"
+                    language="none"
+                    link="/who-we-are/our-stories.html"
+                    linkAriaLabel="\0"
+                    linkText="All Stories"
+                    model="cta"
+                    modelFields="[link,linkText,aria-label,ctaTarget,iconVariation,iconFont,iconImage,iconPosition,ariaHidden,warnOnDeparturePopupFragmentPath,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Cta"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="false"
+                    hideReadTime="false"
+                    hideRole="false"
+                    language="none"
+                    model="story-card"
+                    modelFields="[storyCardVariant,hidePublicationDate,hideReadTime,hideRole,hideDescription,hideImage,page,openInNewTab,ctaLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/who-we-are/our-stories/serving-communities-stories"
+                    storyCardVariant="storyCardInfo"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="The value of education: From a dim reality to a bright future"
+                    titleType="h1"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Communities In Schools helped a boy living without electricity grow into a man with a master’s degree. Now he’s paying it forward.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-8">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Waiting on the rain"
+                    titleType="h2"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>For many children, a rainstorm is nothing special.&lt;/p>&lt;p>Maybe it’s an opportunity to spend the afternoon inside watching movies or playing games. An excuse to debut a new raincoat at school; a chance to splash in puddles.&lt;/p>&lt;p>For Fredrick Bailey, a rainstorm was life.&lt;/p>&lt;p>Bailey, 31, recalls his childhood in LaGrange, Georgia, living in a home without electricity or running water. With both parents suffering from drug addiction and his father often gone, a 12-year-old Bailey placed a bucket on the front porch and prayed for rain – precious water he needed to wash his clothes. One winter night, scrubbing his jeans with rainwater and a bar of soap, Bailey had enough.&lt;/p>&lt;p>“I told myself, I convinced myself, life is better than this,” Bailey says. “And I wanted to experience that better life.”&lt;/p>&lt;p>Today, Bailey is truly experiencing that better life. He credits an intervention from national education nonprofit &lt;a href=&quot;https://www.communitiesinschools.org/&quot; title=&quot; Communities In Schools &quot;>Communities In Schools&lt;/a> (CIS) as the catalyst both academically and on a personal level, that enabled him to change the trajectory of his future.&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_overlayColor="video-overlay-navy"
+                    enableAutoplay="false"
+                    enableCaptions="false"
+                    enableFullscreen="true"
+                    enablePlayerControls="true"
+                    filter="video"
+                    language="none"
+                    model="video"
+                    modelFields="[uri,placeholderImage,placeholderImageMimeType,posterAccessibilityLabel,overlayHeading,overlayDescription,overlayButtonLabel,videoContentLayout,classes_overlayColor,classes_overlayBtnStyle,overlayButtonIconKind,overlayButtonFontIcon,projectNumber,enableAutoplay,enableCaptions,enablePlayerControls,enableFullscreen,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Video"
+                    overlayButtonFontIcon="play"
+                    overlayButtonIconKind="icon-font"
+                    overlayButtonLabel="Watch 2:09"
+                    overlayDescription="The Promise of Communities In Schools"
+                    overlayHeading="AbbVie Partner Spotlight"
+                    placeholderImage="https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:e41480d6-8369-4cfb-9508-ef3626a81f3d/as/value-of-education-video-thumbnail.jpg"
+                    placeholderImageMimeType="image/unknown"
+                    posterAccessibilityLabel="AbbVie Partner Spotlight: The Promise of Communities In Schools"
+                    projectNumber="-"
+                    uri="https://www.youtube.com/embed/VHoPJDrt8kE?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.abbvie.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fwww.abbvie.com%2Fwho-we-are%2Four-stories%2Fthe-value-of-education-from-a-dim-reality-to-a-bright-future.html&amp;aoriginsup=1&amp;vf=1"
+                    videoContentLayout="none"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Removing barriers for students"
+                    titleType="h2"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Bailey, who went on to earn a master’s degree in education and self-publish two books, was recently named the first-ever recipient of the Communities In Schools Bill and Jean Milliken Fellowship. As a policy fellow, Bailey is responsible for finding ways to advance the work of CIS on a national level and give voice to the next generation of leaders and thinkers.&lt;br> &lt;br> With a focus on removing barriers for students at risk of dropping out, CIS will soon be able to serve about 70,000 additional students in more schools across the United States after &lt;a href=&quot;https://news.abbvie.com/news/press-releases/abbvie-donates-55-million-to-three-education-nonprofits-supporting-underserved-youth-in-chicago-across-america.htm&quot;>receiving a $30 million donation from AbbVie.&lt;/a> This is the largest donation in Communities In Schools’ 40-year history.&lt;br> &lt;br> The CIS model centers resources on the students with the highest need, making strong connections with them through school-based coordinators. CIS’ ability to make a deep impact for students aligns with AbbVie’s long-standing commitment to education partners that help overcome the academic achievement gap for children in underserved areas.&lt;/p>"/>
+                </block_4>
+                <block_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Seeing more clearly"
+                    titleType="h2"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Bailey first learned of CIS during seventh grade, when a teacher noticed he couldn’t see the lesson on the board. She referred him to the nonprofit, and soon after Bailey got his first pair of glasses. His site coordinator, who continued to serve as a caring adult for Bailey well beyond middle school, helped him get medical insurance, dental work, mentoring and counseling.&lt;br> &lt;br> Bailey enrolled in every CIS program available, including after-school activities and summer programs that often provided his only meals, along with transportation home. Bailey grew close to the bus driver and his wife and sons, spending time at their home.&lt;/p>"/>
+                </block_6>
+                <block_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>On a summer evening, after being dropped off at a home with no lights and no parents, Fredrick called the driver – Mr. Cofield – and asked to stay over at his house. A single night with the Cofields turned into six years, marked with family dinners, time together at church and lots of studying.&lt;br> &lt;br> With support from the Cofields and his CIS coordinator, Bailey began to see a different future for himself. His grades improved, as did his behavior at school.&lt;br> &lt;br> “Communities In Schools means that you don’t just have to settle in your current situation,” Bailey says. “Because there was a moment in my life where I wanted to settle and say to myself, this is life, and I will be just like my mom, just like my dad.”&lt;/p>"/>
+                </block_7>
+                <block_8
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    autoplay="false"
+                    blockId="-"
+                    bypassCarouselOnMobile="false"
+                    carouselLabel="-"
+                    carouselVariant="static"
+                    centerActiveSlide="false"
+                    classes_customDynamicClass="carousel-show-btn-margin,carousel-minimal"
+                    enableDotNavigation="true"
+                    enableLooping="false"
+                    enableNextPreviousControls="true"
+                    filter="carousel"
+                    itemLabel="false"
+                    language="none"
+                    model="carousel"
+                    modelFields="[carouselVariant,rssFeedUrl,totalSlides,numberOfItems,autoplay,slideTransitionTime,pauseOnHover,bypassCarouselOnMobile,startingSlideIndex,centerActiveSlide,enableLooping,enableNextPreviousControls,enableDotNavigation,carouselLabel,previousButtonLabel,nextButtonLabel,tablistLabel,itemLabel,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Carousel"
+                    nextButtonLabel="-"
+                    numberOfItems="-"
+                    pauseOnHover="false"
+                    previousButtonLabel="-"
+                    rssFeedUrl="-"
+                    slideTransitionTime="3000"
+                    startingSlideIndex="1"
+                    tablistLabel="-"
+                    totalSlides="3"/>
+                <block_9
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>On a summer evening, after being dropped off at a home with no lights and no parents, Fredrick called the driver – Mr. Cofield – and asked to stay over at his house. A single night with the Cofields turned into six years, marked with family dinners, time together at church and lots of studying.&lt;br> &lt;br> With support from the Cofields and his CIS coordinator, Bailey began to see a different future for himself. His grades improved, as did his behavior at school.&lt;br> &lt;br> “Communities In Schools means that you don’t just have to settle in your current situation,” Bailey says. “Because there was a moment in my life where I wanted to settle and say to myself, this is life, and I will be just like my mom, just like my dad.”&lt;/p>"/>
+                </block_9>
+                <block_10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h5-size,width-large"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="‘Don’t let it defeat you’"
+                    titleType="h2"/>
+                <block_11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Bailey continued to face hardships after leaving the home of his stepmom and dad, like the unexpected death of his older sister. But he persevered, eventually becoming the first person in his family to graduate high school before continuing his education.&lt;/p>"/>
+                </block_11>
+                <block_12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    attributionName="Fredrick Bailey"
+                    attributionRole="Communities In Schools alum"
+                    backgroundImageAlt="\0"
+                    blockId="\0"
+                    classes_contentAlignment="quote-align-none"
+                    classes_contentWidth="quote-content-col-none"
+                    classes_theme="quote-none"
+                    customClass="\0"
+                    id="\0"
+                    language="quote-standard,quote-h4"
+                    model="quote"
+                    modelFields="[quoteVariant,quotation,attributionName,attributionRole,attributionImage,attributionImageMimeType,quoteFragment,backgroundImage,backgroundImageAlt,backgroundImageMimeType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Quote"
+                    quotation="&lt;p>If it was not for Communities In Schools in my life, I don’t know what type of man I would be today.&lt;/p>"
+                    quoteVariant="quote-standard"/>
+                <block_13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>Bailey continues to pay it forward by mentoring young men and tutoring students in reading, an area where he particularly struggled as a child.&lt;br> &lt;br> “If it was not for Communities In Schools in my life, I don’t know what type of man I would be today,” Bailey says.&lt;br> &lt;br> Being named as an inaugural Bill and Jean Milliken Fellow is a continuation of Bailey’s 15-year relationship with CIS, allowing him to help create new opportunities for young people who may be losing hope or who face seemingly insurmountable challenges.&lt;br> &lt;br> He often revisits the memory of the bucket he used to collect rainwater, framing it as an opportunity to ask young people, “What’s in your bucket?”&lt;br> &lt;br> “Don’t let it defeat you,” Bailey says. “Refill it with joy, peace, love, faith, hope and other good things.”&lt;/p>"/>
+                </block_13>
+                <block_14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="spacing-bottom,width-large,body-unica-20-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Media inquiries&lt;/strong>&lt;br> Mary Kathryn Steel&lt;br> Email: &lt;a href=&quot;mailto:mk.steel@abbvie.com&quot;>mk.steel@abbvie.com&lt;/a>&lt;br> Call: + 1 847-937-4111&lt;/p>"/>
+                </block_14>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2"/>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="https://www.abbvie.com/content/dam/abbvie-com2/images/stories/the-value-of-education-from-a-dim-reality-to-a-bright-future/value_education_hero.jpg"/>
+    </jcr:content>
+</jcr:root>

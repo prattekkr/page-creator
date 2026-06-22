@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-17T13:46:20.363Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:lastReplicationAction_preview="Activate"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Online Application Overview"
+        jcr:uuid="fed16da2-684b-4f83-8f32-fa4c0260d30d"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        modelFields="[jcr:title,navTitle,jcr:description,keywords,cq:tags,pageSubtitle,image,hideFromNavigation,navigationalOrder,eyebrowText,cardTitle,cardDescription,cardImage,cardImageMimeType,cardImageAlt,ctaText,publicationDate,readWatchTime,storyReadTime,storyWatchTime,ctaAltText,warndeparturemodalpath,warnarrivalmodalpath]">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-15T10:12:00.391Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="content-wide,large-radius,no-bottom-margin">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-short,overlay-height-short,navy"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="color"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="\0"
+                        imageAlt="\0"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-15T14:48:31.143Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    enableBreadcrumb="true"
+                    enableCurrentPage="true"
+                    enableHiddenItems="false"
+                    language="none"
+                    model="breadcrumb"
+                    modelFields="[homePagePath@aem-content,homeDisplayName@text,enableBreadcrumb@boolean,enableHiddenItems@boolean,enableCurrentPage@boolean,useRedirectPageName@boolean,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Breadcrumb"
+                    useRedirectPageName="false"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Patient Access Support Application Overview"
+                    titleType="h1"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>AbbVie Patient Access Support includes programs that provide access and financial support and treatment-related resources to patients. We can help identify financial assistance options to support patients in accessing prescribed AbbVie medications, including eligibility for myAbbVie Assist.&lt;/p>"/>
+                </block_3>
+                <block_4
+                    jcr:lastModified="{Date}2026-06-15T10:05:54.369Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>myAbbVie Assist provides free medicine to qualifying patients. If you are uninsured or have limited insurance coverage, you may be eligible to receive prescribed AbbVie medication at no cost from our Program. Patients with commercial insurance plans requiring them to apply to myAbbVie Assist as a condition of, requirement for, or prerequisite to coverage of relevant AbbVie products commonly known as alternate funding programs, are not eligible for myAbbVie Assist.&lt;/p>"/>
+                </block_4>
+            </section>
+            <section_1
+                jcr:lastModified="{Date}2026-06-17T13:39:38.074Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="container-large,no-padding">
+                <inner_grid
+                    jcr:created="{Date}2026-06-17T13:39:54.493Z"
+                    jcr:createdBy="inf44580@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T13:40:22.118Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="inner-grid"
+                    classes_customDynamicClass="cols-12,regular-padding"
+                    filter="inner-grid"
+                    language="none"
+                    model="inner-grid"
+                    modelFields="[name@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Inner Grid"/>
+                <block_5
+                    jcr:lastModified="{Date}2026-06-17T13:41:12.176Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_commonCustomClass="col-1"
+                    classes_customDynamicClass="h3-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Information about applying online"
+                    titleType="h3"/>
+                <block_6
+                    jcr:lastModified="{Date}2026-06-17T13:42:33.043Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    classes_commonCustomClass="margin-bottom-30,col-1"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-15T10:33:23.945Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Is the online application right for you?&lt;/strong>&lt;/p>&#xa;&lt;p>Our online application is for use by people over the age of eighteen and seeking assistance (the patient) for either CREON&lt;sup>®&lt;/sup> (pancrelipase), HUMIRA&lt;sup>®&lt;/sup> (adalimumab), LINZESS&lt;sup>®&lt;/sup> (linaclotide), MAVYRET&lt;sup>®&lt;/sup> (glecaprevir/pibrentasvir), QULIPTA&lt;sup>®&lt;/sup> (atogepant), RINVOQ&lt;sup>®&lt;/sup> (upadacitinib), SKYRIZI&lt;sup>®&lt;/sup> (risankizumab-rzaa), UBRELVY&lt;sup>®&lt;/sup> (ubrogepant), VIBERZI&lt;sup>®&lt;/sup> (eluxadoline), or VRAYLAR&lt;sup>®&lt;/sup> (cariprazine).&amp;nbsp; We will ask you to register and complete an application. Before you start, please make sure that you have electronic copies of the necessary documents, listed further below.&lt;/p>&#xa;&lt;p>While you can apply online, we will also need the health care provider who has prescribed your medication to submit application documents separately. Once you have submitted your application and supporting documents, we will contact your health care provider to obtain your prescription and other needed information.&lt;/p>&#xa;&lt;p>This website will guide you through the steps needed to complete your application and will allow you to sign up for text or e-mail updates from the program:&lt;/p>"/>
+                </block_6>
+                <text_container
+                    jcr:created="{Date}2026-06-15T10:42:52.155Z"
+                    jcr:createdBy="inf44580@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T13:42:52.787Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    classes_commonCustomClass="margin-left-40,margin-bottom-30,col-1"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-15T10:42:59.386Z"
+                        jcr:createdBy="inf44580@adobe.com"
+                        jcr:lastModified="{Date}2026-06-15T10:44:16.426Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Step One:&lt;/strong>&amp;nbsp;Enter your information into our website and create an account.&amp;nbsp;&lt;/p>&#xa;&lt;p>&lt;strong>Step Two:&lt;/strong>&amp;nbsp;Follow the screens to provide income and insurance information for the application process. &amp;nbsp;Please note: We will assess income electronically when you provide written instructions to the Program under the Fair Credit Reporting Act, solely to determine patient assistance program eligibility. If the program is unable to determine income, you may be asked to provide additional financial documentation such as your most recent tax return or similar document.&lt;/p>&#xa;&lt;p>The system will prompt you to upload copies of your insurance cards if you have them.&amp;nbsp;&amp;nbsp;&lt;/p>&#xa;&lt;p>&lt;strong>Step Three:&lt;/strong>&amp;nbsp;Upload any additional documents that may help us understand your difficulty accessing your medicine.&lt;/p>&#xa;&lt;p>&lt;strong>Step Four:&lt;/strong>&amp;nbsp;Review our privacy notice and program terms to understand how we use your personal data, acknowledge your understanding and submit.&lt;/p>"/>
+                </text_container>
+                <text_container_1947008991
+                    jcr:created="{Date}2026-06-15T11:03:32.717Z"
+                    jcr:createdBy="inf44580@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T13:43:11.139Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    classes_commonCustomClass="margin-bottom-30,col-1"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-15T11:03:59.220Z"
+                        jcr:createdBy="inf44580@adobe.com"
+                        jcr:lastModified="{Date}2026-06-15T11:51:48.350Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>We will contact your prescribing doctor for the remaining information. We also will notify you and your health care provider after we have reviewed your application. If you are approved for assistance through the myAbbVie Assist Patient Assistance Program, you may use this site to schedule refill deliveries based on the prescription from your health care provider.&amp;nbsp;&amp;nbsp;&lt;br>&amp;lt;br&amp;gt;&lt;/p>&#xa;&lt;p>&lt;strong>What documents must be electronically available?&lt;/strong>&lt;/p>&#xa;&lt;ul>&#xa; &lt;li>&lt;strong>Insurance Information:&lt;/strong> If you have insurance, you will need to provide the following documents:&#xa;  &lt;ul>&#xa;   &lt;li>Prescription or medical insurance card – a front and back copy of the card is needed.&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa;  &lt;/ul>&lt;/li>&#xa; &lt;li>&lt;strong>Income documents:&lt;/strong> If we are unable to determine your income electronically, we may request your Federal Tax Return for the most current filing year. If you do not have a tax return, we will accept copies of your pay stub (for at least two pay periods), social security statement, social security disability statement, W-2 form, or 1099-R form.&lt;/li>&#xa;&lt;/ul>&#xa;&lt;p>Click&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/patient-assistance-application-expense-form.pdf&quot;>here&lt;/a>&amp;nbsp;for an optional expense form that can be used to document your prescription and medical expenses.&lt;/p>&#xa;&lt;p>&lt;strong>&lt;br>&lt;br>What if I am not the patient OR the patient is under 18 yrs old OR I do not have all my documents available electronically?&lt;/strong>&lt;/p>"/>
+                </text_container_1947008991>
+                <text_container_19470
+                    jcr:created="{Date}2026-06-15T11:03:32.717Z"
+                    jcr:createdBy="inf44580@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T13:43:27.863Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    classes_commonCustomClass="margin-left-40,margin-bottom-30,col-1"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-15T11:03:59.220Z"
+                        jcr:createdBy="inf44580@adobe.com"
+                        jcr:lastModified="{Date}2026-06-15T11:05:35.094Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>&lt;strong>Step One:&lt;/strong>&amp;nbsp;Please download and print the application to submit by mail or fax:&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application.pdf&quot;>CREON&lt;/a> | &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/emrelis-application.pdf&quot;>EMRELIS&lt;/a> |&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/humira-patient-assistance-application.pdf&quot;>HUMIRA&lt;/a>&amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application.pdf&quot;>LINZESS&lt;/a>&amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/mavyret-application.pdf&quot;>MAVYRET&lt;/a>&amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/qulipta-ubrelvy-patient-assistance-application.pdf&quot;>QULIPTA&lt;/a>&amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/rinvoq-patient-assistance-application.pdf&quot;>RINVOQ&lt;/a>&amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/skyrizi-patient-assistance-application.pdf&quot;>SKYRIZI&lt;/a>&amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/qulipta-ubrelvy-patient-assistance-application.pdf&quot;>UBRELVY&lt;/a>&amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/gastro-health-application.pdf&quot;>VIBERZI&lt;/a> &amp;nbsp;|&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/pap/vraylar-patient-assistance-application.pdf&quot;>VRAYLAR&lt;/a>&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p>&#xa;&lt;p>&lt;strong>&lt;br>Step Two:&lt;/strong>&amp;nbsp;Follow the instructions on the first page to complete the application.&lt;/p>&#xa;&lt;p>&lt;strong>Step Three:&lt;/strong>&amp;nbsp;Obtain the patient’s signature and date in all needed sections.&lt;/p>&#xa;&lt;p>&lt;strong>Step Four:&lt;/strong>&amp;nbsp;Gather copies of the supporting documentation to include with the application.&lt;/p>&#xa;&lt;p>&lt;strong>Step Five:&lt;/strong>&amp;nbsp;Take the application to your health care provider. He or she should complete the HEALTH CARE PROVIDER page to include signing and dating the form at the bottom.&lt;/p>&#xa;&lt;p>&lt;strong>Step Six:&lt;/strong>&amp;nbsp;Please fax or mail the completed application and copies of your documents to us. Note that you and your health care provider can send to us separately.&lt;/p>&#xa;&lt;p>AbbVie Patient Access Support&lt;br>D-617927, AP5 NE 1 N. Waukegan Rd.&lt;br>North Chicago, IL 60064&lt;br>Phone: 1-800-222-6885&lt;br>Fax: 1-866-250-2803&lt;/p>"/>
+                </text_container_19470>
+                <text_container_19470_1072344230
+                    jcr:created="{Date}2026-06-15T11:03:32.717Z"
+                    jcr:createdBy="inf44580@adobe.com"
+                    jcr:lastModified="{Date}2026-06-17T13:46:20.316Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="text-container"
+                    classes_commonCustomClass="col-1"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Text Container">
+                    <text_container_text
+                        jcr:created="{Date}2026-06-15T11:03:59.220Z"
+                        jcr:createdBy="inf44580@adobe.com"
+                        jcr:lastModified="{Date}2026-06-15T11:06:10.092Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        aueComponentId="text-container-text"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>If you need help at any point during this process, please call us at 1-800-222-6885 Monday through Friday 7:00 AM to 7:00 PM Central Time.&lt;/p>"/>
+                </text_container_19470_1072344230>
+            </section_1>
+            <section_1739606753
+                jcr:created="{Date}2026-06-15T10:05:15.425Z"
+                jcr:createdBy="inf44580@adobe.com"
+                jcr:lastModified="{Date}2026-06-15T10:05:15.425Z"
+                jcr:lastModifiedBy="inf44580@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                aueComponentId="section"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,backgroundAlt@text,style_customDynamicClass@ngaem:dynamic-picklist,sectionId@text,style_commonCustomClass@text,language@select,analytics_id@text]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

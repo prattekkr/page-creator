@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-17T13:23:00.761Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Savings Card"
+        jcr:uuid="beaf6e4b-39db-45e7-aa84-6d873518d3a2"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        modelFields="[jcr:title,jcr:description,keywords,cq:tags,pageSubtitle,image,hideFromNavigation,navigationalOrder,cardDescription,cardImage,cardImageAlt,cardImageMimeType,publicationDate,readWatchTime,storyReadTime,storyWatchTime,warndeparturemodalpath,warnarrivalmodalpath]">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                style_customDynamicClass="content-wide,large-radius">
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="height-short,overlay-height-short,purple"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundVariant="color"
+                        ctaAlt="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="\0"
+                        imageAlt="\0"
+                        model="hero-container-item"
+                        modelFields="[backgroundVariant,image,imageAlt,imageMimeType,accountId,playerId,videoId,text,ctaLabel,ctaUrl,classes_customDynamicClass]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-15T14:47:09.374Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    enableBreadcrumb="true"
+                    enableCurrentPage="true"
+                    enableHiddenItems="false"
+                    language="none"
+                    model="breadcrumb"
+                    modelFields="[homePagePath@aem-content,homeDisplayName@text,enableBreadcrumb@boolean,enableHiddenItems@boolean,enableCurrentPage@boolean,useRedirectPageName@boolean,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Breadcrumb"
+                    useRedirectPageName="false"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h1-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Savings Card"
+                    titleType="h1"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="body-unica-32-reg"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>We offer programs for patients with commercial insurance to help lower the financial and logistical barriers that block many patients from accessing or continuing their prescribed therapies.&lt;/p>"/>
+                </block_3>
+            </section>
+            <section_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name,style_container,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Container"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+            <section_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-1"/>
+            <section_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-9">
+                <block
+                    jcr:lastModified="{Date}2026-06-15T09:52:32.162Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="h3-size,width-large,medium-weight,spacing-bottom"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="Available medicines"
+                    titleType="h3"/>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text]"
+                        name="Text Container Text"
+                        text="&lt;p>If you have employer-provided insurance coverage or have purchased private insurance on your own, you may qualify for assistance with your out-of-pocket expenses. Learn more by selecting your medicine below:&lt;/p>"/>
+                </block_1>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="-"
+                    blockId="-"
+                    classes_customDynamicClass="width-large"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-15T09:48:01.029Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;ul>&#xa; &lt;li>&lt;a href=&quot;https://www.allergantechalliance.com/Resources/Patient-Savings&quot; title=&quot;Alphagan® P (brimonidine tartrate) ophthalmic solution&quot;>Alphagan® P (brimonidine tartrate) ophthalmic solution&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.botoxsavingsprogram.com/&quot; title=&quot;BOTOX® (onabotulinumtoxinA)&quot;>BOTOX® (onabotulinumtoxinA)&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.bystolic.com/&quot; title=&quot;Bystolic® (nebivolol) tablets&quot;>Bystolic® (nebivolol) tablets&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergantechalliance.com/Resources/Patient-Savings&quot; title=&quot;Combigan® (brimonidine tartrate/timolol maleate) opthalmic solution&quot;>Combigan® (brimonidine tartrate/timolol maleate) opthalmic solution&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.creon.com/on-course&quot; title=&quot;Creon® (pancrelipase) Delayed Release Capsules)&quot;>Creon® (pancrelipase) Delayed Release Capsules)&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergansavingscard.com/crinone/activate&quot; title=&quot;Crinone® (progesterone) gel&quot;>Crinone® (progesterone) gel&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.dalvance.com/reimbursement/patient-savings-program&quot; title=&quot;Dalvance® (dalbavancin) lyophilisate&quot;>Dalvance® (dalbavancin) lyophilisate&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://depakote.com/savings&quot; title=&quot;Depakote&quot;>Depakote&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>Duopa&lt;br>Please call 1-(844) DUO-4YOU, which is 1-(844) 386-4968.&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergantechalliance.com/Resources/Patient-Savings&quot; title=&quot;Durysta® (bimatoprost) ocular implant&quot;>Durysta® (bimatoprost) ocular implant&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.fetzima.com/depression-resources/savings-card?icid=fetzima_savings_header&quot; title=&quot;Fetzima® (levomilnacipran) Extended Release Capsules and Titration Pack&quot;>Fetzima® (levomilnacipran) Extended Release Capsules and Titration Pack&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.humira.com/humira-complete/cost-and-copay&quot; title=&quot;HUMIRA® (adalimumab)&quot;>HUMIRA® (adalimumab)&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.imbruvica.com/by-your-side-financial/index.html&quot; title=&quot;IMBRUVICA® (ibrutinib)&quot;>IMBRUVICA® (ibrutinib)&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.loloestrin.com/savings-card&quot; title=&quot;Lo Loestrin® Fe&quot;>Lo Loestrin® Fe&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.linzess.com/savings-and-support/linzess-savings-program&quot; title=&quot;Linzess® (linaclotide) capsules&quot;>Linzess® (linaclotide) capsules&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergantechalliance.com/Resources/Patient-Savings&quot; title=&quot;Lumigan® (bimatoprost 0.01%) opthalmic solution&quot;>Lumigan® (bimatoprost 0.01%) opthalmic solution&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;http://lupron.com/&quot; title=&quot;Lupron&quot;>Lupron&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.mavyret.com/cost&quot; title=&quot;MAVYRET® (glecaprevir/pibrentasvir)&quot;>MAVYRET® (glecaprevir/pibrentasvir)&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;http://www.namzaric.com/&quot; title=&quot;Namzaric® (memantine HCl extended-release and donepezil HCl) capsule&quot;>Namzaric® (memantine HCl extended-release and donepezil HCl) capsule&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;http://norvir.com/&quot; title=&quot;Norvir&quot;>Norvir&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.oriahnn.com/savings-and-insurance&quot; title=&quot;Oriahann&quot;>Oriahann&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.orilissa.com/insurance-and-savings/co-pay-card&quot; title=&quot;Orilissa&quot;>Orilissa&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergantechalliance.com/Resources/Patient-Savings&quot; title=&quot;Ozurdex® (dexamethasone) ocular implant&quot;>Ozurdex® (dexamethasone) ocular implant&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.qulipta.com/savings-support/qulipta-complete-savings-program&quot; title=&quot;QULIPTA TM (atogepant) tablets&quot;>QULIPTA&lt;sup>TM&lt;/sup> (atogepant) tablets&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergantechalliance.com/Resources/Patient-Savings&quot; title=&quot;Restasis® (cyclosporine) ophthalmic emulsion&quot;>Restasis® (cyclosporine) ophthalmic emulsion&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.rinvoq.com/resources/save-on-rinvoq-costs&quot; title=&quot;RINVOQ™ (upadacitinib)&quot;>RINVOQ™ (upadacitinib)&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergansavingscard.com/savella&quot; title=&quot;Savella® (milnacipran HCl) tablets&quot;>Savella® (milnacipran HCl) tablets&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.skyrizi.com/skyrizi-complete/save-on-skyrizi-costs&quot; title=&quot;SKYRIZI™ (risankizumab-rzaa)&quot;>SKYRIZI™ (risankizumab-rzaa)&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.synthroid.com/support/before-breakfast-club?signup=true&quot; title=&quot;Synthroid® (levothyroxine sodium) tablets&quot;>Synthroid® (levothyroxine sodium) tablets&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.ubrelvy.com/udemand#u-save&quot; title=&quot;Ubrelvy® (ubrogepant) tablets&quot;>Ubrelvy® (ubrogepant) tablets&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>VENCLEXTA™ (venetoclax tablets)&lt;br>For information about patient assistance for VENCLEXTA please&amp;nbsp;&lt;a href=&quot;https://www.genentech-access.com/patient/brands/venclexta.html&quot; title=&quot;click&quot;>click&lt;/a>&amp;nbsp;or call 1-888-249-4918.&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.viberzi.com/savings-program&quot; title=&quot;Viberzi® (eluxadoline) tablets&quot;>Viberzi® (eluxadoline) tablets&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.viibryd.com/savings-program&quot; title=&quot;Viibryd® (vilazodone HCl) tablets&quot;>Viibryd® (vilazodone HCl) tablets&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>&lt;a href=&quot;https://www.allergansavingscard.com/vraylar&quot; title=&quot;Vraylar® (cariprazine) capsules&quot;>Vraylar® (cariprazine) capsules&lt;/a>&lt;br>&amp;lt;br&amp;gt;&lt;/li>&#xa; &lt;li>Vyalev™ (foscarbidopa/foslevodopa)&lt;br>Please call 1-866-489-2538 (1-866-4VYALEV) for information.&lt;/li>&#xa;&lt;/ul>"/>
+                </block_2>
+            </section_3>
+            <section_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name,style_container,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"
+                name="Grid Section"
+                style_container="grid-section"
+                style_customDynamicClass="grid-section,grid-cols-2">
+                <block
+                    jcr:lastModified="{Date}2026-06-15T09:49:11.479Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="standard-header-with-divider,divider"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text@richtext,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Eyebrow Text"
+                    text="&lt;p>Related content&lt;/p>"/>
+                <block_1
+                    jcr:lastModified="{Date}2026-06-17T13:23:00.707Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="true"
+                    hideDescription="false"
+                    hideImage="false"
+                    hidePublicationDate="{Boolean}true"
+                    hideReadTime="{Boolean}true"
+                    hideRole="false"
+                    language="lang:none"
+                    model="story-card"
+                    modelFields="[storyCardVariant@select,hidePublicationDate@boolean,hideReadTime@boolean,hideRole@boolean,hideDescription@boolean,hideImage@boolean,page@aem-content,openInNewTab@boolean,ctaLabel@text,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Story Card"
+                    openInNewTab="false"
+                    page="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/income-criteria"
+                    storyCardVariant="sidePanel"/>
+                <block_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-16"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-8,separator-divider"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    analytics_id="none"
+                    classes_customDynamicClass="separator-height-24"
+                    filter="separator"
+                    model="separator"
+                    modelFields="[showLine,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Separator"
+                    showLine="false"/>
+                <block_5
+                    jcr:lastModified="{Date}2026-06-15T09:49:32.842Z"
+                    jcr:lastModifiedBy="inf44580@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_customDynamicClass="mini-header,mini"
+                    filter="eyebrow-text"
+                    language="none"
+                    model="eyebrow-text"
+                    modelFields="[text@richtext,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Eyebrow Text"
+                    text="&lt;p>TOPICS&lt;/p>"/>
+                <block_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    ariaLabel="Topics"
+                    childDepth="1"
+                    enableDate="false"
+                    enableDescription="false"
+                    enableSubtitle="false"
+                    enableTags="false"
+                    excludeCurrentPage="true"
+                    filter="linklist"
+                    language="none"
+                    layout="single-column"
+                    linkSource="custom"
+                    maxItems="25"
+                    model="linklist"
+                    modelFields="[variant,linkSource,parentPage,childDepth,excludeCurrentPage,enableDescription,enableTags,enableSubtitle,enableDate,orderBy,sortOrder,maxItems,layout,fontIcon,ariaLabel,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Linklist"
+                    orderBy="content-tree"
+                    sortOrder="asc"
+                    variant="standard">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-15T13:59:39.736Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        language="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance"
+                        linkText="Patient Assistance Overview"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                    <item_1
+                        jcr:lastModified="{Date}2026-06-15T14:00:21.341Z"
+                        jcr:lastModifiedBy="inf44580@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        classes="linklist-item"
+                        confirmationModalVariation="standard"
+                        cookieConsentLink="false"
+                        enableConfirmationModal="false"
+                        iconPosition="before"
+                        iconVariation="none"
+                        language="none"
+                        link="/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en/patients/patient-support/patient-assistance/patient-assistance-frequently-asked-questions"
+                        linkText="Patient Assistance FAQs"
+                        model="linklist-item"
+                        modelFields="[id@text,customClass@text,cookieConsentLink@boolean,link@aem-content,openInNewTab@boolean,linkText@text,subtitle@text,description@richtext,categoryTags@aem-tag,iconVariation@select,fontIcon@text,imageIcon@custom-asset-namespace:custom-asset,imageIconMimeType@custom-asset-namespace:custom-asset-mimetype,iconPosition@select,iconLink@aem-content,enableConfirmationModal@boolean,confirmationModalVariation@select,modalId@text,warnOnDeparturePopupFragmentPath@aem-content,language@select,ariaLabel@text]"
+                        name="LinkList Item"
+                        openInNewTab="false"/>
+                </block_6>
+            </section_4>
+            <section_5
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                model="section"
+                modelFields="[name,background,backgroundMimeType,style_customDynamicClass,sectionId,style_commonCustomClass,language,analytics_id]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

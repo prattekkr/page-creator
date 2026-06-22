@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-06-12T11:16:27.539Z"
+        cq:lastModifiedBy="migration"
+        cq:lastReplicationAction_preview="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Equal Employment Opportunity Employer"
+        jcr:uuid="33bc1741-4730-4cf3-8727-5c7b41e9a95e"
+        sling:resourceType="core/franklin/components/page/v1/page"
+        cardTitle="Equal Employment Opportunity Employer"
+        hideFromNavigation="true"
+        modelFields="[navTitle@text,keywords@text,cq:tags@aem-tag,pageSubtitle@text,image@reference,hideFromNavigation@boolean,navigationalOrder@number,eyebrowText@text,cardTitle@text,cardDescription@text,cardImage@custom-asset-namespace:custom-asset,cardImageMimeType@custom-asset-namespace:custom-asset-mimetype,cardImageAlt@text,ctaText@text,publicationDate@text,readWatchTime@select,storyReadTime@number,storyWatchTime@number,ctaAltText@text,warndeparturemodalpath@aem-content,warnarrivalmodalpath@aem-content]"
+        navTitle="Equal Employment Opportunity Employer">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/franklin/components/root/v1/root">
+            <section
+                jcr:lastModified="{Date}2026-06-04T12:30:49.127Z"
+                jcr:lastModifiedBy="hay15584@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="section"
+                modelFields="[name@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_customDynamicClass="large-radius">
+                <block
+                    jcr:lastModified="{Date}2026-06-04T12:27:52.471Z"
+                    jcr:lastModifiedBy="hay15584@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    classes_commonCustomClass="\0"
+                    classes_customDynamicClass="height-short"
+                    filter="hero-container"
+                    language="none"
+                    model="hero-container"
+                    modelFields="[classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Hero Container">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-05T04:37:50.365Z"
+                        jcr:lastModifiedBy="hay15584@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        accountId="2157889325001"
+                        backgroundType="color"
+                        classes_customDynamicClass="accent-blue"
+                        ctaAltText="\0"
+                        ctaLabel="\0"
+                        ctaUrl="\0"
+                        image="\0"
+                        imageAlt="\0"
+                        model="hero-container-item"
+                        modelFields="[backgroundType@select,image@custom-asset-namespace:custom-asset,imageMimeType@custom-asset-namespace:custom-asset-mimetype,imageAlt@text,accountId@select,playerId@text,videoId@text,text@richtext,ctaLabel@text,ctaUrl@aem-content,ctaAltText@text,classes_customDynamicClass@ngaem:dynamic-picklist]"
+                        name="Hero Container Item"
+                        playerId="\0"
+                        text="\0"
+                        videoId="\0"/>
+                </block>
+                <block_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="none"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title,titleType,classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Custom Title"
+                    title="Equal Opportunity Employer"
+                    titleType="h1"/>
+            </section>
+            <section_1
+                jcr:lastModified="{Date}2026-06-04T12:15:35.574Z"
+                jcr:lastModifiedBy="hay15584@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name@text,style_container@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_container="grid-container"
+                style_customDynamicClass="regular-padding"/>
+            <section_2
+                jcr:lastModified="{Date}2026-06-04T12:12:50.045Z"
+                jcr:lastModifiedBy="hay15584@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name@text,style_container@text,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_container="grid-section"
+                style_customDynamicClass="grid-cols-2"/>
+            <section_3
+                jcr:lastModified="{Date}2026-06-04T12:12:30.747Z"
+                jcr:lastModifiedBy="hay15584@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name@text,style_container@text,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_container="grid-section"
+                style_customDynamicClass="grid-cols-8">
+                <custom_title
+                    jcr:created="{Date}2026-06-04T12:03:08.344Z"
+                    jcr:createdBy="hay15584@adobe.com"
+                    jcr:lastModified="{Date}2026-06-04T12:04:52.237Z"
+                    jcr:lastModifiedBy="hay15584@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    aueComponentId="custom-title"
+                    classes_customDynamicClass="h3-size,medium-weight"
+                    filter="custom-title"
+                    language="none"
+                    model="custom-title"
+                    modelFields="[title@text,titleType@select,classes_customDynamicClass@ngaem:dynamic-picklist,blockId@text,classes_commonCustomClass@text,language@select,analytics_id@text]"
+                    name="Custom Title"
+                    title="U.S. and Puerto Rico Job Opportunities"
+                    titleType="h2"/>
+                <block
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="core/franklin/components/block/v1/block"
+                    blockId="\0"
+                    classes_customDynamicClass="spacing-bottom"
+                    filter="text-container"
+                    language="none"
+                    model="text-container"
+                    modelFields="[classes_customDynamicClass,blockId,classes_commonCustomClass,language,analytics_id]"
+                    name="Text Container">
+                    <item_0
+                        jcr:lastModified="{Date}2026-06-04T12:34:09.670Z"
+                        jcr:lastModifiedBy="hay15584@adobe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/franklin/components/block/v1/block/item"
+                        model="text-container-text"
+                        modelFields="[text@richtext]"
+                        name="Text Container Text"
+                        text="&lt;p>AbbVie is an equal opportunity employer. AbbVie does not discriminate based on any legally protected status. As a federal contractor, AbbVie takes affirmative action to employ and advance in employment qualified protected veterans and individuals with a disability. If you are a U.S. or Puerto Rico employee or candidate that would like to view a copy of the nonconfidential portions of the company’s affirmative action plans for Protected Veterans or Individuals with a Disability, or our EEO/Affirmative Action policy statement, please email &lt;a href=&quot;alentacquisition@abbvie.com&quot;>talentacquisition@abbvie.com&lt;/a>.&lt;/p>&#xa;&lt;ul>&#xa; &lt;li>Employee Polygraph Protection Act, Family Medical Leave Act and Know Your Rights ( &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/joinus/eeo/FEDAPP-english.pdf&quot; title=&quot;&quot;>English&lt;/a> ) ( &lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/joinus/eeo/FEDAPP-spanish.pdf&quot; title=&quot;&quot;>Spanish&lt;/a> )&lt;/li>&#xa;&lt;/ul>"/>
+                </block>
+            </section_3>
+            <section_4
+                jcr:lastModified="{Date}2026-06-04T12:14:08.724Z"
+                jcr:lastModifiedBy="hay15584@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-section"
+                modelFields="[name@text,style_container@text,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_container="grid-section"
+                style_customDynamicClass="grid-cols-2"/>
+            <section_5
+                jcr:lastModified="{Date}2026-06-04T12:29:13.442Z"
+                jcr:lastModifiedBy="hay15584@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="core/franklin/components/section/v1/section"
+                language="none"
+                model="grid-container"
+                modelFields="[name@text,style_container@text,background@custom-asset-namespace:custom-asset,backgroundMimeType@custom-asset-namespace:custom-asset-mimetype,style_customDynamicClass@ngaem:dynamic-picklist,blockId@text,style_commonCustomClass@text,language@select,analytics_id@text]"
+                style_container="grid-container"
+                style_customDynamicClass="grid-container,content-regular"/>
+        </root>
+    </jcr:content>
+</jcr:root>
