@@ -579,7 +579,19 @@ function walkXmlNode(node, ordered, depth = 0) {
     if (!child || typeof child !== 'object') continue;
     const rt = (child['@sling:resourceType'] || '').trim();
     if (!rt || isMigrationLayout(rt)) {
-      // skip this node but descend into its children
+      // Layout containers with backgroundImageReference serve as AEM hero sections.
+      // Emit a hero-container-item so fill-from-XML can populate image + style classes.
+      const bgImg = child['@backgroundImageReference'];
+      if (bgImg) {
+        const heroProps = { image: transformPath(bgImg, pathMap), backgroundVariant: 'image' };
+        const rawStyleIds = child['@cq:styleIds'];
+        if (rawStyleIds && Object.keys(styleMap).length) {
+          const ids = String(rawStyleIds).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+          const edsClasses = ids.map(id => styleMap[id]?.edsClass).filter(Boolean);
+          if (edsClasses.length) heroProps['classes_customDynamicClass'] = edsClasses.join(',');
+        }
+        ordered.push({ type: 'hero-container-item', resourceType: rt, props: heroProps, children: [] });
+      }
       walkXmlNode(child, ordered, depth + 1);
       continue;
     }
@@ -1417,6 +1429,7 @@ app.get('/api/build-style-map', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 

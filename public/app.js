@@ -1631,6 +1631,7 @@ async function doFillFromXml() {
   }
 }
 
+// ── Build canvas from XML ─────────────────────────────────────────────────────
 // ── Bundle save modal ─────────────────────────────────────────────────────────
 function bundleSaveModalHtml() {
   const rows = S.sections.map((sec, i) => {
@@ -1741,8 +1742,8 @@ function bind() {
     localStorage.removeItem(CANVAS_KEY);
     render();
   });
-  on('btn-dismiss-draft', 'click', () => { S._draftRestored = false; render(); });
-  on('btn-dismiss-migr',  'click', () => { S._migrResult = null; render(); });
+  on('btn-dismiss-draft',       'click', () => { S._draftRestored = false; render(); });
+  on('btn-dismiss-migr',        'click', () => { S._migrResult = null; render(); });
 
   // Canvas
   on('btn-add-section', 'click', () => addSection('section'));

@@ -45,7 +45,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
   color: #713f12; font-size: .78rem; padding: 6px 16px;
   display: flex; align-items: center; gap: 8px;
 }
-.migr-banner { background: #f0fdfa; border-bottom-color: #99f6e4; color: #134e4a; }
+.migr-banner        { background: #f0fdfa; border-bottom-color: #99f6e4; color: #134e4a; }
 .draft-dismiss { background: none; border: none; cursor: pointer; color: #92400e; font-size: .9rem; padding: 0 4px; line-height: 1; margin-left: auto; }
 .draft-dismiss:hover { color: #713f12; }
 
@@ -462,7 +462,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .alert-error   { background: #fef2f2; border: 1px solid #fca5a5; color: var(--error); }
 .alert-success { background: #f0fdf4; border: 1px solid #86efac; color: var(--success); }
 .alert-info    { background: #eff6ff; border: 1px solid #93c5fd; color: #1d4ed8; }
-
 /* Spinner */
 @keyframes spin { to { transform: rotate(360deg); } }
 .spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; display: inline-block; vertical-align: middle; }
