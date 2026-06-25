@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-05-12T09:31:57.159Z"
+        cq:lastModifiedBy="gra08388@adobe.com"
+        cq:lastReplicated="{Date}2026-05-12T09:32:06.140Z"
+        cq:lastReplicated_publish="{Date}2026-05-12T09:32:06.140Z"
+        cq:lastReplicatedBy="gra08388@adobe.com"
+        cq:lastReplicatedBy_publish="gra08388@adobe.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="teaser-picklist-config"
+        jcr:uuid="c38fb37a-a247-40ad-916a-a3731483b1f1"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Style Name,Style Class]"
+        hideInNav="{Boolean}true">
+        <row_1778152070756
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="light-theme"
+            Style_x0020_Name="Theme: Light Theme"/>
+        <row_1778152201362
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="dark-theme"
+            Style_x0020_Name="Theme: Dark Theme"/>
+        <row_1778152249397
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="teaser-h2"
+            Style_x0020_Name="Variant: H2 Title"/>
+        <row_1778152280327
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="teaser-h3"
+            Style_x0020_Name="Variant: H3 Title"/>
+        <row_1778152788271
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="teaser-h4"
+            Style_x0020_Name="Variant: H4 Title"/>
+        <row_1778152814502
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="teaser-h5"
+            Style_x0020_Name="Variant: H5 Title"/>
+        <row_1778152843499
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="teaser-external-link"
+            Style_x0020_Name="CTA Variations: External Link"/>
+        <row_1778152870653
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="teaser-internal-link"
+            Style_x0020_Name="CTA Variations: Internal Link"/>
+    </jcr:content>
+</jcr:root>

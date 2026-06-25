@@ -1,0 +1,792 @@
+﻿[
+    {
+        "aemPath":  "abbvie-com2/components/accordion/v2/accordion",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "accordion",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "blockHeading",
+                                "source":  "heading"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "classes_allowMultipleOpen",
+                                "source":  "singleExpansion"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/title/v2/title",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "custom-title",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "title",
+                                "source":  "jcr:title"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "titleType",
+                                "source":  "type"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/text/v2/text",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "text-container",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "text",
+                                "source":  "text"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "cq:panelTitle",
+                                "source":  "cq:panelTitle"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/image/v2/image",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "custom-image",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "image",
+                                "source":  "fileReference"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "imageAlt",
+                                "source":  "alt"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "link",
+                                "source":  "linkURL"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "target",
+                                "source":  "linkTarget"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/header/v2/header",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "eyebrow-text",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "text",
+                                "source":  "eyebrow"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/microsite-header",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "eyebrow-text",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "text",
+                                "source":  "eyebrow"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "text",
+                                "source":  "title"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/button/v2/button",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "cta",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "linkText",
+                                "source":  "jcr:title"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "link",
+                                "source":  "linkURL"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "ctaTarget",
+                                "source":  "linkTarget"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "linkText",
+                                "source":  "accessibilityLabel"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "link",
+                                "source":  "link"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/teaser/v2/teaser",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "teaser",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "title",
+                                "source":  "jcr:title"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "description",
+                                "source":  "jcr:description"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "eyebrow",
+                                "source":  "pretitle"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "buttonLabel",
+                                "source":  "ctaText"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "buttonURL",
+                                "source":  "ctaLink"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "linkTarget",
+                                "source":  "ctaTarget"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/video/v2/video",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "brightcove-video",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "videoId",
+                                "source":  "brightcoveVideoId"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "accountId",
+                                "source":  "brightcoveAccount"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "playerId",
+                                "source":  "brightcovePlayerId"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "uri",
+                                "source":  "youtubeUrl"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "overlayHeading",
+                                "source":  "title"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "overlayDescription",
+                                "source":  "description"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "overlayButtonLabel",
+                                "source":  "btnText"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "posterAccessibilityLabel",
+                                "source":  "imgAlt"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "accountId",
+                                "source":  "brightcovePlaylistAccount"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "captionHeading",
+                                "source":  "descriptiveIframeTitle"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/podcast",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "brightcove-podcast-player",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "podcastId",
+                                "source":  "podcastId"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "accountId",
+                                "source":  "accountId"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "playerId",
+                                "source":  "playerId"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "overlayHeading",
+                                "source":  "title"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "overlayDescription",
+                                "source":  "description"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/embed/v2/embed",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "custom-embed",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "oneTrustId",
+                                "source":  "embeddableId"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/embed/v2/embed/embeddable/onetrust",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "custom-embed",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "oneTrustId",
+                                "source":  "oneTrustId"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/embed/v2/embed/embeddable/podcast",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "brightcove-podcast-player",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "podcastId",
+                                "source":  "podcastId"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "accountId",
+                                "source":  "accountId"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/linklist/v2/linklist",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "linklist",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "parentPage",
+                                "source":  "parentPage"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "maxItems",
+                                "source":  "maxItems"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "orderBy",
+                                "source":  "orderBy"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "sortOrder",
+                                "source":  "sortOrder"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "linkSource",
+                                "source":  "listFrom"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "tagsMatch",
+                                "source":  "tagsMatch"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "childDepth",
+                                "source":  "childDepth"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "excludeCurrentPage",
+                                "source":  "excludeCurrentPage"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/quote",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "quote",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "attribution",
+                                "source":  "author"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "attributionTitle",
+                                "source":  "authorTitle"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "quoteVariant",
+                                "source":  "quoteType"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "attributionName",
+                                "source":  "attributionName"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "attributionRole",
+                                "source":  "attributionTitle"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "quotation",
+                                "source":  "quote"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/carousel/v2/carousel",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "carousel",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "autoplay",
+                                "source":  "autoplay"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "slideTransitionTime",
+                                "source":  "delay"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "controlsAlignment",
+                                "source":  "controlsAlignment"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "carouselVariant",
+                                "source":  "carouselType"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/editorialfeed/v1/editorialfeed",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "editorial-feed",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "parentPage",
+                                "source":  "parentPage"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "categoryTags",
+                                "source":  "tags"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "match",
+                                "source":  "tagsMatch"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "hideImage",
+                                "source":  "hideImage"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "hideDescription",
+                                "source":  "hideDesc"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "hideDate",
+                                "source":  "hideDate"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "hideTags",
+                                "source":  "hideTags"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "storyPagesToExclude",
+                                "source":  "excludedStories"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/newsfeed",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "news-feed",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "parentPage",
+                                "source":  "parentPage"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "maxItems",
+                                "source":  "maxItems"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "categoryTags",
+                                "source":  "tags"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/cardpagestory/v1/cardpagestory",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "story-card",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "page",
+                                "source":  "linkURL"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "openInNewTab",
+                                "source":  "openInNewTab"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "hideImage",
+                                "source":  "hideImage"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/storyinfo/v2/storyinfo",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "story-card",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "hideImage",
+                                "source":  "hideTag"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "hideReadTime",
+                                "source":  "hideReadWatchTime"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/productslisting/v1/productslisting",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "product-listing",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "parentPath",
+                                "source":  "parentPath"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "maxItems",
+                                "source":  "maxItems"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "orderBy",
+                                "source":  "orderBy"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "sortOrder",
+                                "source":  "sortOrder"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "noResultsHeadline",
+                                "source":  "noResultsHeadingText"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "noResultsSubheading",
+                                "source":  "noResultsSubHeadingText"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "shareLabel",
+                                "source":  "shareText"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "shareConfirmationMessage",
+                                "source":  "shareConfirmationText"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "pronunciationHeading",
+                                "source":  "pronunciationHeaderText"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "papEnabled",
+                                "source":  "enablePap"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/stockticker",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "stock-ticker",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "symbol",
+                                "source":  "symbol"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "exchange",
+                                "source":  "exchange"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "showGraph",
+                                "source":  "showGraph"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/search/searchinput/v2/searchinput",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "search",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "blockId",
+                                "source":  "searchId"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "searchPlaceholder",
+                                "source":  "buttonLabel"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/search/searchresults/v2/searchresults",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "search-results",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "blockId",
+                                "source":  "searchId"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "noResultsMessage",
+                                "source":  "noResultsText"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "loadMoreLabel",
+                                "source":  "loadMoreLabel"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/dashboardcards/v1/dashboardcards",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "cards",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "text",
+                                "source":  "fragmentPath"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/contentfragment",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "fragment",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "path",
+                                "source":  "fragmentPath"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/experiencefragment",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "fragment",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "path",
+                                "source":  "fragmentVariationPath"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/homepage-hero-controller/v1/homepage-hero-controller",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "hero-container",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "title",
+                                "source":  "jcr:title"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "description",
+                                "source":  "jcr:description"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/dynamicmedia",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "custom-image",
+        "propRenames":  [
+                            {
+                                "valid":  true,
+                                "target":  "image",
+                                "source":  "fileReference"
+                            },
+                            {
+                                "valid":  true,
+                                "target":  "imageAlt",
+                                "source":  "alt"
+                            }
+                        ]
+    },
+    {
+        "aemPath":  "abbvie-com2/components/pdfviewer",
+        "missingFields":  [
+
+                          ],
+        "edsType":  "custom-embed",
+        "propRenames":  [
+                            {
+                                "valid":  false,
+                                "target":  "src",
+                                "source":  "pdfReference"
+                            },
+                            {
+                                "valid":  false,
+                                "target":  "title",
+                                "source":  "title"
+                            }
+                        ]
+    }
+]

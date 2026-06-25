@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-06-22T06:29:06.165Z"
+        cq:lastModifiedBy="indranih@adobe.com"
+        cq:lastReplicated="{Date}2026-06-22T06:30:03.508Z"
+        cq:lastReplicated_publish="{Date}2026-06-22T06:30:03.508Z"
+        cq:lastReplicatedBy="indranih@adobe.com"
+        cq:lastReplicatedBy_publish="indranih@adobe.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="carousel-picklist-config"
+        jcr:uuid="b1df2761-995c-4d0b-9a07-09a755bc2963"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Style Name,Style Class]"
+        hideInNav="{Boolean}true">
+        <row_1778067580956
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="carousel-default"
+            Style_x0020_Name="Variant: Default"/>
+        <row_1778067647967
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="carousel-minimal"
+            Style_x0020_Name="Variant: Minimal"/>
+        <row_1778067685881
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="carousel-vertical"
+            Style_x0020_Name="Variant: Vertical"/>
+        <row_1778071570574
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="light"
+            Style_x0020_Name="Theme: Light-Theme"/>
+        <row_1778071587400
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="dark"
+            Style_x0020_Name="Theme: Dark-Theme"/>
+        <row_1778071784032
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="carousel-show-btn-margin"
+            Style_x0020_Name="Bottom Margin: Show Bottom Margin"/>
+        <row_1778071832528
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="carousel-hide-btn-margin"
+            Style_x0020_Name="Bottom Margin: Hide Bottom Margin"/>
+        <row_1778071862372
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="no-bottom-margin"
+            Style_x0020_Name="Margin: No bottom margin"/>
+        <row_1782109738871
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="full-bleed"
+            Style_x0020_Name="Layout: Full Bleed"/>
+    </jcr:content>
+</jcr:root>

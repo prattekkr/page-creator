@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-05-11T06:29:42.720Z"
+        cq:lastModifiedBy="pratteks@adobe.com"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="fact-card-picklist-config"
+        jcr:uuid="6eecf697-5c0a-4f5a-b6a4-f75b42eaa146"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Style Name,Style Class]"
+        hideInNav="{Boolean}true">
+        <row_1777881153807
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-standard"
+            Style_x0020_Class="size-medium-horizontal"
+            Style_x0020_Name="Size: Size Medium Horizontal"/>
+        <row_1777986087582
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="size-medium-vertical"
+            Style_x0020_Name="Size: Size Medium Vertical"/>
+        <row_1777986204281
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="size-large"
+            Style_x0020_Name="Size: Size Large"/>
+        <row_1777986259562
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="light-theme-no-stroke"
+            Style_x0020_Name="Theme: Light Theme No Stroke"/>
+        <row_1777986322859
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="light-theme-stroke"
+            Style_x0020_Name="Theme: Light Theme Stroke"/>
+        <row_1777986327527
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="medium-theme"
+            Style_x0020_Name="Theme: Medium Theme"/>
+        <row_1777986331001
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="medium-theme-stroke"
+            Style_x0020_Name="Theme: Medium Theme Stroke"/>
+        <row_1777986334387
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="dark-theme"
+            Style_x0020_Name="Theme: Dark Theme"/>
+        <row_1777986416189
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="show-image"
+            Style_x0020_Name="Dashboard Layout: Show Image"/>
+        <row_1777986421405
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="hide-image"
+            Style_x0020_Name="Dashboard Layout: Hide Image"/>
+    </jcr:content>
+</jcr:root>

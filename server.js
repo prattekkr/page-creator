@@ -342,22 +342,33 @@ const JCR_SYS_PROPS = new Set([
 ]);
 
 // Derive component type from a JCR node.
-// Priority: model → aueComponentId → last meaningful sling:resourceType segment.
+// Priority: model → aueComponentId → filter → last meaningful sling:resourceType segment.
+// AEM EDS convention: rolled-out sections carry filter:"section"/"grid-container" etc.
+// without model/aueComponentId, so filter must be checked before resourceType.
 function deriveType(v) {
   if (v.model) return v.model;
   if (v.aueComponentId) return v.aueComponentId;
+  if (v.filter) return v.filter;
   const rt = v['sling:resourceType'] || '';
   if (!rt) return null;
   // Strip trailing version+name, e.g. "/v1/block" → keep what came before
   const clean = rt.replace(/\/v\d+\/[^/]+$/, '');
   const last = clean.split('/').filter(Boolean).pop() || '';
-  const skip = new Set(['block', 'section', 'root', 'page', 'item', 'container', 'blocks', 'franklin', 'core']);
+  // Franklin components (section, grid-container, grid-section, etc.) are all valid types
+  if (rt.includes('franklin/components/')) return last || null;
+  // For legacy AEM components, skip generic words that don't identify a useful type
+  const skip = new Set(['block', 'root', 'page', 'item', 'blocks', 'core']);
   return skip.has(last) ? null : last;
 }
 
-// Section-level nodes (root children) — must carry model or aueComponentId
+// Section-level nodes (root children).
+// UE-authored sections carry model/aueComponentId; AEM-rolled-out sections may only
+// have filter or sling:resourceType — accept all three forms so nothing is silently dropped.
 function isCompNode(v) {
-  return v && typeof v === 'object' && !Array.isArray(v) && (v.model || v.aueComponentId);
+  if (!v || typeof v !== 'object' || Array.isArray(v)) return false;
+  if (v.model || v.aueComponentId) return true;
+  const rt = v['sling:resourceType'] || '';
+  return !!v.filter || rt.includes('franklin/components/');
 }
 
 // Block-level nodes (section children) — also accept sling:resourceType as fallback
@@ -380,15 +391,17 @@ function extractJcrProps(node) {
 // Returns block-level children using the more lenient isBlockNode detector.
 // Also recurses one extra level to handle pages with an intermediate container
 // node ("par" parsys pattern common in older AEM migrations).
-function extractJcrBlocks(node) {
+function extractJcrBlocks(node, label) {
   const direct = Object.values(node).filter(isBlockNode);
   if (direct.length > 0) {
-    return direct.map(v => ({
+    const blocks = direct.map(v => ({
       type:     deriveType(v),
       props:    extractJcrProps(v),
       children: Object.values(v).filter(isBlockNode)
                  .map(c => ({ type: deriveType(c), props: extractJcrProps(c), children: [] }))
     }));
+    if (label) console.log(`[import]   ${label} block types: [${blocks.map(b => b.type).join(', ')}]`);
+    return blocks;
   }
   // Fallback: one level deeper
   const containers = Object.values(node).filter(
@@ -398,43 +411,74 @@ function extractJcrBlocks(node) {
   for (const ct of containers) {
     const nested = Object.values(ct).filter(isBlockNode);
     if (nested.length > 0) {
-      return nested.map(v => ({
+      const blocks = nested.map(v => ({
         type:     deriveType(v),
         props:    extractJcrProps(v),
         children: Object.values(v).filter(isBlockNode)
                    .map(c => ({ type: deriveType(c), props: extractJcrProps(c), children: [] }))
       }));
+      if (label) console.log(`[import]   ${label} block types (nested): [${blocks.map(b => b.type).join(', ')}]`);
+      return blocks;
     }
   }
   return [];
 }
 
 function parseRootNode(root) {
-  // Section-level nodes still require model/aueComponentId
+  // Log ALL root keys with their detection status for diagnostics
+  for (const [k, v] of Object.entries(root)) {
+    if (!v || typeof v !== 'object' || Array.isArray(v)) continue;
+    const detected = isCompNode(v);
+    const type = deriveType(v);
+    const rt = v['sling:resourceType'] || '(none)';
+    console.log(`[import] root key "${k}": isCompNode=${detected}, type=${type}, filter=${v.filter||'(none)'}, model=${v.model||'(none)'}, rt=${rt}`);
+  }
+
   const entries = Object.entries(root).filter(([, v]) => isCompNode(v));
   console.log(`[import] root has ${entries.length} component nodes:`,
     entries.map(([k, v]) => `${k}(${deriveType(v)})`).join(', '));
 
+  // Container types that should become their own canvas sections, not blocks
+  const SECTION_CONTAINER_TYPES = new Set(['section', 'grid-container', 'grid-section']);
+
   const sections = [];
   let i = 0;
   while (i < entries.length) {
-    const [, node] = entries[i];
+    const [k, node] = entries[i];
     const type = deriveType(node);
     if (type === 'grid-container') {
-      const sec = { type: 'grid-container', props: extractJcrProps(node), blocks: [] };
+      const nodeProps = extractJcrProps(node);
+      const gridSections = [];
       i++;
       while (i < entries.length && deriveType(entries[i][1]) === 'grid-section') {
-        const [, gsNode] = entries[i];
-        const gsBlocks = extractJcrBlocks(gsNode);
-        console.log(`[import]   grid-section blocks: ${gsBlocks.length}`);
-        sec.blocks.push({ type: 'grid-section', props: extractJcrProps(gsNode), children: gsBlocks });
+        const [gsk, gsNode] = entries[i];
+        const gsBlocks = extractJcrBlocks(gsNode, gsk);
+        console.log(`[import]   grid-section ${gsk} blocks: ${gsBlocks.length}`);
+        gridSections.push({ type: 'grid-section', props: extractJcrProps(gsNode), children: gsBlocks });
         i++;
       }
-      sections.push(sec);
+      if (gridSections.length > 0) {
+        sections.push({ type: 'grid-container', props: nodeProps, blocks: gridSections });
+      } else {
+        // No grid-section siblings: extract blocks placed directly inside the container node
+        // (e.g. section_10 has a video block, section_2 has a teaser block directly inside)
+        const directBlocks = extractJcrBlocks(node, k);
+        console.log(`[import] ${k}(grid-container) no grid-sections, direct blocks: ${directBlocks.length}`);
+        sections.push({ type: 'grid-container', props: nodeProps, blocks: directBlocks });
+      }
     } else {
-      const blocks = extractJcrBlocks(node);
-      console.log(`[import] section(${type}) blocks: ${blocks.length}`);
-      sections.push({ type, props: extractJcrProps(node), blocks });
+      const allBlocks = extractJcrBlocks(node, k);
+      // Split: content blocks vs nested section containers (sub-sections with video, etc.)
+      const contentBlocks  = allBlocks.filter(b => !SECTION_CONTAINER_TYPES.has(b.type));
+      const nestedSections = allBlocks.filter(b =>  SECTION_CONTAINER_TYPES.has(b.type));
+      console.log(`[import] section(${type}) key=${k} contentBlocks=${contentBlocks.length}, nestedSections=${nestedSections.length}`);
+      sections.push({ type, props: extractJcrProps(node), blocks: contentBlocks });
+      // Promote nested section containers to their own top-level canvas sections
+      for (const nested of nestedSections) {
+        const nestedBlocks = nested.children || [];
+        console.log(`[import]   promoted nested ${nested.type} with ${nestedBlocks.length} blocks: [${nestedBlocks.map(b => b.type).join(', ')}]`);
+        sections.push({ type: nested.type, props: nested.props, blocks: nestedBlocks });
+      }
       i++;
     }
   }
@@ -490,7 +534,9 @@ app.post('/api/import-page', async (req, res) => {
   const auth = Buffer.from(`${username}:${password}`).toString('base64');
   try {
     const cleanPath = pagePath.replace(/\.(html|json|xml)$/i, '').replace(/\/+$/, '');
-    const url = `${aemHost.replace(/\/+$/, '')}${cleanPath}/jcr:content.infinity.json`;
+    // Use depth-4 instead of infinity to avoid AEM's silent node-count truncation
+    // on large pages. Depth: jcr:content(0) → root(1) → sections(2) → blocks(3) → block-children(4)
+    const url = `${aemHost.replace(/\/+$/, '')}${cleanPath}/jcr:content.4.json`;
     console.log(`[import] fetching ${url}`);
     const r   = await fetch(url, { headers: { Authorization: `Basic ${auth}` } });
     if (!r.ok) return res.status(r.status).json({ error: `AEM returned HTTP ${r.status} — check path and credentials` });
@@ -583,7 +629,8 @@ function walkXmlNode(node, ordered, depth = 0) {
       // Emit a hero-container-item so fill-from-XML can populate image + style classes.
       const bgImg = child['@backgroundImageReference'];
       if (bgImg) {
-        const heroProps = { image: transformPath(bgImg, pathMap), backgroundVariant: 'image' };
+        const filename = bgImg.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
+        const heroProps = { image: transformPath(bgImg, pathMap), backgroundVariant: 'image', imageAlt: filename };
         const rawStyleIds = child['@cq:styleIds'];
         if (rawStyleIds && Object.keys(styleMap).length) {
           const ids = String(rawStyleIds).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
@@ -768,6 +815,7 @@ app.post('/api/migration-map', express.json(), (req, res) => {
     const existing = JSON.parse(fs.readFileSync(path.join(__dirname, 'migration-map.json'), 'utf8'));
     existing.componentMap = req.body.componentMap || existing.componentMap;
     fs.writeFileSync(path.join(__dirname, 'migration-map.json'), JSON.stringify(existing, null, 2), 'utf8');
+    migrationMap.componentMap = existing.componentMap; // reload in memory immediately
     res.json({ ok: true });
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
@@ -1291,6 +1339,58 @@ app.post('/api/apply-mapping-analysis', express.json(), (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// ── Block style configs endpoint ──────────────────────────────────────────────
+let _blockStyleConfigsCache = null;
+
+function loadBlockStyleConfigs() {
+  if (_blockStyleConfigsCache) return _blockStyleConfigsCache;
+  const configDir = path.join(__dirname, 'config');
+  const result = {};
+  try {
+    const dirs = fs.readdirSync(configDir).filter(d => d.endsWith('-picklist-config'));
+    for (const dir of dirs) {
+      const xmlPath = path.join(configDir, dir, '.content.xml');
+      if (!fs.existsSync(xmlPath)) continue;
+      const xml = fs.readFileSync(xmlPath, 'utf8');
+
+      // Match multi-line self-closing row elements
+      const rowRe = /<row_[\s\S]*?\/>/g;
+      const attrRe = /([\w:]+)="([^"]*)"/g;
+      const rows = [];
+      let m;
+      while ((m = rowRe.exec(xml)) !== null) {
+        const attrs = {};
+        let a;
+        attrRe.lastIndex = 0;
+        while ((a = attrRe.exec(m[0])) !== null) attrs[a[1]] = a[2];
+        const rawName  = attrs['Style_x0020_Name']  || '';
+        const cssClass = attrs['Style_x0020_Class'] || '';
+        const multiRaw = attrs['Select_x0020_Multiple'] || '';
+        if (!rawName || !cssClass) continue;
+        const colonIdx = rawName.indexOf(':');
+        const group = colonIdx > -1 ? rawName.slice(0, colonIdx).trim() : 'General';
+        const label = colonIdx > -1 ? rawName.slice(colonIdx + 1).trim() : rawName;
+        rows.push({ group, label, cssClass, multiSelect: multiRaw.includes('true') });
+      }
+
+      // Group rows
+      const groupMap = {};
+      for (const row of rows) {
+        if (!groupMap[row.group]) groupMap[row.group] = { group: row.group, multiSelect: false, options: [] };
+        if (row.multiSelect) groupMap[row.group].multiSelect = true;
+        groupMap[row.group].options.push({ label: row.label, cssClass: row.cssClass });
+      }
+      result[dir] = Object.values(groupMap);
+    }
+  } catch (err) {
+    console.error('[block-style-configs]', err.message);
+  }
+  _blockStyleConfigsCache = result;
+  return result;
+}
+
+app.get('/api/block-style-configs', (_req, res) => res.json(loadBlockStyleConfigs()));
 
 // ── Style map endpoints ───────────────────────────────────────────────────────
 app.get('/api/style-map', (_req, res) => res.json(styleMap));

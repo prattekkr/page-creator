@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-13T17:03:21.827Z"
+        cq:lastModifiedBy="nalabotu@adobe.com"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="universal-editor-config"
+        jcr:uuid="c4fdf8b2-e1dc-4f5b-8ca2-6c937d84a222"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Key,Value]"
+        hideInNav="{Boolean}true">
+        <row_1776384197260
+            jcr:primaryType="nt:unstructured"
+            Key="RTE_STYLES_URL"
+            Value="/styles/abbvie/rte-styles.css"/>
+    </jcr:content>
+</jcr:root>

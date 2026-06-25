@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-06-23T04:46:42.892Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:lastReplicated="{Date}2026-06-01T12:13:37.283Z"
+        cq:lastReplicated_publish="{Date}2026-06-01T12:13:37.283Z"
+        cq:lastReplicatedBy="sheetal.joshi@abbvie.com"
+        cq:lastReplicatedBy_publish="sheetal.joshi@abbvie.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="image-picklist-config"
+        jcr:uuid="29242706-22fa-4178-8f3e-f4f91d642771"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Style Name,Style Class]"
+        hideInNav="{Boolean}true">
+        <row_1777887373432
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Name="Display: Default"/>
+        <row_1777887403039
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="circle"
+            Style_x0020_Name="Display: Circle"/>
+        <row_1777887430288
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="icon"
+            Style_x0020_Name="Display: Icon"/>
+        <row_1777887440660
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="logo"
+            Style_x0020_Name="Display: Logo"/>
+        <row_1779786945332
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="add-margins"
+            Style_x0020_Name="Margin: Add Margin"/>
+        <row_1782189428402
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="image-default"
+            Style_x0020_Name="Variation: Caption with margin"/>
+    </jcr:content>
+</jcr:root>

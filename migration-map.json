@@ -30,7 +30,9 @@
         "cq:panelTitle": "summary",
         "text": "text"
       },
-      "invertBoolProps": ["singleExpansion"],
+      "invertBoolProps": [
+        "singleExpansion"
+      ],
       "propRenames": {
         "heading": "blockHeading",
         "singleExpansion": "classes_allowMultipleOpen"
@@ -71,14 +73,14 @@
       "edsType": "custom-image",
       "propRenames": {
         "fileReference": "image",
-        "alt": "language",
-        "linkURL": "link",
-        "linkTarget": "target",
-        "jcr:title": "imageAlt"
+        "alt": "imageAlt",
+        "linkTarget": "target"
       },
       "skipProps": [
+        "linkURL",
         "openInNewWindow",
-        "id"
+        "id",
+        "jcr:title"
       ]
     },
     "abbvie-com2/components/header/v2/header": {
@@ -178,13 +180,13 @@
     "abbvie-com2/components/podcast": {
       "edsType": "brightcove-podcast-player",
       "propRenames": {
-        "podcastId": "podcastId",
+        "podcastId": "videoId",
         "accountId": "accountId",
-        "playerId": "playerId",
-        "title": "overlayHeading",
-        "description": "overlayDescription"
+        "playerId": "playerId"
       },
       "skipProps": [
+        "title",
+        "description",
         "id"
       ]
     },
@@ -209,7 +211,7 @@
     "abbvie-com2/components/embed/v2/embed/embeddable/podcast": {
       "edsType": "brightcove-podcast-player",
       "propRenames": {
-        "podcastId": "podcastId",
+        "podcastId": "videoId",
         "accountId": "accountId"
       },
       "skipProps": [
@@ -259,7 +261,17 @@
         "orderBy": "orderBy",
         "sortOrder": "sortOrder",
         "listFrom": "linkSource",
-        "tagsMatch": "tagsMatch"
+        "childDepth": "childDepth",
+        "excludeCurrentPage": "excludeCurrentPage"
+      },
+      "childType": "linklist-item",
+      "childPropRenames": {
+        "text": "linkText",
+        "linkURL": "link",
+        "linkTarget": "target",
+        "iconImage": "fontIcon",
+        "iconPosition": "iconPosition",
+        "icons": "fontIcon"
       },
       "skipProps": [
         "linkURL",
@@ -269,6 +281,7 @@
         "linkDescription",
         "subTitle",
         "linksTarget",
+        "tagsMatch",
         "popupSelectedByLink",
         "popupSelectedByIcon",
         "popuptype",
@@ -288,20 +301,18 @@
         "pages",
         "tagItem",
         "linkTags",
-        "childDepth",
-        "excludeCurrentPage",
         "id"
       ]
     },
     "abbvie-com2/components/quote": {
       "edsType": "quote",
       "propRenames": {
-        "text": "quoteText",
-        "author": "attribution",
-        "authorTitle": "attributionTitle",
-        "quoteType": "quoteType",
+        "author": "attributionName",
+        "authorTitle": "attributionRole",
+        "quoteType": "quoteVariant",
         "attributionName": "attributionName",
-        "attributionTitle": "attributionRole"
+        "attributionTitle": "attributionRole",
+        "quote": "quotation"
       },
       "skipProps": [
         "id"
@@ -313,10 +324,10 @@
       "propRenames": {
         "autoplay": "autoplay",
         "delay": "slideTransitionTime",
-        "controlsAlignment": "controlsAlignment",
         "carouselType": "carouselVariant"
       },
       "skipProps": [
+        "controlsAlignment",
         "id"
       ]
     },
@@ -342,12 +353,11 @@
     },
     "abbvie-com2/components/newsfeed": {
       "edsType": "news-feed",
-      "propRenames": {
-        "parentPage": "parentPage",
-        "maxItems": "maxItems",
-        "tags": "categoryTags"
-      },
+      "propRenames": {},
       "skipProps": [
+        "parentPage",
+        "maxItems",
+        "tags",
         "id"
       ]
     },
@@ -426,20 +436,19 @@
     },
     "abbvie-com2/components/stockticker": {
       "edsType": "stock-ticker",
-      "propRenames": {
-        "symbol": "symbol",
-        "exchange": "exchange",
-        "showGraph": "showGraph"
-      },
+      "propRenames": {},
       "skipProps": [
+        "symbol",
+        "exchange",
+        "showGraph",
         "id"
       ]
     },
     "abbvie-com2/components/search/searchinput/v2/searchinput": {
       "edsType": "search",
       "propRenames": {
-        "searchId": "blockId",
-        "buttonLabel": "searchPlaceholder"
+        "searchId": "index",
+        "buttonLabel": "mobilePlaceholder"
       },
       "skipProps": [
         "searchType",
@@ -453,10 +462,10 @@
       "edsType": "search-results",
       "propRenames": {
         "searchId": "blockId",
-        "noResultsText": "noResultsMessage",
-        "loadMoreLabel": "loadMoreLabel"
+        "noResultsText": "noResultsLabel"
       },
       "skipProps": [
+        "loadMoreLabel",
         "id"
       ]
     },
@@ -497,10 +506,9 @@
     },
     "abbvie-com2/components/dashboardcards/v1/dashboardcards": {
       "edsType": "cards",
-      "propRenames": {
-        "fragmentPath": "text"
-      },
+      "propRenames": {},
       "skipProps": [
+        "fragmentPath",
         "hideImage",
         "imagePreset",
         "imageModifiers",
@@ -510,7 +518,7 @@
     "abbvie-com2/components/contentfragment": {
       "edsType": "fragment",
       "propRenames": {
-        "fragmentPath": "path"
+        "fragmentPath": "reference"
       },
       "skipProps": [
         "id"
@@ -519,7 +527,7 @@
     "abbvie-com2/components/experiencefragment": {
       "edsType": "fragment",
       "propRenames": {
-        "fragmentVariationPath": "path"
+        "fragmentVariationPath": "reference"
       },
       "skipProps": [
         "id"
@@ -527,11 +535,10 @@
     },
     "abbvie-com2/components/homepage-hero-controller/v1/homepage-hero-controller": {
       "edsType": "hero-container",
-      "propRenames": {
-        "jcr:title": "title",
-        "jcr:description": "description"
-      },
+      "propRenames": {},
       "skipProps": [
+        "jcr:title",
+        "jcr:description",
         "id"
       ]
     },
@@ -554,11 +561,10 @@
     },
     "abbvie-com2/components/pdfviewer": {
       "edsType": "custom-embed",
-      "propRenames": {
-        "pdfReference": "src",
-        "title": "title"
-      },
+      "propRenames": {},
       "skipProps": [
+        "pdfReference",
+        "title",
         "id"
       ]
     }

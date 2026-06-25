@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-05-21T10:29:23.692Z"
+        cq:lastModifiedBy="inf44580@adobe.com"
+        cq:lastReplicated="{Date}2026-05-20T10:38:54.282Z"
+        cq:lastReplicated_publish="{Date}2026-05-20T10:38:54.282Z"
+        cq:lastReplicatedBy="inf44580@adobe.com"
+        cq:lastReplicatedBy_publish="inf44580@adobe.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="cta-picklist-config"
+        jcr:uuid="80de06ee-17cd-4955-924f-b2da2d3ecb71"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Style Name,Style Class]"
+        hideInNav="{Boolean}true">
+        <row_1777974036642
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="default-cta"
+            Style_x0020_Name="Default: Default"/>
+        <row_1777974044095
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="internal-cta"
+            Style_x0020_Name="Default: Internal"/>
+        <row_1777974321006
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="external-cta"
+            Style_x0020_Name="Default: External"/>
+        <row_1777974322583
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="back-cta"
+            Style_x0020_Name="Default: Back CTA"/>
+        <row_1777974325748
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="dark-theme"
+            Style_x0020_Name="Theme: Dark"/>
+        <row_1777974327493
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="light-theme"
+            Style_x0020_Name="Theme: Light"/>
+        <row_1777974755162
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="ot-sdk-show-settings"
+            Style_x0020_Name="OneTrust Cookie Button: OneTrust Cookie Button style"/>
+        <row_1779273424395
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="popup-close"
+            Style_x0020_Name="Popup: PopUp Close"/>
+        <row_1779359217871
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="popup-agree"
+            Style_x0020_Name="Popup: PopUp Agree"/>
+        <row_1779359294117
+            jcr:primaryType="nt:unstructured"
+            Style_x0020_Class="popup-disagree"
+            Style_x0020_Name="Popup: PopUp Disagree"/>
+    </jcr:content>
+</jcr:root>

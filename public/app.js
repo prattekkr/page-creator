@@ -5,6 +5,7 @@ const S = {
   config:         null,   // { defs, modelMap, filterMap, compMap }
   migrationMap:   null,   // loaded from /api/migration-map
   pathMap:        null,   // loaded from /api/path-map
+  xmlPool:        null,   // [{ type, props, children }] from last XML parse — drives pool picker
   conn:           { aemHost: '', username: '', password: '', parentPath: '', pageName: '', ueOrg: 'abbviecommercial', ok: false },
   meta:           {},     // page metadata values (jcr:title, navTitle, …)
   sections:       [],     // [{ id, type, props, blocks: [{ id, type, props, children: [] }] }]
@@ -24,6 +25,7 @@ const uid = () => `id_${++_uid}`;
 
 let _settingsTab = 'connection';
 let _styleEntries = null; // { styleId: { aemLabel, aemClass, groupLabel, edsClass, confidence } }
+let _blockStyleConfigs = {}; // { "accordion-picklist-config": [{ group, multiSelect, options:[{label,cssClass}] }] }
 let _mappingExpanded = null; // currently expanded resourceType string
 let _view = 'canvas'; // 'canvas' | 'settings' | 'help'
 
@@ -86,6 +88,9 @@ function loadCanvas() {
   if (migrRes.ok)      S.migrationMap = await migrRes.json();
   if (pathMapRes.ok)   S.pathMap      = await pathMapRes.json();
 
+  // Eagerly load block style configs so props panel can render dropdowns immediately
+  fetch('/api/block-style-configs').then(r => r.json()).then(d => { _blockStyleConfigs = d; render(); }).catch(() => {});
+
   if (hasDraft) S.sel = S.sections.length > 0 ? { secId: S.sections[0].id } : null;
   S._draftRestored = hasDraft;
   render();
@@ -108,6 +113,10 @@ function html() {
     ${S._draftRestored ? `<div class="draft-banner" id="draft-banner">
       Draft restored — ${S.sections.length} section${S.sections.length !== 1 ? 's' : ''} reloaded from your last session.
       <button class="draft-dismiss" id="btn-dismiss-draft">✕</button>
+    </div>` : ''}
+    ${S.xmlPool ? `<div class="draft-banner migr-banner">
+      XML pool ready (<strong>${S.xmlPool.length} item${S.xmlPool.length !== 1 ? 's' : ''}</strong> from <em>${x(S._xmlFileName || '')}</em>) — select any block to manually correct its content.
+      <button class="draft-dismiss" id="btn-dismiss-xml-pool">✕</button>
     </div>` : ''}
     ${S._migrResult ? `<div class="draft-banner migr-banner">
       ✓ Filled <strong>${S._migrResult.filled} block${S._migrResult.filled !== 1 ? 's' : ''}</strong> from <em>${x(S._migrResult.fileName)}</em>${S._migrResult.skipped > 0 ? ` — ${S._migrResult.skipped} skipped (no XML match)` : ''}. Review the canvas then click Create.
@@ -543,6 +552,46 @@ function propsHtml() {
     </div>
     <div class="props-scroll">
       ${formHtml || `<div class="props-empty">No editable fields for this component.</div>`}
+      ${(() => {
+        if (!(S.sel.blkId || S.sel.childId) || !S.xmlPool?.length) return '';
+        const matching = S.xmlPool
+          .map((p, i) => ({ ...p, _idx: i }))
+          .filter(p => p.type === item.type);
+        if (!matching.length) return '';
+        // Build compact prop detail rows: skip internal/style props, show up to 4 meaningful values
+        // Build compact detail rows — skip system/JCR props and false/empty values
+        const DETAIL_SKIP = new Set(['textIsRich','getAltFromDAM','getCaptionFromDAM',
+          'imageIsDecorative','enableWarnOnLeave','displayCaptionBelowImage']);
+        function poolItemDetails(pp) {
+          const rows = [];
+          for (const [k, v] of Object.entries(pp || {})) {
+            if (k.startsWith('cq:') || DETAIL_SKIP.has(k)) continue;
+            if (v === false || v === '' || v === null || v === undefined) continue;
+            const raw = typeof v === 'string' ? v.replace(/<[^>]+>/g, '').trim()
+                      : typeof v === 'boolean' ? 'true'
+                      : typeof v === 'number'  ? String(v) : '';
+            if (!raw) continue;
+            rows.push(`<span class="xml-detail-row"><em>${x(k)}</em>${x(raw.slice(0, 70))}</span>`);
+            if (rows.length >= 5) break;
+          }
+          return rows.join('');
+        }
+        return `<div class="xml-pool-panel">
+          <div class="xml-pool-header">From XML — ${matching.length} match${matching.length !== 1 ? 'es' : ''} for <em>${x(item.type)}</em></div>
+          ${matching.map((p, mi) => {
+            const preview = xmlItemPreview(p);
+            const details = poolItemDetails(p.props);
+            return `<div class="xml-pool-item">
+              <div class="xml-pool-item-top">
+                <span class="xml-pool-num">${mi + 1}</span>
+                <span class="xml-pool-preview" title="${x(preview)}">${x(preview)}</span>
+                <button class="btn btn-ghost btn-xs" data-apply-xml="${item.id}" data-xml-idx="${p._idx}">Use</button>
+              </div>
+              ${details ? `<div class="xml-pool-item-detail">${details}</div>` : ''}
+            </div>`;
+          }).join('')}
+        </div>`;
+      })()}
       ${S.sel.blkId && !S.sel.childId ? (() => {
         const allowedIds = S.config?.filterMap?.[item.type] || [];
         const addItemBtn = allowedIds.length > 0
@@ -647,11 +696,27 @@ function fieldHtml(f, val, itemId) {
         <input type="text" ${attr} value="${x(String(val))}" placeholder="/content/…"/>${hint}
       </div>`;
 
-    case 'ngaem:dynamic-picklist':
-      return `<div class="field">
-        <label>${x(label)}</label>
-        <input type="text" ${attr} value="${x(String(val))}" placeholder="CSS class name"/>${hint}
-      </div>`;
+    case 'ngaem:dynamic-picklist': {
+      const styleGroups = _blockStyleConfigs?.[f.sourceAEMNodeName] || null;
+      if (!styleGroups?.length) {
+        return `<div class="field">
+          <label>${x(label)}</label>
+          <input type="text" ${attr} value="${x(String(val))}" placeholder="CSS class name"/>${hint}
+        </div>`;
+      }
+      const currentClasses = new Set((val || '').split(',').map(s => s.trim()).filter(Boolean));
+      const groupWidgets = styleGroups.map(g => {
+        if (g.multiSelect) {
+          const checks = g.options.map(opt => `<label class="style-check-label"><input type="checkbox" class="style-cb" data-style-item="${itemId}" data-style-prop="${x(f.name)}" value="${x(opt.cssClass)}" ${currentClasses.has(opt.cssClass) ? 'checked' : ''}> ${x(opt.label)}</label>`).join('');
+          return `<div class="style-group-row"><span class="style-group-label">${x(g.group)}</span><div class="style-checks">${checks}</div></div>`;
+        } else {
+          const sel = g.options.find(o => currentClasses.has(o.cssClass))?.cssClass || '';
+          const opts = [`<option value="">—</option>`, ...g.options.map(o => `<option value="${x(o.cssClass)}" ${sel === o.cssClass ? 'selected' : ''}>${x(o.label)}</option>`)].join('');
+          return `<div class="style-group-row"><span class="style-group-label">${x(g.group)}</span><select class="field-input style-group-select" data-style-item="${itemId}" data-style-prop="${x(f.name)}">${opts}</select></div>`;
+        }
+      }).join('');
+      return `<div class="field"><label>${x(label)}</label><div class="style-groups-wrapper">${groupWidgets}</div>${hint}</div>`;
+    }
 
     default:
       return `<div class="field">
@@ -1420,17 +1485,39 @@ function blockPickerModalHtml() {
     groups = getPaletteGroups().filter(g => g.label !== 'Sections');
   }
 
-  const groupsHtml = groups.map(g => {
-    const items = g.ids.map(id => {
-      const comp = S.config?.compMap?.[id];
-      if (!comp) return '';
-      return `<div class="picker-item" data-pick="${id}">
-        <span class="pi2-icon">${COMP_ICONS[id] || '□'}</span>
-        <span class="pi2-label">${x(comp.title || id)}</span>
-      </div>`;
-    }).join('');
+  // Favorites: most-used blocks pinned at top; Default Content pushed to bottom
+  const FAVORITES = ['custom-title','eyebrow-text','text-container','custom-image',
+    'cta','linklist','accordion','hero-container','separator','story-card','carousel','quote'];
+
+  // Reorder: Favorites first, then non-Default groups, Default Content last
+  const defaultGroup  = groups.find(g => g.label === 'Default Content');
+  const otherGroups   = groups.filter(g => g.label !== 'Default Content');
+  const orderedGroups = [
+    { label: 'Favorites', ids: FAVORITES },
+    ...otherGroups,
+    ...(defaultGroup ? [defaultGroup] : []),
+  ];
+
+  function pickerItem(id) {
+    const comp = S.config?.compMap?.[id];
+    if (!comp) return '';
+    return `<div class="picker-item" data-pick="${id}">
+      <span class="pi2-icon">${COMP_ICONS[id] || '□'}</span>
+      <span class="pi2-label">${x(comp.title || id)}</span>
+    </div>`;
+  }
+
+  const groupsHtml = orderedGroups.map(g => {
+    const items = g.ids.map(pickerItem).join('');
     if (!items.trim()) return '';
-    return `<div class="picker-group-title">${g.label}</div>
+    const isFav = g.label === 'Favorites';
+    const isDefault = g.label === 'Default Content';
+    const labelStyle = isFav
+      ? 'color:#f59e0b;border-color:#fde68a'
+      : isDefault
+        ? 'color:var(--text-secondary);opacity:.7'
+        : '';
+    return `<div class="picker-group-title" style="${labelStyle}">${isFav ? '★ ' : ''}${g.label}</div>
       <div class="picker-grid">${items}</div>`;
   }).join('');
 
@@ -1596,39 +1683,134 @@ async function doFillFromXml() {
       return;
     }
 
-    // Build pool: EDS block type → [{ props, children }, ...]  (type already mapped by server)
-    const pool = {};
-    for (const comp of (data.ordered || [])) {
-      (pool[comp.type] = pool[comp.type] || []).push({ props: comp.props, children: comp.children || [] });
-    }
-
-    // Walk canvas and fill blocks by type (sequential)
-    let filled = 0, skipped = 0;
-    function fillBlock(canvasBlk) {
-      const queue = pool[canvasBlk.type];
-      if (!queue?.length) { skipped++; return; }
-      const src = queue.shift();
-      Object.assign(canvasBlk.props, src.props);
-      if (src.children.length > 0) {
-        canvasBlk.children = src.children.map(ch => ({ ...ch, id: uid(), children: [] }));
-      }
-      filled++;
-    }
-    for (const sec of S.sections) {
-      for (const blk of (sec.blocks || [])) {
-        fillBlock(blk);
-        for (const child of (blk.children || [])) fillBlock(child);
-      }
-    }
-
     if (data.meta) Object.assign(S.meta, data.meta);
-
+    // Store pool for manual corrections, then auto-fill immediately
+    S.xmlPool      = data.ordered || [];
+    S._xmlFileName = file.name;
     S.modal = null;
+    const { filled, skipped } = fillAllFromPool(/* silent */ true);
     S._migrResult = { filled, skipped, fileName: file.name };
     render();
   } catch (e) {
     if (alertEl) alertEl.innerHTML = `<div class="alert alert-error">${x(e.message)}</div>`;
   }
+}
+
+// ── Fill all canvas blocks from XML pool (auto sequential) ───────────────────
+// Returns { filled, skipped }. Pass silent=true to keep S.xmlPool intact.
+function fillAllFromPool(silent = false) {
+  if (!S.xmlPool?.length) return { filled: 0, skipped: 0 };
+
+  const pool = {};
+  for (const comp of S.xmlPool) {
+    (pool[comp.type] = pool[comp.type] || []).push({ props: comp.props, children: comp.children || [] });
+  }
+
+  const cursor = {};
+  let filled = 0, skipped = 0;
+
+  function fillBlock(canvasBlk) {
+    const arr = pool[canvasBlk.type];
+    if (arr?.length) {
+      const rawSlot = canvasBlk.props?.xmlSlot;
+      let src = null;
+      if (rawSlot !== undefined && rawSlot !== null && rawSlot !== '') {
+        const slotIdx = parseInt(rawSlot, 10);
+        if (!isNaN(slotIdx) && slotIdx >= 0 && slotIdx < arr.length) src = arr[slotIdx];
+      } else {
+        if (cursor[canvasBlk.type] === undefined) cursor[canvasBlk.type] = 0;
+        const idx = cursor[canvasBlk.type]++;
+        if (idx < arr.length) src = arr[idx];
+      }
+      if (src) {
+        Object.assign(canvasBlk.props, { ...src.props }); // spread so pool props stay immutable
+        if (src.children.length > 0) {
+          canvasBlk.children = src.children.map(ch => ({ ...ch, props: { ...ch.props }, id: uid(), children: [] }));
+          filled++;
+          return;
+        }
+        filled++;
+      } else {
+        skipped++;
+      }
+    }
+    for (const child of (canvasBlk.children || [])) fillBlock(child);
+  }
+
+  for (const sec of S.sections) {
+    for (const blk of (sec.blocks || [])) fillBlock(blk);
+  }
+
+  if (!silent) {
+    S._migrResult = { filled, skipped, fileName: S._xmlFileName || '' };
+    S.xmlPool     = null;
+    render();
+  }
+  return { filled, skipped };
+}
+
+// ── Generate short text preview for an XML pool item ─────────────────────────
+function xmlItemPreview(item) {
+  const p = item.props || {};
+  const strip = v => String(v).replace(/<[^>]+>/g, '').trim();
+
+  // 1. Priority content fields (order matters — most descriptive first)
+  for (const k of ['title','summary','linkText','heading','name']) {
+    if (p[k] && typeof p[k] === 'string') return strip(p[k]).slice(0, 60);
+  }
+  // 2. Rich text (strip HTML)
+  if (p.text) { const t = strip(p.text); if (t) return t.slice(0, 60); }
+  // 3. Media / link fields
+  if (p.imageAlt)  return '🖼 ' + strip(p.imageAlt).slice(0, 55);
+  if (p.image)     return '🖼 ' + p.image.split('/').pop().slice(0, 55);
+  for (const k of ['link','path','page','fileReference','src']) {
+    if (p[k] && typeof p[k] === 'string') return '🔗 ' + p[k].slice(0, 55);
+  }
+  // 4. Check child blocks for text (e.g. text-container → text-container-text)
+  for (const ch of (item.children || [])) {
+    const cp = ch.props || {};
+    for (const k of ['text','title','summary','linkText']) {
+      if (cp[k]) { const t = strip(cp[k]); if (t) return t.slice(0, 60); }
+    }
+  }
+  // 5. CSS classes as fallback — meaningful for structural/decorator blocks (separator, divider)
+  for (const k of Object.keys(p)) {
+    if ((k.startsWith('classes_') || k === 'classes') && p[k] && typeof p[k] === 'string')
+      return p[k].slice(0, 55);
+  }
+  // 6. Any non-system, non-boolean, non-empty string prop
+  for (const [k, v] of Object.entries(p)) {
+    if (k.startsWith('cq:') || k.startsWith('style_') || typeof v !== 'string' || !v.trim()) continue;
+    return `${k}: ${strip(v).slice(0, 50)}`;
+  }
+  const childCount = (item.children || []).length;
+  if (childCount) return `${childCount} item${childCount > 1 ? 's' : ''}`;
+  return `[${item.type}]`;
+}
+
+// ── Apply a specific XML pool item to a canvas block ─────────────────────────
+function applyXmlItem(itemId, poolIdx) {
+  const src = S.xmlPool?.[poolIdx];
+  if (!src) return;
+
+  let target = null;
+  outer: for (const sec of S.sections) {
+    if (sec.id === itemId) { target = sec; break; }
+    for (const blk of (sec.blocks || [])) {
+      if (blk.id === itemId) { target = blk; break outer; }
+      for (const ch of (blk.children || [])) {
+        if (ch.id === itemId) { target = ch; break outer; }
+      }
+    }
+  }
+  if (!target) return;
+
+  Object.assign(target.props, { ...src.props });
+  if ((src.children || []).length > 0) {
+    target.children = src.children.map(ch => ({ ...ch, props: { ...ch.props }, id: uid(), children: [] }));
+  }
+  saveCanvas();
+  render();
 }
 
 // ── Build canvas from XML ─────────────────────────────────────────────────────
@@ -2133,13 +2315,58 @@ function bind() {
     });
   });
 
-  // Block picker search
+  // Block picker — auto-focus search on open
+  const pickerSearch = document.getElementById('picker-search');
+  if (pickerSearch) pickerSearch.focus();
+
+  // Block picker search — filter items, collapse empty groups, show/hide Favorites
   on('picker-search', 'input', () => {
-    const q = document.getElementById('picker-search')?.value.toLowerCase() || '';
-    qAll('.picker-item').forEach(el => {
-      const label = el.querySelector('.pi2-label')?.textContent.toLowerCase() || '';
-      el.style.display = label.includes(q) ? '' : 'none';
+    const q = (document.getElementById('picker-search')?.value || '').toLowerCase().trim();
+    const pickerBody = document.getElementById('picker-body');
+    if (!pickerBody) return;
+
+    // Remove any previous "no results" message
+    const existing = pickerBody.querySelector('.picker-no-results');
+    if (existing) existing.remove();
+
+    let totalVisible = 0;
+
+    // Walk group title + following picker-grid pairs
+    const titles = pickerBody.querySelectorAll('.picker-group-title');
+    titles.forEach(titleEl => {
+      const grid = titleEl.nextElementSibling;
+      if (!grid || !grid.classList.contains('picker-grid')) return;
+
+      const isFavorites = titleEl.textContent.includes('Favorites');
+
+      // When searching, hide Favorites group entirely (results come from other groups)
+      if (q && isFavorites) {
+        titleEl.style.display = 'none';
+        grid.style.display    = 'none';
+        return;
+      }
+
+      let groupVisible = 0;
+      grid.querySelectorAll('.picker-item').forEach(el => {
+        const label = el.querySelector('.pi2-label')?.textContent.toLowerCase() || '';
+        const show  = !q || label.includes(q);
+        el.style.display = show ? '' : 'none';
+        if (show) groupVisible++;
+      });
+
+      const show = !q || groupVisible > 0;
+      titleEl.style.display = show ? '' : 'none';
+      grid.style.display    = show ? '' : 'none';
+      totalVisible += groupVisible;
     });
+
+    // No results message
+    if (q && totalVisible === 0) {
+      const msg = document.createElement('div');
+      msg.className = 'picker-no-results';
+      msg.textContent = `No components match "${q}"`;
+      pickerBody.appendChild(msg);
+    }
   });
 
   // Props panel — live field sync
@@ -2147,6 +2374,22 @@ function bind() {
     const ev = el.type === 'checkbox' ? 'change' : 'input';
     el.addEventListener(ev, () => syncProp(el));
   });
+
+  // Style group dropdowns and checkboxes
+  qAll('select[data-style-item][data-style-prop]').forEach(el =>
+    el.addEventListener('change', () => syncStyleField(el)));
+  qAll('input.style-cb[data-style-item][data-style-prop]').forEach(el =>
+    el.addEventListener('change', () => syncStyleField(el)));
+
+  // XML pool picker — apply a specific XML item to the selected canvas block
+  qAll('[data-apply-xml]').forEach(el => {
+    el.addEventListener('click', () => {
+      const itemId  = el.dataset.applyXml;
+      const poolIdx = parseInt(el.dataset.xmlIdx, 10);
+      if (!isNaN(poolIdx)) applyXmlItem(itemId, poolIdx);
+    });
+  });
+  on('btn-dismiss-xml-pool','click', () => { S.xmlPool = null; render(); });
 
   // Save-as-template
   qAll('[data-save-tpl]').forEach(el =>
@@ -2249,6 +2492,26 @@ function doPick(compId) {
   }
   S.modal = null; S.pickCtx = null;
   render();
+}
+
+function syncStyleField(el) {
+  const itemId   = el.dataset.styleItem;
+  const propName = el.dataset.styleProp;
+  const vals = [];
+  qAll(`select[data-style-item="${itemId}"][data-style-prop="${propName}"]`)
+    .forEach(s => { if (s.value) vals.push(s.value); });
+  qAll(`input.style-cb[data-style-item="${itemId}"][data-style-prop="${propName}"]:checked`)
+    .forEach(cb => vals.push(cb.value));
+  const combined = vals.join(',');
+  for (const sec of S.sections) {
+    if (sec.id === itemId) { sec.props[propName] = combined; saveCanvas(); render(); return; }
+    for (const blk of sec.blocks || []) {
+      if (blk.id === itemId) { blk.props[propName] = combined; saveCanvas(); render(); return; }
+      for (const ch of blk.children || []) {
+        if (ch.id === itemId) { ch.props[propName] = combined; saveCanvas(); render(); return; }
+      }
+    }
+  }
 }
 
 function syncProp(el) {

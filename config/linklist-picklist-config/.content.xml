@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:lastModified="{Date}2026-05-11T06:29:42.724Z"
+        cq:lastModifiedBy="pratteks@adobe.com"
+        cq:lastReplicationAction_publish="Activate"
+        cq:template="/libs/core/franklin/templates/spreadsheet"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus2,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="linklist-picklist-config"
+        jcr:uuid="8c7ade35-5bfb-4e32-a922-837d444d5bbf"
+        sling:resourceType="core/franklin/components/spreadsheet/v1/spreadsheet"
+        columns="[Style Name,Style Class]"
+        hideInNav="{Boolean}true">
+        <row_1777881153807
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-standard"
+            Style_x0020_Class="list-standard"
+            Style_x0020_Name="Variant: Standard"/>
+        <row_1777881171903
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-dashboard"
+            Style_x0020_Class="list-dashboard"
+            Style_x0020_Name="Variant: Rows With Arrows"/>
+        <row_1777881175403
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-icons"
+            Style_x0020_Class="list-icons"
+            Style_x0020_Name="Variant: Icons"/>
+        <row_1777881179119
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-footer-primary"
+            Style_x0020_Class="list-footer-primary"
+            Style_x0020_Name="Variant: Footer - primary"/>
+        <row_1777881183066
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-footer-legal"
+            Style_x0020_Class="list-footer-legal"
+            Style_x0020_Name="Variant: Footer - legal"/>
+        <row_1777881188223
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-dashboard-publications"
+            Style_x0020_Class="list-dashboard-publications"
+            Style_x0020_Name="Variant: Detailed List"/>
+        <row_1777881191623
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="list-carousel"
+            Style_x0020_Class="list-carousel"
+            Style_x0020_Name="Variant: Carousel"/>
+        <row_1777881366885
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="single-column"
+            Style_x0020_Class="single-column"
+            Style_x0020_Name="Columns: Single column"/>
+        <row_1777881380076
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="two-columns--no-stack"
+            Style_x0020_Class="two-columns--no-stack"
+            Style_x0020_Name="Columns: Two columns no stack on mobile"/>
+        <row_1777881403332
+            jcr:primaryType="nt:unstructured"
+            _x0025_20Style_x0020_Class="two-columns--stack"
+            Style_x0020_Class="two-columns--stack"
+            Style_x0020_Name="Columns: Two columns stack on mobile"/>
+    </jcr:content>
+</jcr:root>

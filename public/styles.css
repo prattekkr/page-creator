@@ -49,6 +49,21 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .draft-dismiss { background: none; border: none; cursor: pointer; color: #92400e; font-size: .9rem; padding: 0 4px; line-height: 1; margin-left: auto; }
 .draft-dismiss:hover { color: #713f12; }
 
+/* XML pool picker in props panel */
+.xml-pool-panel { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
+.xml-pool-header { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text-secondary); margin-bottom: 8px; }
+.xml-pool-header em { font-style: normal; color: var(--text-primary); }
+.xml-pool-item { display: flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 4px; background: var(--bg-secondary); }
+.xml-pool-num { flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%; background: var(--border); font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
+.xml-pool-preview { flex: 1; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text-primary); min-width: 0; }
+.xml-pool-item { flex-direction: column; align-items: stretch; }
+.xml-pool-item-top { display: flex; align-items: center; gap: 6px; }
+.xml-pool-item-detail { margin-top: 4px; padding: 4px 6px; background: var(--bg-tertiary, var(--bg-secondary)); border-radius: 4px; display: flex; flex-direction: column; gap: 2px; }
+.xml-detail-row { font-size: 10px; color: var(--text-secondary); display: flex; gap: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.xml-detail-row em { font-style: normal; font-weight: 600; color: var(--text-secondary); flex-shrink: 0; }
+.xml-detail-row em::after { content: ':'; margin-right: 2px; }
+.btn-xs { font-size: 11px; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+
 .workspace {
   flex: 1;
   display: grid;
@@ -456,6 +471,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .picker-item:hover { border-color: var(--brand); background: #eef4ff; }
 .picker-item .pi2-icon { font-size: 1.2rem; }
 .picker-item .pi2-label { font-size: .72rem; font-weight: 600; line-height: 1.2; }
+.picker-no-results { padding: 24px 0; text-align: center; color: var(--text-secondary); font-size: .85rem; }
 
 /* Alert */
 .alert { padding: 9px 12px; border-radius: 5px; font-size: .82rem; margin-bottom: 12px; }
@@ -851,3 +867,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
   color: #374151;
   line-height: 1.6;
 }
+
+/* ── Style group picker (ngaem:dynamic-picklist) ──────────────────────────── */
+.style-groups-wrapper { display: flex; flex-direction: column; gap: 5px; }
+.style-group-row      { display: flex; align-items: flex-start; gap: 8px; }
+.style-group-label    { font-size: 10px; font-weight: 600; color: var(--text-secondary);
+                        width: 88px; min-width: 88px; padding-top: 4px; text-transform: capitalize; }
+.style-group-select   { flex: 1; font-size: 11px; }
+.style-checks         { display: flex; flex-wrap: wrap; gap: 4px 10px; flex: 1; }
+.style-check-label    { font-size: 11px; display: flex; align-items: center; gap: 3px; cursor: pointer; }
