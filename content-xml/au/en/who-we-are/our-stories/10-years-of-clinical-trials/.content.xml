@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-12-10T10:11:33.149-05:00"
+        cq:lastModifiedBy="singarx"
+        cq:tags="[abbvie-com-2:categories/science-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-12-10T10:11:33.133-05:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="10 years of clinical trials"
+        jcr:uuid="493d9d25-7a11-41bb-87d2-1025727ba3b4"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="Over the past 10 years, the clinical trials landscape has undergone a significant transformation. AbbVie A&amp;NZ Director of Clinical Operations, Shruti Chaturvedi, shares her experience of working to find solutions to some of the world’s most difficult-to-treat health conditions. She reflects on how advances in technology have changed the way AbbVie is able to bridge the gap between scientific discovery and real-world impact."
+        fileReference="/content/dam/abbvie-com2/au/images/10-years-clinical-trials-banner.jpg"
+        hideInNav="true"
+        navTitle="10 years of clinical trials"
+        pageTitle="10 years of clinical trials"
+        publishDate="{Date}2023-03-01T12:24:00.000+05:30"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="10 years of clinical trials">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-08-12T02:56:27.535-04:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/header/australia-header-english"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2025-08-12T06:16:19.446-04:00"
+                        jcr:lastModifiedBy="nandivx5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/au/images/10-years-clinical-trials-banner.jpg"
+                        dmPresetType="imagePreset"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787460,1659997787459]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2025-08-12T03:00:13.351-04:00"
+                                jcr:lastModifiedBy="nandivx5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="10 years of clinical trials"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-08-12T03:00:38.711-04:00"
+                                jcr:lastModifiedBy="nandivx5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Over the past 10 years, the clinical trials landscape has undergone a significant transformation. AbbVie A&amp;amp;NZ Director of Clinical Operations, Shruti Chaturvedi, shares her experience of working to find solutions to some of the world’s most difficult-to-treat health conditions. She reflects on how advances in technology have changed the way AbbVie is able to bridge the gap between scientific discovery and real-world impact.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-08-12T03:05:42.833-04:00"
+                                    jcr:lastModifiedBy="nandivx5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Working at AbbVie, I have had the privilege of witnessing first-hand the life-changing impact that clinical trials can have for our patients. In clinical operations, we are focused on finding solutions to some of the world’s most difficult-to-treat health conditions. We firmly believe in the power of science and its potential to make a real difference in patient care.&lt;/p>&#xd;&#xa;&lt;p>Our investment in clinical trials is a testament to our dedication to advancing medical knowledge and finding new treatments that address unmet needs. We have established a large geo-footprint with clinical trials in 42 participating countries, showcasing our global presence and our commitment to improving healthcare on a global scale.&lt;/p>&#xd;&#xa;&lt;p>We understand the path to medical breakthroughs lies in collecting as much data as we can and creating avenues for our patients to access transformative treatments. To achieve this, our clinical development operations team has set clear goals centred around patient-centricity, agility and innovation.&lt;/p>&#xd;&#xa;&lt;p>To put these goals into action, we have worked hard to build trust with our stakeholders including patients, healthcare professionals and regulatory bodies. By fostering strong relationships with these key partners, we can collaborate effectively and ensure that our clinal trials are designed to meet the needs of our patients and the broader healthcare community.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>In addition to building trust, we embrace agility in our decision-making processes. This enables us to expedite trials and advance our pipeline, accelerating the availability of new therapies for patients in need. We recognise that time is of the essence and by making agile decisions we can bring promising treatments to market faster, improving health outcomes for patients around the world.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Central to our approach is the evaluation of risks and benefits. We understand the importance of striking a delicate balance to ensure the safety and well-being of trial participants, while also advancing medical knowledge. Supporting healthcare professionals in making informed decisions and providing them with access to up-to-date information is vital in this process. By equipping healthcare professionals with the tools and information they need, we empower them to deliver the best possible care to their patients.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>In the past decade the clinical trial landscape has undergone significant transformation. The pace of this change was accelerated with the arrival of the global COVID-19 pandemic, which forced us to be more efficient, to pivot and adapt.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Just the sheer scale at which we’re now able to operate tells a story in itself. It makes me incredibly proud when I reflect on how far we’ve come and how much we’ve achieved as an industry, and as an organisation. But there’s always so much more to do and technology is helping us get there.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Up until relatively recently, trial participants would need to travel to large clinical sites such as hospitals and spend the entire day undergoing tests, seeing doctors and nurses, and having their vitals taken. However, with the advent of teletrials this model has been transformed.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Teletrials allow us to leverage remote technology to monitor patients and collect data, eliminating the need for frequent visits to clinical sites. This breakthrough has not only increased access to clinical trials, but also enhanced patient participation. By removing geographical barriers, teletrials have broadened our reach and allowed us to include individuals from remote and rural areas who would have otherwise been unable to participate. This shift has had a profound impact on patient diversity and inclusion within our trials. It has also created pathways for healthcare professionals working outside of metropolitan areas to be involved in clinical trials, sometimes for the first time. By embracing technology and innovative approaches, we can tap into a wider pool of health professionals, fostering diversity and enriching the expertise within our trials.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Technologies such as machine learning have improved our infrastructure and quality, as well as transparency, with trials now being registered and tracked more effectively than ever before.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Looking ahead to the next 10 years, our focus will continue to be on better representation of patients to support more equitable, diverse and inclusive trials. Data sharing will be a key aspect to assist in advancing and informing trial design for the benefit of our patients.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>As technology continues to evolve, we anticipate further momentum in areas such as artificial intelligence, remote monitoring and data analytics. These advancements will enable us to enhance governance, reporting and access to critical information, ultimately improving the efficiency and effectiveness of our trials.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>I am inspired by the young and aspiring talent entering the field, bringing fresh perspectives and unwavering dedication to carry on the amazing work of those gone before them. Together, we can drive innovation, transform lives and contribute to improving health outcomes for future generations.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;a>&amp;nbsp;&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-08-12T02:56:59.935-04:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/footer/australia-footer-english"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

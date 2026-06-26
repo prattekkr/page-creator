@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-09T06:21:12.104-04:00"
+        cq:lastModifiedBy="trangdx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-11-22T08:41:32.487-05:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Διαφάνεια"
+        jcr:uuid="d500bed4-efe8-4b39-a4fe-4fa4216997fe"
+        sling:alias="transparency"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Μάθε περισσότερα"
+        ctaText="Μάθε περισσότερα"
+        eyebrow="Ποιοι είμαστε"
+        fileReference="/content/dam/abbvie-com2/images-common/ls/Man sitting in office.jpg"
+        navTitle="Διαφάνεια"
+        pageTitle="Διαφάνεια"
+        title="Διαφάνεια">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-09-18T09:58:54.138-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/header/greece-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-11-22T08:33:34.703-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images-common/ls/Man sitting in office.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-07-28T05:39:25.042-04:00"
+                                jcr:lastModifiedBy="GEORGIX2"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Διαφάνεια"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                        </container3>
+                        <title
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2024-07-28T05:44:11.964-04:00"
+                            jcr:createdBy="GEORGIX2"
+                            jcr:lastModified="{Date}2024-07-28T05:52:40.127-04:00"
+                            jcr:lastModifiedBy="GEORGIX2"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Δημοσιοποίηση Παροχών προς Επαγγελματίες Υγείας (Ε.Υ.) και Επιστημονικούς Υγειονομικούς Φορείς (Ε.Υ.Φ.) της AbbVie Φαρμακευτική Α.Ε. (Νόμος 4316/2014, Αρθ. 66 παρ. 7α)"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-07-28T05:47:34.986-04:00"
+                            jcr:createdBy="GEORGIX2"
+                            jcr:lastModified="{Date}2026-06-09T06:21:12.099-04:00"
+                            jcr:lastModifiedBy="trangdx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p style=&quot;text-align: left;&quot;>H AbbVie Φαρμακευτική Α.Ε., εναρμονιζόμενη πλήρως με τις εθνικές νομοθετικές ρυθμίσεις (Ν.4316/2014, άρθρο 66, παρ.7α, όπως δημοσιεύθηκε στο ΦΕΚ Α270/24.12.2014), δημοσιοποιεί στην παρούσα ιστοσελίδα τις παροχές της προς Επαγγελματίες Υγείας (Ε.Υ.) και Επιστημονικούς Υγειονομικούς Φορείς (Ε.Υ.Φ.) για το ημερολογιακό έτος 2020. Η δημοσιοποίηση αποσκοπεί στην ενίσχυση της διαφάνειας στις σχέσεις των φαρμακευτικών εταιρειών με τους Ε.Υ. και τους Ε.Υ.Φ., καθώς και στην προάσπιση του δικαιώματος των ασθενών να γνωρίζουν τη σχέση των φαρμακευτικών εταιρειών με την επιστημονική κοινότητα.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>Η μεθοδολογία που έχει ακολουθηθεί για τη συγκέντρωση και δημοσιοποίηση των παροχών προς Ε.Υ. και Ε.Υ.Φ. αναλύεται στο σχετικό Μεθοδολογικό Σημείωμα.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>Σύμφωνα με το άρθρο 66 παρ. 7α του Νόμου 4316/2014, οι φαρμακευτικές εταιρείες στην Ελλάδα υποχρεούνται να δημοσιοποιούν σε ατομική βάση ανά αποδέκτη κάθε παροχή που χορηγούν προς Ε.Υ. και Ε.Υ.Φ.. Επιπροσθέτως, ο Κώδικας Δημοσιοποίησης της Ευρωπαϊκής Ομοσπονδίας Φαρμακευτικών Βιομηχανιών και Συνδέσμων (EFPIA) και ο Κώδικας Δημοσιοποίησης του Συνδέσμου Φαρμακευτικών Επιχειρήσεων Ελλάδος (ΣΦΕΕ) απαιτούν από τα μέλη τους να δημοσιοποιούν τις παροχές προς Ε.Υ. και Ε.Υ.Φ..&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>Ρητά σημειώνουμε ότι η παρούσα δημοσιοποίηση διαμορφώθηκε μετά την έκδοση των υπ’ αρ. 5/2016 και 2/2017 Γνωμοδοτήσεων της Αρχής Προστασίας Δεδομένων Προσωπικού Χαρακτήρα.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: left;&quot;>Οι Ε.Υ. που έλαβαν παροχές από την AbbVie Φαρμακευτική Α.Ε. κατά τη διάρκεια του έτους 2017, και οι οποίες δημοσιεύονται βάσει του Νόμου 4316/2014, έχουν δικαίωμα να ζητήσουν από την AbbVie Φαρμακευτική Α.Ε. να έχουν πρόσβαση στις σχετικές με αυτούς πληροφορίες, καθώς και να αιτηθούν τη διόρθωση σε περίπτωση δημοσιοποίησης ανακριβών δεδομένων.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/documents/2022%20%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%99%CE%9F%CE%A0%CE%9F%CE%99%CE%97%CE%A3%CE%97%20%CE%A0%CE%91%CE%A1%CE%9F%CE%A7%CE%A9%CE%9D%20%CE%A0%CE%A1%CE%9F%CE%A3%20%CE%95%CE%9D%CE%A9%CE%A3%CE%95%CE%99%CE%A3%20%CE%91%CE%A3%CE%98%CE%95%CE%9D%CE%A9%CE%9D.pdf&quot;>2022 AbbVie ΔΗΜΟΣΙΟΠΟΙΗΣΗ ΠΑΡΟΧΩΝ ΠΡΟΣ Ε.Υ. &amp;amp; Ε.Υ.Φ.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/documents/2022%20AbbVie%20Greece_Methodology%20Note%20for%20POs_GR%20-En.pdf&quot;>2022 AbbVie ΜΕΘΟΔΟΛΟΓΙΚΟ ΣΗΜΕΙΩΜΑ ΔΗΜΟΣΙΟΠΟΙΗΣΗΣ ΠΑΡΟΧΩΝ ΠΡΟΣ Ε.Υ. &amp;amp; Ε.Υ.Φ.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/disclosures/greece/2023-abbvie-greece-efpia-report.pdf&quot;>2023 AbbVie ΔΗΜΟΣΙΟΠΟΙΗΣΗ ΠΑΡΟΧΩΝ ΠΡΟΣ Ε.Υ. &amp;amp; Ε.Υ.Φ.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/disclosures/greece/2023-abbvie-greece-supporting-document.pdf&quot;>2023 AbbVie ΜΕΘΟΔΟΛΟΓΙΚΟ ΣΗΜΕΙΩΜΑ ΔΗΜΟΣΙΟΠΟΙΗΣΗΣ ΠΑΡΟΧΩΝ ΠΡΟΣ Ε.Υ. &amp;amp; Ε.Υ.Φ.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/disclosures/greece/2024-abbvie-greece-efpia-report.pdf&quot;>2024 AbbVie ΔΗΜΟΣΙΟΠΟΙΗΣΗ ΠΑΡΟΧΩΝ ΠΡΟΣ Ε.Υ. &amp;amp; Ε.Υ.Φ.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-com2/pdfs/disclosures/greece/2024-abbvie-greece-supporting-document.pdf&quot;>2024 AbbVie ΜΕΘΟΔΟΛΟΓΙΚΟ ΣΗΜΕΙΩΜΑ ΔΗΜΟΣΙΟΠΟΙΗΣΗΣ ΠΑΡΟΧΩΝ ΠΡΟΣ Ε.Υ. &amp;amp; Ε.Υ.Φ.&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <title_1972080166
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-07-28T05:52:52.148-04:00"
+                            jcr:createdBy="GEORGIX2"
+                            jcr:lastModified="{Date}2024-07-28T05:53:27.379-04:00"
+                            jcr:lastModifiedBy="GEORGIX2"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Δημοσιοποίηση Παροχών προς Ενώσεις Ασθενών της AbbVie Φαρμακευτικής Α.Ε. "
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <text_1798774078
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-07-28T05:53:34.756-04:00"
+                            jcr:createdBy="GEORGIX2"
+                            jcr:lastModified="{Date}2026-06-09T06:19:25.858-04:00"
+                            jcr:lastModifiedBy="trangdx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>H AbbVie Φαρμακευτική Α.Ε., εναρμονιζόμενη πλήρως με τον Κώδικα Δημοσιοποίησης της Ευρωπαϊκής Ομοσπονδίας Φαρμακευτικών Βιομηχανιών και Συνδέσμων (EFPIA) και τον Κώδικα Δημοσιοποίησης του Συνδέσμου Φαρμακευτικών Επιχειρήσεων Ελλάδος (ΣΦΕΕ), που απαιτούν από τα μέλη τους να δημοσιοποιούν τις παροχές προς Ενώσεις Ασθενών (Ε.Α.), δημοσιοποιεί στην παρούσα ιστοσελίδα τις παροχές της προς Ε.Α. Η δημοσιοποίηση αποσκοπεί στην ενίσχυση της διαφάνειας στις σχέσεις των φαρμακευτικών εταιρειών με τις Ε.Α., καθώς και στην προάσπιση του δικαιώματος των ασθενών να γνωρίζουν τη σχέση των φαρμακευτικών εταιρειών με τις Ε.Α.&lt;br>&#xd;&#xa;Η μεθοδολογία που έχει ακολουθηθεί για τη συγκέντρωση και δημοσιοποίηση των παροχών προς Ε.Α. αναλύεται στο σχετικό Μεθοδολογικό Σημείωμα.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/transparency/2023%20AbbVie%20Greece_Methodology%20Note%20for%20POs_GR-ENG.pdf&quot;>2023 AbbVie ΜΕΘΟΔΟΛΟΓΙΚΟ ΣΗΜΕΙΩΜΑ ΔΗΜΟΣΙΟΠΟΙΗΣΗΣ ΠΑΡΟΧΩΝ ΠΡΟΣ ΕΝΩΣΕΙΣ ΑΣΘΕΝΩΝ&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/transparency/2023%20%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%99%CE%9F%CE%A0%CE%9F%CE%99%CE%97%CE%A3%CE%97%20%CE%A0%CE%91%CE%A1%CE%9F%CE%A7%CE%A9%CE%9D%20%CE%A0%CE%A1%CE%9F%CE%A3%20%CE%95%CE%9D%CE%A9%CE%A3%CE%95%CE%99%CE%A3%20%CE%91%CE%A3%CE%98%CE%95%CE%9D%CE%A9%CE%9D.pdf&quot;>2023 AbbVie ΔΗΜΟΣΙΟΠΟΙΗΣΗ ΠΑΡΟΧΩΝ ΠΡΟΣ ΕΝΩΣΕΙΣ ΑΣΘΕΝΩΝ&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/transparency/2024%20AbbVie%20Greece_Methodology%20Note%20for%20POs_GR%20-%20ENG.pdf&quot; target=&quot;_blank&quot;>2024 AbbVie ΜΕΘΟΔΟΛΟΓΙΚΟ ΣΗΜΕΙΩΜΑ ΔΗΜΟΣΙΟΠΟΙΗΣΗΣ ΠΑΡΟΧΩΝ ΠΡΟΣ ΕΝΩΣΕΙΣ ΑΣΘΕΝΩΝ&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/transparency/2024%20%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%99%CE%9F%CE%A0%CE%9F%CE%99%CE%97%CE%A3%CE%97%20%CE%A0%CE%91%CE%A1%CE%9F%CE%A7%CE%A9%CE%9D%20%CE%A0%CE%A1%CE%9F%CE%A3%20%CE%95%CE%9D%CE%A9%CE%A3%CE%95%CE%99%CE%A3%20%CE%91%CE%A3%CE%98%CE%95%CE%9D%CE%A9%CE%9D.pdf&quot; target=&quot;_blank&quot;>2024 AbbVie ΔΗΜΟΣΙΟΠΟΙΗΣΗ ΠΑΡΟΧΩΝ ΠΡΟΣ ΕΝΩΣΕΙΣ ΑΣΘΕΝΩΝ&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/documents/2025%20AbbVie%20Greece_Methodology%20Note%20for%20POs_GR%20and%20ENG.pdf&quot;>2025 AbbVie ΜΕΘΟΔΟΛΟΓΙΚΟ ΣΗΜΕΙΩΜΑ ΔΗΜΟΣΙΟΠΟΙΗΣΗΣ ΠΑΡΟΧΩΝ ΠΡΟΣ ΕΝΩΣΕΙΣ ΑΣΘΕΝΩΝ&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/gr/documents/2025%20%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%99%CE%9F%CE%A0%CE%9F%CE%99%CE%97%CE%A3%CE%97%20%CE%A0%CE%91%CE%A1%CE%9F%CE%A7%CE%A9%CE%9D%20%CE%A0%CE%A1%CE%9F%CE%A3%20%CE%95%CE%9D%CE%A9%CE%A3%CE%95%CE%99%CE%A3%20%CE%91%CE%A3%CE%98%CE%95%CE%9D%CE%A9%CE%9D.pdf&quot;>2025 AbbVie ΔΗΜΟΣΙΟΠΟΙΗΣΗ ΠΑΡΟΧΩΝ ΠΡΟΣ ΕΝΩΣΕΙΣ ΑΣΘΕΝΩΝ&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-09-18T09:58:30.256-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/footer/greece-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

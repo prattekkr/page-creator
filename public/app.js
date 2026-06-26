@@ -23,10 +23,23 @@ const S = {
 let _uid = 0;
 const uid = () => `id_${++_uid}`;
 
+function deepCloneWithNewIds(item) {
+  const clone = JSON.parse(JSON.stringify(item));
+  function reId(obj) {
+    obj.id = uid();
+    delete obj._jcrKey;
+    for (const ch of obj.children || []) reId(ch);
+    for (const blk of obj.blocks   || []) reId(blk);
+  }
+  reId(clone);
+  return clone;
+}
+
 let _settingsTab = 'connection';
 let _styleEntries = null; // { styleId: { aemLabel, aemClass, groupLabel, edsClass, confidence } }
 let _blockStyleConfigs = {}; // { "accordion-picklist-config": [{ group, multiSelect, options:[{label,cssClass}] }] }
 let _mappingExpanded = null; // currently expanded resourceType string
+let _gapData = {};           // rt → gap analysis result from /api/mapping-gap
 let _view = 'canvas'; // 'canvas' | 'settings' | 'help'
 
 
@@ -109,6 +122,7 @@ function html() {
     ${S.modal === 'block-picker'      ? blockPickerModalHtml()     : ''}
     ${S.modal === 'save-template'     ? saveTemplateModalHtml()    : ''}
     ${S.modal === 'bundle-save'       ? bundleSaveModalHtml()      : ''}
+    ${S.modal === 'publish-aem'       ? renderPublishModal(S._publishChanges || []) : ''}
     ${topbarHtml()}
     ${S._draftRestored ? `<div class="draft-banner" id="draft-banner">
       Draft restored — ${S.sections.length} section${S.sections.length !== 1 ? 's' : ''} reloaded from your last session.
@@ -130,7 +144,7 @@ function html() {
 
 function topbarHtml() {
   return `<div class="topbar">
-    <h1>⚡ AEM Page Builder</h1>
+    <h1>⚡ EDS Page Builder</h1>
     <div class="view-tabs">
       <button class="vtab ${_view === 'canvas' ? 'vtab-active' : ''}" id="vtab-canvas">Canvas</button>
       <button class="vtab ${_view === 'settings' ? 'vtab-active' : ''}" id="vtab-settings">⚙ Settings</button>
@@ -143,6 +157,7 @@ function topbarHtml() {
       ${S.conn.ok ? '✓ Connected' : '○ Not tested'}
     </span>
     ${S.sections.length > 0 ? `<button class="btn btn-ghost btn-sm draft-clear-btn" id="btn-clear-draft" title="Discard all sections">✕ Clear</button>` : ''}
+    ${S._importedFromAem ? `<button class="btn btn-sm btn-publish-aem" id="btn-publish-aem" title="Write changed properties back to AEM">↑ Publish to AEM</button>` : ''}
     <button class="btn btn-primary btn-sm" id="btn-create" ${S.creating ? 'disabled' : ''}>
       ${S.creating ? '<span class="spinner"></span> Creating…' : '▶ Create Page'}
     </button>
@@ -181,7 +196,7 @@ function paletteHtml() {
   const isLib = S.paletteTab === 'sections';
   return `<aside class="palette">
     <div class="palette-tabs">
-      <button class="ptab ${isLib ? '' : 'active'}" data-ptab="components">Components</button>
+      <button class="ptab ${isLib ? '' : 'active'}" data-ptab="components">EDS Blocks</button>
       <button class="ptab ${isLib ? 'active' : ''}" data-ptab="sections">
         Sections ${S.sectionsLib.length ? `<span class="ptab-count">${S.sectionsLib.length}</span>` : ''}
       </button>
@@ -207,7 +222,7 @@ function componentsTabHtml() {
     </div>`;
   }).join('');
   return `
-    <input class="palette-search" id="comp-search" placeholder="Search components…" autocomplete="off" style="margin:6px 8px 2px;width:calc(100% - 16px);box-sizing:border-box"/>
+    <input class="palette-search" id="comp-search" placeholder="Search EDS blocks…" autocomplete="off" style="margin:6px 8px 2px;width:calc(100% - 16px);box-sizing:border-box"/>
     <div class="palette-scroll" id="comp-scroll">${groups}</div>`;
 }
 
@@ -411,7 +426,7 @@ function canvasHtml() {
     ${S.sections.length === 0
       ? `<div class="canvas-empty">
           <div class="ce-icon">📐</div>
-          <p>Pick a predefined section from the <strong>Sections</strong> tab on the left,<br>or switch to <strong>Components</strong> to build manually.</p>
+          <p>Pick a predefined section from the <strong>Sections</strong> tab on the left,<br>or switch to <strong>EDS Blocks</strong> to build manually.</p>
          </div>`
       : sections}
     <div class="canvas-footer">
@@ -451,6 +466,7 @@ function sectionHtml(sec, si) {
         <button class="icon-btn save-tpl" data-save-tpl="${sec.id}" title="Save as template">💾</button>
         ${si > 0 ? `<button class="icon-btn move" data-move-sec="${sec.id}" data-dir="-1" title="Move up">↑</button>` : ''}
         ${si < S.sections.length - 1 ? `<button class="icon-btn move" data-move-sec="${sec.id}" data-dir="1" title="Move down">↓</button>` : ''}
+        <button class="icon-btn" data-dup-sec="${sec.id}" title="Duplicate section">⧉</button>
         <button class="icon-btn" data-del-sec="${sec.id}" title="Remove section">×</button>
       </div>
     </div>
@@ -486,6 +502,7 @@ function blockChipHtml(blk, sec, bi) {
       <div class="section-actions" style="margin-left:auto">
         ${bi > 0 ? `<button class="icon-btn move" data-move-blk="${blk.id}" data-sec="${sec.id}" data-dir="-1">↑</button>` : ''}
         ${bi < sec.blocks.length - 1 ? `<button class="icon-btn move" data-move-blk="${blk.id}" data-sec="${sec.id}" data-dir="1">↓</button>` : ''}
+        <button class="icon-btn" data-dup-blk="${blk.id}" data-sec="${sec.id}" title="Duplicate block">⧉</button>
         <button class="icon-btn" data-del-blk="${blk.id}" data-sec="${sec.id}">×</button>
       </div>
     </div>
@@ -513,6 +530,7 @@ function childChipHtml(ch, blk, sec, ci) {
   return `<div>
     <div class="child-chip ${isSel ? 'selected' : ''}" data-sel-child="${ch.id}" data-blk="${blk.id}">
       <span class="cc-label">${x(label)}${hint ? ` — <em style="font-weight:400;color:var(--muted)">${x(hint)}</em>` : ''}</span>
+      <button class="icon-btn" data-dup-child="${ch.id}" data-blk="${blk.id}" data-sec="${sec.id}" title="Duplicate">⧉</button>
       <button class="icon-btn" data-del-child="${ch.id}" data-blk="${blk.id}">×</button>
     </div>
     ${subChildrenHtml}
@@ -525,7 +543,7 @@ function getPropHint(item) {
 
 // ── Props panel ───────────────────────────────────────────────────────────────
 function propsHtml() {
-  if (!S.sel) return `<aside class="props-panel"><div class="props-empty">Select a component to edit its properties.</div></aside>`;
+  if (!S.sel) return `<aside class="props-panel"><div class="props-empty">Select an EDS block to edit its properties.</div></aside>`;
 
   let item, typeLabel;
   if (S.sel.childId) {
@@ -540,7 +558,7 @@ function propsHtml() {
     typeLabel = S.config?.compMap?.[item?.type]?.title || item?.type;
   }
 
-  if (!item) return `<aside class="props-panel"><div class="props-empty">Select a component.</div></aside>`;
+  if (!item) return `<aside class="props-panel"><div class="props-empty">Select an EDS block.</div></aside>`;
 
   const model  = S.config?.modelMap?.[item.type];
   const fields = model?.fields || [];
@@ -551,7 +569,7 @@ function propsHtml() {
       <div class="ph-type">${x(typeLabel)}</div>
     </div>
     <div class="props-scroll">
-      ${formHtml || `<div class="props-empty">No editable fields for this component.</div>`}
+      ${formHtml || `<div class="props-empty">No editable fields for this EDS block.</div>`}
       ${(() => {
         if (!(S.sel.blkId || S.sel.childId) || !S.xmlPool?.length) return '';
         const matching = S.xmlPool
@@ -635,6 +653,27 @@ function renderFields(fields, props, itemId) {
     const val = props?.[f.name] !== undefined ? props[f.name] : (f.value ?? '');
     html += fieldHtml(f, val, itemId);
   }
+
+  // Render props that exist in the imported data but have no matching model field
+  const INTERNAL_PROPS = new Set(['jcr:primaryType', 'jcr:createdBy', 'cq:lastModified',
+    'cq:lastModifiedBy', 'jcr:created', 'sling:resourceType', 'id', 'filter', 'model']);
+  const modelFieldNames = new Set(fields.map(f => f.name));
+  const extra = Object.entries(props || {})
+    .filter(([k]) => !modelFieldNames.has(k) && !INTERNAL_PROPS.has(k) && !k.startsWith('_'));
+  if (extra.length) {
+    html += `<div class="unmapped-section">
+      <div class="unmapped-header">Unmapped Properties</div>`;
+    for (const [k, v] of extra) {
+      html += `<div class="field">
+        <label title="${x(k)}">${x(k)}</label>
+        <input type="text" data-item="${x(itemId)}" data-prop="${x(k)}"
+          class="field-input unmapped-prop"
+          value="${x(String(v ?? ''))}" placeholder="(no model field)"/>
+      </div>`;
+    }
+    html += `</div>`;
+  }
+
   return html ? `<div class="field-group">${html}</div>` : '';
 }
 
@@ -735,7 +774,7 @@ function helpViewHtml() {
       title: 'Canvas',
       summary: 'The main page builder. Drag sections onto the canvas, edit block properties, and preview the page structure before publishing.',
       items: [
-        { term: 'Palette – Components', def: 'Lists every available EDS block type. Click any component to add it to the canvas. Use the search box to filter by name.' },
+        { term: 'Palette – EDS Blocks', def: 'Lists every available EDS block type. Click any EDS block to add it to the canvas. Use the search box to filter by name.' },
         { term: 'Palette – Sections', def: 'Pre-built section templates saved by you or your team. Hover a card to preview its structure; click + to add it to the canvas. You can also open the preview panel and click "Add to Canvas" from there.' },
         { term: 'Section card', def: 'A collapsible row on the canvas representing one page section. The header shows the section type, a block-count badge, and move/delete controls.' },
         { term: 'CSS class tags', def: 'Inline tag editor on every section card. Type a class name and press Enter (or comma) to add it; click ✕ on a tag to remove it. These map to the EDS style system.' },
@@ -972,6 +1011,64 @@ function metaFieldsHtml() {
 }
 
 // ── Mapping tab ───────────────────────────────────────────────────────────────
+function gapSectionHtml(rt, edsType) {
+  if (!edsType) return `<div class="gap-no-type">Select an EDS type above to analyze mapping gaps.</div>`;
+  const gap = _gapData[rt];
+  if (!gap) return `<div class="gap-loading">
+    <span style="color:var(--muted);font-size:.75rem">Loading gap analysis…</span>
+  </div>`;
+
+  let html = `<div class="gap-wrap">
+    <div class="gap-title">Mapping gap analysis
+      <button class="btn btn-ghost btn-sm gap-refresh" data-rt="${x(rt)}" style="font-size:.7rem;padding:1px 6px;margin-left:6px">↺ Refresh</button>
+    </div>`;
+
+  if (gap.suggestions?.length) {
+    html += `<div class="gap-section gap-section--suggest">
+      <div class="gap-section-label">Suggested renames</div>`;
+    for (const s of gap.suggestions) {
+      const conf = s.score >= 90 ? 'high' : s.score >= 60 ? 'med' : 'low';
+      html += `<div class="gap-row">
+        <span class="gap-aem-prop">${x(s.aemProp)}</span>
+        <span class="gap-arr">→</span>
+        <span class="gap-eds-prop">${x(s.edsField)}</span>
+        <span class="gap-score gap-score--${conf}">${s.score}%</span>
+        <button class="btn btn-ghost btn-sm gap-accept"
+          data-rt="${x(rt)}" data-aem="${x(s.aemProp)}" data-eds="${x(s.edsField)}">Accept</button>
+      </div>`;
+    }
+    html += `</div>`;
+  }
+
+  if (gap.unmappedAem?.length) {
+    html += `<div class="gap-section gap-section--aem">
+      <div class="gap-section-label">AEM props without EDS match</div>`;
+    for (const p of gap.unmappedAem) {
+      html += `<div class="gap-row"><span class="gap-aem-prop">${x(p)}</span>
+        <span class="gap-no-match">no EDS field</span></div>`;
+    }
+    html += `</div>`;
+  }
+
+  if (gap.unmappedEds?.length) {
+    html += `<div class="gap-section gap-section--eds">
+      <div class="gap-section-label">EDS fields with no AEM source</div>`;
+    for (const f of gap.unmappedEds) {
+      html += `<div class="gap-row"><span class="gap-eds-prop">${x(f.name)}</span>
+        <span class="gap-label">${x(f.label)}</span>
+        <span class="gap-component">${x(f.component)}</span></div>`;
+    }
+    html += `</div>`;
+  }
+
+  if (!gap.suggestions?.length && !gap.unmappedAem?.length && !gap.unmappedEds?.length) {
+    html += `<div style="font-size:.75rem;color:var(--muted);padding:4px 0">All properties accounted for ✓</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
 function mappingTabHtml() {
   const cmap = S.migrationMap?.componentMap || {};
   const allBlockIds = Object.keys(S.config?.compMap || {}).sort();
@@ -1006,6 +1103,7 @@ function mappingTabHtml() {
       ${isExp ? `<div class="mr-body">
         <div class="mr-renames">${renameRows}</div>
         <button class="btn btn-ghost btn-sm mr-add-rename" data-rt="${x(rt)}" style="margin-top:4px;font-size:.72rem">+ Add rename</button>
+        ${gapSectionHtml(rt, edsType)}
       </div>` : ''}
     </div>`;
   }).join('');
@@ -1528,7 +1626,7 @@ function blockPickerModalHtml() {
         <button class="modal-close" id="modal-close">✕</button>
       </div>
       <div class="modal-body">
-        <input class="picker-search" id="picker-search" placeholder="Search components…" autocomplete="off"/>
+        <input class="picker-search" id="picker-search" placeholder="Search EDS blocks…" autocomplete="off"/>
         <div id="picker-body">${groupsHtml}</div>
       </div>
     </div>
@@ -1625,6 +1723,11 @@ async function doImportPage() {
         children: (blk.children || []).map(ch => ({ ...ch, id: uid(), children: [] }))
       }))
     }));
+    // Snapshot for write-back diff — preserve _jcrKey on each section/block
+    S._importSnapshot     = JSON.parse(JSON.stringify(S.sections));
+    S._importMetaSnapshot = { ...S.meta };
+    S._importPagePath     = pagePath;
+    S._importedFromAem    = true;
     if (data.meta) Object.assign(S.meta, data.meta);
     S.collapsed.clear();
     S.modal = null;
@@ -1915,12 +2018,69 @@ function resultOverlayHtml() {
 function bind() {
   // Topbar
   on('btn-create', 'click', doCreate);
+  on('btn-publish-aem', 'click', () => {
+    const changes = computeJcrDiff();
+    if (!changes.length) { alert('No changes since the page was imported.'); return; }
+    S._publishChanges = changes;
+    S.modal = 'publish-aem';
+    render();
+  });
+  on('btn-pub-cancel',  'click', () => { S.modal = null; render(); });
+  on('btn-pub-cancel2', 'click', () => { S.modal = null; render(); });
+  on('btn-pub-confirm', 'click', async () => {
+    const checked = [...document.querySelectorAll('.pub-chk:checked')].map(el => Number(el.dataset.idx));
+    const toWrite = (S._publishChanges || []).filter((_, i) => checked.includes(i));
+    if (!toWrite.length) { S.modal = null; render(); return; }
+    const btn = document.getElementById('btn-pub-confirm');
+    if (btn) { btn.disabled = true; btn.textContent = 'Writing…'; }
+    try {
+      const r = await fetch('/api/write-to-aem', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ aemHost: S.conn.aemHost, username: S.conn.username, password: S.conn.password, changes: toWrite })
+      });
+      const data = await r.json();
+      const failed = (data.results || []).filter(r => !r.ok);
+      if (failed.length) {
+        alert(`${toWrite.length - failed.length} node(s) written. ${failed.length} failed:\n${failed.map(f => f.jcrPath + ' (' + (f.error || f.status) + ')').join('\n')}`);
+      } else {
+        // Update snapshot so the diff clears for written nodes
+        const writtenPaths = new Set(toWrite.map(c => c.jcrPath));
+        const base = `${S._importPagePath}/jcr:content/root`;
+        // Update meta snapshot
+        if (writtenPaths.has(`${S._importPagePath}/jcr:content`) && S._importMetaSnapshot)
+          S._importMetaSnapshot = { ...S.meta };
+        for (const sec of S.sections) {
+          if (writtenPaths.has(`${base}/${sec._jcrKey}`)) {
+            const snap = S._importSnapshot.find(s => s._jcrKey === sec._jcrKey);
+            if (snap) snap.props = JSON.parse(JSON.stringify(sec.props));
+          }
+          for (const blk of sec.blocks || []) {
+            if (writtenPaths.has(`${base}/${sec._jcrKey}/${blk._jcrKey}`)) {
+              const snapSec = S._importSnapshot.find(s => s._jcrKey === sec._jcrKey);
+              const snapBlk = snapSec?.blocks?.find(b => b._jcrKey === blk._jcrKey);
+              if (snapBlk) snapBlk.props = JSON.parse(JSON.stringify(blk.props));
+            }
+          }
+        }
+        S.modal = null;
+        render();
+        // Show brief success banner
+        const el = document.getElementById('import-alert');
+        if (el) { el.innerHTML = `<div class="alert alert-success">✓ ${toWrite.length} node${toWrite.length !== 1 ? 's' : ''} written to AEM.</div>`; setTimeout(() => { el.innerHTML = ''; }, 4000); }
+      }
+    } catch (e) {
+      alert('Write failed: ' + e.message);
+    } finally {
+      if (btn) { btn.disabled = false; }
+    }
+  });
   on('vtab-canvas',   'click', () => { _view = 'canvas';   render(); });
   on('vtab-settings', 'click', () => { _view = 'settings'; render(); });
   on('vtab-help',     'click', () => { _view = 'help';     render(); });
   on('btn-clear-draft', 'click', () => {
     if (!confirm('Clear all sections and start fresh?')) return;
     S.sections = []; S.meta = {}; S.collapsed.clear(); S.sel = null;
+    S._importedFromAem = false; S._importSnapshot = null; S._importPagePath = null; S._importMetaSnapshot = null;
     localStorage.removeItem(CANVAS_KEY);
     render();
   });
@@ -2037,7 +2197,7 @@ function bind() {
   // Block select / move / delete
   qAll('[data-sel-blk]').forEach(el =>
     el.addEventListener('click', e => {
-      if (e.target.closest('[data-del-blk],[data-move-blk],[data-pick-child],[data-sel-child]')) return;
+      if (e.target.closest('[data-del-blk],[data-move-blk],[data-dup-blk],[data-pick-child],[data-sel-child]')) return;
       S.sel = { secId: el.dataset.sec, blkId: el.dataset.selBlk };
       render();
     }));
@@ -2072,6 +2232,16 @@ function bind() {
       if (S.sel?.childId === el.dataset.delChild) S.sel = { secId: S.sel.secId, blkId: el.dataset.blk };
       render();
     }));
+
+  // Duplicate section / block / child
+  qAll('[data-dup-sec]').forEach(el =>
+    el.addEventListener('click', e => { e.stopPropagation(); duplicateSection(el.dataset.dupSec); }));
+
+  qAll('[data-dup-blk]').forEach(el =>
+    el.addEventListener('click', e => { e.stopPropagation(); duplicateBlock(el.dataset.sec, el.dataset.dupBlk); }));
+
+  qAll('[data-dup-child]').forEach(el =>
+    el.addEventListener('click', e => { e.stopPropagation(); duplicateChild(el.dataset.sec, el.dataset.blk, el.dataset.dupChild); }));
 
   // Grid-container: add a grid-section column directly (no picker)
   qAll('[data-add-col]').forEach(el =>
@@ -2245,8 +2415,49 @@ function bind() {
   }));
 
   qAll('[data-expand-rt]').forEach(el =>
-    el.addEventListener('click', () => {
-      _mappingExpanded = _mappingExpanded === el.dataset.expandRt ? null : el.dataset.expandRt;
+    el.addEventListener('click', async () => {
+      const rt = el.dataset.expandRt;
+      _mappingExpanded = _mappingExpanded === rt ? null : rt;
+      if (_mappingExpanded === rt && !_gapData[rt]) {
+        const edsType = S.migrationMap?.componentMap?.[rt]?.edsType || '';
+        if (edsType) {
+          try {
+            const r = await fetch(`/api/mapping-gap?rt=${encodeURIComponent(rt)}&edsType=${encodeURIComponent(edsType)}`);
+            _gapData[rt] = await r.json();
+          } catch (_) {}
+        }
+      }
+      render();
+    }));
+
+  qAll('.gap-accept').forEach(el =>
+    el.addEventListener('click', async () => {
+      const { rt, aem, eds } = el.dataset;
+      if (!S.migrationMap?.componentMap?.[rt]) return;
+      S.migrationMap.componentMap[rt].propRenames = S.migrationMap.componentMap[rt].propRenames || {};
+      S.migrationMap.componentMap[rt].propRenames[aem] = eds;
+      delete _gapData[rt]; // invalidate so it refreshes on next render
+      render();
+      const edsType = S.migrationMap.componentMap[rt].edsType || '';
+      if (edsType) {
+        try {
+          const r = await fetch(`/api/mapping-gap?rt=${encodeURIComponent(rt)}&edsType=${encodeURIComponent(edsType)}`);
+          _gapData[rt] = await r.json();
+          render();
+        } catch (_) {}
+      }
+    }));
+
+  qAll('.gap-refresh').forEach(el =>
+    el.addEventListener('click', async () => {
+      const rt = el.dataset.rt;
+      const edsType = S.migrationMap?.componentMap?.[rt]?.edsType || '';
+      if (!edsType) return;
+      delete _gapData[rt];
+      try {
+        const r = await fetch(`/api/mapping-gap?rt=${encodeURIComponent(rt)}&edsType=${encodeURIComponent(edsType)}`);
+        _gapData[rt] = await r.json();
+      } catch (_) {}
       render();
     }));
 
@@ -2364,7 +2575,7 @@ function bind() {
     if (q && totalVisible === 0) {
       const msg = document.createElement('div');
       msg.className = 'picker-no-results';
-      msg.textContent = `No components match "${q}"`;
+      msg.textContent = `No EDS blocks match "${q}"`;
       pickerBody.appendChild(msg);
     }
   });
@@ -2512,6 +2723,124 @@ function syncStyleField(el) {
       }
     }
   }
+}
+
+// ── AEM write-back helpers ────────────────────────────────────────────────────
+function diffProps(oldProps, newProps) {
+  const diff = {};
+  const allKeys = new Set([...Object.keys(oldProps || {}), ...Object.keys(newProps || {})]);
+  for (const k of allKeys) {
+    if (k.startsWith('_')) continue;
+    const ov = String(oldProps?.[k] ?? ''), nv = String(newProps?.[k] ?? '');
+    if (ov !== nv) diff[k] = { old: ov, new: nv };
+  }
+  return diff;
+}
+
+function computeJcrDiff() {
+  if (!S._importPagePath) return [];
+  const changes = [];
+
+  // 1. Page-level meta properties (live on jcr:content directly)
+  if (S._importMetaSnapshot) {
+    const metaDiff = diffProps(S._importMetaSnapshot, S.meta);
+    if (Object.keys(metaDiff).length)
+      changes.push({ jcrPath: `${S._importPagePath}/jcr:content`, blockType: null, label: 'page meta', changedProps: metaDiff });
+  }
+
+  // 2. Section / block properties
+  if (!S._importSnapshot) return changes;
+  const base = `${S._importPagePath}/jcr:content/root`;
+  const snapMap = Object.fromEntries(S._importSnapshot.map(s => [s._jcrKey, s]));
+
+  for (const sec of S.sections) {
+    const snapSec = snapMap[sec._jcrKey];
+
+    if (!snapSec) {
+      // Entire section is new — create section node then all its block nodes
+      const secKey = `section_${sec.id.slice(0, 10)}`;
+      changes.push({ jcrPath: `${base}/${secKey}`, blockType: sec.type, label: sec.type,
+                     isNew: true, isSection: true, newProps: sec.props });
+      for (const blk of sec.blocks || []) {
+        const blkKey = blk._jcrKey || `block_${blk.type}_${blk.id.slice(0, 8)}`;
+        changes.push({ jcrPath: `${base}/${secKey}/${blkKey}`, blockType: blk.type, label: blk.type,
+                       isNew: true, newProps: blk.props });
+      }
+      continue;
+    }
+
+    // Existing section — diff props and blocks
+    const secDiff = diffProps(snapSec.props, sec.props);
+    if (Object.keys(secDiff).length)
+      changes.push({ jcrPath: `${base}/${sec._jcrKey}`, blockType: sec.type, label: sec.type, changedProps: secDiff });
+
+    const snapBlkMap = Object.fromEntries((snapSec.blocks || []).map(b => [b._jcrKey, b]));
+    for (const blk of sec.blocks || []) {
+      if (!blk._jcrKey) {
+        const nodeName = `block_${blk.type}_${blk.id.slice(0, 8)}`;
+        changes.push({ jcrPath: `${base}/${sec._jcrKey}/${nodeName}`, blockType: blk.type, label: blk.type,
+                       isNew: true, newProps: blk.props });
+        continue;
+      }
+      const snapBlk = snapBlkMap[blk._jcrKey];
+      if (!snapBlk) continue;
+      const blkDiff = diffProps(snapBlk.props, blk.props);
+      if (Object.keys(blkDiff).length)
+        changes.push({ jcrPath: `${base}/${sec._jcrKey}/${blk._jcrKey}`, blockType: blk.type, label: blk.type,
+                       changedProps: blkDiff });
+    }
+  }
+  return changes;
+}
+
+function renderPublishModal(changes) {
+  const rows = changes.map((c, idx) => {
+    const shortPath = c.jcrPath.split('/').slice(-2).join('/');
+    let propRows;
+    if (c.isNew) {
+      const entries = Object.entries(c.newProps || {}).filter(([k]) => !k.startsWith('_'));
+      propRows = entries.map(([k, v]) => `
+        <div class="pub-prop">
+          <span class="pub-key">${x(k)}</span>
+          <span class="pub-new">${x(String(v ?? ''))}</span>
+        </div>`).join('') || '<div class="pub-prop" style="color:var(--muted);font-style:italic">no props</div>';
+    } else {
+      propRows = Object.entries(c.changedProps || {}).map(([k, { old: ov, new: nv }]) => `
+        <div class="pub-prop">
+          <span class="pub-key">${x(k)}</span>
+          <span class="pub-old">${x(ov || '(empty)')}</span>
+          <span class="pub-arrow">→</span>
+          <span class="pub-new">${x(nv || '(empty)')}</span>
+        </div>`).join('');
+    }
+    const badge = c.isNew
+      ? `<span class="pub-type-badge pub-type-badge--new">+ NEW</span>`
+      : `<span class="pub-type-badge">${x(c.label)}</span>`;
+    return `<div class="pub-node">
+      <label class="pub-node-label">
+        <input type="checkbox" class="pub-chk" data-idx="${idx}" checked>
+        ${badge}
+        <span class="pub-path" title="${x(c.jcrPath)}">${x(shortPath)}</span>
+      </label>
+      <div class="pub-props">${propRows}</div>
+    </div>`;
+  }).join('');
+
+  return `<div class="modal-overlay" id="publish-modal">
+    <div class="modal pub-modal">
+      <div class="modal-header">
+        <span class="modal-title">Publish changes to AEM</span>
+        <button class="icon-btn" id="btn-pub-cancel">✕</button>
+      </div>
+      <div class="modal-body pub-modal-body">${rows}</div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost btn-sm" id="btn-pub-cancel2">Cancel</button>
+        <button class="btn btn-primary btn-sm" id="btn-pub-confirm">
+          Write ${changes.length} change${changes.length !== 1 ? 's' : ''} to AEM
+        </button>
+      </div>
+    </div>
+  </div>`;
 }
 
 function syncProp(el) {
@@ -2693,6 +3022,37 @@ function moveBlock(secId, blkId, dir) {
   const j = i + dir;
   if (j < 0 || j >= sec.blocks.length) return;
   [sec.blocks[i], sec.blocks[j]] = [sec.blocks[j], sec.blocks[i]];
+  render();
+}
+
+function duplicateSection(secId) {
+  const i = S.sections.findIndex(s => s.id === secId);
+  if (i < 0) return;
+  const clone = deepCloneWithNewIds(S.sections[i]);
+  S.sections.splice(i + 1, 0, clone);
+  S.sel = { secId: clone.id };
+  render();
+}
+
+function duplicateBlock(secId, blkId) {
+  const sec = findSec(secId);
+  if (!sec) return;
+  const i = sec.blocks.findIndex(b => b.id === blkId);
+  if (i < 0) return;
+  const clone = deepCloneWithNewIds(sec.blocks[i]);
+  sec.blocks.splice(i + 1, 0, clone);
+  S.sel = { secId, blkId: clone.id };
+  render();
+}
+
+function duplicateChild(secId, blkId, childId) {
+  const blk = findBlk(blkId);
+  if (!blk) return;
+  const i = (blk.children || []).findIndex(c => c.id === childId);
+  if (i < 0) return;
+  const clone = deepCloneWithNewIds(blk.children[i]);
+  blk.children.splice(i + 1, 0, clone);
+  S.sel = { secId, blkId, childId: clone.id };
   render();
 }
 

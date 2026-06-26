@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-12T18:06:28.111-05:00"
+        cq:lastModifiedBy="jewitca"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Προηγμένα φάρμακα που επιδεικνύουν τόσο ισχυρή κλινική απόδοση όσο και οφέλη για τους ασθενείς."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-12-12T18:06:28.103-05:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="\[do not publish] Αγωγός"
+        jcr:uuid="9f768052-34fd-46e8-9fc1-904c1e2d675c"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaText="Μάθε περισσότερα"
+        fileReference="/content/dam/abbvie-com2/images/testtubes-in-rows.jpg"
+        navTitle="Αγωγός"
+        pageTitle="Αγωγός">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-04T07:08:47.695-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/header/greece-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-12T09:40:51.512-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/testtubes-in-rows.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-06-29T14:48:56.673-04:00"
+                                jcr:lastModifiedBy="GEORGIX2"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Τα Προϊόντα μας"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-06-29T14:51:38.230-04:00"
+                                jcr:lastModifiedBy="GEORGIX2"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Προηγμένα φάρμακα που προσφέρουν εξαιρετική κλινική απόδοση και σημαντικά οφέλη για τους ασθενείς.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:created="{Date}2023-01-06T12:33:08.569-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-17T17:54:36.850-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <dashboardcards
+                                cq:styleIds="[139639596517856]"
+                                jcr:created="{Date}2023-01-17T17:58:50.680-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-07-04T07:13:30.924-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/dashboardcards/v1/dashboardcards"
+                                fragmentPath="/content/dam/abbvie-com2/dashboard-cards/content-fragments-affiliate/greece/facts/rd-pipeline"
+                                hideImage="false"/>
+                        </par_11>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <dashboardcards
+                                cq:styleIds="[12639566517856]"
+                                jcr:created="{Date}2023-01-17T17:58:09.426-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-07-04T07:15:00.086-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/dashboardcards/v1/dashboardcards"
+                                fragmentPath="/content/dam/abbvie-com2/dashboard-cards/content-fragments-affiliate/greece/facts/rd-pipeline-progress"
+                                hideImage="false"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <dashboardcards
+                                cq:styleIds="[12639566517856]"
+                                jcr:created="{Date}2023-01-17T17:55:58.208-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-07-04T07:17:51.658-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/dashboardcards/v1/dashboardcards"
+                                fragmentPath="/content/dam/abbvie-com2/dashboard-cards/content-fragments-affiliate/greece/facts/rd-pipeline-impact"
+                                hideImage="false"/>
+                        </par_13>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="3"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="3"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="3"
+                                dataPriority="1"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="3"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_14
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <dashboardcards
+                                cq:styleIds="[176273487078,1772756234]"
+                                jcr:created="{Date}2023-01-17T17:54:57.181-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-07-04T07:18:10.863-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/dashboardcards/v1/dashboardcards"
+                                fragmentPath="/content/dam/abbvie-com2/dashboard-cards/content-fragments-affiliate/greece/facts/rd-pipeline-novel"
+                                hideImage="false"/>
+                        </par_14>
+                    </grid>
+                    <pipelineutilitynav
+                        jcr:created="{Date}2023-01-05T20:37:43.287-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-09T15:44:37.843-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/pipelineutilitynav"
+                        filterIcon="/content/dam/abbvie-com2/icons/Icon-Filter.svg"
+                        lastUpdatedDate="{Date}2023-02-09T00:00:00.000-08:00"
+                        searchIcon="/content/dam/abbvie-com2/icons/Icon Search.svg"
+                        sortIcon="/content/dam/abbvie-com2/icons/Icon-Sort.svg">
+                        <filter
+                            jcr:lastModified="{Date}2023-01-06T13:00:39.189-05:00"
+                            jcr:lastModifiedBy="millicx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/pipelineutilitynav/filter"
+                            applyFiltersBtnLabel="Apply Filters"
+                            clearAllBtnLabel="Clear All"
+                            devicesPath="/content/cq:tags/abbvie-com-2/pipeline/devices"
+                            focusAreaPath="/content/cq:tags/abbvie-com-2/pipeline-product-shared-therapy-area"
+                            pharmaceuticalPath="/content/cq:tags/abbvie-com-2/pipeline/pharmaceuticals"/>
+                    </pipelineutilitynav>
+                    <pipeline
+                        jcr:created="{Date}2023-01-05T20:37:55.656-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-06T14:09:34.104-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/pipeline/v2/pipeline"
+                        devicecolumn3txt="Concept"
+                        devicecolumn4txt="Feasibility"
+                        devicecolumn5txt="Development"
+                        devicecolumn6txt="Confirmation"
+                        moleculetext="Type of molecule"
+                        noResultsHeadingText="No Results Found"
+                        noResultsSubHeadingText="Change your filter or search criteria."
+                        pharmaceuticalcolumn3txt="Phase 1"
+                        pharmaceuticalcolumn4txt="Phase 2"
+                        pharmaceuticalcolumn5txt="Phase 3"
+                        pharmaceuticalcolumn6txt="Status"
+                        pharmaceuticaltooltip="Status is shown when it’s submitted or approved."
+                        pronunciationtext="Pronunciation"
+                        shareconfirmationtext="Link copied"
+                        shareLinkIcon="/content/dam/abbvie-com2/icons/Icon Link.svg"
+                        sharetext="Share link"
+                        speakerIcon="/content/dam/abbvie-com2/icons/Icon Sound.svg"
+                        tablecolumn1txt="Potential Indication"
+                        tablecolumn2txt="Region"
+                        targetheadertext="Target"/>
+                    <separator
+                        cq:styleIds="[1662756566902]"
+                        jcr:created="{Date}2023-01-06T12:37:28.956-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-06T12:37:28.956-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-04T07:19:22.997-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/footer/greece-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

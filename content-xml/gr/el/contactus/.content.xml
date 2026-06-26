@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-04T09:57:01.930-04:00"
+        cq:lastModifiedBy="JADHASX13"
+        cq:lastReplicated="{Date}2024-08-22T04:40:47.231-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Εάν θέλετε να μας στείλετε μια ερώτηση ή ένα σχόλιο, συμπληρώστε τη φόρμα."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-07-04T09:26:57.641-04:00"
+        jcr:lastModifiedBy="JADHASX13"
+        jcr:mixinTypes="[mix:lockable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Επικοινωνήστε μαζί μας"
+        jcr:uuid="21375520-4d5b-4b01-be5a-99e856a92e9e"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        sling:sitemapRoot="includeSitemapNoCanonical"
+        hideInNav="true"
+        pageTitle="Επικοινωνήστε μαζί μας"
+        sitemapFrequency="yearly">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-04T09:27:50.789-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/header/greece-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2023-01-09T13:35:49.987-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-07-04T09:28:12.374-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Επικοινωνήστε μαζί μας"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-07-04T09:28:43.630-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Εάν θέλετε να μας στείλετε μια ερώτηση ή ένα σχόλιο, συμπληρώστε την παρακάτω φόρμα.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:created="{Date}2023-01-09T13:36:14.404-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-09T13:40:47.517-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_1879356622
+                                jcr:created="{Date}2023-01-06T15:45:27.974-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-04-07T13:03:20.594-04:00"
+                                jcr:lastModifiedBy="dhatrpv"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/form/container/v2/container"
+                                action="/content/usergenerated/abbvie-com2/us/en/contact-center/contact-us/cq-gen1673037927978/"
+                                actionType="foundation/components/form/actions/store"
+                                customActionType="kana"
+                                emailTemplatePath="/apps/abbvie-com2/email-templates/migraineform.txt"
+                                errorPage="/content/abbvie-com2/gr/en/contactus/failure"
+                                thankYouPage="/content/abbvie-com2/gr/en/contactus/thank-you">
+                                <hidden
+                                    jcr:created="{Date}2023-01-06T16:36:16.718-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-12T12:22:38.280-05:00"
+                                    jcr:lastModifiedBy="sharmrx18"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    name="frh.form"
+                                    value="abbvie_com_contactus"/>
+                                <hidden_1526099401
+                                    jcr:created="{Date}2023-01-06T16:39:02.628-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-06T16:39:23.461-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="msg_source"
+                                    name="Msg Source"
+                                    value="abbvie_com_contactus"/>
+                                <hidden_981002638
+                                    jcr:created="{Date}2023-01-06T16:39:32.521-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-06T16:40:26.975-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="CUID"
+                                    name="CUID"/>
+                                <hidden_1380033279
+                                    jcr:created="{Date}2023-01-06T16:40:38.037-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-06T16:41:02.159-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="BUID"
+                                    name="BUID"/>
+                                <hidden_998882275
+                                    jcr:created="{Date}2023-01-06T16:41:16.456-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-06T16:41:34.397-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="formReferal"
+                                    name="formReferal"/>
+                                <hidden_2097920847
+                                    jcr:created="{Date}2023-01-06T16:41:46.008-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-06T16:41:57.928-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/hidden/v2/hidden"
+                                    id="acid"
+                                    name="acid"/>
+                                <title
+                                    jcr:created="{Date}2023-01-09T17:11:03.262-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:29:04.830-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Προσωπικές πληροφορίες"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="h"/>
+                                <text
+                                    jcr:created="{Date}2023-01-06T16:45:12.089-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:29:44.310-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Ονομα"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[a-zA-Z@^_+-;&quot;'.]*$"
+                                    id="firstName"
+                                    name="First Name"
+                                    required="true"
+                                    requiredMessage="Αυτό το πεδίο είναι υποχρεωτικό."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:30:36.423-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Επίθετο"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[a-zA-Z@^_+-;&quot;'.]*$"
+                                    id="lastName"
+                                    name="lastName"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <title_copy
+                                    jcr:created="{Date}2023-01-09T17:11:03.262-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:30:46.413-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Στοιχεία επικοινωνίας"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="h"/>
+                                <Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:31:23.269-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="email"
+                                    name="email"
+                                    required="true"
+                                    requiredMessage="Αυτό το πεδίο είναι υποχρεωτικό."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="email"/>
+                                <Copy_x0020_of_x0020_Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:32:25.083-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Επαλήθευση email"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    constraintMessage="Δεν ταιριάζει"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="email2"
+                                    idDataMatch="#email"
+                                    name="email2"
+                                    required="true"
+                                    requiredMessage="Αυτό το πεδίο είναι υποχρεωτικό."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="email"/>
+                                <Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:33:31.011-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Τηλεφωνικό νούμερο"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    helpMessage="(will only be used if required for follow-up to this communication)"
+                                    id="phone"
+                                    name="phone"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="tel"/>
+                                <Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:33:41.250-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Διεύθυνση"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="address1"
+                                    name="address1"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="textarea"/>
+                                <Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:34:09.416-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Διεύθυνση 2"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="address2"
+                                    name="address2"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:35:33.893-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Πόλη"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="city"
+                                    name="city"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:35:28.231-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Πολιτεία/Επαρχία"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="state"
+                                    name="state"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_Copy_x0020_of_x0020_text_1657141772
+                                    jcr:created="{Date}2023-01-06T16:48:01.170-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:36:37.130-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Ταχυδρομικός Κώδικας/Τ.Κ"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="zipcode"
+                                    name="zipcode"
+                                    requiredMessage="This field is required."
+                                    rows="2"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="text"/>
+                                <options
+                                    jcr:created="{Date}2023-01-06T16:48:52.110-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:37:05.774-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Χώρα"
+                                    sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                    datasourceRT="abbvie-com/formdata/tagdatasources"
+                                    id="country"
+                                    name="country"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    servletParams="countrytag=abbvie-com-2:countries"
+                                    source="datasource"
+                                    type="drop-down"/>
+                                <title_copy_911551927
+                                    jcr:created="{Date}2023-01-09T17:11:03.262-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:37:29.690-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Μήνυμα"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="h"/>
+                                <options_1378851004
+                                    jcr:created="{Date}2023-01-19T19:35:32.450-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:40:26.424-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Θέμα"
+                                    sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                    id="subject-dropdown"
+                                    name="subject"
+                                    source="local"
+                                    type="drop-down">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            value="Empty"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Careers"
+                                            value="Careers"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Investor Information"
+                                            value="Investor Information"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Product Information"
+                                            value="Product Information"/>
+                                        <item4
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Medical Information"
+                                            value="Medical Information"/>
+                                        <item5
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Sales Representative Contact"
+                                            value="Sales Representative Contact"/>
+                                        <item6
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Order Status"
+                                            value="Order Status"/>
+                                        <item7
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Website Questions"
+                                            value="Website Questions"/>
+                                        <item8
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Clinical Trial Information"
+                                            value="Clinical Trial Information"/>
+                                        <item9
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Others (Please Specify)"
+                                            value="other"/>
+                                    </items>
+                                </options_1378851004>
+                                <subcontainer_copy
+                                    jcr:created="{Date}2023-01-06T16:54:21.080-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-05-02T09:16:25.927-04:00"
+                                    jcr:lastModifiedBy="KRISHBX3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/subcontainer/v2/subcontainer"
+                                    constraintMessage="&quot;Author Message&quot;: This container is hidden unless the Others option is selected in the above dropdown."
+                                    hideShowAttribute="other">
+                                    <text
+                                        jcr:created="{Date}2023-04-29T00:56:35.261-04:00"
+                                        jcr:createdBy="KRISHBX3"
+                                        jcr:lastModified="{Date}2023-07-04T09:40:50.999-04:00"
+                                        jcr:lastModifiedBy="JADHASX13"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Οι υπολοιποι"
+                                        sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                        commentsTextLimit="1000"
+                                        fieldPattern="\[ A-Za-z0-9]*$"
+                                        id="other"
+                                        idDataMatch="subject-dropdown"
+                                        name="other"
+                                        numberFieldLimit="100000000"
+                                        rows="2"
+                                        symbolPosition="cmp-form-text__currency"
+                                        type="text"/>
+                                </subcontainer_copy>
+                                <text_84278959
+                                    jcr:created="{Date}2023-01-19T19:39:53.254-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:41:52.626-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Ερωτήσεις/Σχόλια"
+                                    sling:resourceType="abbvie-com2/components/form/text/v2/text"
+                                    commentsTextLimit="1000"
+                                    fieldPattern="\[ a-zA-Z]*$"
+                                    id="questionsOrComments"
+                                    name="questionsOrComments"
+                                    numberFieldLimit="100000000"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    rows="1"
+                                    symbolPosition="cmp-form-text__currency"
+                                    type="textarea"/>
+                                <text_589955133
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-01-19T19:41:44.161-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:51:57.115-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-14-reg&quot;>Συλλέγουμε αυτές τις προσωπικές πληροφορίες για να απαντήσουμε στο ερώτημα που στέλνετε μέσω αυτής της φόρμας Επικοινωνία. Οι συνεργάτες της AbbVie και της AbbVie κατανοούν τη σημασία της προστασίας των πληροφοριών σας και θα χρησιμοποιήσουν τις πληροφορίες σας με αποκλειστικό σκοπό να απαντήσουν στο ερώτημά σας. Η AbbVie είναι μια παγκόσμια εταιρεία, επομένως η απάντηση στο ερώτημά σας μπορεί να απαιτεί βοήθεια από οργανισμούς της AbbVie σε άλλες χώρες. Επομένως, οι πληροφορίες σας ενδέχεται να μεταφερθούν σε άλλες χώρες που ενδέχεται να μην έχουν ισοδύναμη νομοθεσία που προστατεύει τα προσωπικά δεδομένα.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-14-reg&quot;>Λάβετε υπόψη ότι η απάντησή μας στο ερώτημά σας&amp;nbsp;&lt;b>θα σταλεί μέσω Διαδικτύου&lt;/b>&amp;nbsp;email που δεν είναι ασφαλές και μπορεί να περιλαμβάνει τα προσωπικά στοιχεία που μας παρείχατε&amp;nbsp;&lt;b>στην ερώτησή σας.&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <options_1912374525
+                                    jcr:created="{Date}2023-01-19T19:42:45.461-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:52:33.627-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Πολιτική Απορρήτου"
+                                    sling:resourceType="abbvie-com2/components/form/options/v2/options"
+                                    id="agree"
+                                    name="agree"
+                                    required="true"
+                                    requiredMessage="This field is required."
+                                    source="local"
+                                    type="checkbox">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            disablesubmit="false"
+                                            selected="false"
+                                            text="Πολιτική Απορρήτου"
+                                            value="1"/>
+                                    </items>
+                                </options_1912374525>
+                                <text_1455751134
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-01-09T17:14:20.345-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:54:13.966-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-14-reg&quot;>Κάνοντας κλικ στο πλαίσιο, συμφωνείτε ότι οι πληροφορίες σας θα διέπονται από τους ιστότοπούς μας&amp;nbsp;&lt;a href=&quot;https://privacy.abbvie/privacy-policies/us-privacy-policy.html&quot;>Πολιτική Απορρήτου.&lt;/a>.&amp;nbsp;Εάν έχετε μια ερώτηση απορρήτου, παρακαλώ&amp;nbsp;&lt;a href=&quot;https://abbv.force.com/AbbvieDSRM/s/?language=en_US&quot; target=&quot;_blank&quot;>Κάντε κλικ ΕΔΩ.&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <captcha
+                                    jcr:created="{Date}2023-01-19T19:45:23.750-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-19T19:45:50.012-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/captcha/v2/captcha"
+                                    requiredMessage="This field is required"/>
+                                <button
+                                    jcr:created="{Date}2023-01-06T16:56:53.179-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-01-06T16:56:53.179-05:00"
+                                    jcr:lastModifiedBy="millicx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/form/button/v2/button"/>
+                                <text_504246989
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2023-01-19T19:46:29.988-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2023-07-04T09:55:16.022-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-14-reg&quot;>Στείλτε ένα email στη διεύθυνση &lt;a href=&quot;mailto:customerservice@abbvie.com&quot;>customerservice@abbvie.com&lt;/a> εάν έχετε ερωτήσεις ή τεχνικά προβλήματα με αυτήν τη φόρμα.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_1879356622>
+                        </par_12>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="2"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <header_copy
+                                jcr:created="{Date}2023-01-09T13:38:10.996-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-07-04T09:55:40.451-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="Χρήσιμοι Σύνδεσμοι"/>
+                            <separator_copy
+                                cq:styleIds="[1662756756047]"
+                                jcr:created="{Date}2023-01-09T13:38:31.499-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-01-09T13:38:31.499-05:00"
+                                jcr:lastModifiedBy="millicx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1307494722
+                                cq:styleIds="[1662756409908]"
+                                jcr:created="{Date}2023-01-09T13:40:17.759-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-01-09T13:40:17.759-05:00"
+                                jcr:lastModifiedBy="millicx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <linklist_copy_copy_c
+                                jcr:created="{Date}2023-01-09T13:38:47.773-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-07-04T09:56:25.350-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                childDepth="1"
+                                excludeCurrentPage="true"
+                                linkItems="true"
+                                listFrom="static"
+                                sortOrder="asc"
+                                tagsMatch="any">
+                                <pages jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Κέντρο Προστασίας Προσωπικών Δεδομένων"
+                                        linkTarget="_blank"
+                                        linkURL="https://privacy.abbvie"
+                                        oneTrustEnabled="false"
+                                        text="Κέντρο Προστασίας Προσωπικών Δεδομένων"
+                                        textIconTarget="_self"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Κατάργηση των δεδομένων μου"
+                                        linkTarget="_blank"
+                                        linkURL="https://abbv.force.com/AbbvieDSRM/s/?language=en_US"
+                                        oneTrustEnabled="false"
+                                        text="Κατάργηση των δεδομένων μου"
+                                        textIconTarget="_self"/>
+                                </pages>
+                            </linklist_copy_copy_c>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-04T09:57:01.912-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/footer/greece-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <contact-us/>
+</jcr:root>

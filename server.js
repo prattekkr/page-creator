@@ -13,6 +13,59 @@ try {
   migrationMap = JSON.parse(fs.readFileSync(path.join(__dirname, 'migration-map.json'), 'utf8'));
 } catch (_) { console.warn('[migration] migration-map.json not found'); }
 
+// ── EDS component model map (loaded once at startup for typedAemValue) ────────
+let _modelMapCache = {};
+try {
+  const _models = JSON.parse(fs.readFileSync(path.join(__dirname, 'component-models.json'), 'utf8'));
+  _modelMapCache = Object.fromEntries(_models.map(m => [m.id, m]));
+} catch (_) { console.warn('[config] component-models.json not found'); }
+
+// EDS block type → migration map entry (for JCR live import propRenames)
+const edTypeToMapping = {};
+for (const [, m] of Object.entries(migrationMap.componentMap || {})) {
+  if (m.edsType) edTypeToMapping[m.edsType] = m;
+}
+
+// AEM prop names observed per resourceType during XML/JCR parsing (feeds mapping gap analysis)
+const knownAemProps = {};
+function recordAemProps(rt, node) {
+  if (!rt) return;
+  if (!knownAemProps[rt]) knownAemProps[rt] = new Set();
+  for (const k of Object.keys(node)) {
+    const bare = k.replace(/^@/, '');
+    if (!bare.startsWith('xmlns:') && !JCR_SYS_SET.has(bare) && bare !== '#text') {
+      knownAemProps[rt].add(bare);
+    }
+  }
+}
+
+// EDS field → AEM prop name per edsType (inverse of propRenames, for write-back)
+const inversePropRenames = {};
+for (const [, m] of Object.entries(migrationMap.componentMap || {})) {
+  if (!m.edsType) continue;
+  inversePropRenames[m.edsType] = {};
+  for (const [aem, eds] of Object.entries(m.propRenames || {}))
+    inversePropRenames[m.edsType][eds] = aem;
+}
+
+function typedAemValue(edsKey, val, edsType) {
+  const field = (_modelMapCache[edsType]?.fields || []).find(f => f.name === edsKey);
+  if (field?.component === 'boolean') return `{Boolean}${val}`;
+  return val;
+}
+
+function fuzzyScore(aem, eds) {
+  const norm = s => s.replace(/^(jcr:|cq:|sling:)/, '').replace(/[-_:]/g, '').toLowerCase();
+  const na = norm(aem), ne = norm(eds);
+  if (na === ne) return 95;
+  if (na.length > 2 && ne.length > 2 && (na.includes(ne) || ne.includes(na))) return 75;
+  const words = s => s.replace(/([A-Z])/g, ' $1').toLowerCase().split(/[\s_-]+/).filter(w => w.length > 1);
+  const wa = new Set(words(na)), we = new Set(words(ne));
+  if (wa.size === 0 || we.size === 0) return 0;
+  const intersection = [...wa].filter(w => we.has(w)).length;
+  return intersection > 0 ? Math.round(50 + (intersection / Math.max(wa.size, we.size)) * 35) : 0;
+}
+
 // ── Section thumbnail directory ───────────────────────────────────────────────
 const THUMB_DIR = path.join(__dirname, 'public', 'section-thumbs');
 fs.mkdirSync(THUMB_DIR, { recursive: true });
@@ -388,35 +441,63 @@ function extractJcrProps(node) {
   return props;
 }
 
+function applyMigrationMapping(type, rt, rawProps) {
+  const mapping = migrationMap?.componentMap?.[rt] || edTypeToMapping?.[type];
+  if (!mapping) return rawProps;
+  const skipSet = new Set(mapping.skipProps || []);
+  const renames = mapping.propRenames || {};
+  const result = {};
+  for (const [k, v] of Object.entries(rawProps)) {
+    if (skipSet.has(k)) continue;
+    result[renames[k] || k] = v;
+  }
+  return result;
+}
+
 // Returns block-level children using the more lenient isBlockNode detector.
 // Also recurses one extra level to handle pages with an intermediate container
 // node ("par" parsys pattern common in older AEM migrations).
 function extractJcrBlocks(node, label) {
-  const direct = Object.values(node).filter(isBlockNode);
-  if (direct.length > 0) {
-    const blocks = direct.map(v => ({
-      type:     deriveType(v),
-      props:    extractJcrProps(v),
-      children: Object.values(v).filter(isBlockNode)
-                 .map(c => ({ type: deriveType(c), props: extractJcrProps(c), children: [] }))
-    }));
+  const directEntries = Object.entries(node).filter(([, v]) => isBlockNode(v));
+  if (directEntries.length > 0) {
+    const blocks = directEntries.map(([key, v]) => {
+      const rawType = deriveType(v);
+      const rawRt   = v['sling:resourceType'] || '';
+      recordAemProps(rawRt || rawType, v);
+      return {
+        type:     rawType,
+        _jcrKey:  key,
+        props:    applyMigrationMapping(rawType, rawRt, extractJcrProps(v)),
+        children: Object.entries(v).filter(([, c]) => isBlockNode(c)).map(([ck, c]) => {
+          const ct = deriveType(c), crt = c['sling:resourceType'] || '';
+          return { type: ct, _jcrKey: ck, props: applyMigrationMapping(ct, crt, extractJcrProps(c)), children: [] };
+        })
+      };
+    });
     if (label) console.log(`[import]   ${label} block types: [${blocks.map(b => b.type).join(', ')}]`);
     return blocks;
   }
   // Fallback: one level deeper
-  const containers = Object.values(node).filter(
-    v => v && typeof v === 'object' && !Array.isArray(v) && !isBlockNode(v) &&
-         (!v['jcr:primaryType'] || v['jcr:primaryType'] === 'nt:unstructured')
+  const containers = Object.entries(node).filter(
+    ([, v]) => v && typeof v === 'object' && !Array.isArray(v) && !isBlockNode(v) &&
+               (!v['jcr:primaryType'] || v['jcr:primaryType'] === 'nt:unstructured')
   );
-  for (const ct of containers) {
-    const nested = Object.values(ct).filter(isBlockNode);
-    if (nested.length > 0) {
-      const blocks = nested.map(v => ({
-        type:     deriveType(v),
-        props:    extractJcrProps(v),
-        children: Object.values(v).filter(isBlockNode)
-                   .map(c => ({ type: deriveType(c), props: extractJcrProps(c), children: [] }))
-      }));
+  for (const [, ct] of containers) {
+    const nestedEntries = Object.entries(ct).filter(([, v]) => isBlockNode(v));
+    if (nestedEntries.length > 0) {
+      const blocks = nestedEntries.map(([key, v]) => {
+        const rawType = deriveType(v);
+        const rawRt   = v['sling:resourceType'] || '';
+        return {
+          type:     rawType,
+          _jcrKey:  key,
+          props:    applyMigrationMapping(rawType, rawRt, extractJcrProps(v)),
+          children: Object.entries(v).filter(([, c]) => isBlockNode(c)).map(([ck, c]) => {
+            const ct2 = deriveType(c), crt = c['sling:resourceType'] || '';
+            return { type: ct2, _jcrKey: ck, props: applyMigrationMapping(ct2, crt, extractJcrProps(c)), children: [] };
+          })
+        };
+      });
       if (label) console.log(`[import]   ${label} block types (nested): [${blocks.map(b => b.type).join(', ')}]`);
       return blocks;
     }
@@ -454,17 +535,17 @@ function parseRootNode(root) {
         const [gsk, gsNode] = entries[i];
         const gsBlocks = extractJcrBlocks(gsNode, gsk);
         console.log(`[import]   grid-section ${gsk} blocks: ${gsBlocks.length}`);
-        gridSections.push({ type: 'grid-section', props: extractJcrProps(gsNode), children: gsBlocks });
+        gridSections.push({ type: 'grid-section', _jcrKey: gsk, props: extractJcrProps(gsNode), children: gsBlocks });
         i++;
       }
       if (gridSections.length > 0) {
-        sections.push({ type: 'grid-container', props: nodeProps, blocks: gridSections });
+        sections.push({ type: 'grid-container', _jcrKey: k, props: nodeProps, blocks: gridSections });
       } else {
         // No grid-section siblings: extract blocks placed directly inside the container node
         // (e.g. section_10 has a video block, section_2 has a teaser block directly inside)
         const directBlocks = extractJcrBlocks(node, k);
         console.log(`[import] ${k}(grid-container) no grid-sections, direct blocks: ${directBlocks.length}`);
-        sections.push({ type: 'grid-container', props: nodeProps, blocks: directBlocks });
+        sections.push({ type: 'grid-container', _jcrKey: k, props: nodeProps, blocks: directBlocks });
       }
     } else {
       const allBlocks = extractJcrBlocks(node, k);
@@ -472,12 +553,12 @@ function parseRootNode(root) {
       const contentBlocks  = allBlocks.filter(b => !SECTION_CONTAINER_TYPES.has(b.type));
       const nestedSections = allBlocks.filter(b =>  SECTION_CONTAINER_TYPES.has(b.type));
       console.log(`[import] section(${type}) key=${k} contentBlocks=${contentBlocks.length}, nestedSections=${nestedSections.length}`);
-      sections.push({ type, props: extractJcrProps(node), blocks: contentBlocks });
+      sections.push({ type, _jcrKey: k, props: extractJcrProps(node), blocks: contentBlocks });
       // Promote nested section containers to their own top-level canvas sections
       for (const nested of nestedSections) {
         const nestedBlocks = nested.children || [];
         console.log(`[import]   promoted nested ${nested.type} with ${nestedBlocks.length} blocks: [${nestedBlocks.map(b => b.type).join(', ')}]`);
-        sections.push({ type: nested.type, props: nested.props, blocks: nestedBlocks });
+        sections.push({ type: nested.type, _jcrKey: nested._jcrKey, props: nested.props, blocks: nestedBlocks });
       }
       i++;
     }
@@ -585,11 +666,14 @@ function extractPropsFromXmlNode(attrs, mapping, pm) {
     if (skipSet.has(key)) continue;
     if (key.startsWith('xmlns:')) continue;
     const targetKey = renames[key] || key;
-    let val = v;
+    let val = typeof v === 'string' ? v.replace(/^\{[A-Za-z]+\}/, '') : v;
     if (val !== null && typeof val === 'object') continue; // child nodes, not attributes
+    if (typeof val === 'string' && val.startsWith('[') && val.endsWith(']')) {
+      val = val.slice(1, -1).trim();
+    }
     if (invertSet.has(key)) {
-      if (val === 'true' || val === '{Boolean}true')   val = 'false';
-      else if (val === 'false' || val === '{Boolean}false') val = 'true';
+      if (val === 'true')  val = 'false';
+      else if (val === 'false') val = 'true';
     }
     if (val !== '' && val !== null && val !== undefined) props[targetKey] = transformPath(val, pm);
   }
@@ -610,7 +694,11 @@ function collectChildItems(node, mapping) {
       const bareKey = pk.replace(/^@/, '');
       if (childSkip.has(bareKey) || bareKey.startsWith('xmlns:')) continue;
       if (Object.prototype.hasOwnProperty.call(childPropRen, bareKey) && pv !== '' && pv !== null && pv !== undefined) {
-        itemProps[childPropRen[bareKey]] = transformPath(pv, pathMap);
+        let cleanPv = typeof pv === 'string' ? pv.replace(/^\{[A-Za-z]+\}/, '') : pv;
+        if (typeof cleanPv === 'string' && cleanPv.startsWith('[') && cleanPv.endsWith(']')) {
+          cleanPv = cleanPv.slice(1, -1).trim();
+        }
+        itemProps[childPropRen[bareKey]] = transformPath(cleanPv, pathMap);
       }
     }
     items.push({ type: mapping.childType, props: itemProps, children: [] });
@@ -643,6 +731,7 @@ function walkXmlNode(node, ordered, depth = 0) {
       continue;
     }
     const mapping  = migrationMap.componentMap[rt];
+    recordAemProps(rt, child);
     const props    = extractPropsFromXmlNode(child, mapping, pathMap);
     // Allow a prop value to select a different EDS block type (e.g. videoType=youtube → "video")
     const propEdsType = mapping?.propEdsType;
@@ -817,6 +906,156 @@ app.post('/api/migration-map', express.json(), (req, res) => {
     fs.writeFileSync(path.join(__dirname, 'migration-map.json'), JSON.stringify(existing, null, 2), 'utf8');
     migrationMap.componentMap = existing.componentMap; // reload in memory immediately
     res.json({ ok: true });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.post('/api/write-to-aem', express.json(), async (req, res) => {
+  try {
+  const { aemHost, username, password, changes } = req.body;
+  if (!aemHost || !username || !password || !Array.isArray(changes))
+    return res.status(400).json({ error: 'aemHost, username, password and changes[] required' });
+  const auth = Buffer.from(`${username}:${password}`).toString('base64');
+
+  // Load component config once — needed for sling:resourceType, aueComponentId, modelFields, filter
+  let compMap = {}, modelFieldsMap = {}, filterMap = {};
+  try { ({ compMap, modelFieldsMap, filterMap } = loadConfig()); } catch (_) {}
+
+  const results = [];
+  for (const change of changes) {
+    const inv  = inversePropRenames[change.blockType] || {};
+    const body = new URLSearchParams();
+
+    if (change.isNew) {
+      const isSection = !!change.isSection;
+      const comp      = compMap[change.blockType] || {};
+      const defaultRt = isSection
+        ? 'core/franklin/components/section/v1/section'
+        : 'core/franklin/components/block/v1/block';
+
+      // 1. Structural props required by Universal Editor
+      body.set('jcr:primaryType', 'nt:unstructured');
+      body.set('sling:resourceType', comp?.plugins?.xwalk?.page?.resourceType || defaultRt);
+      if (change.blockType) {
+        body.set('model', change.blockType);
+        body.set('aueComponentId', change.blockType);
+      }
+
+      // 2. modelFields — multi-value String[] of "fieldName@componentType"
+      const mf = modelFieldsMap[change.blockType];
+      if (mf?.length) {
+        for (const f of mf) body.append('modelFields', f);
+        body.set('modelFields@TypeHint', 'String[]');
+      }
+
+      // 3. Template defaults from component-definition.json
+      //    This is the same object makeNode() spreads when generating a new page.
+      //    It carries: name (UE content tree label), filter (allowed children),
+      //    language, blockId, and any other block-specific defaults.
+      const tpl = comp?.plugins?.xwalk?.page?.template || {};
+      for (const [k, v] of Object.entries(tpl)) {
+        if (v === null || v === undefined) continue;
+        if (typeof v === 'boolean') {
+          body.set(k, `{Boolean}${v}`);
+        } else if (Array.isArray(v)) {
+          for (const item of v) body.append(k, String(item));
+          if (v.length) body.set(`${k}@TypeHint`, 'String[]');
+        } else if (String(v) !== '') {
+          body.set(k, String(v));
+        }
+      }
+
+      // 4. filter — sections need this so UE knows which blocks are allowed inside.
+      //    Blocks that are containers (accordion, cards, etc.) get their filter from
+      //    the template above; we only add a fallback here for plain sections.
+      if (isSection && !body.has('filter')) {
+        body.set('filter', filterMap[change.blockType] !== undefined ? change.blockType : 'section');
+      }
+
+      // 5. Actual field props (override template defaults with canvas values)
+      for (const [edsKey, val] of Object.entries(change.newProps || {})) {
+        if (String(edsKey).startsWith('_')) continue;
+        const aemKey = inv[edsKey] || edsKey;
+        body.set(aemKey, typedAemValue(edsKey, String(val ?? ''), change.blockType));
+      }
+    } else {
+      // Updating existing node — only send changed props
+      for (const [edsKey, { new: newVal }] of Object.entries(change.changedProps || {})) {
+        const aemKey = inv[edsKey] || edsKey;
+        body.set(aemKey, typedAemValue(edsKey, String(newVal ?? ''), change.blockType));
+      }
+    }
+
+    try {
+      const url = `${aemHost.replace(/\/+$/, '')}${change.jcrPath}`;
+      const r = await fetch(url, {
+        method: 'POST',
+        headers: { Authorization: `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString()
+      });
+      results.push({ jcrPath: change.jcrPath, ok: r.ok, status: r.status });
+    } catch (e) {
+      results.push({ jcrPath: change.jcrPath, ok: false, error: e.message });
+    }
+  }
+  res.json({ results });
+  } catch (err) {
+    console.error('[write-to-aem] unhandled error:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/mapping-gap', (req, res) => {
+  try {
+    const { rt, edsType } = req.query;
+    const { modelMap } = loadConfig();
+    const mapping = migrationMap.componentMap?.[rt] || {};
+    const renames = mapping.propRenames || {};
+
+    // All known AEM props: observed during parsing + explicit renames + skipProps
+    const seen = knownAemProps[rt] ? [...knownAemProps[rt]] : [];
+    const allAemProps = [...new Set([...seen, ...Object.keys(renames), ...(mapping.skipProps || [])])].sort();
+
+    // EDS fields for this type
+    const model = modelMap[edsType];
+    const edsFields = (model?.fields || [])
+      .filter(f => f.component !== 'tab' && f.component !== 'container' &&
+                   f.component !== 'custom-asset-namespace:custom-asset-mimetype')
+      .map(f => ({ name: f.name, label: f.label || f.name, component: f.component }));
+
+    const mappedEdsValues = new Set(Object.values(renames));
+    const mappedAemKeys   = new Set(Object.keys(renames));
+    const skippedAem      = new Set(mapping.skipProps || []);
+
+    const unmappedAemRaw = allAemProps.filter(p => !mappedAemKeys.has(p) && !skippedAem.has(p));
+    const unmappedEdsRaw = edsFields.filter(f => !mappedEdsValues.has(f.name));
+
+    // Fuzzy suggestions (greedy best-match)
+    const suggestions = [];
+    const usedEds = new Set();
+    for (const aemProp of unmappedAemRaw) {
+      let bestMatch = null, bestScore = 0;
+      for (const edsField of unmappedEdsRaw) {
+        if (usedEds.has(edsField.name)) continue;
+        const score = fuzzyScore(aemProp, edsField.name);
+        if (score > bestScore) { bestScore = score; bestMatch = edsField.name; }
+      }
+      if (bestMatch && bestScore >= 40) {
+        suggestions.push({ aemProp, edsField: bestMatch, score: bestScore });
+        usedEds.add(bestMatch);
+      }
+    }
+
+    const suggestedAem = new Set(suggestions.map(s => s.aemProp));
+    const suggestedEds = new Set(suggestions.map(s => s.edsField));
+
+    res.json({
+      aemProps: allAemProps,
+      edsFields,
+      currentRenames: renames,
+      suggestions,
+      unmappedAem: unmappedAemRaw.filter(p => !suggestedAem.has(p)),
+      unmappedEds: unmappedEdsRaw.filter(f => !suggestedEds.has(f.name))
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
 

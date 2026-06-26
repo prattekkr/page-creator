@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-06-13T09:47:26.409-04:00"
+        cq:lastModifiedBy="JADHASX13"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-05-16T11:47:41.839-04:00"
+        jcr:lastModifiedBy="KANCHRX3"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Card Story Coming Soon"
+        jcr:uuid="d2a1f026-c441-490d-b9cc-92d88327fdbc"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="learn more"
+        description="Template for cards which are pointing to pages that are deleted."
+        navTitle="Card Story Coming Soon"
+        pageTitle="Card Story Coming Soon"
+        title="Card story coming soon!">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-06-13T09:46:56.236-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/header/australia-header-english"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-05-16T07:21:54.548-04:00"
+                        jcr:lastModifiedBy="KANCHRX3"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835861,1653545825685,1653545847150,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-05-16T07:23:15.855-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Card Story Coming Soon"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-05-16T07:22:51.498-04:00"
+                                jcr:lastModifiedBy="KANCHRX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-06-13T09:47:26.406-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/footer/australia-footer-english"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

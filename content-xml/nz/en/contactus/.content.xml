@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-10T15:30:07.942-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="If you would like to send us a question or comment, please fill out the form."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-02-07T14:51:38.487-05:00"
+        jcr:lastModifiedBy="chiucx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Contact Us"
+        jcr:uuid="b948e6c0-5c02-43e2-8425-ece2c59a48b6"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        sling:sitemapRoot="includeSitemapNoCanonical"
+        hideInNav="true"
+        pageTitle="Contact us"
+        sitemapFrequency="yearly">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-06-16T09:20:24.668-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nz/en/site/header/new-zealand-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2023-01-09T13:35:49.987-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-01-06T16:43:21.895-05:00"
+                                jcr:lastModifiedBy="millicx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Contact Us"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-12-18T01:57:58.098-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Welcome&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>AbbVie is here to help.&lt;br>&#xd;&#xa;Find the information you need or get in touch with us.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:created="{Date}2023-01-09T13:36:14.404-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-09T13:40:47.517-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <text_1126842196_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2025-12-15T09:05:39.269-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2025-12-15T09:20:15.605-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>AbbVie Limited&amp;nbsp;&lt;br>&#xd;&#xa;&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>L6, 156-158 Victoria Street&lt;br>&#xd;&#xa; Wellington&lt;br>&#xd;&#xa; PO Box 11437, Manners Street&lt;br>&#xd;&#xa; Wellington&lt;br>&#xd;&#xa; Telephone: 0800 900 030&lt;br>&#xd;&#xa; Fax:&amp;nbsp;+64 9 353 1680&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; If you are experiencing a&lt;b>&amp;nbsp;medical emergency&lt;/b>, please call 111. If you require&amp;nbsp;&lt;b>medical advice,&lt;/b> please contact your doctor or other healthcare professional.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator_copy
+                                jcr:created="{Date}2025-12-15T09:03:43.989-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2025-12-15T09:03:43.989-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <accordion_copy
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2025-12-15T09:39:34.234-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2025-12-15T09:42:26.361-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                singleExpansion="false">
+                                <item_1765809610130
+                                    cq:panelTitle="Patients &amp; Carers"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2025-12-23T11:49:24.617-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Putting patients first.&lt;br>&#xd;&#xa;We’re providing broader support to help ensure patients have the information and support they need.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Consumer Medicine Information (CMI)&lt;/b>&amp;nbsp;provides important information about your medicine. Access the&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/nz/en/patients/products.html&quot;>New Zealand Consumer Medicine Information (CMI) for AbbVie products&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>For&amp;nbsp;&lt;b>enquiries&lt;/b>&amp;nbsp;regarding an AbbVie product, please contact our Medical Information team at&amp;nbsp;&lt;a href=&quot;mailto:medinfoanz@abbvie.com&quot;>medinfoanz@abbvie.com&lt;/a>&amp;nbsp;or call&amp;nbsp;0800 900 030&lt;/li>&#xd;&#xa;&lt;li>For medical advice, please consult your healthcare professional.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1765809612690
+                                    cq:panelTitle="Healthcare Professionals"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-01-06T02:10:55.039-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Unwavering in our commitment to bring the best science to patients worldwide.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>For&amp;nbsp;all HCP enquiries&amp;nbsp;including finding your AbbVie representative, please call&lt;br>&#xd;&#xa;0800 900 030&amp;nbsp;or email&amp;nbsp;&lt;a href=&quot;mailto:supportanz@abbvie.com&quot;>supportanz@abbvie.com&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>Access the&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/nz/en/patients/products.html&quot;>New Zealand Data Sheet for AbbVie products&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>Access a dedicated&amp;nbsp;Healthcare Professional portal,&amp;nbsp;&lt;a href=&quot;https://www.abbviepro.com/nz/en.html&quot;>AbbVie Pro&lt;/a>&amp;nbsp;providing streamlined access to AbbVie product &amp;amp; patient resources, medical education based on expert insights, congress coverage and research publications.&lt;/li>&#xd;&#xa;&lt;li>Clinical trials -&amp;nbsp;&lt;a href=&quot;https://www.abbvie.co.nz/our-science/clinical-trials.html&quot;>explore how we turn our research into reality&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1765809615496
+                                    cq:panelTitle="Wholesalers &amp; Direct Accounts"
+                                    jcr:lastModified="{Date}2025-12-15T09:45:42.047-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Creating partnerships that make a difference.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>For enquiries regarding&amp;nbsp;orders and supply&amp;nbsp;please contact our distribution and warehousing partner Healthcare Logistics&amp;nbsp;&lt;a href=&quot;mailto:orders@healthcarelogistics.co.nz&quot;>orders@healthcarelogistics.co.nz&lt;/a>&amp;nbsp;or call&lt;br>&#xd;&#xa;0800 222 843&lt;/li>&#xd;&#xa;&lt;li>For questions concerning&amp;nbsp;invoice status or payment, please email&amp;nbsp;Accounts Receivable&amp;nbsp;at&amp;nbsp;&lt;a href=&quot;mailto:receivable.go-accounts@abbvie.com&quot;>Receivable.GO-Accounts@abbvie.com&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>For&amp;nbsp;Allergan Aesthetics&amp;nbsp;please call 0800 659 912, email&amp;nbsp;&lt;a href=&quot;mailto:NZenquiries@allergan.com&quot;>NZenquiries@allergan.com&lt;/a>&amp;nbsp;or go to&amp;nbsp;&lt;a href=&quot;http://www.allergan.co.nz/&quot;>http://allerganaesthetics.co.nz&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1765809618591
+                                    cq:panelTitle="Report an adverse event or product complaint"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-01-19T05:39:50.757-05:00"
+                                    jcr:lastModifiedBy="nandivx5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;ul>&#xd;&#xa;&lt;li>If you are experiencing a&amp;nbsp;medical emergency,&amp;nbsp;please call 111. If you require&amp;nbsp;medical advice, please contact your doctor or other healthcare professional.&lt;/li>&#xd;&#xa;&lt;li>To report an&amp;nbsp;Adverse Event&amp;nbsp;in relation to the use of an AbbVie product please email&amp;nbsp;&lt;a href=&quot;mailto:anzpv@abbvie.com&quot;>anzpv@abbvie.com&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>To report a&amp;nbsp;Product Complaint&amp;nbsp;in relation to the use of an AbbVie product please email&amp;nbsp;&lt;a href=&quot;mailto:productcomplaints-anz@abbvie.com&quot;>productcomplaints-anz@abbvie.com&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>For&amp;nbsp;safety information&amp;nbsp;please refer to the relevant product’s&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/nz/en/patients/products.html&quot;>Consumer Medicine Information&amp;nbsp;&lt;/a>for patients and&amp;nbsp;&lt;a href=&quot;https://www.abbvie.co.nz/our-science/products.html&quot;>Product Information&lt;/a>&amp;nbsp;for healthcare professionals.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1765809621502
+                                    cq:panelTitle="Careers"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2025-12-15T09:46:38.777-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie employees work every day to help discover solutions to address many of the world's most pressing health challenges.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Visit&amp;nbsp;&lt;a href=&quot;https://www.abbvie.co.nz/careers.html&quot;>Explore Careers&lt;/a>&amp;nbsp;to search for current opportunities.&lt;/li>&#xd;&#xa;&lt;li>For career related enquiries email&amp;nbsp;&lt;a href=&quot;mailto:careersanz@abbvie.com&quot;>careersanz@abbvie.com&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1765809626000
+                                    cq:panelTitle="Media"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2025-12-23T11:54:15.767-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;ul>&#xd;&#xa;&lt;li>For media-related enquiries, please contact Corporate Communications Australia an&lt;br>&#xd;&#xa;New Zealand at&amp;nbsp;&lt;a href=&quot;mailto:media_ANZ@abbvie.com&quot;>media_ANZ@abbvie.com&lt;/a>&amp;nbsp;or go to the&amp;nbsp;&lt;a href=&quot;/content/abbvie-com2/nz/en/media.html&quot;>AbbVie Media page&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </accordion_copy>
+                            <separator_384918528_
+                                jcr:created="{Date}2025-12-15T09:39:06.310-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2025-12-15T09:39:06.310-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <text_1967511005_copy_1468619426
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2025-12-15T09:48:03.772-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2025-12-15T09:48:19.554-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p style=&quot;text-align: center;&quot;>NZ-ABBV-240011&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </par_12>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="2"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <header_copy
+                                jcr:created="{Date}2023-01-09T13:38:10.996-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-01-09T13:38:20.087-05:00"
+                                jcr:lastModifiedBy="millicx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="Helpful Links"/>
+                            <separator_copy
+                                cq:styleIds="[1662756756047]"
+                                jcr:created="{Date}2023-01-09T13:38:31.499-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-01-09T13:38:31.499-05:00"
+                                jcr:lastModifiedBy="millicx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1307494722
+                                cq:styleIds="[1662756409908]"
+                                jcr:created="{Date}2023-01-09T13:40:17.759-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2023-01-09T13:40:17.759-05:00"
+                                jcr:lastModifiedBy="millicx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <linklist_copy_copy_c
+                                jcr:created="{Date}2023-01-09T13:38:47.773-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2026-06-10T15:30:07.922-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                childDepth="1"
+                                excludeCurrentPage="true"
+                                linkItems="true"
+                                linksTarget="_self"
+                                listFrom="static"
+                                showDate="false"
+                                showDesc="false"
+                                showSubtitle="false"
+                                showTags="false"
+                                sortOrder="asc"
+                                tagsMatch="any"
+                                textIsRich="[true,true,true]">
+                                <pages jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Privacy Center"
+                                        linkTarget="_blank"
+                                        linkURL="https://privacy.abbvie"
+                                        oneTrustEnabled="false"
+                                        text="Privacy Center"
+                                        textIconTarget="_self"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Remove my data"
+                                        linkTarget="_blank"
+                                        linkURL="https://abbv.force.com/AbbvieDSRM/s/?language=en_US"
+                                        oneTrustEnabled="false"
+                                        text="Remove my data"
+                                        textIconTarget="_self"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        linkTarget="_blank"
+                                        linkURL="/content/dam/abbvie-com2/nz/documents/AbbVie-Allergan-NZ-Terms-and-Conditions-of-Sale-final-April-2023.pdf"
+                                        oneTrustEnabled="false"
+                                        text="TCs of Sale"
+                                        textIconTarget="_self"/>
+                                </pages>
+                            </linklist_copy_copy_c>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-06-16T09:21:20.282-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nz/en/site/footer/new-zealand-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <thank-you/>
+    <failure/>
+</jcr:root>

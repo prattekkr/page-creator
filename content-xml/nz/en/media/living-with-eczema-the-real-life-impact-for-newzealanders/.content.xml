@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-18T01:12:18.114-05:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-02-18T01:12:18.100-05:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Living with Eczema: the real life impact for New Zealanders"
+        jcr:uuid="fdb99d76-6e9a-443e-a0d9-75d5b5a7f739"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Download report"
+        ctaText="Download report"
+        description="A new report has found that eczema symptoms cause negative impacts on the physical and mental health of patients."
+        eyebrow="Media"
+        fileReference="/content/dam/abbvie-com2/nz/images/Eczema-Post-3.png"
+        navTitle="Living with Eczema: the real life impact for New Zealanders"
+        pageTitle="Living with Eczema: the real life impact for New Zealanders"
+        title="Living with Eczema">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-01-09T10:00:18.811-05:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nz/en/site/header/new-zealand-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2026-01-09T10:04:54.699-05:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2026-01-09T10:01:08.770-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Living with Eczema: the real life impact for New Zealanders"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2026-01-09T10:09:03.602-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-01-09T10:11:35.366-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>&lt;a href=&quot;/content/dam/abbvie-com2/nz/documents/living-with-eczema-survey-report-june-2024.pdf&quot;>Download the report&lt;/a>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container2>
+                    <container_871640861
+                        cq:styleIds="[1653545825687,1653545847150]"
+                        jcr:created="{Date}2026-01-09T10:01:35.196-05:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2026-01-09T10:01:55.809-05:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false">
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2026-01-09T10:02:09.896-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-02-17T10:12:44.350-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>A new report has found that eczema symptoms cause negative impacts on the physical and mental health of patients.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;AbbVie in collaboration with the Eczema Association of New Zealand is proud to release results of the largest survey on the lived experience of New Zealanders with eczema.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The survey reveals the daily struggle for Kiwis who face significant physical, emotional, economic, and social impacts caused by eczema.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Access the report here: &lt;a href=&quot;https://bit.ly/3MEcIT2&quot; title=&quot;ttps://bit.ly/3MEcIT2&quot;>https://bit.ly/3MEcIT2&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;For information about eczema talk to your doctor. &lt;br>&#xd;&#xa;TAPS BG4243&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_871640861>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2026-01-09T10:05:59.244-05:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nz/en/site/footer/new-zealand-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

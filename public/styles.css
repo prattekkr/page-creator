@@ -876,3 +876,56 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .style-group-select   { flex: 1; font-size: 11px; }
 .style-checks         { display: flex; flex-wrap: wrap; gap: 4px 10px; flex: 1; }
 .style-check-label    { font-size: 11px; display: flex; align-items: center; gap: 3px; cursor: pointer; }
+
+/* ── Publish to AEM modal ────────────────────────────────────────────────── */
+.pub-modal          { width: 580px; max-width: 95vw; max-height: 80vh; display: flex; flex-direction: column; }
+.pub-modal-body     { overflow-y: auto; flex: 1; padding: 12px 16px; display: flex; flex-direction: column; gap: 10px; }
+.pub-node           { border: 1px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 8px 10px; }
+.pub-node-label     { display: flex; align-items: center; gap: 8px; cursor: pointer; margin-bottom: 4px; }
+.pub-type-badge          { font-size: .68rem; font-weight: 600; background: #ede9fe; color: #5b21b6;
+                           border-radius: 10px; padding: 1px 7px; }
+.pub-type-badge--new     { background: #dcfce7; color: #15803d; }
+.pub-path           { font-size: .72rem; font-family: var(--font-mono, monospace); color: var(--color-text-secondary); }
+.pub-props          { display: flex; flex-direction: column; gap: 3px; padding-left: 22px; }
+.pub-prop           { display: flex; align-items: baseline; gap: 6px; font-size: .72rem; flex-wrap: wrap; }
+.pub-key            { font-family: var(--font-mono, monospace); font-weight: 500; color: var(--color-text-primary); min-width: 100px; }
+.pub-old            { color: #dc2626; text-decoration: line-through; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pub-arrow          { color: var(--color-text-secondary); }
+.pub-new            { color: #16a34a; font-weight: 500; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.btn-secondary        { background: #f3f4f6; color: var(--color-text-primary); border: 1px solid var(--color-border-secondary); }
+.btn-secondary:hover  { background: #e5e7eb; }
+.btn-publish-aem      { background: #16a34a; color: #fff; border: none; font-weight: 600; letter-spacing: .02em; }
+.btn-publish-aem:hover { background: #15803d; }
+
+/* ── Mapping gap analysis (inline in migration map settings) ─────────────── */
+.gap-wrap            { margin-top: 10px; border-top: 1px solid var(--color-border-tertiary); padding-top: 8px; }
+.gap-title           { font-size: .72rem; font-weight: 500; color: var(--color-text-secondary);
+                       margin-bottom: 6px; display: flex; align-items: center; }
+.gap-section         { margin-bottom: 6px; }
+.gap-section-label   { font-size: .65rem; font-weight: 700; text-transform: uppercase;
+                       letter-spacing: .05em; margin-bottom: 3px; }
+.gap-section--suggest .gap-section-label { color: #b45309; }
+.gap-section--aem    .gap-section-label  { color: #6b7280; }
+.gap-section--eds    .gap-section-label  { color: #2563eb; }
+.gap-row             { display: flex; align-items: center; gap: 6px; font-size: .72rem;
+                       padding: 2px 0; flex-wrap: wrap; }
+.gap-aem-prop        { font-family: var(--font-mono, monospace); color: var(--color-text-primary);
+                       background: #fef3c7; border-radius: 3px; padding: 0 4px; }
+.gap-eds-prop        { font-family: var(--font-mono, monospace); color: var(--color-text-primary);
+                       background: #dbeafe; border-radius: 3px; padding: 0 4px; }
+.gap-arr             { color: var(--color-text-secondary); }
+.gap-score           { font-size: .65rem; padding: 1px 5px; border-radius: 10px; font-weight: 600; }
+.gap-score--high     { background: #d1fae5; color: #065f46; }
+.gap-score--med      { background: #fef9c3; color: #854d0e; }
+.gap-score--low      { background: #fee2e2; color: #991b1b; }
+.gap-no-match        { font-size: .65rem; color: #9ca3af; font-style: italic; }
+.gap-label           { color: var(--color-text-secondary); font-size: .68rem; }
+.gap-component       { font-size: .65rem; color: #9ca3af; font-style: italic; }
+.gap-no-type, .gap-loading { font-size: .72rem; color: var(--color-text-secondary);
+                              padding: 6px 0; margin-top: 8px; border-top: 1px dashed var(--color-border-tertiary); }
+
+/* ── Unmapped (AEM-only) properties ──────────────────────────────────────── */
+.unmapped-section  { margin-top: 10px; border-top: 1px dashed #e5e7eb; padding-top: 8px; }
+.unmapped-header   { font-size: 10px; font-weight: 700; color: #9ca3af;
+                     text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+.unmapped-prop     { font-size: 11px; background: #f9fafb; color: #6b7280; }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/abbvie-com2/settings/wcm/templates/(?!xf-).*]"
+        cq:lastModified="{Date}2023-06-21T02:02:17.964-04:00"
+        cq:lastModifiedBy="JADHASX13"
+        cq:redirectTarget="/content/abbvie-com2/in/en"
+        cq:siteOwner="admin"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="India"
+        jcr:uuid="cd7d6124-3425-448e-9cc8-783a2949ddb2"
+        sling:resourceType="abbvie-com2/components/page"/>
+    <en/>
+</jcr:root>

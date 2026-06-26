@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-01-23T04:30:42.018-05:00"
+        cq:lastModifiedBy="nandivx5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/category-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-01-23T04:30:42.002-05:00"
+        jcr:lastModifiedBy="nandivx5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Life at AbbVie Stories"
+        jcr:uuid="dc3fba4a-ccad-4b41-b1ce-9833fe695dfc"
+        sling:resourceType="abbvie-com2/components/categorypage"
+        ctaAltText="Learn more"
+        ctaText="Learn more"
+        eyebrow="Our-Stories"
+        hideInNav="true"
+        navTitle="Life at AbbVie Stories"
+        pageTitle="Life at AbbVie Stories"
+        title="Life at AbbVie Stories">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-01-23T04:29:23.511-05:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nz/en/site/header/new-zealand-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-07T11:19:09.239-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#8A2ECC"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459]"
+                                jcr:lastModified="{Date}2026-01-23T04:29:52.463-05:00"
+                                jcr:lastModifiedBy="nandivx5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nz/en/who-we-are/our-stories"/>
+                            <title
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-27T17:27:20.806-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Life at AbbVie Stories"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-01-27T17:42:25.789-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Curiosity and collaboration are essential to what we do. So, we foster an inclusive, supportive environment that empowers people to ask questions, think big and build on each other's best ideas.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <editorialfeed
+                            jcr:lastModified="{Date}2023-01-07T11:19:36.051-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/editorialfeed/v1/editorialfeed"
+                            listFrom="tags"
+                            tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+                            tagsMatch="any"
+                            tagsSearchRoot="/content/abbvie-com2/us/en/who-we-are/our-stories"/>
+                    </container2>
+                    <separator_copy_copy_
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2022-12-27T20:18:03.710-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2022-12-27T20:18:03.710-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2026-01-23T04:29:37.535-05:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nz/en/site/footer/new-zealand-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

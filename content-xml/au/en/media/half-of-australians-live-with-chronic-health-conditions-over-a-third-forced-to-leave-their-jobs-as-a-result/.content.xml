@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-04-07T11:36:16.314-04:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-04-06T09:56:06.830-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Half of australians live with chronic health conditions, over a third forced to leave their jobs as a result"
+        jcr:uuid="cfac22ff-21d3-4888-8198-479d101e3919"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Learn more"
+        ctaText="Learn more"
+        hideInNav="true"
+        navTitle="Half of australians live with chronic health conditions, over a third forced to leave their jobs as a result"
+        pageTitle="Half of australians live with chronic health conditions, over a third forced to leave their jobs as a result"
+        publishDate="{Date}2024-12-24T12:40:00.000+05:30"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="Half of australians live with chronic health conditions, over a third forced to leave their jobs as a result">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-01-21T02:10:45.378-05:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/header/australia-header-english"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2026-01-21T02:10:58.337-05:00"
+                        jcr:lastModifiedBy="nandivx5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2026-02-26T09:05:58.521-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Media"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/au/en/media"/>
+                            <storyinfo
+                                jcr:created="{Date}2026-04-06T16:12:57.739-04:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-04-06T16:13:39.857-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"
+                                hideReadWatchTime="true"
+                                hideTag="true"/>
+                            <title_copy
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2025-10-03T05:26:43.303-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Half of Australians live with chronic health conditions, over a third forced to leave their jobs as a result"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-10-03T05:26:18.544-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;i>Patient advocates call for more support for Australian workers living with a chronic condition/s following the release of a new insights report&lt;/i>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825686]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-10-03T05:29:10.537-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2025-10-03T05:32:57.641-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>SYDNEY, AUSTRALIA (4 December 2024):&lt;/b>&amp;nbsp;A new report released today has found that of the one in two Australians living with a chronic health condition/s, over a third (37%) have left a job due to their condition/s. The two leading reasons individuals leave are: stress from work exacerbating their condition/s (56%); and lack of support in the workplace (44%).&lt;/p>&#xd;&#xa;&lt;p>The new Insights Report: Working Well – Creating Workplace Cultures to Unlock the Full Capabilities of Australians Living with Chronic Health Conditions, commissioned by AbbVie, explores the experiences of Australians in the workforce living with chronic health conditions. In addition, the report analyses the broader attitudes of Australians in the workplace towards working with and supporting those with a chronic condition/s, and where opportunities lie to improve or introduce workplace education and support measures.&lt;/p>&#xd;&#xa;&lt;p>The report uncovered that stigma and discrimination towards those living with a chronic condition/s is still highly prevalent in Australian workplaces, with almost one in five (19%) of Australian workers with a chronic health condition admitting they left their job because they were discriminated against.&lt;/p>&#xd;&#xa;&lt;p>Concerningly, 77% of Australian workers believe individuals living with a chronic condition/s experience discrimination and stigma at work, and fear of stigma and discrimination is the most common reason those living with a chronic condition/s do not disclose their condition/s to their employers (51%).&lt;/p>&#xd;&#xa;&lt;p>Deidre Mackechnie, Executive Officer at the Australian Patient Advocacy Alliance (APAA), said: “The Working Well Insights Report launched today provides crucial insights into the unique experiences and challenges of Australian workers living with chronic health conditions: including why individuals may or may not choose to disclose their condition; where workers go to for advice and support; and the impact their condition/s have on career planning and progression.”&lt;/p>&#xd;&#xa;&lt;p>“The report also highlights the key areas that Australian workers believe their employers can do more to support people with chronic conditions, such as improving flexible working hours, support to take time for medical appointments or treatments and workplace policies to support individuals.&lt;/p>&#xd;&#xa;&lt;p>“We understand that every individual has their own unique needs based on their condition, and there is no standard workplace policy or support measure that will cater to all these needs. However, our hope is that this report can be used to start a conversation in the workplace on how employers and co-workers can better support those with chronic conditions and that these conversations will help to reduce the stigma and discrimination these individuals face,” said Ms Mackechnie.&lt;/p>&#xd;&#xa;&lt;p>Positively, data in the report shows a clear consensus from the broader Australian workforce that it is important for people with a chronic health condition to have opportunities to stay in the workforce (85%)2. More than four in five (83%) want training to learn how to support better individuals living with a chronic condition at work.&lt;/p>&#xd;&#xa;&lt;p>Nathalie McNeil,&amp;nbsp;Vice President and General Manager of AbbVie Australia &amp;amp; New Zealand, said: “We know that the burden of chronic health conditions is continuing to rise, with data released earlier this month showing Australia spent $82 billion on chronic health conditions between 2022 and 2023. However, there has been little research into the role workplaces play to maximise workplace participation, especially for those living with chronic health conditions, to help reduce the financial, social and emotional burden.”&lt;/p>&#xd;&#xa;&lt;p>Australia’s expenditure on managing chronic health conditions accounted for nearly half (48%) of total healthcare expenditure in 2022-23. Furthermore, from 2013–14 to 2022–23, total spending on disease and injury rose by $70.5 billion, 54% of which was driven by increase in spending for chronic conditions.&lt;/p>&#xd;&#xa;&lt;p>“At AbbVie, we are committed to providing a welcoming environment for all our employees, including those living with chronic conditions. We are using the findings of the Working Well report to explore how we can better support those colleagues living with chronic health condition/s in order to create a more inclusive and supportive workplace for all employees.&lt;/p>&#xd;&#xa;&lt;p>“In 2025 we aim to work with other employers and organisations to discuss how we can better support Australians living and working with a chronic condition/s,” said Ms McNeil.&lt;/p>&#xd;&#xa;&lt;p>The full Insights Report: Working Well – Creating Workplace Cultures to Unlock the Full Capabilities of Australians Living with Chronic Health Conditions is available here.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>About AbbVie&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>AbbVie’s mission is to discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow. We strive to have a remarkable impact on people’s lives across several key therapeutic areas: immunology, oncology, neuroscience, eye care, virology, and gastroenterology, in addition to products and services across its Allergan Aesthetics portfolio. For more information about AbbVie, please visit us at www.abbvie.com.au. Follow @abbvie_AU on Twitter, Facebook, Instagram, or our LinkedIn page.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;b>For media enquiries please contact:&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Lucinda Mirabello&lt;br>&#xd;&#xa;HAVAS Red&amp;nbsp;&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:lucinda.mirabello@havasred.com&quot;>lucinda.mirabello@havasred.com&lt;/a>&lt;br>&#xd;&#xa;0432 597 768&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Edwina Elliott&lt;br>&#xd;&#xa;AbbVie Australia&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:edwina.elliott@abbvie.com&quot;>edwina.elliott@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;0439 578 865&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2026-01-21T02:14:12.582-05:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/footer/australia-footer-english"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

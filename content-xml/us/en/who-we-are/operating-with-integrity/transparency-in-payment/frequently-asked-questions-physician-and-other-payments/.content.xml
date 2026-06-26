@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-03T10:42:26.303-04:00"
+        cq:lastModifiedBy="SHARMRX18"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Please see below for answers to some of our most frequently asked questions."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2022-12-27T13:06:22.101-05:00"
+        jcr:lastModifiedBy="millicx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Frequently Asked Questions: Physician &amp; other payments"
+        jcr:uuid="41221040-bd30-4b49-bd91-ffa185a3f084"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        navTitle="Physician &amp; other payments FAQs"
+        pageTitle="Physician &amp; other payments FAQs">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2022-12-09T19:07:01.860-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835861,1653545825685,1653545847150,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,,,1661545829678,,]"
+                                jcr:lastModified="{Date}2025-10-06T15:14:05.929-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Physician Payments Sunshine Act FAQs"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,,,]"
+                                jcr:lastModified="{Date}2025-10-06T15:14:21.911-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Please see below for answers to some of our most frequently asked questions.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <accordion_copy
+                        cq:styleIds="[4,8]"
+                        jcr:created="{Date}2022-12-10T16:02:03.886-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2025-10-06T16:29:06.489-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                        headingElement="h5"
+                        singleExpansion="false">
+                        <item_1671751757225
+                            cq:panelTitle="What is the Physician Payments Sunshine Act (the “Sunshine Act”) referred to as the Open Payments program?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T15:46:41.286-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>The Sunshine Act requires pharmaceutical and medical device companies to report data to the Center for Medicare &amp;amp; Medicaid Services (CMS) about certain payments and transfers of value provided to certain healthcare professionals and teaching hospitals, known as “covered recipients” under the law.&amp;nbsp; The Sunshine Act was enacted as a section of the Patient Protection and Affordable Care Act of 2010. Congress passed the Sunshine Act in the interest of providing greater transparency in financial interactions between the health care industry and health care professionals.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1670707211154
+                            cq:panelTitle="Who is a Covered Recipient?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T16:30:16.292-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Covered Recipients include US licensed physicians and certain non-physician practitioners, along with teaching hospitals that receive, among other things, Medicare direct graduate medical education or indirect medical education payments.&lt;/p>&#xd;&#xa;&lt;p>Under the Sunshine Act, “physician” is defined as a physician, osteopath, dentist, dental surgeon, podiatrist, ophthalmologist or chiropractor who holds an active state license to practice in the United States (including Puerto Rico).&amp;nbsp; Additional Covered Recipients were added in January 2021. &amp;nbsp;Since then, the following non-physician practitioners have been in scope:&amp;nbsp;physician assistant, nurse practitioner, clinical nurse specialist, certified registered nurse anesthetist, anesthesiologist assistant, and certified nurse-midwife. &amp;nbsp;Every year, CMS publishes the list of teaching hospitals that are covered by the Sunshine Act on its&amp;nbsp;&lt;a href=&quot;https://www.cms.gov/priorities/key-initiatives/open-payments/program-participants/covered-recipients&quot; target=&quot;_blank&quot;>website&lt;/a>.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671751685751
+                            cq:panelTitle="What types of payments or transfers of value must be reported under the Sunshine Act?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T15:47:33.901-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>The Sunshine Act requires reporting of most payments and transfers of value made to Covered Recipients, such as:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Meals (including snacks, lunches and receptions)&lt;/li>&#xd;&#xa;&lt;li>Consulting, speaker fees and associated expenses&lt;/li>&#xd;&#xa;&lt;li>Travel&lt;/li>&#xd;&#xa;&lt;li>Educational items (such as textbooks or journal reprints)&lt;/li>&#xd;&#xa;&lt;li>Grants and charitable donations&lt;/li>&#xd;&#xa;&lt;li>Clinical trial payments&lt;/li>&#xd;&#xa;&lt;li>Research fees&lt;/li>&#xd;&#xa;&lt;li>Royalties, acquisitions and license payments&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671751688668
+                            cq:panelTitle="How can I opt out of receiving transfers of value from AbbVie?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T15:47:56.342-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Most transfers of value provided by AbbVie to you directly or indirectly (or to someone else on your behalf) are reportable under the Sunshine Act unless an exception applies. &amp;nbsp;You may, however, decline accepting transfers of value.&lt;/p>&#xd;&#xa;&lt;p>For example, you have the option to decline food and beverage at an AbbVie-sponsored promotional speaker program or an in-office interaction. &amp;nbsp;If you do not consume any food or beverages or accept any educational items, or if you cover the cost of any meal or item provided, then AbbVie is not required to report a transfer of value under your name because you have not received any value from AbbVie.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1759778673782
+                            cq:panelTitle="Can I see the information you’ll be disclosing before CMS publishes the report?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T16:25:15.134-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Information provided by AbbVie to CMS will be available for Covered Recipients to review on the CMS website during the designated review period prior to the information being made public. Covered Recipients must register with CMS to review this data.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671751721166
+                            cq:panelTitle="How does AbbVie report meals provided to a group that includes individuals who are not covered by the Sunshine Act?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T15:48:30.514-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>When a meal is provided to a group that includes both individuals who are covered by the Sunshine Act and individuals who are not covered by the Sunshine Act, AbbVie must determine and report only the value received by the individuals who are covered by the Sunshine Act. To make an accurate calculation of the value, AbbVie will generally calculate the per-person cost of the meal (total cost of the meal divided by number of overall participants) and report that per-person cost for each participant who is covered by the Sunshine Act (e.g., physicians).&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671751725089
+                            cq:panelTitle="If I am paid by a third-party vendor on AbbVie’s behalf, is my fee still reportable under Sunshine?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T15:48:54.494-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>In most cases, if you are paid by a third-party vendor for work that is conducted on behalf of AbbVie, then AbbVie must report your fee and any other transfers of value you receive.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1759779948648
+                            cq:panelTitle="Will I be taxed on the reported spend?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T15:49:15.500-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>The Sunshine Act does not change the types of payments and transfers of value that AbbVie currently reports to the IRS.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1759781954086
+                            cq:panelTitle="Where can additional information be found?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-10-06T16:26:47.714-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Additional information about the Sunshine Act and Covered Recipients may be found on the&amp;nbsp;&lt;a href=&quot;https://www.cms.gov/openpayments/&quot; target=&quot;_blank&quot;>CMS Open Payments website&lt;/a>.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1759781973752
+                            cq:panelTitle="How do I contact AbbVie with questions regarding the Sunshine Act?"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-06-03T10:42:26.298-04:00"
+                            jcr:lastModifiedBy="SHARMRX18"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>If you have questions on the data contained in the reports, please email&amp;nbsp;&lt;a href=&quot;mailto:transparency.compliance@abbvie.com&quot; title=&quot;mailto:transparency.compliance@abbvie.com&quot;>transparency.compliance@abbvie.com.&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </accordion_copy>
+                    <separator
+                        cq:styleIds="[1662756526578]"
+                        jcr:created="{Date}2022-12-22T18:34:43.225-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-22T18:34:43.225-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

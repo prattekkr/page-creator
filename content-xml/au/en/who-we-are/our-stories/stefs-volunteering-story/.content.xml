@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-08-12T05:58:21.102-04:00"
+        cq:lastModifiedBy="nandivx5"
+        cq:tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-08-12T05:58:21.084-04:00"
+        jcr:lastModifiedBy="nandivx5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Stef’s Volunteering Story"
+        jcr:uuid="bba51522-92cd-4ab4-a603-e42b23cbc864"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="The flexibility of AbbVie’s volunteering leave is one of the reasons AbbVie is a great place to work"
+        fileReference="/content/dam/abbvie-com2/au/images/stef-banner.jpg"
+        hideInNav="true"
+        navTitle="Stef’s Volunteering Story"
+        pageTitle="Stef’s Volunteering Story"
+        publishDate="{Date}2025-08-12T14:57:00.000+05:30"
+        readTime="3"
+        readWatchTimeSel="read-time"
+        title="Stef’s Volunteering Story">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-08-12T05:31:03.980-04:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/header/australia-header-english"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2025-08-12T05:57:11.039-04:00"
+                        jcr:lastModifiedBy="nandivx5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/au/images/stef-banner.jpg"
+                        dmPresetType="imagePreset"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787460,1659997787459]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2025-08-12T05:34:11.656-04:00"
+                                jcr:lastModifiedBy="nandivx5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Stef’s Volunteering Story"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-08-12T05:34:44.915-04:00"
+                                jcr:lastModifiedBy="nandivx5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>The flexibility of AbbVie’s volunteering leave is one of the reasons AbbVie is a great place to work&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-08-12T05:37:30.876-04:00"
+                                    jcr:lastModifiedBy="nandivx5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>As a mum of three wonderful kids, each with their own interests and activities, I’m always running between school events, social engagements and extracurricular activities. Volunteering has been a way to be there for my kids while supporting their school or community events.&lt;/p>&#xd;&#xa;&lt;p>Working full time and volunteering requires me to sometimes adjust my work schedule and it’s not always easy to balance work and family commitments. In the past, I’ve used my annual leave or taken unpaid leave in order to help out my kids’ activities.&lt;/p>&#xd;&#xa;&lt;p>Now that I’m working with AbbVie, I’m fortunate to be offered two dedicated annual ‘volunteering leave’ days, allowing me to save my annual leave for holiday time. And while it’s not too unusual for large corporations to offer their employees volunteering leave, it’s usually quite prescriptive and can only used for team events dictated by the company or with organisations which the company partners with.&lt;/p>&#xd;&#xa;&lt;p>Being able to use my volunteering leave for something I am personally invested in and where my passions lie is so much more meaningful for me as an employee and is valuable for my family and my community. The other benefit of AbbVie’s volunteering leave is that I don’t have to use it all in one day – it can be done on an hourly basis. So, whether that’s helping out at the school canteen for a few hours one morning, or being a “reading helper” in the classroom, AbbVie’s volunteering leave can be used in a way that is tailored to each individual to support the causes and initiatives that are meaningful to them.&lt;/p>&#xd;&#xa;&lt;p>Many people don’t end up using their leave as the perception is that it’s all just too hard, but breaking it up to be a few hours here or there can help make it more manageable when juggling work and other commitments. I’ve always said if everybody gives a little bit, together we can make a big difference.&lt;/p>&#xd;&#xa;&lt;p>Surf lifesaving and being at the beach is a real passion for our family and I’ve spent quite a bit of time to gain accreditation as an official with Surf Life Saving Australia. On Sundays you can find me helping out at Nippers or officiating an event along the coast while my children compete for Coogee SLSC. Volunteering with Surf Life Saving Australia is not only a great way to support my childrens’ interests but I’ve also gained valuable skills and experience, and met some wonderful people along the way, all while supporting my local community.&lt;/p>&#xd;&#xa;&lt;p>This year, the NSW Surf Life Saving Championships were held locally in Manly. I used my volunteering leave to officiate at the event, helping out with scoring, placing, and crowd control (i.e. marshalling kids and keeping spectators under control \ud83d\ude09). To top it off, I was there when my daughter won her second gold medal in the ‘Rescue and Resuscitation’ event.&lt;/p>&#xd;&#xa;&lt;p>Many people I spoke to at the event had taken annual leave or unpaid leave to attend and when I mentioned I’d taken volunteering leave the response was always: “I wish my company did that”.&lt;/p>&#xd;&#xa;&lt;p>Would I be there officiating and supporting my children if AbbVie didn’t offer volunteering leave? Of course I would. But it just makes it all that much easier and I’m so grateful that AbbVie supports me to do this with my family.&lt;/p>&#xd;&#xa;&lt;p>I’d encourage everyone to take advantage of their volunteer leave because even just a few hours can make a huge impact on the local community.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-08-12T05:31:14.050-04:00"
+                    jcr:lastModifiedBy="nandivx5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/au/en/site/footer/australia-footer-english"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>
