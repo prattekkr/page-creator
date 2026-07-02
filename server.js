@@ -93,7 +93,11 @@ try {
 // DAM paths: apply prefix rule first → look up updated path in assetMap for DM Open API URL → fallback to updated path.
 // Content paths: apply prefix rule → fallback to original.
 function transformPath(value, pm) {
-  if (!pm || typeof value !== 'string' || !value.startsWith('/content/')) return value;
+  if (typeof value !== 'string') return value;
+  // Normalise youtube-nocookie.com → youtube.com
+  if (value.includes('youtube-nocookie.com'))
+    value = value.replace(/youtube-nocookie\.com/g, 'youtube.com');
+  if (!pm || !value.startsWith('/content/')) return value;
 
   if (value.startsWith('/content/dam/')) {
     // 1. Apply DAM prefix rule to get the updated path
