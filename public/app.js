@@ -1716,13 +1716,34 @@ async function doImportPage() {
     });
     const data = await r.json();
     if (!r.ok) throw new Error(data.error || 'Import failed');
+    // Recursively assign fresh IDs to items at any nesting depth.
+    // Needed because grid-section stores actual blocks in .children, and those
+    // blocks (e.g. text-container) themselves have child items (text-container-text).
+    function assignImportIds(items) {
+      return (items || []).map(item => ({ ...item, id: uid(), children: assignImportIds(item.children) }));
+    }
     S.sections = data.sections.map(sec => ({
       ...sec, id: uid(),
       blocks: (sec.blocks || []).map(blk => ({
         ...blk, id: uid(),
-        children: (blk.children || []).map(ch => ({ ...ch, id: uid(), children: [] }))
+        children: assignImportIds(blk.children)
       }))
     }));
+    // Debug: log every text-container anywhere in the tree with its child count
+    S.sections.forEach(sec => {
+      (sec.blocks || []).forEach(blk => {
+        if (blk.type === 'text-container')
+          console.log('[import-debug] sec-level text-container children:', blk.children?.length, blk.children?.map(c=>c.type));
+        (blk.children || []).forEach(ch => {
+          if (ch.type === 'text-container')
+            console.log('[import-debug] grid-child text-container children:', ch.children?.length, ch.children?.map(c=>c.type));
+          (ch.children || []).forEach(sub => {
+            if (sub.type === 'text-container')
+              console.log('[import-debug] deep text-container children:', sub.children?.length, sub.children?.map(c=>c.type));
+          });
+        });
+      });
+    });
     // Snapshot for write-back diff — preserve _jcrKey on each section/block
     S._importSnapshot     = JSON.parse(JSON.stringify(S.sections));
     S._importMetaSnapshot = { ...S.meta };

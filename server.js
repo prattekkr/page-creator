@@ -20,6 +20,13 @@ try {
   _modelMapCache = Object.fromEntries(_models.map(m => [m.id, m]));
 } catch (_) { console.warn('[config] component-models.json not found'); }
 
+// ── EDS filter map (loaded once at startup for child-type inference) ──────────
+let _filterMapCache = {};
+try {
+  const _filters = JSON.parse(fs.readFileSync(path.join(__dirname, 'component-filters.json'), 'utf8'));
+  _filterMapCache = Object.fromEntries(_filters.map(f => [f.id, f.components || []]));
+} catch (_) { console.warn('[config] component-filters.json not found'); }
+
 // EDS block type → migration map entry (for JCR live import propRenames)
 const edTypeToMapping = {};
 for (const [, m] of Object.entries(migrationMap.componentMap || {})) {
@@ -454,6 +461,24 @@ function applyMigrationMapping(type, rt, rawProps) {
   return result;
 }
 
+// When deriveType returns a generic Franklin type ("item", "block") or null for a
+// block child node, score each allowed child type from the filter map against the
+// child's actual properties. The type whose model fields overlap the most wins.
+// Falls back to the first allowed type if no props match (so we at least get the right type).
+function guessChildType(parentType, childNode) {
+  const allowed = _filterMapCache[parentType] || [];
+  if (!allowed.length) return null;
+  const childProps = extractJcrProps(childNode);
+  let best = null, bestScore = -1;
+  for (const ct of allowed) {
+    const fields = (_modelMapCache[ct]?.fields || [])
+      .filter(f => f.component !== 'tab' && f.component !== 'container');
+    const score = fields.filter(f => childProps[f.name] !== undefined).length;
+    if (score > bestScore) { bestScore = score; best = ct; }
+  }
+  return best || allowed[0];
+}
+
 // Returns block-level children using the more lenient isBlockNode detector.
 // Also recurses one extra level to handle pages with an intermediate container
 // node ("par" parsys pattern common in older AEM migrations).
@@ -468,10 +493,21 @@ function extractJcrBlocks(node, label) {
         type:     rawType,
         _jcrKey:  key,
         props:    applyMigrationMapping(rawType, rawRt, extractJcrProps(v)),
-        children: Object.entries(v).filter(([, c]) => isBlockNode(c)).map(([ck, c]) => {
-          const ct = deriveType(c), crt = c['sling:resourceType'] || '';
-          return { type: ct, _jcrKey: ck, props: applyMigrationMapping(ct, crt, extractJcrProps(c)), children: [] };
-        })
+        children: (() => {
+            const childCandidates = Object.entries(v).filter(([, c]) =>
+              c && typeof c === 'object' && !Array.isArray(c) &&
+              (!c['jcr:primaryType'] || c['jcr:primaryType'] === 'nt:unstructured'));
+            console.log(`[import]   block "${rawType}" has ${childCandidates.length} child candidate(s):`,
+              childCandidates.map(([ck, c]) => `${ck}(model=${c.model||'-'} aueId=${c.aueComponentId||'-'} rt=${c['sling:resourceType']||'-'} props=${Object.keys(c).filter(k=>typeof c[k]!=='object').join(',')})`));
+            return childCandidates.map(([ck, c]) => {
+              let ct = deriveType(c);
+              const crt = c['sling:resourceType'] || '';
+              if (!ct || ct === 'item' || ct === 'block') ct = guessChildType(rawType, c) || ct;
+              console.log(`[import]     child "${ck}": derivedType=${deriveType(c)} → finalType=${ct}`);
+              if (!ct) return null;
+              return { type: ct, _jcrKey: ck, props: applyMigrationMapping(ct, crt, extractJcrProps(c)), children: [] };
+            }).filter(Boolean);
+          })()
       };
     });
     if (label) console.log(`[import]   ${label} block types: [${blocks.map(b => b.type).join(', ')}]`);
@@ -492,10 +528,16 @@ function extractJcrBlocks(node, label) {
           type:     rawType,
           _jcrKey:  key,
           props:    applyMigrationMapping(rawType, rawRt, extractJcrProps(v)),
-          children: Object.entries(v).filter(([, c]) => isBlockNode(c)).map(([ck, c]) => {
-            const ct2 = deriveType(c), crt = c['sling:resourceType'] || '';
-            return { type: ct2, _jcrKey: ck, props: applyMigrationMapping(ct2, crt, extractJcrProps(c)), children: [] };
-          })
+          children: Object.entries(v)
+            .filter(([, c]) => c && typeof c === 'object' && !Array.isArray(c) &&
+                               (!c['jcr:primaryType'] || c['jcr:primaryType'] === 'nt:unstructured'))
+            .map(([ck, c]) => {
+              let ct2 = deriveType(c);
+              const crt = c['sling:resourceType'] || '';
+              if (!ct2 || ct2 === 'item' || ct2 === 'block') ct2 = guessChildType(rawType, c) || ct2;
+              if (!ct2) return null;
+              return { type: ct2, _jcrKey: ck, props: applyMigrationMapping(ct2, crt, extractJcrProps(c)), children: [] };
+            }).filter(Boolean)
         };
       });
       if (label) console.log(`[import]   ${label} block types (nested): [${blocks.map(b => b.type).join(', ')}]`);
