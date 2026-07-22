@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-03-31T11:06:49.404-04:00"
+        cq:lastModifiedBy="lennglx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="AbbVie-prinsippene styrer vårt arbeid. De skisserer vårt oppdrag og hva vi verdsetter – pasientpåvirkning, integritet, innovasjon, mangfold og inkludering, og å gi tilbake til samfunnet vårt."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-05-23T13:42:47.347-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Keep - Våre prinsipper"
+        jcr:uuid="c2494116-50a3-4369-bcb0-86f5bcea36a1"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Lær mer om våre prinsipper"
+        ctaText="Lære mer"
+        description="Våre prinsipper er kjernen i selskapet vårt."
+        eyebrow="Hvem vi er"
+        fileReference="/content/dam/abbvie-com2/images/woman-walking-feature-small.jpg"
+        navTitle="Våre prinsipper"
+        pageTitle="Våre prinsipper"
+        title="Våre prinsipper"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/no/nn/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-06-22T06:34:43.857-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/no/nn/site/header/norway-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-02-27T06:41:12.281-05:00"
+                        jcr:lastModifiedBy="lennglx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/woman-walking-feature-small.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653545847150,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-04-18T08:03:25.455-04:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Våre prinsipper er kjernen i selskapet vårt"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <video_copy
+                        cq:styleIds="[10,2,8]"
+                        jcr:created="{Date}2022-11-28T14:25:08.192-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2024-04-18T08:16:38.349-04:00"
+                        jcr:lastModifiedBy="lennglx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/video/v2/video"
+                        autoPlay="true"
+                        brightcoveAutoPlay="false"
+                        btnText="Se 2:10"
+                        captions="true"
+                        descriptiveIframeTitle="Our Principles"
+                        fileReference="/content/dam/abbvie-com2/images/employee/f/principles-video-thumnail.jpg"
+                        loopVideo="false"
+                        showBrightcoveControls="false"
+                        showPlayerControls="true"
+                        showRelatedContent="false"
+                        showVideoInfo="false"
+                        textIsRich="[true,true]"
+                        title="Våre prinsipper"
+                        videoType="youtube"
+                        youtubeAutoPlay="false"
+                        youtubeUrl="https://www.youtube.com/embed/qJEOLzZGd6w"/>
+                    <grid_copy
+                        cq:styleIds="[0,1653545835880]"
+                        jcr:created="{Date}2022-11-28T14:08:57.382-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-11-28T14:09:13.393-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <text_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-11-28T14:12:33.220-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-04-18T08:17:40.320-04:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>For ytterligere å understreke viktigheten av etisk og verdibasert atferd lanserte AbbVie våre prinsipper i 2019. Dette er grunnlaget for hvordan vi oppfører oss når vi gjør forretninger.&lt;/span>&lt;/span>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756456518]"
+                                jcr:created="{Date}2024-04-18T08:18:40.925-04:00"
+                                jcr:createdBy="lennglx"
+                                jcr:lastModified="{Date}2024-04-18T08:18:40.925-04:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        </par_12>
+                    </grid_copy>
+                    <accordion
+                        cq:styleIds="[4,8]"
+                        jcr:created="{Date}2022-12-20T16:08:57.224-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2024-04-18T08:07:48.629-04:00"
+                        jcr:lastModifiedBy="lennglx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                        heading="Våre prinsipper"
+                        headingElement="h5"
+                        id="accordion"
+                        singleExpansion="false">
+                        <item_1671570554123
+                            cq:panelTitle="Forbedre liv "
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-04-18T08:08:24.852-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;span class=&quot;light-font&quot;>Vi forbedrer menneskers liv hver dag. Vi tar beslutninger basert på medfølelse og skaper en langsiktig positiv innvirkning på pasienter, deres familier, våre kolleger og samfunnet.&amp;nbsp;&lt;/span>&lt;/p>&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570557396
+                            cq:panelTitle="Integritet"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-04-18T08:09:06.597-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;span class=&quot;light-font&quot;>Vi forsøker alltid å gjøre det som er riktig. Vår integritet er sentral, og vi ønsker å alltid opprettholde høyest mulig standard i alt vi gjør.&amp;nbsp;&lt;/span>&lt;/p>&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570603045
+                            cq:panelTitle="Innovasjon"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-04-18T08:09:43.147-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;span class=&quot;light-font&quot;>Vi innoverer for å løse fremtidens helseutfordringer. Vi investerer kontinuerlig i å oppdage og utvikle nye medisiner og omsorgsløsninger for å forbedre liv.&amp;nbsp;&lt;/span>&lt;/p>&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570607019
+                            cq:panelTitle="Mangfold og inkludering"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-04-18T08:10:16.767-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;span class=&quot;light-font&quot;>Vi behandler alle likt og med respekt. Vi har ansatte over hele verden, og vi omfavner mangfoldighet i bakgrunn og perspektiv, og dermed øke vår evne til å oppnå vårt oppdrag: å forbedre liv.&amp;nbsp;&lt;/span>&lt;/p>&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570609829
+                            cq:panelTitle="Samfunnsansvar"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-04-18T08:11:05.740-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;span class=&quot;light-font&quot;>Vi bidrar til samfunnet vi lever i ved å ta samfunnsansvar og beskytte miljøet vårt. Vi bidrar også til et mer bærekraftig helsevesen gjennom ulike helseløsninger.&lt;/span>&lt;/p>&#xa;"
+                            textIsRich="true"/>
+                    </accordion>
+                    <container_823421802
+                        cq:styleIds="[1653545825683,1653545835879]"
+                        jcr:created="{Date}2022-11-28T14:56:48.309-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-11-28T14:57:10.019-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F4F4F4">
+                        <title
+                            cq:styleIds="[1661545829678]"
+                            jcr:created="{Date}2022-11-28T14:57:53.189-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2024-05-14T05:02:25.829-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Relatert innhold"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h5"
+                            variant="h"/>
+                        <grid
+                            cq:styleIds="[0]"
+                            jcr:created="{Date}2022-11-28T14:59:59.998-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-11-28T15:00:11.955-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <cardpagestory
+                                    cq:styleIds="[1111111111110,1111111111113,1111111111117]"
+                                    jcr:created="{Date}2022-11-28T15:00:21.839-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-14T05:03:27.957-04:00"
+                                    jcr:lastModifiedBy="lennglx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/no/no/dette-er-abbvie/Arbeide-med-integritet"/>
+                            </par_11>
+                            <par_12
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <cardpagestory
+                                    cq:styleIds="[1111111111113,1111111111117,1111111111110]"
+                                    jcr:created="{Date}2022-11-28T15:01:47.525-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-14T05:04:13.058-04:00"
+                                    jcr:lastModifiedBy="lennglx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/no/no/dette-er-abbvie/Likestilling-likhet-mangfold-inkludering"/>
+                            </par_12>
+                        </grid>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-01-03T10:56:10.232-05:00"
+                            jcr:createdBy="lennglx"
+                            jcr:lastModified="{Date}2026-03-31T11:06:49.398-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p style=&quot;text-align: right;&quot;>&lt;sup>NO-ABBV-240006 v1. Apr/2026&lt;/sup>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <separator
+                            cq:styleIds="[1662756542862]"
+                            jcr:created="{Date}2022-12-09T14:41:07.756-05:00"
+                            jcr:createdBy="millicx"
+                            jcr:lastModified="{Date}2022-12-09T14:41:07.756-05:00"
+                            jcr:lastModifiedBy="millicx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </container_823421802>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-06-22T06:43:19.485-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/no/nn/site/footer/norway-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

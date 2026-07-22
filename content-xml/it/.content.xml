@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="/conf/abbvie-com2/settings/wcm/templates/(?!xf-).*"
+        cq:lastModified="{Date}2025-04-28T15:55:24.058-04:00"
+        cq:lastModifiedBy="SHARMRX18"
+        cq:siteOwner="admin"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Italy"
+        jcr:uuid="1cd14b6e-4bdb-40aa-b32a-80d52c3d1241"
+        sling:resourceType="abbvie-com2/components/page/v2/page"/>
+    <it/>
+</jcr:root>

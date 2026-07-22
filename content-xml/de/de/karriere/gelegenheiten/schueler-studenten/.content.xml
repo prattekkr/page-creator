@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-01-29T08:26:57.435-05:00"
+        cq:lastModifiedBy="kunkefx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-11-22T08:25:22.435-05:00"
+        jcr:lastModifiedBy="ZEMSCJX"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Schüler &amp; Studenten"
+        jcr:uuid="a58b9926-b5a7-4c62-97af-c567f62802b7"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Erfahre mehr"
+        ctaText="Erfahre mehr"
+        description="Bei AbbVie haben junge Talente die Möglichkeit, Verantwortung zu übernehmen, eigene Ideen einzubringen und sich kontinuierlich weiterzuentwickeln."
+        eyebrow="Karriere"
+        fileReference="/content/dam/abbvie-com2/de/images/archiv/karriere/abbvie-de-schueler-und-studenten-header-1920-800-230615.jpg"
+        navTitle="Schüler &amp; Studenten"
+        pageTitle="Schüler &amp; Studenten"
+        title="Schüler &amp; Studenten"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/de/de/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-10-23T06:08:03.417-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/de/de/site/header/germany-header-german"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-10-24T05:40:15.466-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/de/images/archiv/karriere/abbvie-de-schueler-und-studenten-header-1920-800-230615.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:lastModified="{Date}2024-11-28T04:29:27.897-05:00"
+                                jcr:lastModifiedBy="MURRARX3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-11-28T04:29:08.336-05:00"
+                                jcr:lastModifiedBy="MURRARX3"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Schüler*innen &amp; Student*innen bei AbbVie"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-10-23T05:20:44.755-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Bei AbbVie haben junge Talente die Möglichkeit, Verantwortung zu übernehmen, eigene Ideen einzubringen und sich kontinuierlich weiterzuentwickeln.&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container_731515790
+                        cq:styleIds="[1653545825687,1653545847150]"
+                        jcr:created="{Date}2024-10-23T05:21:23.326-04:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2024-10-23T05:23:06.114-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-10-23T05:23:35.216-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2024-10-23T05:24:06.967-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Chancen für den beruflichen Einstieg"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-10-23T05:24:22.435-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2024-10-23T05:26:49.417-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Lust auf eine Karriere in einem forschenden BioPharma-Unternehmen? Wir bieten Berufsausbildungen, duale Studiengänge, Praktika, Werkstudententätigkeiten sowie Trainee-Programme &amp;amp; Entwicklungsprogramme für Absolventen, mit denen du den Grundstein für deine berufliche Zukunft legen kannst.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Wir wissen, dass Innovation frische Ideen voraussetzt. Daher legen wir großen Wert darauf, Nachwuchs zu fördern und zu fordern. In unseren Teams kannst du kreative Impulse geben, mit anpacken und von Experten lernen.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_731515790>
+                    <container_2113229516
+                        jcr:created="{Date}2024-10-23T05:27:20.465-04:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2024-10-24T05:40:47.390-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F4F4F4">
+                        <teaser
+                            cq:styleIds="[5]"
+                            jcr:created="{Date}2024-10-23T05:28:03.769-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:description="&lt;p>Als Praktikant*in kannst du bei uns fundierte Praxiserfahrungen sammeln, eigenverantwortlich arbeiten und Kontakte knüpfen.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2025-01-29T08:24:49.117-05:00"
+                            jcr:lastModifiedBy="kunkefx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="&lt;p>Praktikum&lt;/p>&#xd;&#xa;"
+                            sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                            ctaLink="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten/praktikum"
+                            ctaTarget="_self"
+                            ctaText="Erfahre mehr zum Thema Praktikum"
+                            textIsRich="[true,true]"/>
+                        <teaser_703934640
+                            cq:styleIds="[5]"
+                            jcr:created="{Date}2024-10-23T05:35:01.763-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:description="&lt;p>Wir legen großen Wert darauf, Mitarbeiter*innen selbst auszubilden. Daher bietet AbbVie in Deutschland Ausbildungsplätze in unterschiedlichen Ausbildungsberufen an.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2025-01-29T08:26:57.416-05:00"
+                            jcr:lastModifiedBy="kunkefx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="&lt;p>Duale Ausbildung&lt;/p>&#xd;&#xa;"
+                            sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                            ctaLink="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten/duale-ausbildung"
+                            ctaTarget="_self"
+                            ctaText="Erfahre mehr zur dualen Ausbildung"
+                            textIsRich="[true,true]"/>
+                        <teaser_186605723
+                            cq:styleIds="[5]"
+                            jcr:created="{Date}2024-10-23T05:42:28.457-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:description="&lt;p>Lust auf die ideale Kombination aus praktischem Arbeiten und theoretischer Vertiefung? Informiere dich hier über die dualen Studiengänge bei AbbVie.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2025-01-29T08:25:34.336-05:00"
+                            jcr:lastModifiedBy="kunkefx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="&lt;p>Duales Studium&lt;/p>&#xd;&#xa;"
+                            sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                            ctaLink="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten/duales-studium"
+                            ctaTarget="_self"
+                            ctaText="Erfahre mehr zum dualen Studium"
+                            textIsRich="[true,true]"/>
+                        <teaser_1067480149
+                            cq:styleIds="[5]"
+                            jcr:created="{Date}2024-10-23T05:44:27.044-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:description="&lt;p>Für leistungsstarke Student*innen mit Bachelor-, Master- oder höheren akademischen Abschlüssen bietet AbbVie spezielle Entwicklungsprogramme. Diese bieten dir die Möglichkeit, deine theoretischen Kenntnisse und bisherige Praxiserfahrung in einem abwechslungsreichen und dynamischen Umfeld zu vertiefen&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2025-01-29T08:25:49.082-05:00"
+                            jcr:lastModifiedBy="kunkefx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="&lt;p>Entwicklungsprogramme&lt;/p>&#xd;&#xa;"
+                            sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                            ctaLink="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme"
+                            ctaTarget="_self"
+                            ctaText="Erfahre mehr zu den Entwicklungsprogrammen"
+                            textIsRich="[true,true]"/>
+                        <separator
+                            cq:styleIds="[1662756423318]"
+                            jcr:created="{Date}2024-10-25T01:41:45.070-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2024-10-25T01:41:45.070-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </container_2113229516>
+                    <text_copy_copy_copy_
+                        cq:styleIds="[1659545825678]"
+                        jcr:created="{Date}2024-11-14T11:43:23.569-05:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-12-05T04:47:06.997-05:00"
+                        jcr:lastModifiedBy="MURRARX3"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                        text="&lt;p style=&quot;text-align: right;&quot;>&lt;span class=&quot;body-unica-14-reg&quot;>DE-ABBV-240798&lt;/span>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <container_840033068
+                        cq:styleIds="[1653545825683,1653545847150]"
+                        jcr:created="{Date}2024-10-23T05:50:34.224-04:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2024-10-23T06:06:33.900-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F4F4F4">
+                        <grid
+                            jcr:created="{Date}2024-10-23T05:50:47.655-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2024-10-23T05:51:05.146-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <teaser
+                                    cq:styleIds="[6]"
+                                    jcr:created="{Date}2024-10-23T05:51:25.708-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2025-01-22T07:13:44.598-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="&lt;p>&lt;a title=&quot;Stellenportal&quot; href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot;>Finde den Job, der zu Dir passt&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                                    ctaTarget="_blank"
+                                    pretitle="Offene Stellen"
+                                    textIsRich="[true,true]"/>
+                            </par_11>
+                            <par_12
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <teaser
+                                    cq:styleIds="[1,6]"
+                                    jcr:created="{Date}2024-10-23T05:51:33.271-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2025-01-14T07:02:25.389-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="&lt;p>&lt;a title=&quot;Talent Community&quot; href=&quot;https://careers.abbvie.com/de/talent-community&quot; target=&quot;_blank&quot;>Werde Teil der Talent Community&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                                    ctaTarget="_blank"
+                                    pretitle="Interessierst du dich für eine Karriere bei AbbVie?"
+                                    textIsRich="[true,true]"/>
+                            </par_12>
+                        </grid>
+                    </container_840033068>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-10-23T06:07:18.300-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/de/de/site/footer/germany-footer-german"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <praktikum/>
+    <duale-ausbildung/>
+    <duales-studium/>
+    <entwicklungsprogramme/>
+</jcr:root>

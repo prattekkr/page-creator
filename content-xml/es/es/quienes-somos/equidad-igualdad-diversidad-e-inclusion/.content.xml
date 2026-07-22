@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-05T10:29:01.234-05:00"
+        cq:lastModifiedBy="MOLINAX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="AbbVie mantiene un compromiso con la equidad, la igualdad, la diversidad y la inclusión (EIDI). Este compromiso implica valorar las diversas perspectivas, crear una cultura inclusiva y tratar a todos los empleados con dignidad y respeto. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-02-05T10:29:01.208-05:00"
+        jcr:lastModifiedBy="MOLINAX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Equidad, igualdad, diversidad e inclusión "
+        jcr:uuid="1e57ef77-0406-45bf-881e-2c1f8c2f2a77"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Ver más"
+        ctaText="Ver más"
+        description="Nos enorgullecemos de ofrecer un entorno que permite a nuestros colegas de todo el mundo alcanzar su máximo potencial."
+        eyebrow="Quiénes somos"
+        fileReference="/content/dam/abbvie-com2/images/employee/woman-holding-a-coffee-hero.jpg"
+        navTitle="Equidad, Igualdad, Diversidad e Inclusión"
+        ogimage="/content/dam/abbvie-com2/images/employee/woman-holding-a-coffee-hero.jpg"
+        pageTitle="Equidad, igualdad, diversidad e inclusión "
+        title="Equidad, igualdad, diversidad e inclusión "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/es/es/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-24T02:55:24.101-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/es/es/site/header/spain-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-27T15:57:40.088-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/woman-holding-a-coffee-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545847150,1653242825678,1653545825685]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-07-24T02:55:44.021-04:00"
+                                jcr:lastModifiedBy="JADHASX13"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Equidad, Igualdad, Diversidad e Inclusión"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-12-19T03:15:17.943-05:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Para AbbVie es fundamental abrazar la equidad, la igualdad, la diversidad y la inclusión. Nos sentimos orgullosos de ofrecer un entorno seguro que permite a las personas que trabajan en AbbVie en todo el mundo alcanzar su máximo potencial&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid_copy
+                        jcr:created="{Date}2023-01-10T17:48:13.468-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-10T17:51:19.592-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_14
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <header_copy
+                                cq:styleIds="[2]"
+                                jcr:created="{Date}2022-12-06T11:43:47.745-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-12-24T04:00:17.536-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="Contenido relacionado"/>
+                            <linklist
+                                jcr:created="{Date}2023-01-11T14:43:29.752-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-12-22T08:23:14.812-05:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                childDepth="1"
+                                excludeCurrentPage="true"
+                                linkItems="true"
+                                listFrom="children"
+                                orderBy="modified"
+                                parentPage="/content/abbvie-com2/es/es/quienes-somos"
+                                sortOrder="asc"
+                                tagsMatch="any"/>
+                        </par_14>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545825687,1653545847150,1653545835879,1653545835982]"
+                                jcr:created="{Date}2024-12-24T00:22:21.151-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2024-12-24T00:23:01.889-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1661545829678,1651241825678]"
+                                    jcr:created="{Date}2022-11-07T18:49:15.140-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-12-24T03:17:37.385-05:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Nuestro compromiso "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-11-07T01:18:57.810-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-12-18T04:31:04.810-05:00"
+                                    jcr:lastModifiedBy="kurvamx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>En AbbVie creemos que sólo siendo como somos podemos dar la mejor versión de nosotros mismos. Por eso, creemos en la diversidad cultural, racial o generacional. Por eso, creemos en la equidad y la igualdad de géneros y oportunidades. Por eso, fomentamos día a día una cultura inclusiva de respeto y tolerancia. Porque más que un compromiso, esta es nuestra forma de ser.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-02-04T23:43:38.685-05:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2025-02-04T23:44:11.074-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Algunos de nuestros reconocimientos en EEDI :&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Reconocimiento Diversidad de Great Place To Work Spain&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Human Rights Campaign Corporate Equality Index&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Fair360 “Top 50 Companies for Diversity”&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Great Place to Work “World’s Best Workplaces”&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Seramount &amp;quot;100 Best Companies&amp;quot;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                        </par_12>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_copy>
+                    <separator_1088227927
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2023-01-15T13:43:46.445-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-15T13:43:46.445-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-24T03:08:16.891-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/es/es/site/footer/spain-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

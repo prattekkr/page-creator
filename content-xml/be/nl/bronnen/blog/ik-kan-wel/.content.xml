@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-18T15:04:23.092-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:tags="[abbvie-com-2:categories/immunology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-11-21T13:51:07.452-05:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="#Ik kan wel "
+        jcr:uuid="82187ef3-ecaa-41bc-9baf-99195970d4b2"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Meer informatie"
+        ctaText="Meer informatie"
+        description="AbbVie, Psoriasis Contact en Psoriasis Liga Vlaanderen helpen psoriasispatiënten om hun ziekte onder controle te krijgen"
+        fileReference="/content/dam/abbvie-com2/be/images/Je-peux-banner.jpg"
+        hideInNav="true"
+        navTitle="#Ik kan wel "
+        pageTitle="#Ik kan wel "
+        publishDate="{Date}2020-08-31T21:30:00.000-05:00"
+        readTime="1"
+        readWatchTimeSel="read-time"
+        title="#Ik kan wel "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/de/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-10-15T07:32:05.555-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/de/site/header/header-dutch"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2024-10-17T02:41:36.388-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/be/images/Je-peux-banner.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button_copy_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-21T12:20:10.499-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle verhalen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/nl/bronnen/blog"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-11-21T13:50:21.954-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="#Ik kan wel"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-12-18T15:02:56.791-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>AbbVie en Psoriasis Contact helpen psoriasispatiënten om hun ziekte onder controle te krijgen&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545825683,1653545847150,1653242825678,1653545835982]"
+                                jcr:lastModified="{Date}2024-10-17T02:42:11.514-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678]"
+                                    jcr:lastModified="{Date}2024-10-16T05:20:56.207-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Psoriasis: meer dan alleen de huid"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h4"
+                                    variant="h"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-16T05:21:10.605-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-16T05:21:46.997-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Psoriasis is een ontstekingsziekte van de huid. Als de symptomen echter niet onder controle zijn, kan psoriasis ook een psychologische en emotionele weerslag hebben. Het gevoelsleven (98% van de patiënten), het gezinsleven (70%), de carrière (68%), de opleiding (21%) of het seksleven (17%) kunnen erdoor worden beïnvloed.1&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Zwemmen, naar de kapper gaan of korte mouwen dragen is voor mensen met psoriasis vaak een onoverkomelijk probleem. 84% van de patiënten ervaart discriminatie of vernedering door psoriasis. Aan meer dan één op 10 (14%) heeft ooit iemand geweigerd een hand te geven. Het hoeft dus niet te verbazen dat 58% van de psoriasispatiënten staat te popelen om weer te gaan zwemmen als ze een letselvrije of bijna letselvrije huid zouden hebben&amp;nbsp;2.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2024-10-16T05:22:10.511-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-16T05:22:10.511-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-16T05:22:16.484-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-16T05:22:49.754-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Herwonnen vrijheid"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h4"
+                                    variant="h"/>
+                                <text_1977425386
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-16T05:22:25.293-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-12-18T15:03:20.502-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Voor alle patiënten die zich gehinderd voelen door hun psoriasis, en omdat iedereen het verdient om zich goed in zijn vel te voelen, heeft AbbVie in samenwerking met de patiëntenverenigingen Psoriasis Contact de website&amp;nbsp;&lt;a href=&quot;http://www.ikkanwel.be/&quot;>www.ikkanwel.be&lt;/a>&amp;nbsp;gelanceerd.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Een letselvrije huid is vandaag de dag een realistisch behandeldoel. &amp;quot;Ik kan wel&amp;quot; moedigt patiënten aan om dat te bereiken. Het is een oproep aan patiënten om hun vrijheid terug op te eisen. De zware last die de ziekte met zich meebrengt van je afschudden? Alle informatie krijgen? Alles bespreken zonder taboes? &amp;quot;Ik kan wel” is tegelijk het antwoord en het motto waarmee we patiënten hoop willen geven.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Op de website vind je&amp;nbsp;&lt;a href=&quot;https://www.ikkanwel.be/getuigenissen.html&quot;>getuigenissen&lt;/a>&amp;nbsp;van patiënten die hun psoriasis hebben overwonnen, evenals&amp;nbsp;&lt;a href=&quot;https://www.ikkanwel.be/praat-met-je-arts.html&quot;>informatie over de ziekte en de behandelmogelijkheden&lt;/a>. Op&amp;nbsp;&lt;a href=&quot;http://www.ikkanwel.be/&quot;>ikkanwel.be&lt;/a>&amp;nbsp;kunnen patiënten hun eigen&amp;nbsp;&lt;a href=&quot;https://www.ikkanwel.be/personaliseer-uw-gesprekgids.html&quot;>gespreksgids&lt;/a>&amp;nbsp;op maat maken, zodat ze zich kunnen voorbereiden op hun gesprek met de dermatoloog. Dat is de e beste weg naar een efficiënte consultatie en de meest geschikte behandeling. Er is ook een&amp;nbsp;&lt;a href=&quot;https://www.ikkanwel.be/ik-kan-wel-blog.html&quot;>blog&lt;/a>&amp;nbsp;met verschillende artikels over patiëntenervaringen, medische informatie en advies voor patiënten.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1454461520
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-10-17T03:45:26.088-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-17T03:45:26.088-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-10-17T03:45:47.735-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-12-18T15:03:39.899-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <item_1729151177454
+                                        cq:panelTitle="Referenties"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2024-12-18T15:03:56.902-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;ol>&#xd;&#xa;&lt;li>Global Report On Psoriasis. World Health Organization. 2016. Available at:&amp;nbsp;&lt;a href=&quot;http://apps.who.int/iris/bitstream/10665/204417/1/9789241565189_eng.pdf&quot;>http://apps.who.int/iris/bitstream/10665/204417/1/9789241565189_eng.pdf&lt;/a>. Last accessed December 2024.&lt;/li>&#xd;&#xa;&lt;li>Armstrong A. et al., Patient perceptions of clear / almost clear skin in moderate-to-severe plaque psoriasis: results of the Clear About Psoriasis worldwide survey, JEADV 2018; DOI:10.1111/jdv.15065&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                                <text_944526508
+                                    jcr:created="{Date}2024-12-18T15:04:18.433-05:00"
+                                    jcr:createdBy="BAUFAAX"
+                                    jcr:lastModified="{Date}2024-12-18T15:04:23.053-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie SA/NV -&amp;nbsp;BE-ABBV-240177 (V1.0) - December 2024&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-10-15T07:31:30.425-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/de/site/footer/footer-dutch"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

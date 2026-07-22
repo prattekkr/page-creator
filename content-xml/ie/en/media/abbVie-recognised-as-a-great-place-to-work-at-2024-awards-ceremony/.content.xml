@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-04-07T12:34:04.351-04:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-04-06T09:49:51.865-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie recognised as a Great Place to Work at 2024 awards ceremony"
+        jcr:uuid="da314727-ad56-4c28-8182-371d1c4a930d"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Learn more"
+        ctaText="Learn more"
+        hideInNav="true"
+        navTitle="AbbVie recognised as a Great Place to Work at 2024 awards ceremony"
+        pageTitle="AbbVie recognised as a Great Place to Work at 2024 awards ceremony"
+        publishDate="{Date}2024-01-03T00:00:00.000+05:30"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="AbbVie recognised as a Great Place to Work at 2024 awards ceremony">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-03-11T04:23:59.445-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ie/en/site/header/ireland-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
+                        jcr:lastModified="{Date}2026-03-11T04:35:14.790-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/ie/images/GPTW-Story-page-banner.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2026-03-11T04:36:23.855-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Media"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                langAttribute="none"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/ie/en/media"/>
+                            <storyinfo
+                                jcr:created="{Date}2026-04-06T16:56:46.242-04:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-04-06T16:56:56.388-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"
+                                hideReadWatchTime="true"
+                                hideTag="true"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2026-03-11T06:28:18.326-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie recognised as a Great Place to Work at 2024 awards ceremony"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-03-11T04:26:14.984-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-03-11T04:32:05.520-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>AbbVie, the global biopharmaceutical company, has been listed as one of the best places to work in Ireland at the 2024 Great Place to Work Awards. It is the eleventh consecutive year that the company has featured on the list.&lt;/p>&#xd;&#xa;&lt;p>The company, which employs approximately 2,600 people across six locations in Ireland, was ranked&amp;nbsp;&lt;b>13th Best Large Company in Ireland&lt;/b>&amp;nbsp;at the awards. AbbVie was joined by 36 other companies on companies this prestigious roll call.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Great Place to Work has also recognised AbbVie as a Best Workplace for Women for the fifth consecutive year in 2023 and was one of 19 organisations included in the most recent Best Workplaces in Pharma &amp;amp; Healthcare list.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Speaking about this new accolade,&amp;nbsp;&lt;b>Michael Gallagher, Site Head at AbbVie Ballytivnan, Sligo&lt;/b>&amp;nbsp;said:&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Being named as one of Ireland’s top large workplaces again this year is an incredible accomplishment for the company and an important recognition of the high-performing, inclusive culture that we’ve created over the past eleven years. I would like to thank colleagues and our various teams for their efforts to foster our company culture and their ongoing dedication to patients around the world,”.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Georges El-Damaa,&amp;nbsp;&lt;b>Site Head at AbbVie Manorhamilton Road, Sligo&lt;/b>&amp;nbsp;added:&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“This latest recognition&amp;nbsp;reflects the various AbbVie programmes that support meaningful development, employee well-being, diversity and inclusion as well as longstanding initiatives which help to support and positively impact our local communities.”&lt;/p>&#xd;&#xa;&lt;p>Great Place to Work assesses the policies and practices in place in organisations under key areas including employee development, hiring practices, employee well-being and social impact. It then benchmarks these against other organisations in each country.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Employee development continues to be a key priority area for AbbVie and the company has rolled out of a number of mentorship programmes, harnessing the capabilities and experience of leaders, graduates and other colleagues in the organisation.&lt;/p>&#xd;&#xa;&lt;p>AbbVie also supports key diversity and inclusion projects including the launch of the company’s Pride, Asian Leader Network and Ability employee groups at its sites across Ireland.&lt;/p>&#xd;&#xa;&lt;p>AbbVie’s award-winning Week of Possibilities volunteering initiative and the Employee Giving Campaign also provides employees with opportunities to personally improve and impact the communities in which AbbVie people work and live.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;b>Commenting on the awards, CEO at Great Place to Work Ireland, Cathal Divilly, said:&lt;br>&#xd;&#xa;&lt;br _rte_temp_br=&quot;brEOB&quot;>&#xd;&#xa;&lt;/b>“I'm delighted to extend a huge&amp;nbsp;congratulations&amp;nbsp;to all the exceptional companies recognised as a Best Workplace in Ireland 2024. This achievement is not just a milestone but a reflection of their tireless efforts at crafting workplaces where talent not only flourishes, but also feels valued and empowered. I'd like to congratulate these organisations once again on this outstanding achievement, and may this recognition fuel their continued journey towards excellence and innovation,” he added.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2026-03-11T04:37:17.122-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ie/en/site/footer/ireland-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

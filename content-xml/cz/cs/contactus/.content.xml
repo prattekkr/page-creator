@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-24T05:39:16.733-05:00"
+        cq:lastModifiedBy="nandivx5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Pokud nám chcete poslat dotaz nebo připomínku, vyplňte prosím formulář."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-02-24T05:39:16.708-05:00"
+        jcr:lastModifiedBy="nandivx5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Kontaktujte nás"
+        jcr:uuid="9a4f6878-753e-4f14-b98c-4c61741ef4c9"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        sling:sitemapRoot="includeSitemapNoCanonical"
+        ctaAltText="ZJISTIT VÍCE "
+        ctaText="ZJISTIT VÍCE "
+        description="Pokud nám chcete poslat dotaz nebo připomínku, vyplňte prosím formulář."
+        eyebrow="Kontaktujte nás"
+        hideInNav="true"
+        pageTitle="Kontaktujte nás"
+        sitemapFrequency="yearly">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-13T08:47:49.074-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/cz/cs/site/header/czech-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2023-01-09T13:35:49.987-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2026-02-23T04:45:43.381-05:00"
+                                jcr:lastModifiedBy="nandivx5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Kontaktujte nás"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-07-13T08:48:54.127-04:00"
+                                jcr:lastModifiedBy="DEVIJX1"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>Pokud nám chcete poslat dotaz nebo komentář, vyplňte prosím níže uvedený formulář.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:created="{Date}2023-01-09T13:36:14.404-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-09T13:40:47.517-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545825683,1653545847150,1653545835982,1653545835855]"
+                                jcr:created="{Date}2026-02-23T05:06:56.366-05:00"
+                                jcr:createdBy="nandivx5"
+                                jcr:lastModified="{Date}2026-02-23T05:06:56.366-05:00"
+                                jcr:lastModifiedBy="nandivx5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-02-23T04:58:01.152-05:00"
+                                    jcr:createdBy="nandivx5"
+                                    jcr:lastModified="{Date}2026-02-23T05:16:00.043-05:00"
+                                    jcr:lastModifiedBy="nandivx5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>AbbVie s.r.o.&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Metronom Business Center&lt;br>&#xd;&#xa;Bucharova 2817/13&lt;br>&#xd;&#xa;158 00 Praha 5 – Nové Butovice&lt;br>&#xd;&#xa;Česká republika&lt;/p>&#xd;&#xa;&lt;p>Telefon: +420 233 098 111&lt;br>&#xd;&#xa;E-mail:&amp;nbsp;&lt;a href=&quot;mailto:info-cz@abbvie.com&quot; target=&quot;_blank&quot;>info-cz@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;E-mail Allergan Aesthetics, an AbbVie company,&amp;nbsp;s.&amp;nbsp;r.&amp;nbsp;o.:&amp;nbsp;&lt;a href=&quot;mailto:info.czech@allergan.com&quot; title=&quot;null&quot; target=&quot;_blank&quot;>info.czech@allergan.com&lt;/a>&lt;br>&#xd;&#xa;Web:&amp;nbsp;&lt;a href=&quot;http://www.abbvie.cz/&quot; target=&quot;_blank&quot;>www.abbvie.cz&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Kontakt pro média&amp;nbsp;&lt;br>&#xd;&#xa; Ing. Eva Šebestová&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;Communications &amp;amp; Patient Relations Director&lt;br>&#xd;&#xa;E-mail:&amp;nbsp;&lt;a href=&quot;mailto:eva.sebestova@abbvie.com&quot; target=&quot;_blank&quot;>eva.sebestova@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Hlášení nežádoucích účinků&lt;br>&#xd;&#xa; Karolína Rajčániová&lt;br>&#xd;&#xa;&lt;/b>&lt;/span>Pharmacovigilance Manager&lt;br>&#xd;&#xa;E-mail:&amp;nbsp;&lt;a href=&quot;mailto:safety-cz@abbvie.com&quot; target=&quot;_blank&quot;>safety-cz@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;Mobil: +420 601 369 475&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Stížnosti na kvalitu léků, reklamace&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;E-mail:&amp;nbsp;&lt;a href=&quot;mailto:CZPQ@abbvie.com&quot; title=&quot;null&quot; target=&quot;_blank&quot;>CZPQ@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;Veškerá další komunikace související se&amp;nbsp;stížnostmi (např. otázky apod.) musí být zasílána na&amp;nbsp;e-mailovou adresu:&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:EEMEA-PharmaPQC@abbvie.com&quot; title=&quot;null&quot; target=&quot;_blank&quot;>EEMEA-PharmaPQC@abbvie.com&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Odborný informační servis&lt;br>&#xd;&#xa;&lt;/b>&lt;/span>Medicínské oddělení&lt;br>&#xd;&#xa;E-mail:&amp;nbsp;&lt;a href=&quot;mailto:czskmedinfo@abbvie.com&quot; target=&quot;_blank&quot;>czskmedinfo@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;Telefon:&amp;nbsp;+420 233 098 131&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Etická linka pro oznamovatele&lt;/b>&lt;/span>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.whispero.cz/abbvie&quot; target=&quot;_blank&quot;>Formulář v českém jazyce&lt;/a>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.whispero.cz/abbvie-whistleblowing-en&quot; target=&quot;_blank&quot;>English language form&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                        </par_12>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="2"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-13T09:04:07.594-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/cz/cs/site/footer/czech-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

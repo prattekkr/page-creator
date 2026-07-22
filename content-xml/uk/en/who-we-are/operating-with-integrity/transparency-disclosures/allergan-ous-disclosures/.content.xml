@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-29T01:00:24.008-04:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-07-29T01:00:23.991-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:lockable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="\[do not publish]Allergan HCP/HCP disclosure outside of the US"
+        jcr:uuid="be679a2e-3b1c-4d91-90c8-5887bdeb90c6"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        navTitle="Allergan HCP/HCP disclosure outside of the US"
+        pageTitle="Allergan HCP/HCP disclosure outside of the US">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2022-12-09T19:03:36.520-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653545847150,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2022-12-09T19:03:46.113-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Allergan acquisition"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-09T19:04:01.957-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>On May 8, 2020, AbbVie completed its acquisition of Allergan, which is now part of AbbVie.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <accordion_copy
+                        cq:styleIds="[8,1653545835881,4]"
+                        jcr:created="{Date}2022-12-09T21:49:16.973-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-09T21:50:14.840-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                        headingElement="h5"
+                        singleExpansion="false">
+                        <item_1670640581851
+                            cq:panelTitle="Asia Pacific"
+                            jcr:lastModified="{Date}2022-12-22T18:04:44.759-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;b>Japan&lt;/b>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.allergan.jp/ja-jp/about/guide-line&quot; target=&quot;_blank&quot;>Disclosure data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Republic of Korea&lt;/b>&amp;nbsp;- Data available upon request by the Ministry of Health and Welfare, an HCP or HCO&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1670640589078
+                            cq:panelTitle="Europe"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2023-08-04T06:55:58.938-04:00"
+                            jcr:lastModifiedBy="kumarvx60"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;b>Austria&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;http://eutransparency.abbvie.com/Allergan_Austria_Supporting_Document_Final.pdf&quot; target=&quot;_blank&quot;>Methodological Note&lt;/a>&amp;nbsp;&lt;br>&#xd;&#xa;2020 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2020_Allergan_Austria_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2021_Allergan_Austria_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Belgium&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://betransparent.be/en/&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>France&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.transparence.sante.gouv.fr/flow/main;jsessionid=018D64F5D0168FD5D4B51C4171AD76F2?execution=e1s1&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Germany&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;http://eutransparency.abbvie.com/Allergan_Germany_Supporting_Document_Final.pdf&quot; target=&quot;_blank&quot;>Methodological Note&lt;/a>&amp;nbsp;&lt;br>&#xd;&#xa;2020 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2020_Allergan_Germany_AKG_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2021_Allergan_Germany_AKG_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Greece&lt;br>&#xd;&#xa; &lt;/b>2020 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2020_Allergan_Greece_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2021_Allergan_Greece_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021 –&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/content/dam/abbvie-dotcom/uploads/PDFs/2021_Allergan_Greece_Patient_Organization_Report.pdf&quot; target=&quot;_blank&quot;>Patient Organization Report&lt;/a>&lt;br>&#xd;&#xa;2022 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2022_Allergan_Greece_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Ireland&amp;nbsp;&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.transferofvalue.ie/&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Italy&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;http://eutransparency.abbvie.com/Allergan_Italy_Supporting_Document_Final.pdf&quot; target=&quot;_blank&quot;>Nota metodologica per Allergan Spa - Version 2.0 – 07.06.2022&lt;/a>&lt;br>&#xd;&#xa;&lt;a href=&quot;http://eutransparency.abbvie.com/2020_Allergan_Italy_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure 2020 – Version 4.0 – 28.07.2023&lt;/a>&lt;br>&#xd;&#xa;&lt;a href=&quot;http://eutransparency.abbvie.com/2021_Allergan_Italy_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure 2021 - Version 2.0 - 28.07.2023&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Luxembourg&lt;/b>&lt;br>&#xd;&#xa;2021 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2021_Allergan_Luxembourg_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;br>&#xd;&#xa;2022 – No Transfers of Value&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Netherlands&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.transparantieregister.nl/home?lang=en-us&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Poland&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;http://eutransparency.abbvie.com/poland/2021/support/web/view.html&quot; target=&quot;_blank&quot;>Methodological Note&lt;/a>&lt;br>&#xd;&#xa;2020 – &lt;a href=&quot;http://eutransparency.abbvie.com/poland/2020/web/view.html&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021 – &lt;a href=&quot;http://eutransparency.abbvie.com/poland/2021/web/view.html&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2022 – &lt;a href=&quot;http://eutransparency.abbvie.com/poland/2022/web/view.html&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Portugal&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://placotrans.infarmed.pt/publico/listagempublica.aspx&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>*Please use Google Chrome to view this link.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Russia&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.abbvie.ru/responsibility/partnerships.html&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Slovakia&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.nczisk.sk/Statisticke_vystupy/Zverejnovanie_podla_zakona_liekoch_zdravotnickych_pomockach/Sumarne_spravy_o_vydavkoch/Pages/default.aspx&quot; target=&quot;_blank&quot;>MoH Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Spain&lt;/b>&lt;br>&#xd;&#xa;2020-2021&amp;nbsp;–&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/spain/2021/support/web/view.html&quot; target=&quot;_blank&quot;>Methodological Note&lt;/a>&lt;br>&#xd;&#xa;2020&amp;nbsp;–&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/spain/2020/web/view.html&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021&amp;nbsp;–&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/spain/2021/web/view.html&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021&amp;nbsp;–&amp;nbsp;&lt;a href=&quot;https://preview.abbvie.com/content/dam/abbvie-dotcom/uploads/PDFs/2021_Allergan_Spain_Patient_Organization_Report.pdf&quot; target=&quot;_blank&quot;>Patient Organization Report&lt;/a>&lt;br>&#xd;&#xa;2022&amp;nbsp;–&amp;nbsp;&lt;a href=&quot;/content/dam/abbvie-dotcom/uploads/PDFs/Patient-Organization-Report-Allergan-2022.pdf&quot; target=&quot;_blank&quot;>Patient Organization Report&lt;/a>&lt;br>&#xd;&#xa;2022&amp;nbsp;–&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/spain/2022/web/view.html&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&amp;nbsp;,&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/spain/2022/support/web/view.html&quot; target=&quot;_blank&quot;>Methodological Note&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Sweden&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://lif.se/etik/vardeoverforing/&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Switzerland&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;http://eutransparency.abbvie.com/Allergan_Switzerland_Supporting_Document_Final.pdf&quot; target=&quot;_blank&quot;>Methodological Note&lt;/a>&lt;br>&#xd;&#xa;2020 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2020_Allergan_Switzerland_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;br>&#xd;&#xa;2021 –&amp;nbsp;&lt;a href=&quot;http://eutransparency.abbvie.com/2021_Allergan_Switzerland_EFPIA_Report_Final.pdf&quot; target=&quot;_blank&quot;>Disclosure Report&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Turkey&lt;/b>&amp;nbsp;–&amp;nbsp;Data submitted per Ministry of Health requirement&lt;/p>&#xd;&#xa;&lt;p>&lt;b>United Kingdom&lt;/b>&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.abpi.org.uk/our-ethics/disclosure-uk/#4889b2fa&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1670640599860
+                            cq:panelTitle="Latin America"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2023-02-08T19:28:07.248-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;b>Brazil&amp;nbsp;(Minas Gerais)&lt;/b>&amp;nbsp;-&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://declarasus.saude.mg.gov.br/&quot; target=&quot;_blank&quot;>Disclosure Data&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Chile&lt;/b>&amp;nbsp;-&amp;nbsp;Data submitted per Trade Association request&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Colombia&lt;/b>&amp;nbsp;-&amp;nbsp;Data submitted per Ministry of Health requirement&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1670640607573
+                            cq:panelTitle="Middle East/Africa"
+                            jcr:lastModified="{Date}2022-12-22T18:06:21.628-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;b>Saudi Arabia&lt;/b> - Data submitted per the Saudi Food and Drug Authority requirement&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </accordion_copy>
+                    <container_697839008
+                        cq:styleIds="[1653545825689]"
+                        jcr:created="{Date}2022-12-22T18:06:35.791-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-22T18:06:35.791-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2022-12-22T18:06:50.761-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-22T18:06:58.251-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Serbia – Sponsored Professional Conferences"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h4"/>
+                        <text
+                            jcr:created="{Date}2022-12-22T18:07:08.625-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-22T18:07:20.559-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;a href=&quot;https://www.allergan.co.rs/responsibility/transparency&quot;>Professional Conferences&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_697839008>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2022-12-22T18:05:42.619-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-22T18:05:42.619-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

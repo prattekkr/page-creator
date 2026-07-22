@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-02-27T10:30:10.677-05:00"
+        cq:lastModifiedBy="kooycx"
+        cq:tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="We zitten bij VLOG van AbbVie in Zwolle overal middenin. Onze afdeling is verantwoordelijk voor de juiste planning van de hele supply chain. In een complexe omgeving als de onze gebeurt er heel veel."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-02-27T10:26:09.242-05:00"
+        jcr:lastModifiedBy="kooycx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Sumedha Mahajan &amp; Wouter Jans"
+        jcr:uuid="1977091d-dcfd-4149-9c21-2b194958ad12"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Lees meer"
+        ctaText="Lees meer"
+        description="Sumedha en Wouter delen hun verhaal over werken bij AbbVie: &quot;Samen zorgen we ervoor dat patiënten hun medicijnen op tijd krijgen. Uiteindelijk leidt de supply chain altijd naar de patiënt. Alles wat we doen is hierop gebaseerd.&quot;"
+        fileReference="/content/dam/abbvie-com2/nl/images/Sumedha-Wouter.jpg"
+        hideInNav="true"
+        navTitle="Sumedha Mahajan &amp; Wouter Jans"
+        pageTitle="Sumedha Mahajan &amp; Wouter Jans"
+        publishDate="{Date}2024-02-20T15:08:00.000+01:00"
+        readTime="3"
+        readWatchTimeSel="read-time"
+        title="Werken bij AbbVie met Sumedha en Wouter">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-01-17T09:50:58.328-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/header/netherlands-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-01-17T09:57:50.984-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T08:03:24.322-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle verhalen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle verhalen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-02-27T10:27:40.316-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Werken bij AbbVie met Sumedha en Wouter"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-02-27T10:28:26.713-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Space and trust in Supply Chain Planning&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <image
+                                    cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                    jcr:created="{Date}2024-02-27T09:12:06.449-05:00"
+                                    jcr:createdBy="kooycx"
+                                    jcr:lastModified="{Date}2024-02-27T10:29:22.372-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="Ruby Derksen"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/nl/images/Sumedha-Wouter.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-02-27T10:30:10.673-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>The Supply Chain Planning department ensures that manufacturers make the right AbbVie products at the right time – and makes sure that those products are delivered to the right client at the right time. Sumedha Mahajan and Wouter Jans talk about their work.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Wouter: ‘I started working as a Supply Chain Planner six months ago. My workday consists of a broad scale of activities, from monitoring the short-term demand and manufacturing schedules to making sure the items are shipped globally at the right moment. But also, dealing with distribution complaints, inventory control and to stay in touch with all stakeholders involved in manufacturing and distribution of pharmaceuticals. I am basically in the centre of everything and often in touch with colleagues from QA, Regulatory, Transportation and Finance. My responsibilities are focussed on the short-term planning for a specific brand in the portfolio of AbbVie, while my direct colleague focus on long term planning. It is nice to work in such a diverse environment and have the responsibilities that come with the job.’&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Sumedha: ‘We are truly in the middle of everything here. Our department is responsible for the correct planning of the entire supply chain, and for responding to any unforeseen events which can be plenty in a complex environment like ours. I, myself manage the team that plans for the supply chain of products that are about to be, or have only recently been, marketed. We make all the preparations for the launch and ensure that any teething problems are ironed out of the process. We often find that post-launch demand can only be predicted up to a certain point. This requires great flexibility and expectation management. I like that. It’s a different dynamic than you get with existing brands and products. Here we have to analyse the sales trends on a daily basis.’&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Supply chain leads to the patient&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Wouter: ‘Working in a highly international environment is very dynamic and makes the job interesting and challenging. It is great that VLOG is a very open environment, everyone is willing to support and help you if something is unclear. And not just me – we all depend on our colleagues within and outside our department. Together we ensure that patients receive their medicines on time.’ Sumedha: ‘It makes sense, because we all know what our common goal is. Because, ultimately, the supply chain leads to the patient. Everything we do is built on this realisation. It is also how we classify issues: does this problem impact patients? That determines the priority issues are given. Some medicines are only made by AbbVie. That means there is zero room for error.’&lt;/p>&#xd;&#xa;&lt;p>Sumedha: ‘Even though there is never a dull moment in AbbVie, everyone is given space and trust to do their work which allows them to achieve the right result. This principle applies whether the employees want to implement new ideas concerning processes, or they want to accept or decline an invitation to an international meeting that takes place in the middle of the night. AbbVie provides that freedom to do our work in the manner that suits us best’ Wouter: ‘That space to make your own decisions, combined with the team spirit around here, allows me to develop rapidly. Which you’re encouraged to do. The great thing about VLOG is that there are so many career opportunities. I have a Master’s degree in Supply Chain Management, and for the moment I just want to grow within my current function. But I can easily see myself doing the long-term planning in a few years or something completely different.’&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Global citizen in Zwolle&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Sumedha: ‘I have worked in India, also in the pharmaceutical supply chain. And I have lived and studied in the Philippines and the USA. I actually started out as a rocket scientist. Now I work in Zwolle, and I really feel like a global citizen. So many international contacts, so many nationalities to work with, yet it still feels like family. Yes, the job is extremely challenging. And demanding. But it’s also well-balanced, thanks to management and colleagues. I feel I’m in the right place, here. And if, at one point I want to get out of my comfort zone and do something else, AbbVie offers plenty of room for further development.’&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Global Supply Planning&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Within AbbVie our Global Supply Planning organization consists out of approximately 95 people. We have 6 AbbVie Supply Chain locations across the Globe and 2 Legacy Allergan Master Data locations. The VLOG Team consists out of 41 people: Supply Chain Planners to the Supply Chain Director, representing a large group of employees, all dedicated to have a lean and harmonized strategic and operational processes in place.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <cardpagestory
+                                cq:styleIds="[1111111111140]"
+                                jcr:created="{Date}2024-01-17T09:51:18.920-05:00"
+                                jcr:createdBy="kooycx"
+                                jcr:lastModified="{Date}2024-02-27T09:11:35.659-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                hideImage="false"
+                                imageModifiers="resMode=sharp2&amp;op_sharpen=1&amp;qlt=90"
+                                linkURL="/content/abbvie-com2/nl/nl/werken-bij-abbVie"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835982,1653546847153]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-17T10:03:25.317-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Ontdek meer"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-08-09T12:37:15.368-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-25T11:12:21.027-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/nl/nl/nieuws/verhalen"/>
+                            </container_copy_copy_>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756486159]"
+                        jcr:created="{Date}2024-01-17T09:56:02.779-05:00"
+                        jcr:createdBy="kooycx"
+                        jcr:lastModified="{Date}2024-01-17T09:56:17.616-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-01-17T09:53:16.324-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/footer/netherlands-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

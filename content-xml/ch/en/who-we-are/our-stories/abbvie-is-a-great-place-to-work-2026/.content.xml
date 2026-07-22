@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-01T16:44:07.628-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/company-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="In 2026, AbbVie Switzerland was given the award Great Place to Work Switzerland for the twelfth time as one of the best employers in the “Large” company category. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-06-01T16:44:07.609-04:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie Schweiz ist ein Great Place to Work"
+        jcr:uuid="664ae6c4-6459-4ce8-96c4-352336a75f70"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Learn more"
+        ctaText="Learn more"
+        description="In 2026, AbbVie Switzerland was given the award Great Place to Work Switzerland for the twelfth time as one of the best employers in the “Large” company category. "
+        fileReference="/content/dam/abbvie-com2/ch/images/gptw-2026-hero.jpg"
+        hideInNav="true"
+        navTitle="AbbVie Switzerland Is a Great Place to Work"
+        ogimage="/content/dam/abbvie-com2/ch/images/gptw-2026-hero.jpg"
+        pageTitle="AbbVie Switzerland Is a Great Place to Work"
+        publishDate="{Date}2026-05-29T09:20:00.000-05:00"
+        readTime="3"
+        readWatchTimeSel="read-time"
+        title="AbbVie Switzerland Is a Great Place to Work">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-05-12T13:53:35.568-04:00"
+                    jcr:lastModifiedBy="VALENSX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2026-05-28T13:48:57.066-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/ch/images/gptw-2026-hero.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2026-05-28T14:24:39.656-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                langAttribute="none"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/ch/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2025-05-12T14:03:55.562-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie Schweiz ist ein Great Place to Work!"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-28T14:01:15.594-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Our work culture is the foundation for everything we do. That is why we create an environment that is diverse and inclusive, and in which all employees feel comfortable, can trust, and support each other. That’s why we are awarded a “Great Place to Work” in the “Large” company category for the twelfth time in a row.&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Find out more: &lt;a href=&quot;https://www.en.greatplacetowork.ch/&quot;>Great Place to Work&lt;/a>.&lt;br>&#xd;&#xa; &lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825692]"
+                                    jcr:lastModified="{Date}2026-05-28T14:01:22.899-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="AbbVie is a Great Place to Work "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-05-28T14:01:29.716-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>AbbVie combines the experience of over 135 years of research &amp;amp; development and patient care with the dynamism and spirit of a young company, which we still uphold, even after more than 12 years. AbbVie was created in 2013 as a spin-off from Abbott.&lt;/p>&#xd;&#xa;&lt;p>We offer our employees in Switzerland the framework conditions and development opportunities of a major global corporation, but in a family atmosphere, with around 280 employees in 2026.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-28T13:50:16.132-04:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-05-28T13:50:16.132-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825692]"
+                                    jcr:lastModified="{Date}2026-05-28T14:01:37.973-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="What inspires us"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-05-28T14:03:08.405-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;ul>&#xd;&#xa;&lt;li>Innovative medicines and solutions that improve patients’ lives&lt;/li>&#xd;&#xa;&lt;li>A strong and &lt;a href=&quot;https://www.abbvie.com/science/pipeline.html&quot;>diverse pipeline&lt;/a>&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>A culture characterized by trust, teamwork and active inclusion&lt;/li>&#xd;&#xa;&lt;li>Competitive benefits and programs that support the needs of employees&lt;ul>&#xd;&#xa;&lt;li>Flexible working hours, option of home office and sabbatical&lt;br>&#xd;&#xa;(every five years)&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Up to 30 days holiday, plus 6 additional days off as bridging days&lt;/li>&#xd;&#xa;&lt;li>Individual development plans, leadership &amp;amp; management programs, etc.&lt;/li>&#xd;&#xa;&lt;li>Share ownership program for employees&lt;/li>&#xd;&#xa;&lt;li>Employee assistance programs&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>And much more...&lt;/p>&#xd;&#xa;&lt;p>87% employee satisfaction rate in this year’s survey speaks for itself.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-28T13:50:16.132-04:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-05-28T13:50:16.132-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop_1918714139
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825692]"
+                                    jcr:lastModified="{Date}2026-05-28T14:04:24.628-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Passion is Fuel of Innovation "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2_copy_copy_copy_1301691577
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-05-28T14:04:32.984-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Passion drives us to transcend our limitations and aim for the stars, just as we do every day in our commitment to serving patients in the best possible way.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>An example of different roles demonstrates how each of us contributes to making a difference in patients’ lives. In just 15 seconds, 12 employees demonstrated how their work is a personal contribution to our mission to leave no eligible patient behind. Visit our video gallery to &lt;a href=&quot;https://www.abbvie.ch/en/join-us/life-at-abbvie/meet-our-employees-in-15-seconds.html&quot;>meet our employees in 15 seconds&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_copy__1239523956
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-28T13:50:16.132-04:00"
+                                    jcr:createdBy="VALENSX5"
+                                    jcr:lastModified="{Date}2026-05-28T13:50:16.132-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_copy_cop
+                                    cq:styleIds="[1659545825678,1651545824678,1651545825692]"
+                                    jcr:lastModified="{Date}2026-05-28T14:04:49.904-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Join us!"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-05-28T14:05:02.652-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Visit our &lt;a href=&quot;https://careers.abbvie.com/en/&quot;>career website&lt;/a> to get an overview of all open vacancies worldwide.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-07-29T14:55:17.760-04:00"
+                    jcr:lastModifiedBy="VALENSX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/de/site/footer/switzerland-footer-german"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

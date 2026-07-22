@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-03-24T05:57:28.917-04:00"
+        cq:lastModifiedBy="lennglx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Se namn och länk till FASS.SE för allmänhet, där utförlig information om våra läkemdel finns."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-05-27T10:23:12.226-04:00"
+        jcr:lastModifiedBy="lennglx"
+        jcr:mixinTypes="[mix:lockable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Våra läkemedel"
+        jcr:uuid="ae2707d0-28c9-4e72-bb15-3651199621b1"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Läs mer"
+        ctaText="Läs mer"
+        description="Se namn och länk till FASS.SE för allmänhet, där utförlig information om våra läkemdel finns."
+        eyebrow="Våra läkemedel"
+        navTitle="Våra läkemedel"
+        pageTitle="Våra läkemedel"
+        title="Våra läkemedel">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-27T06:35:15.680-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/se/sv/site/header/sweden-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-17T14:29:34.158-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/test-tube-in-machine.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835860,1653545825686,1653242825678,1653545835879]"
+                        jcr:lastModified="{Date}2024-02-22T02:40:10.059-05:00"
+                        jcr:lastModifiedBy="lennglx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-09-27T05:58:40.627-04:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Våra läkemedel"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <separator
+                                cq:styleIds="[1662756409908]"
+                                jcr:created="{Date}2024-02-15T01:17:50.643-05:00"
+                                jcr:createdBy="lennglx"
+                                jcr:lastModified="{Date}2024-02-15T01:17:50.643-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-02-22T02:41:31.061-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>På Fass.se för allmänhet och vårdpersonal kan du läsa mer om våra läkemedel.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator_293664511
+                                cq:styleIds="[1662756409908,1662756756047]"
+                                jcr:created="{Date}2024-02-22T02:41:00.194-05:00"
+                                jcr:createdBy="lennglx"
+                                jcr:lastModified="{Date}2024-02-22T02:41:20.155-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_859467222
+                                cq:styleIds="[1662756456518]"
+                                jcr:created="{Date}2024-04-25T09:39:44.215-04:00"
+                                jcr:createdBy="lennglx"
+                                jcr:lastModified="{Date}2024-04-25T09:39:44.215-04:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        </container3>
+                        <accordion
+                            cq:styleIds="[1]"
+                            jcr:created="{Date}2023-12-11T10:22:14.844-05:00"
+                            jcr:createdBy="lennglx"
+                            jcr:lastModified="{Date}2025-05-27T10:33:08.048-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            heading="Våra läkemdel"
+                            headingElement="h5"
+                            singleExpansion="false">
+                            <text
+                                cq:panelTitle="Alphagan"
+                                jcr:created="{Date}2023-12-11T10:23:38.308-05:00"
+                                jcr:createdBy="lennglx"
+                                jcr:lastModified="{Date}2025-11-17T08:03:02.860-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Alphagan, ögondroppar, lösning 2 mg/ml&amp;nbsp;-&lt;b>&amp;nbsp;&lt;a href=&quot;https://fass.se/product/19971030000149/pl&quot; target=&quot;_blank&quot;>Fass.se&lt;/a>&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308299961
+                                cq:panelTitle="Aquipta"
+                                jcr:lastModified="{Date}2025-11-17T08:05:33.675-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Aquipta, tablett 10 mg (atogepant) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20220625000016/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Aquipta, tablett 60 mg&amp;nbsp;(atogepant) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20220625000023/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308320883
+                                cq:panelTitle="Belkyra"
+                                jcr:lastModified="{Date}2025-11-17T08:06:14.429-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Belkyra, injektionsvätska, lösning 10 mg/ml&amp;nbsp;-&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20150819000013/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308337996
+                                cq:panelTitle="Botox"
+                                jcr:lastModified="{Date}2025-11-17T08:08:38.314-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Botox, pulver till injektionsvätska, lösning 50 Allergan-enheter -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20080626000015/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Botox, pulver till injektionsvätska, lösning 100 Allergan-enheter -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20000616000030/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Botox, pulver till injektionsvätska, lösning 200 Allergan-enheter -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20091117000049/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308378247
+                                cq:panelTitle="Celluvisc"
+                                jcr:lastModified="{Date}2025-11-17T08:09:26.420-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Celluvisc, ögondroppar, lösning i endosbehållare&amp;nbsp;-&amp;nbsp;&lt;a href=&quot;https://fass.se/product/19970507000019/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308414052
+                                cq:panelTitle="Combigan"
+                                jcr:lastModified="{Date}2025-11-17T08:10:20.114-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Combigan, ögondroppar, lösning 2 mg/ml + 5 mg/ml -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20050630000042/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308429217
+                                cq:panelTitle="Constella"
+                                jcr:lastModified="{Date}2025-11-17T08:11:20.866-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Constella, kapsel, hård 290 mikrog&amp;nbsp;-&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20111108000077/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308444836
+                                cq:panelTitle="Duodopa"
+                                jcr:lastModified="{Date}2025-11-17T08:12:44.912-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Duodopa, intestinal gel, 20 mg/ml + 5 mg/ml (levodopa och karbidopa) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20040121000019/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308460232
+                                cq:panelTitle="Ganfort"
+                                jcr:lastModified="{Date}2025-11-17T08:14:15.940-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Ganfort, ögondroppar, lösning 0,3 mg/ml + 5 mg/ml -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20050706000013/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Ganfort, ögondroppar, lösning i endosbehållare 0,3 mg/ml + 5 mg/ml -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20130706000036/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308476362
+                                cq:panelTitle="Humira"
+                                jcr:lastModified="{Date}2025-11-17T08:16:39.264-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Humira, injektionsvätska, lösning, förfylld spruta 20 mg (adalimumab) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20170308000041/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Humira, injektionsvätska, lösning, förfylld injektionspenna, 40 mg/0,4 ml&amp;nbsp;(adalimumab) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20150901000020/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308490902
+                                cq:panelTitle="Kaletra"
+                                jcr:lastModified="{Date}2025-11-20T03:26:59.450-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Kaletra, filmdragerad tablett 200 mg/50 mg (lopinavir och ritonavir) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20050719000031&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Kaletra, oral lösning, (80 mg +20 mg)/ml (lopinavir och ritonavir) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20010320000035&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308509490
+                                cq:panelTitle="Lumigan"
+                                jcr:lastModified="{Date}2025-11-17T08:32:23.561-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Lumigan, ögondroppar, lösning 0,1 mg/ml&amp;nbsp;-&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20080416000058/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Lumigan, ögondroppar, lösning 0,3 mg/ml -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20020308000094/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Lumigan, ögondroppar, lösning i endosbehållare 0,3 mg/ml&amp;nbsp;&amp;nbsp;-&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20121206000060/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308533093
+                                cq:panelTitle="Maviret"
+                                jcr:lastModified="{Date}2025-11-17T08:33:38.931-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Maviret, filmdragerade tabletter, 100&amp;nbsp;mg/40&amp;nbsp;mg (glekaprevir, pibrentasvir) -&amp;nbsp;&lt;a href=&quot;https://fass.se/health/product/20161222000040/smpc&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1708585975893
+                                cq:panelTitle="Norvir"
+                                jcr:lastModified="{Date}2025-11-17T08:34:22.137-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Norvir, pulver till oral suspension 100 mg (ritonavir) - &lt;b>&lt;a href=&quot;https://fass.se/product/20140717000024/pl&quot; target=&quot;_blank&quot;>Fass.se&lt;/a>&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308553087
+                                cq:panelTitle="Ozurdex"
+                                jcr:lastModified="{Date}2025-11-17T08:56:00.885-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Intravitrealt implantat i applikator 700 mikrog - &lt;a href=&quot;https://fass.se/product/20090417000117/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308567704
+                                cq:panelTitle="Procren"
+                                jcr:lastModified="{Date}2025-11-17T08:57:44.794-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Procren, pulver och vätska till injektionsvätska, suspension i förfylld spruta, 11,25 mg (leuprorelin) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20031121000024/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1708586433281
+                                cq:panelTitle="Produodopa"
+                                jcr:lastModified="{Date}2025-11-17T08:58:27.364-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Produodopa, infusionsvätska, lösning, 240 mg/ml + 12 mg/ml (foslevodopa och foskarbidopa)&amp;nbsp; -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20210730000063/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308583846
+                                cq:panelTitle="Rinvoq"
+                                jcr:lastModified="{Date}2025-11-17T09:00:47.767-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Rinvoq, depottablett, 15 mg&amp;nbsp; (upadacitinib) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20181220000019/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Rinvoq, depottablett, 30 mg (upadacitinib) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20201009000044/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Rinvoq, depottablett, 45 mg (upadacitinib) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20210914000032/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308601484
+                                cq:panelTitle="Sevorane"
+                                jcr:lastModified="{Date}2025-11-17T09:01:29.825-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Sevorane, inhalationsånga, vätska (sevofluran) -&lt;b>&amp;nbsp;&lt;a href=&quot;https://fass.se/product/19950915000085/pl&quot; target=&quot;_blank&quot;>Fass.se&lt;/a>&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308633133
+                                cq:panelTitle="Skyrizi"
+                                jcr:lastModified="{Date}2025-11-17T09:04:45.236-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Skyrizi, injektionsvätska, lösning i förfylld injektionspenna 150 mg (risankizumab) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20200728000052/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Skyrizi, injektionsvätska, lösning i förfylld spruta 150 mg (risankizumab) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20200728000045/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Skyrizi, injektionsvätska,&amp;nbsp;lösning i cylinderampull 180 mg (risankizumab)&amp;nbsp;-&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20230828000034/pl&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Skyrizi, injektionsvätska,&amp;nbsp;lösning i cylinderampull 360 mg (risankizumab) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20211129000077/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Skyrizi, koncentrat till infusionsvätska, lösning 600 mg (risankizumab) -&lt;a href=&quot;https://fass.se/health/product/20211129000084/smpc&quot; target=&quot;_blank&quot;>&amp;nbsp;&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1719466936494
+                                cq:panelTitle="Tepkinly"
+                                jcr:lastModified="{Date}2025-11-17T09:06:22.134-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Tepkinly (epkoritamab),&amp;nbsp;Injektionsvätska, lösning 48 mg -&lt;b>&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20221007000020/pl&quot;>Fass.se&lt;/a>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Tepkinly,&amp;nbsp;(epkoritamab), Koncentrat till injektionsvätska, lösning 4 mg/0,8 ml -&lt;b>&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20221007000013/pl&quot;>Fass.se&lt;/a>&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308649559
+                                cq:panelTitle="Venclyxto"
+                                jcr:lastModified="{Date}2025-11-17T09:08:24.050-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Venclyxto, filmdragerade tabletter, 10 mg (venetoklax) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20151017000041/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Venclyxto, filmdragerade tabletter, 50 mg (venetoklax) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20151017000072/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Venclyxto, filmdragerade tabletter, 100 mg&amp;nbsp;(venetoklax) -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20151017000089/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1702308669876
+                                cq:panelTitle="Vistabel"
+                                jcr:lastModified="{Date}2025-11-17T09:09:38.794-05:00"
+                                jcr:lastModifiedBy="lennglx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Pulver till injektionsvätska, lösning 4 Allerganenheter/0,1 ml -&amp;nbsp;&lt;a href=&quot;https://fass.se/product/20031031000015/pl&quot; target=&quot;_blank&quot;>&lt;b>Fass.se&lt;/b>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2023-12-07T11:23:25.870-05:00"
+                            jcr:createdBy="lennglx"
+                            jcr:lastModified="{Date}2026-03-24T05:57:28.911-04:00"
+                            jcr:lastModifiedBy="lennglx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p style=&quot;text-align: right;&quot;>&lt;sup>SE-ABBV-240052 v2. Senast uppdaterad april 2026.&lt;/sup>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container2>
+                    <separator_973784860
+                        cq:styleIds="[1662756423318]"
+                        jcr:created="{Date}2023-01-30T13:36:48.579-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-30T13:36:48.579-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <separator
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2023-01-09T14:18:59.181-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-09T14:18:59.181-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-27T06:43:05.873-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/se/sv/site/footer/sweden-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-06-27T05:18:18.158-04:00"
+        cq:lastModifiedBy="chenngk"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/basic-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-07-11T10:23:28.305-04:00"
+        jcr:lastModifiedBy="DEVIJX1"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Резултати от търсенето"
+        jcr:uuid="0ef967d7-60e2-47b9-a0fd-c5e26bc9f3d8"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        pageTitle="Резултати от търсенето">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-11T10:24:24.994-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/bg/bg/site/header/bulgaria-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <separator_copy
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2023-01-05T19:44:06.847-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-05T19:44:06.847-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <grid_copy
+                        jcr:created="{Date}2023-01-06T13:24:53.039-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-06T13:25:08.787-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <searchresults_copy
+                                jcr:created="{Date}2023-01-06T13:17:33.185-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2025-06-27T05:18:18.154-04:00"
+                                jcr:lastModifiedBy="chenngk"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/search/searchresults/v2/searchresults"
+                                aboutResultsLabel="Sonuç {n} Hakkında"
+                                apiKey="xxa47c7f0e-4299-4221-87e9-f73e22c1468b"
+                                dateLabel="Date"
+                                nextLabel="Next"
+                                noOfItems="15"
+                                noResultsText="Няма резултати"
+                                paginationLimit="6"
+                                prevLabel="Previous"
+                                relevanceLabel="Сортиране по"
+                                searchResultsType="coveo"
+                                sortByLabel="Сортиране по">
+                                <searchinput
+                                    jcr:lastModified="{Date}2023-07-11T10:26:00.540-04:00"
+                                    jcr:lastModifiedBy="DEVIJX1"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/search/searchinput/v2/searchinput"
+                                    buttonLabel="Търсене"
+                                    buttonLabelMobile="Търсене AbbVie.com"
+                                    searchResultsPath="/content/abbvie-com2/bg/bg/search-results"
+                                    searchType="aemsearch"/>
+                            </searchresults_copy>
+                        </par_12>
+                    </grid_copy>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-11T10:25:28.039-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/bg/bg/site/footer/bulgaria-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

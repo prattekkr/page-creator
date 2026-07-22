@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-17T06:09:38.882-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-10-17T05:34:03.529-04:00"
+        jcr:lastModifiedBy="NANDIVX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Essais cliniques "
+        jcr:uuid="88003a8d-0581-4ec8-ae27-864123c892f2"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        description="Découvrez comment nous concrétisons nos recherches. "
+        eyebrow="Science"
+        fileReference="/content/dam/abbvie-com2/images-common/ls/20220901-abv67-026-mod.jpg"
+        navTitle="Essais cliniques "
+        pageTitle="Essais cliniques "
+        title="Essais cliniques "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-09T05:31:38.473-04:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-09-02T19:38:21.780-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"
+                        backgroundImageReference="/content/dam/abbvie-com2/images-common/ls/20220901-abv67-026-mod.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-08-08T07:11:03.643-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Essais Cliniques "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-08-09T07:36:16.002-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Découvrez comment nous concrétisons nos recherches.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                jcr:created="{Date}2024-08-09T07:40:01.314-04:00"
+                                jcr:createdBy="NANDIVX5"
+                                jcr:lastModified="{Date}2024-08-09T07:40:01.314-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        </container3>
+                    </container2>
+                    <container_2055527393
+                        cq:styleIds="[1653545835982,1653545825687]"
+                        jcr:created="{Date}2024-08-09T06:46:13.062-04:00"
+                        jcr:createdBy="NANDIVX5"
+                        jcr:lastModified="{Date}2024-08-09T06:46:13.062-04:00"
+                        jcr:lastModifiedBy="NANDIVX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-08-09T06:46:20.455-04:00"
+                            jcr:createdBy="NANDIVX5"
+                            jcr:lastModified="{Date}2024-08-09T06:46:37.865-04:00"
+                            jcr:lastModifiedBy="NANDIVX5"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="À propos de nos essais cliniques "
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h2"
+                            variant="h"/>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-08-09T06:57:19.153-04:00"
+                            jcr:createdBy="NANDIVX5"
+                            jcr:lastModified="{Date}2024-09-02T19:38:03.631-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>La recherche clinique est essentielle au développement de nouveaux médicaments.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Nos chercheurs s’appuient sur les dernières technologies et sur les avancées scientifiques les plus innovantes. Grâce aux essais cliniques, des avancées thérapeutiques naissent chaque année à travers le monde. &lt;/p>&#xd;&#xa;&lt;p>Les essais cliniques permettent d’évaluer l’efficacité et la sécurité d’une molécule. Ils constituent l’une des étapes de la mise sur le marché d’un nouveau médicament. Ils se déroulent en 4 phases.&lt;/p>&#xd;&#xa;&lt;p>Pour tout comprendre sur les essais cliniques, et retrouver les essais en cours, visitez le site &lt;a href=&quot;https://www.campagnesafmps.be/fr/2031-besoin-de-vous&quot; target=&quot;_blank&quot;>essaiscliniques.be&lt;/a>.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <separator_565048859
+                            cq:styleIds="[1662756456518]"
+                            jcr:created="{Date}2024-08-09T07:33:46.452-04:00"
+                            jcr:createdBy="NANDIVX5"
+                            jcr:lastModified="{Date}2024-08-09T07:33:46.452-04:00"
+                            jcr:lastModifiedBy="NANDIVX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <text_1936546587
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-08-09T07:34:17.636-04:00"
+                            jcr:createdBy="NANDIVX5"
+                            jcr:lastModified="{Date}2024-08-09T07:35:03.591-04:00"
+                            jcr:lastModifiedBy="NANDIVX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>En Belgique, les essais cliniques sont réglementés par la législation nationale du 7 mai 2004 relative aux expérimentations sur la personne humaine. Si vous voulez en savoir plus sur la réglementation, nous vous invitons à visiter le site de l’Agence fédérale des médicaments et des produits de santé (AFMPS)&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_2055527393>
+                    <text_1242976250
+                        jcr:created="{Date}2024-12-17T06:09:31.191-05:00"
+                        jcr:createdBy="BAUFAAX"
+                        jcr:lastModified="{Date}2024-12-17T06:09:38.874-05:00"
+                        jcr:lastModifiedBy="BAUFAAX"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                        text="&lt;p>AbbVie SA/NV -&amp;nbsp;BE-ABBV-240165 (V1.0) - December 2024&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-09-02T19:36:45.911-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-09-02T19:36:45.911-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-09T05:31:59.935-04:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

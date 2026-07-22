@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/abbvie-com2/settings/wcm/templates/(?!xf-).*]"
+        cq:lastModified="{Date}2023-08-24T23:26:14.025-04:00"
+        cq:lastModifiedBy="jewitca"
+        cq:redirectTarget="/content/abbvie-com2/ie/en"
+        cq:siteOwner="admin"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Ireland"
+        jcr:uuid="d4d38fa5-35fc-4fb7-8a1a-5fe11a1b5db9"
+        sling:resourceType="abbvie-com2/components/page/v2/page"/>
+    <en/>
+</jcr:root>

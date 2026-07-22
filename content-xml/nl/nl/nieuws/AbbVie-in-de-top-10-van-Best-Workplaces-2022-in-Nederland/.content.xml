@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-02-26T07:36:21.227-05:00"
+        cq:lastModifiedBy="kooycx"
+        cq:tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="AbbVie heeft de vijfde plaats behaald op de lijst van Best Workplaces Nederland 2022 in de categorie Multinational Companies. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-02-14T03:55:33.966-05:00"
+        jcr:lastModifiedBy="kooycx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie in de top 10 van Best Workplaces 2022 in Nederland"
+        jcr:uuid="6a7df8b6-2df8-4900-9600-42ee42fe5219"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Lees meer"
+        ctaText="Lees meer"
+        description="AbbVie heeft de vijfde plaats behaald op de lijst van Best Workplaces Nederland 2022 in de categorie Multinational Companies. "
+        fileReference="/content/dam/abbvie-com2/nl/images/AbbVie_Best Workplaces 2022.png"
+        hideInNav="true"
+        navTitle="AbbVie in de top 10 van Best Workplaces 2022 in Nederland"
+        pageTitle="AbbVie in de top 10 van Best Workplaces 2022 in Nederland"
+        publishDate="{Date}2022-05-31T15:46:00.000+02:00"
+        readTime="3"
+        readWatchTimeSel="read-time"
+        title="AbbVie in de top 10 van Best Workplaces 2022 in Nederland">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-01-17T09:50:58.328-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/header/netherlands-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-01-17T09:57:50.984-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:36:09.927-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-02-11T18:14:08.552-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie in de top 10 van Best Workplaces 2022 in Nederland"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <container
+                                    cq:styleIds="[1653545825688,1653545847149,1653242825678,1653545835879,1653545835982]"
+                                    jcr:created="{Date}2024-02-11T16:26:52.514-05:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-02-11T16:26:52.514-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container">
+                                    <image
+                                        jcr:created="{Date}2024-01-18T04:34:02.374-05:00"
+                                        jcr:createdBy="kooycx"
+                                        jcr:lastModified="{Date}2024-02-11T18:16:15.096-05:00"
+                                        jcr:lastModifiedBy="jewitca"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/image/v2/image"
+                                        altValueFromDAM="true"
+                                        displayPopupTitle="true"
+                                        dmPresetType="imagePreset"
+                                        fileReference="/content/dam/abbvie-com2/nl/images/abbvie-best-workplaces-2022.png"
+                                        isDecorative="false"
+                                        titleValueFromDAM="true"/>
+                                </container>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-02-11T16:04:07.394-05:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-02-11T16:04:07.394-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-02-13T09:48:20.905-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>AbbVie heeft de vijfde plaats behaald op de lijst van Best Workplaces Nederland 2022 in de categorie Multinational Companies. De plaatsing is een bevestiging dat AbbVie medewerkers plezier in hun werk hebben, trots zijn op wat zij doen en met vertrouwen samenwerken.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>“Voor de achtste keer staan we in de top 10. Ik ben trots op dit resultaat dat we samen met onze medewerkers behaald hebben. Het afgelopen jaar was een bijzonder jaar, we zijn na een jaar van groei en hard werken “back-to-the-office” gegaan in een hybride vorm. Daar mochten we bekende en nieuwe collega’s verwelkomen in een geëvolueerde organisatie. We hebben onderwerpen als connectie met elkaar, inclusiviteit en diversiteit nadrukkelijk een podium gegeven om verbinding met elkaar te realiseren”. aldus Simone Frankema, General Manager van AbbVie Logistics BV.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>General Manager van AbbVie Nederland, Ignacio Tuduri: “Bij AbbVie werken we aan een cultuur die balans van werk en privéleven, development, innovatie en maatschappelijk bewustzijn hoog in het vaandel heeft staan. Elke medewerker van AbbVie draagt hier aan bij op zijn of haar eigen unieke manier en daar heb ik veel waardering voor. Het is onze ambitie om met elkaar een positieve impact op de levens van mensen te creëren en daarmee een Great Place to Work te zijn”.&amp;nbsp;&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Organisaties die op de lijst van Best Workplaces staan, hebben een werkomgeving ontwikkeld waarin vertrouwen, trots en plezier centraal staan. Great Place to Work vraagt de mening van medewerkers over zes thema’s: gedurfd leiderschap, innovatiekracht, maximaliseren van ieders leiderspotentieel, vertrouwen, effectief leiderschap en betekenisvolle waarden. Naast vragen naar de mening van de medewerkers, weegt Great Place to Work het werkgeversbeleid mee in het onderzoek, onder andere op het gebied van ontwikkelen, werving en belonen. Meer informatie over het werkgeversbeleid van AbbVie is&amp;nbsp;&lt;a href=&quot;https://www.abbvie.nl/werken-abbvie/werken-bij-nl.html&quot; target=&quot;_blank&quot;>hier&lt;/a>&amp;nbsp;te vinden en op de werkgeverspagina op de website van&amp;nbsp;&lt;a href=&quot;https://www.greatplacetowork.nl/best-workplaces/nederland/2021/abbvie&quot; target=&quot;_blank&quot;>Great Place to Work&lt;/a>.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Meer weten over het onderzoek? Kijk op&amp;nbsp;&lt;a href=&quot;https://www.greatplacetowork.nl/&quot; target=&quot;_blank&quot;>www.greatplacetowork.nl&lt;/a>&amp;nbsp;voor informatie.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:36:21.219-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835982,1653546847153]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-17T10:03:25.317-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Ontdek meer"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-08-09T12:37:15.368-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-18T04:34:11.286-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            </container_copy_copy_>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756486159]"
+                        jcr:created="{Date}2024-01-17T09:56:02.779-05:00"
+                        jcr:createdBy="kooycx"
+                        jcr:lastModified="{Date}2024-01-17T09:56:17.616-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-01-17T09:53:16.324-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/footer/netherlands-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-05T08:24:26.829-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:tags="[abbvie-com-2:categories/oncology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="It's a match!"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-09-16T12:18:07.801-04:00"
+        jcr:lastModifiedBy="BAUFAAX"
+        jcr:mixinTypes="[mix:lockable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="It's a match!"
+        jcr:uuid="3f5a47c7-efec-4ab1-a86a-855b171c9937"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        fileReference="/content/dam/abbvie-com2/be/images/Match match.png"
+        hideInNav="true"
+        navTitle="It's a match!"
+        pageTitle="It's a match!"
+        publishDate="{Date}2025-09-16T07:00:00.000+02:00"
+        readTime="1"
+        readWatchTimeSel="read-time"
+        socialMedia="[facebook]"
+        subtitle="It's a match!"
+        title="It's a match!"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-26T18:05:29.360-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2025-09-16T10:45:13.898-04:00"
+                        jcr:lastModifiedBy="BAUFAAX"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/be/images/Cellules souches.jpg"
+                        dmPresetType="imagePreset"
+                        imagePreset="Hero"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678]"
+                        jcr:lastModified="{Date}2026-02-05T07:36:20.331-05:00"
+                        jcr:lastModifiedBy="BAUFAAX"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:lastModified="{Date}2026-02-05T07:36:06.910-05:00"
+                            jcr:lastModifiedBy="BAUFAAX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container"
+                            dmPresetType="imagePreset"
+                            enableFetchPriority="false"
+                            enableLazyLoading="false">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-25T23:18:59.172-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Toutes les histoires"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/fr/ressources/blog"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                jcr:lastModified="{Date}2025-09-16T10:50:19.256-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Un match qui peut sauver une vie "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-09-16T10:50:36.020-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Dans l’univers des applications de rencontre, un «&amp;nbsp;match&amp;nbsp;» est une question d’affinités. Dans le cadre du don de cellules souches, il s’agit d’un match vital : celui qui permet à un patient atteint d’un cancer du sang de recevoir une greffe.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <image
+                                jcr:created="{Date}2025-03-10T09:54:45.400-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2025-09-16T12:16:19.619-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="MICI"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/Match match.png"
+                                isDecorative="false"
+                                openInNewWindow="false"
+                                titleValueFromDAM="false"/>
+                            <text
+                                cq:styleIds="[1659545835858,1659545847147]"
+                                jcr:created="{Date}2025-09-16T10:50:44.569-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2025-09-16T12:18:54.688-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Chaque année, près de 7.800 personnes en Belgique sont touchées par une maladie hématologique telle que la leucémie, le lymphome ou le myélome.&lt;sup>1&lt;/sup>&amp;nbsp;Pour de nombreux patients, la greffe de cellules souches représente la seule chance de survie.&lt;sup>1&lt;/sup> Le défi est la compatibilité : celle-ci reste rare dans certains cas, de l’ordre d’1 sur 100.000.&lt;sup>2&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_copy_2007163026
+                                cq:styleIds="[1659545835858,1659545847147]"
+                                jcr:created="{Date}2025-09-16T10:50:44.569-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2025-09-16T10:59:28.566-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Le rôle des jeunes adultes&lt;/b>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Le registre des donneurs est ouvert aux personnes âgées de 18 à 39 ans. Cette tranche d’âge joue donc un rôle essentiel pour assurer le renouvellement du registre et accroître la diversité des profils. Cette diversité est particulièrement importante, car certains patients issus de minorités ethniques ont aujourd’hui beaucoup moins de chances de trouver un donneur compatible.&lt;sup>3&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_copy_2007163026_1363696007
+                                cq:styleIds="[1659545835858,1659545847147]"
+                                jcr:created="{Date}2025-09-16T10:50:44.569-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2025-09-17T08:58:21.871-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Comment se passe le don ?&lt;/b>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Les cellules souches&lt;/b> : elles régénèrent le sang. En cas de cancer du sang, un apport de cellules saines peut être vital.&lt;sup>4&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Le don&lt;/b> : dans la plupart des cas, il s’agit d’un prélèvement sanguin élargi, comparable à une prise de sang longue, avec un traitement pris au préalable.&lt;sup>4&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>L’anonymat&lt;/b> : le donneur et le patient ne se rencontrent pas, mais la vie de l’un dépend du geste de l’autre.&lt;sup>5&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_copy_2007163026_575939260
+                                cq:styleIds="[1659545835858,1659545847147]"
+                                jcr:created="{Date}2025-09-16T10:50:44.569-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2025-09-17T08:58:29.229-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Quelques chiffres clés&lt;/b>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Selon une enquête menée en 2025, 46 % des 18–25 ans savent qu’un don peut sauver une vie&lt;sup>6&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>92 % se disent prêts à s’inscrire si un proche en avait besoin&lt;sup>6&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Il y a 82 000 donneurs inscrits au registre belge&lt;sup>7&lt;/sup>&lt;/span>&lt;/span>&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <video
+                                jcr:created="{Date}2026-02-04T11:54:48.237-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-05T07:09:14.873-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                brightcovePlaylistAccount="2157889325001"
+                                btnText="5:12"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/Dr Graux.png"
+                                imgAlt="Le pouvoir des cellules souches, avec Professeur Graux"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                textIsRich="[true,true]"
+                                title="Le pouvoir des cellules souches, avec Professeur Graux"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube.com/embed/03TM6KdWc88?si=uYvjXjnJHb0Pu9PV"/>
+                            <text_copy_2007163026_1894138611
+                                cq:styleIds="[1659545835858,1659545847147]"
+                                jcr:created="{Date}2025-09-16T10:50:44.569-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2025-09-16T12:09:00.682-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Vous souhaitez en savoir plus sur le don de cellules souches ?&lt;/b>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>Retrouvez la procédure, les critères et informations officielles sur&amp;nbsp;&lt;a href=&quot;http://www.donneurdesang.be/&quot;>&lt;b>www.donneurdesang.be&lt;/b>&lt;/a>&lt;b>&amp;nbsp;&amp;nbsp;&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <video
+                            jcr:created="{Date}2026-02-05T07:37:35.717-05:00"
+                            jcr:createdBy="BAUFAAX"
+                            jcr:lastModified="{Date}2026-02-05T07:37:35.717-05:00"
+                            jcr:lastModifiedBy="BAUFAAX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/video/v2/video"/>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825683]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-02-05T08:24:26.821-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>AbbVie SA/NV - BE-ABBV-250142 (V2.0) - February 2026&lt;/b>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_1880015361
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-08-26T18:48:18.888-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2025-05-15T10:11:52.082-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <text
+                                        cq:panelTitle="Références"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:created="{Date}2024-08-26T18:48:26.678-04:00"
+                                        jcr:createdBy="washidx10"
+                                        jcr:lastModified="{Date}2025-09-16T11:08:06.796-04:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>&lt;sup>1 Belgian Cancer Registry, &lt;a href=&quot;https://kankerregister.org/fr/nouvelles/les-personnes-les-plus-agees-beneficient-le-plus-de-lamelioration-de-la-survie-observee&quot;>https://kankerregister.org/fr/nouvelles/les-personnes-les-plus-agees-beneficient-le-plus-de-lamelioration-de-la-survie-observee&lt;/a>, consulté en septembre 2025.&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>2 ZKRD (German Bone Marrow Donor Center), Statistical likelihood of unrelated donor match, 2022&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>3 Belgian Red Cross, &lt;a href=&quot;https://www.stamceldonor.be/allesgevenvoorelkaar/#waarom_zoeken_jullie_meer_donoren_met_buitenlandse_of_gemengde_roots&quot;>https://www.stamceldonor.be/allesgevenvoorelkaar/#waarom_zoeken_jullie_meer_donoren_met_buitenlandse_of_gemengde_roots&lt;/a>, consulté en septembre 2025.&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>4 Croix Rouge de Belgique, &lt;a href=&quot;https://www.donneurdesang.be/fr/donner/le-don-de-cellules-souches&quot;>https://www.donneurdesang.be/fr/donner/le-don-de-cellules-souches&lt;/a>, consulté en septembre 2025.&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>5 Croix Rouge de Belgique, &lt;a href=&quot;https://www.donneurdecellulessouches.be/devenir-donneur/devenir-donneur-de-cellules-souches/&quot;>https://www.donneurdecellulessouches.be/devenir-donneur/devenir-donneur-de-cellules-souches/&lt;/a>, consulté en septembre 2025.&amp;nbsp;&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>6 Enquête réalisée en juin 2025 auprès de 998 étudiants belges âgés de 18 à 25 ans.&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>7 World Marrow Donor Association (WMDA), Stem Cell Donation Process – 2024 Guidelines&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:createdBy="washidx10"
+                        jcr:lastModified="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-26T18:05:39.774-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

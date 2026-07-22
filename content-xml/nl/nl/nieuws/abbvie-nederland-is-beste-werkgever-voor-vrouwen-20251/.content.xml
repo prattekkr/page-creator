@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-05-15T09:19:45.275-04:00"
+        cq:lastModifiedBy="strunsx"
+        cq:tags="[abbvie-com-2:categories/company-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="AbbVie Nederland is dit jaar uitgeroepen tot Beste Werkgever voor Vrouwen door Great Place to Work Nederland. Een prachtige erkenning voor ons werkgeversbeleid dat zich richt op diversiteit en het bevorderen van een cultuur waarin samenwerken en ontwikkelen centraal staan. Vorig jaar stond AbbVie Nederland ook al op de 1e plaats als beste werkgever in de categorie mid-large (250-499 FTE)."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-05-15T09:19:45.260-04:00"
+        jcr:lastModifiedBy="strunsx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie Nederland is Beste Werkgever voor Vrouwen 2025"
+        jcr:uuid="f0c1e97a-d8a7-4c63-94c7-74a2e885bed7"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Lees meer"
+        ctaText="Lees meer"
+        description="AbbVie Nederland is dit jaar uitgeroepen tot Beste Werkgever voor Vrouwen door Great Place to Work Nederland. Een prachtige erkenning voor ons werkgeversbeleid dat zich richt op diversiteit en het bevorderen van een cultuur waarin samenwerken en ontwikkelen centraal staan. Vorig jaar stond AbbVie Nederland ook al op de 1e plaats als beste werkgever in de categorie mid-large (250-499 FTE)."
+        fileReference="/content/dam/abbvie-com2/nl/images/gptw-bw-nl-women2-2025.jpg"
+        hideInNav="true"
+        navTitle="AbbVie Nederland is Beste Werkgever voor Vrouwen 2025"
+        pageTitle="AbbVie Nederland is Beste Werkgever voor Vrouwen 2025"
+        publishDate="{Date}2025-05-02T10:54:00.000+02:00"
+        readTime="3"
+        readWatchTimeSel="read-time"
+        title="AbbVie Nederland Beste Werkgever voor Vrouwen 2025">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-01-17T09:50:58.328-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/header/netherlands-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2025-04-24T11:05:02.279-04:00"
+                        jcr:lastModifiedBy="strunsx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:34:54.783-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825679,1651545824678,1651545825678,1651545825690]"
+                                jcr:lastModified="{Date}2025-05-15T09:09:28.460-04:00"
+                                jcr:lastModifiedBy="strunsx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie Nederland is Beste Werkgever voor Vrouwen 2025"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_1252259470
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:created="{Date}2025-04-24T11:09:23.470-04:00"
+                                jcr:createdBy="strunsx"
+                                jcr:lastModified="{Date}2025-04-24T11:14:42.676-04:00"
+                                jcr:lastModifiedBy="strunsx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-05-07T04:56:22.930-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>AbbVie Nederland is dit jaar uitgeroepen tot Beste Werkgever voor Vrouwen door Great Place to Work Nederland. Een prachtige erkenning voor ons werkgeversbeleid dat zich richt op diversiteit en het bevorderen van een cultuur waarin samenwerken en ontwikkelen centraal staan. Vorig jaar stond AbbVie Nederland ook al op de 1e plaats als beste werkgever in de categorie mid-large (250-499 FTE).&lt;/b>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <quote
+                                    jcr:created="{Date}2025-05-07T04:56:36.140-04:00"
+                                    jcr:createdBy="tengcx4"
+                                    jcr:lastModified="{Date}2025-05-07T04:56:53.936-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/quote"
+                                    dmPresetType="imagePreset"
+                                    quote="In de samenleving zijn we er nog niet qua gelijkheid"
+                                    quoteType="regular"
+                                    textSize="h0"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-05-07T04:57:35.793-04:00"
+                                    jcr:createdBy="tengcx4"
+                                    jcr:lastModified="{Date}2025-05-07T04:57:43.984-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Jorita van den Hombergh, HR Director AbbVie Nederland, is verheugd met de eervolle vermelding. In het interview met&amp;nbsp;&lt;a href=&quot;https://www.telegraaf.nl/financieel/950970223/deze-bedrijven-zijn-de-beste-werkgevers-voor-vrouwen-mannen-moeten-stap-opzij-doen&quot;>De Telegraaf&lt;/a>&amp;nbsp;benadrukt zij het werkgeversperspectief: “Door het ondersteunen van medewerkersnetwerken voor vrouwen bijvoorbeeld, geven we aandacht aan het feit dat we er in de samenleving nog niet zijn qua gelijkheid. Het is voor het bedrijf belangrijk dat het personeelsbestand in balans is. En daar is dus oog voor bij zowel werving als doorontwikkeling van talent. Van quota is geen sprake. We geloven in de juiste persoon op de juiste plek. De verhouding hoeft niet fiftyfifty te zijn. Op senior leiderschapsniveau zijn nu zelfs meer vrouwen dan mannen werkzaam.”&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <image
+                                    jcr:created="{Date}2025-05-07T04:57:56.199-04:00"
+                                    jcr:createdBy="tengcx4"
+                                    jcr:lastModified="{Date}2025-05-07T04:59:45.832-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    fileReference="/content/dam/abbvie-com2/nl/images/AbbVie-award-women-2025.jpg"/>
+                                <text_498180573
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-05-07T04:59:57.995-04:00"
+                                    jcr:createdBy="tengcx4"
+                                    jcr:lastModified="{Date}2025-05-07T05:00:22.229-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Uitreiking award&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>De onderscheiding werd op 20 maart tijdens een feestelijk diner van Great Places to Work uitgereikt aan Marieke Sellies-Spekkink, Beate Bocking en Jamila Metalsi. Zij waren namens AbbVie Logistics en AbbVie Hoofddorp aanwezig vanuit het werknemersnetwerk Women Leaders in Action om de award in ontvangst te nemen. Het handgemaakte bord van keramiek is een knipoog naar het oude cliché van de keuken, als het domein van de vrouw.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_2114113664
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-05-07T05:00:58.997-04:00"
+                                    jcr:createdBy="tengcx4"
+                                    jcr:lastModified="{Date}2025-05-07T05:01:27.047-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Great Place to Work Nederland&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>AbbVie Nederland staat al tien jaar achter elkaar in de top 10 van Great Place to Work Nederland, een bureau dat jaarlijks medewerkersonderzoeken uitvoert bij 10.000 organisaties in 60 landen. Great Place to Work certificeert bedrijven die een fijne werkcultuur en medewerkerstevredenheid bevorderen.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Om erkend te worden als Best Workplaces for Women moet een bedrijf voldoen aan criteria zoals minimaal 33% vrouwelijke leidinggevenden en minimaal een vrouw in een senior leiderschapsfunctie. Daarnaast moeten de vrouwen in de organisatie de werkcultuur een score van minimaal 70% geven.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_1554981202
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-05-07T05:01:48.443-04:00"
+                                    jcr:createdBy="tengcx4"
+                                    jcr:lastModified="{Date}2025-05-07T05:01:55.257-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Bij AbbVie maken we het verschil&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Bij AbbVie werken we aan het verbeteren van de Nederlandse gezondheidszorg door het ontwikkelen van innovatieve geneesmiddelen voor iedereen die dat nodig heeft, zodat mensen weer fit zijn voor werk en privéleven. Onze kracht ligt in innovatie, groei en verbetering. Samen met zorgorganisaties, zorgverleners en patiënten werken we aan goede zorg en een betere kwaliteit van leven.&lt;/p>&#xd;&#xa;&lt;p>Door onze krachten te bundelen kunnen we echt het verschil maken en werken we tegelijkertijd aan een positieve impact op de maatschappij. Zoals op het gebied van&amp;nbsp;&lt;a href=&quot;https://www.abbvie.nl/wie-we-zijn/duurzaamheid.html&quot;>duurzaamheid&lt;/a>&amp;nbsp;en tijdens AbbVie’s wereldwijde vrijwilligersweek, de&amp;nbsp;&lt;a href=&quot;https://www.abbvie.nl/nieuws/meer-dan-100-collegas-doen-vrijwilligerswerk-tijdens-week-of-possibilities.html&quot;>Week of Possibilities&lt;/a>.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Samenwerken, gelijkwaardigheid en groei zijn belangrijke pijlers in onze organisatie. Wil jij ook het verschil maken? Kom&amp;nbsp;&lt;a href=&quot;https://www.abbvie.nl/werken-bij-abbVie.html&quot;>werken bij AbbVie&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <image_98320519
+                                    jcr:created="{Date}2025-05-07T05:02:12.524-04:00"
+                                    jcr:createdBy="tengcx4"
+                                    jcr:lastModified="{Date}2025-05-07T05:07:21.697-04:00"
+                                    jcr:lastModifiedBy="tengcx4"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    fileReference="/content/dam/abbvie-com2/nl/images/gptw-bw-nl-women2-2025.jpg"/>
+                            </container_1252259470>
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:35:04.649-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835982,1653546847153]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-17T10:03:25.317-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Ontdek meer"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-08-09T12:37:15.368-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2025-04-24T11:07:11.296-04:00"
+                                    jcr:lastModifiedBy="strunsx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            </container_copy_copy_>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756486159]"
+                        jcr:created="{Date}2024-01-17T09:56:02.779-05:00"
+                        jcr:createdBy="kooycx"
+                        jcr:lastModified="{Date}2024-01-17T09:56:17.616-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-01-17T09:53:16.324-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/footer/netherlands-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

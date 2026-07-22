@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-03-23T05:53:36.874-04:00"
+        cq:lastModifiedBy="teodx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Découvrez nos métiers chez AbbVie Belux à travers des témoignages vidéo et explorez les opportunités de carrière disponibles."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Les métiers chez AbbVie BeLux"
+        jcr:uuid="60709aea-1aaa-4fd0-8c0b-347323782218"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="En savoir plus"
+        description="Rencontrez nos équipes et explorez les rôles chez AbbVie Belux à travers une série de témoignages vidéo."
+        eyebrow="Métiers"
+        navTitle="Nos métiers"
+        pageTitle="Les métiers chez AbbVie BeLux"
+        title="Découvrez nos métiers">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-02-23T03:24:18.383-05:00"
+                    jcr:lastModifiedBy="teodx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
+                        jcr:created="{Date}2026-02-23T03:17:31.557-05:00"
+                        jcr:createdBy="teodx"
+                        jcr:lastModified="{Date}2026-02-23T03:17:31.557-05:00"
+                        jcr:lastModifiedBy="teodx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/be/images/Abbvie_SRC_Scene_6_350.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <text_copy_4824167 jcr:primaryType="nt:unstructured"/>
+                        <text_copy_495996106 jcr:primaryType="nt:unstructured"/>
+                        <container3_copy
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title_copy_102363330
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2026-02-19T05:27:42.128-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Découvrez nos métiers chez AbbVie BeLux"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy_497941496_
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2026-02-24T11:50:37.225-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Rencontrez les personnes derrière nos rôles clés et découvrez concrètement à quoi ressemble le quotidien chez AbbVie en Belgique.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3_copy>
+                        <container
+                            cq:styleIds="[1653545825685]"
+                            jcr:created="{Date}2026-02-23T03:19:26.082-05:00"
+                            jcr:createdBy="teodx"
+                            jcr:lastModified="{Date}2026-02-23T03:22:51.795-05:00"
+                            jcr:lastModifiedBy="teodx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container"
+                            dmPresetType="imagePreset"
+                            enableFetchPriority="false"
+                            enableLazyLoading="false">
+                            <title_copy
+                                cq:styleIds="[1659545825678,1651545824678,1651545825678,1661545829678]"
+                                jcr:created="{Date}2026-02-19T05:29:42.475-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T05:58:29.438-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Medical Sciences Liaison"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text
+                                jcr:created="{Date}2026-02-19T05:47:42.091-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-24T11:59:33.391-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Le Medical Sciences Liaison est le partenaire scientifique de terrain qui développe des relations solides avec les experts de santé et facilite des échanges scientifiques approfondis autour des thérapies AbbVie.&lt;br>&#xd;&#xa;Ce rôle exige une forte &lt;b>crédibilité scientifique, d’excellentes compétences relationnelles et la capacité à rendre des données complexes accessibles.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>\ud83d\udc49 Découvrez le rôle en vidéo.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <video
+                                jcr:created="{Date}2026-02-19T05:32:33.540-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T05:59:03.761-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                brightcovePlaylistAccount="2157889325001"
+                                btnText="1:33"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/Vignette MSL.png"
+                                imgAlt="Medical Science Liaison"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                textIsRich="[true,true]"
+                                title="Medical Sciences Liaison at AbbVie"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube.com/embed/Oyk6B9vDAII"/>
+                            <title_copy_copy
+                                cq:styleIds="[1659545825678,1651545824678,1651545825678,1661545829678]"
+                                jcr:created="{Date}2026-02-19T05:29:42.475-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T07:12:45.930-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Brand Manager"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text_copy
+                                jcr:created="{Date}2026-02-19T05:47:42.091-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-24T12:01:23.275-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Le Brand Manager se situe au croisement de la stratégie, du marketing et de l’impact pour le patient.&lt;br>&#xd;&#xa;Ce rôle requiert une&amp;nbsp;&lt;b>forte capacité d’analyse, une vision stratégique et l’aptitude à traduire des sujets scientifiques complexes en messages clairs et utiles.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>\ud83d\udc49 Découvrez le rôle en vidéo.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <video_copy
+                                jcr:created="{Date}2026-02-19T05:32:33.540-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T07:32:44.124-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                brightcovePlaylistAccount="2157889325001"
+                                btnText="1:29"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/Vignette brand manager.png"
+                                imgAlt="Medical Science Liaison"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                textIsRich="[true,true]"
+                                title="Brand Manager at AbbVie"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube.com/embed/Sgd3yNRe48A?si=ozrlEnuQVub4aToW"/>
+                            <title_copy_copy_copy
+                                cq:styleIds="[1659545825678,1651545824678,1651545825678,1661545829678]"
+                                jcr:created="{Date}2026-02-19T05:29:42.475-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T07:34:03.257-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Medical Advisor"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text_copy_copy
+                                jcr:created="{Date}2026-02-19T05:47:42.091-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-24T12:03:37.009-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Le Medical Advisor est le référent scientifique. Il fait le lien entre AbbVie, la communauté médicale et les parties prenantes clés.&lt;br>&#xd;&#xa;Son rôle demande une &lt;b>expertise scientifique solide, un sens aigu de la rigueur et la capacité à communiquer des données complexes avec clarté et intégrité&lt;/b>, afin de garantir une utilisation appropriée et fondée des thérapies.&lt;/p>&#xd;&#xa;&lt;p>\ud83d\udc49 Découvrez le rôle en vidéo.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <video_copy_copy
+                                jcr:created="{Date}2026-02-19T05:32:33.540-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T07:54:45.024-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                brightcovePlaylistAccount="2157889325001"
+                                btnText="1:29"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/Vignette medical advisor.png"
+                                imgAlt="Medical Advisor"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                textIsRich="[true,true]"
+                                title="Medical Advisor at AbbVie"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube.com/embed/_rIzjG7WFlo"/>
+                            <title_copy_copy_copy_1097295569
+                                cq:styleIds="[1659545825678,1651545824678,1651545825678,1661545829678]"
+                                jcr:created="{Date}2026-02-19T05:29:42.475-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T08:40:02.999-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Product Specialist"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text_copy_copy_copy
+                                jcr:created="{Date}2026-02-19T05:47:42.091-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-24T12:06:15.074-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Le Product Specialist est l’interlocuteur privilégié des professionnels de santé sur le terrain et contribue à l’adoption optimale des thérapies AbbVie.&lt;br>&#xd;&#xa;Ce rôle demande un&amp;nbsp;&lt;b>excellent sens relationnel, une bonne compréhension scientifique et la capacité à analyser son environnement&amp;nbsp;&lt;/b>pour identifier des opportunités et créer de la valeur au service des patients.&lt;/p>&#xd;&#xa;&lt;p>\ud83d\udc49 Découvrez le rôle en vidéo.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <video_copy_copy_copy
+                                jcr:created="{Date}2026-02-19T05:32:33.540-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-19T09:17:57.888-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                brightcovePlaylistAccount="2157889325001"
+                                btnText="1:20"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/Vignette product specialist.png"
+                                imgAlt="Product Specialist"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                textIsRich="[true,true]"
+                                title="Product Specialist at AbbVie"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube.com/embed/J0kWcp-4ybc"/>
+                            <title
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2026-02-24T12:07:37.493-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-24T12:08:05.572-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Envie de nous rejoindre ? "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                            <text_254210848
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2026-02-24T12:08:18.782-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-24T12:11:04.427-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Après avoir découvert nos équipes en vidéo, explorez nos opportunités actuelles et trouvez le rôle qui vous correspond.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <button
+                                cq:styleIds="[1659997777274]"
+                                jcr:created="{Date}2026-02-24T12:08:39.864-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-02-24T12:10:02.266-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Découvrez nos offres d'emploi"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Decouvrez"
+                                linkTarget="_self"
+                                linkURL="https://careers.abbvie.com"/>
+                        </container>
+                        <grid_copy
+                            cq:styleIds="[1653545835880]"
+                            jcr:created="{Date}2024-09-11T15:45:13.632-04:00"
+                            jcr:createdBy="washidx10"
+                            jcr:lastModified="{Date}2024-09-18T22:32:36.786-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <title_1226534290
+                                    cq:styleIds="[1659545825678,1661545829678,1651545825692]"
+                                    jcr:created="{Date}2024-08-07T02:27:21.309-04:00"
+                                    jcr:createdBy="NANDIVX5"
+                                    jcr:lastModified="{Date}2026-03-18T05:25:26.914-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Et si votre parcours commençait chez AbbVie ?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_1870643
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-08-07T02:28:03.039-04:00"
+                                    jcr:createdBy="NANDIVX5"
+                                    jcr:lastModified="{Date}2026-03-18T05:24:44.561-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Curieux·se de découvrir les carrières dans le secteur pharma ?&lt;br>&#xd;&#xa;Explorez nos rôles et notre environnement de travail.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <button
+                                    cq:styleIds="[1659997740832]"
+                                    jcr:created="{Date}2024-08-07T02:28:26.209-04:00"
+                                    jcr:createdBy="NANDIVX5"
+                                    jcr:lastModified="{Date}2026-03-23T05:53:36.865-04:00"
+                                    jcr:lastModifiedBy="teodx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Télécharger la brochure"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Vers Jepeux"
+                                    langAttribute="none"
+                                    linkTarget="_blank"
+                                    linkURL="/content/dam/abbvie-com2/be/documents/Abbvie_abbvie14-job-profiles_260224.pdf"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-11-01T07:09:07.487-04:00"
+                                    jcr:createdBy="kanchrx3"
+                                    jcr:lastModified="{Date}2024-11-01T07:09:30.723-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            </par_11>
+                            <par_12
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <image
+                                    jcr:created="{Date}2024-09-18T22:30:50.998-04:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2026-03-18T05:20:36.289-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="www.jepeux.be"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/be/images/Working roles AbbVie.png"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                            </par_12>
+                            <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys"/>
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                            </columns>
+                        </grid_copy>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

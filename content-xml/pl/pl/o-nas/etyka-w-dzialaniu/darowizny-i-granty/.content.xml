@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-07-15T22:13:46.699-04:00"
+        cq:lastModifiedBy="jewitca"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Wspieramy organizacje oraz inicjatywy non-profit: przekazujemy darowizny i granty edukacyjne."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-15T16:10:27.365-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Darowizny i granty"
+        jcr:uuid="9e356703-2f6c-4a2f-9014-26bb7e2d9121"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Dowiedz się więcej"
+        ctaText="Dowiedz się więcej"
+        description="Wspieramy organizacje oraz inicjatywy non-profit: przekazujemy darowizny i granty edukacyjne."
+        eyebrow="O nas"
+        navTitle="Darowizny i granty"
+        pageTitle="Darowizny i granty"
+        title="Darowizny i granty">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-02-16T20:34:23.668-05:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pl/pl/site/header/poland-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847149]"
+                        jcr:lastModified="{Date}2024-03-09T14:27:34.264-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images-common/ls/20220831-abv67-setE-080.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-02-16T19:40:25.105-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Darowizny i granty"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-07-15T16:11:06.434-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Wspieramy organizacje oraz inicjatywy non-profit: przekazujemy darowizny i granty edukacyjne.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <container_136081298
+                            cq:styleIds="[1653545825687,1653545847150,1653545835879,1653545835982]"
+                            jcr:created="{Date}2024-02-16T19:40:56.659-05:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2024-02-16T19:40:56.659-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2024-02-16T19:41:27.614-05:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-07-15T16:12:23.215-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Chęć sprostania wyzwaniom, takim jak rozwiązywanie najpilniejszych problemów zdrowotnych na świecie oraz poprawa jakości życia pacjentów, wymaga kompleksowego i odpowiedzialnego podejścia. AbbVie, jako firma odpowiedzialna społecznie, nie tylko opracowuje innowacyjne terapie i leki, ale także wspiera organizacje oraz inicjatywy non-profit. W tym celu przekazujemy darowizny rzeczowe i lekowe oraz udzielamy wsparcia finansowego w postaci darowizn pieniężnych lub grantów edukacyjnych.&lt;/p>&#xd;&#xa;&lt;p>Rodzaje wsparcia udzielanego przez AbbVie:&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Darowizny rzeczowe (np. darowizna sprzętu medycznego),&lt;/li>&#xd;&#xa;&lt;li>Darowizny produktów AbbVie,&lt;/li>&#xd;&#xa;&lt;li>Wsparcie finansowe:&lt;ul>&#xd;&#xa;&lt;li>przekazanie środków finansowych do realizacji celu wskazanego we wniosku (np. zakup sprzętu medycznego, konkretna inicjatywa organizacji pacjentów, wsparcie przeznaczone na edukację),&lt;/li>&#xd;&#xa;&lt;li>granty edukacyjne przekazywane na rzecz organizacji ochrony zdrowia/instytucji edukacyjnej na niezależny program/projekt edukacyjny obejmujący wymianę informacji o charakterze naukowym.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;&lt;p>Do uprawnionych beneficjentów należą: publiczne organizacje ochrony zdrowia, organizacje pacjentów lub inne instytucje o charakterze non-profit (np. fundacje).&lt;/p>&#xd;&#xa;&lt;p>Formularze niezbędne do ubiegania się o darowiznę dostępne są poniżej:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;a href=&quot;/content/dam/abbvie-com2/pl/documents/zalacznik_a_prosba_o_darowizne_lekowa.pdf&quot; target=&quot;_blank&quot;>Formularz wniosku - prośba o darowiznę lekową&lt;/a>&lt;u>&lt;/u>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;/content/dam/abbvie-com2/pl/documents/zalacznik_a_prosba_o_darowizne_pieniezna.pdf&quot; target=&quot;_blank&quot;>Formularz wniosku - prośba o darowiznę pieniężną&lt;/a>&lt;u>&lt;/u>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;/content/dam/abbvie-com2/pl/documents/zalacznik_a_prosba_o_darowizne_rzeczowa.pdf&quot; target=&quot;_blank&quot;>Formularz wniosku - prośba o darowiznę rzeczową&lt;/a>&lt;u>&lt;/u>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;/content/dam/abbvie-com2/pl/documents/zalacznik_a_prosba_o_grant_edukacyjny.pdf&quot; target=&quot;_blank&quot;>Formularz wniosku - prośba o grant edukacyjny&lt;/a>&lt;u>&lt;/u>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container_136081298>
+                    </container2>
+                    <text_copy
+                        cq:styleIds="[1659545825678]"
+                        jcr:created="{Date}2024-07-15T22:01:28.318-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-07-15T22:13:46.694-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                        text="&lt;p style=&quot;text-align: right;&quot;>&lt;span class=&quot;body-unica-14-reg&quot;>PL-ABBV-240056&lt;/span>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-02-16T20:33:12.485-05:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-02-16T20:33:12.485-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-02-16T20:34:47.316-05:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pl/pl/site/footer/poland-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

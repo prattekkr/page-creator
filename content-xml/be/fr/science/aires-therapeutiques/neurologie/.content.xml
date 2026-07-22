@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-11T11:50:32.948-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Nos scientifiques veillent à proposer de meilleurs traitements et de meilleures solutions aux patients souffrant de maladies neurologiques et psychiatriques.  "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-08-27T20:15:05.787-04:00"
+        jcr:lastModifiedBy="washidx10"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Neurologie  "
+        jcr:uuid="ee2a3b08-b27b-4e44-93bd-4bff16ab847e"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        description="Nos avancées scientifiques nous rapprochent toujours plus d’améliorations significatives chez les patients atteints de maladies neurologiques et psychiatriques."
+        eyebrow="science"
+        fileReference="/content/dam/abbvie-com2/images/cell/immunology-cell-feature.jpg"
+        navTitle="Neurologie  "
+        ogimage="/content/dam/abbvie-com2/images/cell/immunology-cell-feature.jpg"
+        pageTitle="Neurologie  "
+        title="Oncologie  "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-09T03:01:50.590-04:00"
+                    jcr:lastModifiedBy="kanchrx3"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879,1653545835982]"
+                        jcr:lastModified="{Date}2023-02-23T14:49:19.709-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/cell/Immunology-cell-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653545847150,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-08-09T03:03:00.809-04:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Neurologie  "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-08-27T17:28:16.601-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Nos avancées scientifiques nous rapprochent toujours plus d’améliorations significatives chez les patients atteints de maladies neurologiques et psychiatriques.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid_744289003
+                        cq:styleIds="1653545835880"
+                        jcr:created="{Date}2024-08-06T07:04:22.992-04:00"
+                        jcr:createdBy="kanchrx3"
+                        jcr:lastModified="{Date}2024-08-06T07:04:22.992-04:00"
+                        jcr:lastModifiedBy="kanchrx3"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982,1653545835879]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-09-25T17:41:59.195-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Notre recherche en neurologie"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-09T03:19:04.475-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Nos scientifiques travaillent d’arrache-pied pour améliorer les standards de soins en neurologie, un domaine avec de nombreuses pathologies difficiles à traiter et de nombreux besoins médicaux non satisfaits. Or, le cerveau est un organe complexe et, pour relever les nouveaux défis, il faut reconsidérer chaque étape de la découverte et du développement de médicaments.&lt;/p>&#xd;&#xa;&lt;p>Voilà pourquoi, nous recherchons sans cesse des médicaments innovants, qui modifient l’évolution de la maladie, afin de traiter quelques-uns des troubles les plus répandus et les plus graves, tels que la maladie de Parkinson, la maladie d’Alzheimer, la schizophrénie, la migraine et l’AVC.&amp;nbsp;&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-08-11T08:32:01.177-04:00"
+                                    jcr:createdBy="kanchrx3"
+                                    jcr:lastModified="{Date}2024-08-11T08:32:22.472-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <quote_copy
+                                    cq:styleIds="[1000000000000]"
+                                    jcr:created="{Date}2024-08-09T03:20:19.956-04:00"
+                                    jcr:createdBy="kanchrx3"
+                                    jcr:lastModified="{Date}2024-08-09T03:23:13.938-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/quote"
+                                    attributionName="Michael Gold, M.D."
+                                    attributionTitle="VP, Neuroscience Development"
+                                    bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                    imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                    quote="Avec curiosité et résilience, nos scientifiques veillent à découvrir de nouvelles perspectives afin d’induire des améliorations significatives chez les patients."
+                                    quoteType="regular"
+                                    textSize="h0"/>
+                            </container4>
+                            <video
+                                cq:styleIds="[10,8,3]"
+                                jcr:created="{Date}2024-09-25T17:52:33.074-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-12-11T11:14:09.345-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                brightcoveAutoPlay="false"
+                                btnText="REGARDER"
+                                fileReference="/content/dam/abbvie-com2/images-common/ls/20220920-abv67-setA-006.jpg"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="[true,true]"
+                                title="Maladie de Parkinson: quels symptômes ?"
+                                videoType="youtube"
+                                youtubeAutoPlay="true"
+                                youtubeUrl="https://www.youtube.com/embed/2WrX_ktEQIk?si=UDmfDWxmIhzjUEgS"/>
+                            <separator
+                                cq:styleIds="1662756486159"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <container4_copy
+                                cq:styleIds="[1653545825687,1653545847150,1653242825678,1653545835982,1653545835879]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-09T03:27:05.663-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Nos aires thérapeutiques en neurologie et psychiatrie "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-09T03:27:49.605-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Le fardeau associé aux troubles neurologiques et psychiatriques peut être insoutenable. Voilà pourquoi nous tenons à relever certains des défis les plus importants et à mettre au jour des solutions potentielles qui prennent en compte tous les aspects du patient.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-11T08:34:31.311-04:00"
+                                    jcr:createdBy="kanchrx3"
+                                    jcr:lastModified="{Date}2024-08-11T08:34:31.311-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-08-09T03:28:43.787-04:00"
+                                    jcr:createdBy="kanchrx3"
+                                    jcr:lastModified="{Date}2024-12-11T11:20:25.384-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    heading="Aires thérapeutiques"
+                                    singleExpansion="false">
+                                    <item_1723188588140
+                                        cq:panelTitle="Maladie de Parkinson"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2024-12-11T11:37:22.348-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>Près de 10 millions de personnes dans le monde sont atteintes de la maladie de Parkinson&lt;sup>1&lt;/sup>, qui s’accompagne d’une rigidité musculaire, de tremblements et peut mener à un déclin cognitif.&lt;sup>2&lt;/sup> Nos recherches innovantes visent à étudier de nouvelles manières d’améliorer les standards de soins et la qualité de vie des patients.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1723188616194
+                                        cq:panelTitle="Migraine "
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2024-12-11T11:44:31.413-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>La migraine est bien plus qu’un simple mal de tête. Touchant plus d’un milliard de personnes dans le monde, cette maladie neurologique s’accompagne de douleurs et de symptômes incommodants.&lt;sup>3&lt;/sup> Nous soutenons les professionnels de la santé à prendre soin des patients dans tous les aspects de la migraine. Nous veillons, par le biais de campagnes de sensibilisation et de partenariats, à aider les patients et leurs proches à surmonter les obstacles en matière de soins, à accéder à des traitements efficaces et à réduire l’impact de la migraine sur leur vie.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1723188648264
+                                        cq:panelTitle="Troubles moteurs "
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2024-12-11T11:46:06.975-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>Les troubles moteurs sont des maladies neurologiques chroniques et progressives qui affectent la capacité du corps à contrôler ses mouvements.&lt;sup>4&lt;/sup> Nous vouons un engagement indéfectible aux personnes atteintes de troubles moteurs, comme en témoignent nos décennies de recherches dans ce domaine. Nos scientifiques mettent au point des traitements qui atténuent les symptômes, tout en veillant aussi à sensibiliser la population à l’importance d’un diagnostic et d’une prise en charge rapides.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1723188678532
+                                        cq:panelTitle="Troubles psychiatriques "
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2024-12-11T11:25:34.578-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>Des millions de personnes dans le monde souffrent de troubles psychiatriques qui restent plus que jamais d’actualité. Au cours de ces 30 dernières années, nos scientifiques et médecins ont œuvré à lutter contre les problématiques de la maladie mentale.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1723189124517
+                                        cq:panelTitle="Maladie d'Alzheimer "
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2024-12-11T11:49:40.504-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>D’après l’Association Alzheimer, le nombre de personnes souffrant de démence de type Alzheimer aura triplé d’ici 2050.&lt;sup>5&lt;/sup> La maladie d’Alzheimer se caractérise par des changements au niveau de la mémoire, du langage et de la capacité à réaliser des tâches telles que conduire ou cuisiner.&lt;sup>6&lt;/sup> Chez AbbVie, nous travaillons sur des recherches potentiellement révolutionnaires concernant la maladie d’Alzheimer, mais aussi sur les problématiques scientifiques de la vieillesse en général.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                            </container4_copy>
+                            <title
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2024-08-27T17:31:27.768-04:00"
+                                jcr:createdBy="washidx10"
+                                jcr:lastModified="{Date}2024-11-01T06:39:06.803-04:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Nos articles de blog en neurologie"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h4"
+                                variant="h"/>
+                            <grid_copy_copy_copy
+                                jcr:created="{Date}2024-08-27T19:46:16.019-04:00"
+                                jcr:createdBy="washidx10"
+                                jcr:lastModified="{Date}2024-09-02T11:58:24.427-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                rowCount="1">
+                                <par_11
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <cardpagestory
+                                        cq:styleIds="[1111111111110,1111111111117,1111111111114]"
+                                        jcr:created="{Date}2024-08-27T19:46:37.190-04:00"
+                                        jcr:createdBy="washidx10"
+                                        jcr:lastModified="{Date}2024-09-02T12:03:11.268-04:00"
+                                        jcr:lastModifiedBy="jewitca"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                        hideImage="false"
+                                        linkURL="/content/abbvie-com2/be/fr/ressources/blog/la-renaissance-d-un-patient-atteint-de-parkinson"/>
+                                </par_11>
+                                <par_12
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <cardpagestory_copy
+                                        cq:styleIds="[1111111111110,1111111111117,1111111111114]"
+                                        jcr:created="{Date}2024-08-27T19:46:37.190-04:00"
+                                        jcr:createdBy="washidx10"
+                                        jcr:lastModified="{Date}2024-09-02T12:05:18.300-04:00"
+                                        jcr:lastModifiedBy="jewitca"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                        hideImage="false"
+                                        linkURL="/content/abbvie-com2/be/fr/ressources/blog/maladie-de-parkinson-des-troubles-du-sommeil-souvent-meconnus"/>
+                                </par_12>
+                                <par_13
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"/>
+                                <columns jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="6"
+                                        dataPriority="1"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="6"
+                                        dataPriority="1"/>
+                                </columns>
+                            </grid_copy_copy_copy>
+                            <text
+                                jcr:created="{Date}2024-12-11T11:28:05.031-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2024-12-11T11:28:35.553-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>AbbVie sa/nv -&amp;nbsp;BE-ABBV-240183 – December 2024&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_271719004
+                                jcr:created="{Date}2024-12-11T11:50:04.060-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2024-12-11T11:50:32.936-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;b>Références&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>&lt;sub>Parkinson’s Foundation, Statistics, &lt;a href=&quot;https://www.parkinson.org/understanding-parkinsons/statistics&quot;>https://www.parkinson.org/understanding-parkinsons/statistics&lt;/a>, Last accessed December 2024.&lt;/sub>&lt;/li>&#xd;&#xa;&lt;li>&lt;sub>Parkinson’s Foundation, What is Parkinson’s, &lt;a href=&quot;https://www.parkinson.org/understanding-parkinsons/what-is-parkinsons&quot;>https://www.parkinson.org/understanding-parkinsons/what-is-parkinsons&lt;/a>, Last accessed December 2024.&lt;/sub>&lt;/li>&#xd;&#xa;&lt;li>&lt;sub>Amiri P, Kazeminasab S, Nejadghaderi SA, et al. Migraine: A Review on Its History, Global Epidemiology, Risk Factors, and Comorbidities.&amp;nbsp;&lt;i>Front Neurol&lt;/i>. 2022;12:800605. Published 2022 Feb 23. doi:10.3389/fneur.2021.800605&lt;/sub>&lt;/li>&#xd;&#xa;&lt;li>&lt;sub>Mayo Clinic, Movement disorders, &lt;a href=&quot;https://www.mayoclinic.org/diseases-conditions/movement-disorders/symptoms-causes/syc-20363893&quot;>https://www.mayoclinic.org/diseases-conditions/movement-disorders/symptoms-causes/syc-20363893&lt;/a>, Last accessed December 2024.&lt;/sub>&lt;/li>&#xd;&#xa;&lt;li>&lt;sub>Alzheimer’s Disease International, Study predicts the number of people living with Alzheimer’s disease to triple by 2050, &lt;a href=&quot;https://www.alzint.org/news-events/news/new-data-predicts-the-number-of-people-living-with-alzheimers-disease-to-triple-by-2050/&quot;>https://www.alzint.org/news-events/news/new-data-predicts-the-number-of-people-living-with-alzheimers-disease-to-triple-by-2050/&lt;/a>, Last accessed December 2024.&lt;/sub>&lt;/li>&#xd;&#xa;&lt;li>&lt;sub>Mayo Clinic, Alzheimer’s disease, &lt;a href=&quot;https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-20350447&quot;>https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-20350447&lt;/a>, Last accessed December 2024.&amp;nbsp;&lt;/sub>&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy
+                                cq:styleIds="1653545835982"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="2"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Contenu lié"/>
+                                <cardpagestory
+                                    jcr:lastModified="{Date}2024-08-11T08:28:50.567-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    imageModifiers="resMode=sharp2&amp;op_sharpen=1&amp;qlt=90"
+                                    linkURL="/content/abbvie-com2/be/fr/science/domaines-d-innovation"/>
+                                <separator_1294049852_1533250705
+                                    cq:styleIds="1662756423318"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator
+                                    cq:styleIds="[1662756387452,1662756756047]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1294049852
+                                    cq:styleIds="1662756423318"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <header_1821235473_co
+                                    cq:styleIds="3"
+                                    jcr:lastModified="{Date}2024-08-11T08:41:57.805-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Sujets "/>
+                                <linklist
+                                    jcr:lastModified="{Date}2024-08-11T08:30:10.753-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                    childDepth="1"
+                                    excludeCurrentPage="true"
+                                    linkItems="true"
+                                    listFrom="static"
+                                    sortOrder="asc"
+                                    tagsMatch="any">
+                                    <pages jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Oncology"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/be/fr/science/aires-therapeutiques/oncologie"
+                                            oneTrustEnabled="false"
+                                            text="Oncologie  "
+                                            textIconTarget="_self"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Neuroscience"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/be/fr/science/aires-therapeutiques/neurologie"
+                                            oneTrustEnabled="false"
+                                            text="Neurologie  "
+                                            textIconTarget="_self"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Eye Care"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/be/fr/science/aires-therapeutiques/ophtalmologie"
+                                            oneTrustEnabled="false"
+                                            text="Ophtalmologie  "
+                                            textIconTarget="_self"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Aesthetics"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/be/fr/science/aires-therapeutiques/aesthetics"
+                                            oneTrustEnabled="false"
+                                            text="Médecine esthétique  "
+                                            textIconTarget="_self"/>
+                                        <item4
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Other Specialties"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/be/fr/science/aires-therapeutiques/autres-aires-therapeutiques"
+                                            oneTrustEnabled="false"
+                                            text="Autres spécialités "
+                                            textIconTarget="_self"/>
+                                    </pages>
+                                </linklist>
+                            </container_copy_copy>
+                        </par_13>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="9"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_744289003>
+                    <separator
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2022-12-17T18:17:09.009-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-17T18:17:09.009-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-07T03:50:42.180-04:00"
+                    jcr:lastModifiedBy="kanchrx3"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

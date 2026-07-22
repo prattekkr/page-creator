@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-09-19T10:56:55.388-04:00"
+        cq:lastModifiedBy="reference-adjustment-service"
+        cq:lastReplicated="{Date}2024-09-19T10:59:52.440-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="AbbVie seeks to disrupt the drug discovery and development model using genomic insights. Learn about our goal to deliver the right medicines to patients faster. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-08-02T08:57:34.719-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Genetics &amp; Genomics"
+        jcr:uuid="7a8a941a-bfce-478f-8a45-6ac07121ae7b"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Learn more"
+        description="AbbVie seeks to disrupt the drug discovery and development model using genomic insights."
+        eyebrow="science"
+        fileReference="/content/dam/abbvie-com2/images/employee/two-scientist-with-pipette-feature.jpg"
+        navTitle="Genetics &amp; Genomics"
+        pageTitle="Genetics &amp; Genomics"
+        title="Genetics &amp; Genomics"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/ch/en/site/popups/warn-on-leave-en/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-05-10T22:43:28.406-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847149]"
+                        jcr:lastModified="{Date}2022-12-17T12:07:25.267-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/woman-scientist-pipette-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653545847150,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2022-12-17T12:07:34.929-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Genetics and Genomics "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-17T12:13:02.199-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>From leveraging massive data sets to studying more than 1 million genomes, our scientists are challenging how we better understand and treat disease.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid_copy_copy
+                        cq:styleIds="[0,1653545835880]"
+                        jcr:created="{Date}2022-12-16T16:39:47.272-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-16T18:25:45.185-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_568753235
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825687]"
+                                jcr:created="{Date}2022-12-16T18:05:55.966-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T18:05:55.966-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title_116699496
+                                    cq:styleIds="[1661545829678,1659545825678]"
+                                    jcr:created="{Date}2022-12-15T11:49:26.700-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-01-23T10:22:47.536-05:00"
+                                    jcr:lastModifiedBy="bradydc"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Unlocking the power of genomic data"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-07T14:53:09.069-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T12:13:21.705-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Genomics is swiftly moving to the forefront of medicine and helping transform health care by making it more personalized and proactive. With new advances in technology, scientists can do things that wouldn't have been possible just a few years ago, like completing the human genome sequence and exploring the novel regions and functions of the genome.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;We’re leading one of the largest genomics research efforts in the world. Our goal is to build a greater understanding of disease biology and human data to deliver the right medicines to the right patients at the right time. With genomic insights from diverse sources — from individual patients to nation-level health care data — we’re on a mission to disrupt the drug discovery and development paradigm.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2022-12-17T11:19:50.354-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T11:19:50.354-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <video_copy_copy
+                                    cq:styleIds="[0,10]"
+                                    jcr:created="{Date}2022-11-28T14:25:08.192-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-09-08T13:24:22.271-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/video/v2/video"
+                                    autoPlay="true"
+                                    brightcoveAutoPlay="false"
+                                    btnText="Watch 4:32"
+                                    description="&lt;p>Our scientists break down precision medicine and the role of genomics research.&lt;/p>&#xd;&#xa;"
+                                    descriptiveIframeTitle="Why isn’t medicine one size fits all?"
+                                    fileReference="/content/dam/abbvie-com2/images/pmed-explained-yt-thumbnail.jpg"
+                                    loopVideo="false"
+                                    showBrightcoveControls="false"
+                                    showPlayerControls="false"
+                                    showRelatedContent="false"
+                                    showVideoInfo="false"
+                                    textIsRich="true"
+                                    title="Why isn’t medicine one size fits all?"
+                                    videoType="youtube"
+                                    youtubeAutoPlay="false"
+                                    youtubeUrl="https://www.youtube-nocookie.com/embed/KNVX97thgak"/>
+                            </container_568753235>
+                            <container_568753235_
+                                cq:styleIds="[1653545847150,1653242825678,1653545835879,1653545835982,1653545825687]"
+                                jcr:created="{Date}2022-12-16T18:05:55.966-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T18:05:55.966-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title_116699496
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-15T11:49:26.700-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2023-02-11T15:26:03.760-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Our interests include: "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h4"
+                                    variant="h"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-07T14:53:09.069-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T12:16:37.653-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;ul>&#xd;&#xa;&lt;li>Utilizing innovative gene editing systems as a bridge between genomics and biology&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Leveraging computational biology enabling multi-omics data integration, machine learning and human biology characterization to drive innovation&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Leveraging rare diseases to discover and/or validate targets ultimately to help us design more individualized medicines for patients&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Providing genetic evidence to repurpose some of our existing medicines into new indications&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Implementing induced pluripotent stem cells (iPSCs) with gene editing and genomics&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Applying cutting-edge platforms integrated with automated wetlab and standardized analysis pipeline for high-throughput multi-omic data generation&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Using AI/ML and predictive modeling for a variety of analyses for target prioritization, extracting knowledge from multi-omics data, imaging and others&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Using human genetic data to accelerate R&amp;amp;D and reduce failure rates&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756555361]"
+                                    jcr:created="{Date}2022-12-17T12:18:10.519-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T12:18:10.519-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            </container_568753235_>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy
+                                cq:styleIds="[1653545835982]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-12T11:17:18.672-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related content"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2022-12-17T12:19:30.939-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T12:19:54.928-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    linkURL="/content/abbvie-com2/ch/en/science/areas-of-innovation/precision-medicine"/>
+                                <separator_1294049852_632863288
+                                    cq:styleIds="[1662756409908]"
+                                    jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator
+                                    cq:styleIds="[1662756387452,1662756756047]"
+                                    jcr:created="{Date}2022-12-14T13:10:41.556-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:10:41.556-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1294049852
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <header_1821235473_co
+                                    cq:styleIds="[3]"
+                                    jcr:created="{Date}2022-12-14T13:11:04.446-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:11:38.712-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Topics"/>
+                                <linklist
+                                    jcr:created="{Date}2022-12-14T13:11:54.007-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-17T12:21:56.939-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                    childDepth="1"
+                                    excludeCurrentPage="true"
+                                    linkItems="true"
+                                    listFrom="static"
+                                    sortOrder="asc"
+                                    tagsMatch="any">
+                                    <pages jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Data Convergence"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/en/science/areas-of-innovation/data-convergence"
+                                            text="Data Convergence"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Patient-Focused Drug Development"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/en/science/areas-of-innovation/patient-focused-drug-development"
+                                            text="Patient-Focused Drug Development"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Therapeutic Modalities"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/en/science/areas-of-innovation/therapeutic-modalities"
+                                            text="Therapeutic Modalities"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Advanced Technologies"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/en/science/areas-of-innovation/advanced-technologies"
+                                            text="Advanced Technologies"/>
+                                    </pages>
+                                </linklist>
+                            </container_copy>
+                        </par_13>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="9"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_copy_copy>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-05-10T22:43:41.954-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/en/site/switzerland-footer-german"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

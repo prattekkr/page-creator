@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-12-31T15:12:54.361-05:00"
+        cq:lastModifiedBy="katoerx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Blijf op de hoogte van de meest recente ontwikkelingen van AbbVie."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-02-26T05:52:45.509-05:00"
+        jcr:lastModifiedBy="kooycx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Onze verhalen"
+        jcr:uuid="b9b535e9-b39a-4e92-ad6a-a68037b5fd58"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Lees meer"
+        ctaText="Lees meer"
+        description="Waarom we doen wat we doen"
+        eyebrow="Onze verhalen"
+        fileReference="/content/dam/abbvie-com2/nl/images/1.jpg"
+        navTitle="Onze verhalen"
+        pageTitle="Onze verhalen"
+        title="Verhalen die het verschil maken">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-01-17T09:50:53.253-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/header/netherlands-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <separator_2111217317
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2023-01-25T14:12:37.931-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-06-12T02:54:42.229-04:00"
+                        jcr:lastModifiedBy="JADHASX13"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <grid_copy
+                        cq:styleIds="[1653545835880]"
+                        jcr:created="{Date}2023-03-09T17:10:19.789-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2024-01-25T07:18:41.865-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <title
+                                cq:styleIds="[1659545825680,1651242825678]"
+                                jcr:created="{Date}2023-03-09T17:11:20.910-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2024-01-25T07:13:26.903-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Nieuwe verhalen"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                        </par_12>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_copy>
+                    <grid
+                        cq:styleIds="[0]"
+                        jcr:created="{Date}2023-01-20T18:45:48.255-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2024-01-25T07:09:40.558-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <item_1678389857200
+                            cq:panelTitle="Slide 1"
+                            cq:styleIds="[1111111111140]"
+                            jcr:lastModified="{Date}2023-03-09T14:25:24.656-05:00"
+                            jcr:lastModifiedBy="benitjs"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                            linkURL="/content/abbvie-com2/nl/en/who-we-are/our-stories/magnified-featuring-sean-mcewen"/>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="10"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <editorialfeed
+                                jcr:created="{Date}2023-01-09T11:57:57.009-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2025-12-31T15:12:54.353-05:00"
+                                jcr:lastModifiedBy="katoerx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/editorialfeed/v1/editorialfeed"
+                                hideDate="false"
+                                hideDesc="false"
+                                hideImage="false"
+                                hideTags="false"
+                                listFrom="children"
+                                parentPage="/content/abbvie-com2/nl/nl/nieuws/verhalen"
+                                tagsMatch="any">
+                                <excludedStories jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        storyPath="/content/abbvie-com2/nl/nl/nieuws/verhalen/how-abbvies-integrated-operations-help-prevent-drug-shortages"/>
+                                </excludedStories>
+                            </editorialfeed>
+                        </par_12>
+                    </grid>
+                    <container_813888030_
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:created="{Date}2022-12-21T15:34:37.508-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-12-12T07:19:07.000-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F1F3FF">
+                        <teaser_copy_copy
+                            cq:styleIds="[8]"
+                            jcr:created="{Date}2022-11-07T16:24:27.134-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:description="&lt;p>Blijf op de hoogte van onze meest recente ontwikkelingen.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2024-01-25T07:36:35.606-05:00"
+                            jcr:lastModifiedBy="kooycx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="&lt;p>Laatste nieuws&lt;/p>&#xd;&#xa;"
+                            sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                            ctaLink="/content/abbvie-com2/nl/nl/nieuws"
+                            ctaTarget="_self"
+                            ctaText="Ga naar nieuws"
+                            pretitle=" "
+                            textIsRich="[true,true]"/>
+                        <separator
+                            cq:styleIds="[1662756502570]"
+                            jcr:created="{Date}2023-12-12T07:12:51.052-05:00"
+                            jcr:createdBy="kooycx"
+                            jcr:lastModified="{Date}2023-12-12T07:12:51.052-05:00"
+                            jcr:lastModifiedBy="kooycx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </container_813888030_>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-17T05:38:36.295-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/footer/netherlands-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <fit-for-work/>
+    <target-at-work/>
+    <radboudumc-werkbehoud/>
+    <Arbeidsparticipatiepoli-mumc/>
+    <expertisecentrum-parkinson-arbeid/>
+    <kleine-heldenhuis/>
+    <werkbehoud-bij-ziekte/>
+    <working-at-abbvie-stories/>
+    <patient-support-stories/>
+    <neuroscience-stories/>
+    <science-stories/>
+    <philanthropy-stories/>
+    <eye-care-stories/>
+    <oncology-stories/>
+    <company-stories/>
+    <partnerships-stories/>
+    <aesthetics-stories/>
+    <eedi-stories/>
+    <sustainability-stories/>
+    <serving-communities-stories/>
+    <virology-stories/>
+    <immunology-stories/>
+    <ruby-derksen/>
+    <drew-mixon/>
+    <sumedha-mahajan-wouter-jans/>
+    <leven-chronische-ziekte-siety/>
+    <leven-chronische-ziekte-natascha/>
+    <leven-chronische-ziekte-rielle/>
+    <leven-chronische-ziekte-jacob/>
+    <leven-chronische-ziekte-natacha/>
+    <leven-met-een-chronische-ziekte-het-verhaal-van-wendy/>
+    <leven-chronische-ziekte-dory/>
+    <leven-chronische-ziekte-ruud-vera/>
+    <leven-chronische-ziekte-karin1/>
+    <how-abbvies-integrated-operations-help-prevent-drug-shortages/>
+</jcr:root>

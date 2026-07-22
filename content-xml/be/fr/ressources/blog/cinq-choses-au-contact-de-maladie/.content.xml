@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-16T14:36:00.641-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:tags="[abbvie-com-2:categories/immunology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-09-18T21:41:42.012-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Cinq choses au Contact de Maladie"
+        jcr:uuid="ac6b3d82-18d0-40d8-bce1-3e9f36874630"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        description="En tant qu’infirmière, Mary Neumann aide les patients atteints d’une affection cutanée chronique à s’y retrouver dans leur parcours de soins."
+        fileReference="/content/dam/abbvie-com2/be/images/aad_nurse_ambassador_hero.jpg"
+        hideInNav="true"
+        navTitle="Cinq choses au Contact de Maladie"
+        pageTitle="Cinq choses au Contact de Maladie"
+        publishDate="{Date}2022-01-01T00:00:00.000-06:00"
+        readTime="1"
+        readWatchTimeSel="read-time"
+        title="Maladie auto-immune: 5 choses apprises auprès des patients"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-26T14:54:13.311-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2024-08-26T16:03:55.430-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/be/images/aad_nurse_ambassador_hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-21T18:09:30.642-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Toutes les histoires"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/fr/ressources/blog"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-08-26T16:00:05.904-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Cinq choses apprises au contact de personnes atteintes d’une maladie auto immune"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-08-26T16:00:17.505-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>En tant qu’infirmière, Mary Neumann aide les patients atteints d’une affection cutanée chronique à s’y retrouver dans leur parcours de soins.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825683]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T16:01:44.526-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Comprendre la maladie est la première étape de votre parcours"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T16:01:40.473-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Mes nombreuses rencontres avec des patients atteints d’affections chroniques m’ont appris que chacun d’entre eux doit se confronter à un ensemble de défis qui lui est propre. Le nom de la maladie résonne peut-être aux oreilles du patient sans qu’il saisisse vraiment de quoi il s’agit. Il ne comprend peut-être pas vraiment pourquoi la maladie passe par des phases de sommeil avant d’effectuer des poussées. Pour lui, la maladie peut s’apparenter à une étrange créature, mais en comprenant comment elle fonctionne, il sera capable de la dompter. Bien qu’elles soient visibles en surface, les maladies comme le psoriasis sont causées par des événements survenant sous la peau comme par exemple une inflammation excessive induite par le système immunitaire.&lt;/p>&#xd;&#xa;&lt;p>Lorsque j’explique ce qu’est le psoriasis à un patient, je le compare à une situation du quotidien. À l’instar d’un four dans lequel on fait cuire un plat, le système immunitaire doit être gardé sous contrôle, car si le thermostat reste à une puissance trop élevée tout au long de la cuisson, le plat risque de brûler. Lorsque la température est abaissée, les saveurs du plat ont toutes les chances d’être préservées. La médecine peut parfois être considérée comme un bouton de contrôle du thermostat permettant de faire redescendre la température. Lorsque j’échange avec une personne malade, je vois souvent son regard s’éclairer lorsqu’elle commence à mieux comprendre ce qu’elle vit et à prendre du recul.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_73579656
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_770083144
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T16:02:06.407-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Chercher un accompagnement et découvrir sa propre force intérieure"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T16:02:16.334-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Que vous soyez un lycéen récemment diplômé qui doit apprivoiser seul tous les aspects des soins pour la première fois ou un parent qui doit gérer ses soins et rester présent pour sa famille, n’oubliez pas que vous avez en vous la force nécessaire pour prendre le contrôle de votre santé. Vous aurez simplement peut-être besoin d’un peu d’accompagnement pour y parvenir. N’ayez pas peur de sortir de votre bulle et de demander de l’aide pour vous guider.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_1824814774
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_1196843272
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T16:02:26.713-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Il y aura toujours des gens à qui parler"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_1244784449
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T16:02:46.106-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Le fait d’avoir une affection dermatologique chronique peut être vécu comme une douleur, pas seulement physique mais aussi émotionnelle. Cela peut vous inciter à vous mettre en retrait. Je sais aussi que les patients ont la force nécessaire pour avancer au milieu de ce tourbillon d’émotions.&lt;/p>&#xd;&#xa;&lt;p>Une patiente m’a dit qu’elle s’était sentie comme une enfant lorsque nous nous sommes rencontrées pour la première fois, car elle ne voulait rien savoir de sa maladie, elle voulait juste faire l’autruche. Au fil de nos entrevues et de nos appels téléphoniques, elle s’est rendu compte qu’elle était capable de reprendre le contrôle. J’ai découvert à quel point les gens sont capables de grandir et de changer quand quelqu’un leur prête une oreille attentive.&lt;/p>&#xd;&#xa;&lt;p>Gardez en tête qu’il existe des gens prêts à écouter votre histoire, vos frustrations et vos craintes. Parfois, il peut être utile de réfléchir à l’origine de vos sentiments et à la manière dont vous avez affronté d’autres moments difficiles de votre vie. Cela peut&amp;nbsp;&lt;i>&lt;b>in fine&lt;/b>&lt;/i>&amp;nbsp;vous permettre d’identifier vos propres armes pour forger votre confiance et surmonter les obstacles.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_542590905
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T16:03:03.850-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Votre histoire peut inspirer vos proches"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_1430795351
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T16:03:15.218-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>N’oubliez pas que vous êtes une source d’inspiration ! Chaque jour, vous rappelez aux gens comme moi les raisons pour lesquelles nous avons choisi de travailler dans le secteur de la santé et de prendre soin des autres. Vous nous motivez par des choses toutes simples comme un sourire ou un geste et par des moments plus forts lorsque vous passez un cap. C’est une chance pour vos amis, votre famille et les gens comme moi qui sont témoins de votre progression et votre force.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy_838789775
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T16:03:21.412-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="N’oubliez jamais que c’est vous qui pilotez"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy_524343507
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T16:03:27.495-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>En tant qu’infirmière, j’ai peut-être croisé des patients à un moment décisif de leur existence, peut-être alors même que ces patients avaientdéjà débuté leur chemin avec une maladie chronique comme le psoriasis ou l’hidrosadénite suppurée (HS). Mon objectif est d’être à leurs côtés tout au long de leur parcours pour leur apporter mes connaissances et mon soutien. Mais si vous devez garder une chose à l’esprit, c’est que c’est le patient qui reste aux commandes. C’est à vous de prendre ses décisions et de choisir son chemin. Alors gardez le regard fixé sur l’horizon et sachez que vous ne serez pas seul sur votre route.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756542862]"
+                                    jcr:created="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T16:00:41.586-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text
+                                    jcr:created="{Date}2024-12-16T14:35:55.331-05:00"
+                                    jcr:createdBy="BAUFAAX"
+                                    jcr:lastModified="{Date}2024-12-16T14:36:00.634-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie SA/NV -&amp;nbsp;BE-ABBV-240181 (V1.0) - December 2024&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-26T14:55:15.489-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

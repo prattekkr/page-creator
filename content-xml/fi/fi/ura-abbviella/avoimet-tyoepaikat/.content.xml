@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-12-07T03:51:47.935-05:00"
+        cq:lastModifiedBy="RAITIKJ"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-11-09T15:00:02.666-05:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Avoimet työpaikat"
+        jcr:uuid="2e8d6a32-feec-4a23-978c-36d0d4919cb8"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Lue lisää"
+        ctaText="Lue lisää"
+        description="Uramahdollisuuksia yli 70 maassa."
+        eyebrow="Ura AbbViella"
+        fileReference="/content/dam/abbvie-com2/fi/images/2880/Abbvie_16_12_2022_Corridor_1096_2880.jpg"
+        navTitle="Avoimet työpaikat"
+        pageTitle="Avoimet työpaikat"
+        title="Avoimet työpaikat">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-10-17T15:50:24.767-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fi/fi/site/header/finland-header-finnish"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-09-29T21:10:49.250-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/fi/images/2880/Abbvie_16_12_2022_Corridor_1096_2880.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653242825678,1653545835982,1653545847150,1653545835879]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-08-09T04:34:39.452-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Avoimet työpaikat"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-10-17T15:43:02.928-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Uramahdollisuuksia yli 70 maassa.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <container
+                            cq:styleIds="[1653545847149,1653545835879,1653545825686]"
+                            jcr:created="{Date}2023-09-29T21:12:37.043-04:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2023-09-29T21:12:37.043-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-09-29T21:12:43.739-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2023-12-07T03:51:47.930-05:00"
+                                jcr:lastModifiedBy="RAITIKJ"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>AbbVie tarjoaa mahdollisuuden kansainväliseen uraan viidellä maantieteellisellä alueella yhteensä yli 70 maassa.&lt;/span>&lt;/p>&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>AbbVien globaali pääkonttori sijaitsee Chicagossa, Yhdysvalloissa ja Euroopan pääkonttori Pariisissa.&lt;/span>&amp;nbsp; &amp;nbsp;Yhteystietomme löydät &lt;a href=&quot;https://www.abbvie.fi/contact-us.html&quot; target=&quot;_blank&quot;>täältä.&lt;/a>&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                            <button
+                                cq:styleIds="[1659997740832]"
+                                jcr:created="{Date}2023-11-09T19:08:00.397-05:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2023-11-09T19:08:48.212-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Avoimet työpaikat"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Avoimet työpaikat"
+                                linkTarget="_blank"
+                                linkURL="https://careers.abbvie.com"/>
+                        </container>
+                    </container2>
+                    <separator
+                        cq:styleIds="[1662756566902]"
+                        jcr:created="{Date}2023-09-29T21:16:04.208-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2023-09-29T21:16:04.208-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-10-17T17:32:23.222-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fi/fi/site/footer/finland-footer-finnish"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

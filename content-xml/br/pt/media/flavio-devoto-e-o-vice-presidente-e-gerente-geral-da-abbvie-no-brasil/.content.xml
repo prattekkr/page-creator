@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-06-08T16:11:12.880-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-06-08T16:11:12.863-04:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Flavio Devoto é o Vice-Presidente e Gerente Geral da AbbVie no Brasil"
+        jcr:uuid="c6b29e20-78cb-494b-906e-6aa903014f7a"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Learn more"
+        ctaText="Learn more"
+        hideInNav="true"
+        navTitle="Flavio Devoto é o vice-presidente e gerente geral da AbbVie no Brasil"
+        pageTitle="Flavio Devoto é o vice-presidente e gerente geral da AbbVie no Brasil"
+        publishDate="{Date}2026-02-01T15:06:00.000-06:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="Flavio Devoto é o Vice-Presidente e Gerente Geral da AbbVie no Brasil">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-04-21T10:21:33.720-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/br/pt/site/header/brazil-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2026-04-21T10:23:20.636-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2026-04-21T10:22:40.189-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Media"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                langAttribute="none"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/br/pt/media"/>
+                            <storyinfo
+                                jcr:lastModified="{Date}2026-04-21T10:22:49.051-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"
+                                hideReadWatchTime="true"
+                                hideTag="true"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678,1661545829678,1651545825692]"
+                                jcr:lastModified="{Date}2026-06-08T16:06:20.223-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Flavio Devoto é o vice-presidente e gerente geral da AbbVie no Brasil"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-06-08T16:07:55.346-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>&lt;b>SÃO PAULO, FEVEREIRO DE 2026&lt;/b> – A AbbVie Brasil anuncia o executivo Flavio Devoto como novo Vice-Presidente e Gerente Geral da Afiliada no país. Até o momento, Flavio era Vice-Presidente da AbbVie para América Latina. Com o forte desempenho atual e o potencial crescimento da afiliada brasileira, Flavio retorna para a liderança dos negócios no país. Anteriormente, já foi Gerente Geral da região Cluster Sul, que incluí Argentina, Chile, Paraguai e Uruguai.&lt;b>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Natural de Buenos Aires, Flávio Devoto é médico e acumula mais de 25 anos de experiência na indústria farmacêutica. “Meu foco, junto ao meu time, será impulsionar investimentos em pesquisa e desenvolvimento no Brasil e criar parceiras com o governo brasileiro e com atores da saúde suplementar para fortalecermos o acesso a terapias inovadoras para os(as) pacientes”, afirma Flávio Devoto.&lt;/p>&#xd;&#xa;&lt;p>O executivo seguirá baseado em São Paulo, cidade onde está a sede administrativa da companhia no País.&lt;/p>&#xd;&#xa;&lt;p>Flavio Devoto assume a posição anteriormente ocupada por Eduardo Tutihashi, que assumiu a posição de Vice-Presidente para Ásia e ficará baseado em Singapura. Com a movimentação de Flávio para a liderança da AbbVie Brasil, a vice-presidëncia para a América Latina passa a ser ocupada por Anthony Wong, Vice-Presidente para América Latina e Gerente Geral para AbbVie Porto Rico.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Sobre a AbbVie&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>A missão da AbbVie é descobrir e fornecer medicamentos e soluçôes inovadoras que direcionem as questôes de saúde da atualidade e enfrentem os desafios médicos do amanhã. Estamos empenhados a causar um impacto positivo na vida das pessoas em diferentes áreas terapëuticas, como Imunologia, Oncologia, Neurociëncia e Oftalmologia, além dos produtos e serviços do nosso portfólio de estética com a Allergan Aesthetics, uma empresa AbbVie. Começamos nossas operaçôes no Brasil em 2014 e, desde então, já contamos com mais de 1.000 pacientes envolvidos em estudos clínicos; atualmente mais de 50 projetos são conduzidos no país, com mais de 170 centros em diferentes territórios brasileiros.&lt;/p>&#xd;&#xa;&lt;p>Para mais informaçôes, acesse o nosso site&lt;a href=&quot;http://www.abbvie.com.bre/&quot;> www.abbvie.com.br &lt;/a>e siga @AbbVieBrasil no Instagram e @AbbVie no LinkedIn.&lt;/p>&#xd;&#xa;&lt;p>AbbVie Brasil +55 (11) 4573-5600&lt;br>&#xd;&#xa;Avenida Jornalista Roberto Marinho, 85 – 7º andar&amp;nbsp;&lt;a href=&quot;http://www.abbvie.com.br&quot;>www.abbvie.com.br&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Brooklin Novo – São Paulo/SP&lt;br>&#xd;&#xa;CEP 04576-010&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Contato para a imprensa &lt;/b>&lt;a href=&quot;mailto:abbvie@iccom.com.br&quot;>abbvie@iccom.com.br&lt;/a>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    jcr:created="{Date}2026-04-21T10:28:13.605-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-04-21T10:28:13.605-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2026-04-21T10:30:52.729-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/br/pt/site/footer/brazil-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-08-13T11:17:27.801-04:00"
+        cq:lastModifiedBy="kaspatx"
+        cq:lastReplicated="{Date}2024-08-13T11:17:42.590-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="AbbVie Schweiz lebt Diversität und Inklusion. Gemeinsam mit der Organisation myAbility bieten wir Menschen mit Behinderungen oder chronischen Erkrankungen Arbeitsmöglichkeiten. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-26T16:34:33.978-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="myAbility und AbbVie"
+        jcr:uuid="6f1eabb5-3298-4d34-9b62-35f823685af6"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Weitere Informationen "
+        ctaText="Weitere Informationen"
+        description="AbbVie Schweiz lebt Diversität und Inklusion. Gemeinsam mit der Organisation myAbility bieten wir Menschen mit Behinderungen oder chronischen Erkrankungen Arbeitsmöglichkeiten. "
+        eyebrow="Arbeiten bei AbbVie"
+        fileReference="/content/dam/abbvie-com2/images/employee/male/man-with-wheelchair-hero.jpg"
+        navTitle="myAbility und AbbVie"
+        pageTitle="myAbility und AbbVie"
+        title="Ability und AbbVie"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/ch/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-07-26T16:31:08.594-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/de/site/header/switzerland-header-german"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-11T10:59:24.311-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/male/man-with-wheelchair-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545847150,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-08-13T11:17:27.796-04:00"
+                                jcr:lastModifiedBy="kaspatx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="myAbility und AbbVie"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-07-26T16:26:38.783-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>AbbVie Schweiz lebt Diversität und Inklusion. Gemeinsam mit der Organisation myAbility bieten wir Menschen mit Behinderungen oder chronischen Erkrankungen Arbeitsmöglichkeiten.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container_395792072_
+                        cq:styleIds="[1653545825689,1653545847150,1653545835982]"
+                        jcr:created="{Date}2023-01-07T00:14:13.613-05:00"
+                        jcr:createdBy="schafsm"
+                        jcr:lastModified="{Date}2023-01-09T23:02:25.730-05:00"
+                        jcr:lastModifiedBy="schafsm"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2023-01-06T23:58:21.266-05:00"
+                            jcr:createdBy="schafsm"
+                            jcr:lastModified="{Date}2024-07-26T16:26:51.596-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Wir verbinden Arbeit mit sozialer Wirkung "
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <text_1267575280
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2023-01-03T21:35:33.225-05:00"
+                            jcr:createdBy="schafsm"
+                            jcr:lastModified="{Date}2024-07-26T16:27:10.856-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Gemeinsam mit myAbility setzen wir uns für eine chancengerechte und faire Gesellschaft ein. Die myAbility-Expertinnen und -Experten schaffen mit ausgeprägtem wirtschaftlichem Verständnis professionelle Lösungen für uns, die eine soziale Wirkung haben und gleichzeitig wirtschaftlich nachhaltig sind. Aktuell arbeiten bei AbbVie Schweiz mehrere Mitarbeitende mit Einschränkungen.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button
+                            cq:styleIds="[1659997777274]"
+                            jcr:created="{Date}2023-01-06T23:58:32.215-05:00"
+                            jcr:createdBy="schafsm"
+                            jcr:lastModified="{Date}2024-07-29T12:44:19.666-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="BESUCHEN SIE DIE WEBSEITE VON myAbility."
+                            sling:resourceType="abbvie-com2/components/button/v2/button"
+                            accessibilityLabel="Are you interested? Join Us."
+                            linkTarget="_blank"
+                            linkURL="https://www.myability.org"/>
+                    </container_395792072_>
+                    <grid_1550713611_copy
+                        cq:styleIds="[0]"
+                        jcr:created="{Date}2023-01-10T15:10:15.680-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2024-07-06T11:12:37.943-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <quote_copy
+                                cq:styleIds="[1000000000040,1000000000020,1000000000000]"
+                                jcr:created="{Date}2023-01-03T19:52:15.154-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2024-07-26T16:28:31.786-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Andreas Walker"
+                                attributionTitle="Controller und myAbility Koordinator bei AbbVie"
+                                quote="«Menschen mit Behinderungen oder chronischen Erkrankungen verfügen über unverzichtbare Fähigkeiten, die sich nahtlos in unser Unternehmen einfügen, darunter Verantwortungsbewusstsein, Teamarbeit, Integrität, Engagement, Agilität und Problemlösungskompetzenzen. Diese Mitarbeitenden ergänzen uns um ihre andere Sicht der Dinge.» "
+                                quoteType="regular"
+                                textSize="h0"/>
+                        </par_12>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="10"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_1550713611_copy>
+                    <container_395792072__733116185
+                        cq:styleIds="[1653545847150,1653545835982,1653545825687]"
+                        jcr:created="{Date}2023-01-07T00:14:13.613-05:00"
+                        jcr:createdBy="schafsm"
+                        jcr:lastModified="{Date}2023-01-09T23:02:25.730-05:00"
+                        jcr:lastModifiedBy="schafsm"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title_copy_129035729_17392396
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2022-11-21T16:04:25.708-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2024-07-26T16:28:45.586-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Was ist eine inklusive Unternehmenskultur und wie kommt man da hin?  "
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2023-01-03T18:21:41.037-05:00"
+                            jcr:createdBy="schafsm"
+                            jcr:lastModified="{Date}2024-07-26T16:28:58.722-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>myAbility definiert eine inklusive Unternehmenskultur folgendermassen: Sie ermöglicht den Menschen unabhängig von Geschlecht, Herkunft, Religion, Hautfarbe oder Behinderungen Chancengerechtigkeit, um ihre beste Leistung abzurufen. Das setzt eine offene Haltung auf allen Ebenen und Hierarchiestufen voraus sowie offene und transparente Prozesse beim Recruiting von Mitarbeitenden, eine ganzheitliche Diversitäts&amp;amp;Inklusions-Strategie, Barrierefreiheit in Gebäuden sowie auch im IT-Bereich, Möglichkeit zur flexiblen Anpassung der Arbeitsbedingungen, ein proaktives Talent-Management und eine konstruktive Fehlerkultur. Das Ziel ist, ein unternehmensweites Bewusstsein für die Themen Diversität und Inklusion zu schaffen.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_395792072__733116185>
+                    <grid_1550713611_copy_1264602081
+                        jcr:created="{Date}2023-01-10T15:10:15.680-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-10T15:16:45.469-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <quote_copy_copy
+                                cq:styleIds="[1000000000040,1000000000000,1000000000020,1000000000032]"
+                                jcr:created="{Date}2023-01-03T20:06:30.894-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2024-07-26T16:29:29.474-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Simone Steckholzer"
+                                attributionTitle="Pharmacovigilance Specialist "
+                                quote="Dank dem flexiblen Arbeitsmodell kann ich bei AbbVie auch mit meiner chronischen Erkrankung mein volles Potential entfalten und einen gleichwertigen Beitrag für das Unternehmen leisten. Meine Arbeit bereitet mir viel Freude und ich bin sehr dankbar, dass AbbVie und myAbility sich gemeinsam für eine barrierefreie und chancengerechte Arbeitswelt einsetzen. "
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <image
+                                jcr:created="{Date}2024-07-25T21:55:40.704-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-07-25T21:59:37.626-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="stefanjoham.com"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/erg/stefanjoham_com_20220601_myability0322.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="true"/>
+                        </par_12>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="10"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_1550713611_copy_1264602081>
+                    <container_22951224
+                        cq:styleIds="[1653545825683,1653545847149,1653242825678,1653545835879,1653545835859]"
+                        jcr:created="{Date}2023-01-03T23:36:42.582-05:00"
+                        jcr:createdBy="schafsm"
+                        jcr:lastModified="{Date}2023-01-06T18:37:21.965-05:00"
+                        jcr:lastModifiedBy="schafsm"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F1F3FF">
+                        <container
+                            cq:styleIds="[1653545847150,1653545835982,1653545825689]"
+                            jcr:created="{Date}2023-01-15T14:12:22.143-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-15T14:12:22.143-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <title_1126380921
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:created="{Date}2023-01-03T23:38:24.926-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2024-07-26T16:29:43.235-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie unterstützt die Mission von myAbility "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text_868129369
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-03T23:38:52.678-05:00"
+                                jcr:createdBy="schafsm"
+                                jcr:lastModified="{Date}2024-07-26T16:29:56.965-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Weltweit leben 15 Prozent der Bevölkerung mit einer Behinderung; allein im deutschsprachigen Raum sind das 15,6 Millionen Menschen. Die Realität ist leider noch immer so, dass Menschen mit Behinderungen und chronischen Erkrankungen weniger Chancen am Arbeitsmarkt erhalten und nicht vollen Zugang zu vielen Produkten und Services haben. Inklusion kann nur dann zum Alltag werden, wenn Unternehmen verstehen, dass sie sich wirtschaftlich lohnt.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756526578]"
+                                jcr:created="{Date}2023-01-11T11:32:27.302-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-11T11:32:27.302-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        </container>
+                    </container_22951224>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-07-26T16:30:22.630-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/de/site/footer/switzerland-footer-german"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

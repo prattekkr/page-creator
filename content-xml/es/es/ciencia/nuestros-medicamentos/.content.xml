@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-18T04:15:50.249-04:00"
+        cq:lastModifiedBy="MOLINAX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Información sobre los medicamentos disponibles, dirigida a dar respuesta a distintos retos de salud y a acompañar al paciente en las fases de la enfermedad. Información destinada a residentes en España."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-02-17T12:25:24.897-05:00"
+        jcr:lastModifiedBy="MOLINAX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Nuestros medicamentos "
+        jcr:uuid="cebd3f95-07a0-45fd-8ce9-188bf1b53f8d"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Ver más"
+        ctaText="Ver más"
+        description="Sabemos que los pacientes tienen dudas."
+        eyebrow="Ciência"
+        navTitle="Nuestros medicamentos "
+        ogimage="/content/dam/abbvie-com2/images/test-tube-in-machine.jpg"
+        pageTitle="Nuestros medicamentos "
+        title="Nuestros medicamentos "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/es/es/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-11-01T09:40:34.453-04:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/es/es/site/header/spain-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2025-01-23T14:53:28.809-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/test-tube-in-machine.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982,1653545835879]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-11-01T09:40:14.193-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Nuestros medicamentos "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-11-01T09:41:43.451-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Sabemos que los pacientes tienen dudas. Se enfrentan a retos mientras intentan mejorar su salud. El viaje del paciente no siempre es fácil. Queremos ayudarle. Por eso ofrecemos opciones terapéuticas para importantes retos de la salud. Trabajamos para mejorar la calidad de vida de las personas en cada fase de la enfermedad. Al ayudar a los pacientes a alcanzar su máximo potencial esperamos tener un impacto positivo en sus vidas.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container_769268037
+                        cq:styleIds="[1653545825686,1653545847150]"
+                        jcr:created="{Date}2025-01-23T15:01:43.693-05:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2025-01-23T15:08:19.327-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2025-01-23T15:02:58.620-05:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2026-05-18T04:15:50.243-04:00"
+                            jcr:lastModifiedBy="MOLINAX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Acular®&lt;/b> (ketorolaco trometamol)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Alphagan®&lt;/b> (tartrato de brimonidina)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Aquipta&lt;/b>®&amp;nbsp;(atogepant)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Botox®&lt;/b> (toxina botulínica tipo A)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Chirocane® &lt;/b>(levobupivacaina)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Combigan®&lt;/b> (brimonidina, timolol maleato)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Constella®&lt;/b> (linaclotida)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Duodopa®&lt;/b> (levodopa/carbidopa)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Exocin®&lt;/b> (ofloxacino)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>FML®&lt;/b> (fluorometalona)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Ganfort®&lt;/b> (bimatoprost, timolol maleato)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Humira®&lt;/b> (adalimumab)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Kaletra®&lt;/b> (lopinavir/ritonavir)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Lumigan®&lt;/b> (bimatoprost)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Maviret®&lt;/b> (glecaprevir/pibrentasvir)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Norvir®&lt;/b> (ritonavir)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Ozurdex®&lt;/b> (dexametasona)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Pred Forte®&lt;/b> (prednisolona acetato)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Procrin®&lt;/b> (acetato de leuprorelina)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Rinvoq® &lt;/b>(upadacitinib)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Sevorane®&lt;/b> (sevoflurano)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Skyrizi®&lt;/b> (risankizumab)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Tepkinly&lt;/b>®&amp;nbsp;(epcoritamab)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Venclyxto® &lt;/b>(venetoclax)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Viscofresh® &lt;/b>(carmelosa sódica)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Vistabel®&lt;/b> (toxina botulínica tipo A)&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Zemplar®&lt;/b> (paricalcitol)&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1368979344
+                            jcr:created="{Date}2025-01-23T15:08:41.523-05:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2025-01-23T15:08:57.889-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Esta información está elaborada para residentes de España.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.aemps.gob.es/cima/publico/home.html&quot; target=&quot;_blank&quot;>Ficha Técnicas y Prospectos&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_769268037>
+                    <separator
+                        cq:styleIds="[1662756555361]"
+                        jcr:created="{Date}2025-01-23T15:01:29.500-05:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2025-01-23T15:01:29.500-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-11-06T01:02:53.550-05:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/es/es/site/footer/spain-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

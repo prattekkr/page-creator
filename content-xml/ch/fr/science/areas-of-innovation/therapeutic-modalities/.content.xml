@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-07-03T11:13:33.863-04:00"
+        cq:lastModifiedBy="jewitca"
+        cq:lastReplicated="{Date}2024-08-02T23:50:14.676-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Notre département de Recherche et Développement nous permet de concrétiser les possibilités d’innovation. Nous présentons ici quelques-uns de nos sites de Recherche et Développement au sein desquels nous découvrons et développons des médicaments innovants et des solutions novatrices visant à améliorer la santé et le bien-être des personnes dans le monde entier."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-03T11:13:33.847-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Modalités de traitement"
+        jcr:uuid="c38c2fd9-c2f2-4ac9-a57e-a114e64c1b15"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        description="Des modalités de traitement à l’origine de nouveaux médicaments."
+        eyebrow="Scientifique"
+        fileReference="/content/dam/abbvie-com2/images/employee/two-men-scientist-whiteboard-feature.jpg"
+        navTitle="Modalités de traitement"
+        pageTitle="Modalités de traitement"
+        title="Modalités de traitement"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/ch/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-02-01T16:15:51.658-05:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847149]"
+                        jcr:lastModified="{Date}2022-12-17T11:07:25.508-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/two-men-scientist-whiteboard-feature.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-02-01T14:44:29.782-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Modalités de traitement"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-02-01T14:45:02.831-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Découvrez ici comment nous travaillons à rendre possibles les succès de demain.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:created="{Date}2023-01-31T17:41:13.083-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-31T17:41:23.678-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="9"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy
+                                cq:styleIds="[1653545835982]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-12T11:17:18.672-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Related content"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2022-12-17T12:19:30.939-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-02-01T15:05:53.201-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/ch/fr/science/areas-of-innovation"/>
+                                <separator_1294049852_632863288
+                                    cq:styleIds="[1662756409908]"
+                                    jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator
+                                    cq:styleIds="[1662756387452,1662756756047]"
+                                    jcr:created="{Date}2022-12-14T13:10:41.556-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:10:41.556-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1294049852
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <header_1821235473_co
+                                    cq:styleIds="[3]"
+                                    jcr:created="{Date}2022-12-14T13:11:04.446-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-02-01T17:15:44.959-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Les sujets"/>
+                                <linklist_copy
+                                    jcr:created="{Date}2022-12-14T13:11:54.007-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-02-01T17:13:47.639-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                    childDepth="1"
+                                    excludeCurrentPage="true"
+                                    linkItems="true"
+                                    listFrom="static"
+                                    sortOrder="asc"
+                                    tagsMatch="any">
+                                    <pages jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Convergence des données "
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/fr/science/areas-of-innovation/data-convergence"
+                                            oneTrustEnabled="false"
+                                            text="Convergence des données "
+                                            textIconTarget="_self"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Développement de médicaments axé sur les patients"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/fr/science/areas-of-innovation/patient-focused-drug-development"
+                                            oneTrustEnabled="false"
+                                            text="Développement de médicaments axé sur les patients"
+                                            textIconTarget="_self"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Modalités de traitement"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/fr/science/areas-of-innovation/therapeutic-modalities"
+                                            oneTrustEnabled="false"
+                                            text="Modalités de traitement"
+                                            textIconTarget="_self"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Des technologies de pointe"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/fr/science/areas-of-innovation/advanced-technologies"
+                                            oneTrustEnabled="false"
+                                            text="Des technologies de pointe"
+                                            textIconTarget="_self"/>
+                                        <item4
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="Génétique et génomique"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/fr/science/areas-of-innovation/genetics-and-genomics"
+                                            oneTrustEnabled="false"
+                                            text="Génétique et génomique"
+                                            textIconTarget="_self"/>
+                                        <item5
+                                            jcr:primaryType="nt:unstructured"
+                                            linkTarget="_self"
+                                            linkURL="/content/abbvie-com2/ch/fr/science/areas-of-innovation/precision-medicine"
+                                            oneTrustEnabled="false"
+                                            text="Médecine de précision"
+                                            textIconTarget="_self"/>
+                                    </pages>
+                                </linklist_copy>
+                            </container_copy>
+                        </par_13>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_568753235
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825687]"
+                                jcr:created="{Date}2022-12-16T18:05:55.966-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T18:05:55.966-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title_116699496
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2022-12-15T11:49:26.700-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-02-01T15:05:14.990-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Des modalités de traitement à l’origine de nouveaux médicaments."
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-07T14:53:09.069-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-02-01T15:05:33.238-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Notre travail repose d’abord sur une compréhension approfondie des processus biologiques qui se cachent derrière une maladie. L’accès aux données des patients et aux données génomiques nous permet d’acquérir de nouvelles connaissances sur les maladies. Après avoir identifié la bonne cible, qui est étroitement liée à la maladie, nous choisissons les instruments appropriés dans la boîte à outils de notre département de Recherche&amp;nbsp;&amp;amp;&amp;nbsp;Développement, qui comprend une combinaison de modalités de traitement récentes et moins récentes nous permettant de développer la meilleure substance possible pour la cible en question.&lt;/p>&#xd;&#xa;&lt;p>Notre palette de modalités de traitement ne cesse de s’élargir, à l’instar des progrès réalisés en matière d’innovation et d’expertise. Nous investissons dans de nouvelles technologies de plateforme, dans des applications d’IA/AA et dans des développements en matière d’administration des médicaments afin de pouvoir proposer plus rapidement aux patientes et patients des médicaments de meilleure qualité.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_568753235>
+                            <grid
+                                cq:styleIds="[1653545835880]"
+                                jcr:created="{Date}2023-01-31T17:46:50.023-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-31T17:46:57.322-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                rowCount="1">
+                                <columns jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="11"
+                                        dataPriority="1"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="1"
+                                        dataPriority="1"/>
+                                </columns>
+                                <par_11
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <quote
+                                        cq:styleIds="[1000000000040,1000000000000]"
+                                        jcr:created="{Date}2023-01-31T14:35:03.798-05:00"
+                                        jcr:createdBy="mihalsk"
+                                        jcr:lastModified="{Date}2024-02-01T15:07:17.619-05:00"
+                                        jcr:lastModifiedBy="jewitca"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/quote"
+                                        attributionName="Jonathon Sedgwick, Ph.D."
+                                        attributionTitle="VP et Global Head, Discovery Research, AbbVie"
+                                        quote="«La concrétisation d’une découverte en un médicament est un long processus fait d’essais et de réflexions pouvant prendre de nombreuses années. Mais la curiosité et la soif de connaissances nous enthousiasment et nous motivent.»"
+                                        quoteType="regular"
+                                        textSize="h0"/>
+                                </par_11>
+                            </grid>
+                        </par_12>
+                    </grid>
+                    <accordion_copy
+                        cq:styleIds="[2,8]"
+                        jcr:created="{Date}2022-12-17T16:25:09.442-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2024-02-01T15:09:08.650-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                        heading="NOTRE BOÎTE À OUTILS DE MODALITÉS DE TRAITEMENT"
+                        headingElement="h5"
+                        singleExpansion="false">
+                        <item_1671312472873
+                            cq:panelTitle="Anticorps monoclonaux"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-02-01T15:09:34.614-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Produits par notre système immunitaire, les anticorps constituent une défense naturelle contre les maladies. Les anticorps monoclonaux sont des protéines similaires aux anticorps. Ils sont produits en laboratoire et se lient sélectivement à une protéine spécifique provoquant la maladie. Ils proviennent d’un seul et même clone, capable de produire de grandes quantités de copies identiques du même anticorps.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Nous disposons d’une vaste expérience dans la recherche et le développement d’anticorps monoclonaux. Grâce à cette expertise, nous acquérons de nouvelles connaissances relatives au traitement dans des domaines thérapeutiques variés, parmi lesquels l’immunologie, l’oncologie et la neurologie.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671312475801
+                            cq:panelTitle="Anticorps multispécifiques"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-02-01T15:09:54.053-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Synthétisés en laboratoire, les anticorps multispécifiques sont capables de se lier simultanément à plusieurs cibles ou caractéristiques. À cet égard, ils se différencient des anticorps monoclonaux, et cette caractéristique leur permet de lutter contre les maladies d’une nouvelle manière.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; L’efficacité des anticorps bispécifiques de première&amp;nbsp;génération est avérée contre certains cancers du sang, mais leur effet sur les tumeurs solides était limité. Nous voyons un grand potentiel dans les anticorps bispécifiques et examinons actuellement une plateforme pour des anticorps bispécifiques contre les lymphocytes&amp;nbsp;T afin de traiter les hémopathies et les tumeurs solides.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671312481387
+                            cq:panelTitle="Conjugués anticorps-médicaments"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-02-01T15:10:16.231-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Les conjugués anticorps-médicaments (&lt;i>antibody-drug conjugates&lt;/i>, ADC) sont conçus de manière à libérer un principe actif directement là où il doit agir par le biais du ciblage précis d’un anticorps. Ils sont composés d’anticorps monoclonaux associés à un médicament de faible poids moléculaire. Dans le traitement du cancer, ils sont utilisés pour éliminer sélectivement les cellules tumorales.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Nous étudions actuellement activement l’utilisation des ADC en immunologie. Dans ce but, nous développons une nouvelle plateforme d’ADC dédiée aux maladies immunitaires et élargissons également le champ d’application de cette technologie au domaine de l’oncologie grâce à des recherches sur les ADC de nouvelle génération.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671312484205
+                            cq:panelTitle="Dégradation protéinique ciblée"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-02-01T15:12:18.447-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Les dégradomes sont des molécules qui permettent de dégrader les protéines de manière ciblée. Nous développons des dégradomes qui reposent sur le système naturel de dégradation endogène des protéines pour aider à éliminer les protéines responsables de la maladie.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Chez AbbVie, nous menons également des recherches pour savoir comment utiliser ces dégradomes contre des cibles en oncologie, en immunologie et en neurologie que l’on considère jusqu’ici comme inaccessibles par une approche pharmaceutique.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671312488073
+                            cq:panelTitle="Thérapie génique"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-02-01T15:12:44.231-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Dans le cadre de la thérapie génique, on a recours à des vecteurs viraux qui transportent du matériel génétique jusqu’au tissu malade. Ce matériel génétique permet de corriger un gène défectueux, de le remplacer par un gène fonctionnel ou de produire des protéines thérapeutiques directement dans le tissu malade des patientes et patients.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Nous œuvrons au développement de la prochaine génération de thérapies géniques pour les patientes et patients présentant ce type de besoin médical et atteints de maladies pour lesquelles cette approche est prometteuse. En ophtalmologie, nous utilisons la thérapie génique pour améliorer le traitement des maladies de la rétine comme la DMLA humide, qui implique actuellement de fréquentes injections dans les yeux des patientes et patients.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671312492301
+                            cq:panelTitle="Thérapie cellulaire"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-02-01T15:13:10.639-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Dans le cadre de la thérapie cellulaire, des cellules immunitaires vivantes, génétiquement modifiées, sont utilisées pour traiter des maladies. Les cellules sont administrées aux personnes concernées par voie intraveineuse et peuvent provenir soit des patients eux-mêmes (cellules autologues), soit de donneurs (cellules allogéniques). L’un des buts est d’obtenir ces cellules à l’avenir à partir de cellules souches pluripotentes induites (&lt;i>induced pluripotent stem cells&lt;/i>, iPSC).&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Une telle approche est par&amp;nbsp;exemple la thérapie par cellules&amp;nbsp;CAR‑T (&lt;i>chimeric antigen receptor-T&amp;nbsp;cells&lt;/i>, récepteur antigénique des ou lymphocytes&amp;nbsp;T). Dans le cadre de la thérapie par cellules&amp;nbsp;CAR‑T, les lymphocytes&amp;nbsp;T (un type de cellules immunitaires) de patientes et patients ou de donneuses et donneurs sont modifiés de telle sorte qu’ils se lient aux molécules situées à la surface des cellules cancéreuses pour les éliminer. Suivant de nouvelles approches, les travaux de recherche examinent la possibilité d’optimiser les lymphocytes&amp;nbsp;T également &lt;i>in&amp;nbsp;situ&lt;/i>. Par ailleurs, les scientifiques s’intéressent de plus en plus à d’autres populations de cellules immunitaires, telles que les cellules tueuses naturelles et les macrophages.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Nous investissons dans les nouvelles technologies de l’édition génomique et de la médecine de précision afin de développer des thérapies par cellules&amp;nbsp;CAR‑T autologues et allogéniques de nouvelle génération permettant le traitement de tumeurs solides et d’hémopathies.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671312629625
+                            cq:panelTitle="Composés de faible poids moléculaire"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-02-01T15:13:32.384-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Les médicaments traditionnels sont constitués de composés de faible poids moléculaire. Leur structure est relativement simple, et ils peuvent être obtenus par synthèse chimique. Du fait de leur très petite taille, ils sont souvent administrés par voie orale, et atteignent ainsi facilement les cellules. Dès que les médicaments se trouvent dans les cellules, ils peuvent interagir avec les molécules cibles, telles que des enzymes et des protéines, en vue de réguler certains processus biologiques et de traiter les maladies.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Sur la base de notre grande expérience dans le domaine de la chimie de faible poids moléculaire, nous faisons appel à de nouveaux schémas de pensée et à de nouvelles approches qui pourront faire une plus grande différence dans le traitement des maladies. Nous développons de nouvelles thérapies de faible poids moléculaire dans tous les domaines thérapeutiques.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </accordion_copy>
+                    <separator
+                        cq:styleIds="[1662756526578]"
+                        jcr:created="{Date}2023-01-31T17:43:06.828-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-31T17:43:06.828-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-02-01T16:14:59.705-05:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

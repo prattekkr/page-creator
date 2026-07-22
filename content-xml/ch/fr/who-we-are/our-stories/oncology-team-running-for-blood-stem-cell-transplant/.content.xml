@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-01-06T09:23:44.016-05:00"
+        cq:lastModifiedBy="kaspatx"
+        cq:tags="[abbvie-com-2:categories/company-stories,abbvie-com-2:categories/oncology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="L’équipe Oncology d’AbbVie a soutenu la Leukemia Charity Run 2022 en tant que sponsor platine. Et les membres de l’équipe ont mis un point d’honneur à participer eux aussi à la course. Considérant les difficultés de planification liées à la pandémie de COVID-19, l’organisation estudiantine Marrow a organisé la course de manière décentralisée. Tous les dons récoltés et toutes les contributions des sponsors profitent entièrement au recrutement et à l’enregistrement de nouveaux donneurs et donneuses de cellules souches du sang. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-08-03T00:11:39.852-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="L’équipe Oncology court en faveur de la greffe de cellules souches du sang"
+        jcr:uuid="8f7fc5fc-b8f5-43aa-8327-e9e4382433b9"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        description="L’équipe Oncology d’AbbVie a soutenu la Leukemia Charity Run 2022 en tant que sponsor platine. Et les membres de l’équipe ont mis un point d’honneur à participer eux aussi à la course. "
+        fileReference="/content/dam/abbvie-com2/ch/images/stories/5km-unde-your-feet.jpg"
+        hideInNav="true"
+        navTitle="L’équipe Oncology court en faveur de la greffe de cellules souches du sang"
+        pageTitle="L’équipe Oncology court en faveur de la greffe de cellules souches du sang"
+        publishDate="{Date}2022-07-10T12:41:00.000-05:00"
+        readTime="4"
+        readWatchTimeSel="read-time"
+        title="L’équipe Oncology court en faveur de la greffe de cellules souches du sang"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/ch/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-07-29T07:48:59.695-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2024-08-04T12:31:18.461-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/ch/images/stories/5km-unde-your-feet.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-07-29T07:50:14.283-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Toutes les histoires"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/ch/fr/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678,1661545829678,1651545825691]"
+                                jcr:lastModified="{Date}2024-07-29T07:45:09.154-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="L’équipe Oncology court en faveur de la greffe de cellules souches du sang"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-07-29T07:45:36.497-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;b>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>L’équipe&amp;nbsp;Oncology d’AbbVie a soutenu la Leukemia&amp;nbsp;Charity&amp;nbsp;Run&amp;nbsp;2022 en tant que sponsor platine. Et les membres de l’équipe ont mis un point d’honneur à participer eux aussi à la course.&lt;/span>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_1519741175
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2024-07-28T17:03:29.707-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-07-29T07:46:02.075-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Considérant les difficultés de planification liées à la pandémie de COVID-19, l’organisation estudiantine Marrow a organisé la course de manière décentralisée. Tous les dons récoltés et toutes les contributions des sponsors profitent entièrement au recrutement et à l’enregistrement de nouveaux donneurs et donneuses de cellules souches du sang.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container
+                        cq:styleIds="[1653545825686]"
+                        jcr:created="{Date}2024-07-28T17:35:24.414-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-08-02T18:17:24.511-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <carousel_copy
+                            cq:styleIds="[3,5,1653545835882]"
+                            jcr:created="{Date}2024-07-28T17:05:56.321-04:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2024-08-02T21:12:52.657-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                            accessibilityAutoItemTitles="false"
+                            accessibilityLabel="Visite virtuelle"
+                            accessibilityNext="Next"
+                            accessibilityPause="Pause"
+                            accessibilityPlay="Play"
+                            accessibilityPrevious="Previous"
+                            autopauseDisabled="false"
+                            autoplay="false"
+                            carouselType="static"
+                            delay="5000">
+                            <item_1722200786109
+                                cq:panelTitle="3"
+                                cq:styleIds="[1402843082812,1402843082822,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:09:46.581-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Une douche froide juste au moment de partir..."
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Une douche froide juste au moment de partir..."
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/Right-at-the-start.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722200789402
+                                cq:panelTitle="4"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:03:54.957-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Et quand est-ce qu’on part«Et quand est-ce qu’on part?»"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Et quand est-ce qu’on part«Et quand est-ce qu’on part?»"
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/right-moment-to-start.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722200803311
+                                cq:panelTitle="5"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:03:04.756-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Maintenant! Let’s go!"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Maintenant! Let’s go!"
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/Lets-go.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722200814897
+                                cq:panelTitle="6"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:05:20.357-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Départ timide sans lâcher le parapluie…"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Départ timide sans lâcher le parapluie…"
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/hesitant-with-an-umbrella.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722200819921
+                                cq:panelTitle="7"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:02:14.101-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="…le chien Chewie était aussi de la partie…"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="…le chien Chewie était aussi de la partie…"
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/family-dog-Chewie.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722200824395
+                                cq:panelTitle="8"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:04:51.365-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="les 5 km sont parcourus au rythme  de chacun des membres de l’équipe…"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="les 5 km sont parcourus au rythme  de chacun des membres de l’équipe…"
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/5km-unde-your-feet.jpg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722202744962
+                                cq:panelTitle="1"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:06:11.084-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="en passant par une magnifique réserve naturelle  dans l’atmosphère limpide d’après la pluie... "
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="en passant par une magnifique réserve naturelle  dans l’atmosphère limpide d’après la pluie... "
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/beautiful-nature.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722200828755
+                                cq:panelTitle="9"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:02:03.956-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Le parcours comprenait le tour du lac de Türlen dans le Säuliamt zurichois"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Le parcours comprenait le tour du lac de Türlen dans le Säuliamt zurichois"
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/lap-led-around.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <item_1722200782444
+                                cq:panelTitle="2"
+                                cq:styleIds="[1402843082812,1402843082832]"
+                                jcr:lastModified="{Date}2024-08-02T21:09:11.849-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="L’équipe Oncology à l’arrivée: un peu fatiguée mais heureuse et fière d’avoir couru pour une bonne cause."
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="L’équipe Oncology à l’arrivée: un peu fatiguée mais heureuse et fière d’avoir couru pour une bonne cause."
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/ch/images/stories/happy-and-proud.JPG"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                        </carousel_copy>
+                    </container>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-06T09:23:44.009-05:00"
+                                    jcr:lastModifiedBy="kaspatx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Une greffe de cellules souches du sang peut sauver la vie en cas de leucémies aiguës. Les leucémies aiguës affectent des patientes et des patients de tout âge, et la greffe de cellules souches du sang demeure la seule option possible en termes de thérapie curative. Même si de premiers&amp;nbsp;traitements médicamenteux peuvent notablement prolonger la vie, le pronostic vital des personnes touchées demeure engagé. Les traitements médicamenteux n’entrent en ligne de compte que si la greffe de cellules souches du sang est impossible en raison de l’état physique des patients.&lt;/p>&#xd;&#xa;&lt;p>«Après avoir fait la connaissance de l’association estudiantine&amp;nbsp;&lt;a>&lt;/a>&lt;a href=&quot;https://marrow.ch/fr&quot; target=&quot;_blank&quot;>Marrow&lt;/a>&amp;nbsp;par le biais de notre contact avec le réseau suisse des personnes ayant subi une greffe de cellules souches du sang (Schweizerischen Netzwerk für Blutstammzelltransplantierte, SNBST), nous avons immédiatement décidé de soutenir financièrement la&amp;nbsp;Leukemia&amp;nbsp;Charity&amp;nbsp;Run», indique Christian&amp;nbsp;Knapp, Business&amp;nbsp;Unit&amp;nbsp;Director&amp;nbsp;Oncology, «car le développement du registre des donneurs et donneuses de cellules souches du sang permet de sauver la vie des personnes atteintes de leucémies aiguës. Il n’y a rien de plus essentiel!» L’équipe&amp;nbsp;Oncology a elle aussi rapidement décidé de participer à la course. Elle a choisi de courir autour du lac de Türlen dans le Säuliamt zurichois (district d’Affoltern, canton de Zurich), un parcours idyllique de cinq&amp;nbsp;kilomètres effectué en compagnie de la famille de certains collaborateurs.&lt;/p>&#xd;&#xa;&lt;p>Pour ce dernier jour du mois, la météo capricieuse d’avril a tenu ses promesses: alors que l’équipe se retrouvait sur le parking, une pluie torrentielle s’est abattue sur les coureurs et les coureuses en ce 30&amp;nbsp;avril&amp;nbsp;2022! C’est donc trempé et grelottant que le groupe s’est mis en marche, le ciel se dégageant peu à peu après une vingtaine de minutes.&lt;/p>&#xd;&#xa;&lt;p>L’humeur des coureurs et des coureuses s’est elle aussi rapidement égayée: une légère brume et d’agréables parfums s’élevaient du marais et du lac, tandis que la flore printanière se débarrassait des gouttes de pluie et montrait peu à peu ses splendides couleurs sous le ciel encore gris. Et personne à des lieues à la ronde autour de ce lac d’habitude si fréquenté par les Zurichois! Dans ce beau paysage et avec la Leukemia&amp;nbsp;Charity&amp;nbsp;Run pour objectif important en tête, toutes et tous ont bouclé la boucle sans problème. L’équipe était unanime après la course: «Nous avons adoré courir ensemble et entreprendre à nouveau une activité commune en dehors du bureau!» Avant de se quitter, les participants ont encore trinqué à leur réussite sur le parking.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <container
+                                cq:styleIds="[1653545835860,1653545825683,1653545847149]"
+                                jcr:created="{Date}2024-07-28T17:18:45.284-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-07-28T17:21:12.092-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#479FF8">
+                                <title
+                                    cq:styleIds="[1659545825678,1651545824668,1651545825694]"
+                                    jcr:created="{Date}2024-07-28T17:18:54.852-04:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-07-29T07:47:35.574-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="«Tous les bénéfices récoltés à l’occasion de la Leukemia Charity Run 2022 profitent au recrutement et à l’enregistrement de nouveaux donneurs et donneuses de cellules souches du sang. Avec sa contribution, AbbVie donne du courage et de l’espoir aux patients en quête d’une vie en bonne santé. Nous comptons actuellement plus de 172 000 donneurs et donneuses inscrits dans notre registre. Nous remercions chaleureusement AbbVie de son soutien.»"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h4"
+                                    variant="h"/>
+                                <text
+                                    cq:styleIds="[1659545825678,1659545835859]"
+                                    jcr:created="{Date}2024-07-28T17:19:47.036-04:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-07-29T07:47:58.044-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Bernhard Wegmüller&lt;/b>&lt;br>&#xd;&#xa;directeur et président de la direction, Transfusion CRS Suisse&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                            <container_545682890
+                                cq:styleIds="[1653545825689]"
+                                jcr:created="{Date}2024-07-28T17:22:13.826-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-07-28T17:22:13.826-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <image
+                                    cq:styleIds="[1402843082822,1402843082835]"
+                                    jcr:created="{Date}2024-07-28T17:22:21.974-04:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-07-28T17:24:19.489-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="Leukemia Charity Run"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/ch/images/stories/Leukemia-Charity-Run.png"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-07-28T17:24:26.680-04:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-07-29T07:48:18.463-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Leukemia Charity Run 2022:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>du samedi&amp;nbsp;30&amp;nbsp;avril au dimanche&amp;nbsp;1er&amp;nbsp;mai&lt;/li>&#xd;&#xa;&lt;li>Course décentralisée, partout en Suisse&lt;/li>&#xd;&#xa;&lt;li>À n’importe quel moment du week-end&lt;/li>&#xd;&#xa;&lt;li>1808&amp;nbsp;participants&lt;/li>&#xd;&#xa;&lt;li>22&amp;nbsp;379&amp;nbsp;kilomètres parcourus&lt;/li>&#xd;&#xa;&lt;li>Plus de&amp;nbsp;44&amp;nbsp;000&amp;nbsp;francs suisses&amp;nbsp;au total ont pu être récoltés. Cet argent permet de recruter et d’inscrire&amp;nbsp;plus de 300&amp;nbsp;nouveaux donneurs et donneuses&amp;nbsp;dans le registre national!&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_545682890>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-07-29T07:48:38.010-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

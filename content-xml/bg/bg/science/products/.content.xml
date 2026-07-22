@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-01T09:28:56.540-04:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-04-24T05:58:30.199-04:00"
+        jcr:lastModifiedBy="NANDIVX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Нашите продукти "
+        jcr:uuid="6f28fe3d-baef-43fb-9193-a38a82440df9"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        eyebrow="Наука"
+        navTitle="Нашите продукти "
+        pageTitle="Нашите продукти "
+        title="Нашите продукти "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/bg/bg/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-04-24T03:20:39.366-04:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/bg/bg/site/header/bulgaria-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-17T14:29:34.158-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/test-tube-in-machine.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879,1653545847150]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2025-05-19T03:25:40.447-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Лекарствени продукти в Република България"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-06-02T07:03:09.125-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>По-долу са представени препратки към публична информация на уебсайтовете на Европейска агенция по лекарствата (European Medicines Agency, &lt;a href=&quot;http://www.ema.europa.eu&quot; target=&quot;_blank&quot;>&lt;b>EMA&lt;/b>&lt;/a>) - &amp;nbsp;и на Изпълнителна агенция по лекарствата (&lt;a href=&quot;http://www.bda.bg&quot; target=&quot;_blank&quot;>&lt;b>ИАЛ&lt;/b>&lt;/a>) на Република България.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;light-font&quot;>С избора на линк по-долу ще бъдете пренасочени към съответния външен сайт, който АбВи ЕООД не контролира и за който не носи отговорност.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container_1186161120
+                        cq:styleIds="[1653545825686]"
+                        jcr:created="{Date}2023-01-30T12:24:45.771-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-30T12:24:45.771-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <accordion
+                            cq:styleIds="[1]"
+                            jcr:created="{Date}2025-05-30T06:34:35.278-04:00"
+                            jcr:createdBy="NANDIVX5"
+                            jcr:lastModified="{Date}2025-06-05T06:48:58.144-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            heading="Лекарствен продукт:  "
+                            singleExpansion="false">
+                            <item_1748603087328
+                                cq:panelTitle="Duodopa 20 mg/ml + 5 mg/ml intestinal gel (Levodopa/Carbidopa) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-06-09T09:40:00.245-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/D-1.htm&quot; target=&quot;_blank&quot;>Кратка&amp;nbsp;характеристика на продукта (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/D-2.htm&quot; target=&quot;_blank&quot;>Листовки за пациента (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603106745
+                                cq:panelTitle="Elahere 5 mg/mL concentrate for solution for infusion (mirvetuximab soravtansine)"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:14:43.840-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/elahere-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Продуктова информация (ЕМА):&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603117782
+                                cq:panelTitle="Ganfort 0,3 mg/ml + 5 mg/ml eye drops, solution (bimatoprost/timolol) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:16:00.103-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/ganfort-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Продуктова информация (ЕМА):&amp;nbsp;&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603130979
+                                cq:panelTitle="Humira 20 mg/0.2 ml Solution for injection (adalimumab)/Humira 40mg/0.4ml Solution for injection (adalimumab)/Humira 80 mg/0.8 ml Solution for injection (adalimumab) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:16:43.075-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/humira-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>Продуктова информация (ЕМА):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603169510
+                                cq:panelTitle="Lumigan 0,1 mg/ml eye drops, solution (bimatoprost) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:19:06.977-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/lumigan-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>Продуктова информация (ЕМА):&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603180799
+                                cq:panelTitle="Maviret 100 mg/40 mg film-coated tablets (glecaprevir/pibrentasvir) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:19:59.375-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/maviret-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>Продуктова информация (ЕМА):&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603192009
+                                cq:panelTitle="Produodopa 240 mg/ml + 12 mg/ml solution for infusion (foslevodopa/foscarbidopa) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-06-09T09:38:40.894-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/P-1.htm&quot; target=&quot;_blank&quot;>Кратка&amp;nbsp;характеристика на продукта (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/P-2.htm&quot; target=&quot;_blank&quot;>Листовки за пациента (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603204771
+                                cq:panelTitle="Rinvoq 15 mg prolonged-release tablets (upadacitinib) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:22:20.803-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/rinvoq-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>Продуктова информация (ЕМА):&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603215761
+                                cq:panelTitle="Sevorane 100 % inhalation vapour, liquid (sevoflurane) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-06-09T09:38:57.723-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/S-1.htm&quot; target=&quot;_blank&quot;>Кратка&amp;nbsp;характеристика на продукта (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/S-2.htm&quot; target=&quot;_blank&quot;>Листовки за пациента (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603228281
+                                cq:panelTitle="Skyrizi 75 mg solution for injection in pre-filled syringe (risankizumab)/Skyrizi 360mg solution for injection in cartridge (risankizumab)/Skyrizi 600 mg concentrate for solution for infusion (risankizumab) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:25:05.005-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/skyrizi-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>Продуктова информация (ЕМА):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603274697
+                                cq:panelTitle="Tepkinly 4 mg/0,8 ml solution for injection (epcoritamab)/Tepkinly 48 mg solution for injection (epcoritamab) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:27:30.231-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/tepkinly-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>Продуктова информация (ЕМА):&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603302530
+                                cq:panelTitle="Venclyxto 10 mg film coated tablets (venetoclax)/Venclyxto 50mg filmcoated tablets (venetoclax)/Venclyxto 100mg filmcoated tablets (venetoclax)"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-30T07:29:15.966-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.ema.europa.eu/bg/documents/product-information/venclyxto-epar-product-information_bg.pdf&quot; target=&quot;_blank&quot;>Продуктова информация (ЕМА):&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1748603357563
+                                cq:panelTitle="Vistabel, 4 Allergan Units/0.l ml, Powder for solution for injection (Botulinum Toxin Type A) "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-06-09T09:37:46.897-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/V-1.htm&quot; target=&quot;_blank&quot;>Кратка&amp;nbsp;характеристика на продукта (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;https://www.bda.bg/images/stories/documents/bdias/V-2.htm&quot; target=&quot;_blank&quot;>Листовки за пациента (регистър на ИАЛ):&amp;nbsp;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion>
+                        <separator_406387047
+                            jcr:created="{Date}2025-05-30T06:34:58.336-04:00"
+                            jcr:createdBy="NANDIVX5"
+                            jcr:lastModified="{Date}2025-05-30T06:34:58.336-04:00"
+                            jcr:lastModifiedBy="NANDIVX5"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <text_copy
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2025-05-28T02:45:14.803-04:00"
+                            jcr:createdBy="NANDIVX5"
+                            jcr:lastModified="{Date}2025-07-01T09:28:56.534-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>Възможно е препратките и информацията, до която водят, да не са активни и/или актуални във всеки един момент по технически причини, както и по и други причини, независещи от &lt;span class=&quot;body-unica-20-reg&quot;>АбВи ЕООД&lt;/span>, България.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/abbvie-com2/bg/bg/patients/product-quality-and-safety/reporting-an-adverse-drug-reaction-or-product-quality-complaint.html&quot; target=&quot;_blank&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Съобщаване на нежелана лекарствена реакция или оплакване от качеството на продукт &lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_1186161120>
+                    <separator
+                        cq:styleIds="[1662756555361]"
+                        jcr:created="{Date}2023-01-09T14:18:59.181-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-09T14:18:59.181-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-04-24T05:36:48.366-04:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/bg/bg/site/footer/bulgaria-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <duodopa-20-mg-ml-5-mg-ml-intestinal-gel-levodopa-carbidopa/>
+    <elahere-5-mg-ml-concentrate-for-solution-for-infusion-mirvetuximab-soravtansine/>
+    <ganfort-0-3-mg-ml-5-mg-ml-eye-drops-solution-bimatoprost-timolol/>
+    <humira-40mg-0-4ml-solution-for-injection-adalimumab-humira-80mg-0-8ml-solution-for-injection-adalimumab-humira-20mg-0-2ml-solution-for-injection-adalimumab/>
+    <lumigan-0-1-mg-ml-eye-drops-solution-bimatoprost/>
+    <maviret-100mg-40mg-film-coated-tablets-glecaprevir-pibrentasvir/>
+    <produodopa-240mg-ml-12mg-ml-solution-for-infusion-foslevodopa-foscarbidopa/>
+    <rinvoq-15mg-prolonged-release-tablets-upadacitinib/>
+    <sevorane-100-inhalation-vapour-liquid-sevoflurane/>
+    <skyrizi-75mg-solution-for-injection-in-pre-filled-syringe-risankizumab-skyrizi-600mg-concentrate-for-solution-for-infusion-risankizumab-skyrizi-360mg-solution-for-injection-in-cartridge-risankizumab/>
+    <tepkinly-4mg-8ml-solution-for-injection-epcoritamab-tepkinly-48mg-solution-for-injection-epcoritamab/>
+    <venclyxto-10mg-film-coated-tablets-venetoclax-venclyxto-100mg-filmcoated-tablets-venetoclax-venclyxto-50mg-filmcoated-tablets-venetoclax/>
+    <vistabel-4-allergan-units-1ml-powder-for-solution-for-injection-botulinum-toxin-type-a/>
+</jcr:root>

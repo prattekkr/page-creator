@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-12-30T13:05:19.386-05:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-07-16T02:42:11.193-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Asistencia para el Paciente "
+        jcr:uuid="a9d62638-2446-44bd-acdb-02eaf254c6bc"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Conoce más"
+        ctaText="Conoce más"
+        description="AbbVie tiene el compromiso de ayudar a los pacientes a obtener los medicamentos que necesitan."
+        eyebrow="Pacientes"
+        fileReference="/content/dam/abbvie-com2/images-common/ls/20220920-abv67-setA-006.jpg"
+        navTitle="Asistencia para el Paciente "
+        pageTitle="Asistencia para el Paciente "
+        title="Acceso y asequibilidad para el paciente"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/pr/es/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-25T11:25:25.144-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pr/es/site/header/puerto-rico-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2025-12-30T13:05:19.377-05:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/pr/images/women-smiling-in-kitchen-hero.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-10-07T02:02:20.137-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="myAbbVie Assist "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-12-12T07:48:43.333-05:00"
+                                jcr:lastModifiedBy="kurvamx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Creemos que las personas que necesitan nuestros medicamentos deben tener acceso a estos. Por eso, myAbbVie Assist provee medicamentos de AbbVie gratis para pacientes que califican.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2024-10-07T02:06:23.972-04:00"
+                                jcr:createdBy="washidx10"
+                                jcr:lastModified="{Date}2024-10-07T02:06:23.972-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <button
+                                jcr:created="{Date}2024-10-07T02:05:58.473-04:00"
+                                jcr:createdBy="washidx10"
+                                jcr:lastModified="{Date}2024-12-18T18:32:42.023-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Regreso al Registro del Portal del Usuario *"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Regreso al Registro del Portal del Usuario * "
+                                linkTarget="_blank"
+                                linkURL="https://pap.my.site.com/PAS/login?inst=3o&amp;startURL=%2FPAS%2Fs%2F"/>
+                            <text_60648756
+                                jcr:created="{Date}2024-10-07T02:04:54.355-04:00"
+                                jcr:createdBy="washidx10"
+                                jcr:lastModified="{Date}2024-12-12T08:07:05.125-05:00"
+                                jcr:lastModifiedBy="kurvamx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>* Para Humira, Rinvoq, Skyrizi y Mavyret&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <separator_1383066773
+                        cq:styleIds="[1662756486159]"
+                        jcr:created="{Date}2024-10-07T02:33:20.366-04:00"
+                        jcr:createdBy="washidx10"
+                        jcr:lastModified="{Date}2024-10-07T02:33:20.366-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <container_96004456
+                        cq:styleIds="[1653545825686,1653545847150,1653545835879]"
+                        jcr:created="{Date}2023-01-30T13:32:25.398-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2024-10-07T02:08:34.249-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title
+                            cq:styleIds="[1659545825678,1661545829678,1651545825692]"
+                            jcr:created="{Date}2024-10-07T02:14:11.592-04:00"
+                            jcr:createdBy="washidx10"
+                            jcr:lastModified="{Date}2025-04-14T08:51:55.113-04:00"
+                            jcr:lastModifiedBy="bryanjx9"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Visión General de la Asistencia para el Paciente de AbbVie"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h2"
+                            variant="h"/>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-10-07T02:14:15.285-04:00"
+                            jcr:createdBy="washidx10"
+                            jcr:lastModified="{Date}2024-12-12T08:12:05.956-05:00"
+                            jcr:lastModifiedBy="kurvamx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>AbbVie tiene el compromiso de ayudar a los pacientes a obtener los medicamentos que necesitan. Por eso, ofrecemos programas de asistencia para el paciente que proveen medicamentos de AbbVie gratis para los pacientes que&amp;nbsp;califican. Nuestros programas de asistencia para el paciente están dirigidos a personas que viven en los Estados Unidos, sin seguro médico o con cobertura de seguro limitada que califican y han demostrado tener una necesidad económica. En 2023, ayudamos a más de 218,000 personas.&amp;nbsp;&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;Solicitar a myAbbVie Assist es sencillo. La solicitud es gratis, y los que califican reciben su medicamento gratis, sin copago ni gastos de envío.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_96004456>
+                    <container_903160557
+                        cq:styleIds="[1653545825686,1653545847150]"
+                        jcr:created="{Date}2024-12-18T18:34:29.930-05:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-12-18T18:34:29.930-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <accordion
+                            cq:styleIds="[1]"
+                            jcr:created="{Date}2024-10-07T02:14:33.032-04:00"
+                            jcr:createdBy="washidx10"
+                            jcr:lastModified="{Date}2024-12-12T08:18:14.284-05:00"
+                            jcr:lastModifiedBy="kurvamx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            singleExpansion="false">
+                            <item_1728281682695
+                                cq:panelTitle="¿Quiénes califican? "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-12-13T01:52:18.108-05:00"
+                                jcr:lastModifiedBy="kurvamx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>AbbVie tiene el compromiso de ayudar a los pacientes a obtener los medicamentos que necesitan. Por eso, ofrecemos programas de asistencia para el paciente que proveen medicamentos de AbbVie gratis para los pacientes que califican. Nuestros programas de asistencia para el paciente están dirigidos a personas que viven en los Estados Unidos, sin seguro médico o con cobertura de seguro limitada que califican y han demostrado tener una necesidad económica. En 2023, ayudamos a más de 218,000 personas.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;Solicitar a myAbbVie Assist es sencillo. La solicitud es gratis, y los que califican reciben su medicamento gratis, sin copago ni gastos de envío.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;Este programa brinda apoyo a pacientes que:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Reciben tratamiento por un proveedor de atención de salud certificado en los EE.UU. como paciente ambulatorio con una receta para un medicamento de AbbVie incluido en nuestro programa de asistencia&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Tienen cobertura limitada o no tienen seguro médico&lt;/li>&#xd;&#xa;&lt;li>&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/patients/patient-support/patient-assistance/income-criteria.html&quot;>Necesidad económica calificada demostrada&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>Viven en los Estados Unidos&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Los pacientes con planes médicos privados que les requieren solicitar a myAbbVie Assist como condición o requisito o prerrequisito para la cobertura de productos de AbbVie relevantes, comúnmente conocidos como programas de financiación alterna, no son elegibles para myAbbVie Assist.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1728281685461
+                                cq:panelTitle="¿Qué medicamentos están disponibles? "
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-03-31T14:28:07.642-04:00"
+                                jcr:lastModifiedBy="bryanjx9"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Para conocer la lista completa de los medicamentos, accede a nuestra página &lt;a href=&quot;https://www.abbvie.com/patients/patient-support/patient-assistance/available-programs.html&quot; target=&quot;_blank&quot;>Programas disponibles.&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1728281688664
+                                cq:panelTitle="¿Cómo solicito?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-05-14T06:54:59.241-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;ol>&#xd;&#xa;&lt;li>&lt;p>Encuentra tu medicamento en esta lista de ​​&lt;a href=&quot;https://www.abbvie.com/patients/patient-support/patient-assistance/available-programs.html&quot; target=&quot;_blank&quot;>Tratamientos de AbbVie&lt;/a> y lee la información de elegibilidad de myAbbVie Assist.  &amp;nbsp;&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;Puede iniciarse la elegibilidad para&amp;nbsp; myAbbVie Assist mediante Apoyo para el Acceso para el Paciente de AbbVie, que repasará las oportunidades de apoyo económico de todos los programas de AbbVie, incluido myAbbVie Assist.  &amp;nbsp;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Nuevo desde julio de 2024: Los pacientes con Medicare Parte D que se encuentran por debajo del 150% del Nivel Federal de Pobreza (FPL, siglas en inglés) deben mostrar evidencia de rechazo del Programa Ayuda Adicional de Medicare, también conocido como Subsidio de Bajos Ingresos (&lt;a href=&quot;https://www.abbvie.com/patients/patient-support/patient-assistance/income-criteria.html&quot; target=&quot;_blank&quot;>LIS&lt;/a>, siglas en inglés) antes de la evaluación para la elegibilidad del PAP (Programa de Apoyo para el Paciente). Haz clic aquí para obtener más información.&lt;/p>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>&lt;p>Si deseas solicitar, completa la solicitud brindada con tu proveedor de atención médica y envíanosla.  &lt;/p>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>&lt;p>Revisaremos tu solicitud y te mantendremos al tanto a ti y a tu proveedor de atención médica sobre el estatus.&lt;/p>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1728281691988
+                                cq:panelTitle="¿Tienes preguntas?"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-02-18T15:07:22.868-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>​Si tienes preguntas sobre myAbbVie Assist, accede a ​&lt;a href=&quot;https://www.abbvie.com/patients/patient-support/patient-assistance/patient-assistance-frequently-asked-questions.html&quot; target=&quot;_blank&quot;>Preguntas frecuentes&lt;/a>&amp;nbsp;o llámanos al &lt;a href=&quot;tel:18002226885&quot;>1-800-222-6885&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion>
+                    </container_903160557>
+                    <separator
+                        cq:styleIds="[1662756555361]"
+                        jcr:created="{Date}2023-01-09T14:18:59.181-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-09T14:18:59.181-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-25T11:33:50.882-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pr/es/site/footer/puerto-rico-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

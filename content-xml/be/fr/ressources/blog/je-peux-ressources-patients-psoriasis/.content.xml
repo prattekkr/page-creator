@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-16T14:48:12.507-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:tags="[abbvie-com-2:categories/immunology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-08-27T22:36:42.399-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Je peux ressources patients Psoriasis"
+        jcr:uuid="f0f2c687-6f18-44e1-b4af-f688a1417fba"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        description="AbbVie, Psoriasis Contact et Psoriasis Liga Vlaanderen, appellent les patients atteints de psoriasis à prendre le contrôle de leur maladie"
+        fileReference="/content/dam/abbvie-com2/be/images/Je-peux-sm.jpg"
+        hideInNav="true"
+        navTitle="Je peux ressources patients Psoriasis"
+        pageTitle="Je peux ressources patients Psoriasis"
+        publishDate="{Date}2020-09-01T00:00:00.000-05:00"
+        readTime="1"
+        readWatchTimeSel="read-time"
+        title="Je peux ressources patients Psoriasis"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-26T18:05:29.360-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2024-08-26T20:16:54.541-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/be/images/Je-peux-banner.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-21T18:09:30.642-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Toutes les histoires"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/fr/ressources/blog"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678,1661545829678,1651545825690]"
+                                jcr:lastModified="{Date}2024-08-26T20:20:12.619-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="#Je peux"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-12-16T12:40:51.253-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>AbbVie et Psoriasis Contact appellent les patients atteints de psoriasis à prendre le contrôle de leur maladie&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825683]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T20:19:58.807-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Le psoriasis, plus qu'une histoire de peau"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T20:18:20.322-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Le psoriasis est une maladie inflammatoire de la peau. Mais si les symptômes ne sont pas contrôlés, il peuvent aussi affecter les personnes qui en souffrent sur les plans psychologique et émotionnel. Vie émotionnelle (98% des patients), vie familiale (70%), carrière (68%), éducation (21%) ou encore intimité sexuelle (17%) sont ainsi concernés.&lt;sup>1&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>Etant donné cet impact important, aller à la piscine, aller chez le coiffeur, ou encore porter des manches courtes relève encore trop souvent d'un défi insurmontable pour les personnes atteintes de psoriasis. 84% d'entre eux ont déjà fait l'expérience d'une discrimination ou humiliation à cause de leur psoriasis, et plus d'une personne sur 10 (14%) s'est vu refuser une poignée de main. Dans ces circonstances, rien d'étonnant à ce que 58% des patients psoriasis soient impatients de retourner à la piscine s'ils pouvaient obtenir une peau nette ou presque nette&amp;nbsp;&lt;sup>2&lt;/sup>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T20:17:53.389-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T20:17:53.389-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T20:18:26.419-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Regagner sa liberté"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-12-16T12:42:00.910-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Pour tous ces patients qui se sentent entravés par leur psoriasis, et parce que tout le monde mérite de se sentir bien dans sa peau, AbbVie a lancé le site&amp;nbsp;&lt;a href=&quot;http://www.jepeux.be/&quot; target=&quot;_blank&quot;>www.jepeux.be&lt;/a>&amp;nbsp;en partenariat avec l'association de patients Psoriasis Contact.&lt;/p>&#xd;&#xa;&lt;p>Obtenir une peau nette est aujourd'hui un objectif de traitement réaliste: &amp;quot;Je Peux&amp;quot; les encourage à tout mettre en place pour s'en donner les moyens.&amp;nbsp;C'est un appel aux patients à regagner leur liberté. Se débarrasser du poids de la maladie? Obtenir toutes les informations? Avoir une discussion sans tabous? &amp;quot;Je Peux&amp;quot;! Tels sont la réponse et le cri du coeur que la campagne espère insuffler aux patients.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Le site prévoit le partage de&amp;nbsp;&lt;a href=&quot;https://www.let-me-be-clear.com/be/fr-be/temoignages.html&quot; target=&quot;_blank&quot;>témoignages&lt;/a>&amp;nbsp;de la part de patients qui ont su dépasser leur psoriasis, ainsi que des informations sur la maladie et les options de traitements.&amp;nbsp;&lt;a href=&quot;http://www.jepeux.be/&quot; target=&quot;_blank&quot;>Jepeux.be&lt;/a>&amp;nbsp;permet aussi aux patients de personnaliser leur propre&amp;nbsp;&lt;a href=&quot;https://www.let-me-be-clear.com/be/fr-be/guide-discussion-personnalise.html&quot; target=&quot;_blank&quot;>guide de conversation&lt;/a>, afin de préparer leur consultation chez le dermatologue, ce qui représente la meilleure manière d'obtenir une consultation efficace et ainsi, le traitement qui leur sera le plus approprié. Enfin, un&amp;nbsp;&lt;a href=&quot;https://www.let-me-be-clear.com/be/fr-be/je-peux-blog.html&quot; target=&quot;_blank&quot;>blog&lt;/a>&amp;nbsp;rassemble divers articles sur des expériences de patients, des informations médicales, ou encore des conseils aux patients.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T20:17:53.389-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T20:17:53.389-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-08-26T20:18:41.261-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T20:19:19.347-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <text
+                                        cq:panelTitle="Références"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:created="{Date}2024-08-26T20:18:46.170-04:00"
+                                        jcr:createdBy="washidx10"
+                                        jcr:lastModified="{Date}2024-12-16T12:42:46.849-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>1. Global Report On Psoriasis. World Health Organization. 2016. Available at:&amp;nbsp;&lt;a href=&quot;http://apps.who.int/iris/bitstream/10665/204417/1/9789241565189_eng.pdf&quot;>http://apps.who.int/iris/bitstream/10665/204417/1/9789241565189_eng.pdf&lt;/a>. Accessed December 2024.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>2.&amp;nbsp;Armstrong A. et al., Patient perceptions of clear / almost clear skin in moderate-to-severe plaque psoriasis: results of the Clear About Psoriasis worldwide survey, JEADV 2018; DOI:10.1111/jdv.15065&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                            </container4>
+                            <text
+                                jcr:created="{Date}2024-12-16T14:48:01.392-05:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2024-12-16T14:48:12.500-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>AbbVie SA/NV -&amp;nbsp;BE-ABBV-240177 (V1.0) - December 2024&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:createdBy="washidx10"
+                        jcr:lastModified="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-26T18:05:39.774-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

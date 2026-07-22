@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-11-06T13:36:20.829-05:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-05T06:18:14.434-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Publication d’études cliniques"
+        jcr:uuid="858cb90e-7d3c-4e3a-ac72-479026a4f875"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        eyebrow=" Scientifique"
+        fileReference="/content/dam/abbvie-com2/images-common/ls/GettyImages-1296010488_mod.jpg"
+        navTitle="Publication d’études cliniques"
+        pageTitle="Publication d’études cliniques"
+        title="Publication d’études cliniques"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/ch/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-05-10T12:25:43.736-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-10-15T11:20:11.251-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images-common/ls/014-RF-MIC.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-05-10T12:23:42.394-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Publication d’études cliniques"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                        <container
+                            cq:styleIds="[1653545835879,1653545835982,1653545825686]"
+                            jcr:created="{Date}2024-05-10T11:43:19.523-04:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2024-05-10T11:43:19.523-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678,1651545825692]"
+                                jcr:created="{Date}2024-05-10T11:41:50.681-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-05-10T12:23:59.941-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Publication des résultats d’études cliniques"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2024-05-10T11:42:40.276-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2025-10-24T05:44:01.330-04:00"
+                                jcr:lastModifiedBy="kaspatx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>La publication par AbbVie de données cliniques aide les médecins, les patients et les prestataires de santé à prendre des décisions thérapeutiques éclairées. Grâce à ces données, il est plus facile aux chercheurs de réaliser des progrès scientifiques en se basant sur nos travaux de recherche ainsi que sur ceux d’autres scientifiques. La publication des données répond aux exigences des articles 71 à 73 de l’ordonnance sur les médicaments (ordonnance sur les médicaments, OMéd). Ceci concerne tous les produits autorisés par Swissmedic depuis janvier 2020.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Liste de produits, selon l’ordre alphabétique des principes actifs&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;a href=&quot;/content/abbvie-com2/ch/fr/science/publication-of-clinical-trials/atogepant-aquipta.html&quot;>Atogépant: Aquipta&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;/content/abbvie-com2/ch/fr/science/publication-of-clinical-trials/epcoritamab-tepkinly.html&quot;>Epcoritamab: Tepkinly&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;/content/abbvie-com2/ch/fr/science/publication-of-clinical-trials/mirvetuximab-soravtansine-elahere.html&quot;>Mirvétuximab&lt;i>&amp;nbsp;&lt;/i>soravtansine: Elahere&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.abbvie.ch/fr/our-science/clinical-study-report-csr-synopses/upadacitinib-rinvoq.html&quot;>Upadacitinib: Rinvoq&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container>
+                    </container2>
+                    <separator
+                        cq:styleIds="[1662756555361]"
+                        jcr:created="{Date}2024-05-10T11:44:11.421-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-05-10T11:44:11.421-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-05-10T12:25:30.274-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/ch/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <atogepant-aquipta/>
+    <epcoritamab-tepkinly/>
+    <mirvetuximab-soravtansine-elahere/>
+    <upadacitinib-rinvoq/>
+</jcr:root>

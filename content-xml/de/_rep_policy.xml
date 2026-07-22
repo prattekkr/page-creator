@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <allow
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="abbviecom2-doccheck-system-user"
+        rep:privileges="{Name}[jcr:nodeTypeManagement,jcr:versionManagement,jcr:read,jcr:modifyProperties,jcr:lockManagement,jcr:addChildNodes]"/>
+    <allow1
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="abbviecom2-doccheck-system-user"
+        rep:privileges="{Name}[jcr:removeNode,jcr:nodeTypeManagement,jcr:removeChildNodes,jcr:addChildNodes]">
+        <rep:restrictions
+            jcr:primaryType="rep:Restrictions"
+            rep:glob="*/jcr:content*"/>
+    </allow1>
+</jcr:root>

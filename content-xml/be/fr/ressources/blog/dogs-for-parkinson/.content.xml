@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-11T08:13:40.768-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:tags="[abbvie-com-2:categories/neuroscience-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Des chiens pour soutenir les personnes atteintes de la maladie de Parkinson "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-01-28T05:34:07.557-05:00"
+        jcr:lastModifiedBy="BAUFAAX"
+        jcr:mixinTypes="[mix:lockable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Dogs for Parkinson"
+        jcr:uuid="8f4121c3-9ce9-4075-b7f5-e795b494ff78"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        fileReference="/content/dam/abbvie-com2/be/images/Dogs parkinson 3.JPG"
+        hideInNav="true"
+        navTitle="Dogs for Parkinson"
+        pageTitle="Dogs for Parkinson"
+        publishDate="{Date}2026-01-29T07:00:00.000+01:00"
+        readTime="1"
+        readWatchTimeSel="read-time"
+        socialMedia="[facebook]"
+        subtitle="Dogs for Parkinson"
+        title="Dogs for Parkinson"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-26T18:05:29.360-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2025-03-17T04:48:57.664-04:00"
+                        jcr:lastModifiedBy="BAUFAAX"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/be/images/Chien promenade parkinson.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-25T23:18:59.172-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Toutes les histoires"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/fr/ressources/blog"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                jcr:lastModified="{Date}2025-03-10T09:39:04.992-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dogs for Parkinson"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-03-10T09:43:16.912-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Des chiens pour soutenir les personnes atteintes de la maladie de Parkinson&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <image
+                                jcr:created="{Date}2025-03-10T09:54:45.400-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2026-01-20T10:18:15.900-05:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="chiens parkinson"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/Dogs Parkinson 2.JPG"
+                                isDecorative="false"
+                                openInNewWindow="false"
+                                titleValueFromDAM="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825683]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-01-28T06:07:23.354-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Et si un chien pouvait faire plus que vous tenir compagnie ? Des études suggèrent que posséder un chien peut ralentir la progression de la maladie de Parkinson en encourageant l'activité physique.&lt;sup>1&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>À l’occasion de la&lt;b> Journée mondiale de la maladie de Parkinson&lt;/b>, l'initiative &lt;b>&amp;quot;Dogs for Parkinson&lt;/b>&amp;quot; fait son grand retour en Belgique. Il s'agit d'&lt;b>une balade solidaire, accessible à tous,&lt;/b> où chacun peut participer librement et à son rythme, accompagné (ou non) de son compagnon à 4 pattes. &lt;/p>&#xd;&#xa;&lt;p>Cet événement est organisé par AbbVie en collaboration avec les associations &lt;a href=&quot;https://www.parkili.be/&quot; target=&quot;_blank&quot;>Parkili vzw&lt;/a>, &lt;a href=&quot;https://www.actionparkinson.be/&quot; target=&quot;_blank&quot;>Action Parkinson asbl&lt;/a>, &lt;a href=&quot;https://parkinsonasbl.be/&quot; target=&quot;_blank&quot;>Association Parkinson asbl&lt;/a> et &lt;a href=&quot;https://www.parkinsonliga.be/&quot; target=&quot;_blank&quot;>Vlaamse Parkinson liga vzw&lt;/a>. &lt;b>Les promenades se dérouleront dans différentes villes belges au printemps 2026. &lt;/b>&lt;/p>&#xd;&#xa;&lt;p>La première étape aura lieu à&lt;b> Bruxelles&lt;/b>, plus précisément à Flagey, où un stand d’information et un photobooth vous attendront. Une balade autour des étangs, en excellente compagnie, est ensuite encouragée, sans distance imposée. &lt;/p>&#xd;&#xa;&lt;p>L'initiative fera ensuite escale à&lt;b> Namur, à Anvers &lt;/b>et à&lt;b> Gand. &lt;/b>Toutes les informations pratiques concernant les lieux et les horaires se trouvent plus bas sur cette page. &lt;/p>&#xd;&#xa;&lt;p>&lt;b>Tout le monde peut participer&lt;/b>: que vous soyez une personne atteinte de la maladie de Parkinson, un aidant, un proche ou encore simplement si vous souhaitez montrer votre soutien et partager un moment chaleureux, vous êtes le/la bienvenu.e. &lt;b>La participation est donc ouverte à tous, avec ou sans chien.&lt;/b>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_1880015361
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2025-03-10T09:45:14.627-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Informations pratiques"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <accordion_copy
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-08-26T18:48:18.888-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2026-01-20T10:00:12.497-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <text
+                                        cq:panelTitle="Bruxelles"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:created="{Date}2024-08-26T18:48:26.678-04:00"
+                                        jcr:createdBy="washidx10"
+                                        jcr:lastModified="{Date}2026-01-20T10:05:53.556-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Quand&amp;nbsp;:&lt;/b>&amp;nbsp;&lt;b>Mardi 24 mars&lt;/b>&amp;nbsp;– Accueil dès 10h, départ de la balade autour des étangs et retour vers midi.&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Où&amp;nbsp;&lt;/b>:&amp;nbsp;&lt;b>Place Flagey, Ixelles&lt;/b>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Avec ou sans chien, tout le monde est le bienvenu!&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Il n'est pas nécessaire de s'inscrire au préalable.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1741737968936
+                                        cq:panelTitle="Namur"
+                                        jcr:lastModified="{Date}2026-01-20T10:05:45.014-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Quand&amp;nbsp;:&lt;/b>&amp;nbsp;Samedi 4 avril - Accueil à partir de 10h, départ de la promenade et retour vers 12h.&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Où&amp;nbsp;&lt;/b>:&amp;nbsp;Place de l'Ange, Namur&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Avec ou sans chien, tout le monde est le bienvenu!&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Il n'est pas nécessaire de s'inscrire au préalable.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1741737982707
+                                        cq:panelTitle="Anvers"
+                                        jcr:lastModified="{Date}2026-02-11T08:13:40.753-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Quand&amp;nbsp;:&lt;/b>&amp;nbsp;Samedi 25 avril - Accueil à partir de 10h, départ de la promenade et retour vers 12h.&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Où&amp;nbsp;&lt;/b>: Steenplein, Anvers&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Avec ou sans chien, tout le monde est le bienvenu!&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Il n'est pas nécessaire de s'inscrire au préalable.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1768921207614
+                                        cq:panelTitle="Gand"
+                                        jcr:lastModified="{Date}2026-01-20T10:03:12.637-05:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Quand&amp;nbsp;:&lt;/b>&amp;nbsp;Lundi 11 mai - Accueil à partir de 12h, départ de la promenade et retour vers 14h.&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Où&amp;nbsp;&lt;/b>:&amp;nbsp;Koningin Maria Hendrikaplein, Gand&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Avec ou sans chien, tout le monde est le bienvenu!&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Il n'est pas nécessaire de s'inscrire au préalable.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion_copy>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-03-11T20:13:39.117-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Prêt à marcher pour la bonne cause ? Rejoignez-nous !&lt;/b>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <image
+                                    jcr:created="{Date}2026-01-20T10:15:52.292-05:00"
+                                    jcr:createdBy="BAUFAAX"
+                                    jcr:lastModified="{Date}2026-01-20T10:19:15.560-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="Dogs for parkinson"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/be/images/Dogs parkinson 3.JPG"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-08-26T18:48:18.888-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2025-03-20T05:31:41.437-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <text
+                                        cq:panelTitle="Références"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:created="{Date}2024-08-26T18:48:26.678-04:00"
+                                        jcr:createdBy="washidx10"
+                                        jcr:lastModified="{Date}2025-03-17T08:27:33.864-04:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p> &lt;/p>&#xd;&#xa;&lt;p>&lt;sub>1. Boldig CM, Butala N. Pet Therapy as a Nonpharmacological Treatment Option for Neurological Disorders: A Review of the Literature. &lt;i>Cureus&lt;/i>. 2021;13(7):e16167. Published 2021 Jul 4. doi:10.7759&lt;/sub>&lt;/p>&#xd;&#xa;&lt;p> &lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                                <text
+                                    jcr:created="{Date}2024-12-16T14:38:08.900-05:00"
+                                    jcr:createdBy="BAUFAAX"
+                                    jcr:lastModified="{Date}2026-01-20T10:29:36.263-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie SA/NV -BE-ABBV-260009 (V1.0) - January 2026&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:createdBy="washidx10"
+                        jcr:lastModified="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-26T18:05:39.774-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

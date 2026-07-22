@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-08T20:40:12.387-05:00"
+        cq:lastModifiedBy="jewitca"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Nasze wartości determinują kierunek naszej pracy i definiują naszą misję: pozytywny wpływ na życie pacjentów, uczciwość, innowacyjność, różnorodność i inkluzywność oraz działanie na rzecz lokalnych społeczności. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-06-21T09:18:34.230-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Nasze wartości "
+        jcr:uuid="1d482563-045d-4bfc-b50c-5190b53dedad"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Dowiedz się więcej"
+        ctaText="Dowiedz się więcej"
+        description="Kierujemy się wartościami, które tworzą DNA naszej firmy"
+        eyebrow="O nas"
+        fileReference="/content/dam/abbvie-com2/images/employee/jane-woo-hero.jpg"
+        navTitle="Nasze wartości "
+        pageTitle="Nasze wartości "
+        title="Nasze wartości ">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-07T06:42:40.302-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pl/pl/site/header/poland-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847149]"
+                        jcr:lastModified="{Date}2024-04-26T12:03:17.470-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images-common/banner/003DSB00013_mod_2880x896.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653545847150,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-03-12T11:10:21.959-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Kierujemy się wartościami, które tworzą DNA naszej firmy"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-06-21T09:20:48.217-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Nasze wartości determinują kierunek naszej pracy i definiują naszą misję&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        cq:styleIds="[0]"
+                        jcr:created="{Date}2022-11-28T14:08:57.382-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-11-28T14:09:13.393-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545825685,1653241825678,1653545835879,1653545835982,1653545847150]"
+                                jcr:created="{Date}2022-11-28T14:09:35.472-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-11-28T14:09:35.472-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2022-11-28T14:09:56.113-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-03-12T11:12:32.279-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Nasze wartości "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-28T14:12:33.220-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-08-29T18:10:19.128-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>W AbbVie mamy pełną świadomość, że innowacyjne leki i rozwiązania terapeutyczne, jakie tworzymy, mają wpływ na życie ludzi. Dążymy do realnej poprawy jakości życia pacjentów nie tylko poprzez nasze przełomowe terapie, ale także sposób, w jaki działamy. We wszystkim, co robimy, kierujemy się&amp;nbsp; uczciwością.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                            <container_381572386
+                                cq:styleIds="[1653545835982,1653545847150]"
+                                jcr:created="{Date}2024-03-13T16:07:48.202-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-03-13T16:10:55.649-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#F1F3FF">
+                                <grid
+                                    cq:styleIds="[1653545835880]"
+                                    jcr:created="{Date}2024-03-13T16:11:52.964-04:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-03-13T16:12:16.707-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                    rowCount="1">
+                                    <columns jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="2"
+                                            dataPriority="1"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="8"
+                                            dataPriority="1"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="2"
+                                            dataPriority="1"/>
+                                    </columns>
+                                    <par_12
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <separator
+                                            cq:styleIds="[1662756486159]"
+                                            jcr:created="{Date}2024-03-13T16:12:55.634-04:00"
+                                            jcr:createdBy="jewitca"
+                                            jcr:lastModified="{Date}2024-03-13T16:12:55.634-04:00"
+                                            jcr:lastModifiedBy="jewitca"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                        <title
+                                            cq:styleIds="[1659545825678]"
+                                            jcr:created="{Date}2024-03-13T16:09:43.728-04:00"
+                                            jcr:createdBy="jewitca"
+                                            jcr:lastModified="{Date}2024-12-08T20:39:28.687-05:00"
+                                            jcr:lastModifiedBy="jewitca"
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Miarą naszego zaangażowania jest wpływ, jaki wywieramy na życie i zdrowie pacjentów oraz całe społeczności. "
+                                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                                            type="h4"
+                                            variant="h"/>
+                                        <separator_2062175433
+                                            cq:styleIds="[1662756456518]"
+                                            jcr:created="{Date}2024-03-13T16:13:04.137-04:00"
+                                            jcr:createdBy="jewitca"
+                                            jcr:lastModified="{Date}2024-03-13T16:13:04.137-04:00"
+                                            jcr:lastModifiedBy="jewitca"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                    </par_12>
+                                </grid>
+                            </container_381572386>
+                        </par_12>
+                    </grid>
+                    <accordion
+                        cq:styleIds="[4,8]"
+                        jcr:created="{Date}2022-12-20T16:08:57.224-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2024-06-21T09:24:39.739-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                        heading="NASZE WARTOŚCI"
+                        headingElement="h5"
+                        id="accordion"
+                        singleExpansion="false">
+                        <item_1671570554123
+                            cq:panelTitle="Wpływ na życie ludzi "
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-12-08T20:40:12.383-05:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Każdego dnia dokładamy starań, by przynosić pacjentom nadzieję i odmieniać ich życie. Podejmujemy decyzje z głęboką troską i empatią, ponieważ wiemy, że będą one miały trwały wpływ na życie i zdrowie pacjentów oraz ich rodziny, naszych pracowników oraz całe społeczeństwo.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570557396
+                            cq:panelTitle="Uczciwość w działaniu"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-08-29T18:11:02.696-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Staramy się postępować zawsze właściwie. Stosujemy najwyższe standardy jakości, zgodności, bezpieczeństwa i wydajności, zachowując uczciwość we wszystkim, co robimy.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570603045
+                            cq:panelTitle="Wdrażanie innowacji "
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-06-21T09:27:56.240-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Nieustannie wdrażamy innowacje, aby odpowiadać na potrzeby rynku. Inwestujemy w badania nad rozwojem nowych leków i terapii.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570607019
+                            cq:panelTitle="Wspieranie różnorodności i integracji"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-06-21T09:26:20.214-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Wszystkich traktujemy jednakowo – z godnością i szacunkiem. Nasi pracownicy, zatrudnieni w oddziałach na całym świecie, pochodzą z odmiennych środowisk i mają różne doświadczenia, dzięki temu w pełni czerpiemy z naszego potencjału.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1671570609829
+                            cq:panelTitle="Działania na rzecz społeczności"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2024-07-03T08:30:59.080-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Jesteśmy dumni z naszych inicjatyw na rzecz wspierania lokalnych społeczności, ochrony środowiska i ochrony zdrowia.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </accordion>
+                    <text_copy
+                        cq:styleIds="[1659545825678]"
+                        jcr:created="{Date}2024-07-15T22:01:28.318-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-07-15T22:06:08.651-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                        text="&lt;p style=&quot;text-align: right;&quot;>&lt;span class=&quot;body-unica-14-reg&quot;>PL-ABBV-240052&lt;/span>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-03-13T16:16:27.987-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-03-13T16:16:40.229-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-07T06:50:25.471-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pl/pl/site/footer/poland-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

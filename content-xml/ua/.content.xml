@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/abbvie-com2/settings/wcm/templates/(?!xf-).*]"
+        cq:lastModified="{Date}2023-08-24T23:36:31.425-04:00"
+        cq:lastModifiedBy="jewitca"
+        cq:lastReplicated="{Date}2024-05-08T12:02:45.108-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:redirectTarget="/content/abbvie-com2/ua/uk"
+        cq:siteOwner="admin"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Україна"
+        jcr:uuid="dd6412b4-c789-4c74-b2ea-d8516721fd49"
+        sling:resourceType="abbvie-com2/components/page/v2/page"/>
+    <uk/>
+</jcr:root>

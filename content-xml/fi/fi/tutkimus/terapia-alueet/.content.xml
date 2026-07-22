@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-08-09T04:08:42.969-04:00"
+        cq:lastModifiedBy="COLLINX1"
+        cq:lastReplicated="{Date}2024-08-09T04:10:57.904-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Pyrimme parempiin ratkaisuihin potilaille immunologian, onkologian, neurotieteen, näönhoidon ja estetiikan aloilla. Tutustu AbbVien T&amp;K-toimintaan painopistealueillamme. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-10-16T16:29:28.471-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Terapia-alueet"
+        jcr:uuid="4e9dfec7-677f-44d5-86ca-02b2a92a9c02"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Lue lisää"
+        ctaText="Lue lisää"
+        description="AbbViella yhdistämme asiantuntemuksemme ja potilaiden tarpeet luodessamme uusia hoitokeinoja vakaviin sairauksiin.&#xd;&#xa;"
+        eyebrow="Tutkimus"
+        fileReference="/content/dam/abbvie-com2/fi/images/2880/1037_636.jpg"
+        navTitle="Terapia-alueet"
+        pageTitle="Terapia-alueet"
+        title="Kehitämme hoitoja vakaviin sairauksiin">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-06-26T12:06:42.734-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fi/fi/site/header/finland-header-finnish"/>
+                <responsivegrid1
+                    cq:styleIds="[1662756387452,1662756756047]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-09-25T12:25:43.508-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/fi/images/2880/1037_636.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-09-25T12:10:56.788-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Kehitämme hoitoja vakaviin sairauksiin"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-09-25T12:11:40.736-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>AbbViella yhdistämme asiantuntemuksemme ja potilaiden tarpeet luodessamme uusia hoitokeinoja vakaviin sairauksiin.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_1935889613
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-09-25T12:12:05.162-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2023-10-16T16:27:43.014-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>Tahdomme kehittää parhaita mahdollisia lääkkeitä parantaaksemme vakavien sairauksien kanssa elävien ihmisten elämänlaatua. Teemme yhteistyötä yliopistojen, tutkimusinstituuttien sekä muiden kumppaneiden kanssa.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>Keskitämme työmme terapia-alueisiin, joissa olemme vahvoja ja missä meillä on jatkuvasti suurempi mahdollisuus kehittää uusia tapoja auttaa ihmisiä. Lue lisää terapia-alueistamme alta.&lt;/span>&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <separator_copy
+                        cq:styleIds="[1662756423318]"
+                        jcr:created="{Date}2022-12-17T10:33:27.834-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-17T10:33:27.834-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <container_354232513
+                        cq:styleIds="[1653545835982,1653545825686]"
+                        jcr:created="{Date}2023-10-16T16:14:25.495-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2023-10-16T16:14:25.495-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title_copy
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2022-12-17T10:27:48.523-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-11-15T06:10:30.913-05:00"
+                            jcr:lastModifiedBy="RAITIKJ"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Terapia-alueet yhdellä silmäyksellä"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <separator_copy_copy
+                            cq:styleIds="[1662756423318]"
+                            jcr:created="{Date}2022-12-17T10:33:27.834-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-17T10:33:27.834-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <accordion
+                            cq:styleIds="[1]"
+                            jcr:created="{Date}2023-10-16T16:14:33.566-04:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2023-10-16T16:16:01.270-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            headingElement="h5"
+                            singleExpansion="false">
+                            <item_1697487291460
+                                cq:panelTitle="IMMUNOLOGIA"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-10-16T16:24:02.329-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>AbbVien vankka asiantuntemus immunologiassa on tulosta pitkästä tutkimusperinnöstämme. Onnistumisemme motivoivat meitä jatkamaan uusien ratkaisujen etsimistä.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Erikoistumisalamme immunologiassa ovat reumatologia, dermatologia ja gastroenterologia. Työskentelemme auttaaksemme kroonisia tulehduksellisia sairauksia sairastavia ihmisiä elämään täyttä elämää ilman sairauden aiheuttamia rajoitteita.&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Jokaisen uuden löydöksen avulla ymmärrämme paremmin potilaiden erilaisuutta ja voimme kehittää personoidumpia lähestymistapoja immunologisiin sairauksiin.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lue lisää immunologiasta&amp;nbsp;&lt;a href=&quot;https://www.abbviepro.com/fi/fi/immunology.html&quot;>AbbVie Pro:ssa&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lisätietoa atooppisesta ihottumasta löydät osoitteesta&amp;nbsp;&lt;a href=&quot;https://www.atooppinenihottuma.fi/&quot;>atooppinenihottuma.fi&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1697487295314
+                                cq:panelTitle="ONKOLOGIA JA HEMATOLOGIA"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-10-16T16:24:17.453-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Uteliaisuutemme ajaa meitä eteenpäin, kun kehitämme uusia hoitokeinoja erilaisiin syöpiin. Me AbbViella haluamme saada aikaan parempia ja pidempikestoisia tuloksia syöpien hoidossa.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Tutkimuksemme on johtanut tärkeisiin löytöihin hematologisten syöpien hoidossa. Nyt laajennamme tutkimuksiamme myös kiinteisiin syöpäkasvaimiin, joita suurin osa ihmisten syövistä on.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Hematologiset syövät vaikuttavat verta muodostaviin kudoksiin, kuten luuytimeen, ja rajoittavat kehon vastustuskykyä infektioita vastaan. Yleisimpiä hematologisia syöpiä ovat leukemiat, lymfoomat ja myelooma. Tavallisimpia kasvaintyyppejä puolestaan ovat sarkooma ja karsinooma.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lue lisää onkologiasta ja hematologiasta&amp;nbsp;&lt;a href=&quot;https://www.abbviepro.com/fi/fi/oncology/oncology.html&quot;>AbbVie Pro:ssa&lt;/a>.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1697487297907
+                                cq:panelTitle="NEUROLOGIA"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-11-15T09:12:25.084-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Teemme AbbViella innovatiivista tutkimustyötä yhdiste, jotka vaikuttavat aivoissa sijaitseviin reseptoreihin. Näiden reseptorien avulla säädellään muun muassa kipua, mielialaa, muistia ja muita neurologisia toimintoja.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Työskentelemme lääkekehityksen kaikissa vaiheissa perustutkimuksesta lähtien löytääksemme uusia ratkaisuja haastaviin neurologisiin ja psyykkisiin sairauksiin. Tutkimiamme sairauksia ovat esimerkiksi Alzheimerin tauti, Parkinsonin tauti, MS-tauti, migreeni sekä skitsofrenia.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lue lisää neurologiasta&amp;nbsp;&lt;a href=&quot;https://www.abbviepro.com/fi/fi/neurology/neurology.html&quot;>AbbVie Pro:ssa&lt;/a>.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lisätietoa migreenistä löydät osoitteesta&amp;nbsp;&lt;a href=&quot;https://otamigreenivakavasti.fi/&quot;>otamigreenivakavasti.fi&lt;/a>.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1697487300004
+                                cq:panelTitle="SILMÄSAIRAUDET"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-10-16T16:24:58.300-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Sokeus ja näön heikentyminen vaikuttavat maailmanlaajuisesti yli miljardiin ihmiseen ja joka vuosi yhä useampi saa näköään uhkaavan diagnoosin. Keskitymme kehittämään hoitomuotoja useisiin silmätauteihin, kuten glaukoomaan ja erilaisiin verkkokalvosairauksiin.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Vuodesta 1948 tutkijamme Allerganilla, joka on nykyisin osa AbbVieta, ovat toimineet silmäsairauksien tutkimuksen edelläkävijöinä. Tutkimme sairauksien geneettistä perustaa löytääksemme uusia innovatiivisia lääkkeitä helpottamaan potilaiden elämää.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1697487302169
+                                cq:panelTitle="VIROLOGIA"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-08-09T04:08:42.964-04:00"
+                                jcr:lastModifiedBy="COLLINX1"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Viruslääketutkimuksemme keskittyy erityisesti hepatiitti C -tartunnan hoitoon soveltuvien lääkkeiden kehitystyöhön. Maailmanlaajuisesti hepatiitti C -tartunnan saaneita ihmisiä on yli 170 miljoonaa, ja vuosittain tartunnan saa noin 4 miljoonaa ihmistä.&lt;/span>&lt;/p>&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Hepatiitti C -tartunta voi johtaa pitkäaikaisiin komplikaatioihin. Haluamme omalta osaltamme olla edistämässä Maailman terveysjärjestö WHO:n tavoitetta eliminoida hepatiitti C maailmasta vuoteen 2030 mennessä.&lt;br>&#xa;&lt;/span>&lt;/p>&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>C-hepatiitin lisäksi tutkimme virologian terapia-alueella esimerkiksi endokrinologisia ja ruoansulatusjärjestelmän tauteja, keuhkotauteja sekä HIV:tä. Monimuotoista tieteellisten asiantuntijoidemme joukkoa yhdistää yksi tavoite: haluamme tehdä merkittäviä uusia löytöjä, jotka vaikuttavat positiivisesti useiden ihmisten elämiin.&lt;/span>&lt;/p>&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lue lisää C-hepatiitista&amp;nbsp;&lt;a href=&quot;https://www.abbviepro.com/fi/fi/virology/hcv.html&quot;>AbbVie Pro:ssa&lt;/a>.&lt;/span>&lt;/p>&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lisätietoa C-hepatiitista löydät osoitteesta&amp;nbsp;&lt;a href=&quot;https://www.abbvie.fi/yhteistyoe/potilasjaerjestoeyhteistyoe/c-hepatiitti.html&quot;>c-hepatiitti.fi&lt;/a>.&lt;/span>&lt;/p>&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                            <item_1697487357820
+                                cq:panelTitle="MUUT TERAPIA-ALUEET"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-10-16T16:25:27.106-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Vuonna 2020 Allergan liitettiin osaksi AbbVieta, ja siitä lähtien olemme olleet edelläkävijöitä myös esteettisen lääketieteen parissa. Tutkimme ikääntymisen merkkejä ja kehitämme portfoliotamme täydentäviä seuraavan sukupolven esteettisiä tuotteita ja ratkaisuja.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Esteettisen lääketieteen ja muiden suurempien erikoistumisalojemme lisäksi me AbbViella teemme tutkimusta muun muassa endokriinisten ongelmien, kuten kilpirauhasen vajaatoiminnan ja naisten vuotohäiriöiden, parissa. Meillä on myös tutkimusohjelmia, jotka keskittyvät tutkimaan ärtyvän suolen oireyhtymää, idiopaattista keuhkofibroosia ja kystistä fibroosia.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-18-reg&quot;>Lue lisää esteettisestä lääketieteestä&amp;nbsp;&lt;a href=&quot;https://nordics.allerganaesthetics.com/f&quot;>Allergan Aestheticsin sivuilta&lt;/a>.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion>
+                    </container_354232513>
+                    <separator_284358918
+                        cq:styleIds="[1662756566902]"
+                        jcr:created="{Date}2023-10-16T16:21:46.812-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2023-10-16T16:21:46.812-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-06-26T12:07:10.218-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fi/fi/site/footer/finland-footer-finnish"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-03-31T05:30:13.610-04:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Partnerstvá "
+        jcr:uuid="3b17915f-3cbd-44f6-bc52-7cd734129ccd"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        navTitle="Partnerstvá "
+        pageTitle="Partnerstvá ">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-02-06T06:25:55.177-05:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/sk/sk/site/header/slovakia-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2026-02-06T06:28:47.861-05:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/woman-man-meeting-hero.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2026-02-06T06:30:21.499-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Partnerstvá"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid_1109957805_copy
+                        cq:styleIds="[0]"
+                        jcr:created="{Date}2022-12-07T10:56:06.407-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-02-12T17:18:05.542-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <header
+                                cq:styleIds="[2]"
+                                jcr:created="{Date}2022-12-06T11:43:47.745-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-26T10:59:13.437-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="SÚVISIACI OBSAH"/>
+                            <image
+                                jcr:created="{Date}2022-12-10T16:23:08.734-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-02-15T14:45:29.318-05:00"
+                                jcr:lastModifiedBy="SCHAFSM"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                altValueFromDAM="true"
+                                displayPopupTitle="true"
+                                fileReference="/content/dam/abbvie-com2/images/employee/male/man-pointing-at-screen-square.jpeg"
+                                isDecorative="false"
+                                titleValueFromDAM="false"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-12-10T16:23:13.561-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-03-19T05:41:43.335-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>Predložiť ponuku na partnerstvo&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <button
+                                cq:styleIds="[1659997777274]"
+                                jcr:created="{Date}2022-12-10T16:23:19.091-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-06T08:36:23.921-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Kontaktujte nás "
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Contact us"
+                                linkTarget="_blank"
+                                linkURL="https://abbvie.partneringplace.com/OppPortal/portal/Abbvie"/>
+                            <separator
+                                cq:styleIds="[1662756756047]"
+                                jcr:created="{Date}2023-01-05T10:46:41.005-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-05T10:46:41.005-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1116381237_1565390415
+                                cq:styleIds="[1662756409908]"
+                                jcr:created="{Date}2023-01-05T10:47:14.803-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-05T10:47:14.803-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <header_1821235473_co
+                                cq:styleIds="[3]"
+                                jcr:created="{Date}2022-12-14T13:11:04.446-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-06T08:37:55.235-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="Témy  "/>
+                            <linklist_copy
+                                jcr:created="{Date}2022-12-14T13:11:54.007-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-12T16:42:21.811-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                childDepth="1"
+                                excludeCurrentPage="true"
+                                linkItems="true"
+                                listFrom="children"
+                                parentPage="/content/abbvie-com2/us/en/science/partner-with-us"
+                                sortOrder="asc"
+                                tagsMatch="any">
+                                <pages jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Oncology"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/partner-with-us/abbvie-ventures/abbvie-ventures-portfolio"
+                                        text="AbbVie Ventures Portfolio"/>
+                                </pages>
+                            </linklist_copy>
+                            <separator_copy
+                                cq:styleIds="[1662756756047]"
+                                jcr:created="{Date}2023-01-05T10:46:41.005-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-05T10:46:41.005-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1116381237
+                                cq:styleIds="[1662756409908]"
+                                jcr:created="{Date}2023-01-05T10:47:14.803-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-05T10:47:14.803-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <text_89318411
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-08-11T11:50:57.108-04:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-03-19T05:31:51.006-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>Pre viac informácií o partnerstve s AbbVie si&amp;nbsp;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/partnership-approach-brochure.pdf&quot;>stiahnite našu brožúru.&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </par_11>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678,1651545825692]"
+                                jcr:created="{Date}2023-01-04T12:55:15.469-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-06T06:30:00.929-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Inovácie sa týkajú nás všetkých "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-04T12:56:00.281-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-26T10:58:22.047-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>K rozvoju a udržiavaniu našich partnerstiev pristupujeme veľmi komplexne. S našimi partnermi pracujeme ako jeden prepojený celok, aby sme podporili vedecký pokrok. Spolupráca má zásadný význam pre náš vlastný úspech i pre úspech celého odvetvia.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2023-01-04T13:13:17.451-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-04T13:13:17.451-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <title_copy
+                                cq:styleIds="[1659545825678,1661545829678,1651545825693]"
+                                jcr:created="{Date}2023-01-04T12:55:15.469-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-26T10:37:07.211-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Náš prístup: vytvárame partnerstvá, ktoré majú zmysel"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                            <text_259153141
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-17T14:03:15.858-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-06T06:32:47.783-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Cieľom spolupráce v&amp;nbsp;AbbVie&amp;nbsp;je dosiahnutie dvoch dôležitých cieľov:&amp;nbsp;prinášať&amp;nbsp;inovatívne lieky a významne ovplyvňovať životy ľudí.&lt;/p>&#xd;&#xa;&lt;p>Vychádzame z vysoko komplexného prístupu&amp;nbsp;k rozvoju a udržiavaniu našich partnerstiev. Pracujeme ako jeden prepojený celok so záväzkom nadväzovať spoluprácu&amp;nbsp;naprieč celým vývojovým procesom, ktorá&amp;nbsp;prinesie prospech&amp;nbsp;pacientom&amp;nbsp;a podporí vedecký pokrok.&lt;/p>&#xd;&#xa;&lt;p>Usilujeme sa o vytváranie dlhodobých vzájomne výhodných partnerstiev.&amp;nbsp;Naším základom je zdieľaná vízia, ktorá nám umožňuje spájať naše spoločné schopnosti s cieľom prinášať inovatívne lieky, ktoré riešia závažné zdravotné problémy dneška a zdravotné výzvy zajtrajška.&amp;nbsp;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Od začiatku až do konca zabezpečujeme, aby si všetci od pracovných tímov až po&amp;nbsp;najvyššie&amp;nbsp;vedenie&amp;nbsp;boli vedomí našich cieľov a investovali do starostlivosti o aktíva, ktoré spoločne&amp;nbsp;rozvíjame.&amp;nbsp;Riadime tým náš&amp;nbsp;úspech – od včasnej identifikácie a zmierňovania rizík až po spoločnú zodpovednosť a odmeňovanie za úspešné výsledky.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator_copy
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2023-01-04T13:13:17.451-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-04T13:13:17.451-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_copy_1916185142
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2023-01-04T13:13:17.451-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-04T13:13:17.451-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <title_copy_copy
+                                cq:styleIds="[1659545825678,1661545829678,1651545825692]"
+                                jcr:created="{Date}2023-01-04T12:55:15.469-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-06T06:33:28.303-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Ako spolupracujeme "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                            <text_1185168660_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-04T13:14:02.289-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-03-19T05:42:56.466-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>&lt;b>Vyhľadávanie a hodnotenie&amp;nbsp;(S&amp;amp;E)&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Zameriavame sa na vyhľadávanie a vyhodnocovanie nových príležitostí, ktoré dopĺňajú a posilňujú naše existujúce interné inovačné stratégie. V rámci S&amp;amp;E úzko spolupracujeme s našimi výskumnými a obchodnými tímami, BD&amp;amp;A a tímami pre podnikateľské zámery, aby sme premyslene riešili každú príležitosť.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Rozvoj&amp;nbsp;obchodu&amp;nbsp;a akvizície&amp;nbsp;(BD&amp;amp;A)&lt;br>&#xd;&#xa;&lt;/b>Posudzujeme&amp;nbsp;rôzne partnerské štruktúry,&amp;nbsp;aby sme vyhoveli potrebám oboch strán. BD&amp;amp;A úzko spolupracuje s oddelením vedy a výskumu a tímom&amp;nbsp;S&amp;amp;E pri vyhodnocovaní nových príležitostí.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Globálne aliancie&lt;br>&#xd;&#xa;&lt;/b>Vysoko&amp;nbsp;úspešné partnerstvá sú výsledkom trvalého záväzku realizovať spoločnú víziu. V&amp;nbsp;AbbVie&amp;nbsp;máme špecializovaný tím, ktorý sa podieľa na všetkých aspektoch partnerstva od uzatvárania zmlúv až po komercializáciu.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Partnerstvá&amp;nbsp;AbbVie&lt;br>&#xd;&#xa;&lt;/b>Strategicky investujeme do transformačných vedeckých príležitostí s cieľom rozšíriť naše hlavné záujmy v oblasti výskumu a vývoja a získať prístup k vedeckým poznatkom novej generácie a osvedčeným lídrom vo vede. Naše odborné znalosti v oblasti vývoja a komercializácie liečiv môžu byť cenným zdrojom aj pre spoločnosti v najranejšej fáze vývoja.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator_2123790112
+                                cq:styleIds="[1662756456518]"
+                                jcr:created="{Date}2023-01-05T10:19:42.072-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-01-05T10:19:42.072-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <title_2048351104_cop_854970822
+                                cq:styleIds="[1659545825678,1661545829678,1651545825692]"
+                                jcr:created="{Date}2023-01-05T10:19:52.308-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-06T06:36:29.242-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tím pre partnerstvá "
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h2"
+                                variant="h"/>
+                            <text_1185168660_copy_398457286
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2023-01-04T13:14:02.289-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-26T10:41:05.462-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Náš tím je pripravený sa s vami stretnúť, aby sa s vami podelil o naše možnosti a prediskutoval vaše obchodné príležitosti. Vždy hľadáme inovácie a nové partnerské príležitosti, ktoré sú v súlade s našimi oblasťami záujmu. Máme kancelárie v severnej Kalifornii, Chicagu a Bostone a na ďalších miestach po celom svete. Tešíme sa, že sa nám ozvete.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;https://abbvie.partneringplace.com/SubmissionUI/abbvie/submission&quot;>Kontaktujte nás&lt;/a> so svojím nápadom.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <separator_752600555
+                                jcr:created="{Date}2026-02-06T06:39:51.316-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-02-06T06:39:51.316-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <accordion
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2026-02-06T06:40:40.919-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-03-19T05:39:57.162-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                heading=" "
+                                singleExpansion="false">
+                                <item_1770378073930
+                                    cq:panelTitle="Vyhľadávanie a hodnotenie "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-02-06T06:43:22.327-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Niels&amp;nbsp;Emmerich,&amp;nbsp;Vice&amp;nbsp;President,&amp;nbsp;Global&amp;nbsp;Head&amp;nbsp;Search&amp;nbsp;&amp;amp;&amp;nbsp;Evaluation&amp;nbsp;and&amp;nbsp;Global&amp;nbsp;Alliances&lt;/p>&#xd;&#xa;&lt;p>Debra&amp;nbsp;Chao, Senior&amp;nbsp;Director,&amp;nbsp;Oncology&lt;/p>&#xd;&#xa;&lt;p>Murali&amp;nbsp;Gopalakrishnan, Senior&amp;nbsp;Director, Neuroscience&lt;/p>&#xd;&#xa;&lt;p>Rohun&amp;nbsp;Palekar,&amp;nbsp;Director,&amp;nbsp;Specialty&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Arpita&amp;nbsp;Maiti, Senior&amp;nbsp;Director,&amp;nbsp;Immunology&lt;/p>&#xd;&#xa;&lt;p>Douglas&amp;nbsp;Faunce,&amp;nbsp;Executive&amp;nbsp;Director,&amp;nbsp;Eye&amp;nbsp;Care&lt;/p>&#xd;&#xa;&lt;p>Chinmay&amp;nbsp;Kanuga, Senior&amp;nbsp;Director,&amp;nbsp;Allergan&amp;nbsp;Aesthetics&amp;nbsp;and&amp;nbsp;Operations&lt;/p>&#xd;&#xa;&lt;p>Joachim&amp;nbsp;Vogt,&amp;nbsp;Director, Western&amp;nbsp;Europe&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Sergio&amp;nbsp;Capancioni,&amp;nbsp;Director, Western&amp;nbsp;Europe&lt;/p>&#xd;&#xa;&lt;p>Wendy&amp;nbsp;Tai,&amp;nbsp;Director, Japan/Asia/Pacific&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378088556
+                                    cq:panelTitle="Rozvoj obchodu a akvizície  "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-02-06T06:43:47.847-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Jay&amp;nbsp;Stamatis,&amp;nbsp;Vice&amp;nbsp;President,&amp;nbsp;Head&amp;nbsp;Business&amp;nbsp;Development&amp;nbsp;&amp;amp;&amp;nbsp;Acquisitions&lt;/p>&#xd;&#xa;&lt;p>Rahul&amp;nbsp;Jerath, Senior&amp;nbsp;Director,&amp;nbsp;Oncology&lt;/p>&#xd;&#xa;&lt;p>Tony&amp;nbsp;Brazda, Senior&amp;nbsp;Director,&amp;nbsp;Allergan&amp;nbsp;Aesthetics&lt;/p>&#xd;&#xa;&lt;p>Rachel&amp;nbsp;Strick, Senior&amp;nbsp;Director,&amp;nbsp;Immunology&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>David&amp;nbsp;Moss,&amp;nbsp;Associate&amp;nbsp;VP,&amp;nbsp;Eye&amp;nbsp;Care,&amp;nbsp;Neuropsych,&amp;nbsp;Migraine&lt;/p>&#xd;&#xa;&lt;p>John&amp;nbsp;FitzGerald, Senior&amp;nbsp;Director,&amp;nbsp;Outlicensing,&amp;nbsp;Specialty&lt;/p>&#xd;&#xa;&lt;p>Sridhar&amp;nbsp;Mandapati,&amp;nbsp;Head&amp;nbsp;International Business&amp;nbsp;Development&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378111055
+                                    cq:panelTitle="Globálne aliancie "
+                                    jcr:lastModified="{Date}2026-02-06T06:44:07.535-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Jonathan&amp;nbsp;Kern,&amp;nbsp;Vice&amp;nbsp;President,&amp;nbsp;Global&amp;nbsp;Alliances&lt;/p>&#xd;&#xa;&lt;p>Jason&amp;nbsp;Powell, Senior&amp;nbsp;Director,&amp;nbsp;Oncology,&amp;nbsp;Immunology&lt;/p>&#xd;&#xa;&lt;p>Shankar&amp;nbsp;Subramanian, Senior&amp;nbsp;Director,&amp;nbsp;Academic&amp;nbsp;Collaborations&lt;/p>&#xd;&#xa;&lt;p>Rajiv&amp;nbsp;Janjikhel,&amp;nbsp;Executive&amp;nbsp;Director,&amp;nbsp;Eye&amp;nbsp;Care, Neuroscience&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>John&amp;nbsp;Larson, Senior&amp;nbsp;Director,&amp;nbsp;Oncology,&amp;nbsp;Marketed&amp;nbsp;Drugs&lt;/p>&#xd;&#xa;&lt;p>Melanie&amp;nbsp;Patterson,&amp;nbsp;Director, Neuroscience,&amp;nbsp;Oncology&lt;/p>&#xd;&#xa;&lt;p>Amanda&amp;nbsp;McAllister,&amp;nbsp;Director,&amp;nbsp;Allergan&amp;nbsp;Aesthetics,&amp;nbsp;Discovery&amp;nbsp;Platforms&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Cardine&amp;nbsp;Nokwe,&amp;nbsp;Director,&amp;nbsp;Immunology,&amp;nbsp;Specialty&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378127239
+                                    cq:panelTitle="Partnerstvá AbbVie"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-02-06T06:44:34.126-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Christian Schubert, Boston /&amp;nbsp;Cambridge&amp;nbsp;area&lt;/p>&#xd;&#xa;&lt;p>Donmienne&amp;nbsp;Leung,&amp;nbsp;Oxford&amp;nbsp;area&lt;/p>&#xd;&#xa;&lt;p>Charles&amp;nbsp;Kunsch, Boston /&amp;nbsp;Cambridge&amp;nbsp;area&lt;/p>&#xd;&#xa;&lt;p>Jasmina&amp;nbsp;Marjanovic, Boston /&amp;nbsp;Cambridge&amp;nbsp;area&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Danjuma&amp;nbsp;Quarless, San Francisco&amp;nbsp;area&lt;/p>&#xd;&#xa;&lt;p>Ana&amp;nbsp;Dossantos, Boston /&amp;nbsp;Cambridge&amp;nbsp;area&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </accordion>
+                            <separator_605247764
+                                jcr:created="{Date}2026-02-06T06:42:44.489-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-02-06T06:42:44.489-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <accordion_1925862362
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2026-02-06T06:45:29.864-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-02-06T06:48:40.862-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                heading="KĽÚČOVÉ OBLASTI ZAMERANIA"
+                                singleExpansion="false">
+                                <item_1770378372098
+                                    cq:panelTitle=" Imunológia "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-03-30T07:35:07.915-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Spoločnosť&amp;nbsp;AbbVie&amp;nbsp;sa ako popredný odborník&amp;nbsp;v oblasti autoimunitných ochorení a&amp;nbsp;liečby zameriava na vývoj nových liekov na riešenie chronických progresívnych ochorení v oblasti imunológie.&amp;nbsp;Naším cieľom je identifikovať terapeutické prístupy, ktoré majú potenciál zmeniť životy ľudí s imunitnými ochoreniami.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Medzi oblasti nášho záujmu patria:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>gastroenterológia (Crohnova choroba, ulcerózna kolitída)&lt;/li>&#xd;&#xa;&lt;li>dermatológia (psoriáza, atopická dermatitída, hidradenitis suppurativa)&lt;/li>&#xd;&#xa;&lt;li>reumatológia (reumatoidná artritída, psoriatická artritída, ankylozujúca spondylitída/axiálna spondyloartritída bez rádiografického dôkazu)&lt;/li>&#xd;&#xa;&lt;li>ochorenia podmienené TH2 imunitnou odpoveďou (eozinofilné ochorenia, chronická urtikária)&lt;/li>&#xd;&#xa;&lt;li>vybrané ochorenia sprostredkované B bunkami (systémový lupus erythematosus, systémová skleróza, Sjögrenov syndróm)&lt;/li>&#xd;&#xa;&lt;li>vybrané fibrotické ochorenia (systémová skleróza, idiopatická pľúcna fibróza).&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378378098
+                                    cq:panelTitle=" Onkológia "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-03-31T05:30:13.600-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Naším cieľom je objavovať a vyvíjať prelomové terapie, ktoré pomôžu pacientom s hematologickými a solídnymi nádormi, najmä s tými diagnózami, kde existujú nenaplnené potreby. Zaviazali sme sa dosiahnuť dlhodobú kontrolu a potenciálne vyliečenie pomocou malých molekúl, cielených biologických liekov (vrátane mAb, bišpecifických protilátok, konjugátov protilátka-liečivo) alebo nových terapeutických modalít.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Medzi oblasti nášho záujmu patria nové alebo diferencované programy pre tieto základné typy nádorov:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>rakovina pľúc (nemalobunkový karcinóm pľúc, malobunkový karcinóm pľúc)&lt;/li>&#xd;&#xa;&lt;li>rakovina tráviaceho traktu (kolorektálny karcinóm, rakovina pankreasu)&lt;/li>&#xd;&#xa;&lt;li>rakovina vaječníkov a iné gynekologické nádory&lt;/li>&#xd;&#xa;&lt;li>mnohopočetný myelóm&lt;/li>&#xd;&#xa;&lt;li>B-bunkové malignity (Non-Hodgkinov lymfóm, chronická lymfocytová leukémia).&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378381530
+                                    cq:panelTitle="Neurovedy "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-03-30T08:59:05.572-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Náš záväzok vyvíjať nové terapie pre ľudí s neurologickými a psychiatrickými poruchami nás približuje k dosiahnutiu významného prelomu. Portfólio AbbVie v oblasti neurológie pozostáva zo schválených terapií a robustného vývojového portfólia, pričom sa zameriavame na niektoré z najzávažnejších a najrozšírenejších ochorení v tejto oblasti.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Medzi oblasti nášho záujmu patria:&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>psychiatrické ochorenia vrátane porúch nálady a porúch súvisiacich so psychózou, stresom a úzkosťou&lt;/li>&#xd;&#xa;&lt;li>Parkinsonova choroba vrátane symptomatických (motorických a nemotorických) a chorobu modifikujúcich prístupov; iné pohybové poruchy (napr. tremor, spasticita, dyskinézia atď.)&lt;/li>&#xd;&#xa;&lt;li>migréna a s ňou súvisiace ochorenia&lt;/li>&#xd;&#xa;&lt;li>Alzheimerova choroba, vrátane symptomatických (kognitívnych, neurobehaviorálnych) a chorobu modifikujúcich prístupov; iné neurodegeneratívne ochorenia, najmä tie, ktoré sú zapríčinené spoločnými biologickými mechanizmami.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378416785
+                                    cq:panelTitle="Starostlivosť o oči "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-03-30T07:34:10.652-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Naším poslaním v starostlivosti o oči zostáva ochrana a zachovanie zraku pre lepšiu kvalitu života miliónov ľudí, ktorí&amp;nbsp;každoročne&amp;nbsp;prichádzajú o zrak.&amp;nbsp;AbbVie&amp;nbsp;pokračuje vo vyhľadávaní nových terapeutických postupov, ktoré riešia nenaplnené potreby a nové prístupy k ochoreniam súvisiacimi&amp;nbsp;so sietnicou,&amp;nbsp;glaukómom&amp;nbsp;a ďalšími ochoreniami. Zameriavame sa na biologické lieky aj malé molekuly, ako&amp;nbsp;i&amp;nbsp;na technológie podávania liekov novej generácie.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Medzi oblasti nášho záujmu patria:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>degenerácia sietnice vrátane suchej vekom podmienenej degenerácie sietnice (AMD)/geografickej atrofie, vlhkej AMD a diabetických ochorení sietnice&lt;/li>&#xd;&#xa;&lt;li>suché oko a ochorenia povrchu oka vrátane nových umelých sĺz&lt;/li>&#xd;&#xa;&lt;li>glaukóm, riešenie trvalého podávania lieku a neuroprotekcia.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378420056
+                                    cq:panelTitle="Estetická medicína"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-03-27T06:30:36.512-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Allergan&amp;nbsp;Aesthetics&amp;nbsp;vyvíja portfólio inovatívnych produktov v oblasti výplne tváre a tela, rekonštrukcie/augmentácie&amp;nbsp;prsníkov a&amp;nbsp;regeneratívnej&amp;nbsp;obnovy mäkkých tkanív. Máme záujem o strategickú spoluprácu, ktorá rozšíri naše chápanie procesu starnutia a terapeutických cieľov&amp;nbsp;na riešenie prirodzených, fyzických a biologických zmien, ktoré sa vyskytujú s vekom. Vyhľadávame&amp;nbsp;a spolupracujeme so strategickými partnermi&amp;nbsp;v oblasti&amp;nbsp;neurotoxínov, dermálnych výplní, estetiky tela, plastickej chirurgie a&amp;nbsp;regeneratívnej&amp;nbsp;medicíny, rastu vlasov a starostlivosti o pleť.&amp;nbsp;Zaujímame sa aj o využitie&amp;nbsp;energetických zariadení v oblasti&amp;nbsp;estetiky tela.&amp;nbsp;Zaujímavé sú tiež&amp;nbsp;bunkové a génové terapie so zameraním na zložky&amp;nbsp;extracelulárnej&amp;nbsp;matrice vrátane kolagénu a&amp;nbsp;elastínu.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Medzi oblasti nášho záujmu patria:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>dermálne injekčné prípravky na kožu a tkanivo&lt;/li>&#xd;&#xa;&lt;li>plastická a regeneratívna medicína&lt;/li>&#xd;&#xa;&lt;li>toxíny na estetické a terapeutické účely&lt;/li>&#xd;&#xa;&lt;li>rast vlasov&lt;/li>&#xd;&#xa;&lt;li>tvarovanie postavy a redukcia tuku&lt;/li>&#xd;&#xa;&lt;li>lokálna starostlivosť o pokožku&lt;/li>&#xd;&#xa;&lt;li>terapie, ktoré zlepšujú stavbu tela.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378425118
+                                    cq:panelTitle=" Špecializovaná starostlivosť "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-03-30T09:00:01.502-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Náš&amp;nbsp;špecializovaný tím sa zameriava na rôznorodý rad ochorení s vysokými nenaplnenými potrebami, pri ktorých sme presvedčení, že je možné dosiahnuť veľký pokrok pre pacientov. Okrem podpory rôznych produktov, ktoré už boli uvedené na trh, máme záujem o strategické partnerstvá pre zvýšenie nášho pôsobenia v oblasti obezity. Naším cieľom je identifikovať rozličné príležitosti pre riešenie potrieb pacientov v manažmente hmotnosti.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Medzi oblasti nášho záujmu patria:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>obezita&lt;/li>&#xd;&#xa;&lt;li>gastrointestinálne ochorenia/hepatológia (napr. nealkoholická steatohepatitída).&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1770378509822
+                                    cq:panelTitle="Technológie a platformy "
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-03-19T04:45:13.685-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Usilujeme sa o využívanie širokej škály platforiem novej generácie a komplexných technológií, ktoré nám uľahčujú používanie nových metód identifikácie cieľov a objavovanie liekov.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Medzi oblasti nášho záujmu patria:&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>nové prístupy a platformy, ktoré umožňujú objavovanie malých molekúl zameraných na triedy proteínov, ktoré tradične nie je možné zasiahnuť liekmi&lt;/li>&#xd;&#xa;&lt;li>nové a vznikajúce terapeutické modality malých molekúl, vrátane, ale nie výlučne, cieleného rozkladu proteínov, iných bifunkčných molekúl indukujúcich blízkosť a cielenie na RNA&lt;/li>&#xd;&#xa;&lt;li>bioterapeutiká, najmä multišpecifické protilátky a konjugáty protilátka-liečivo&lt;/li>&#xd;&#xa;&lt;li>platformy genetickej medicíny, vrátane vírusového a nevírusového dodávania DNA/RNA a in vivo chimérických antigénových receptorov T-buniek (CAR-T)&lt;/li>&#xd;&#xa;&lt;li>genetika a genomika, vrátane multi-omických prístupov a technológií&lt;/li>&#xd;&#xa;&lt;li>identifikácia a prioritizácia cieľov na základe umelej inteligencie (AI) a strojového učenia (ML) a výpočtový dizajn a optimalizácia malých molekúl a bioterapeutík na základe AI/ML/fyziky.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </accordion_1925862362>
+                        </par_13>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="2"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="3"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="7"
+                                dataPriority="1"/>
+                        </columns>
+                    </grid_1109957805_copy>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2026-02-06T06:25:05.800-05:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/sk/sk/site/footer/slovakia-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

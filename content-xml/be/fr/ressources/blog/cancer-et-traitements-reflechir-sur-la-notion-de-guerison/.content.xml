@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-16T14:33:51.251-05:00"
+        cq:lastModifiedBy="BAUFAAX"
+        cq:tags="[abbvie-com-2:categories/oncology-stories,abbvie-com-2:categories/areas-of-innovation-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-08-27T21:28:56.902-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Cancer : réfléchir sur la notion de « guérison »"
+        jcr:uuid="347c7b11-9076-4608-84c8-58d47222d7a3"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        description=": réfléchir sur la notion de « guérison »"
+        fileReference="/content/dam/abbvie-com2/be/images/mark_mickee_actu.jpg"
+        hideInNav="true"
+        navTitle="Cancer : réfléchir sur la notion de « guérison »"
+        pageTitle="Cancer : réfléchir sur la notion de « guérison »"
+        publishDate="{Date}2020-12-01T00:00:00.000-06:00"
+        readTime="1"
+        readWatchTimeSel="read-time"
+        title="Cancer "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-27T21:33:37.313-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2024-08-26T17:04:24.299-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/se/images/se-3-0-images/3-0-om-abbvie/Sv_om att bota cancer_mark_mckee_hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-21T18:09:30.642-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Toutes les histoires"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/fr/ressources/blog"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-08-26T17:00:25.395-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Cancer : réfléchir sur la notion de « guérison »"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2024-08-26T17:01:20.204-04:00"
+                                jcr:lastModifiedBy="washidx10"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Mark McKee, M.D., directeur médical exécutif, R&amp;amp;D pharmaceutique Monde, AbbVie&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825683]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                    jcr:lastModified="{Date}2024-08-26T17:03:08.370-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Par le Dr. Mark Mckee"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T17:03:19.532-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Vivre à notre époque est une véritable chance. Les approches thérapeutiques disponibles pour aider les patients atteints d’un cancer n’ont jamais été aussi nombreuses qu’aujourd’hui. Les solutions thérapeutiques se profilant à l'horizon devraient encore venir enrichir les options thérapeutiques actuelles et offrir de nouveaux espoirs aux millions de patients qui, face à ce diagnostic, s'inquiètent pour leur avenir.&lt;/p>&#xd;&#xa;&lt;p>La prise en charge multidisciplinaire associant chirurgie, radiothérapie et thérapie médicamenteuse permet d’obtenir une guérison chez de nombreux patients atteints d’un cancer à un stade précoce. Même dans certains types de cancers avancés, il est possible d’obtenir de longues rémissions assimilables à des guérisons. Les cellules tumorales sont alors éliminées et ne réapparaissent pas pendant une période de 3 à 5 ans, voire 10 ans, selon le type de cancer et son degré d’agressivité. Toutefois, ce n’est pas le cas pour la plupart des cas de cancers avancés et nous savons que certaines tumeurs peuvent réapparaitre même au-delà d’une période de rémission de 10 ans.&lt;/p>&#xd;&#xa;&lt;p>Que peut bien représenter cette période pour les patients en rechute ? Trouvent-ils que leur vie a été relativement normale pendant ces années ? Pourrait-on considérer qu’ils ont vécu avec une affection chronique ? Ces interrogations pourraient être le point de départ d’une réflexion sur la façon dont nous envisageons la notion de « guérison » et sur les résultats à attendre dans le cadre du traitement d’un cancer.&lt;/p>&#xd;&#xa;&lt;p>On pourrait peut-être comparer la situation à celle des patients vivant avec le VIH. Dans les années 1980 et jusqu’au début des années 1990, le diagnostic de séropositivité au VIH sonnait comme une sentence de mort quasi certaine en raison de l’absence de traitements efficaces. Depuis l’arrivée des inhibiteurs de protéase au milieu des années 1990, suivie de près par le lancement de plusieurs autres types de traitements, le VIH ne constitue plus une sentence de mort mais une affection chronique, qui n’empêche pas les patients atteints de vivre une existence relativement normale.&lt;/p>&#xd;&#xa;&lt;p>Alors pourquoi ne pas avoir le même objectif avec les cancers qui s’y prêtent ? Ainsi, on peut voir que le véritable enjeu est de définir ce qu’on considère comme un résultat satisfaisant. Si nous demandions aux professionnels de santé, autorités réglementaires, patients et autres acteurs concernés de décrire le bénéfice attendu d’un traitement anticancéreux, nous entendrions toutes sortes de réponses différentes.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>La première réponse qui vient à l’esprit de la plupart des gens est généralement une diminution de la charge tumorale. Mais l’essentiel reste la définition des résultats utilisés lors de l’enregistrement des nouveaux médicaments et de la validation des autres types de traitements ; les résultats attendus sont un prolongement de la survie des patients atteints de cancer et le prolongement de la survie des patients sans progression du cancer. Ces critères n’impliquent pas nécessairement une disparition de la tumeur. Dans la plupart des cas, ils signifient que le patient continue de vivre, malgré la maladie, avec un cancer chronique.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_1729118395
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T17:01:48.524-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T17:01:48.524-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <quote
+                                    cq:styleIds="[1000000000000,1000000000020]"
+                                    jcr:created="{Date}2024-08-26T17:01:43.205-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T17:02:34.349-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/quote"
+                                    attributionName="Mark McKee"
+                                    attributionTitle="M.D., directeur médical exécutif, R&amp;D pharmaceutique Monde, AbbVie"
+                                    bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                    quote=" Un jour, nous éradiquerons le cancer. En attendant, nous pourrions envisager une définition plus souple de la notion de « guérison »: une définition établissant que bien que le cancer n’ait pas été totalement éliminé, il n’empêchera pas le patient de vivre une vie normale "
+                                    quoteType="regular"
+                                    textSize="h0"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T17:01:48.524-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T17:01:48.524-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-08-26T17:03:32.370-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>De nombreux débats autour du traitement chronique du cancer ont été motivés par l’émergence de médicaments permettant un traitement ciblé. Ces traitements ne sont pas de type chimiothérapie ou radiothérapie, des méthodes consistant généralement à détruire de grandes masses de cellules cancéreuses, ce qui implique la destruction de tissus normaux au passage. Ni la chimiothérapie, ni la radiothérapie, ne permettent de distinguer les cellules tumorales des cellules saines.&lt;/p>&#xd;&#xa;&lt;p>AbbVie et d’autres laboratoires pharmaceutiques développent des médicaments ciblés destinés à traiter les caractéristiques très spécifiques d’une maladie particulière. Par exemple, ces médicaments pourraient être conçus de façon à détecter et bloquer la fonction d’une protéine nécessaire à la pathogénie (processus responsable du déclenchement et du développement d’une maladie). En ciblant uniquement cette protéine de manière sélective, les tissus sains seraient potentiellement épargnés et les tissus tumoraux détruits.&lt;/p>&#xd;&#xa;&lt;p>Une des théories ayant fait surface concernant le traitement du cancer à l’aide de ces méthodes consiste à estimer qu’un traitement ciblé permettrait d’atténuer voire d’arrêter la croissance d’une tumeur, voire même d’éliminer de nombreuses cellules cancéreuses pendant une longue période. Cependant, nous avons observé un risque de développement d’une résistance des cellules cancéreuses survivant à ces traitements. Cette résistance est peut-être due à une anomalie génétique présente dans une petite fraction des cellules tumorales et permettant à ces dernières d’échapper au traitement ciblé&amp;nbsp;; cette petite fraction de cellules prendrait alors le dessus sur les autres cellules restantes.&lt;/p>&#xd;&#xa;&lt;p>Dans l’idéal, il conviendrait qu'un autre traitement cible cette seconde population cellulaire afin de réduire très nettement le nombre des cellules tumorales et de prolonger la vie des patients. En raison de la nature ciblée de ces traitements, ce type d’approche pourrait être répété afin de cibler différentes mutations à l’aide des médicaments ciblés adéquats. Les patients pourraient alors être guéris par la prévention des symptômes ou de la progression en dépit de la persistance chronique de la maladie à un degré minime.&lt;/p>&#xd;&#xa;&lt;p>En tant que médecin, je veux que les patients vivant avec un cancer puissent envisager l’avenir avec confiance en sachant qu’ils continueront de vivre normalement malgré la maladie pendant plusieurs dizaines d’années. Nous n’en sommes pas encore là, mais compte tenu du nombre conséquent de recherches en cours et des nombreuses nouvelles approches thérapeutiques, je pense que nous y arriverons.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Un jour, nous éradiquerons le cancer. En attendant, nous pourrions envisager une définition plus souple de la notion de «&amp;nbsp;guérison&amp;nbsp;», une définition établissant que bien que le cancer n’ait pas été totalement éliminé, il n’empêchera pas le patient de vivre une vie normale.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756542862]"
+                                    jcr:created="{Date}2024-08-26T17:01:48.524-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T17:01:48.524-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text
+                                    jcr:created="{Date}2024-12-16T14:33:25.618-05:00"
+                                    jcr:createdBy="BAUFAAX"
+                                    jcr:lastModified="{Date}2024-12-16T14:33:51.245-05:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie SA/NV -&amp;nbsp;BE-ABBV-240181 (V1.0) - December 2024&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-26T17:03:48.630-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

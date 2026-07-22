@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-08-12T09:33:42.493-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:tags="[abbvie-com-2:categories/immunology-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="MICI: monitorer pour vivre mieux"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-08-12T05:21:34.272-04:00"
+        jcr:lastModifiedBy="BAUFAAX"
+        jcr:mixinTypes="[mix:lockable,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="MICI: monitorer pour vivre mieux"
+        jcr:uuid="8254ede7-0a9b-4101-b0d5-614b3e557763"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="En savoir plus"
+        ctaText="En savoir plus"
+        fileReference="/content/dam/abbvie-com2/be/images/MICI PIC FR.PNG"
+        hideInNav="true"
+        navTitle="MICI: monitorer pour vivre mieux"
+        pageTitle="MICI: monitorer pour vivre mieux"
+        publishDate="{Date}2025-05-19T07:00:00.000+02:00"
+        readTime="1"
+        readWatchTimeSel="read-time"
+        socialMedia="[facebook]"
+        subtitle="MICI: monitorer pour vivre mieux"
+        title="MICI: monitorer pour vivre mieux"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/be/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-08-26T18:05:29.360-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container1
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879]"
+                        jcr:lastModified="{Date}2025-08-12T09:33:42.474-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        dmPresetType="imagePreset"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-11-25T23:18:59.172-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Toutes les histoires"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/fr/ressources/blog"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678,1661545829678]"
+                                jcr:lastModified="{Date}2025-06-12T04:21:14.855-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="MICI: monitorer pour mieux comprendre"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2025-06-12T04:22:16.434-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Des outils concrets pour mieux comprendre votre MICI&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <image
+                                jcr:created="{Date}2025-03-10T09:54:45.400-04:00"
+                                jcr:createdBy="BAUFAAX"
+                                jcr:lastModified="{Date}2025-06-12T04:32:21.010-04:00"
+                                jcr:lastModifiedBy="BAUFAAX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="MICI"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/be/images/MICI PIC FR.PNG"
+                                isDecorative="false"
+                                openInNewWindow="false"
+                                titleValueFromDAM="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982,1653545825683]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2025-06-12T04:30:23.928-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Saviez-vous qu’en Belgique &lt;b>plus de 80.000 personnes&lt;/b> vivent aujourd’hui avec une maladie de Crohn ou une rectocolite hémorragique ?&lt;sup>1&lt;/sup>&lt;br>&#xd;&#xa;Parce que ces affections chroniques peuvent bouleverser le quotidien, nous avons conçu une brochure pratique et clairement illustrée pour vous aider à :&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Comprendre&lt;/b> le fonctionnement des MICI et leurs conséquences au-delà du système digestif.&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Suivre&lt;/b> votre santé à l’aide d’outils de monitoring (biomarqueurs, auto-évaluation, imagerie…).&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Fixer&lt;/b> des objectifs concrets avec votre équipe soignante.&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Préparer&lt;/b> vos consultations grâce à un mémo de questions et un journal de suivi mensuel.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Que vous soyez patient, proche ou professionnel de santé, ce guide condensé vous donnera les clés pour mieux comprendre votre MICI, anticiper les imprévus et mieux vivre chaque journée.&lt;/p>&#xd;&#xa;&lt;p>\ud83d\udc49 &lt;b>Téléchargez gratuitement la brochure complète (PDF)&lt;/b> en cliquant sur le bouton ci-dessous :&lt;/p>&#xd;&#xa;&lt;p>&lt;a>&lt;/a>&lt;a href=&quot;/content/dam/abbvie-com2/be/documents/FR%20MICI%20Brochure.pdf&quot; target=&quot;_blank&quot;>Télécharger la brochure&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>Bonne lecture ! N’hésitez pas à partager le lien autour de vous ; chaque pas vers une meilleure information est un pas vers une vie plus sereine avec une MICI.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy_1880015361
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-08-26T18:47:52.384-04:00"
+                                    jcr:lastModifiedBy="washidx10"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-08-26T18:48:18.888-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2025-05-15T10:11:52.082-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <text
+                                        cq:panelTitle="Références"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:created="{Date}2024-08-26T18:48:26.678-04:00"
+                                        jcr:createdBy="washidx10"
+                                        jcr:lastModified="{Date}2025-05-15T10:12:02.285-04:00"
+                                        jcr:lastModifiedBy="BAUFAAX"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        text="&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;sub>1.&amp;nbsp;Kaplan GG, et al. Nat Rev Gastroenterol Hepatol. 2021 Jan;18(1):56-66&lt;/sub>&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion>
+                                <text
+                                    jcr:created="{Date}2024-12-16T14:38:08.900-05:00"
+                                    jcr:createdBy="BAUFAAX"
+                                    jcr:lastModified="{Date}2025-06-12T04:26:06.662-04:00"
+                                    jcr:lastModifiedBy="BAUFAAX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>AbbVie SA/NV - BE-ABBV-250093(V1.0) - June 2025&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:createdBy="washidx10"
+                        jcr:lastModified="{Date}2024-08-26T18:06:00.986-04:00"
+                        jcr:lastModifiedBy="washidx10"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-08-26T18:05:39.774-04:00"
+                    jcr:lastModifiedBy="washidx10"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

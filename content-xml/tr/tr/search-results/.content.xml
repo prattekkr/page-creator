@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-04-08T10:54:01.717-04:00"
+        cq:lastModifiedBy="VALENSX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/basic-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-04-08T10:31:08.544-04:00"
+        jcr:lastModifiedBy="VALENSX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Arama Sonuçları"
+        jcr:uuid="7d10d9fc-dce7-4b24-bc87-29b3a0ae0d98"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        pageTitle="Arama Sonuçları">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-19T10:51:16.187-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/tr/tr/site/header/turkey-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <separator_copy
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2023-01-05T19:44:06.847-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-05T19:44:06.847-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <grid_copy
+                        jcr:created="{Date}2023-01-06T13:24:53.039-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-06T13:25:08.787-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <searchresults_copy
+                                jcr:created="{Date}2023-01-06T13:17:33.185-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2026-04-08T10:54:01.711-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/search/searchresults/v2/searchresults"
+                                aboutResultsLabel="About {n} Results"
+                                apiKey="xx37969ce0-3949-404c-b0c6-950a108c0b12"
+                                dateLabel="Tarihe göre"
+                                nextLabel="Sonraki"
+                                noOfItems="15"
+                                noResultsText="Sonuç yok"
+                                paginationLimit="6"
+                                prevLabel="Öncesi"
+                                relevanceLabel="İlgiye göre"
+                                searchResultsType="coveo"
+                                sortByLabel="Göre sırala">
+                                <searchinput
+                                    jcr:lastModified="{Date}2026-04-08T10:52:14.656-04:00"
+                                    jcr:lastModifiedBy="VALENSX5"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/search/searchinput/v2/searchinput"
+                                    buttonLabel="Aramak"
+                                    buttonLabelMobile="Aramak AbbVie.com"
+                                    searchResultsPath="/content/abbvie-com2/tr/tr/search-results"
+                                    searchType="coveo"/>
+                            </searchresults_copy>
+                        </par_12>
+                    </grid_copy>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-19T10:52:53.157-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/tr/tr/site/footer/turkey-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

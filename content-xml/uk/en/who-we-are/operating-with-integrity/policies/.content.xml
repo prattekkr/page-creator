@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-01-23T05:06:59.682-05:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/primary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-06-25T11:16:31.206-04:00"
+        jcr:lastModifiedBy="bryanjx9"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Policies"
+        jcr:uuid="a72e2a2f-ea44-4ebe-8ccd-d54f8cf4f15a"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Learn more"
+        ctaText="Learn more"
+        eyebrow="Who we are"
+        navTitle="Policies"
+        pageTitle="Policies"
+        title="Policies">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-06-12T03:00:42.921-04:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/uk/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2025-06-12T03:01:11.390-04:00"
+                        jcr:lastModifiedBy="NANDIVX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"
+                        dmPresetType="imagePreset"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982,1653545835879]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2025-06-12T03:01:52.417-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Policies"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <separator
+                                cq:styleIds="[1662756456518]"
+                                jcr:created="{Date}2026-01-21T11:58:48.344-05:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-01-21T12:01:01.824-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2025-06-12T03:01:27.496-04:00"
+                                jcr:lastModifiedBy="NANDIVX5"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>AbbVie is committed to being fully transparent and compliant with our policies.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <accordion
+                        cq:styleIds="[2,8]"
+                        jcr:created="{Date}2025-06-12T03:03:47.107-04:00"
+                        jcr:createdBy="NANDIVX5"
+                        jcr:lastModified="{Date}2026-01-23T03:49:39.409-05:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                        heading="OUR POLICIES"
+                        singleExpansion="false">
+                        <item_1749712312377
+                            cq:panelTitle="AbbVie Business Code of Conduct"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-01-23T03:34:57.818-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Our code describes our commitment to the people we serve: patients, healthcare providers, shareholders, business partners and our fellow employees. View our Code of Business Conduct &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/UK-ABBV-250208-EXAM-abbvie-code-of-business-conduct-no-links.pdf&quot; target=&quot;_blank&quot;>here&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1749712320625
+                            cq:panelTitle="AbbVie Supplier Code of Conduct "
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-07-16T06:51:04.841-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>The AbbVie Supplier Code of Conduct documents the principles, guidelines, and expectations for establishing and maintaining a business relationship with AbbVie. View our Supplier Code of Conduct &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/UK-ABBV-250210-%20supplier-code-of-conduct-july-2025.pdf&quot; target=&quot;_blank&quot;>here&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1749712327444
+                            cq:panelTitle="Commitment to Human Rights "
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2025-07-16T06:47:02.427-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>AbbVie believes in the inherent dignity of every human being and respects individual rights as set out in the Universal Declaration of Human Rights. We reflect these precepts in our company’s fundamental principles and in our mission to address serious health challenges.&amp;nbsp;&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;We contribute to the realisation of human rights through our policies on employment, ethics and procurement. Our practices and programs not only ensure compliance with laws and regulations wherever we have operations, but also address any workplace concerns raised by employees. &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/UK-ABBV-2502-commitment-to-human-rights-13-july-2025.pdf&quot; target=&quot;_blank&quot;>Read our commitment&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1749712332243
+                            cq:panelTitle="Modern Slavery Statement"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-01-23T03:43:22.727-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Our Modern Slavery Act Transparency Statement can found &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/uk-abbv-250209-modern-slavery.pdf&quot; target=&quot;_blank&quot;>here&lt;/a>.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1749712337009
+                            cq:panelTitle="AbbVie Ltd. Board of Directors S.172 Statement "
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-01-23T04:53:22.753-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>A Signed PDF version of the S172 Financial Statement from year ending December 2024 can be found &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/S172-directors-statement.pdf&quot; target=&quot;_blank&quot;>here&lt;/a>.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1749712344386
+                            cq:panelTitle="Pension Fund"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-01-23T05:06:59.677-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>AbbVie’s Pension Fund Statement of Investment Principles can be viewed &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/abbVie-pension-fund-statement-of-investment.pdf&quot; target=&quot;_blank&quot;>here&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>AbbVie’s Pension Fund Engagement Policy Implementation Statement can be viewed &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/EXAM-abbVie-co-uk-engagement-policy-implementation-statement-december-2024.pdf&quot; target=&quot;_blank&quot;>here&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1749712409359
+                            cq:panelTitle="UK Tax Strategy Statement "
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-01-23T03:56:40.450-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>A copy of our UK Tax Strategy Statement can be found &lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/december-2025-tax-strategy-abbVie-uk.pdf&quot;>here&amp;nbsp;&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1769158174260
+                            cq:panelTitle="Carbon Reduction Plan "
+                            jcr:lastModified="{Date}2026-01-23T03:50:58.321-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>A copy of our Carbon Reduction Plan can be found&amp;nbsp;&lt;a href=&quot;/content/dam/abbvie-com2/uk/documents/PPN-0621-carbon-reduction-plan.pdf&quot;>here&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </accordion>
+                    <separator_copy_copy
+                        cq:styleIds="[1662756423318]"
+                        jcr:created="{Date}2022-12-15T12:04:25.035-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2025-07-15T05:16:52.079-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <text_copy
+                        jcr:created="{Date}2025-06-30T02:03:46.809-04:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2026-01-12T08:41:40.483-05:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                        text="&lt;p>UK-ABBV-260010 | February 2026&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <separator_copy_copy_
+                        cq:styleIds="[1662756502570]"
+                        jcr:created="{Date}2022-12-15T12:04:25.035-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2022-12-15T12:04:25.035-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-06-12T03:03:35.442-04:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/uk/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

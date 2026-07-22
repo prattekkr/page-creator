@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-05-28T15:55:31.728-04:00"
+        cq:lastModifiedBy="jewitca"
+        cq:lastReplicated="{Date}2024-05-28T15:55:49.359-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:redirectTarget="https://www.abbvie.com/latest-earnings.html"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/basic-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="de_de"
+        jcr:lastModified="{Date}2024-05-28T15:55:31.723-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="\[Redirect] Geschäftsergebnisse"
+        jcr:uuid="1bc1933d-81fe-4595-9f0f-b1b9de1c0e29"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="ARTICLE LESEN"
+        ctaText="ARTICLE LESEN"
+        description="AbbVie veröffentlicht die Geschäftsergebnisse quartalsweise"
+        eyebrow="INVESTORENRESSOURCEN"
+        hideInNav="true"
+        navTitle="Geschäftsergebnisse"
+        pageTitle="Geschäftsergebnisse"
+        title="GESCHÄFTSERGEBNISSE">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-29T00:59:57.508-04:00"
+        cq:lastModifiedBy="singarx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-07-29T00:59:57.495-04:00"
+        jcr:lastModifiedBy="singarx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="\[do not publish]AbbVie's Code of Conduct"
+        jcr:uuid="49f2b012-2189-40d8-b7fe-1581423bfa6f"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Learn more about AbbVie's code of conduct"
+        ctaText="Learn more"
+        eyebrow="who we are"
+        hideInNav="true"
+        navTitle="AbbVie's Code of Conduct"
+        pageTitle="AbbVie's Code of Conduct"
+        title="AbbVie's Code of Conduct"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/uk/en/site/popups/warn-on-departure">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847150]"
+                        jcr:lastModified="{Date}2022-12-08T15:13:27.100-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#8A2ECC"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2022-12-08T15:13:45.270-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie's Code of Business Conduct"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2022-12-08T15:14:09.795-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Our code describes our commitment to the people we serve: patients, healthcare providers, shareholders, business partners and our fellow employees.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container_1777373222
+                        cq:styleIds="[1653545835982,1653545825688]"
+                        jcr:created="{Date}2022-12-08T15:43:16.055-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-08T15:43:16.055-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2022-12-08T15:43:48.828-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-08T15:44:11.725-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Download the AbbVie Code of Business Conduct"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"/>
+                        <text
+                            jcr:created="{Date}2022-12-08T15:44:24.991-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-08T15:58:05.466-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/cobc_English.pdf&quot; target=&quot;_blank&quot;>English&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Arabic.pdf&quot; target=&quot;_blank&quot;>Arabic&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Bulgarian.pdf&quot; target=&quot;_blank&quot;>Bulgarian&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Chinese_Simplified.pdf&quot; target=&quot;_blank&quot;>Chinese (simplified)&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Croatian.pdf&quot; target=&quot;_blank&quot;>Croatian&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Czech.pdf&quot; target=&quot;_blank&quot;>Czech&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Danish.pdf&quot; target=&quot;_blank&quot;>Danish&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Dutch.pdf&quot; target=&quot;_blank&quot;>Dutch&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Finnish.pdf&quot; target=&quot;_blank&quot;>Finnish&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_French.pdf&quot; target=&quot;_blank&quot;>French&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_French_Canada.pdf&quot; target=&quot;_blank&quot;>French (Canada)&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_German.pdf&quot; target=&quot;_blank&quot;>German&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_German_Austria.pdf&quot; target=&quot;_blank&quot;>German (Austria)&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Greek.pdf&quot; target=&quot;_blank&quot;>Greek&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Hebrew.pdf&quot; target=&quot;_blank&quot;>Hebrew&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Hungarian.pdf&quot; target=&quot;_blank&quot;>Hungarian&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Italian.pdf&quot; target=&quot;_blank&quot;>Italian&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Japanese.pdf&quot; target=&quot;_blank&quot;>Japanese&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Korean.pdf&quot; target=&quot;_blank&quot;>Korean&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Norwegian.pdf&quot; target=&quot;_blank&quot;>Norwegian&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Polish.pdf&quot; target=&quot;_blank&quot;>Polish&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Portuguese_Brazil.pdf&quot; target=&quot;_blank&quot;>Portuguese (Brazil)&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Portuguese_Portugal.pdf&quot; target=&quot;_blank&quot;>Portuguese (Portugal)&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Romanian.pdf&quot; target=&quot;_blank&quot;>Romanian&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Russian.pdf&quot; target=&quot;_blank&quot;>Russian&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Slovak.pdf&quot; target=&quot;_blank&quot;>Slovak&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Spanish_LA.pdf&quot; target=&quot;_blank&quot;>Spanish (Latin America)&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Spanish_Spain.pdf&quot; target=&quot;_blank&quot;>Spanish (Spain)&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Swedish.pdf&quot; target=&quot;_blank&quot;>Swedish&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Turkish.pdf&quot; target=&quot;_blank&quot;>Turkish&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;/content/dam/abbvie-com2/pdfs/cobc/codc_Ukrainian.pdf&quot; target=&quot;_blank&quot;>Ukranian&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_1777373222>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

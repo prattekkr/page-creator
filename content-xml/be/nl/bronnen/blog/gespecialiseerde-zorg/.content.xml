@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-11-29T05:37:25.238-05:00"
+        cq:lastModifiedBy="reference-adjustment-service"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/category-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-11-21T09:17:14.449-05:00"
+        jcr:lastModifiedBy="kanchrx3"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Cat: Gespecialiseerde zorg"
+        jcr:uuid="531e0fdf-2dc3-4df1-a1f2-734d55c15048"
+        sling:resourceType="abbvie-com2/components/categorypage"
+        hideInNav="true"
+        navTitle="Gespecialiseerde zorg"
+        pageTitle="Gespecialiseerde zorg">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-11-20T11:32:36.495-05:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/header/header-french"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-11-20T11:28:30.344-05:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button_copy
+                                cq:styleIds="[1659997787459]"
+                                jcr:lastModified="{Date}2024-11-21T18:31:30.763-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle verhalen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Toutes les histoires"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/be/nl/bronnen/blog"/>
+                            <title
+                                cq:styleIds="[1659545825678,,,,,]"
+                                jcr:lastModified="{Date}2024-11-21T08:32:44.464-05:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Virologie"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,,,]"
+                                jcr:lastModified="{Date}2024-11-21T08:34:04.602-05:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Op het gebied van de virologie bouwen we voort op onze lange ervaring in de strijd tegen HIV om betere resultaten na te streven voor mensen met virale aandoeningen. Onze nieuwsgierigheidscultuur heeft ons geholpen doorbraken te bereiken in het hepatitis C-virus, maar er blijven aanzienlijke barrières bestaan ​​op de weg naar eliminatie.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                        <editorialfeed
+                            jcr:created="{Date}2024-11-21T07:41:08.407-05:00"
+                            jcr:createdBy="kanchrx3"
+                            jcr:lastModified="{Date}2024-11-21T07:41:38.275-05:00"
+                            jcr:lastModifiedBy="kanchrx3"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/editorialfeed/v1/editorialfeed"
+                            listFrom="tags"
+                            tags="[abbvie-com-2:categories/oncology-stories]"
+                            tagsMatch="any"
+                            tagsSearchRoot="/content/abbvie-com2/be/nl/bronnen"/>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-11-20T11:33:11.047-05:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/be/fr/site/footer/footer-french"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-17T11:54:33.715-05:00"
+        cq:lastModifiedBy="MOLINAX5"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/primary-page-template"
+        jcr:description="Aviso de privacidad de AbbVie Spain S.L.U. Tratamiento de los datos personales de interacciones en línea y fuera de línea, servicios, comunicaciones y propiedades digitales de la compañía."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-02-17T11:54:33.704-05:00"
+        jcr:lastModifiedBy="MOLINAX5"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Aviso de privacidad"
+        jcr:uuid="2d4a1d21-9b97-4c0f-b360-573a3c969c99"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        navTitle="Aviso de privacidad"
+        ogimage="/content/dam/abbvie-com2/es/images/impulsando-la-formacion-en-investigacion-clinica-abbvie.jpg"
+        pageTitle="Aviso de privacidad">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-06-18T08:55:31.987-04:00"
+                    jcr:lastModifiedBy="bryanjx9"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/es/es/site/header/spain-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-10-03T15:42:30.058-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <embed
+                                jcr:created="{Date}2024-10-03T15:43:03.001-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2025-06-18T08:56:56.203-04:00"
+                                jcr:lastModifiedBy="bryanjx9"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/embed/v2/embed"
+                                embeddableResourceType="abbvie-com2/components/embed/v2/embed/embeddable/onetrust"
+                                loadNotice="https://privacyportal-cdn.onetrust.com/baa8d3f1-40eb-408e-9928-100470b8ea17/privacy-notices/55686698-7c90-4244-ad50-77cae5eaba40.json"
+                                oneTrustId="otnotice-55686698-7c90-4244-ad50-77cae5eaba40"
+                                scriptSettings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC5vbmV0cnVzdC5jb20vcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9"
+                                type="embeddable"/>
+                        </container3>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-06-18T08:55:49.084-04:00"
+                    jcr:lastModifiedBy="bryanjx9"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/es/es/site/footer/spain-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

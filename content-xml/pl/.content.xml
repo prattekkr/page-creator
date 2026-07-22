@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/abbvie-com2/settings/wcm/templates/(?!xf-).*]"
+        cq:lastModified="{Date}2023-07-07T03:18:27.409-04:00"
+        cq:lastModifiedBy="DEVIJX1"
+        cq:lastReplicated="{Date}2024-04-23T15:00:00.506-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:redirectTarget="/content/abbvie-com2/pl/pl"
+        cq:siteOwner="admin"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Polska"
+        jcr:uuid="929c5190-df9f-450d-981a-523364ac9e4e"
+        sling:resourceType="abbvie-com2/components/page/v2/page"/>
+    <pl/>
+</jcr:root>

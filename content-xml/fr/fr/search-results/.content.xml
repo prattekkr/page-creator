@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-10-18T06:48:37.075-04:00"
+        cq:lastModifiedBy="keertpx1"
+        cq:lastTranslationUpdate="{Date}2023-06-14T15:55:44.893-04:00"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/basic-page-template"
+        cq:translationSourcePath="/content/abbvie-com2/ca/en/search-results"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2023-07-14T04:25:27.685-04:00"
+        jcr:lastModifiedBy="JADHASX13"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Résultats de recherche"
+        jcr:uuid="fba11c99-6f80-467f-917e-8226996ddad1"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        pageTitle="Résultats de recherche">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-08-01T07:40:49.162-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fr/fr/site/header/france-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <separator_copy
+                        cq:styleIds="[1662756515133]"
+                        jcr:created="{Date}2023-01-05T19:44:06.847-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-05T19:44:06.847-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    <grid_copy
+                        jcr:created="{Date}2023-01-06T13:24:53.039-05:00"
+                        jcr:createdBy="millicx"
+                        jcr:lastModified="{Date}2023-01-06T13:25:08.787-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <searchresults_copy
+                                jcr:created="{Date}2023-01-06T13:17:33.185-05:00"
+                                jcr:createdBy="millicx"
+                                jcr:lastModified="{Date}2024-10-18T06:48:37.071-04:00"
+                                jcr:lastModifiedBy="keertpx1"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/search/searchresults/v2/searchresults"
+                                aboutResultsLabel="About {n} Results"
+                                apiKey="xxfe5aa2cd-a687-4483-a4d9-67d090fd1581"
+                                dateLabel="Date"
+                                nextLabel="Suivant"
+                                noOfItems="15"
+                                noResultsText="Aucun résultat"
+                                paginationLimit="6"
+                                prevLabel="Précédent"
+                                relevanceLabel="Pertinence"
+                                searchResultsType="coveo"
+                                sortByLabel="Trier par">
+                                <searchinput
+                                    jcr:lastModified="{Date}2023-07-14T03:14:19.105-04:00"
+                                    jcr:lastModifiedBy="JADHASX13"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/search/searchinput/v2/searchinput"
+                                    buttonLabel="Recherche"
+                                    buttonLabelMobile="Recherche AbbVie.com"
+                                    searchResultsPath="/content/abbvie-com2/fr/fr/search-results"
+                                    searchType="aemsearch"/>
+                            </searchresults_copy>
+                        </par_12>
+                    </grid_copy>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-08-01T07:41:33.279-04:00"
+                    jcr:lastModifiedBy="JADHASX13"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fr/fr/site/footer/france-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-16T11:08:07.236-05:00"
+        cq:lastModifiedBy="llobesx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-31T10:36:06.822-04:00"
+        jcr:lastModifiedBy="BROINYX"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Nos produits"
+        jcr:uuid="563f80d5-4799-4d5b-a4f1-ffa31e32713c"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        eyebrow="Nos traitements"
+        navTitle="Page produits"
+        pageTitle="Nos produits"
+        title="Page produits"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/fr/fr/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-04-14T15:25:08.303-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fr/fr/site/header/france-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-04-15T17:37:59.141-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images-common/ls/014-RF-MIC.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-04-15T16:13:42.186-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Page produits"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                        <container
+                            cq:styleIds="[1653545835982,1653545825688]"
+                            jcr:created="{Date}2024-04-15T16:17:07.181-04:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2024-04-15T16:17:07.181-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <accordion
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2024-04-15T16:14:02.306-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2025-09-03T11:55:19.666-04:00"
+                                jcr:lastModifiedBy="BROINYX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                heading="Produits"
+                                singleExpansion="false">
+                                <item_1713217135625
+                                    cq:panelTitle="Anesthésie"
+                                    jcr:lastModified="{Date}2025-03-03T10:05:41.120-05:00"
+                                    jcr:lastModifiedBy="mangiax2"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/sevorane.html&quot; target=&quot;_self&quot; title=&quot;sevorane&quot;>Sevorane&lt;/a>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1713217159944
+                                    cq:panelTitle="Immunologie"
+                                    jcr:lastModified="{Date}2025-03-06T07:00:39.151-05:00"
+                                    jcr:lastModifiedBy="vailllx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/humira.html&quot;>Humira&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/rinvoq.html&quot; title=&quot;rinvoq&quot;>Rinvoq&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/skyrizi.html&quot; title=&quot;skyrizi&quot;>Skyrizi&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1713217172072
+                                    cq:panelTitle=" Ophtalmologie"
+                                    jcr:lastModified="{Date}2026-02-16T10:30:05.374-05:00"
+                                    jcr:lastModifiedBy="llobesx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/acular.html&quot; title=&quot;acular&quot;>Acular&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/alphagan.html&quot; title=&quot;alphagan&quot;>Alphagan&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/celluvisc.html&quot; title=&quot;celluvisc&quot;>Celluvisc&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/combigan.html&quot; title=&quot;combigan&quot;>Combigan&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/exocine.html&quot; title=&quot;exocine&quot;>Exocine&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/ganfort.html&quot; title=&quot;ganfort&quot;>Ganfort&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/lumigan.html&quot; title=&quot;lumigan&quot;>Lumigan&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>Optive*&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>Optive Fusion*&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>Optive Fusion UD*&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/ozurdex.html&quot; title=&quot;ozurdex&quot;>Ozurdex&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/purivist.html&quot; title=&quot;Purivist&quot;>Purivist&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/refresh.html&quot; title=&quot;refresh&quot;>Refresh&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>XEN*&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1713217181467
+                                    cq:panelTitle="Oncologie-Hématologie"
+                                    jcr:lastModified="{Date}2025-03-04T03:47:59.119-05:00"
+                                    jcr:lastModifiedBy="BROINYX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/venclyxto.html&quot; title=&quot;venclyxto&quot;>Venclyxto&lt;/a>&lt;/span>&lt;/p>&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/tepkinly.html&quot; title=&quot;teplinly&quot;>Tepkinly&lt;/a>&lt;/span>&lt;/p>&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a title=&quot;elahere&quot; href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/elahere.html&quot;>Elahere&lt;/a>&lt;br>&#xa; &lt;/span>&lt;/p>&#xa;"
+                                    textIsRich="true"/>
+                                <item_1713217190388
+                                    cq:panelTitle="Neurosciences"
+                                    jcr:lastModified="{Date}2024-10-24T05:28:41.407-04:00"
+                                    jcr:lastModifiedBy="BROINYX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/aquipta.html&quot; title=&quot;Aquipta&quot;>Aquipta&lt;/a>&lt;/span>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/botox.html&quot; title=&quot;Botox&quot;>Botox&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/duodopa.html&quot; title=&quot;duodopa&quot;>Duodopa&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/Scyova.html&quot; title=&quot;scyova&quot; target=&quot;_self&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Scyova&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1713217198385
+                                    cq:panelTitle="Virologie"
+                                    jcr:lastModified="{Date}2024-07-31T06:20:42.034-04:00"
+                                    jcr:lastModifiedBy="BROINYX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/kaletra.html&quot; title=&quot;kaletra&quot;>Kaletra&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/maviret.html&quot; title=&quot;maviret&quot;>Maviret&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/norvir.html&quot; title=&quot;norvir&quot;>Norvir&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <item_1713217207062
+                                    cq:panelTitle="Médecine esthétique"
+                                    jcr:lastModified="{Date}2024-07-31T06:24:56.529-04:00"
+                                    jcr:lastModifiedBy="BROINYX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/artia.html&quot; title=&quot;artia&quot;>Artia*&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/coolsculpting.html&quot; title=&quot;coolsculpting&quot;>Coolsculpting*&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/harmonyca.html&quot; title=&quot;harmonyca&quot;>HArmonyCA™ Lidocaine*&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/juvederm.html&quot; title=&quot;juvederm&quot;>Juvéderm*&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/keller-funnel-2.html&quot; title=&quot;keller funnel 2&quot;>Keller Funnel 2*&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/revolve.html&quot; title=&quot;revolve&quot;>Revolve*&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/strattice.html&quot; title=&quot;strattice&quot;>Strattice*&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;/content/abbvie-com2/fr/fr/qui-sommes-nous/nos-traitements/nos-produits/vistabel.html&quot; title=&quot;vistabel&quot;>Vistabel&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </accordion>
+                            <text
+                                jcr:created="{Date}2024-04-15T17:57:03.767-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-04-15T17:57:24.362-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>* Dispositif médical&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container>
+                        <text_copy_copy_copy_
+                            cq:styleIds="[1659545825678,1659545825676]"
+                            jcr:created="{Date}2024-01-26T12:27:03.373-05:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2026-02-16T11:08:07.231-05:00"
+                            jcr:lastModifiedBy="llobesx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;b>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;span class=&quot;body-unica-14-reg&quot;>FR-ABBV-260042&amp;nbsp;- 02/2026&lt;/span>&lt;/b>&lt;/b>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-04-14T15:25:31.798-04:00"
+                    jcr:lastModifiedBy="jewitca"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/fr/fr/site/footer/france-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <sevorane/>
+    <humira/>
+    <acular/>
+    <rinvoq/>
+    <skyrizi/>
+    <alphagan/>
+    <betagan/>
+    <celluvisc/>
+    <combigan/>
+    <exocine/>
+    <ganfort/>
+    <lumigan/>
+    <ozurdex/>
+    <purivist/>
+    <refresh/>
+    <venclyxto/>
+    <tepkinly/>
+    <botox/>
+    <duodopa/>
+    <kaletra/>
+    <maviret/>
+    <norvir/>
+    <artia/>
+    <coolsculpting/>
+    <harmonyca/>
+    <juvederm/>
+    <keller-funnel-2/>
+    <revolve/>
+    <strattice/>
+    <vistabel/>
+    <aquipta/>
+    <Scyova/>
+    <elahere/>
+</jcr:root>

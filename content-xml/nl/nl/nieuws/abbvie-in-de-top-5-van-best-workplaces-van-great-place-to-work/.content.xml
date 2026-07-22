@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-02-26T06:02:24.382-05:00"
+        cq:lastModifiedBy="kooycx"
+        cq:tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Het biofarmaceutische bedrijf AbbVie heeft de 5e plek veroverd in de prestigieuze lijst van Best Workplaces in Nederland in de categorie “Multinational Companies”. De sterke positie in de top 5 laat zien dat AbbVie’s 330 medewerkers met vertrouwen, trots en plezier naar hun werk gaan."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-02-14T03:24:34.860-05:00"
+        jcr:lastModifiedBy="kooycx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AbbVie in de top 5 van Best Workplaces van Great Place to Work"
+        jcr:uuid="e1bc35af-3be1-4b4b-991c-02ee4d8f8851"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Lees meer"
+        ctaText="Lees meer"
+        description="Het biofarmaceutische bedrijf AbbVie heeft de 5e plek veroverd in de prestigieuze lijst van Best Workplaces in Nederland in de categorie “Multinational Companies”. De sterke positie in de top 5 laat zien dat AbbVie’s 330 medewerkers met vertrouwen, trots en plezier naar hun werk gaan."
+        fileReference="/content/dam/abbvie-com2/nl/images/2019_abbvie-best_workplace_photo.jpeg"
+        hideInNav="true"
+        navTitle="AbbVie in de top 5 van Best Workplaces van Great Place to Work"
+        pageTitle="AbbVie in de top 5 van Best Workplaces van Great Place to Work"
+        publishDate="{Date}2019-03-27T14:46:00.000+01:00"
+        readTime="2"
+        readWatchTimeSel="read-time"
+        title="AbbVie in de top 5 van Best Workplaces van Great Place to Work">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-01-17T09:50:58.328-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/header/netherlands-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-01-17T09:57:50.984-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T06:02:16.246-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-02-13T07:22:42.456-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="AbbVie in de top 5 van Best Workplaces van GPTW"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <container
+                                    cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825689]"
+                                    jcr:created="{Date}2024-02-09T11:22:58.608-05:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-02-09T11:22:58.608-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container">
+                                    <image
+                                        cq:styleIds="[1402843082832,1402843082822]"
+                                        jcr:created="{Date}2024-01-18T04:34:02.374-05:00"
+                                        jcr:createdBy="kooycx"
+                                        jcr:lastModified="{Date}2024-02-09T11:22:33.070-05:00"
+                                        jcr:lastModifiedBy="jewitca"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/image/v2/image"
+                                        altValueFromDAM="true"
+                                        displayPopupTitle="true"
+                                        dmPresetType="imagePreset"
+                                        fileReference="/content/dam/abbvie-com2/nl/images/2019_abbvie-best_workplace_photo.jpeg"
+                                        isDecorative="false"
+                                        titleValueFromDAM="true"/>
+                                </container>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-02-09T11:20:36.694-05:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Het biofarmaceutische bedrijf AbbVie heeft de 5e plek veroverd in de prestigieuze lijst van Best Workplaces in Nederland in de categorie “Multinational Companies”. De sterke positie in de top 5 laat zien dat AbbVie’s 330 medewerkers met vertrouwen, trots en plezier naar hun werk gaan.&lt;/b>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Lennaert Rijken, General Manager van AbbVie Nederland, zegt over deze Great Place to Work prestatie: “We zijn weer terug in de top 5 van Great Place to Work. Dat is fantastisch. Een ‘great workplace’ is een organisatie waar medewerkers vertrouwen hebben in de mensen met wie ze werken, trots zijn op wat ze doen, en plezier hebben met de collega’s. Medewerkers in zo’n organisatie zijn geïnspireerd het beste uit zichzelf te halen. En zo’n organisatie wil AbbVie zijn”.&lt;/p>&#xd;&#xa;&lt;p>Great Place to Work onderzoekt de mate van vertrouwen, trots en plezier onder werknemers binnen organisaties. Op basis van de positieve antwoorden op een vragenlijst van 58 stellingen en de evaluatie van het werkgeversbeleid wordt de lijst van Best Workplaces bepaald. AbbVie neemt voor het zesde jaar op rij deel.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>AbbVie best practices&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Great Place to Work zal een ’2019 best practices’-overzicht publiceren. Volgens Lennaert Rijken kan AbbVie andere bedrijven met verschillende initiatieven inspireren: “We vinden het bij AbbVie heel belangrijk dat onze werknemers zich kunnen ontwikkelen, breed inzetbaar zijn en goed in hun vel zitten. Daarom besteden we veel aandacht aan het erkennen en ontwikkelen van onze medewerkers. Onze visie is dat persoonlijke ontwikkeling verder reikt dan de carrière bij AbbVie. Ook hecht AbbVie veel waarde aan het delen en vieren van successen, wat leidt tot een sterk teamgevoel.”&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Over Great Place to Work®&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Al meer dan 30 jaar helpt Great Place to Work® (GPTW) wereldwijd organisaties bij het worden en blijven van een Great Workplace. GPTW doet dit door begeleiding in de ontwikkeling van een organisatiecultuur waarin vertrouwen, trots en plezier centraal staan. Overal werkt GPTW met dezelfde onderzoeksmethode die begin jaren tachtig is ontwikkeld door de journalisten Robert Levering en Milton Moskowitz. Zij werden gevraagd om een boek te schrijven over de 100 beste Amerikaanse bedrijven om voor te werken. Op basis van vele bedrijfsbezoeken, formuleerde Levering een aantal criteria voor een ‘Great Workplace’. Daarin stelde hij de relatie tussen medewerkers en managers in de organisatie centraal. Hoe meer onderling vertrouwen er is in een organisatie, hoe prettiger medewerkers en leidinggevenden het volgens Levering vinden om voor die organisatie te werken. GPTW ondersteunt organisaties door onderzoek, advies, workshops en trainingen in te zetten. GPTW werkt met bedrijven, non-profitorganisaties en overheidsinstanties in 52 landen op alle continenten. Jaarlijks doen wereldwijd 6.000 organisaties mee aan dit onderzoek, die circa 12 miljoen medewerkers representeren. Daarmee is het onderzoek het grootste in zijn soort. Kijk op&amp;nbsp;&lt;a href=&quot;https://www.greatplacetowork.nl/&quot; target=&quot;_blank&quot;>www.greatplacetowork.nl&lt;/a>&amp;nbsp;voor informatie over het onderzoek en&amp;nbsp;&lt;a href=&quot;https://www.bestworkplaces.nl/&quot; target=&quot;_blank&quot;>www.bestworkplaces.nl&lt;/a>&amp;nbsp;voor alle organisaties op de lijst.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T06:02:24.374-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835982,1653546847153]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-17T10:03:25.317-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Ontdek meer"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-08-09T12:37:15.368-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-18T04:34:11.286-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            </container_copy_copy_>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756486159]"
+                        jcr:created="{Date}2024-01-17T09:56:02.779-05:00"
+                        jcr:createdBy="kooycx"
+                        jcr:lastModified="{Date}2024-01-17T09:56:17.616-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-01-17T09:53:16.324-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/footer/netherlands-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-02-26T07:31:34.451-05:00"
+        cq:lastModifiedBy="kooycx"
+        cq:tags="[abbvie-com-2:categories/company-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="AbbVie rondde deze week de overname van Allergan af. De organisatie heeft daarvoor alle benodigde goedkeuringen van autoriteiten en instanties ontvangen."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-02-08T18:40:31.787-05:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Allergan is nu onderdeel van AbbVie"
+        jcr:uuid="18d6647f-971a-40f8-b790-846b54e9d21c"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Lees meer"
+        ctaText="Lees meer"
+        description="AbbVie rondde deze week de overname van Allergan af. De organisatie heeft daarvoor alle benodigde goedkeuringen van autoriteiten en instanties ontvangen."
+        fileReference="/content/dam/abbvie-com2/nl/images/abbvie_logo.png"
+        hideInNav="true"
+        navTitle="Allergan is nu onderdeel van AbbVie"
+        pageTitle="Allergan is nu onderdeel van AbbVie"
+        publishDate="{Date}2020-05-13T08:46:00.000-05:00"
+        readTime="2"
+        readWatchTimeSel="read-time"
+        title="Allergan is nu onderdeel van AbbVie">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-01-17T09:50:58.328-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/header/netherlands-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-01-17T09:57:50.984-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:31:20.617-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-02-08T18:39:30.634-05:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Allergan is nu onderdeel van AbbVie"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-02-26T07:31:34.433-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;i>&lt;b>AbbVie rondde deze week de overname van Allergan af. De organisatie heeft daarvoor alle benodigde goedkeuringen van autoriteiten en instanties ontvangen.&lt;/b>&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>Met de overname ontstaat een biofarmaceutisch bedrijf met expertise in therapeutische gebieden als immunologie, hematologische oncologie, neurologie en Allergan Aesthetics. Het nieuwe AbbVie heeft een uitgebreid en divers portfolio. Dit biedt een solide basis om te blijven investeren in nieuwe ontdekkingen en te bouwen aan een bedrijf met duurzame groei.&lt;/p>&#xd;&#xa;&lt;p>“We zijn heel blij met deze belangrijke mijlpaal voor onze organisatie, onze medewerkers en voor iedereen die vertrouwt op onze geneesmiddelen”, zegt Richard A. Gonzalez, bestuursvoorzitter en CEO van AbbVie. “Ik ben trots op beide organisaties en kijk uit naar de kansen die voor ons liggen.”&lt;/p>&#xd;&#xa;&lt;p>&lt;i>&lt;b>Ga voor het volledige persbericht over de integratie naar de website van AbbVie global.&lt;/b>&lt;/i>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:31:28.203-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835982,1653546847153]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-17T10:03:25.317-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Ontdek meer"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-08-09T12:37:15.368-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-18T04:34:11.286-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            </container_copy_copy_>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756486159]"
+                        jcr:created="{Date}2024-01-17T09:56:02.779-05:00"
+                        jcr:createdBy="kooycx"
+                        jcr:lastModified="{Date}2024-01-17T09:56:17.616-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-01-17T09:53:16.324-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/footer/netherlands-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

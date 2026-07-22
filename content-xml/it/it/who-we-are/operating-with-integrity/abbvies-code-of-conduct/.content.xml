@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-05T07:31:48.511-04:00"
+        cq:lastModifiedBy="MONTIIX"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Il nostro codice descrive il nostro impegno verso le persone che serviamo: pazienti, operatori sanitari, azionisti, partner commerciali e i nostri colleghi."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-02-25T04:04:10.634-05:00"
+        jcr:lastModifiedBy="MONTIIX"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Codice di condotta di AbbVie"
+        jcr:uuid="537a6e76-6e53-4e0c-a051-651899e28e0f"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Scopri di più"
+        ctaText="Scopri di più"
+        eyebrow="chi siamo"
+        fileReference="/content/dam/abbvie-com2/it/documents/codice-condotta-aziendale-2025-pic"
+        navTitle="Codice di condotta di AbbVie"
+        pageTitle="Codice di condotta di AbbVie"
+        title="Codice di condotta di AbbVie"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/it/it/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-12-10T03:11:33.535-05:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/it/it/site/header/italy-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-12-10T03:12:06.371-05:00"
+                        jcr:lastModifiedBy="NANDIVX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2_copy
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2026-02-25T06:22:19.193-05:00"
+                                jcr:lastModifiedBy="MONTIIX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Codice di condotta AbbVie"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2_copy>
+                    <copy_of_container_co
+                        cq:styleIds="[1653545825683,1653545847149,1653545835879,1653545835982]"
+                        jcr:created="{Date}2022-12-05T12:55:26.609-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-10T14:38:40.441-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <grid
+                            cq:styleIds="[0]"
+                            jcr:created="{Date}2022-12-09T17:42:24.988-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2026-02-25T06:25:26.807-05:00"
+                            jcr:lastModifiedBy="MONTIIX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <image
+                                    cq:styleIds="[1402843082835]"
+                                    jcr:created="{Date}2022-12-09T17:59:50.941-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-02-25T06:27:33.255-05:00"
+                                    jcr:lastModifiedBy="MONTIIX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="smartCrop"
+                                    fileReference="/content/dam/abbvie-com2/it/documents/codice-condotta-aziendale-2025-V"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    smartCropRendition="Tall"
+                                    titleValueFromDAM="true"/>
+                            </par_11>
+                            <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-02-25T06:23:58.156-05:00"
+                                    jcr:createdBy="MONTIIX"
+                                    jcr:lastModified="{Date}2026-02-25T06:24:31.673-05:00"
+                                    jcr:lastModifiedBy="MONTIIX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>Il nostro codice descrive il nostro impegno verso le persone che serviamo: pazienti, operatori sanitari, azionisti, partner commerciali e i nostri colleghi.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <button
+                                    jcr:created="{Date}2026-02-25T04:09:00.769-05:00"
+                                    jcr:createdBy="MONTIIX"
+                                    jcr:lastModified="{Date}2026-05-05T07:31:48.503-04:00"
+                                    jcr:lastModifiedBy="MONTIIX"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Scarica il Codice di Condotta Aziendale"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    langAttribute="none"
+                                    linkTarget="_self"
+                                    linkURL="/content/dam/abbvie-com2/it/documents/codice-condotta-aziendale-2025.pdf"/>
+                            </par_13>
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="5"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="1"
+                                    dataPriority="1"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="5"
+                                    dataPriority="1"/>
+                            </columns>
+                        </grid>
+                    </copy_of_container_co>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-12-10T03:15:13.679-05:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/it/it/site/footer/italy-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

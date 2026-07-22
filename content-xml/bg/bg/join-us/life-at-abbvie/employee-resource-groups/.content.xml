@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-09-19T15:03:03.932-04:00"
+        cq:lastModifiedBy="bryanjx9"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-09-19T15:03:03.919-04:00"
+        jcr:lastModifiedBy="bryanjx9"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Групи ресурси на служителите"
+        jcr:uuid="50b8b2dd-c624-41b5-9e68-44764eb83d9f"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Научете повече"
+        ctaText="Научете повече"
+        description="Нашите групи за ресурси на служителите (ERG) обогатяват нашето работно място, като насърчават осъзнаването и оценяването на нашето многообразие."
+        eyebrow="Присъедини се към нас"
+        fileReference="/content/dam/abbvie-com2/images/erg-hero-2880x1620.jpg"
+        navTitle="Групи ресурси на служителите"
+        pageTitle="Групи ресурси на служителите"
+        title="Групи ресурси на служителите">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-12T07:27:54.037-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/bg/bg/site/header/bulgaria-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2025-09-18T15:46:01.039-04:00"
+                        jcr:lastModifiedBy="bryanjx9"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/erg-hero-2880x1620.jpg"
+                        dmPresetType="imagePreset"
+                        imagePreset="Hero"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653545847150,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-07-12T07:28:05.793-04:00"
+                                jcr:lastModifiedBy="DEVIJX1"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Групи ресурси на служителите"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2023-07-12T07:28:32.056-04:00"
+                                jcr:lastModifiedBy="DEVIJX1"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>Нашите групи за ресурси за служители обогатяват нашето работно място, като насърчават осъзнаването и оценяването на нашето многообразие и подкрепят хора от всякакъв произход да се развиват и просперират в организацията.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid_1109957805_copy
+                        cq:styleIds="[0,1653545835880]"
+                        jcr:created="{Date}2022-12-07T10:56:06.407-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-07T10:56:19.563-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="7"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <title_copy_copy
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:created="{Date}2022-11-07T18:49:15.140-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-07-12T07:29:20.453-04:00"
+                                jcr:lastModifiedBy="DEVIJX1"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Достигнете своя потенциал"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h3"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2022-12-09T17:34:50.014-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2023-07-12T07:29:46.282-04:00"
+                                jcr:lastModifiedBy="DEVIJX1"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Нашите групи за ресурси на служителите (ERG) помагат за насърчаването на разнообразна и приобщаваща среда, където всеки глас се чува и оценява. С фокус върху четирите Cs – кариера, общност, влияние върху компанията и култура – ​​нашите ERG помагат за постигане на бизнес резултати, като същевременно изграждат чувство за общност. Те също така се фокусират върху работата в мрежа, наставничеството, професионалното развитие, привличането на таланти и забавлението!&lt;/p>&#xd;&#xa;&lt;p>Гледайте видеото по-долу, за да научите повече.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <video
+                                cq:styleIds="[1]"
+                                jcr:created="{Date}2022-12-11T16:32:59.491-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2025-05-20T02:33:36.293-04:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                autoPlay="true"
+                                brightcoveAutoPlay="false"
+                                btnText="ГЛЕДАЙТЕ  1:08"
+                                description="&lt;p>Достигнете своя потенциал&lt;/p>&#xd;&#xa;"
+                                descriptiveIframeTitle="Групи за ресурси на служители на AbbVie"
+                                fileReference="/content/dam/abbvie-com2/images/employee/erg/erg-video-thumbnail.jpg"
+                                loopVideo="false"
+                                showBrightcoveControls="false"
+                                showPlayerControls="false"
+                                showRelatedContent="false"
+                                showVideoInfo="false"
+                                textIsRich="[true,true]"
+                                title="Групи за ресурси на служители на AbbVie"
+                                videoType="youtube"
+                                youtubeAutoPlay="false"
+                                youtubeUrl="https://www.youtube-nocookie.com/embed/CctqU2zSqQw"/>
+                        </par_13>
+                    </grid_1109957805_copy>
+                    <teaser
+                        jcr:created="{Date}2022-12-11T16:10:36.693-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:description="&lt;p>Присъединете се към една от нашите групи за ресурси за служители и се свържете с други страстни хора като вас. Отворено за всички служители!&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2023-07-12T07:31:17.469-04:00"
+                        jcr:lastModifiedBy="DEVIJX1"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="&lt;p>Свържете се с другите&lt;/p>&#xd;&#xa;"
+                        sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
+                        ctaTarget="_self"
+                        textIsRich="[true,true]"/>
+                    <separator
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2023-01-11T14:54:50.043-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2023-01-11T14:54:50.043-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-12T07:35:09.420-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/bg/bg/site/footer/bulgaria-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

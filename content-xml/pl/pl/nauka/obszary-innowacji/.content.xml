@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-08-20T17:39:40.805-04:00"
+        cq:lastModifiedBy="jewitca"
+        cq:lastReplicated="{Date}2024-08-20T17:43:29.379-04:00"
+        cq:lastReplicatedBy="replication-service"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="W AbbVie na pierwszym miejscu stawiamy pacjentów – to napędza naszą innowacyjność. Dowiedz się więcej o naszych dokonaniach i wiedzy w zakresie badań i rozwoju: od medycyny precyzyjnej po opracowywanie leków ukierunkowanych na pacjenta."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-15T18:45:18.379-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Obszary Innowacji"
+        jcr:uuid="fd991286-ee07-4ab5-a310-401e537bf7a8"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Dowiedz się więcej"
+        ctaText="Dowiedz się więcej"
+        description="W Abbvie na pierwszym miejscu stawiamy pacjentów – to napędza naszą innowacyjność."
+        eyebrow="Nauka"
+        fileReference="/content/dam/abbvie-com2/images/employee/woman-scientist-examining-hero.jpg"
+        navTitle="Obszary innowacji"
+        pageTitle="Obszary innowacji"
+        title="Obszary innowacji"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/pl/pl/site/popups/warn-on-departure">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2023-07-10T03:10:16.174-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pl/pl/site/header/poland-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847149]"
+                        jcr:lastModified="{Date}2022-12-16T18:11:12.117-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/woman-scientist-examining-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2023-07-10T03:10:42.937-04:00"
+                                jcr:lastModifiedBy="DEVIJX1"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Obszary innowacji"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-07-15T18:44:39.867-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Koncentrujemy się na kluczowych obszarach, które będą napędzać rozwój i innowacje w nadchodzących latach.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <container_2049798639
+                        cq:styleIds="[1653545835982,1653545847150,1653545825687]"
+                        jcr:created="{Date}2024-03-21T11:55:33.017-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-03-21T11:55:33.017-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title_116699496
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2022-12-15T11:49:26.700-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2024-07-15T18:46:07.423-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="To, co robimy teraz, kształtuje naszą przyszłość"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <text_copy_copy
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2022-12-07T14:53:09.069-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2024-08-20T17:39:40.801-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Nasze unikalne podejście do nauki oraz nieustanne poszukiwanie i opracowywanie innowacyjnych rozwiązań poprawiających jakość życia pacjentów, stanowią główną siłę napędową AbbVie. Nasza firma wdraża kolejne innowacje, aby efektywnie odpowiadać na zmieniające się potrzeby otoczenia. Inwestujemy w kluczowe obszary i technologie, takie jak: medycyna precyzyjna, nowoczesne metody zarządzania danymi, genetyka i genomika oraz opracowywanie leków ukierunkowanych na pacjenta. Jesteśmy przekonani, że nasze zaangażowanie umożliwi dostarczanie jeszcze lepszych i bardziej skutecznych rozwiązań dla naszych pacjentów.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_2049798639>
+                    <container_472145492
+                        cq:styleIds="[1653545835982,1653545825688]"
+                        jcr:created="{Date}2024-03-21T12:41:49.031-04:00"
+                        jcr:createdBy="jewitca"
+                        jcr:lastModified="{Date}2024-03-21T12:41:49.031-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        <title_copy
+                            cq:styleIds="[1659545825678,1661545829678]"
+                            jcr:created="{Date}2022-12-17T10:27:48.523-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2024-03-21T13:08:13.842-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Obszary innowacji"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h3"
+                            variant="h"/>
+                        <accordion
+                            cq:styleIds="[1]"
+                            jcr:created="{Date}2024-03-21T12:41:37.121-04:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2024-07-15T18:50:02.574-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                            singleExpansion="false">
+                            <text
+                                cq:panelTitle="Konwergencja danych"
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2024-03-21T12:42:15.276-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2024-07-15T18:48:36.807-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Łącząc odrębne obszary wiedzy i technologii w spójną platformę wiedzy, usprawniamy procesy analizy, zbierania i wykorzystania danych, uzyskując informacje, które mogą poprawić jakość życia pacjentów.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/science/areas-of-innovation/data-convergence.html&quot; target=&quot;_blank&quot;>Dowiedz się więcej&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1711039536093
+                                cq:panelTitle="Medycyna precyzyjna"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-07-15T18:48:54.688-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Stosując zaawansowane technologie, przyspieszamy rozwój leków, a wykorzystując wiedzę o mechanizmach powstawania chorób, staramy się dotrzeć do właściwego pacjenta z właściwym lekiem i we właściwym czasie.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/science/areas-of-innovation/precision-medicine.html&quot; target=&quot;_blank&quot;>Dowiedz się więcej&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1711039558992
+                                cq:panelTitle="Genetyka i genomika"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-07-15T18:49:17.230-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Prowadzimy jedno z największych przedsięwzięć badawczych z dziedziny genomiki na świecie. Naszym celem jest lepsze zrozumienie biologii chorób i danych dotyczących genomu człowieka, a w efekcie przyspieszenie procesu tworzenia nowych leków.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/science/areas-of-innovation/genetics-and-genomics.html&quot; target=&quot;_blank&quot;>Dowiedz się więcej&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1711039571524
+                                cq:panelTitle="Rozwój leków ukierunkowanych na pacjenta"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-08-20T17:38:23.886-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Od współpracy z pacjentami, poprzez dywersyfikację badań klinicznych, po wykorzystanie danych rzeczywistych (Real-World Evidence): nasi naukowcy stosują nowatorskie metody i uwzględniają dane płynące z rzeczywistych doświadczeń pacjentów, aby tym skuteczniej dostarczać rozwiązania terapeutyczne tam, gdzie wciąż istnieją ogromne niezaspokojone potrzeby medyczne.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/science/areas-of-innovation/patient-focused-drug-development.html&quot; target=&quot;_blank&quot;>Dowiedz się więcej&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1711039575817
+                                cq:panelTitle="Metody terapeutyczne"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-07-15T18:50:33.366-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Wykorzystujemy nasz zestaw narzędzi badawczo-rozwojowych — połączenie tradycyjnych i najnowocześniejszych metod — aby stworzyć najlepsze rozwiązania terapeutyczne dla pacjentów.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/science/areas-of-innovation/therapeutic-modalities.html&quot; target=&quot;_blank&quot;>Dowiedz się więcej&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <item_1711039593034
+                                cq:panelTitle="Zaawansowane technologie"
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-07-15T18:50:55.768-04:00"
+                                jcr:lastModifiedBy="jewitca"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>Na każdym etapie procesu badawczo-rozwojowego wykorzystujemy zaawansowane technologie, w tym sztuczną inteligencję i uczenie maszynowe, co pozwala nam na jeszcze szybsze i bardziej skuteczne opracowywanie innowacyjnych terapii.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/science/areas-of-innovation/advanced-technologies.html&quot; target=&quot;_blank&quot;>Dowiedz się więcej&lt;/a>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </accordion>
+                    </container_472145492>
+                    <copy_of_container_co
+                        cq:styleIds="[1653545825683,1653545847149,1653545835879]"
+                        jcr:created="{Date}2022-12-05T12:55:26.609-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-17T11:22:47.039-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F1F3FF">
+                        <grid_1839283064_copy
+                            jcr:created="{Date}2022-11-21T16:08:15.932-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-11-21T16:08:39.533-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="1"
+                                    dataPriority="1"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="5"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <image_copy_copy
+                                    jcr:created="{Date}2022-11-07T18:51:21.727-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-03-21T13:04:07.470-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="kobieta w laboratorium"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/images-common/ls/3032_323_mod.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                            </par_11>
+                            <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <header
+                                    jcr:created="{Date}2024-03-21T13:01:18.655-04:00"
+                                    jcr:createdBy="jewitca"
+                                    jcr:lastModified="{Date}2024-03-21T13:01:32.129-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="DOŁĄCZ DO NAS"/>
+                                <separator
+                                    cq:styleIds="[1662756387452]"
+                                    jcr:created="{Date}2022-12-07T14:08:07.749-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-07T14:08:07.749-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2022-11-07T18:49:15.140-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-03-21T13:01:44.042-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Odkryj ścieżki kariery w AbbVie"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text_copy_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-11-07T18:20:48.523-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-03-21T13:02:22.216-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Jeśli dobrze czujesz się jako część zróżnicowanego, współpracującego zespołu - czekamy na Ciebie.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <button_copy
+                                    cq:styleIds="[1659997740832]"
+                                    jcr:created="{Date}2022-11-07T18:49:51.025-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-03-21T13:02:54.514-04:00"
+                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="OFERTY PRACY"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Zobacz otwarte oferty pracy"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com"/>
+                            </par_13>
+                        </grid_1839283064_copy>
+                        <text_copy_copy_copy_
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2024-07-15T22:01:28.318-04:00"
+                            jcr:createdBy="jewitca"
+                            jcr:lastModified="{Date}2024-07-17T09:41:25.834-04:00"
+                            jcr:lastModifiedBy="jewitca"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p style=&quot;text-align: right;&quot;>&lt;span class=&quot;body-unica-14-reg&quot;>PL-ABBV-240061&lt;/span>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <separator
+                            cq:styleIds="[1662756542862]"
+                            jcr:created="{Date}2022-12-17T17:01:05.135-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-17T17:01:05.135-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </copy_of_container_co>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-07-10T03:24:41.919-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pl/pl/site/footer/poland-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

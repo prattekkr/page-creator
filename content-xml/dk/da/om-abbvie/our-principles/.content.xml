@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-07T05:25:14.136-04:00"
+        cq:lastModifiedBy="lennglx"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="AbbVie-principperne styrer vores arbejde. De skitserer vores mission og hvad vi værdsætter – patientpåvirkning, integritet, innovation, mangfoldighed og inklusion og at give tilbage til vores samfund."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-10-22T12:38:41.672-04:00"
+        jcr:lastModifiedBy="jewitca"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Vores principper"
+        jcr:uuid="1c07375c-3a6a-49c2-bb00-3ea789f6661a"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="Lær mere om vores principper"
+        ctaText="Lær mere"
+        description="Det er det, vi tror på. Det, vi står for. Hvad guider os."
+        eyebrow="Hvem vi er"
+        fileReference="/content/dam/abbvie-com2/images/employee/jane-woo-hero.jpg"
+        navTitle="Vores principper"
+        pageTitle="Vores principper"
+        title="Vores principper"
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/dk/da/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-02-12T09:22:51.699-05:00"
+                    jcr:lastModifiedBy="lennglx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/dk/da/site/header/danish-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847149]"
+                        jcr:lastModified="{Date}2022-12-07T18:01:23.630-05:00"
+                        jcr:lastModifiedBy="millicx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/jane-woo-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653545847150,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2024-09-30T04:45:52.672-04:00"
+                                jcr:lastModifiedBy="karotpb"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Vores principper er kernen i vores virksomhed"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy_32238782
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2024-10-02T04:22:51.090-04:00"
+                                jcr:lastModifiedBy="karotpb"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;b>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>For at understrege vigtigheden af ​​etisk og værdibaseret virksomhedsadfærd lancerede AbbVie i 2019 fem principper. Disse principper er grundlaget for, hvordan vi driver en ansvarlig&amp;nbsp;forretning.&lt;/span>&lt;/span>&lt;/b>&lt;span class=&quot;light-font&quot;>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <video
+                        cq:styleIds="[10,8,10,2]"
+                        jcr:created="{Date}2022-11-28T14:25:08.192-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2024-10-17T21:57:29.478-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/video/v2/video"
+                        autoPlay="true"
+                        brightcoveAutoPlay="false"
+                        btnText="Se med 2:10"
+                        captions="true"
+                        descriptiveIframeTitle="Vores principper"
+                        fileReference="/content/dam/abbvie-com2/images/employee/f/principles-video-thumnail.jpg"
+                        loopVideo="false"
+                        showBrightcoveControls="false"
+                        showPlayerControls="true"
+                        showRelatedContent="false"
+                        showVideoInfo="false"
+                        textIsRich="[true,true]"
+                        title="Vores principper"
+                        videoType="youtube"
+                        youtubeAutoPlay="false"
+                        youtubeUrl="https://www.youtube.com/embed/qJEOLzZGd6w"/>
+                    <Copy_x0020_of_x0020_container
+                        cq:styleIds="[1653545835856,1653545825683,1653545847148,1653545835879,1653545835859]"
+                        jcr:created="{Date}2022-11-28T14:38:18.752-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-11-28T14:42:49.137-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/lab-whiteboard.jpg">
+                        <separator
+                            cq:styleIds="[1662756515133]"
+                            jcr:created="{Date}2022-11-28T14:49:11.523-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-11-28T14:49:11.523-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <grid
+                            cq:styleIds="[0]"
+                            jcr:created="{Date}2022-11-28T14:55:37.084-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-11-28T14:55:59.002-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="1"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="11"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_12
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <quote
+                                    cq:styleIds="[1000000000040,1000000000010,1000000000021,1000000000033,1000000000002]"
+                                    jcr:created="{Date}2022-11-28T14:48:00.808-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-09-30T04:47:04.872-04:00"
+                                    jcr:lastModifiedBy="karotpb"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/quote"
+                                    fragmentPath="/content/dam/abbvie-com2/dashboard-cards/content-fragments-affiliate/denmark/quotes/rick-gonzalez-principles"
+                                    quote="Vores principper er vores fundament. De forener os, styrer vores beslutninger og inspirerer os."
+                                    quoteType="regular"
+                                    textSize="h0"/>
+                            </par_12>
+                        </grid>
+                    </Copy_x0020_of_x0020_container>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2023-06-20T03:16:08.168-04:00"
+                    jcr:lastModifiedBy="DEVIJX1"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/dk/da/site/footer/danish-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

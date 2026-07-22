@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-05-28T04:21:26.882-04:00"
+        cq:lastModifiedBy="vickekx"
+        cq:tags="[abbvie-com-2:categories/working-at-abbvie-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="Discover how development at AbbVie UK helps colleagues grow their careers, with real stories that bring learning, opportunity and impact to life."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-05-27T09:11:39.434-04:00"
+        jcr:lastModifiedBy="vickekx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Supporting our people to grow"
+        jcr:uuid="d961e7aa-91f2-454c-853f-20be496cc351"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Read Article"
+        ctaText="Read Article"
+        description="Discover how development at AbbVie UK helps colleagues grow their careers, with real stories that bring learning, opportunity and impact to life."
+        fileReference="/content/dam/abbvie-com2/uk/images/Development Stories.png"
+        hideInNav="true"
+        navTitle="Supporting our people to grow: development at AbbVie"
+        pageTitle="Supporting our people to grow: development at AbbVie"
+        publishDate="{Date}2026-05-26T13:48:00.000+01:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="Supporting our people to grow">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-07-04T02:20:26.027-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/uk/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:created="{Date}2026-05-22T08:14:21.701-04:00"
+                        jcr:createdBy="vickekx"
+                        jcr:lastModified="{Date}2026-05-26T05:16:05.058-04:00"
+                        jcr:lastModifiedBy="singarx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/uk/images/Development Stories.png"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2026-01-13T01:22:04.901-05:00"
+                                jcr:lastModifiedBy="singarx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/uk/en/who-we-are/our-stories"/>
+                            <storyinfo
+                                jcr:lastModified="{Date}2026-05-20T09:45:37.793-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"
+                                hideReadWatchTime="true"
+                                hideTag="true"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2026-05-22T10:37:25.968-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Supporting our people to grow"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-22T10:37:21.320-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>When people feel supported to grow, they can build careers that are not only meaningful to them but also make a real difference for patients.&lt;/p>&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <quote
+                            jcr:created="{Date}2026-05-20T09:54:41.281-04:00"
+                            jcr:createdBy="vickekx"
+                            jcr:lastModified="{Date}2026-05-20T09:54:41.281-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/quote"/>
+                        <parsys
+                            jcr:created="{Date}2026-05-26T05:59:29.522-04:00"
+                            jcr:createdBy="vickekx"
+                            jcr:lastModified="{Date}2026-05-26T05:59:29.522-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <title2
+                                    cq:styleIds="[1659545825678,1651545824678]"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Award-winning approach to development"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h5"
+                                    variant="h"/>
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>At AbbVie UK, development isn’t a one-size-fits-all journey. It’s shaped by curiosity, opportunity, and the ability to explore what matters most to each individual.&lt;/p>&#xd;&#xa;&lt;p>This commitment has been recognised externally, with AbbVie UK named among the &lt;b>UK’s Best Workplaces for Development™ 2026&lt;/b>, and for colleagues, it’s the everyday experiences that bring this to life.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator
+                                    cq:styleIds="1662756423318"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title2_copy
+                                    cq:styleIds="[1659545825678,1651545824678]"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="A journey shaped by opportunity"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h5"
+                                    variant="h"/>
+                                <text2_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>For Katie Walker, Marketing Excellence Partner, development at AbbVie has been about following her interests and being supported to act on them.&lt;/p>&#xd;&#xa;&lt;p>Katie began her career in communications, but it was through her work in internal communications that she became curious about the commercial side of the business. With encouragement to explore that interest, she has since moved across several areas of the UK organisation, including technology solutions, marketing and now marketing excellence.&lt;/p>&#xd;&#xa;&lt;p>Each move has brought new challenges, new skills and a broader perspective.&lt;/p>&#xd;&#xa;&lt;p>Beyond her day job, Katie has also taken on the role of Chair for the Young Minds Employee Resource Group, supporting early career professionals and graduates across AbbVie.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Through this experience, she has developed in different ways, leading a committee, presenting to senior leaders, and building a strong network across the organisation.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="1662756423318"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <quote_copy_1510540232
+                                    cq:styleIds="[1000000000040,1000000000000,1000000000010]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/quote"
+                                    attributionName="Katie Walker"
+                                    attributionTitle="Marketing Excellence Partner"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/uk/images/15-Katie-Walker_BR58824.jpg"
+                                    quote="I feel supported to take ownership of my development and pursue opportunities that genuinely interest me. That support makes a real difference."
+                                    quoteType="regular"
+                                    textSize="h0"/>
+                                <text2_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>One standout moment for Katie was presenting the impact of Young Minds to senior leadership, an opportunity to spotlight the group’s work, elevate its members, and bring back new ideas to continue its growth.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <title2_copy_copy_1822362312
+                                    cq:styleIds="[1659545825678,1651545824678]"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Developing through experience"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h5"
+                                    variant="h"/>
+                                <text2_copy_copy_270460907
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>For Hammad Ayub, Associate Director, Business Excellence, development has been driven by a simple mindset: learn by doing.&lt;/p>&#xd;&#xa;&lt;p>Starting his career in marketing, Hammad built a strong foundation in strategy and commercial thinking. But keen to broaden his perspective, he moved into a customer-facing sales role, gaining first-hand insight into what drives performance in the field.&lt;/p>&#xd;&#xa;&lt;p>That experience became invaluable when he returned to marketing, allowing him to connect strategy with real-world understanding. He continued to build on this through a move into business consulting, developing analytical skills and working closely with customers to understand performance and impact.&lt;/p>&#xd;&#xa;&lt;p>Rather than following a fixed path, Hammad has shaped his own journey, combining hands-on experience with formal learning and taking on opportunities beyond his core role.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <quote
+                                    cq:styleIds="[1000000000040,1000000000000,1000000000010]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/quote"
+                                    attributionName="Hammad Ayub"
+                                    attributionTitle="Associate Director, Business Excellence UK&amp;I"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/uk/images/Hammad Ayub.jpg"
+                                    quote="Development has always been something I’ve taken personal ownership of, by seeking out opportunities to learn, stretch and build experience across different areas of the business."
+                                    quoteType="regular"
+                                    textSize="h0"/>
+                                <text2_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Now in a leadership role, his focus has evolved further, supporting others to grow, while continuing to develop himself through experiences like cross-functional leadership and programmes such as Coach to Lead.&lt;/p>&#xd;&#xa;&lt;p>A defining moment in his career came when leading the Sales Force Effectiveness function, where he was able to bring together insights from across his career journey to connect data, analytics and field performance.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <title2_copy_copy
+                                    cq:styleIds="[1659545825678,1651545824678]"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Creating space to grow"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h5"
+                                    variant="h"/>
+                                <text2_copy_copy_copy_721582897
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Katie and Hammad’s experiences are just two examples of what development can look like at AbbVie UK.&lt;/p>&#xd;&#xa;&lt;p>It’s not only about formal programmes, but also about creating an environment where people feel encouraged to explore, take on new challenges, and grow in ways that are meaningful to them.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <quote_copy
+                                    cq:styleIds="[1000000000040,1000000000000,1000000000010]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/quote"
+                                    attributionName="Anna Oliver"
+                                    attributionTitle="UK HR Director"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/uk/images/Anna Oliver.jpg"
+                                    quote="Creating an environment where people feel empowered to learn and grow, not just for our teams, but for the patients we serve."
+                                    quoteType="regular"
+                                    textSize="h0"/>
+                                <text2_copy_copy_copy_2102413692
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Because when our people grow and thrive, so does the impact we can have, for each other, and for patients.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </parsys>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <text2_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-26T07:56:46.830-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>At AbbVie , development isn’t a one-size-fits-all journey. It’s shaped by curiosity, opportunity, and the ability to explore what matters most to each individual.&lt;/p>&#xd;&#xa;&lt;p>This commitment has been recognised externally, with AbbVie named among the &lt;b>UK’s Best Workplaces for Development™ 2026&lt;/b>, and for colleagues, it’s the everyday experiences that bring this to life.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <title2_copy
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2026-05-26T06:03:04.996-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="A journey shaped by opportunity"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h5"
+                                variant="h"/>
+                            <text2_copy_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-26T07:57:01.224-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>For Katie Walker, Marketing Excellence Partner, development at AbbVie has been about following her interests and being supported to act on them.&lt;/p>&#xd;&#xa;&lt;p>Katie began her career in communications and it was through her work in internal communications that she became curious about the commercial side of the business. With encouragement to explore that interest, she has since moved across several areas of the UK organisation, including technology solutions, marketing and now marketing excellence.&lt;/p>&#xd;&#xa;&lt;p>Each move has brought new challenges, new skills and a broader perspective.&lt;/p>&#xd;&#xa;&lt;p>Beyond her day job, Katie has also taken on the role of Chair for the Young Minds Employee Resource Group, supporting early career professionals and graduates across AbbVie.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Through this experience, she has developed in different ways, leading a committee, presenting to senior leaders, and building a strong network across the organisation.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <quote_copy
+                                cq:styleIds="[1000000000040,1000000000000]"
+                                jcr:created="{Date}2023-09-13T12:07:43.310-04:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-05-26T06:11:16.168-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Katie Walker"
+                                attributionTitle="Marketing Excellence Business Partner"
+                                fileReference="/content/dam/abbvie-com2/uk/images/15-Katie-Walker_BR58824.jpg"
+                                quote="I feel supported to take ownership of my development and pursue opportunities that genuinely interest me. That support makes a real difference."
+                                quoteType="regular"
+                                textSize="h1"/>
+                            <text2_copy_copy_copy
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-26T06:05:08.053-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>One standout moment for Katie was presenting the impact of Young Minds to senior leadership, an opportunity to spotlight the group’s work, elevate its members, and bring back new ideas to continue its growth.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <title2_copy_copy
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2026-05-26T06:05:25.209-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Developing through experience"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h5"
+                                variant="h"/>
+                            <text2_copy_copy_copy_1532028536
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-26T06:05:39.493-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>For Hammad Ayub, Associate Director, Business Excellence, development has been driven by a simple mindset: learn by doing.&lt;/p>&#xd;&#xa;&lt;p>Starting his career in marketing, Hammad built a strong foundation in strategy and commercial thinking. But keen to broaden his perspective, he moved into a customer-facing sales role, gaining first-hand insight into what drives performance in the field.&lt;/p>&#xd;&#xa;&lt;p>That experience became invaluable when he returned to marketing, allowing him to connect strategy with real-world understanding. He continued to build on this through a move into business consulting, developing analytical skills and working closely with customers to understand performance and impact.&lt;/p>&#xd;&#xa;&lt;p>Rather than following a fixed path, Hammad has shaped his own journey, combining hands-on experience with formal learning and taking on opportunities beyond his core role.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <quote_copy_copy
+                                cq:styleIds="[1000000000040,1000000000000]"
+                                jcr:created="{Date}2023-09-13T12:07:43.310-04:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-05-26T06:06:14.831-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Hammad Ayub"
+                                attributionTitle="Associate Director, Business Excellence UK&amp;I"
+                                fileReference="/content/dam/abbvie-com2/uk/images/Hammad Ayub.jpg"
+                                quote="Development has always been something I’ve taken personal ownership of, seeking out opportunities to learn, stretch and build experience across different areas of the business."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <text2_copy_copy_copy_1987086156
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-26T06:06:33.213-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>Now in a leadership role, his focus has evolved further, supporting others to grow, while continuing to develop himself through experiences like cross-functional leadership and programmes such as Coach to Lead.&lt;/p>&#xd;&#xa;&lt;p>A defining moment in his career came when leading the Sales Force Effectiveness function, where he was able to bring together insights from across his career journey to connect data, analytics and field performance.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <title2_copy_copy_cop
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2026-05-26T06:06:46.369-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Creating space to grow"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h5"
+                                variant="h"/>
+                            <text2_copy_copy_copy_409812390
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-26T06:07:04.344-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>Katie and Hammad’s experiences are just two examples of what development can look like at AbbVie UK.&lt;/p>&#xd;&#xa;&lt;p>It’s not only about formal programmes, but also about creating an environment where people feel encouraged to explore, take on new challenges, and grow in ways that are meaningful to them.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <quote_copy_copy_copy
+                                cq:styleIds="[1000000000040,1000000000000]"
+                                jcr:created="{Date}2023-09-13T12:07:43.310-04:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-05-26T06:08:57.957-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/quote"
+                                attributionName="Anna Oliver"
+                                attributionTitle="HR Director"
+                                fileReference="/content/dam/abbvie-com2/uk/images/Anna Oliver.jpg"
+                                quote="Creating an environment where people feel empowered to learn and grow is essential, not just for our teams, but for the patients we serve."
+                                quoteType="regular"
+                                textSize="h0"/>
+                            <text2_copy_copy_copy_1142074134
+                                cq:styleIds="[1659545825678,1659545835858]"
+                                jcr:lastModified="{Date}2026-05-26T06:09:28.920-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>Because when our people grow and thrive, so does the impact we can have, for each other, and for patients.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </par_12>
+                    </grid>
+                    <text_copy
+                        cq:styleIds="[1659545825678]"
+                        jcr:created="{Date}2025-07-04T00:51:01.832-04:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2026-05-26T05:59:07.995-04:00"
+                        jcr:lastModifiedBy="vickekx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                        langAttribute="none"
+                        text="&lt;p>UK-ABBV-260167 | May 2026&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <container_823421802_
+                        cq:styleIds="[1653545825683,1653545835879]"
+                        jcr:created="{Date}2022-11-28T14:56:48.309-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-11-28T14:57:10.019-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F4F4F4">
+                        <title
+                            cq:styleIds="[1661545829678]"
+                            jcr:created="{Date}2022-11-28T14:57:53.189-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-11-28T14:58:09.963-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Related Content"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            type="h5"/>
+                        <grid
+                            cq:styleIds="[0,1653545835880]"
+                            jcr:created="{Date}2022-11-28T14:59:59.998-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-11-28T15:00:11.955-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <cardpagestory
+                                    cq:styleIds="[1111111111110,1111111111113,1111111111117]"
+                                    jcr:created="{Date}2022-11-28T15:00:21.839-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-13T08:08:50.374-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/uk/en/join-us/life-at-abbvie/employee-resource-groups"/>
+                            </par_11>
+                            <par_12
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <cardpagestory
+                                    cq:styleIds="[1111111111110,1111111111113,1111111111117]"
+                                    jcr:created="{Date}2022-12-07T12:08:27.674-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-05-13T08:09:09.387-04:00"
+                                    jcr:lastModifiedBy="kanchrx3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/uk/en/join-us/opportunities"/>
+                            </par_12>
+                        </grid>
+                    </container_823421802_>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-07-04T02:21:00.590-04:00"
+                    jcr:lastModifiedBy="singarx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/uk/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

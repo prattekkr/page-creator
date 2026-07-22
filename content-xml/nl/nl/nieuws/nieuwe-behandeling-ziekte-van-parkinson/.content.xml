@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-02-26T07:18:45.902-05:00"
+        cq:lastModifiedBy="kooycx"
+        cq:tags="[abbvie-com-2:categories/neuroscience-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:description="AbbVie Nederland brengt een nieuwe behandeling op de markt voor mensen met de gevorderde ziekte van Parkinson. De behandeling bevat de stofcombinatie foslevodopa/foscarbidopa, welke is verwerkt in een oplossing die onderhuids wordt toegediend."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-02-13T07:56:51.409-05:00"
+        jcr:lastModifiedBy="kooycx"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Nieuwe behandeling beschikbaar voor gevorderde ziekte van Parkinson"
+        jcr:uuid="02454c13-5492-4ffc-bbc0-404c70fad62a"
+        sling:resourceType="abbvie-com2/components/storypage"
+        ctaAltText="Lees meer"
+        ctaText="Lees meer"
+        description="AbbVie Nederland brengt een nieuwe behandeling op de markt voor mensen met de gevorderde ziekte van Parkinson. De behandeling bevat de stofcombinatie foslevodopa/foscarbidopa, welke is verwerkt in een oplossing die onderhuids wordt toegediend."
+        fileReference="/content/dam/abbvie-com2/images/cell/neuroscience-cell-feature.jpg"
+        hideInNav="true"
+        navTitle="Nieuwe behandeling beschikbaar voor gevorderde ziekte van Parkinson"
+        pageTitle="Nieuwe behandeling beschikbaar voor gevorderde ziekte van Parkinson"
+        publishDate="{Date}2024-01-09T09:00:00.000+01:00"
+        readTime="3"
+        readWatchTimeSel="read-time"
+        title="Nieuwe behandeling voor gevorderde ziekte van Parkinson">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-01-17T09:50:58.328-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/header/netherlands-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-01-17T09:57:50.984-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:18:38.552-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2024-01-18T04:50:17.527-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Nieuwe behandeling voor ziekte van Parkinson"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2024-01-18T04:53:24.262-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>AbbVie Nederland brengt een nieuwe behandeling op de markt voor mensen met de gevorderde ziekte van Parkinson. De behandeling bevat de stofcombinatie foslevodopa/foscarbidopa, welke is verwerkt in een oplossing die onderhuids wordt toegediend.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Foslevodopa/foscarbidopa, merknaam Duodopa oplossing voor infusie, is goedgekeurd voor de behandeling van de gevorderde levodopa-responsieve ziekte van Parkinson met ernstige motorische fluctuaties en hyperkinesie of dyskinesie wanneer andere beschikbare combinaties van geneesmiddelen geen bevredigend resultaat gegeven hebben.&lt;sup>1&lt;/sup>&amp;nbsp;De behandeling wordt vergoed vanuit het basispakket.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <image
+                                    cq:styleIds="[1402843082822,1402843082834]"
+                                    jcr:created="{Date}2024-01-18T04:34:02.374-05:00"
+                                    jcr:createdBy="kooycx"
+                                    jcr:lastModified="{Date}2024-01-18T04:52:17.173-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/images/cell/neuroscience-cell-feature.jpg"
+                                    isDecorative="false"
+                                    titleValueFromDAM="true"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-01-18T04:53:11.386-05:00"
+                                    jcr:createdBy="kooycx"
+                                    jcr:lastModified="{Date}2024-01-18T04:55:52.199-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;b>Gevorderde ziekte van Parkinson&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>De ziekte van Parkinson is een chronische, progressieve, neurodegeneratieve aandoening waarbij &amp;nbsp;hersencellen die dopamine maken langzaam afsterven. Kenmerkend voor de ziekte zijn motorische symptomen, zoals tremoren, spierstijfheid, traagheid van beweging en moeite met evenwicht. Naast deze, bij veel mensen bekende symptomen, zijn er ook andere non-motorische symptomen zoals slaapstoornissen, stemmingsproblemen en depressie.&lt;sup>2&lt;/sup>&amp;nbsp;De symptomen kunnen een grote impact hebben op het dagelijks functioneren.&lt;/p>&#xd;&#xa;&lt;p>De symptomen van de ziekte worden in eerste instantie vaak gecontroleerd met orale medicatie. In de latere fase kunnen responsfluctuaties optreden. Indien, ondanks optimale instelling op orale geneesmiddelen toch invaliderende onvoorspelbare motorische complicaties (= ‘off’-perioden)/responsfluctuaties optreden, komen geavanceerde behandelingen in aanmerking.&lt;sup>3&lt;/sup>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Werking foslevodopa/foscarbidopa&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.verdermetparkinson.nl/behandelingen/medicijnen/levodopa&quot;>Levodopa&lt;/a>&amp;nbsp;is een stof die in de hersenen wordt omgezet in dopamine. Hierdoor wordt het tekort aan dopamine bij mensen met de ziekte van Parkinson tijdelijk tegengegaan. Foscarbidopa wordt in het lichaam omgezet in carbidopa. Dit zorgt ervoor dat de levodopa pas in de hersenen, waar het nodig is, wordt omgezet in dopamine.&lt;/p>&#xd;&#xa;&lt;p>De oplossing van foslevodopa en foscarbidopa wordt toegediend via een canule die net onder de huid zit.&amp;nbsp;De canule is via een slangetje verbonden aan een pomp. De pomp zorgt ervoor dat het lichaam 24 uur per dag een constante hoeveelheid medicatie krijgt. Dit gebeurt rechtstreeks via de huid. Doordat er een stabiele hoeveelheid levodopa in het bloed en de hersenen aanwezig is, treden minder fluctuaties op en kunnen de klachten afnemen.&lt;sup>4&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                            <container
+                                jcr:created="{Date}2024-01-18T04:56:15.404-05:00"
+                                jcr:createdBy="kooycx"
+                                jcr:lastModified="{Date}2024-01-18T04:57:38.760-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#F1F3FF">
+                                <header
+                                    jcr:created="{Date}2024-01-18T05:00:07.431-05:00"
+                                    jcr:createdBy="kooycx"
+                                    jcr:lastModified="{Date}2024-01-18T05:00:22.984-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Bronnen"/>
+                                <linklist
+                                    jcr:created="{Date}2024-01-18T04:56:45.528-05:00"
+                                    jcr:createdBy="kooycx"
+                                    jcr:lastModified="{Date}2024-01-18T05:00:46.637-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                    childDepth="1"
+                                    excludeCurrentPage="true"
+                                    linkItems="true"
+                                    listFrom="static"
+                                    sortOrder="asc"
+                                    tagsMatch="any">
+                                    <pages jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="1 SmPC Duodopa oplossing voor infusie"
+                                            linkTarget="_blank"
+                                            linkURL="https://ddd3carby9f0a.cloudfront.net/0386edc4-2c1e-4030-b22b-8c2d0fde1b14/1fec0cce-facb-4dc3-9e2f-90af1da14006/1fec0cce-facb-4dc3-9e2f-90af1da14006_source__v.pdf"
+                                            oneTrustEnabled="false"
+                                            text="1 SmPC Duodopa oplossing voor infusie"
+                                            textIconTarget="_blank"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="2 ParkinsonNet"
+                                            linkTarget="_blank"
+                                            linkURL="https://www.parkinsonnet.nl/parkinson/symptomen/"
+                                            oneTrustEnabled="false"
+                                            text="2 ParkinsonNet"
+                                            textIconTarget="_blank"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="3 Farmacotherapeutisch Kompas"
+                                            linkTarget="_blank"
+                                            linkURL="https://www.farmacotherapeutischkompas.nl/bladeren/indicatieteksten/ziekte_van_parkinson"
+                                            oneTrustEnabled="false"
+                                            text="3 Farmacotherapeutisch Kompas"
+                                            textIconTarget="_blank"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            alt="4 Bijsluiter Duodopa oplossing voor infusie"
+                                            linkTarget="_blank"
+                                            linkURL="https://ddd3carby9f0a.cloudfront.net/0386edc4-2c1e-4030-b22b-8c2d0fde1b14/8cc3f9c7-08f4-4289-bf92-493939d6adcb/8cc3f9c7-08f4-4289-bf92-493939d6adcb_source__v.pdf"
+                                            oneTrustEnabled="false"
+                                            text="4 Bijsluiter Duodopa oplossing voor infusie"
+                                            textIconTarget="_blank"/>
+                                    </pages>
+                                </linklist>
+                                <text_731285990
+                                    jcr:created="{Date}2024-01-18T04:56:51.818-05:00"
+                                    jcr:createdBy="kooycx"
+                                    jcr:lastModified="{Date}2024-01-18T04:57:05.640-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;sup>NL-DUOD-23002&lt;/sup>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2024-02-26T07:18:45.894-05:00"
+                                jcr:lastModifiedBy="kooycx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Alle nieuwsartikelen"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="Alle nieuwsartikelen"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835982,1653546847153]"
+                                jcr:created="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-16T17:56:41.646-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <header
+                                    cq:styleIds="[2]"
+                                    jcr:created="{Date}2022-12-12T11:17:13.424-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-17T10:03:25.317-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Ontdek meer"/>
+                                <cardpagestory
+                                    jcr:created="{Date}2023-08-09T12:37:15.368-04:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-01-25T11:08:27.164-05:00"
+                                    jcr:lastModifiedBy="kooycx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/nl/nl/nieuws"/>
+                            </container_copy_copy_>
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835879,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                    <separator
+                        cq:styleIds="[1662756486159]"
+                        jcr:created="{Date}2024-01-17T09:56:02.779-05:00"
+                        jcr:createdBy="kooycx"
+                        jcr:lastModified="{Date}2024-01-17T09:56:17.616-05:00"
+                        jcr:lastModifiedBy="kooycx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-01-17T09:53:16.324-05:00"
+                    jcr:lastModifiedBy="kooycx"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/nl/nl/site/footer/netherlands-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

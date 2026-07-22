@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-04-09T08:48:57.046-04:00"
+        cq:lastModifiedBy="bryanjx9"
+        cq:redirectTarget="https://privacy.abbvie/privacy-policies/us-es-privacy-notice.html#h19"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/primary-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2025-04-09T08:48:57.037-04:00"
+        jcr:lastModifiedBy="bryanjx9"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Aviso de privacidad"
+        jcr:uuid="a4090a26-a2db-4951-89ec-bb08f31af990"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        hideInNav="true"
+        navTitle="Aviso de privacidad"
+        pageTitle="Aviso de privacidad">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2025-04-07T15:37:24.288-04:00"
+                    jcr:lastModifiedBy="bryanjx9"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pr/es/site/header/puerto-rico-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                        jcr:lastModified="{Date}2024-10-03T15:42:30.058-04:00"
+                        jcr:lastModifiedBy="jewitca"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#071D49"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <embed
+                                jcr:created="{Date}2024-10-03T15:43:03.001-04:00"
+                                jcr:createdBy="jewitca"
+                                jcr:lastModified="{Date}2025-04-07T15:36:16.184-04:00"
+                                jcr:lastModifiedBy="bryanjx9"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/embed/v2/embed"
+                                embeddableResourceType="abbvie-com2/components/embed/v2/embed/embeddable/onetrust"
+                                loadNotice="https://privacyportal-cdn.onetrust.com/baa8d3f1-40eb-408e-9928-100470b8ea17/privacy-notices/42565d19-28f8-4e69-b0cd-f06af02dcc45.json"
+                                oneTrustId="otnotice-42565d19-28f8-4e69-b0cd-f06af02dcc45"
+                                scriptSettings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC5vbmV0cnVzdC5jb20vcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9"
+                                type="embeddable"/>
+                        </container3>
+                    </container2>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2025-04-07T15:37:50.049-04:00"
+                    jcr:lastModifiedBy="bryanjx9"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/pr/es/site/footer/puerto-rico-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

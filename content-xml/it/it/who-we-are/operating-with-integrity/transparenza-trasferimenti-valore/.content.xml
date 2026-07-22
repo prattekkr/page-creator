@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-04-14T09:26:05.943-04:00"
+        cq:lastModifiedBy="MONTIIX"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="AbbVie è trasparente sul modo in cui collabora con gli operatori sanitari (HCP), le organizzazioni sanitarie (HCO) e le organizzazioni di pazienti per migliorare la salute dei pazienti in tutto il mondo. "
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-01-13T04:50:49.676-05:00"
+        jcr:lastModifiedBy="MONTIIX"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Trasparenza nei trasferimenti di valore"
+        jcr:uuid="dac3de0b-caca-441c-958f-498dfd497be7"
+        sling:resourceType="abbvie-com2/components/remotepage"
+        ctaAltText="SCOPRI DI PIÙ"
+        ctaText="SCOPRI DI PIÙ"
+        eyebrow="chi siamo"
+        fileReference="/content/dam/abbvie-com2/images/employee/male/man-in-office-hero.jpg"
+        navTitle="Trasparenza nei trasferimenti di valore"
+        pageTitle="Trasparenza nei trasferimenti di valore"
+        title="Trasparenza nei pagamenti "
+        warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/it/it/site/popups/warn-on-departure/master">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:lastModified="{Date}2024-12-09T05:21:30.732-05:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/it/it/site/header/italy-header"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2024-12-10T04:15:31.591-05:00"
+                        jcr:lastModifiedBy="NANDIVX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/male/man-in-office-hero.jpg"/>
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <breadcrumb
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
+                                disableShadowing="false"
+                                hideCurrent="false"
+                                showHidden="true"
+                                startLevel="4"/>
+                            <title
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:lastModified="{Date}2026-01-13T04:56:16.889-05:00"
+                                jcr:lastModifiedBy="MONTIIX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Trasparenza nei trasferimenti di valore"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                type="h1"
+                                variant="h"/>
+                            <text_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2026-01-13T04:57:07.127-05:00"
+                                jcr:lastModifiedBy="MONTIIX"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Siamo guidati da una politica di trasparenza nelle nostre relazioni con gli operatori sanitari (HCP), le organizzazioni sanitarie (HCO) e le organizzazioni dei pazienti.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        </container3>
+                    </container2>
+                    <accordion
+                        cq:styleIds="[2,8]"
+                        jcr:created="{Date}2024-12-09T08:13:24.210-05:00"
+                        jcr:createdBy="NANDIVX5"
+                        jcr:lastModified="{Date}2026-01-13T04:59:47.440-05:00"
+                        jcr:lastModifiedBy="MONTIIX"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                        singleExpansion="false">
+                        <item_1733806576858
+                            cq:panelTitle="Borse di studio"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-02-24T04:02:02.787-05:00"
+                            jcr:lastModifiedBy="MONTIIX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>La collaborazione tra aziende farmaceutiche e mondo scientifico può&amp;nbsp;essere attivata anche tramite borse di studio. AbbVie, in ottemperanza alle indicazioni del codice deontologico di&amp;nbsp; Farmindustria,&amp;nbsp;rende pubblico l’elenco delle borse di studio erogate per singolo centro nel precedente&amp;nbsp;anno solare, unitamente alla durata delle stesse e al valore economico dei singoli finanziamenti.&lt;/p>&#xd;&#xa;&lt;p>Informazioni sulle&amp;nbsp;&lt;a href=&quot;/content/dam/abbvie-com2/it/documents/borse-studio-2024.html&quot;>Borse di Studio Erogate nell'anno 2024&lt;/a>.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1733806599164
+                            cq:panelTitle="Codice EFPIA"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-01-13T05:00:31.407-05:00"
+                            jcr:lastModifiedBy="MONTIIX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>Per AbbVie la trasparenza è garanzia di credibilità e presupposto per&amp;nbsp;relazioni di&amp;nbsp; fiducia tra le industrie farmaceutiche, gli operatori e le organizzazioni sanitarie. In linea con questo approccio, AbbVie è tra le aziende del settore farmaceutico che recepiscono, in accordo con&amp;nbsp;Farmindustria, il Codice di Autoregolamentazione EFPIA, in base al quale risorse e trasferimenti di valore sono pubblici a partire da giugno 2016.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1733806614924_c
+                            cq:panelTitle="RAPPORTI CON OPERATORI SANITARI (HCP/Health Care Professional), ORGANIZZAZIONI SANITARIE (HCO/Health Care Organizations) E ASSOCIAZIONI DEI PAZIENTI/ A SUPPORTO DEI PAZIENTI"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-04-14T09:26:05.935-04:00"
+                            jcr:lastModifiedBy="MONTIIX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>AbbVie rende pubblici i dati e l’elenco dei rappresentanti del mondo&amp;nbsp;scientifico, di operatori e organizzazioni sanitarie con i quali collabora in un’ottica di trasparenza.&lt;/p>&#xd;&#xa;&lt;p>La Società AbbVie s.r.l. ha acquisito, con decorrenza dal 1° Ottobre 2022, la società Allergan S.p.A. mediante fusione per incorporazione.&lt;br>&#xd;&#xa;Le pubblicazioni dei disclosure reports degli anni precendenti sono reperibili&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/our-company/ethics-compliance/physician-payments.html&quot;>cliccando qui&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/our-company/ethics-compliance/physician-payments.html&quot;>Informazioni sulle risorse e i trasferimenti a HCP, HCO e Associazioni dei Pazienti&lt;/a>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://trasparenza.abbvie.it/disclosurecode/inquiry.html&quot;>Per richiedere informazioni clicca qui&amp;nbsp;&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a>&lt;/a>&lt;a href=&quot;https://www.farmindustria.it/documenticategory/codice-deontologico/&quot; target=&quot;_blank&quot;>Codice Deontologico Farmindustria&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1733806638266
+                            cq:panelTitle="Domande frequenti"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-02-24T04:13:54.502-05:00"
+                            jcr:lastModifiedBy="MONTIIX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;b>Perchè AbbVie pubblica i trasferimenti di valore ad organizzazioni e operatori sanitari?&lt;/b>&lt;br>&#xd;&#xa;AbbVie in Italia, in quanto azienda associata a Farmindustria, pubblicherà tutti i Trasferimenti di Valore a Operatori Sanitari e Organizzazioni Sanitarie come richiesto dal Codice Deontologico di Farmindustria, che si conforma al Codice sulla Pubblicazione dei Trasferimenti di Valore (Code on Disclosure on Transfers of Value) della Federazione Europea delle Industrie Farmaceutiche (EFPIA). Il Codice Deontologico di Farmindustria richiede a tutte le&amp;nbsp; aziende farmaceutiche associate di documentare e pubblicare sui propri siti web i Trasferimenti di Valore (come di seguito definiti) “diretti o indiretti” a Operatori Sanitari e Organizzazioni Sanitarie con domicilio in Europa (art.5), accompagnati da una Nota Metodologica&amp;nbsp;con la quale siano descritti i criteri utilizzati per predisporre i dati da pubblicare, identificando al contempo ciascuna tipologia di trasferimento di valore (art. 5.10).&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;br>&#xd;&#xa;&lt;b>Che cos'è il codice EFPIA?&lt;/b>&lt;br>&#xd;&#xa;Il Codice EFPIA sulla Trasparenza &amp;nbsp;è un codice di autoregolamentazione che prevede, da parte delle aziende farmaceutiche associate a EFPIA* - European Federation of Pharmaceutical Industries and Association -, l’impegno volontario a rendere pubblici i trasferimenti di valore destinati ad operatori sanitari e organizzazioni sanitarie con i quali collabora.&lt;br>&#xd;&#xa;*EFPIA disclosure code of transfers of value from pharmaceutical companies to healthcare professionals and healthcare organizations.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;&lt;b>Che cosa prevede?&lt;/b>&lt;br>&#xd;&#xa;L’adesione al Codice EFPIA prevede da parte delle aziende associate la pubblicazione sul proprio sito web di tutti trasferimenti di valore, diretti e indiretti, tra aziende, operatori sanitari e organizzazioni sanitarie. AbbVie pubblicherà entro Giugno le informazioni relative ai trasferimenti di valore e successivamente, ogni anno le informazioni relative ai trasferimenti di valore relativi all’anno precedente. &amp;nbsp;&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;&lt;b>Quali sono le finalità?&lt;/b>&lt;br>&#xd;&#xa;AbbVie crede fortemente nella trasparenza, elemento fondamentale alla base delle relazioni tra le industrie farmaceutiche, gli operatori sanitari, i pazienti, l’opinione pubblica. Aderendo al Codice EFPIA, AbbVie e le aziende del settore farmaceutico associate a Farmindustria hanno deciso di pubblicare i trasferimenti di valore destinati ad operatori ed organizzazioni sanitarie. Si tratta di attività medico-scientifica come le ricerche cliniche, &amp;nbsp;la formazione e l’aggiornamento degli operatori sanitari, quali ad esempio la partecipazione a congressi e convegni scientifici.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;&lt;b>Da quanto è attivo e in quali paesi?&lt;/b>&lt;br>&#xd;&#xa;Il Codice sulla Trasparenza di EFPIA si applica nei 33 stati dell’Unione Europea* appartenenti all’area EFTA e all’Area Economica Europea, più alcuni stati che aderiscono volontariamente al Codice Deontologico. Questo processo è già obbligatorio negli Stati Uniti e in alcuni paesi europei quali Francia e Olanda. I dati in Italia saranno pubblicati entro il 30 Giugno 2019 e riguardano i trasferimenti di valore del 2018.&lt;br>&#xd;&#xa;* Austria, Belgio, Bulgaria, Croazia, Cipro, Republica Ceca, Danimarca, Estonia, Finlandia, Francia, Germania, Grecia, Ungheria, Irlanda, Italia, Lettonia, Lituania, Malta, Paesi Bassi, Norvegia, Polonia, Portogallo, Romania, Russia, Serbia, Slovacchia, Slovenia, Spagna, Svezia, Svizzera, Turchia , Ucraina e Regno Unito.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>A chi si rivolge?&lt;/b>&lt;br>&#xd;&#xa;L’adesione al Codice EFPIA&amp;nbsp;sulla Trasparenza impegna le aziende associate a EFPIA e Farmindustria a rendere pubblici i trasferimenti di valore destinati ad operatori sanitari e organizzazioni sanitarie con i quali collabora.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;&lt;b>Che cosa si intende con Trasferimenti di Valore?&lt;/b>&lt;br>&#xd;&#xa;Si definiscono trasferimenti di valore i trasferimenti diretti o indiretti destinati ad operatori sanitari e organizzazioni sanitarie per l’organizzazione e/o partecipazione ad attività medico-scientifiche&amp;nbsp; quali convegni, congressi e seminari scientifici, servizi professionali e consulenze.&lt;br>&#xd;&#xa;Per approfondimenti consultare la&amp;nbsp;&lt;a href=&quot;https://www.abbvie.com/who-we-are/operating-with-integrity/transparency-in-payment.html&quot;>Nota Metodologica&lt;/a>.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;In che modo verranno pubblicati i dati relativi ai Trasferimenti di Valore?&lt;br>&#xd;&#xa;I trasferimenti di valore verranno pubblicati in forma aggregata o, previo consenso da parte dell’operatore sanitario, in forma individuale. AbbVie aderisce&amp;nbsp; al Codice EFPIA sulla Trasparenza nel pieno rispetto della normativa italiana sul trattamento dei dati personali (D. Lgs. n.&amp;nbsp;196 del 30 giugno 2006, ossia il “Codice di protezione in materia di dati personali”).&lt;br>&#xd;&#xa;&amp;nbsp;&lt;br>&#xd;&#xa;&lt;b>Con che cadenza verranno aggiornati e pubblicati i dati?&lt;/b>&lt;br>&#xd;&#xa;AbbVie pubblica e aggiorna sul proprio sito web i dati relativi ai trasferimenti di valore con cadenza annuale. I dati saranno visibili per almeno tre anni a partire dalla data di pubblicazione.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://trasparenza.abbvie.it/disclosurecode/inquiry.html&quot;>Per ulteriori informazioni clicca qui&lt;/a>.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1768298371267
+                            cq:panelTitle="Nota metodologica"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-02-24T04:14:15.601-05:00"
+                            jcr:lastModifiedBy="MONTIIX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;a id=&quot;notametodologica&quot;>&lt;/a>AbbVie in Italia, in quanto azienda associata a Farmindustria, pubblicherà tutti i Trasferimenti di Valore a Operatori Sanitari e Organizzazioni Sanitarie come richiesto dal Codice Deontologico di Farmindustria, che si conforma al Codice sulla Pubblicazione dei Trasferimenti di Valore (Code on Disclosure on Transfers of Value) della Federazione Europea delle Industrie Farmaceutiche (EFPIA).&lt;br />&#xd;&#xa;Il Codice Deontologico di Farmindustria in vigore richiede a tutte le aziende farmaceutiche associate di documentare e pubblicare sui propri siti web i Trasferimenti di Valore (come di seguito definiti) “diretti o indiretti” a Operatori Sanitari e Organizzazioni Sanitarie con domicilio in Europa (art.5), accompagnati da una Nota metodologica con la quale siano descritti i criteri utilizzati per predisporre i dati da pubblicare, identificando al contempo ciascuna tipologia di trasferimento di valore (art. 5.10).&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/our-company/ethics-compliance/physician-payments.html&quot;>Leggi tutto&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <item_1768298379191
+                            cq:panelTitle="Trasparenza responsabile"
+                            cq:styleIds="[1659545825678]"
+                            jcr:lastModified="{Date}2026-02-04T11:53:08.338-05:00"
+                            jcr:lastModifiedBy="MONTIIX"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            text="&lt;p>&lt;b>Pubblicazione dei dati relativi ai rapporti tra imprese e medici: Trasparenza Responsabile&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Entro il mese di giugno dell’anno corrente saranno disponibili i dati relativi sia ai rapporti di collaborazione riferiti all’anno precedente tra AbbVie e gli Operatori sanitari (HCPs) e le Organizzazioni Sanitarie (HCOs), sia alla Ricerca e Sviluppo (R&amp;amp;D).&lt;br />&#xd;&#xa;Trasparenza assoluta con la pubblicazione di questi dati è la scelta che le imprese del farmaco hanno fatto con piena convinzione, adottando il Codice sulla disclosure di Farmindustria, in attuazione del Codice EFPIA (Federazione Europea delle Associazioni e delle Industrie Farmaceutiche).&lt;/p>&#xd;&#xa;&lt;p>La collaborazione, già da tempo molto ben regolata, tra imprese del farmaco e medici si articola in diversi ambiti di attività:&lt;/p>&#xd;&#xa;&lt;p>1.     ricerca e sviluppo di nuovi farmaci attraverso gli studi clinici svolti negli ospedali, nelle università e nelle strutture sanitarie pubbliche e private;&lt;/p>&#xd;&#xa;&lt;p>2.    consulenze scientifiche;&lt;/p>&#xd;&#xa;&lt;p>3.     seminari e convegni scientifici, che offrono informazione e aggiornamento;&lt;/p>&#xd;&#xa;&lt;p>4.     supporto ai congressi e corsi ECM (Educazione Continua in Medicina) organizzati da strutture pubbliche, università, società scientifiche e provider accreditati ECM.&lt;/p>&#xd;&#xa;&lt;p>Proprio lo scambio di conoscenze tra imprese e medici, con il loro patrimonio di sapere e di esperienze sul campo, permette di raccogliere informazioni utili al percorso di ricerca e sviluppo e, dunque, di poter avere a disposizione farmaci sempre più efficaci per i bisogni di salute dei pazienti.&lt;br />&#xd;&#xa;Questi rapporti, oltre ad essere disciplinati da norme nazionali e internazionali, si fondano sul rispetto reciproco dei ruoli, in un quadro trasparente di regole deontologiche di Farmindustria, che prevedono controlli rigorosi effettuati secondo precisi iter istruttori da organismi terzi, presieduti da magistrati indicati dal Presidente della Corte di Cassazione.        &lt;/p>&#xd;&#xa;&lt;p>Potete accedere ai dati – pubblicati nel pieno rispetto della normativa italiana sulla privacy – relativi ai singoli professionisti che hanno firmato il consenso e, in forma aggregata, a tutti gli altri. &lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.com/our-company/ethics-compliance/physician-payments.html&quot;>Nota metodologica&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </accordion>
+                    <separator_copy_1576705303
+                        cq:styleIds="[1662756542862]"
+                        jcr:created="{Date}2024-12-10T00:24:19.070-05:00"
+                        jcr:createdBy="NANDIVX5"
+                        jcr:lastModified="{Date}2024-12-10T00:24:19.070-05:00"
+                        jcr:lastModifiedBy="NANDIVX5"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:lastModified="{Date}2024-12-09T05:26:58.437-05:00"
+                    jcr:lastModifiedBy="NANDIVX5"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/it/it/site/footer/italy-footer"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>
