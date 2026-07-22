@@ -114,7 +114,7 @@
         "jcr:title": "linkText",
         "linkURL": "link",
         "linkTarget": "ctaTarget",
-        "accessibilityLabel": "linkText",
+        "accessibilityLabel": "aria-label",
         "link": "link"
       },
       "skipProps": [
@@ -255,6 +255,7 @@
     },
     "abbvie-com2/components/linklist/v2/linklist": {
       "edsType": "linklist",
+      "childContainer": "pages",
       "propRenames": {
         "parentPage": "parentPage",
         "maxItems": "maxItems",

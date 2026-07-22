@@ -565,6 +565,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .tho-details { margin-bottom: 2px; }
 .tho-summary { font-size: .78rem; color: var(--brand); cursor: pointer; padding: 4px 0; }
 .thumb-order-list { background: #f8f9fb; border-radius: 6px; padding: 8px 10px; max-height: 160px; overflow-y: auto; margin-top: 4px; }
+/* ── Bulk Import ── */
+.bulk-table { width: 100%; border-collapse: collapse; font-size: .78rem; margin-top: 10px; }
+.bulk-table th { text-align: left; padding: 5px 8px; background: var(--surface2); font-weight: 600; font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); border-bottom: 1px solid var(--border); }
+.bulk-table td { padding: 5px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.bulk-row-done td { color: var(--muted); }
+.bulk-status { font-size: .72rem; font-weight: 600; }
+.bulk-status-ready { color: #0d9488; }
+.bulk-status-done  { color: var(--muted); }
+.bulk-status-error { color: var(--danger); }
+.bulk-status-publishing { color: var(--brand); }
+
 .tho-row { display: flex; gap: 8px; align-items: baseline; padding: 1px 0; }
 .tho-num { font-size: .65rem; color: var(--muted); width: 22px; flex-shrink: 0; text-align: right; }
 .tho-id { font-size: .72rem; font-family: monospace; color: var(--text); }

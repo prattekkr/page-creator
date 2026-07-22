@@ -108,7 +108,9 @@ function transformPath(value, pm) {
         break;
       }
     }
-    // 2. Check asset map (keyed by updated path) for DM Open API URL
+    // 2. Content fragments must never get a DM Open API URL — return prefix-substituted path only
+    if (updatedPath.includes('content-fragments')) return updatedPath;
+    // 3. Check asset map (keyed by updated path) for DM Open API URL
     const assetMap = pm.assetMap || {};
     const dmUrl = assetMap[updatedPath];
     return (dmUrl && dmUrl.trim()) ? dmUrl.trim() : updatedPath;
@@ -732,7 +734,11 @@ function collectChildItems(node, mapping) {
   const childPropRen = mapping.childPropRenames;
   const childSkip = new Set([...JCR_SYS_SET, 'cq:styleIds', 'textIsRich']);
   const items = [];
-  for (const [k, v] of Object.entries(node)) {
+  // If items live inside a named wrapper node (e.g. linklist → <pages>), look there instead
+  const source = (mapping.childContainer && node[mapping.childContainer] && typeof node[mapping.childContainer] === 'object')
+    ? node[mapping.childContainer]
+    : node;
+  for (const [k, v] of Object.entries(source)) {
     if (k.startsWith('@') || k === '#text') continue;
     if (!v || typeof v !== 'object') continue;
     const itemProps = {};
@@ -892,6 +898,29 @@ app.post('/api/parse-jcr-xml', xmlUpload.single('jcrFile'), (req, res) => {
   }
 });
 
+// ── Bulk XML parse ────────────────────────────────────────────────────────────
+app.post('/api/bulk-parse-xmls', xmlUpload.array('xmlFiles', 100), (req, res) => {
+  if (!req.files?.length) return res.status(400).json({ error: 'No files uploaded' });
+  const results = [];
+  for (const file of req.files) {
+    try {
+      const xml  = file.buffer.toString('utf8');
+      const tree = JCR_XML_PARSER.parse(xml);
+      const jcrRoot    = tree['jcr:root'] || tree;
+      const jcrContent = jcrRoot['jcr:content'] || jcrRoot;
+      const ordered    = [];
+      walkXmlNode(jcrContent, ordered);
+      const pageTitle = String(jcrContent['@jcr:title'] || '').trim()
+        || file.originalname.replace(/\.content\.xml$/i, '');
+      const slug = file.originalname.replace(/\.content\.xml$/i, '').replace(/\.[^.]+$/, '');
+      results.push({ fileName: file.originalname, slug, pageTitle, ordered, ok: true });
+    } catch (err) {
+      results.push({ fileName: file.originalname, slug: '', pageTitle: '', ordered: [], ok: false, error: err.message });
+    }
+  }
+  res.json({ ok: true, results });
+});
+
 // ── Path map endpoints ────────────────────────────────────────────────────────
 app.get('/api/path-map', (_req, res) => res.json(pathMap));
 
@@ -928,10 +957,12 @@ app.post('/api/path-map/import-csv', xmlUpload.single('csvFile'), (req, res) => 
       const cols = lines[i].split(',').map(c => c.trim());
       const damPath = cols[0] || '';
       if (!damPath || !damPath.startsWith('/')) continue;
-      // Prefer col 5 (openApiUrl from 6-col export), fall back to col 1 (simple 2-col format)
+      // col 6 = isCF flag (7-col format); content fragments must never get a DM URL
+      const isCF = (cols[6] || '').toLowerCase() === 'true';
+      // Prefer col 5 (openApiUrl from 6/7-col export), fall back to col 1 (simple 2-col format)
       const rawUrl = cols.length >= 6 ? (cols[5] || '') : (cols[1] || '');
-      // Only use as DM URL if it's a real https URL (not a /content/ fallback path)
-      const dmUrl = rawUrl.startsWith('https://') ? rawUrl : '';
+      // Only use as DM URL if it's a real https URL and not a content fragment
+      const dmUrl = (!isCF && rawUrl.startsWith('https://')) ? rawUrl : '';
       existing[damPath] = dmUrl;
       if (dmUrl) withDmUrl++;
       imported++;
@@ -954,6 +985,12 @@ app.post('/api/migration-map', express.json(), (req, res) => {
     res.json({ ok: true });
   } catch (err) { res.status(500).json({ error: err.message }); }
 });
+
+// AEM-specific props that must never be written back from EDS canvas to AEM
+const AEM_WRITEBACK_SKIP = new Set([
+  'cq:styleIds', 'textIsRich', 'cq:lastModified', 'cq:lastModifiedBy',
+  'cq:template', 'cq:designPath', 'cq:tags',
+]);
 
 app.post('/api/write-to-aem', express.json(), async (req, res) => {
   try {
@@ -1021,12 +1058,14 @@ app.post('/api/write-to-aem', express.json(), async (req, res) => {
       for (const [edsKey, val] of Object.entries(change.newProps || {})) {
         if (String(edsKey).startsWith('_')) continue;
         const aemKey = inv[edsKey] || edsKey;
+        if (AEM_WRITEBACK_SKIP.has(aemKey) || AEM_WRITEBACK_SKIP.has(edsKey)) continue;
         body.set(aemKey, typedAemValue(edsKey, String(val ?? ''), change.blockType));
       }
     } else {
       // Updating existing node — only send changed props
       for (const [edsKey, { new: newVal }] of Object.entries(change.changedProps || {})) {
         const aemKey = inv[edsKey] || edsKey;
+        if (AEM_WRITEBACK_SKIP.has(aemKey) || AEM_WRITEBACK_SKIP.has(edsKey)) continue;
         body.set(aemKey, typedAemValue(edsKey, String(newVal ?? ''), change.blockType));
       }
     }

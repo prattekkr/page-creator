@@ -70,6 +70,23 @@
         "name": "tabCardStory"
       },
       {
+        "component": "select",
+        "valueType": "string",
+        "name": "pageVariant",
+        "label": "Page Type",
+        "value": "otherPage",
+        "options": [
+          {
+            "name": "Story Page",
+            "value": "storyPage"
+          },
+          {
+            "name": "Other Page",
+            "value": "otherPage"
+          }
+        ]
+      },
+      {
         "component": "text",
         "valueType": "string",
         "name": "eyebrowText",
@@ -1419,6 +1436,70 @@
         "name": "ariaCollapseLabel",
         "value": "",
         "label": "Aria Collapse Label"
+      },
+      {
+        "component": "tab",
+        "label": "Additional Content",
+        "name": "additionalContent"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "columnOneContent",
+        "value": "",
+        "label": "Column 1 Text Content",
+        "description": "Optional. Renders below the main Item Description Text, in the first of 2 columns at tablet width and up (e.g. the first half of a country/phone list). Leave empty to omit."
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "columnTwoContent",
+        "value": "",
+        "label": "Column 2 Text Content",
+        "description": "Optional. Renders alongside Column 1 Text Content as the second of 2 columns at tablet width and up. Leave empty to omit."
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "description": "Optional image to display within this panel.",
+        "configUrl": "/content/dam/config/image/asset-selector.json",
+        "multi": false
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset-mimetype",
+        "valueType": "string",
+        "name": "imageMimeType"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "value": "",
+        "label": "Image Alt Text"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "imageAlignment",
+        "value": "stacked",
+        "label": "Image Alignment",
+        "description": "How the image sits relative to the panel text (left/right only apply at tablet width and up).",
+        "options": [
+          {
+            "name": "Stacked (full width)",
+            "value": "stacked"
+          },
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
       }
     ]
   },
@@ -12515,6 +12596,24 @@
         ]
       },
       {
+        "component": "boolean",
+        "name": "primaryNavigationOnly",
+        "label": "Primary Navigation Only",
+        "value": false,
+        "valueType": "boolean",
+        "description": "When enabled, clicking this Level 1 link navigates directly to the configured page without showing a mega menu dropdown.",
+        "condition": {
+          "in": [
+            {
+              "var": "classes"
+            },
+            [
+              ""
+            ]
+          ]
+        }
+      },
+      {
         "component": "tab",
         "label": "Advanced",
         "name": "advanced"
@@ -14237,6 +14336,22 @@
         "description": "Provide alt text for the background image"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "toplefttext",
+        "value": "",
+        "label": "Top / Left Text",
+        "description": "Provide text for the top / left corner"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "toprighttext",
+        "value": "",
+        "label": "Top / Right Text",
+        "description": "Provide text for the top / right corner"
+      },
+      {
         "component": "tab",
         "label": "Styles",
         "name": "styles"
@@ -14878,6 +14993,845 @@
             ]
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "searchable-linklist",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Overview",
+        "name": "tab-overview-searchable-linklist"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "searchHint",
+        "label": "Search Placeholder Text",
+        "value": "",
+        "description": "Placeholder text shown in the search input field."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "searchIcon",
+        "label": "Search Icon Type",
+        "value": "none",
+        "description": "Controls whether the search field shows no icon, a font icon, or an image icon.",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Icon Font",
+            "value": "icon-font"
+          },
+          {
+            "name": "Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "searchIconText",
+        "label": "Search Font Icon",
+        "value": "",
+        "description": "Font icon name; visible only when Search Icon Type = Icon Font.",
+        "condition": {
+          "===": [
+            {
+              "var": "searchIcon"
+            },
+            "icon-font"
+          ]
+        }
+      },
+      {
+        "component": "reference",
+        "name": "searchIconAlt",
+        "label": "Search Image Icon",
+        "multi": false,
+        "description": "Image icon asset; visible only when Search Icon Type = Image.",
+        "condition": {
+          "===": [
+            {
+              "var": "searchIcon"
+            },
+            "image"
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "linkSource",
+        "label": "Link Source",
+        "value": "custom",
+        "description": "Child Pages: auto-list from the site index. Icons / Custom: author Link List Item blocks.",
+        "options": [
+          {
+            "name": "Child Pages",
+            "value": "child-pages"
+          },
+          {
+            "name": "Icons",
+            "value": "icons"
+          },
+          {
+            "name": "Custom",
+            "value": "custom"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "parentPage",
+        "label": "Parent Page",
+        "value": "",
+        "description": "Root page path; child links are resolved from the site index under this path.",
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "childDepth",
+        "label": "Child Depth",
+        "value": 1,
+        "description": "How many levels of descendants to include (1 = direct children only).",
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 10
+        },
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "excludeCurrentPage",
+        "label": "Exclude Current Page",
+        "value": false,
+        "description": "Omit the active page from the generated list.",
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "enableDescription",
+        "label": "Enable Description",
+        "value": false,
+        "description": "Show page description below each link (from index metadata).",
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "enableTags",
+        "label": "Enable Tags",
+        "value": false,
+        "description": "Display tags from the index when available.",
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "enableSubtitle",
+        "label": "Enable Subtitle",
+        "value": false,
+        "description": "Show subtitle field from the index when available.",
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "enableDate",
+        "label": "Enable Date",
+        "value": false,
+        "description": "Show published or last modified date from the index.",
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "orderBy",
+        "label": "Order By",
+        "value": "content-tree",
+        "description": "Sort field for generated links.",
+        "options": [
+          {
+            "name": "Content Tree",
+            "value": "content-tree"
+          },
+          {
+            "name": "Title",
+            "value": "title"
+          },
+          {
+            "name": "Last Modified",
+            "value": "last-modified"
+          },
+          {
+            "name": "Published",
+            "value": "published"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "sortOrder",
+        "label": "Sort Order",
+        "value": "asc",
+        "options": [
+          {
+            "name": "Ascending",
+            "value": "asc"
+          },
+          {
+            "name": "Descending",
+            "value": "desc"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "maxItems",
+        "label": "Max Items",
+        "value": 25,
+        "description": "Maximum number of links to output.",
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 500
+        },
+        "condition": {
+          "===": [
+            {
+              "var": "linkSource"
+            },
+            "child-pages"
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "layout",
+        "label": "Layout",
+        "value": "single-column",
+        "description": "Column layout of the link list.",
+        "options": [
+          {
+            "name": "Single Column",
+            "value": "single-column"
+          },
+          {
+            "name": "Two Columns – stack on mobile",
+            "value": "two-columns-stack"
+          },
+          {
+            "name": "Two Columns – do not stack on mobile",
+            "value": "two-columns-no-stack"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Advanced",
+        "name": "tab-advanced-searchable-linklist"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "id",
+        "label": "Id",
+        "value": "",
+        "description": "Unique anchor ID used for deep-linking to this block."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "customClass",
+        "label": "Custom Class",
+        "value": "",
+        "description": "CSS class name(s) applied to the component wrapper."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "searchInId",
+        "label": "Search In ID",
+        "value": "",
+        "description": "Id of a separate content region to filter instead of (or in addition to) this block's own list."
+      },
+      {
+        "component": "tab",
+        "label": "Analytics",
+        "name": "tab-analytics-searchable-linklist"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "analyticsId",
+        "label": "Analytics Interaction ID",
+        "value": "",
+        "readOnly": true,
+        "description": "Generated automatically from the block resource path at render time."
+      },
+      {
+        "component": "tab",
+        "label": "Accessibility",
+        "name": "tab-accessibility-searchable-linklist"
+      },
+      {
+        "component": "select",
+        "name": "language",
+        "label": "Language",
+        "value": "none",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Bulgarian",
+            "value": "bg"
+          },
+          {
+            "name": "Chinese",
+            "value": "zh"
+          },
+          {
+            "name": "Chinese (Taiwan)",
+            "value": "zh-TW"
+          },
+          {
+            "name": "Czech",
+            "value": "cs"
+          },
+          {
+            "name": "Danish",
+            "value": "da"
+          },
+          {
+            "name": "Dutch",
+            "value": "nl"
+          },
+          {
+            "name": "English",
+            "value": "en"
+          },
+          {
+            "name": "Finnish",
+            "value": "fi"
+          },
+          {
+            "name": "French",
+            "value": "fr"
+          },
+          {
+            "name": "German",
+            "value": "de"
+          },
+          {
+            "name": "Greek",
+            "value": "el"
+          },
+          {
+            "name": "Hebrew",
+            "value": "he"
+          },
+          {
+            "name": "Hungarian",
+            "value": "hu"
+          },
+          {
+            "name": "Italian",
+            "value": "it"
+          },
+          {
+            "name": "Japanese",
+            "value": "ja"
+          },
+          {
+            "name": "Korean",
+            "value": "ko"
+          },
+          {
+            "name": "Norwegian",
+            "value": "no"
+          },
+          {
+            "name": "Polish",
+            "value": "pl"
+          },
+          {
+            "name": "Portuguese",
+            "value": "pt"
+          },
+          {
+            "name": "Russian",
+            "value": "ru"
+          },
+          {
+            "name": "Slovak",
+            "value": "sk"
+          },
+          {
+            "name": "Slovenian",
+            "value": "sl"
+          },
+          {
+            "name": "Spanish",
+            "value": "es"
+          },
+          {
+            "name": "Swedish",
+            "value": "sv"
+          },
+          {
+            "name": "Turkish",
+            "value": "tr"
+          },
+          {
+            "name": "Ukrainian",
+            "value": "uk"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "link-list-item",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Overview",
+        "name": "tab-overview-link-list-item"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link",
+        "value": "",
+        "description": "Destination path or external URL."
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "openInNewTab",
+        "label": "Open in a new tab",
+        "value": false,
+        "description": "When enabled, opens the link target in a new browser tab/window."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Link Text",
+        "value": "",
+        "description": "Visible label; may default to the target page title when blank."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subtitle",
+        "label": "Subtitle",
+        "value": "",
+        "description": "Optional subtitle displayed beneath the link text."
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "value": "",
+        "valueType": "string",
+        "description": "Supporting description for the link item."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "iconType",
+        "label": "Icon Type",
+        "value": "none",
+        "description": "Chooses the icon source method for the item.",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Icon Font",
+            "value": "font"
+          },
+          {
+            "name": "Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "fontIcon",
+        "label": "Font Icon",
+        "value": "",
+        "description": "Font icon name; visible only when Icon Type = Icon Font.",
+        "condition": {
+          "===": [
+            {
+              "var": "iconType"
+            },
+            "font"
+          ]
+        }
+      },
+      {
+        "component": "reference",
+        "name": "imageIcon",
+        "label": "Image Icon",
+        "multi": false,
+        "description": "Image asset; visible only when Icon Type = Image.",
+        "condition": {
+          "===": [
+            {
+              "var": "iconType"
+            },
+            "image"
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "iconPosition",
+        "label": "Icon Position",
+        "value": "before",
+        "description": "Places the icon before or after the link text.",
+        "options": [
+          {
+            "name": "Before",
+            "value": "before"
+          },
+          {
+            "name": "After",
+            "value": "after"
+          }
+        ],
+        "condition": {
+          "in": [
+            {
+              "var": "iconType"
+            },
+            [
+              "font",
+              "image"
+            ]
+          ]
+        }
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "iconLink",
+        "label": "Icon Link",
+        "value": "",
+        "description": "Optional separate target when clicking the icon.",
+        "condition": {
+          "in": [
+            {
+              "var": "iconType"
+            },
+            [
+              "font",
+              "image"
+            ]
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "enableConfirmationModal",
+        "label": "Enable Confirmation Modal",
+        "value": false,
+        "description": "Prompts the user with a modal before navigation."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "confirmationModalType",
+        "label": "Type of confirmation modal",
+        "value": "standard",
+        "description": "Style of the confirmation modal.",
+        "options": [
+          {
+            "name": "Standard",
+            "value": "standard"
+          },
+          {
+            "name": "Exit Modal",
+            "value": "exit-modal"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "enableConfirmationModal"
+            },
+            true
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "modalId",
+        "label": "Modal ID",
+        "value": "",
+        "description": "Identifier of the modal to trigger.",
+        "condition": {
+          "===": [
+            {
+              "var": "enableConfirmationModal"
+            },
+            true
+          ]
+        }
+      },
+      {
+        "component": "tab",
+        "label": "Advanced",
+        "name": "tab-advanced-link-list-item"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "id",
+        "label": "Id",
+        "value": "",
+        "description": "Unique anchor ID for this list item."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "customClass",
+        "label": "Custom Class",
+        "value": "",
+        "description": "CSS class name(s) applied to the item container."
+      },
+      {
+        "component": "tab",
+        "label": "Analytics",
+        "name": "tab-analytics-link-list-item"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "analyticsId",
+        "label": "Analytics Interaction ID",
+        "value": "",
+        "readOnly": true,
+        "description": "Generated automatically from the item resource path at render time."
+      },
+      {
+        "component": "tab",
+        "label": "Accessibility",
+        "name": "tab-accessibility-link-list-item"
+      },
+      {
+        "component": "select",
+        "name": "language",
+        "label": "Language",
+        "value": "none",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Bulgarian",
+            "value": "bg"
+          },
+          {
+            "name": "Chinese",
+            "value": "zh"
+          },
+          {
+            "name": "Chinese (Taiwan)",
+            "value": "zh-TW"
+          },
+          {
+            "name": "Czech",
+            "value": "cs"
+          },
+          {
+            "name": "Danish",
+            "value": "da"
+          },
+          {
+            "name": "Dutch",
+            "value": "nl"
+          },
+          {
+            "name": "English",
+            "value": "en"
+          },
+          {
+            "name": "Finnish",
+            "value": "fi"
+          },
+          {
+            "name": "French",
+            "value": "fr"
+          },
+          {
+            "name": "German",
+            "value": "de"
+          },
+          {
+            "name": "Greek",
+            "value": "el"
+          },
+          {
+            "name": "Hebrew",
+            "value": "he"
+          },
+          {
+            "name": "Hungarian",
+            "value": "hu"
+          },
+          {
+            "name": "Italian",
+            "value": "it"
+          },
+          {
+            "name": "Japanese",
+            "value": "ja"
+          },
+          {
+            "name": "Korean",
+            "value": "ko"
+          },
+          {
+            "name": "Norwegian",
+            "value": "no"
+          },
+          {
+            "name": "Polish",
+            "value": "pl"
+          },
+          {
+            "name": "Portuguese",
+            "value": "pt"
+          },
+          {
+            "name": "Russian",
+            "value": "ru"
+          },
+          {
+            "name": "Slovak",
+            "value": "sk"
+          },
+          {
+            "name": "Slovenian",
+            "value": "sl"
+          },
+          {
+            "name": "Spanish",
+            "value": "es"
+          },
+          {
+            "name": "Swedish",
+            "value": "sv"
+          },
+          {
+            "name": "Turkish",
+            "value": "tr"
+          },
+          {
+            "name": "Ukrainian",
+            "value": "uk"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ariaLabel",
+        "label": "Aria Label",
+        "value": "",
+        "description": "Accessible label used when the link text is ambiguous."
       }
     ]
   },
@@ -15531,6 +16485,13 @@
         "valueType": "boolean",
         "name": "openInNewTab",
         "label": "Open in New Tab",
+        "value": false
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "showChevron",
+        "label": "Show Chevron",
         "value": false
       },
       {

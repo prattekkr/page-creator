@@ -18,6 +18,8 @@ const S = {
   saveTplSecId:   null,
   paletteTab:     'sections',  // 'components' | 'sections'
   sectionsLib:    [],     // predefined sections loaded from /api/sections
+  bulkTemplate:   null,   // deep clone of S.sections used as layout template for bulk import
+  bulkPages:      [],     // [{ fileName, slug, pageTitle, edsPath, sections, filled, skipped, status, error }]
 };
 
 let _uid = 0;
@@ -917,12 +919,14 @@ function settingsViewHtml() {
       <button class="sv-tab ${_settingsTab === 'paths'      ? 'sv-tab-active' : ''}" id="stab-paths">Paths</button>
       <button class="sv-tab ${_settingsTab === 'styles'     ? 'sv-tab-active' : ''}" id="stab-styles">Styles</button>
       <button class="sv-tab ${_settingsTab === 'thumbs'     ? 'sv-tab-active' : ''}" id="stab-thumbs">Thumbnails</button>
+      <button class="sv-tab ${_settingsTab === 'bulk'       ? 'sv-tab-active' : ''}" id="stab-bulk">Bulk Import</button>
     </div>
     <div class="sv-body">
       ${_settingsTab === 'connection' ? connectionTabHtml()
       : _settingsTab === 'mappings'  ? mappingTabHtml()
       : _settingsTab === 'paths'     ? pathsTabHtml()
       : _settingsTab === 'styles'    ? stylesTabHtml()
+      : _settingsTab === 'bulk'      ? bulkTabHtml()
       :                                thumbnailsTabHtml()}
     </div>
   </div>`;
@@ -1301,6 +1305,68 @@ function pathsTabHtml() {
 }
 
 // ── Styles settings tab ───────────────────────────────────────────────────────
+function bulkTabHtml() {
+  const tpl = S.bulkTemplate;
+  const tplInfo = tpl
+    ? `${tpl.length} section${tpl.length !== 1 ? 's' : ''}, ${tpl.reduce((n,s)=>(n+(s.blocks||[]).length),0)} blocks`
+    : 'None set';
+
+  const rowsHtml = S.bulkPages.length ? `
+    <table class="bulk-table">
+      <thead><tr>
+        <th>#</th><th>File</th><th>Page Title</th><th>EDS Path</th>
+        <th>Filled</th><th>Status</th><th></th>
+      </tr></thead>
+      <tbody>
+        ${S.bulkPages.map((p, i) => `
+        <tr class="bulk-row bulk-row-${p.status}">
+          <td>${i + 1}</td>
+          <td title="${x(p.fileName)}" style="max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${x(p.fileName)}</td>
+          <td>${x(p.pageTitle)}</td>
+          <td><input class="form-input bulk-path-input" style="font-size:.75rem;padding:2px 6px" data-bulk-idx="${i}" value="${x(p.edsPath)}"/></td>
+          <td style="text-align:center">${p.status === 'ready' ? `${p.filled}/${p.filled + p.skipped}` : '—'}</td>
+          <td><span class="bulk-status bulk-status-${p.status}">${p.status === 'ready' ? '✓ Ready' : p.status === 'publishing' ? '⏳' : p.status === 'done' ? '✓ Done' : p.status === 'error' ? '✗ Error' : p.status}</span>
+            ${p.error ? `<span title="${x(p.error)}" style="color:var(--danger);cursor:help;margin-left:4px">ⓘ</span>` : ''}
+          </td>
+          <td><button class="btn btn-xs btn-ghost" data-bulk-pub="${i}" ${p.status === 'publishing' ? 'disabled' : ''}>Publish</button></td>
+        </tr>`).join('')}
+      </tbody>
+    </table>
+    <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
+      <button class="btn btn-sm btn-primary" id="btn-bulk-publish-all">↑ Publish All</button>
+      <button class="btn btn-sm btn-ghost" id="btn-bulk-clear">Clear</button>
+      <span style="font-size:.75rem;color:var(--muted)">${S.bulkPages.filter(p=>p.status==='done').length}/${S.bulkPages.length} published</span>
+    </div>` : '';
+
+  return `
+    <div class="sv-section-title">Bulk XML Import</div>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:14px">
+      Build the page layout on the canvas once, then fill multiple pages from separate AEM XML files and publish them all to AEM.
+    </div>
+
+    <div style="display:flex;gap:10px;margin-bottom:14px;align-items:flex-start">
+      <div class="conn-card" style="flex:1;padding:14px">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;color:var(--brand);margin-bottom:8px">Step 1 — Set Layout Template</div>
+        <div style="font-size:.8rem;margin-bottom:8px">Current template: <strong>${x(tplInfo)}</strong></div>
+        <button class="btn btn-sm btn-ghost" id="btn-set-bulk-template">📌 Use Current Canvas</button>
+      </div>
+      <div class="conn-card" style="flex:2;padding:14px">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;color:var(--brand);margin-bottom:8px">Step 2 — Upload XML Files</div>
+        <div class="settings-field" style="margin-bottom:8px">
+          <label>Base EDS Path <span style="font-weight:400;color:var(--muted)">(page slug appended automatically)</span></label>
+          <input id="bulk-base-path" class="form-input" placeholder="/content/abbvie-nextgen-eds/corporate/abbvie-com/ar/es/" value="${x(S._bulkBasePath || '')}"/>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input id="bulk-xml-files" type="file" accept=".xml" multiple style="flex:1;font-size:.8rem"/>
+          <button class="btn btn-sm" id="btn-bulk-process" style="white-space:nowrap;background:#0d9488;color:#fff;border-color:#0d9488">⬆ Process</button>
+        </div>
+        <div id="bulk-alert" style="margin-top:8px"></div>
+      </div>
+    </div>
+
+    ${rowsHtml}`;
+}
+
 function stylesTabHtml() {
   const entries = _styleEntries || {};
   const ids     = Object.keys(entries);
@@ -1820,57 +1886,150 @@ async function doFillFromXml() {
   }
 }
 
-// ── Fill all canvas blocks from XML pool (auto sequential) ───────────────────
-// Returns { filled, skipped }. Pass silent=true to keep S.xmlPool intact.
-function fillAllFromPool(silent = false) {
-  if (!S.xmlPool?.length) return { filled: 0, skipped: 0 };
-
+// ── Pure fill: applies xmlPool items to a sections array (no side effects) ───
+function fillSectionsFromPool(sections, xmlPool) {
   const pool = {};
-  for (const comp of S.xmlPool) {
+  for (const comp of xmlPool) {
     (pool[comp.type] = pool[comp.type] || []).push({ props: comp.props, children: comp.children || [] });
   }
-
   const cursor = {};
   let filled = 0, skipped = 0;
 
-  function fillBlock(canvasBlk) {
-    const arr = pool[canvasBlk.type];
+  function fillBlock(blk) {
+    const arr = pool[blk.type];
     if (arr?.length) {
-      const rawSlot = canvasBlk.props?.xmlSlot;
+      const rawSlot = blk.props?.xmlSlot;
       let src = null;
       if (rawSlot !== undefined && rawSlot !== null && rawSlot !== '') {
         const slotIdx = parseInt(rawSlot, 10);
         if (!isNaN(slotIdx) && slotIdx >= 0 && slotIdx < arr.length) src = arr[slotIdx];
       } else {
-        if (cursor[canvasBlk.type] === undefined) cursor[canvasBlk.type] = 0;
-        const idx = cursor[canvasBlk.type]++;
+        if (cursor[blk.type] === undefined) cursor[blk.type] = 0;
+        const idx = cursor[blk.type]++;
         if (idx < arr.length) src = arr[idx];
       }
       if (src) {
-        Object.assign(canvasBlk.props, { ...src.props }); // spread so pool props stay immutable
-        if (src.children.length > 0) {
-          canvasBlk.children = src.children.map(ch => ({ ...ch, props: { ...ch.props }, id: uid(), children: [] }));
-          filled++;
-          return;
-        }
+        Object.assign(blk.props, { ...src.props });
+        if (src.children.length > 0)
+          blk.children = src.children.map(ch => ({ ...ch, props: { ...ch.props }, id: uid(), children: [] }));
         filled++;
       } else {
         skipped++;
       }
     }
-    for (const child of (canvasBlk.children || [])) fillBlock(child);
+    for (const child of (blk.children || [])) fillBlock(child);
   }
 
-  for (const sec of S.sections) {
+  for (const sec of sections) {
     for (const blk of (sec.blocks || [])) fillBlock(blk);
   }
+  return { filled, skipped };
+}
 
+// ── Fill all canvas blocks from XML pool (auto sequential) ───────────────────
+// Returns { filled, skipped }. Pass silent=true to keep S.xmlPool intact.
+function fillAllFromPool(silent = false) {
+  if (!S.xmlPool?.length) return { filled: 0, skipped: 0 };
+  const { filled, skipped } = fillSectionsFromPool(S.sections, S.xmlPool);
   if (!silent) {
     S._migrResult = { filled, skipped, fileName: S._xmlFileName || '' };
     S.xmlPool     = null;
     render();
   }
   return { filled, skipped };
+}
+
+// ── Bulk Import ───────────────────────────────────────────────────────────────
+async function doBulkProcess() {
+  if (!S.bulkTemplate?.length) {
+    document.getElementById('bulk-alert').innerHTML = `<div class="alert alert-error">Set a layout template first (Step 1).</div>`;
+    return;
+  }
+  const fileInput = document.getElementById('bulk-xml-files');
+  const basePath  = (document.getElementById('bulk-base-path')?.value || '').trim().replace(/\/$/, '');
+  if (!fileInput?.files?.length) {
+    document.getElementById('bulk-alert').innerHTML = `<div class="alert alert-error">Select at least one XML file.</div>`;
+    return;
+  }
+  S._bulkBasePath = basePath;
+  const alertEl = document.getElementById('bulk-alert');
+  alertEl.innerHTML = `<div class="alert alert-info"><span class="spinner spinner-dark"></span> Parsing ${fileInput.files.length} file(s)…</div>`;
+
+  const fd = new FormData();
+  for (const f of fileInput.files) fd.append('xmlFiles', f);
+
+  let data;
+  try {
+    const r = await fetch('/api/bulk-parse-xmls', { method: 'POST', body: fd });
+    data = await r.json();
+    if (!data.ok) throw new Error(data.error || 'Parse failed');
+  } catch (e) {
+    alertEl.innerHTML = `<div class="alert alert-error">${e.message}</div>`;
+    return;
+  }
+
+  S.bulkPages = data.results.map(result => {
+    if (!result.ok) return { fileName: result.fileName, slug: result.slug, pageTitle: result.fileName, edsPath: '', sections: [], filled: 0, skipped: 0, status: 'error', error: result.error };
+    // Deep-clone the template and fill with this page's XML pool
+    const sections = JSON.parse(JSON.stringify(S.bulkTemplate)).map(s => ({ ...s, id: uid(), blocks: (s.blocks||[]).map(b => ({ ...b, id: uid(), children: (b.children||[]).map(c => ({ ...c, id: uid() })) })) }));
+    const { filled, skipped } = fillSectionsFromPool(sections, result.ordered);
+    const edsPath = basePath ? `${basePath}/${result.slug}` : result.slug;
+    return { fileName: result.fileName, slug: result.slug, pageTitle: result.pageTitle, edsPath, sections, filled, skipped, status: 'ready', error: null };
+  });
+
+  alertEl.innerHTML = `<div class="alert alert-success">✓ Processed ${S.bulkPages.length} page(s).</div>`;
+  render();
+}
+
+async function doBulkPublishOne(idx) {
+  const page = S.bulkPages[idx];
+  if (!page || page.status === 'publishing') return;
+  const { aemHost, username, password } = S.conn;
+  if (!aemHost || !username || !password) { alert('Configure AEM connection in the Connection tab first.'); return; }
+  if (!page.edsPath) { alert('Set the EDS path for this page before publishing.'); return; }
+
+  page.status = 'publishing';
+  render();
+
+  try {
+    const changes = buildBulkChanges(page);
+    const r = await fetch('/api/write-to-aem', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ aemHost, username, password, changes })
+    });
+    const data = await r.json();
+    const failed = (data.results || []).filter(r => !r.ok);
+    page.status = failed.length ? 'error' : 'done';
+    page.error  = failed.length ? failed.map(f => f.jcrPath + ': ' + (f.error || f.status)).join('; ') : null;
+  } catch (e) {
+    page.status = 'error';
+    page.error  = e.message;
+  }
+  render();
+}
+
+async function doBulkPublishAll() {
+  const ready = S.bulkPages.map((p, i) => ({ p, i })).filter(({ p }) => p.status === 'ready' || p.status === 'error');
+  if (!ready.length) { alert('No pages with Ready or Error status to publish.'); return; }
+  for (const { i } of ready) await doBulkPublishOne(i);
+}
+
+function buildBulkChanges(page) {
+  const jcrBase = `${page.edsPath}/jcr:content/root`;
+  const changes = [];
+  for (const sec of page.sections) {
+    const secPath = `${jcrBase}/${sec._jcrKey || sec.id}`;
+    changes.push({ jcrPath: secPath, blockType: sec.type, isNew: true, newProps: sec.props || {} });
+    for (const blk of (sec.blocks || [])) {
+      const blkPath = `${secPath}/${blk._jcrKey || blk.id}`;
+      changes.push({ jcrPath: blkPath, blockType: blk.type, isNew: true, newProps: blk.props || {} });
+      for (const ch of (blk.children || [])) {
+        const chPath = `${blkPath}/${ch._jcrKey || ch.id}`;
+        changes.push({ jcrPath: chPath, blockType: ch.type, isNew: true, newProps: ch.props || {} });
+      }
+    }
+  }
+  return changes;
 }
 
 // ── Generate short text preview for an XML pool item ─────────────────────────
@@ -2324,9 +2483,31 @@ function bind() {
   on('btn-diagnose-page', 'click', dodiagnosePage);
   on('btn-fill-xml',   'click', doFillFromXml);
 
+  // Bulk import tab
+  on('btn-set-bulk-template', 'click', () => {
+    if (!S.sections.length) { alert('Canvas is empty — build a layout first.'); return; }
+    S.bulkTemplate = JSON.parse(JSON.stringify(S.sections));
+    render();
+  });
+  on('btn-bulk-process',     'click', doBulkProcess);
+  on('btn-bulk-publish-all', 'click', doBulkPublishAll);
+  on('btn-bulk-clear',       'click', () => { S.bulkPages = []; render(); });
+
+  // Per-row publish buttons
+  document.querySelectorAll('[data-bulk-pub]').forEach(el =>
+    el.addEventListener('click', () => doBulkPublishOne(Number(el.dataset.bulkPub))));
+
+  // Editable EDS path per row
+  document.querySelectorAll('.bulk-path-input').forEach(el =>
+    el.addEventListener('change', () => {
+      const i = Number(el.dataset.bulkIdx);
+      if (S.bulkPages[i]) S.bulkPages[i].edsPath = el.value.trim();
+    }));
+
   on('stab-settings', 'click', () => { _settingsTab = 'connection'; render(); });
   on('stab-mappings', 'click', () => { _settingsTab = 'mappings';   render(); });
   on('stab-paths',    'click', () => { _settingsTab = 'paths';      render(); });
+  on('stab-bulk',     'click', () => { _settingsTab = 'bulk';       render(); });
   on('stab-styles',   'click', async () => {
     _settingsTab = 'styles';
     if (!_styleEntries) {

@@ -58,7 +58,8 @@
       "pipeline",
       "custom-embed",
       "dashboard-card-link-list",
-      "inner-grid"
+      "inner-grid",
+      "searchable-linklist"
     ]
   },
   {
@@ -109,7 +110,8 @@
       "eyebrow-text",
       "custom-embed",
       "dashboard-card-link-list",
-      "inner-grid"
+      "inner-grid",
+      "searchable-linklist"
     ]
   },
   {
@@ -301,6 +303,12 @@
   {
     "id": "search",
     "components": []
+  },
+  {
+    "id": "searchable-linklist",
+    "components": [
+      "link-list-item"
+    ]
   },
   {
     "id": "separator",
