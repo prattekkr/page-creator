@@ -20,6 +20,7 @@ const S = {
   sectionsLib:    [],     // predefined sections loaded from /api/sections
   bulkTemplate:   null,   // deep clone of S.sections used as layout template for bulk import
   bulkPages:      [],     // [{ fileName, slug, pageTitle, edsPath, sections, filled, skipped, status, error }]
+  findSimilar:    { info: null, mode: 'page', path: '', region: '', threshold: 88, busy: false, result: null, error: null, expanded: {} },
 };
 
 let _uid = 0;
@@ -920,6 +921,7 @@ function settingsViewHtml() {
       <button class="sv-tab ${_settingsTab === 'styles'     ? 'sv-tab-active' : ''}" id="stab-styles">Styles</button>
       <button class="sv-tab ${_settingsTab === 'thumbs'     ? 'sv-tab-active' : ''}" id="stab-thumbs">Thumbnails</button>
       <button class="sv-tab ${_settingsTab === 'bulk'       ? 'sv-tab-active' : ''}" id="stab-bulk">Bulk Import</button>
+      <button class="sv-tab ${_settingsTab === 'similar'    ? 'sv-tab-active' : ''}" id="stab-similar">Find Similar</button>
     </div>
     <div class="sv-body">
       ${_settingsTab === 'connection' ? connectionTabHtml()
@@ -927,6 +929,7 @@ function settingsViewHtml() {
       : _settingsTab === 'paths'     ? pathsTabHtml()
       : _settingsTab === 'styles'    ? stylesTabHtml()
       : _settingsTab === 'bulk'      ? bulkTabHtml()
+      : _settingsTab === 'similar'   ? findSimilarTabHtml()
       :                                thumbnailsTabHtml()}
     </div>
   </div>`;
@@ -1211,7 +1214,7 @@ function mappingAnalysisHtml() {
       </div>
     </div>
     <div style="font-size:.74rem;color:var(--muted);margin-bottom:8px">
-      Analyzes <code>aem-content-xml/</code> and <code>eds-jcr-xml/</code> paired pages to suggest propRename mappings.
+      Analyzes <code>content-xml/</code> and <code>eds-jcr-xml/</code> paired pages to suggest propRename mappings.
     </div>
     ${tableHtml}
   </div>`;
@@ -1351,20 +1354,160 @@ function bulkTabHtml() {
         <button class="btn btn-sm btn-ghost" id="btn-set-bulk-template">📌 Use Current Canvas</button>
       </div>
       <div class="conn-card" style="flex:2;padding:14px">
-        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;color:var(--brand);margin-bottom:8px">Step 2 — Upload XML Files</div>
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;color:var(--brand);margin-bottom:8px">Step 2 — Load pages &amp; create</div>
         <div class="settings-field" style="margin-bottom:8px">
-          <label>Base EDS Path <span style="font-weight:400;color:var(--muted)">(page slug appended automatically)</span></label>
-          <input id="bulk-base-path" class="form-input" placeholder="/content/abbvie-nextgen-eds/corporate/abbvie-com/ar/es/" value="${x(S._bulkBasePath || '')}"/>
+          <label>Base EDS Path <span style="font-weight:400;color:var(--muted)">(page name appended automatically)</span></label>
+          <input id="bulk-base-path" class="form-input" placeholder="/content/abbvie-nextgen-eds/corporate/abbvie-com/ch/de/who-we-are/our-leaders" value="${x(S._bulkBasePath || '')}"/>
         </div>
+
+        <div class="settings-field" style="margin-bottom:8px">
+          <label>Source folder <span style="font-weight:400;color:var(--muted)">(inside the repo — each subfolder = one page, named after the folder)</span></label>
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="bulk-folder" class="form-input" style="flex:1" placeholder="content-xml/ch/de/who-we-are/our-leaders" value="${x(S._bulkFolder || '')}"/>
+            <button class="btn btn-sm" id="btn-bulk-load-folder" style="white-space:nowrap;background:#0d9488;color:#fff;border-color:#0d9488">📂 Load pages</button>
+          </div>
+        </div>
+
+        <div style="font-size:.72rem;color:var(--muted);margin:8px 0 4px">— or upload individual XML files —</div>
         <div style="display:flex;gap:8px;align-items:center">
           <input id="bulk-xml-files" type="file" accept=".xml" multiple style="flex:1;font-size:.8rem"/>
-          <button class="btn btn-sm" id="btn-bulk-process" style="white-space:nowrap;background:#0d9488;color:#fff;border-color:#0d9488">⬆ Process</button>
+          <button class="btn btn-sm btn-ghost" id="btn-bulk-process" style="white-space:nowrap">⬆ Process files</button>
         </div>
         <div id="bulk-alert" style="margin-top:8px"></div>
       </div>
     </div>
 
     ${rowsHtml}`;
+}
+
+// ── Find Similar Pages tab ────────────────────────────────────────────────────
+function simBand(s) { return s >= 90 ? 'vm-hi' : s >= 70 ? 'vm-mid' : 'vm-lo'; }
+function findSimilarTabHtml() {
+  const st = S.findSimilar, info = st.info;
+  const infoLine = info
+    ? `Indexed <strong>${info.indexed}</strong> AEM pages · ${info.regions.length} regions · ${info.canonCount} distinct pages`
+    : `<span style="color:var(--muted)"><span class="spinner spinner-dark"></span> Building structure index…</span>`;
+  const modeBtn = (m, label) => `<button class="btn btn-xs ${st.mode === m ? 'btn-primary' : 'btn-ghost'}" data-sim-mode="${m}">${label}</button>`;
+
+  let resultHtml = '';
+  if (st.error) resultHtml = `<div class="alert alert-error" style="margin-top:10px">${x(st.error)}</div>`;
+  else if (st.result && st.mode === 'page' && st.result.matches) {
+    const r = st.result;
+    resultHtml = `<div style="margin-top:14px">
+      <div class="sv-section-title" style="margin:0 0 4px">Best structural matches for <strong>${x(r.queryRel)}</strong></div>
+      <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Same page (<code>${x(r.canon)}</code>) in ${Math.max(0, r.total - 1)} other regions, ranked by layout match. Review a page, then import it yourself if it looks right.</div>
+      <table class="bulk-table"><thead><tr><th>#</th><th>Matching AEM page</th><th>Match</th></tr></thead>
+      <tbody>${r.matches.map((m, i) => `<tr>
+        <td>${i + 1}</td>
+        <td style="font-size:.78rem"><code>${x(m.rel)}</code></td>
+        <td style="text-align:center"><span class="vm-score ${simBand(m.score)}">${m.score}%</span></td>
+      </tr>`).join('')}</tbody></table>
+    </div>`;
+  } else if (st.result && st.mode === 'site' && st.result.rows) {
+    const r = st.result;
+    resultHtml = `<div style="margin-top:14px">
+      <div class="sv-section-title" style="margin:0 0 4px">${x(r.region)} — ${r.count} pages (most reusable first)</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Click any page to see its best-matching pages across regions.</div>
+      <table class="bulk-table"><thead><tr><th>Page</th><th>In regions</th><th>Layout variants</th><th>Share this layout</th></tr></thead>
+      <tbody>${r.rows.slice(0, 300).map(row => {
+        const ex = st.expanded[row.canon];
+        return `<tr class="sim-site-row" data-sim-page="${x(row.canon)}" style="cursor:pointer">
+          <td style="font-size:.75rem">${ex ? '▾' : '▸'} ${x(row.canon)}</td>
+          <td style="text-align:center">${row.regions}</td>
+          <td style="text-align:center">${row.variants}</td>
+          <td style="text-align:center"><span class="vm-pill ${row.shared >= 3 ? 'vm-pill-ok' : 'vm-pill-warn'}">${row.shared}</span></td>
+        </tr>${ex ? `<tr><td colspan="4" style="padding:0;background:var(--bg-secondary,#f8fafc)">
+          <div style="padding:8px 12px">${ex.loading
+            ? `<span class="spinner spinner-dark"></span> Finding matches…`
+            : (ex.matches && ex.matches.length
+              ? `<div style="font-size:.72rem;color:var(--muted);margin-bottom:4px">Best matches for <code>${x(r.region)}/${x(row.canon)}</code>:</div>
+                 ${ex.matches.slice(0, 12).map((m, i) => `<div style="display:flex;gap:8px;align-items:center;padding:2px 0;font-size:.75rem"><span style="width:20px;color:var(--muted)">${i + 1}</span><code style="flex:1">${x(m.rel)}</code><span class="vm-score ${simBand(m.score)}">${m.score}%</span></div>`).join('')}`
+              : `<span style="font-size:.75rem;color:var(--muted)">This page exists only in ${x(r.region)} — no other region to match.</span>`)}</div>
+        </td></tr>` : ''}`;
+      }).join('')}</tbody></table>
+      ${r.rows.length > 300 ? `<div style="font-size:.72rem;color:var(--muted);margin-top:6px">Showing first 300 of ${r.rows.length}</div>` : ''}
+    </div>`;
+  }
+
+  const controls = st.mode === 'page'
+    ? `<div class="settings-field" style="flex:1;margin:0">
+         <label>Page path <span style="font-weight:400;color:var(--muted)">(e.g. us/en/who-we-are, or just who-we-are)</span></label>
+         <input id="sim-path" class="form-input" list="sim-canons" placeholder="us/en/who-we-are" value="${x(st.path)}"/>
+       </div>`
+    : `<div class="settings-field" style="flex:1;margin:0">
+         <label>Region / site</label>
+         <select id="sim-region" class="form-input">${(info ? info.regions : []).map(rg => `<option ${st.region === rg ? 'selected' : ''}>${x(rg)}</option>`).join('')}</select>
+       </div>`;
+
+  return `
+    <div class="sv-section-title">Find Similar Pages (by structure)</div>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:6px">
+      Finds the same page across every regional site and groups them by layout structure — <strong>content and language are ignored</strong>. Migrate the biggest group's layout once; it covers every region in that group.
+    </div>
+    <div style="font-size:.8rem;margin-bottom:12px">${infoLine}
+      <button class="btn btn-xs btn-ghost" id="btn-sim-rebuild" style="margin-left:8px">↻ Rebuild index</button>
+    </div>
+
+    <div style="display:flex;gap:6px;margin-bottom:10px">${modeBtn('page', 'Single page')}${modeBtn('site', 'Whole site')}</div>
+
+    <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap">
+      ${controls}
+      ${st.mode === 'site' ? `<div class="settings-field" style="width:110px;margin:0">
+        <label>Group ≥ %</label>
+        <input id="sim-threshold" class="form-input" type="number" min="50" max="100" value="${st.threshold}"/>
+      </div>` : ''}
+      <button class="btn btn-sm btn-primary" id="btn-sim-run" ${st.busy ? 'disabled' : ''}>${st.busy ? '⏳ Scanning…' : (st.mode === 'page' ? '🔎 Find matches' : '🔎 Scan site')}</button>
+    </div>
+    <datalist id="sim-canons">${(info && info.sampleCanons ? info.sampleCanons : []).map(c => `<option value="${x(c)}">`).join('')}</datalist>
+    ${resultHtml}`;
+}
+
+async function vsimLoadInfo(refresh) {
+  if (refresh) { S.findSimilar.info = null; render(); }
+  try {
+    const r = await fetch('/api/similar/info' + (refresh ? '?refresh=1' : ''));
+    if (r.ok) {
+      S.findSimilar.info = await r.json();
+      if (!S.findSimilar.region && S.findSimilar.info.regions.length)
+        S.findSimilar.region = S.findSimilar.info.regions.includes('us/en') ? 'us/en' : S.findSimilar.info.regions[0];
+      render();
+    }
+  } catch (_) {}
+}
+
+// Expand a site-mode row to show that page's best matches across regions.
+async function toggleSitePage(canon) {
+  const st = S.findSimilar;
+  st.expanded = st.expanded || {};
+  if (st.expanded[canon]) { delete st.expanded[canon]; render(); return; }
+  st.expanded[canon] = { loading: true }; render();
+  try {
+    const r = await fetch('/api/similar/page', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: `${st.region}/${canon}` }) });
+    const d = await r.json();
+    st.expanded[canon] = { loading: false, matches: r.ok ? d.matches : [] };
+  } catch (_) { st.expanded[canon] = { loading: false, matches: [] }; }
+  render();
+}
+
+async function doSimilarRun() {
+  const st = S.findSimilar;
+  st.expanded = {};
+  // Read all inputs BEFORE render() (render rebuilds the DOM and would clear them).
+  st.threshold = Math.max(50, Math.min(100, Number(document.getElementById('sim-threshold')?.value) || 88));
+  if (st.mode === 'page') {
+    st.path = (document.getElementById('sim-path')?.value || '').trim();
+    if (!st.path) { st.error = 'Enter a page path.'; render(); return; }
+  } else {
+    st.region = document.getElementById('sim-region')?.value || st.region;
+  }
+  st.busy = true; st.error = null; st.result = null; render();
+  try {
+    const body = st.mode === 'page' ? { path: st.path, threshold: st.threshold } : { region: st.region, threshold: st.threshold };
+    const r = await fetch(`/api/similar/${st.mode}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    const d = await r.json();
+    if (r.ok) st.result = d; else st.error = d.error || 'Failed';
+  } catch (e) { st.error = e.message; }
+  st.busy = false; render();
 }
 
 function stylesTabHtml() {
@@ -1981,26 +2124,69 @@ async function doBulkProcess() {
   render();
 }
 
+// Load a whole folder of AEM pages (each direct subfolder = one page, named after
+// the folder) and fill each from its own .content.xml against the current template.
+async function doBulkLoadFolder() {
+  const alertEl = document.getElementById('bulk-alert');
+  if (!S.bulkTemplate?.length) { alertEl.innerHTML = `<div class="alert alert-error">Set a layout template first (Step 1).</div>`; return; }
+  const folder   = (document.getElementById('bulk-folder')?.value || '').trim();
+  const basePath = (document.getElementById('bulk-base-path')?.value || '').trim().replace(/\/$/, '');
+  if (!folder) { alertEl.innerHTML = `<div class="alert alert-error">Enter a source folder.</div>`; return; }
+  if (!basePath || !basePath.startsWith('/')) {
+    alertEl.innerHTML = `<div class="alert alert-error">Enter an absolute <strong>Base EDS Path</strong> first (e.g. <code>/content/abbvie-nextgen-eds/corporate/abbvie-com/ch/de/who-we-are/our-leaders</code>) — pages are created under it.</div>`;
+    return;
+  }
+  S._bulkFolder = folder; S._bulkBasePath = basePath;
+  alertEl.innerHTML = `<div class="alert alert-info"><span class="spinner spinner-dark"></span> Reading folder…</div>`;
+
+  let data;
+  try {
+    const r = await fetch('/api/bulk-parse-folder', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ folder }) });
+    data = await r.json();
+    if (!data.ok) throw new Error(data.error || 'Read failed');
+  } catch (e) { alertEl.innerHTML = `<div class="alert alert-error">${x(e.message)}</div>`; return; }
+
+  if (!data.results.length) { alertEl.innerHTML = `<div class="alert alert-error">No pages found (no subfolders with a .content.xml) in "${x(folder)}".</div>`; return; }
+
+  S.bulkPages = data.results.map(result => {
+    if (!result.ok) return { fileName: result.folderName, slug: result.slug, pageTitle: result.folderName, meta: {}, edsPath: '', sections: [], filled: 0, skipped: 0, status: 'error', error: result.error };
+    const sections = JSON.parse(JSON.stringify(S.bulkTemplate)).map(s => ({ ...s, id: uid(), blocks: (s.blocks||[]).map(b => ({ ...b, id: uid(), children: (b.children||[]).map(c => ({ ...c, id: uid() })) })) }));
+    const { filled, skipped } = fillSectionsFromPool(sections, result.ordered);
+    const edsPath = basePath ? `${basePath}/${result.slug}` : result.slug;
+    return { fileName: result.folderName, slug: result.slug, pageTitle: result.pageTitle, meta: result.meta || {}, edsPath, sections, filled, skipped, status: 'ready', error: null };
+  });
+  alertEl.innerHTML = `<div class="alert alert-success">✓ Loaded ${S.bulkPages.length} page(s) from folder. Review paths, then Publish.</div>`;
+  render();
+}
+
 async function doBulkPublishOne(idx) {
   const page = S.bulkPages[idx];
   if (!page || page.status === 'publishing') return;
   const { aemHost, username, password } = S.conn;
   if (!aemHost || !username || !password) { alert('Configure AEM connection in the Connection tab first.'); return; }
-  if (!page.edsPath) { alert('Set the EDS path for this page before publishing.'); return; }
+  const clean = (page.edsPath || '').trim().replace(/\/+$/, '');
+  const cut   = clean.lastIndexOf('/');
+  if (!clean.startsWith('/') || cut <= 0 || cut === clean.length - 1) {
+    page.status = 'error';
+    page.error  = `EDS path must be a full path like /content/.../parent/${page.slug} — set the Base EDS Path and reload the folder.`;
+    render(); return;
+  }
+  const parentPath = clean.slice(0, cut);
+  const pageName   = clean.slice(cut + 1);
 
   page.status = 'publishing';
   render();
 
   try {
-    const changes = buildBulkChanges(page);
-    const r = await fetch('/api/write-to-aem', {
+    // Create the page properly: page shell + full content import (same as Create Page).
+    const meta = (page.meta && Object.keys(page.meta).length) ? page.meta : (page.pageTitle ? { 'jcr:title': page.pageTitle } : {});
+    const r = await fetch('/api/pages', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ aemHost, username, password, changes })
+      body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: page.sections })
     });
     const data = await r.json();
-    const failed = (data.results || []).filter(r => !r.ok);
-    page.status = failed.length ? 'error' : 'done';
-    page.error  = failed.length ? failed.map(f => f.jcrPath + ': ' + (f.error || f.status)).join('; ') : null;
+    if (data.ok) { page.status = 'done'; page.error = null; page.authorUrl = data.authorUrl; }
+    else { page.status = 'error'; page.error = data.error || 'Create failed'; }
   } catch (e) {
     page.status = 'error';
     page.error  = e.message;
@@ -2490,6 +2676,7 @@ function bind() {
     render();
   });
   on('btn-bulk-process',     'click', doBulkProcess);
+  on('btn-bulk-load-folder', 'click', doBulkLoadFolder);
   on('btn-bulk-publish-all', 'click', doBulkPublishAll);
   on('btn-bulk-clear',       'click', () => { S.bulkPages = []; render(); });
 
@@ -2508,6 +2695,18 @@ function bind() {
   on('stab-mappings', 'click', () => { _settingsTab = 'mappings';   render(); });
   on('stab-paths',    'click', () => { _settingsTab = 'paths';      render(); });
   on('stab-bulk',     'click', () => { _settingsTab = 'bulk';       render(); });
+  on('stab-similar',  'click', () => { _settingsTab = 'similar';    render(); if (!S.findSimilar.info) vsimLoadInfo(); });
+
+  // Find Similar tab
+  if (_settingsTab === 'similar') {
+    if (!S.findSimilar.info) vsimLoadInfo();
+    on('btn-sim-run',     'click', doSimilarRun);
+    on('btn-sim-rebuild', 'click', () => vsimLoadInfo(true));
+    qAll('[data-sim-mode]').forEach(el => el.addEventListener('click', () => {
+      S.findSimilar.mode = el.dataset.simMode; S.findSimilar.result = null; S.findSimilar.error = null; S.findSimilar.expanded = {}; render();
+    }));
+    qAll('[data-sim-page]').forEach(el => el.addEventListener('click', () => toggleSitePage(el.dataset.simPage)));
+  }
   on('stab-styles',   'click', async () => {
     _settingsTab = 'styles';
     if (!_styleEntries) {

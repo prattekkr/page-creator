@@ -62,7 +62,8 @@
       "childProp": "text",
       "propRenames": {
         "text": "text",
-        "cq:panelTitle": "cq:panelTitle"
+        "cq:panelTitle": "cq:panelTitle",
+        "cq:styleIds": "cq:styleIds"
       },
       "skipProps": [
         "langAttribute",
@@ -74,7 +75,9 @@
       "propRenames": {
         "fileReference": "image",
         "alt": "imageAlt",
-        "linkTarget": "target"
+        "linkTarget": "target",
+        "dmPresetType": "dmPresetType",
+        "linkURL": "target"
       },
       "skipProps": [
         "linkURL",
@@ -105,7 +108,9 @@
     },
     "abbvie-com2/components/separator/v2/separator": {
       "edsType": "separator",
-      "propRenames": {},
+      "propRenames": {
+        "cq:styleIds": "cq:styleIds"
+      },
       "skipProps": []
     },
     "abbvie-com2/components/button/v2/button": {
@@ -114,7 +119,7 @@
         "jcr:title": "linkText",
         "linkURL": "link",
         "linkTarget": "ctaTarget",
-        "accessibilityLabel": "aria-label",
+        "accessibilityLabel": "linkText",
         "link": "link"
       },
       "skipProps": [
@@ -155,7 +160,9 @@
         "btnText": "overlayButtonLabel",
         "imgAlt": "posterAccessibilityLabel",
         "brightcovePlaylistAccount": "accountId",
-        "descriptiveIframeTitle": "captionHeading"
+        "descriptiveIframeTitle": "captionHeading",
+        "videoType": "transcriptSource",
+        "brightcovePlaylistPlayerId": "playerId"
       },
       "skipProps": [
         "videoType",
@@ -182,7 +189,10 @@
       "propRenames": {
         "podcastId": "videoId",
         "accountId": "accountId",
-        "playerId": "playerId"
+        "playerId": "playerId",
+        "brightcovePlayerId": "playerId",
+        "brightcoveVideoId": "videoId",
+        "podcastTitle": "podcastHeading"
       },
       "skipProps": [
         "title",
@@ -193,7 +203,10 @@
     "abbvie-com2/components/embed/v2/embed": {
       "edsType": "custom-embed",
       "propRenames": {
-        "embeddableId": "oneTrustId"
+        "embeddableId": "oneTrustId",
+        "loadNotice": "oneTrustLoadNotice",
+        "oneTrustId": "oneTrustId",
+        "scriptSettings": "oneTrustScriptSettings"
       },
       "skipProps": [
         "id"
@@ -263,7 +276,8 @@
         "sortOrder": "sortOrder",
         "listFrom": "linkSource",
         "childDepth": "childDepth",
-        "excludeCurrentPage": "excludeCurrentPage"
+        "excludeCurrentPage": "excludeCurrentPage",
+        "tagsMatch": "tagsMatch"
       },
       "childType": "linklist-item",
       "childPropRenames": {
@@ -313,7 +327,8 @@
         "quoteType": "quoteVariant",
         "attributionName": "attributionName",
         "attributionTitle": "attributionRole",
-        "quote": "quotation"
+        "quote": "quotation",
+        "dmPresetType": "dmPresetType"
       },
       "skipProps": [
         "id"
@@ -325,7 +340,11 @@
       "propRenames": {
         "autoplay": "autoplay",
         "delay": "slideTransitionTime",
-        "carouselType": "carouselVariant"
+        "carouselType": "carouselVariant",
+        "rssFeedUrl": "rssFeedUrl",
+        "accessibilityLabel": "carouselLabel",
+        "accessibilityNext": "nextButtonLabel",
+        "accessibilityPrevious": "previousButtonLabel"
       },
       "skipProps": [
         "controlsAlignment",
@@ -463,7 +482,11 @@
       "edsType": "search-results",
       "propRenames": {
         "searchId": "blockId",
-        "noResultsText": "noResultsLabel"
+        "noResultsText": "noResultsLabel",
+        "aboutResultsLabel": "aboutResultsLabel",
+        "dateLabel": "dateLabel",
+        "nextLabel": "nextLabel",
+        "prevLabel": "previousLabel"
       },
       "skipProps": [
         "loadMoreLabel",

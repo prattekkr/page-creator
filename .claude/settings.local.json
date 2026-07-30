@@ -28,7 +28,23 @@
       "Bash(node -e \"require\\('./src/capture'\\);require\\('./src/ocr'\\);require\\('./src/content'\\);require\\('./src/diff'\\);require\\('./src/analyze'\\);console.log\\('modules OK'\\);\")",
       "Bash(node find.js)",
       "Bash(node -e \"require\\('./src/capture'\\);require\\('./src/analyze'\\);console.log\\('OK'\\)\")",
-      "Bash(node -e \"require\\('./src/content'\\);require\\('./src/analyze'\\);console.log\\('OK'\\)\")"
+      "Bash(node -e \"require\\('./src/content'\\);require\\('./src/analyze'\\);console.log\\('OK'\\)\")",
+      "Bash(git -C \"C:/Users/pratteks/Desktop/page-creator/page-creator\" log --oneline -15)",
+      "Bash(echo \"exit:$?\")",
+      "WebFetch(domain:www.abbvie.com)",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36' https://www.abbvie.com/ -o C:/Users/pratteks/AppData/Local/Temp/claude/C--Users-pratteks-Desktop-page-creator-page-creator/208a9580-16e4-4dde-8423-658fbbcbd6b8/scratchpad/abbvie.html)",
+      "Bash(node -e \"const m=require\\('./migration-map.json'\\); console.log\\(Object.keys\\(m\\)\\); console.log\\('componentMap entries:', Object.keys\\(m.componentMap||{}\\).length\\);\")",
+      "Bash(echo \"=== eds cq:Page count ===\"; grep -rl 'jcr:primaryType=\"cq:Page\"' eds-jcr-xml --include=\".content.xml\" 2>/dev/null | wc -l; echo \"=== content-xml/_jcr_content sample ===\"; ls content-xml/_jcr_content 2>/dev/null | head; echo \"=== content-xml/us/en top .content.xml first lines \\(root path clue\\) ===\"; head -5 content-xml/us/en/.content.xml 2>/dev/null; echo \"=== .env \\(redact\\) ===\"; sed 's/=.*/=<value>/' .env; echo \"=== content-xml country dirs = source AEM structure /content/abbvie-com2/<country>/<lang> ===\"; ls content-xml/ | tr '\\\\n' ' ')",
+      "Bash(curl -s -X POST http://localhost:3200/api/scan -H \"Content-Type: application/json\" -d '{\"aemHost\":\"not a url\",\"username\":\"u\",\"password\":\"p\",\"rootPath\":\"/content/x\",\"imageField\":\"image\",\"captionField\":\"imageCaption\",\"assetProp\":\"dc:description\"}')",
+      "Bash(curl -s -X POST http://localhost:3200/api/scan -H \"Content-Type: application/json\" -d '{\"aemHost\":\"http://localhost:9999\",\"username\":\"u\",\"password\":\"p\",\"rootPath\":\"/etc/passwd\",\"imageField\":\"image\",\"captionField\":\"imageCaption\",\"assetProp\":\"dc:description\"}')",
+      "Bash(curl -s -X POST http://localhost:3200/api/scan -H \"Content-Type: application/json\" -d '{\"aemHost\":\"http://localhost:9999\",\"username\":\"u\",\"password\":\"p\",\"rootPath\":\"/content/x\",\"imageField\":\"image name\",\"captionField\":\"imageCaption\",\"assetProp\":\"dc:description\"}')",
+      "Bash(curl -s -X POST http://localhost:3200/api/apply -H \"Content-Type: application/json\" -d '{\"aemHost\":\"http://localhost:9999\",\"username\":\"u\",\"password\":\"p\",\"captionField\":\"imageCaption\",\"changes\":[{\"path\":\"/etc/evil\",\"caption\":\"x\"}]}')",
+      "Bash(node --check server.js)",
+      "Bash(curl -s -X POST http://localhost:3200/api/scan -H \"Content-Type: application/json\" -d '{\"aemHost\":\"http://localhost:9999\",\"username\":\"u\",\"password\":\"p\",\"rootPath\":\"/content/x\",\"imageField\":\"image\",\"captionField\":\"imageCaption\",\"assetProp\":\"dc:description\"}')",
+      "Bash(curl -s -X POST http://localhost:3200/api/scan -H \"Content-Type: application/json\" -d '{\"aemHost\":\"http://localhost:9999\",\"username\":\"u\",\"password\":\"p\",\"rootPath\":\"/content/x\",\"imageField\":\"bad name\",\"captionField\":\"imageCaption\",\"assetProp\":\"dc:description\"}')",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3200/)",
+      "Bash(curl -s -X POST http://localhost:3200/api/health -H \"Content-Type: application/json\" -d '{\"aemHost\":\"bad\",\"username\":\"u\",\"password\":\"p\"}')",
+      "Bash(curl -s -o /dev/null -w \"server HTTP %{http_code}\\\\n\" http://localhost:3200/)"
     ]
   }
 }

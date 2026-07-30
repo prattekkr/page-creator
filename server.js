@@ -262,7 +262,10 @@ app.post('/api/pages', async (req, res) => {
   const r1 = await fetch(`${aemHost}/bin/wcmcommand`, { method: 'POST', headers: hdrs, body: step1.toString() });
   if (!r1.ok) {
     const txt = await r1.text();
-    return res.status(502).json({ ok: false, error: `Page shell creation failed (${r1.status}): ${txt.slice(0, 300)}` });
+    const detail = /<html/i.test(txt)
+      ? `AEM rejected the request — check that the parent path "${parentPath}" exists and you have create permission`
+      : txt.slice(0, 300);
+    return res.status(502).json({ ok: false, error: `Page shell creation failed (${r1.status}): ${detail}` });
   }
 
   // Step 2 — import full content into jcr:content
@@ -285,7 +288,8 @@ app.post('/api/pages', async (req, res) => {
   }
   if (!r2.ok) {
     const txt = await r2.text();
-    return res.status(502).json({ ok: false, error: `Content import failed (${r2.status}): ${txt.slice(0, 300)}` });
+    const detail = /<html/i.test(txt) ? `AEM rejected the content import (${r2.status})` : txt.slice(0, 300);
+    return res.status(502).json({ ok: false, error: `Content import failed (${r2.status}): ${detail}` });
   }
 
   res.json({
@@ -706,13 +710,16 @@ function isMigrationLayout(rt) {
 
 function extractPropsFromXmlNode(attrs, mapping, pm) {
   const renames    = mapping?.propRenames    || {};
-  const skipSet    = new Set([...(mapping?.skipProps || []), ...JCR_SYS_SET]);
+  // AEM_WRITEBACK_SKIP drops cq:styleIds and other AEM-classic props that must never
+  // land on an EDS page (cq:styleIds is translated to classes_customDynamicClass separately).
+  const skipSet    = new Set([...(mapping?.skipProps || []), ...JCR_SYS_SET, ...AEM_WRITEBACK_SKIP]);
   const invertSet  = new Set(mapping?.invertBoolProps || []);
   const props = {};
   for (const [k, v] of Object.entries(attrs)) {
     const key = k.replace(/^@/, '');  // strip attribute prefix
     if (skipSet.has(key)) continue;
     if (key.startsWith('xmlns:')) continue;
+    if (key.startsWith('cq:')) continue;   // drop ALL classic-AEM cq:* props (never valid on EDS)
     const targetKey = renames[key] || key;
     let val = typeof v === 'string' ? v.replace(/^\{[A-Za-z]+\}/, '') : v;
     if (val !== null && typeof val === 'object') continue; // child nodes, not attributes
@@ -919,6 +926,51 @@ app.post('/api/bulk-parse-xmls', xmlUpload.array('xmlFiles', 100), (req, res) =>
     }
   }
   res.json({ ok: true, results });
+});
+
+// ── Bulk parse from a local folder ────────────────────────────────────────────
+// AEM stores each page as a FOLDER containing `.content.xml` (the file is always
+// named `.content.xml`; the page name is the folder). This reads each DIRECT
+// subfolder of `folder` as one page — page name = folder name — so a whole set of
+// same-layout pages (e.g. our-leaders/*) can be created in one go.
+app.post('/api/bulk-parse-folder', (req, res) => {
+  const rel = String(req.body?.folder || '').trim().replace(/^["']|["']$/g, '');
+  if (!rel) return res.status(400).json({ error: 'folder is required' });
+  const projRoot = path.resolve(__dirname);
+  const abs = path.resolve(projRoot, rel);
+  // Path-traversal guard: only allow folders inside the project directory.
+  if (abs !== projRoot && !abs.startsWith(projRoot + path.sep))
+    return res.status(400).json({ error: 'folder must be inside the project directory' });
+  let entries;
+  try { entries = fs.readdirSync(abs, { withFileTypes: true }); }
+  catch (e) { return res.status(404).json({ error: `Cannot read folder "${rel}": ${e.message}` }); }
+
+  const metaKeySet = new Set(migrationMap.metaKeys || []);
+  const results = [];
+  for (const ent of entries) {
+    if (!ent.isDirectory()) continue;
+    const cxml = path.join(abs, ent.name, '.content.xml');
+    if (!fs.existsSync(cxml)) continue;
+    try {
+      const tree       = JCR_XML_PARSER.parse(fs.readFileSync(cxml, 'utf8'));
+      const jcrRoot     = tree['jcr:root'] || tree;
+      const jcrContent  = jcrRoot['jcr:content'] || jcrRoot;
+      const meta = {};
+      for (const [k, v] of Object.entries(jcrContent)) {
+        if (!k.startsWith('@')) continue;
+        const key = k.replace(/^@/, '');
+        if (metaKeySet.has(key) && v) meta[key] = v;
+      }
+      const ordered = [];
+      walkXmlNode(jcrContent, ordered);
+      const pageTitle = String(jcrContent['@jcr:title'] || meta['jcr:title'] || '').trim() || ent.name;
+      results.push({ folderName: ent.name, slug: ent.name, pageTitle, meta, ordered, ok: true });
+    } catch (err) {
+      results.push({ folderName: ent.name, slug: ent.name, pageTitle: ent.name, meta: {}, ordered: [], ok: false, error: err.message });
+    }
+  }
+  results.sort((a, b) => a.folderName.localeCompare(b.folderName));
+  res.json({ ok: true, folder: rel, count: results.length, results });
 });
 
 // ── Path map endpoints ────────────────────────────────────────────────────────
@@ -1329,7 +1381,7 @@ app.delete('/api/section-thumbs/:id', (req, res) => {
 
 // ── Mapping analyzer ─────────────────────────────────────────────────────────
 
-const AEM_XML_ROOT = path.join(__dirname, 'aem-content-xml');
+const AEM_XML_ROOT = path.join(__dirname, 'content-xml');
 const EDS_XML_ROOT = path.join(__dirname, 'eds-jcr-xml');
 
 // Layout/structural resource types that should not be collected as content blocks
@@ -1854,6 +1906,129 @@ app.get('/api/build-style-map', async (req, res) => {
   }
 });
 
+// ── Find similar pages by STRUCTURE across regional sites (content-agnostic) ───
+// Signature = ordered component TYPE sequence (+ layout containers); prop VALUES are
+// ignored, so the same page in different languages/regions matches. Pages are scoped
+// by "canonical path" = path after <country>/<lang>, so migrating who-we-are only
+// compares who-we-are across regions. No dependency on EDS/migration state.
+const SIM_ROOT = path.join(__dirname, 'content-xml');
+const SIM_INDEX_FILE = path.join(__dirname, 'structure-index.json');
+const SIM_DROP = new Set(['responsivegrid', 'parsys', 'iparsys', 'remotepage', 'root', 'page', 'xf']);
+let simIndex = null;
+
+function pageStructureSig(xml) {
+  let t; try { t = JCR_XML_PARSER.parse(xml); } catch (_) { return []; }
+  const jc = (t['jcr:root'] || t)['jcr:content'] || t;
+  const seq = [];
+  (function w(n) {
+    for (const [k, v] of Object.entries(n || {})) {
+      if (k.startsWith('@') || k === '#text' || !v || typeof v !== 'object') continue;
+      const rt = (v['@sling:resourceType'] || '').trim();
+      if (rt) { const s = rt.split('/').filter(Boolean).pop().toLowerCase(); if (!SIM_DROP.has(s)) seq.push(s); }
+      w(v);
+    }
+  })(jc);
+  return seq;
+}
+function buildSimIndex(force = false) {
+  if (simIndex && !force) return simIndex;
+  if (!force && fs.existsSync(SIM_INDEX_FILE)) {
+    try { const j = JSON.parse(fs.readFileSync(SIM_INDEX_FILE, 'utf8')); if (j && j.pages) { simIndex = j; return simIndex; } } catch (_) {}
+  }
+  const pages = [];
+  (function walk(dir) {
+    let entries; try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch (_) { return; }
+    for (const e of entries) {
+      const f = path.join(dir, e.name);
+      if (e.isDirectory()) walk(f);
+      else if (e.name === '.content.xml') {
+        const rel = path.relative(SIM_ROOT, path.dirname(f)).split(path.sep).join('/');
+        const seg = rel.split('/');
+        if (seg.length < 3) continue;                      // need country/lang/rest
+        let xml = ''; try { xml = fs.readFileSync(f, 'utf8'); } catch (_) { continue; }
+        const sig = pageStructureSig(xml);
+        if (sig.length < 3) continue;
+        pages.push({ rel, region: seg.slice(0, 2).join('/'), canon: seg.slice(2).join('/'), sig });
+      }
+    }
+  })(SIM_ROOT);
+  const byCanon = {}, df = {};
+  pages.forEach((p, i) => { (byCanon[p.canon] = byCanon[p.canon] || []).push(i); new Set(p.sig).forEach(tok => df[tok] = (df[tok] || 0) + 1); });
+  const N = pages.length || 1, idf = {};
+  for (const [tok, d] of Object.entries(df)) idf[tok] = Math.log(N / (1 + d));
+  simIndex = { pages, byCanon, idf, N: pages.length };
+  try { fs.writeFileSync(SIM_INDEX_FILE, JSON.stringify(simIndex)); } catch (_) {}
+  return simIndex;
+}
+// idf-weighted LCS similarity (0-100) — distinctive shared structure dominates.
+function simScore(a, b, idf) {
+  const n = a.length, m = b.length; if (!n || !m) return 0;
+  let prev = new Float64Array(m + 1), cur = new Float64Array(m + 1);
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= m; j++) cur[j] = a[i - 1] === b[j - 1] ? prev[j - 1] + (idf[a[i - 1]] || 0.1) : Math.max(prev[j], cur[j - 1]);
+    const t = prev; prev = cur; cur = t;
+  }
+  const W = arr => arr.reduce((s, tk) => s + (idf[tk] || 0.1), 0);
+  return Math.round(100 * prev[m] / (Math.max(W(a), W(b)) || 1));
+}
+function groupByStructure(items, idf, threshold) {
+  const groups = [];
+  for (const it of items) {
+    const g = groups.find(gr => simScore(gr.repSig, it.sig, idf) >= threshold);
+    if (g) g.regions.push(it.region); else groups.push({ repSig: it.sig, repRel: it.rel, regions: [it.region] });
+  }
+  groups.sort((a, b) => b.regions.length - a.regions.length);
+  return groups;
+}
+
+app.get('/api/similar/info', (req, res) => {
+  try {
+    const idx = buildSimIndex(req.query.refresh === '1');
+    const regions = [...new Set(idx.pages.map(p => p.region))].sort();
+    const sampleCanons = Object.entries(idx.byCanon).sort((a, b) => b[1].length - a[1].length).slice(0, 80).map(([c]) => c);
+    res.json({ ok: true, indexed: idx.pages.length, regions, canonCount: Object.keys(idx.byCanon).length, sampleCanons });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// One page → the SAME page across all regions, ranked by structural match %.
+// Returns page paths + % only (review manually, import yourself). No EDS involved.
+app.post('/api/similar/page', (req, res) => {
+  const idx = buildSimIndex();
+  const input = String(req.body?.path || '').trim().replace(/^\/+|\/+$/g, '');
+  if (!input) return res.status(400).json({ error: 'path is required' });
+  let canon = input, queryRegion = null;
+  const asRel = idx.pages.find(p => p.rel === input);
+  if (asRel) { canon = asRel.canon; queryRegion = asRel.region; }
+  else { const seg = input.split('/'); if (seg.length >= 3 && idx.byCanon[seg.slice(2).join('/')]) { canon = seg.slice(2).join('/'); queryRegion = seg.slice(0, 2).join('/'); } }
+  const idxs = idx.byCanon[canon];
+  if (!idxs || !idxs.length) return res.status(404).json({ error: `No page "${canon}" found in any region.` });
+  const items = idxs.map(i => idx.pages[i]);
+  // Reference page = the queried region's page, or (if only a canon was given) prefer us/en.
+  let ref = queryRegion ? items.find(p => p.region === queryRegion) : null;
+  if (!ref) { ref = items.find(p => p.region === 'us/en') || items[0]; queryRegion = ref.region; }
+  const matches = items
+    .filter(p => p.region !== queryRegion)
+    .map(p => ({ rel: p.rel, region: p.region, score: simScore(ref.sig, p.sig, idx.idf) }))
+    .sort((a, b) => b.score - a.score);
+  res.json({ ok: true, canon, queryRegion, queryRel: `${queryRegion}/${canon}`, total: items.length, matches });
+});
+
+// Whole site (a region) → every page, how many regions share its structure.
+app.post('/api/similar/site', (req, res) => {
+  const idx = buildSimIndex();
+  const region = String(req.body?.region || '').trim().replace(/^\/+|\/+$/g, '');
+  const threshold = Math.max(50, Math.min(100, Number(req.body?.threshold) || 88));
+  if (!region) return res.status(400).json({ error: 'region is required' });
+  const inRegion = idx.pages.filter(p => p.region === region);
+  if (!inRegion.length) return res.status(404).json({ error: `No pages found for region "${region}".` });
+  const rows = inRegion.map(p => {
+    const items = idx.byCanon[p.canon].map(i => idx.pages[i]);
+    const groups = groupByStructure(items, idx.idf, threshold);
+    const mine = groups.find(g => g.regions.includes(region)) || groups[0];
+    return { canon: p.canon, regions: items.length, variants: groups.length, shared: mine.regions.length };
+  }).sort((a, b) => b.shared - a.shared || a.canon.localeCompare(b.canon));
+  res.json({ ok: true, region, threshold, count: rows.length, rows: rows.slice(0, 2000) });
+});
 
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
