@@ -2030,6 +2030,96 @@ app.post('/api/similar/site', (req, res) => {
   res.json({ ok: true, region, threshold, count: rows.length, rows: rows.slice(0, 2000) });
 });
 
+// ── Migrate Full Site: for every page in a locale, find its best ALREADY-MIGRATED
+// structural match (among user-configured migrated regions) to reuse as the canvas. ──
+app.post('/api/migrate-site/plan', (req, res) => {
+  const idx = buildSimIndex();
+  const locale = String(req.body?.locale || '').trim().replace(/^\/+|\/+$/g, '');
+  const migrated = new Set((Array.isArray(req.body?.migratedRegions) ? req.body.migratedRegions : [])
+    .map(s => String(s).trim().replace(/^\/+|\/+$/g, '')).filter(Boolean));
+  const edsPrefix = (String(req.body?.edsPrefix || '').trim() || '/content/abbvie-nextgen-eds/corporate/abbvie-com').replace(/\/+$/, '');
+  if (!locale) return res.status(400).json({ error: 'locale is required' });
+  if (!migrated.size) return res.status(400).json({ error: 'Configure at least one migrated region.' });
+  const pagesInLocale = idx.pages.filter(p => p.region === locale);
+  if (!pagesInLocale.length) return res.status(404).json({ error: `No pages found for locale "${locale}".` });
+
+  // Candidate pool for the fallback = all pages in migrated regions (any path).
+  const migPages = idx.pages.filter(p => migrated.has(p.region) && p.region !== locale);
+  const mk = c => ({ region: c.region, canon: c.canon, score: simScore(pagesInLocale, c, idx.idf), edsPath: `${edsPrefix}/${c.region}/${c.canon}` });
+  const rows = pagesInLocale.map(src => {
+    // 1) Primary: same path hierarchy (same canon) in a migrated region.
+    let scored = (idx.byCanon[src.canon] || []).map(i => idx.pages[i])
+      .filter(p => migrated.has(p.region) && p.region !== locale)
+      .map(c => ({ region: c.region, canon: c.canon, score: simScore(src.sig, c.sig, idx.idf), edsPath: `${edsPrefix}/${c.region}/${c.canon}`, sameHierarchy: true }))
+      .sort((a, b) => b.score - a.score);
+    let fallback = false;
+    // 2) Fallback: no same-path match (localized slug/hierarchy) → best structural match anywhere in migrated sites.
+    if (!scored.length) {
+      fallback = true;
+      const lo = src.sig.length * 0.55, hi = src.sig.length * 1.6;
+      scored = migPages.filter(c => c.sig.length >= lo && c.sig.length <= hi)
+        .map(c => ({ region: c.region, canon: c.canon, score: simScore(src.sig, c.sig, idx.idf), edsPath: `${edsPrefix}/${c.region}/${c.canon}`, sameHierarchy: false }))
+        .sort((a, b) => b.score - a.score).slice(0, 8);
+    }
+    return { canon: src.canon, sourceRel: src.rel, fallback, best: scored[0] || null, matches: scored.slice(0, 8) };
+  }).sort((a, b) => (b.best ? b.best.score : -1) - (a.best ? a.best.score : -1));
+
+  res.json({ ok: true, locale, total: rows.length, withMatch: rows.filter(r => r.best).length, rows });
+});
+
+// Detect already-migrated regions by querying the live AEM instance under the EDS
+// content root (depth-2 → country/lang), intersected with known content-xml locales.
+app.post('/api/migrate-site/detect-regions', async (req, res) => {
+  const { aemHost, username, password } = req.body || {};
+  const edsPrefix = (String(req.body?.edsPrefix || '').trim() || '/content/abbvie-nextgen-eds/corporate/abbvie-com').replace(/\/+$/, '');
+  if (!aemHost || !username || !password) return res.status(400).json({ error: 'aemHost, username and password are required (Connection tab).' });
+  const auth = Buffer.from(`${username}:${password}`).toString('base64');
+  const url = `${aemHost.replace(/\/+$/, '')}${edsPrefix}.2.json`;
+  let json;
+  try {
+    const r = await fetch(url, { headers: { Authorization: `Basic ${auth}` } });
+    if (!r.ok) return res.status(502).json({ error: `AEM returned ${r.status} for ${edsPrefix}.2.json` });
+    json = await r.json();
+  } catch (e) { return res.status(502).json({ error: `Could not reach AEM: ${e.message}` }); }
+  const SYS = /^(jcr:|rep:|cq:|sling:|:)/;
+  const edsRegions = new Set();
+  for (const [country, cval] of Object.entries(json)) {
+    if (SYS.test(country) || !cval || typeof cval !== 'object') continue;
+    for (const [lang, lval] of Object.entries(cval)) {
+      if (SYS.test(lang) || !lval || typeof lval !== 'object') continue;
+      edsRegions.add(`${country}/${lang}`);
+    }
+  }
+  const known = new Set(buildSimIndex().pages.map(p => p.region));
+  const regions = [...edsRegions].filter(r => known.has(r)).sort();
+  res.json({ ok: true, edsFound: edsRegions.size, regions });
+});
+
+// Parse one local source page (content-xml/<rel>/.content.xml) into a content pool
+// used to fill an imported EDS canvas during Migrate Full Site.
+app.post('/api/parse-local-xml', (req, res) => {
+  const rel = String(req.body?.rel || '').trim().replace(/^\/+|\/+$/g, '');
+  if (!rel) return res.status(400).json({ error: 'rel is required' });
+  const abs = path.resolve(SIM_ROOT, rel, '.content.xml');
+  if (!abs.startsWith(path.resolve(SIM_ROOT) + path.sep)) return res.status(400).json({ error: 'path outside content-xml' });
+  let xml; try { xml = fs.readFileSync(abs, 'utf8'); } catch (e) { return res.status(404).json({ error: `Cannot read ${rel}: ${e.message}` }); }
+  try {
+    const tree = JCR_XML_PARSER.parse(xml);
+    const jcrContent = (tree['jcr:root'] || tree)['jcr:content'] || tree;
+    const meta = {};
+    const metaKeySet = new Set(migrationMap.metaKeys || []);
+    for (const [k, v] of Object.entries(jcrContent)) {
+      if (!k.startsWith('@')) continue;
+      const key = k.replace(/^@/, '');
+      if (metaKeySet.has(key) && v) meta[key] = v;
+    }
+    const ordered = [];
+    walkXmlNode(jcrContent, ordered);
+    const pageTitle = String(jcrContent['@jcr:title'] || meta['jcr:title'] || '').trim() || rel.split('/').pop();
+    res.json({ ok: true, rel, pageTitle, meta, ordered });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
 app.listen(PORT, () => console.log(`AEM Page Builder -> http://localhost:${PORT}`));

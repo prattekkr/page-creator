@@ -21,6 +21,7 @@ const S = {
   bulkTemplate:   null,   // deep clone of S.sections used as layout template for bulk import
   bulkPages:      [],     // [{ fileName, slug, pageTitle, edsPath, sections, filled, skipped, status, error }]
   findSimilar:    { info: null, mode: 'page', path: '', region: '', threshold: 88, busy: false, result: null, error: null, expanded: {} },
+  migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', busy: false, plan: null, error: null, editIdx: null },
 };
 
 let _uid = 0;
@@ -138,6 +139,10 @@ function html() {
     ${S._migrResult ? `<div class="draft-banner migr-banner">
       ✓ Filled <strong>${S._migrResult.filled} block${S._migrResult.filled !== 1 ? 's' : ''}</strong> from <em>${x(S._migrResult.fileName)}</em>${S._migrResult.skipped > 0 ? ` — ${S._migrResult.skipped} skipped (no XML match)` : ''}. Review the canvas then click Create.
       <button class="draft-dismiss" id="btn-dismiss-migr">✕</button>
+    </div>` : ''}
+    ${(S.migrateSite && S.migrateSite.editIdx != null && S.migrateSite.plan) ? `<div class="draft-banner migr-banner" style="background:#ede9fe;border-color:#c4b5fd">
+      Reviewing migration canvas for <strong>${x(S.migrateSite.plan.rows[S.migrateSite.editIdx].canon)}</strong> — edit as needed, then save.
+      <button class="btn btn-xs btn-primary" id="btn-mig-save-canvas" style="margin-left:8px">💾 Save &amp; back to Migrate Full Site</button>
     </div>` : ''}
 <div class="workspace">
       ${paletteHtml()}
@@ -922,6 +927,7 @@ function settingsViewHtml() {
       <button class="sv-tab ${_settingsTab === 'thumbs'     ? 'sv-tab-active' : ''}" id="stab-thumbs">Thumbnails</button>
       <button class="sv-tab ${_settingsTab === 'bulk'       ? 'sv-tab-active' : ''}" id="stab-bulk">Bulk Import</button>
       <button class="sv-tab ${_settingsTab === 'similar'    ? 'sv-tab-active' : ''}" id="stab-similar">Find Similar</button>
+      <button class="sv-tab ${_settingsTab === 'migsite'    ? 'sv-tab-active' : ''}" id="stab-migsite">Migrate Full Site</button>
     </div>
     <div class="sv-body">
       ${_settingsTab === 'connection' ? connectionTabHtml()
@@ -930,6 +936,7 @@ function settingsViewHtml() {
       : _settingsTab === 'styles'    ? stylesTabHtml()
       : _settingsTab === 'bulk'      ? bulkTabHtml()
       : _settingsTab === 'similar'   ? findSimilarTabHtml()
+      : _settingsTab === 'migsite'   ? migrateSiteTabHtml()
       :                                thumbnailsTabHtml()}
     </div>
   </div>`;
@@ -1508,6 +1515,237 @@ async function doSimilarRun() {
     if (r.ok) st.result = d; else st.error = d.error || 'Failed';
   } catch (e) { st.error = e.message; }
   st.busy = false; render();
+}
+
+// ── Migrate Full Site tab ─────────────────────────────────────────────────────
+function migrateSiteTabHtml() {
+  const ms = S.migrateSite;
+  const info = S.findSimilar.info;   // reuse the structure index for the locale list
+  const localeOpts = (info ? info.regions : []).map(rg => `<option ${ms.locale === rg ? 'selected' : ''}>${x(rg)}</option>`).join('');
+  // Union so any detected region always appears (and stays checkable) even if it
+  // somehow isn't in the locale index.
+  const regionOptions = [...new Set([...((info && info.regions) || []), ...ms.regionSel])].sort();
+
+  const SL = { preparing: '⏳ preparing', ready: '✓ ready', creating: '⏳ creating', done: '✓ done', error: '✗ error' };
+  let planHtml = '';
+  if (ms.error) planHtml = `<div class="alert alert-error" style="margin-top:10px">${x(ms.error)}</div>`;
+  else if (ms.plan) {
+    const p = ms.plan;
+    const doneN = p.rows.filter(r => r.status === 'done').length, readyN = p.rows.filter(r => r.status === 'ready').length;
+    planHtml = `<div style="margin-top:14px">
+      <div class="sv-section-title" style="margin:0 0 4px">${x(p.locale)} — ${p.total} pages · <strong>${p.withMatch}</strong> have a migrated match</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Pick each page's match → <strong>Prepare</strong> (import its EDS canvas + fill content) → <strong>Check</strong> to review/edit → create. No match, or want a different layout? Build a canvas in the <strong>Canvas</strong> tab and hit <strong>📋 Use canvas</strong> on the row.</div>
+      <table class="bulk-table"><thead><tr><th>Source page</th><th>Reuse canvas from</th><th>Create at</th><th>Filled</th><th>Actions</th></tr></thead>
+      <tbody>${p.rows.slice(0, 400).map((r, i) => `<tr class="bulk-row bulk-row-${r.status || ''}">
+        <td style="font-size:.72rem"><code>${x(r.canon)}</code></td>
+        <td>${r.matches.length
+          ? `<select class="form-input mig-match" data-mig-idx="${i}" style="font-size:.7rem;padding:2px 4px;max-width:150px">${r.matches.map(m => `<option value="${x(m.region)}" ${r.selRegion === m.region ? 'selected' : ''}>${x(m.region)} · ${m.score}%</option>`).join('')}</select>`
+          : '<span style="color:var(--danger);font-size:.7rem">no match</span>'}
+          <input class="form-input mig-custom" data-mig-idx="${i}" style="font-size:.66rem;padding:2px 4px;margin-top:3px" placeholder="…or paste an EDS page path to reuse" value="${x(r.customPath || '')}"/></td>
+        <td><input class="form-input mig-target" data-mig-idx="${i}" style="font-size:.68rem;padding:2px 4px" value="${x(r.targetPath || '')}"/></td>
+        <td style="text-align:center;font-size:.72rem">${r.status === 'ready' || r.status === 'done' ? `${r.filled}/${r.filled + r.skipped}` : '—'}</td>
+        <td style="white-space:nowrap">
+          <button class="btn btn-xs" data-mig-prepare="${i}" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>${r.status === 'ready' || r.status === 'done' ? '↻' : '⚙ Prepare'}</button>
+          <button class="btn btn-xs btn-ghost" data-mig-usecanvas="${i}" title="Apply the canvas open in the Canvas tab to this page (for no-match pages, or to override the match)">📋 Use canvas</button>
+          ${(r.status === 'ready' || r.status === 'done') ? ` <button class="btn btn-xs btn-ghost" data-mig-check="${i}">👁 Check</button> <button class="btn btn-xs btn-ghost" data-mig-create="${i}" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}
+          ${r.manual ? ' <span class="vm-pill vm-pill-warn">manual</span>' : ''}
+          <span class="bulk-status bulk-status-${r.status}" style="font-size:.68rem">${SL[r.status] || ''}</span>${r.error ? ` <span title="${x(r.error)}" style="color:var(--danger);cursor:help">ⓘ</span>` : ''}
+        </td>
+      </tr>`).join('')}</tbody></table>
+      <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
+        <button class="btn btn-sm" id="btn-mig-prepare-all">⚙ Prepare all</button>
+        <button class="btn btn-sm btn-primary" id="btn-mig-create-all">↑ Create all ready</button>
+        <span style="font-size:.75rem;color:var(--muted)">${readyN} ready · ${doneN} created</span>
+      </div>
+    </div>`;
+  }
+
+  return `
+    <div class="sv-section-title">Migrate Full Site</div>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px">
+      Pick a locale. Each page reuses the canvas of its best <strong>already-migrated</strong> match and is filled with this page's content. AEM connection comes from the Connection tab.
+    </div>
+
+    <div class="conn-card" style="padding:14px;margin-bottom:12px">
+      <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;color:var(--brand);margin-bottom:8px">Config</div>
+      <div class="settings-field" style="margin-bottom:8px">
+        <label>EDS content root prefix <span style="font-weight:400;color:var(--muted)">(where migrated sites live, for reading their canvas)</span></label>
+        <input id="ms-prefix" class="form-input" value="${x(ms.edsPrefix)}" placeholder="/content/abbvie-nextgen-eds/corporate/abbvie-com"/>
+      </div>
+      <div class="settings-field" style="margin-bottom:8px">
+        <label>Already-migrated regions <span style="font-weight:400;color:var(--muted)">(check the ones to include)</span></label>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" id="btn-ms-detect" ${ms.detecting ? 'disabled' : ''}>${ms.detecting ? '⏳ Detecting…' : '🔄 Detect from AEM'}</button>
+          <button class="btn btn-xs btn-ghost" id="btn-ms-region-all">Select all</button>
+          <button class="btn btn-xs btn-ghost" id="btn-ms-region-none">Clear</button>
+          <span id="ms-region-count" style="font-size:.72rem;color:var(--muted)">${ms.regionSel.length} selected</span>
+        </div>
+        ${ms.detectMsg ? `<div style="font-size:.72rem;color:${ms.detectErr ? 'var(--danger)' : 'var(--muted)'};margin-bottom:6px">${x(ms.detectMsg)}</div>` : ''}
+        ${regionOptions.length ? `<input id="ms-region-search" class="form-input" style="margin-bottom:6px;font-size:.75rem" placeholder="🔍 Filter regions… (e.g. en, ch, es)"/>` : ''}
+        <div class="ms-region-grid" id="ms-region-grid">
+          ${regionOptions.length
+            ? regionOptions.map(rg => `<label class="ms-region-chk"><input type="checkbox" class="ms-region" value="${x(rg)}" ${ms.regionSel.includes(rg) ? 'checked' : ''}/> ${x(rg)}</label>`).join('')
+            : '<span style="font-size:.72rem;color:var(--muted)">Detect from AEM, or wait for the page index to load.</span>'}
+        </div>
+      </div>
+      <div class="settings-field" style="margin-bottom:0">
+        <label>Create new pages under <span style="font-weight:400;color:var(--muted)">(your chosen destination root — page name appended)</span></label>
+        <input id="ms-target" class="form-input" value="${x(ms.targetRoot)}" placeholder="/content/abbvie-nextgen-eds/corporate/abbvie-com/ar/es"/>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap">
+      <div class="settings-field" style="min-width:180px;margin:0">
+        <label>Locale to migrate</label>
+        <select id="ms-locale" class="form-input">${localeOpts || '<option>loading…</option>'}</select>
+      </div>
+      <button class="btn btn-sm btn-primary" id="btn-ms-plan" ${ms.busy ? 'disabled' : ''}>${ms.busy ? '⏳ Building plan…' : '🔎 Build migration plan'}</button>
+    </div>
+    ${planHtml}`;
+}
+
+// Pull the list of already-migrated regions live from the configured AEM instance.
+async function doDetectMigratedRegions() {
+  const ms = S.migrateSite;
+  ms.edsPrefix = (document.getElementById('ms-prefix')?.value || '').trim();
+  const { aemHost, username, password } = S.conn;
+  if (!aemHost || !username || !password) { ms.detectErr = true; ms.detectMsg = 'Fill in the AEM connection (Connection tab) first.'; render(); return; }
+  ms.detecting = true; ms.detectMsg = null; render();
+  try {
+    const r = await fetch('/api/migrate-site/detect-regions', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ aemHost, username, password, edsPrefix: ms.edsPrefix }),
+    });
+    const d = await r.json();
+    if (!r.ok) { ms.detectErr = true; ms.detectMsg = d.error || 'Detection failed'; }
+    else { ms.regionSel = Array.isArray(d.regions) ? d.regions.slice() : []; ms.detectErr = false; ms.detectMsg = `Found ${ms.regionSel.length} migrated region(s) — all checked; uncheck any to exclude.`; }
+  } catch (e) { ms.detectErr = true; ms.detectMsg = e.message; }
+  ms.detecting = false; render();
+}
+
+async function doBuildMigratePlan() {
+  const ms = S.migrateSite;
+  ms.edsPrefix = (document.getElementById('ms-prefix')?.value || '').trim();
+  ms.targetRoot = (document.getElementById('ms-target')?.value || '').trim().replace(/\/+$/, '');
+  ms.locale = document.getElementById('ms-locale')?.value || ms.locale;
+  const regions = ms.regionSel.slice();
+  if (!ms.locale) { ms.error = 'Pick a locale.'; render(); return; }
+  if (!regions.length) { ms.error = 'Enter at least one already-migrated region.'; render(); return; }
+  ms.busy = true; ms.error = null; ms.plan = null; render();
+  try {
+    const r = await fetch('/api/migrate-site/plan', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ locale: ms.locale, migratedRegions: regions, edsPrefix: ms.edsPrefix }) });
+    const d = await r.json();
+    if (!r.ok) { ms.error = d.error || 'Failed'; }
+    else {
+      d.rows.forEach(r2 => { r2.selRegion = r2.best ? r2.best.region : null; r2.targetPath = ms.targetRoot ? `${ms.targetRoot}/${r2.canon}` : ''; r2.customPath = ''; r2.status = null; r2.filled = 0; r2.skipped = 0; });
+      ms.plan = d;
+    }
+  } catch (e) { ms.error = e.message; }
+  ms.busy = false; render();
+}
+
+// Normalize a pasted AEM/EDS page reference (full URL or content path) to a JCR path.
+function normEdsPath(p) {
+  p = String(p || '').trim();
+  if (/^https?:\/\//i.test(p)) { try { p = new URL(p).pathname; } catch (_) {} }
+  return p.replace(/^\/editor\.html/, '').replace(/\.html$/, '').replace(/\/+$/, '');
+}
+
+// Prepare one page: import the chosen migrated EDS canvas (a match OR a pasted path),
+// then fill it from the source AEM XML.
+async function doMigPrepareOne(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r) return;
+  const { aemHost, username, password } = S.conn;
+  if (!aemHost || !username || !password) { alert('Configure the AEM connection (Connection tab) first.'); return; }
+  const custom = normEdsPath(r.customPath);
+  const match = r.matches.find(m => m.region === r.selRegion) || r.best;
+  const pagePath = custom || (match && match.edsPath);
+  if (!pagePath) { r.status = 'error'; r.error = 'Pick a match or paste an EDS page path to reuse.'; render(); return; }
+  r.status = 'preparing'; r.error = null; render();
+  try {
+    const [impRes, srcRes] = await Promise.all([
+      fetch('/api/import-page', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ aemHost, username, password, pagePath }) }).then(x => x.json()),
+      fetch('/api/parse-local-xml', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rel: r.sourceRel }) }).then(x => x.json()),
+    ]);
+    if (!impRes.sections) throw new Error('Canvas import failed: ' + (impRes.error || 'no sections'));
+    if (!srcRes.ok) throw new Error('Source parse failed: ' + (srcRes.error || ''));
+    const ids = items => (items || []).map(it => ({ ...it, id: uid(), children: ids(it.children) }));
+    const sections = impRes.sections.map(sec => ({ ...sec, id: uid(), blocks: (sec.blocks || []).map(b => ({ ...b, id: uid(), children: ids(b.children) })) }));
+    const { filled, skipped } = fillSectionsFromPool(sections, srcRes.ordered);
+    r.sections = sections; r.filled = filled; r.skipped = skipped;
+    r.meta = srcRes.meta || {}; r.pageTitle = srcRes.pageTitle; r.status = 'ready';
+  } catch (e) { r.status = 'error'; r.error = e.message; }
+  render();
+}
+// Apply the canvas currently open in the Canvas tab to a row (manual / override),
+// filling it from that page's source AEM XML. Works for no-match rows too.
+async function doMigUseCurrentCanvas(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r) return;
+  if (!S.sections.length) { alert('Build a canvas on the Canvas tab first, then click "Use canvas".'); return; }
+  r.status = 'preparing'; r.error = null; render();
+  try {
+    const src = await fetch('/api/parse-local-xml', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rel: r.sourceRel }) }).then(x => x.json());
+    if (!src.ok) throw new Error('Source parse failed: ' + (src.error || ''));
+    const ids = items => (items || []).map(it => ({ ...it, id: uid(), children: ids(it.children) }));
+    const sections = JSON.parse(JSON.stringify(S.sections)).map(sec => ({ ...sec, id: uid(), blocks: (sec.blocks || []).map(b => ({ ...b, id: uid(), children: ids(b.children) })) }));
+    const { filled, skipped } = fillSectionsFromPool(sections, src.ordered);
+    r.sections = sections; r.filled = filled; r.skipped = skipped; r.meta = src.meta || {}; r.pageTitle = src.pageTitle; r.manual = true; r.status = 'ready';
+  } catch (e) { r.status = 'error'; r.error = e.message; }
+  render();
+}
+
+async function doMigPrepareAll() {
+  const rows = S.migrateSite.plan?.rows || [];
+  for (let i = 0; i < rows.length; i++) if (rows[i].matches.length && rows[i].status !== 'done') await doMigPrepareOne(i);
+}
+
+// Open a prepared page's canvas in the editor to review/edit; edits saved back on return.
+function doMigCheckCanvas(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r || !r.sections) return;
+  // Auto-save any in-progress edits back to the row you were just editing, so
+  // switching between page canvases never loses work.
+  if (ms.editIdx != null && ms.editIdx !== i && ms.plan?.rows[ms.editIdx]) {
+    ms.plan.rows[ms.editIdx].sections = JSON.parse(JSON.stringify(S.sections));
+  }
+  ms.editIdx = i;
+  S.sections = JSON.parse(JSON.stringify(r.sections));
+  S.sel = S.sections.length ? { secId: S.sections[0].id } : null;
+  S.collapsed.clear();
+  _view = 'canvas';
+  render();
+}
+function doMigSaveCanvas() {
+  const ms = S.migrateSite;
+  if (ms.editIdx == null || !ms.plan) { _view = 'settings'; render(); return; }
+  const r = ms.plan.rows[ms.editIdx];
+  r.sections = JSON.parse(JSON.stringify(S.sections));
+  ms.editIdx = null;
+  _view = 'settings'; _settingsTab = 'migsite';
+  render();
+}
+
+async function doMigCreateOne(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r || r.status !== 'ready') return;
+  const { aemHost, username, password } = S.conn;
+  if (!aemHost || !username || !password) { alert('Configure the AEM connection first.'); return; }
+  const clean = (r.targetPath || '').trim().replace(/\/+$/, ''); const cut = clean.lastIndexOf('/');
+  if (!clean.startsWith('/') || cut <= 0 || cut === clean.length - 1) { r.status = 'error'; r.error = 'Set a full "Create at" path like /content/.../parent/' + r.canon; render(); return; }
+  const parentPath = clean.slice(0, cut), pageName = clean.slice(cut + 1);
+  r.status = 'creating'; r.error = null; render();
+  try {
+    const meta = (r.meta && Object.keys(r.meta).length) ? r.meta : (r.pageTitle ? { 'jcr:title': r.pageTitle } : {});
+    const res = await fetch('/api/pages', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: r.sections }) }).then(x => x.json());
+    if (res.ok) { r.status = 'done'; r.error = null; } else { r.status = 'error'; r.error = res.error || 'Create failed'; }
+  } catch (e) { r.status = 'error'; r.error = e.message; }
+  render();
+}
+async function doMigCreateAll() {
+  const rows = S.migrateSite.plan?.rows || [];
+  for (let i = 0; i < rows.length; i++) if (rows[i].status === 'ready') await doMigCreateOne(i);
 }
 
 function stylesTabHtml() {
@@ -2384,6 +2622,7 @@ function resultOverlayHtml() {
 function bind() {
   // Topbar
   on('btn-create', 'click', doCreate);
+  on('btn-mig-save-canvas', 'click', doMigSaveCanvas);   // review banner (canvas view)
   on('btn-publish-aem', 'click', () => {
     const changes = computeJcrDiff();
     if (!changes.length) { alert('No changes since the page was imported.'); return; }
@@ -2696,6 +2935,35 @@ function bind() {
   on('stab-paths',    'click', () => { _settingsTab = 'paths';      render(); });
   on('stab-bulk',     'click', () => { _settingsTab = 'bulk';       render(); });
   on('stab-similar',  'click', () => { _settingsTab = 'similar';    render(); if (!S.findSimilar.info) vsimLoadInfo(); });
+  on('stab-migsite',  'click', () => { _settingsTab = 'migsite';    render(); if (!S.findSimilar.info) vsimLoadInfo(); });
+
+  // Migrate Full Site tab
+  if (_settingsTab === 'migsite') {
+    if (!S.findSimilar.info) vsimLoadInfo();
+    on('btn-ms-detect', 'click', doDetectMigratedRegions);
+    on('btn-ms-region-all',  'click', () => { const info = S.findSimilar.info; S.migrateSite.regionSel = (info && info.regions) ? info.regions.slice() : S.migrateSite.regionSel; render(); });
+    on('btn-ms-region-none', 'click', () => { S.migrateSite.regionSel = []; render(); });
+    on('ms-region-search', 'input', e => {
+      const q = e.target.value.trim().toLowerCase();
+      qAll('#ms-region-grid .ms-region-chk').forEach(l => { l.style.display = (!q || l.textContent.toLowerCase().includes(q)) ? '' : 'none'; });
+    });
+    qAll('.ms-region').forEach(el => el.addEventListener('change', () => {
+      const set = new Set(S.migrateSite.regionSel);
+      if (el.checked) set.add(el.value); else set.delete(el.value);
+      S.migrateSite.regionSel = [...set];
+      const c = document.getElementById('ms-region-count'); if (c) c.textContent = `${S.migrateSite.regionSel.length} selected`;
+    }));
+    on('btn-ms-plan', 'click', doBuildMigratePlan);
+    on('btn-mig-prepare-all', 'click', doMigPrepareAll);
+    on('btn-mig-create-all', 'click', doMigCreateAll);
+    qAll('[data-mig-prepare]').forEach(el => el.addEventListener('click', () => doMigPrepareOne(Number(el.dataset.migPrepare))));
+    qAll('[data-mig-usecanvas]').forEach(el => el.addEventListener('click', () => doMigUseCurrentCanvas(Number(el.dataset.migUsecanvas))));
+    qAll('[data-mig-check]').forEach(el => el.addEventListener('click', () => doMigCheckCanvas(Number(el.dataset.migCheck))));
+    qAll('[data-mig-create]').forEach(el => el.addEventListener('click', () => doMigCreateOne(Number(el.dataset.migCreate))));
+    qAll('.mig-match').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].selRegion = el.value; }));
+    qAll('.mig-target').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].targetPath = el.value.trim(); }));
+    qAll('.mig-custom').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].customPath = el.value.trim(); }));
+  }
 
   // Find Similar tab
   if (_settingsTab === 'similar') {

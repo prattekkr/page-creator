@@ -947,6 +947,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .sim-regions { display: flex; flex-wrap: wrap; gap: 5px; }
 .sim-chip    { font-size: .7rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: #eef2ff; color: #3730a3; border: none; }
 .sim-chip-q  { background: #6d5efc; color: #fff; }
+.ms-region-grid { display: flex; flex-wrap: wrap; gap: 5px 14px; max-height: 170px; overflow: auto;
+                  border: 1px solid var(--border, #e2e8f0); border-radius: 6px; padding: 8px 10px; }
+.ms-region-chk  { font-size: .72rem; display: flex; gap: 5px; align-items: center; min-width: 72px; cursor: pointer;
+                  padding: 2px 6px; border-radius: 4px; }
+.ms-region-chk:has(input:checked) { background: #dcfce7; color: #166534; font-weight: 600; }
 .vm-score    { display: inline-block; font-weight: 700; font-size: .72rem; padding: 1px 8px; border-radius: 4px; }
 .vm-hi       { background: #dcfce7; color: #166534; }
 .vm-mid      { background: #fef3c7; color: #92400e; }
