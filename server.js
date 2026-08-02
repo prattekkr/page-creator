@@ -6,6 +6,8 @@ const fs         = require('fs');
 const multer     = require('multer');
 const puppeteer  = require('puppeteer');
 const { XMLParser } = require('fast-xml-parser');
+const { aemToCanvas, normalizeSections } = require('./aem-canvas');
+const { fetchRenderedHtml, extractA11y, backfillA11y } = require('./a11y-backfill');
 
 // ── Migration map (AEM Sites resourceType → EDS block) ───────────────────────
 let migrationMap = { componentMap: {}, layoutResources: [], metaKeys: [], jcrSystemProps: [] };
@@ -128,16 +130,29 @@ function transformPath(value, pm) {
 const xmlUpload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
 const app  = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ── Config loader ─────────────────────────────────────────────────────────────
+// Prefer the live EDS repo's config (component-definition/models/filters) so page-creator
+// stays in sync with the source of truth; fall back to the local copies if the repo isn't
+// present. Set EDS_REPO to override the path.
+const EDS_REPO = process.env.EDS_REPO || 'C:/Users/pratteks/Desktop/abbvie-next-gen/abbvie-nextgen-eds';
+let _edsSyncLogged = false;
+function configPath(name) {
+  const edsPath = path.join(EDS_REPO, name);
+  if (fs.existsSync(edsPath)) {
+    if (!_edsSyncLogged) { console.log(`[config] using EDS repo config from ${EDS_REPO}`); _edsSyncLogged = true; }
+    return edsPath;
+  }
+  return path.join(__dirname, name);
+}
 function loadConfig() {
-  const defs    = JSON.parse(fs.readFileSync(path.join(__dirname, 'component-definition.json'), 'utf8'));
-  const models  = JSON.parse(fs.readFileSync(path.join(__dirname, 'component-models.json'), 'utf8'));
-  const filters = JSON.parse(fs.readFileSync(path.join(__dirname, 'component-filters.json'), 'utf8'));
+  const defs    = JSON.parse(fs.readFileSync(configPath('component-definition.json'), 'utf8'));
+  const models  = JSON.parse(fs.readFileSync(configPath('component-models.json'), 'utf8'));
+  const filters = JSON.parse(fs.readFileSync(configPath('component-filters.json'), 'utf8'));
 
   const modelMap  = Object.fromEntries(models.map(m => [m.id, m]));
   const filterMap = Object.fromEntries(filters.map(f => [f.id, f.components || []]));
@@ -270,6 +285,7 @@ app.post('/api/pages', async (req, res) => {
 
   // Step 2 — import full content into jcr:content
   const { compMap, modelFieldsMap, contentDefaults } = loadConfig();
+  normalizeSections(sections);   // always enforce Standard/no-line separators + standard,bold eyebrows on create
   const jcrContent = buildJcr(meta, sections, compMap, modelFieldsMap, contentDefaults);
 
   const step2 = new URLSearchParams({
@@ -344,8 +360,28 @@ function buildJcr(meta, sections, compMap, modelFieldsMap, contentDefaults = {})
     }
   }
 
-  return jcr;
+  return coerceJcrTypes(jcr);
 }
+
+// The Sling JSON import (:operation=import) stores string values verbatim, so a "{Boolean}false"
+// type-hint string lands as a String property literally reading "{Boolean}false" — and blocks
+// like separator.js do `value !== 'false'`, which is then TRUE → a line is drawn. Convert typed
+// hints to real JSON types so AEM stores proper Boolean/Long/Double properties (rendered "false").
+function coerceJcrTypes(v) {
+  if (Array.isArray(v)) return v.map(coerceJcrTypes);
+  if (v && typeof v === 'object') { for (const k of Object.keys(v)) v[k] = coerceJcrTypes(v[k]); return v; }
+  if (typeof v === 'string') {
+    if (v === '{Boolean}true') return true;
+    if (v === '{Boolean}false') return false;
+    const num = /^\{(Long|Decimal|Double)\}(-?\d+(?:\.\d+)?)$/.exec(v);
+    if (num) return Number(num[2]);
+  }
+  return v;
+}
+
+// Block/section types that consistently carry a `filter` attr in real EDS (UE authoring meta);
+// verified >88% present. Others (section, cta, custom-image, teaser, quote) omit it.
+const FILTER_TYPES = new Set(['custom-title', 'text-container', 'hero-container', 'separator', 'eyebrow-text', 'grid-container', 'grid-section']);
 
 function makeNode(item, kind, compMap, modelFieldsMap, contentDefaults) {
   const comp = compMap[item.type];
@@ -359,6 +395,7 @@ function makeNode(item, kind, compMap, modelFieldsMap, contentDefaults) {
     'sling:resourceType': comp?.plugins?.xwalk?.page?.resourceType || defaultRt,
     model:          item.type,
     aueComponentId: item.type,
+    ...(FILTER_TYPES.has(item.type) ? { filter: item.type } : {}),
     ...(mf?.length ? { modelFields: mf } : {}),
     ...stripEmpty(tpl),
     ...stripEmpty(contentDefaults[item.type]),
@@ -795,7 +832,14 @@ function walkXmlNode(node, ordered, depth = 0) {
     // Allow a prop value to select a different EDS block type (e.g. videoType=youtube → "video")
     const propEdsType = mapping?.propEdsType;
     const rawPropVal  = propEdsType ? (child[`@${propEdsType.prop}`] || '').trim() : '';
-    const type = (propEdsType?.map?.[rawPropVal]) || mapping?.edsType || rt.split('/').pop();
+    let type = (propEdsType?.map?.[rawPropVal]) || mapping?.edsType || rt.split('/').pop();
+    // propEdsTypeMatch: pick block by a substring of a prop (dashboardcards fragmentPath →
+    // .../facts/ = fact-card, .../link-lists/ = dashboard-card-link-list)
+    const pmMatch = mapping?.propEdsTypeMatch;
+    if (pmMatch) {
+      const pv = String(child[`@${pmMatch.prop}`] || '');
+      for (const [needle, t] of Object.entries(pmMatch.contains || {})) { if (pv.includes(needle)) { type = t; break; } }
+    }
     // Translate AEM cq:styleIds → EDS classes_customDynamicClass via style-map
     const rawStyleIds = child['@cq:styleIds'];
     if (rawStyleIds && Object.keys(styleMap).length) {
@@ -2045,23 +2089,31 @@ app.post('/api/migrate-site/plan', (req, res) => {
 
   // Candidate pool for the fallback = all pages in migrated regions (any path).
   const migPages = idx.pages.filter(p => migrated.has(p.region) && p.region !== locale);
-  const mk = c => ({ region: c.region, canon: c.canon, score: simScore(pagesInLocale, c, idx.idf), edsPath: `${edsPrefix}/${c.region}/${c.canon}` });
+  const minScore = Math.max(0, Math.min(100, Number(req.body?.minScore) || 0));   // only show matches ≥ this
   const rows = pagesInLocale.map(src => {
     // 1) Primary: same path hierarchy (same canon) in a migrated region.
     let scored = (idx.byCanon[src.canon] || []).map(i => idx.pages[i])
       .filter(p => migrated.has(p.region) && p.region !== locale)
       .map(c => ({ region: c.region, canon: c.canon, score: simScore(src.sig, c.sig, idx.idf), edsPath: `${edsPrefix}/${c.region}/${c.canon}`, sameHierarchy: true }))
+      .filter(m => m.score >= minScore)
       .sort((a, b) => b.score - a.score);
-    let fallback = false;
-    // 2) Fallback: no same-path match (localized slug/hierarchy) → best structural match anywhere in migrated sites.
+    let fallbackUsed = false;
+    // 2) Fallback: no same-path match (localized slug/hierarchy) → best structural match
+    //    in EVERY migrated locale (one per locale) so the user can pick across sites.
     if (!scored.length) {
-      fallback = true;
+      fallbackUsed = true;
       const lo = src.sig.length * 0.55, hi = src.sig.length * 1.6;
-      scored = migPages.filter(c => c.sig.length >= lo && c.sig.length <= hi)
-        .map(c => ({ region: c.region, canon: c.canon, score: simScore(src.sig, c.sig, idx.idf), edsPath: `${edsPrefix}/${c.region}/${c.canon}`, sameHierarchy: false }))
-        .sort((a, b) => b.score - a.score).slice(0, 8);
+      const bestPerRegion = {};
+      for (const c of migPages) {
+        if (c.sig.length < lo || c.sig.length > hi) continue;
+        const s = simScore(src.sig, c.sig, idx.idf);
+        const cur = bestPerRegion[c.region];
+        if (!cur || s > cur.score)
+          bestPerRegion[c.region] = { region: c.region, canon: c.canon, score: s, edsPath: `${edsPrefix}/${c.region}/${c.canon}`, sameHierarchy: false };
+      }
+      scored = Object.values(bestPerRegion).filter(m => m.score >= minScore).sort((a, b) => b.score - a.score);
     }
-    return { canon: src.canon, sourceRel: src.rel, fallback, best: scored[0] || null, matches: scored.slice(0, 8) };
+    return { canon: src.canon, sourceRel: src.rel, fallback: fallbackUsed && scored.length > 0, best: scored[0] || null, matches: scored.slice(0, 40) };
   }).sort((a, b) => (b.best ? b.best.score : -1) - (a.best ? a.best.score : -1));
 
   res.json({ ok: true, locale, total: rows.length, withMatch: rows.filter(r => r.best).length, rows });
@@ -2117,6 +2169,96 @@ app.post('/api/parse-local-xml', (req, res) => {
     walkXmlNode(jcrContent, ordered);
     const pageTitle = String(jcrContent['@jcr:title'] || meta['jcr:title'] || '').trim() || rel.split('/').pop();
     res.json({ ok: true, rel, pageTitle, meta, ordered });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Auto-generate an EDS canvas from an AEM classic page (structural converter, aem-canvas.js).
+// Accepts { rel } (a content-xml/<rel> page) or { xml } (raw AEM JCR XML).
+// Returns sections[] (buildJcr shape), the built jcr, and a confidence estimate.
+app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) => {
+  try {
+    let xml = req.body?.xml;
+    let rel = String(req.body?.rel || '').trim().replace(/^\/+|\/+$/g, '');
+    const pageUrl = String(req.body?.pageUrl || '').trim();
+    if (!xml) {
+      if (!rel) return res.status(400).json({ error: 'rel or xml is required' });
+      const abs = path.resolve(SIM_ROOT, rel, '.content.xml');
+      if (!abs.startsWith(path.resolve(SIM_ROOT) + path.sep)) return res.status(400).json({ error: 'path outside content-xml' });
+      try { xml = fs.readFileSync(abs, 'utf8'); } catch (e) { return res.status(404).json({ error: `Cannot read ${rel}: ${e.message}` }); }
+    }
+    const tree = JCR_XML_PARSER.parse(xml);
+    const jcrContent = (tree['jcr:root'] || tree)['jcr:content'] || tree;
+
+    const meta = {};
+    const metaKeySet = new Set(migrationMap.metaKeys || []);
+    for (const [k, v] of Object.entries(jcrContent)) {
+      if (!k.startsWith('@')) continue;
+      const key = k.replace(/^@/, '');
+      if (metaKeySet.has(key) && v) meta[key] = v;
+    }
+    const pageTitle = String(jcrContent['@jcr:title'] || meta['jcr:title'] || '').trim() || (rel ? rel.split('/').pop() : 'page');
+
+    const sections = aemToCanvas(jcrContent, { rel });
+
+    // Accessibility backfill from the live AEM render (optional): fills empty image alt,
+    // captions, CTA aria-labels, video poster labels that the JCR XML doesn't carry.
+    let a11y = null;
+    if (pageUrl) {
+      try {
+        const html = await fetchRenderedHtml(pageUrl);
+        a11y = backfillA11y(sections, extractA11y(html));
+        a11y.ok = true;
+      } catch (e) { a11y = { ok: false, error: e.message }; }
+    }
+
+    // Confidence estimate: fraction of leaf blocks that mapped to a known EDS type
+    // (unmapped AEM components fall back to their raw name and need manual attention).
+    const KNOWN = new Set(['section', 'grid-container', 'grid-section', 'hero-container', 'hero-container-item', 'text-container-text']);
+    for (const m of Object.values(migrationMap.componentMap || {})) {
+      if (m.edsType) KNOWN.add(m.edsType);
+      if (m.childType) KNOWN.add(m.childType);
+      for (const t of Object.values(m.propEdsType?.map || {})) KNOWN.add(t);
+    }
+    let total = 0, mapped = 0, gridSections = 0, gridContainers = 0;
+    const unknown = {};
+    const scanBlk = b => {
+      total++; if (KNOWN.has(b.type)) mapped++; else unknown[b.type] = (unknown[b.type] || 0) + 1;
+      for (const c of (b.children || [])) { if (c.type === 'text-container-text' || c.type === 'hero-container-item') continue; total++; if (KNOWN.has(c.type)) mapped++; else unknown[c.type] = (unknown[c.type] || 0) + 1; }
+    };
+    for (const s of sections) {
+      if (s.type === 'grid-container') { gridContainers++; for (const gs of (s.blocks || [])) { gridSections++; (gs.children || []).forEach(scanBlk); } }
+      else (s.blocks || []).forEach(scanBlk);
+    }
+    const confidence = total ? Math.round(100 * mapped / total) : 100;
+
+    let jcr = null;
+    try {
+      const { compMap, modelFieldsMap, contentDefaults } = loadConfig();
+      jcr = buildJcr(meta, sections, compMap, modelFieldsMap, contentDefaults);
+    } catch (e) { /* config missing — sections[] still returned */ }
+
+    res.json({
+      ok: true, rel, pageTitle, meta, sections, jcr, a11y,
+      stats: { sections: sections.length, gridContainers, gridSections, blocks: total, mappedBlocks: mapped, confidence, unknownTypes: unknown }
+    });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Backfill accessibility (image alt/caption, cta aria-label, video poster) into an EXISTING
+// canvas from the live AEM render — lets the user re-fill without rebuilding the canvas.
+app.post('/api/a11y-backfill', express.json({ limit: '8mb' }), async (req, res) => {
+  try {
+    const sections = req.body?.sections;
+    const pageUrl = String(req.body?.pageUrl || '').trim();
+    if (!Array.isArray(sections)) return res.status(400).json({ error: 'sections[] required' });
+    // Normalize separators/eyebrows first — pure, always works even if the a11y fetch fails.
+    const norm = normalizeSections(sections);
+    let stats = {}, a11y = { ok: false };
+    if (pageUrl) {
+      try { stats = backfillA11y(sections, extractA11y(await fetchRenderedHtml(pageUrl))); a11y = { ok: true }; }
+      catch (e) { a11y = { ok: false, error: e.message }; }
+    }
+    res.json({ ok: true, sections, stats: { ...stats, ...norm }, a11y });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 

@@ -64,15 +64,15 @@
   },
   "separator": {
     "classes_height": "separator-height-24",
-    "classes_customDynamicClass": "separator-height-8,separator-divider"
+    "classes_customDynamicClass": "separator-height-24",
+    "showLine": "{Boolean}false"
   },
   "quote": {
     "quotation": "<p>Science is only as bold as the people who drive it.</p>",
     "quoteVariant": "basic",
-    "classes_contentWidth": "quote-content-col-6",
-    "classes_contentAlignment": "quote-align-right",
-    "classes_theme": "quote-dark",
-    "classes_customDynamicClass": "dark-theme,quote-standard,quote-h5,quote-content-col-6,quote-align-right"
+    "classes_contentWidth": "quote-content-col-none",
+    "classes_contentAlignment": "quote-align-none",
+    "classes_theme": "quote-none"
   },
   "custom-image": {
     "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ee1644ae-c3ae-4715-86dd-a1edc9d222e1/as/science-postdoctoral.jpg",
@@ -82,7 +82,7 @@
     "presetType": "smart-crop"
   },
   "linklist": {
-    "variant": "rows-with-arrows",
+    "variant": "standard",
     "sortOrder": "asc",
     "excludeCurrentPage": true,
     "orderBy": "content-tree",
@@ -94,10 +94,10 @@
   "linklist-item": {
     "classes": "linklist-item",
     "iconPosition": "after",
-    "fontIcon": "icon-abbvie-chevron-right",
     "linkText": "Link text",
     "link": "/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en",
-    "description": ""
+    "description": "",
+    "iconVariation": "none"
   },
   "video": {
     "uri": "https://www.youtube.com/watch?v=45GzoyuWP2I",
@@ -124,7 +124,7 @@
     "classes_showExpandCollapseAll": true,
     "classes_allowMultipleOpen": true,
     "classes_iconType": "accordion-icon-font",
-    "classes_customDynamicClass": "h5-size,align-center,cmp-accordion-large"
+    "classes_customDynamicClass": "h5-size"
   },
   "accordion-item": {
     "summary": "Question?",
@@ -147,21 +147,12 @@
   },
   "story-card": {
     "storyCardVariant": "leaderInfo",
-    "storyCardType": "leaderInfo",
-    "title": "Our mission to improve lives starts at the top.",
-    "image": "https://delivery-p157365-e1665798.adobeaemcloud.com/adobe/assets/urn:aaid:aem:e03c1f1c-a951-4521-89db-80af07486398/as/bts-evan-thumbnail.jpg",
-    "imageMimeType": "image/jpeg",
-    "imageAlt": "AbbVie scientist",
     "page": "/content/abbvie-nextgen-eds/corporate/abbvie-com/language-masters/en"
   },
   "fact-card": {
-    "classes_cardColor": "medium-theme",
-    "classes_customDynamicClass": "medium-theme",
-    "stat": "30+",
-    "label": "Years of scientific innovation"
+    "classes_customDynamicClass": "medium-theme"
   },
   "eyebrow-text": {
-    "classes_customDynamicClass": "regular-font",
     "text": "<p><strong>SCIENCE &amp; INNOVATION</strong></p>"
   },
   "teaser": {

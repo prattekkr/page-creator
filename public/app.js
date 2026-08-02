@@ -21,7 +21,7 @@ const S = {
   bulkTemplate:   null,   // deep clone of S.sections used as layout template for bulk import
   bulkPages:      [],     // [{ fileName, slug, pageTitle, edsPath, sections, filled, skipped, status, error }]
   findSimilar:    { info: null, mode: 'page', path: '', region: '', threshold: 88, busy: false, result: null, error: null, expanded: {} },
-  migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', busy: false, plan: null, error: null, editIdx: null },
+  migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', minScore: 80, liveBase: '', a11yBackfill: true, busy: false, plan: null, error: null, editIdx: null },
 };
 
 let _uid = 0;
@@ -60,12 +60,38 @@ function saveCanvas() {
   } catch (_) {}
 }
 
+// Enforce Standard/no-line separators + standard,bold eyebrows on a canvas in place (mirrors
+// server aem-canvas.normalizeBlock). Runs automatically wherever a canvas is loaded for review,
+// so the user never has to click a button for it. Returns {sep, eb} counts.
+function normalizeCanvasBlocks(sections) {
+  let sep = 0, eb = 0;
+  const visit = b => {
+    if (b && b.props) {
+      if (b.type === 'separator') {
+        // Height-only spacer, no line, no forced variation (matches live EDS: 81% no variation class).
+        const before = (b.props.classes_customDynamicClass || '') + '|' + b.props.showLine;
+        let cls = String(b.props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean)
+          .filter(c => c !== 'separator-divider' && c !== 'separator-standard');
+        if (!cls.some(c => /^separator-height-/.test(c))) cls.unshift('separator-height-24');
+        b.props.classes_customDynamicClass = cls.join(','); b.props.showLine = '{Boolean}false';
+        if (before !== (b.props.classes_customDynamicClass + '|' + b.props.showLine)) sep++;
+      }
+      // Eyebrow variation is derived from the AEM header styleId at generation time; do NOT force
+      // it here (post-hoc the styleIds are gone and the block already carries its correct variation).
+    }
+    (b.children || []).forEach(visit);
+  };
+  for (const s of (sections || [])) for (const b of (s.blocks || [])) visit(b);
+  return { sep, eb };
+}
+
 function loadCanvas() {
   try {
     const raw = localStorage.getItem(CANVAS_KEY);
     if (!raw) return false;
     const { sections, meta, collapsed } = JSON.parse(raw);
     if (Array.isArray(sections) && sections.length > 0) {
+      normalizeCanvasBlocks(sections);   // auto-fix old drafts built before the normalize rules
       S.sections  = sections;
       S.meta      = meta || {};
       S.collapsed = new Set(collapsed || []);
@@ -142,7 +168,9 @@ function html() {
     </div>` : ''}
     ${(S.migrateSite && S.migrateSite.editIdx != null && S.migrateSite.plan) ? `<div class="draft-banner migr-banner" style="background:#ede9fe;border-color:#c4b5fd">
       Reviewing migration canvas for <strong>${x(S.migrateSite.plan.rows[S.migrateSite.editIdx].canon)}</strong> — edit as needed, then save.
+      <button class="btn btn-xs btn-ghost" id="btn-fill-a11y" style="margin-left:8px" title="Fill image alt/caption/CTA aria from the live AEM page (separators + eyebrows are normalized automatically during canvas filling)">${S._a11yBusy ? '⏳ Working…' : '♿ Fill accessibility'}</button>
       <button class="btn btn-xs btn-primary" id="btn-mig-save-canvas" style="margin-left:8px">💾 Save &amp; back to Migrate Full Site</button>
+      ${S._a11yMsg ? `<span style="margin-left:8px;font-size:.72rem;color:${S._a11yErr ? 'var(--danger)' : 'var(--brand)'}">${x(S._a11yMsg)}</span>` : ''}
     </div>` : ''}
 <div class="workspace">
       ${paletteHtml()}
@@ -1534,28 +1562,32 @@ function migrateSiteTabHtml() {
     const doneN = p.rows.filter(r => r.status === 'done').length, readyN = p.rows.filter(r => r.status === 'ready').length;
     planHtml = `<div style="margin-top:14px">
       <div class="sv-section-title" style="margin:0 0 4px">${x(p.locale)} — ${p.total} pages · <strong>${p.withMatch}</strong> have a migrated match</div>
-      <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Pick each page's match → <strong>Prepare</strong> (import its EDS canvas + fill content) → <strong>Check</strong> to review/edit → create. No match, or want a different layout? Build a canvas in the <strong>Canvas</strong> tab and hit <strong>📋 Use canvas</strong> on the row.</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Pick each page's match → <strong>Prepare</strong> (import its EDS canvas + fill content) → <strong>Check</strong> to review/edit → create. <strong>No match?</strong> Hit <strong>🤖 Auto-build</strong> to generate a draft canvas straight from the AEM XML (the % shows mapping confidence — <strong>always Check before Create</strong>). Or build one in the <strong>Canvas</strong> tab and hit <strong>📋 Use canvas</strong>.</div>
       <table class="bulk-table"><thead><tr><th>Source page</th><th>Reuse canvas from</th><th>Create at</th><th>Filled</th><th>Actions</th></tr></thead>
       <tbody>${p.rows.slice(0, 400).map((r, i) => `<tr class="bulk-row bulk-row-${r.status || ''}">
         <td style="font-size:.72rem"><code>${x(r.canon)}</code></td>
         <td>${r.matches.length
-          ? `<select class="form-input mig-match" data-mig-idx="${i}" style="font-size:.7rem;padding:2px 4px;max-width:150px">${r.matches.map(m => `<option value="${x(m.region)}" ${r.selRegion === m.region ? 'selected' : ''}>${x(m.region)} · ${m.score}%</option>`).join('')}</select>`
-          : '<span style="color:var(--danger);font-size:.7rem">no match</span>'}
+          ? `<select class="form-input mig-match" data-mig-idx="${i}" style="font-size:.68rem;padding:2px 4px;max-width:220px">${r.matches.map((m, mi) => `<option value="${mi}" ${r.selIdx === mi ? 'selected' : ''}>${m.sameHierarchy ? x(m.region) : x(m.region) + '/' + x(m.canon) + ' ⚑'} · ${m.score}%</option>`).join('')}</select>${r.fallback ? '<div style="font-size:.62rem;color:#92400e">⚑ different path — review before use</div>' : ''}`
+          : '<span style="color:var(--danger);font-size:.7rem">no match — 🤖 auto-build</span>'}
           <input class="form-input mig-custom" data-mig-idx="${i}" style="font-size:.66rem;padding:2px 4px;margin-top:3px" placeholder="…or paste an EDS page path to reuse" value="${x(r.customPath || '')}"/></td>
         <td><input class="form-input mig-target" data-mig-idx="${i}" style="font-size:.68rem;padding:2px 4px" value="${x(r.targetPath || '')}"/></td>
         <td style="text-align:center;font-size:.72rem">${r.status === 'ready' || r.status === 'done' ? `${r.filled}/${r.filled + r.skipped}` : '—'}</td>
         <td style="white-space:nowrap">
-          <button class="btn btn-xs" data-mig-prepare="${i}" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>${r.status === 'ready' || r.status === 'done' ? '↻' : '⚙ Prepare'}</button>
+          ${r.matches.length ? `<button class="btn btn-xs" data-mig-prepare="${i}" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>${r.status === 'ready' || r.status === 'done' ? '↻' : '⚙ Prepare'}</button>` : ''}
+          <button class="btn btn-xs ${r.matches.length ? 'btn-ghost' : 'btn-primary'}" data-mig-autobuild="${i}" title="Auto-generate a draft canvas from this page's AEM XML (no match needed)" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>🤖 Auto-build</button>
           <button class="btn btn-xs btn-ghost" data-mig-usecanvas="${i}" title="Apply the canvas open in the Canvas tab to this page (for no-match pages, or to override the match)">📋 Use canvas</button>
           ${(r.status === 'ready' || r.status === 'done') ? ` <button class="btn btn-xs btn-ghost" data-mig-check="${i}">👁 Check</button> <button class="btn btn-xs btn-ghost" data-mig-create="${i}" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}
+          ${r.auto ? ` <span class="vm-pill ${r.confidence >= 90 ? 'vm-pill-ok' : r.confidence >= 70 ? 'vm-pill-warn' : 'vm-pill-bad'}" title="${Object.keys(r.unknownTypes || {}).length ? 'Unmapped: ' + x(Object.entries(r.unknownTypes).map(([t, n]) => `${t}×${n}`).join(', ')) : 'all blocks mapped to known EDS types'}">🤖 ${r.confidence}%</span>` : ''}
+          ${r.a11y ? (r.a11y.ok ? ` <span class="vm-pill vm-pill-ok" title="Accessibility filled from live AEM page">♿ ${(r.a11y.imageAlt || 0) + (r.a11y.caption || 0) + (r.a11y.ctaAria || 0) + (r.a11y.videoPoster || 0)}</span>` : ` <span class="vm-pill vm-pill-warn" title="A11y backfill failed: ${x(r.a11y.error || '')}">♿ ✗</span>`) : ''}
           ${r.manual ? ' <span class="vm-pill vm-pill-warn">manual</span>' : ''}
           <span class="bulk-status bulk-status-${r.status}" style="font-size:.68rem">${SL[r.status] || ''}</span>${r.error ? ` <span title="${x(r.error)}" style="color:var(--danger);cursor:help">ⓘ</span>` : ''}
         </td>
       </tr>`).join('')}</tbody></table>
-      <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
-        <button class="btn btn-sm" id="btn-mig-prepare-all">⚙ Prepare all</button>
+      <div style="display:flex;gap:8px;margin-top:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-sm" id="btn-mig-prepare-all">⚙ Prepare all matched</button>
+        <button class="btn btn-sm" id="btn-mig-autobuild-nomatch">🤖 Auto-build all no-match</button>
         <button class="btn btn-sm btn-primary" id="btn-mig-create-all">↑ Create all ready</button>
-        <span style="font-size:.75rem;color:var(--muted)">${readyN} ready · ${doneN} created</span>
+        <span style="font-size:.75rem;color:var(--muted)">${readyN} ready · ${doneN} created · ${p.rows.filter(r => !r.matches.length).length} no-match</span>
       </div>
     </div>`;
   }
@@ -1588,16 +1620,27 @@ function migrateSiteTabHtml() {
             : '<span style="font-size:.72rem;color:var(--muted)">Detect from AEM, or wait for the page index to load.</span>'}
         </div>
       </div>
-      <div class="settings-field" style="margin-bottom:0">
+      <div class="settings-field" style="margin-bottom:8px">
         <label>Create new pages under <span style="font-weight:400;color:var(--muted)">(your chosen destination root — page name appended)</span></label>
         <input id="ms-target" class="form-input" value="${x(ms.targetRoot)}" placeholder="/content/abbvie-nextgen-eds/corporate/abbvie-com/ar/es"/>
+      </div>
+      <div class="settings-field" style="margin-bottom:0">
+        <label style="display:flex;align-items:center;gap:8px">
+          <input type="checkbox" id="ms-a11y" ${ms.a11yBackfill ? 'checked' : ''} style="width:auto"/>
+          ♿ Backfill accessibility from the live AEM page <span style="font-weight:400;color:var(--muted)">(fills image alt, captions, CTA labels missing from the XML)</span>
+        </label>
+        <input id="ms-livebase" class="form-input" style="margin-top:6px" value="${x(ms.liveBase)}" placeholder="Live AEM base URL, e.g. https://www.abbvie.ch  (page path derived from the source, minus the country segment)"/>
       </div>
     </div>
 
     <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap">
-      <div class="settings-field" style="min-width:180px;margin:0">
+      <div class="settings-field" style="min-width:160px;margin:0">
         <label>Locale to migrate</label>
         <select id="ms-locale" class="form-input">${localeOpts || '<option>loading…</option>'}</select>
+      </div>
+      <div class="settings-field" style="width:120px;margin:0">
+        <label>Only match ≥ %</label>
+        <input id="ms-minscore" class="form-input" type="number" min="0" max="100" value="${ms.minScore}"/>
       </div>
       <button class="btn btn-sm btn-primary" id="btn-ms-plan" ${ms.busy ? 'disabled' : ''}>${ms.busy ? '⏳ Building plan…' : '🔎 Build migration plan'}</button>
     </div>
@@ -1628,16 +1671,17 @@ async function doBuildMigratePlan() {
   ms.edsPrefix = (document.getElementById('ms-prefix')?.value || '').trim();
   ms.targetRoot = (document.getElementById('ms-target')?.value || '').trim().replace(/\/+$/, '');
   ms.locale = document.getElementById('ms-locale')?.value || ms.locale;
+  ms.minScore = Math.max(0, Math.min(100, Number(document.getElementById('ms-minscore')?.value) || 0));
   const regions = ms.regionSel.slice();
   if (!ms.locale) { ms.error = 'Pick a locale.'; render(); return; }
   if (!regions.length) { ms.error = 'Enter at least one already-migrated region.'; render(); return; }
   ms.busy = true; ms.error = null; ms.plan = null; render();
   try {
-    const r = await fetch('/api/migrate-site/plan', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ locale: ms.locale, migratedRegions: regions, edsPrefix: ms.edsPrefix }) });
+    const r = await fetch('/api/migrate-site/plan', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ locale: ms.locale, migratedRegions: regions, edsPrefix: ms.edsPrefix, minScore: ms.minScore }) });
     const d = await r.json();
     if (!r.ok) { ms.error = d.error || 'Failed'; }
     else {
-      d.rows.forEach(r2 => { r2.selRegion = r2.best ? r2.best.region : null; r2.targetPath = ms.targetRoot ? `${ms.targetRoot}/${r2.canon}` : ''; r2.customPath = ''; r2.status = null; r2.filled = 0; r2.skipped = 0; });
+      d.rows.forEach(r2 => { r2.selIdx = 0; r2.targetPath = ms.targetRoot ? `${ms.targetRoot}/${r2.canon}` : ''; r2.customPath = ''; r2.status = null; r2.filled = 0; r2.skipped = 0; });
       ms.plan = d;
     }
   } catch (e) { ms.error = e.message; }
@@ -1659,7 +1703,7 @@ async function doMigPrepareOne(i) {
   const { aemHost, username, password } = S.conn;
   if (!aemHost || !username || !password) { alert('Configure the AEM connection (Connection tab) first.'); return; }
   const custom = normEdsPath(r.customPath);
-  const match = r.matches.find(m => m.region === r.selRegion) || r.best;
+  const match = r.matches[r.selIdx] || r.best;
   const pagePath = custom || (match && match.edsPath);
   if (!pagePath) { r.status = 'error'; r.error = 'Pick a match or paste an EDS page path to reuse.'; render(); return; }
   r.status = 'preparing'; r.error = null; render();
@@ -1701,6 +1745,41 @@ async function doMigPrepareAll() {
   for (let i = 0; i < rows.length; i++) if (rows[i].matches.length && rows[i].status !== 'done') await doMigPrepareOne(i);
 }
 
+// Auto-generate a draft canvas straight from the source AEM XML (aem-canvas converter).
+// No match needed — the structural rules build sections/grids and fill content in one pass.
+// Sets a confidence score so the user knows which drafts need the most review.
+// Live AEM URL for a source page: <liveBase>/<rel minus country segment>.html
+function liveUrlFor(sourceRel) {
+  const base = (S.migrateSite.liveBase || '').trim().replace(/\/+$/, '');
+  if (!base) return '';
+  const path = String(sourceRel).replace(/^\/+|\/+$/g, '').split('/').slice(1).join('/');
+  return `${base}/${path}.html`;
+}
+async function doMigAutoBuild(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r) return;
+  r.status = 'preparing'; r.error = null; render();
+  try {
+    const pageUrl = ms.a11yBackfill ? liveUrlFor(r.sourceRel) : '';
+    const d = await fetch('/api/aem-to-canvas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rel: r.sourceRel, pageUrl }) }).then(x => x.json());
+    if (!d.ok || !d.sections) throw new Error('Auto-build failed: ' + (d.error || 'no sections'));
+    r.a11y = d.a11y || null;
+    const ids = items => (items || []).map(it => ({ ...it, id: uid(), children: ids(it.children) }));
+    const sections = d.sections.map(sec => ({ ...sec, id: uid(), blocks: (sec.blocks || []).map(b => ({ ...b, id: uid(), children: ids(b.children) })) }));
+    r.sections = sections;
+    r.meta = d.meta || {}; r.pageTitle = d.pageTitle;
+    r.filled = d.stats.mappedBlocks; r.skipped = Math.max(0, d.stats.blocks - d.stats.mappedBlocks);
+    r.manual = false; r.auto = true; r.confidence = d.stats.confidence; r.unknownTypes = d.stats.unknownTypes || {};
+    r.status = 'ready';
+  } catch (e) { r.status = 'error'; r.error = e.message; }
+  render();
+}
+// Auto-build every row that has no migrated match — the main use for pending pages.
+async function doMigAutoBuildNoMatch() {
+  const rows = S.migrateSite.plan?.rows || [];
+  for (let i = 0; i < rows.length; i++) if (!rows[i].matches.length && rows[i].status !== 'done') await doMigAutoBuild(i);
+}
+
 // Open a prepared page's canvas in the editor to review/edit; edits saved back on return.
 function doMigCheckCanvas(i) {
   const ms = S.migrateSite, r = ms.plan?.rows[i];
@@ -1712,10 +1791,40 @@ function doMigCheckCanvas(i) {
   }
   ms.editIdx = i;
   S.sections = JSON.parse(JSON.stringify(r.sections));
+  normalizeCanvasBlocks(S.sections);            // separators/eyebrows auto-normalized on open
+  r.sections = JSON.parse(JSON.stringify(S.sections));
   S.sel = S.sections.length ? { secId: S.sections[0].id } : null;
   S.collapsed.clear();
   _view = 'canvas';
   render();
+}
+// Fill accessibility (alt/caption/aria) into the canvas currently open for review — no rebuild.
+// Uses the reviewed row's live URL (liveBase + source path), or prompts for one.
+// Fill a11y (from the live page) AND normalize separators/eyebrows on the open canvas — no rebuild.
+// Normalization is pure; the a11y part needs a live URL (blank = normalize only).
+async function doFillA11yCanvas() {
+  const ms = S.migrateSite;
+  const row = (ms.editIdx != null && ms.plan) ? ms.plan.rows[ms.editIdx] : null;
+  let pageUrl = row ? liveUrlFor(row.sourceRel) : '';
+  if (!pageUrl) pageUrl = (window.prompt('Live AEM page URL for accessibility (leave blank to just normalize separators/eyebrows):', '') || '').trim();
+  S._a11yBusy = true; S._a11yMsg = null; S._a11yErr = false; render();
+  try {
+    const d = await fetch('/api/a11y-backfill', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sections: S.sections, pageUrl }) }).then(x => x.json());
+    if (!d.ok) throw new Error(d.error || 'Failed');
+    S.sections = d.sections;                         // updated in place, keeps ids
+    const s = d.stats || {};
+    const a = (s.imageAlt || 0) + (s.caption || 0) + (s.ctaAria || 0) + (s.videoPoster || 0);
+    if (row) { row.sections = JSON.parse(JSON.stringify(S.sections)); if (d.a11y && d.a11y.ok) row.a11y = { ok: true, ...s }; }
+    const parts = [];
+    if (a) parts.push(`♿ ${a} a11y (alt ${s.imageAlt || 0}, cap ${s.caption || 0}, cta ${s.ctaAria || 0}, vid ${s.videoPoster || 0})`);
+    else if (pageUrl) parts.push('♿ nothing new to fill');
+    const norm = (s.separators || 0) + (s.eyebrows || 0);
+    if (norm) parts.push(`🔧 ${s.separators || 0} separators, ${s.eyebrows || 0} eyebrows fixed`);
+    if (pageUrl && d.a11y && !d.a11y.ok) parts.push(`a11y fetch failed: ${d.a11y.error}`);
+    S._a11yErr = !!(pageUrl && d.a11y && !d.a11y.ok);
+    S._a11yMsg = parts.join(' · ');
+  } catch (e) { S._a11yErr = true; S._a11yMsg = '✗ ' + e.message; }
+  S._a11yBusy = false; render();
 }
 function doMigSaveCanvas() {
   const ms = S.migrateSite;
@@ -2304,6 +2413,7 @@ function fillSectionsFromPool(sections, xmlPool) {
   for (const sec of sections) {
     for (const blk of (sec.blocks || [])) fillBlock(blk);
   }
+  normalizeCanvasBlocks(sections);   // separators/eyebrows normalized as part of filling — no manual step
   return { filled, skipped };
 }
 
@@ -2623,6 +2733,7 @@ function bind() {
   // Topbar
   on('btn-create', 'click', doCreate);
   on('btn-mig-save-canvas', 'click', doMigSaveCanvas);   // review banner (canvas view)
+  on('btn-fill-a11y', 'click', doFillA11yCanvas);        // review banner: fill a11y without rebuild
   on('btn-publish-aem', 'click', () => {
     const changes = computeJcrDiff();
     if (!changes.length) { alert('No changes since the page was imported.'); return; }
@@ -2954,13 +3065,17 @@ function bind() {
       const c = document.getElementById('ms-region-count'); if (c) c.textContent = `${S.migrateSite.regionSel.length} selected`;
     }));
     on('btn-ms-plan', 'click', doBuildMigratePlan);
+    { const el = document.getElementById('ms-livebase'); if (el) el.addEventListener('change', () => { S.migrateSite.liveBase = el.value.trim(); }); }
+    { const el = document.getElementById('ms-a11y'); if (el) el.addEventListener('change', () => { S.migrateSite.a11yBackfill = el.checked; }); }
     on('btn-mig-prepare-all', 'click', doMigPrepareAll);
+    on('btn-mig-autobuild-nomatch', 'click', doMigAutoBuildNoMatch);
     on('btn-mig-create-all', 'click', doMigCreateAll);
     qAll('[data-mig-prepare]').forEach(el => el.addEventListener('click', () => doMigPrepareOne(Number(el.dataset.migPrepare))));
+    qAll('[data-mig-autobuild]').forEach(el => el.addEventListener('click', () => doMigAutoBuild(Number(el.dataset.migAutobuild))));
     qAll('[data-mig-usecanvas]').forEach(el => el.addEventListener('click', () => doMigUseCurrentCanvas(Number(el.dataset.migUsecanvas))));
     qAll('[data-mig-check]').forEach(el => el.addEventListener('click', () => doMigCheckCanvas(Number(el.dataset.migCheck))));
     qAll('[data-mig-create]').forEach(el => el.addEventListener('click', () => doMigCreateOne(Number(el.dataset.migCreate))));
-    qAll('.mig-match').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].selRegion = el.value; }));
+    qAll('.mig-match').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].selIdx = Number(el.value); }));
     qAll('.mig-target').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].targetPath = el.value.trim(); }));
     qAll('.mig-custom').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].customPath = el.value.trim(); }));
   }

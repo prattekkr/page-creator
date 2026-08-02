@@ -76,14 +76,18 @@
         "fileReference": "image",
         "alt": "imageAlt",
         "linkTarget": "target",
-        "dmPresetType": "dmPresetType",
-        "linkURL": "target"
+        "altValueFromDAM": "getAltFromDAM",
+        "isDecorative": "imageIsDecorative"
       },
       "skipProps": [
         "linkURL",
         "openInNewWindow",
         "id",
-        "jcr:title"
+        "jcr:title",
+        "displayPopupTitle",
+        "titleValueFromDAM",
+        "dmPresetType",
+        "imageModifiers"
       ]
     },
     "abbvie-com2/components/header/v2/header": {
@@ -119,7 +123,7 @@
         "jcr:title": "linkText",
         "linkURL": "link",
         "linkTarget": "ctaTarget",
-        "accessibilityLabel": "linkText",
+        "accessibilityLabel": "aria-label",
         "link": "link"
       },
       "skipProps": [
@@ -160,9 +164,9 @@
         "btnText": "overlayButtonLabel",
         "imgAlt": "posterAccessibilityLabel",
         "brightcovePlaylistAccount": "accountId",
-        "descriptiveIframeTitle": "captionHeading",
         "videoType": "transcriptSource",
-        "brightcovePlaylistPlayerId": "playerId"
+        "brightcovePlaylistPlayerId": "playerId",
+        "fileReference": "placeholderImage"
       },
       "skipProps": [
         "videoType",
@@ -181,7 +185,11 @@
         "captions",
         "showPlayerControls",
         "loopVideo",
-        "id"
+        "id",
+        "autoPlay",
+        "showRelatedContent",
+        "showVideoInfo",
+        "descriptiveIframeTitle"
       ]
     },
     "abbvie-com2/components/podcast": {
@@ -263,7 +271,12 @@
       "edsType": "breadcrumb",
       "propRenames": {},
       "skipProps": [
-        "id"
+        "id",
+        "disableShadowing",
+        "hideCurrent",
+        "showHidden",
+        "startLevel",
+        "langAttribute"
       ]
     },
     "abbvie-com2/components/linklist/v2/linklist": {
@@ -283,10 +296,10 @@
       "childPropRenames": {
         "text": "linkText",
         "linkURL": "link",
-        "linkTarget": "target",
         "iconImage": "fontIcon",
         "iconPosition": "iconPosition",
-        "icons": "fontIcon"
+        "icons": "fontIcon",
+        "alt": "linkText"
       },
       "skipProps": [
         "linkURL",
@@ -328,6 +341,10 @@
         "attributionName": "attributionName",
         "attributionTitle": "attributionRole",
         "quote": "quotation",
+        "backgroundImageFileReference": "backgroundImage",
+        "fileReference": "attributionImage",
+        "topLeftText": "toplefttext",
+        "bottomRightText": "toprighttext",
         "dmPresetType": "dmPresetType"
       },
       "skipProps": [
@@ -465,15 +482,15 @@
       ]
     },
     "abbvie-com2/components/search/searchinput/v2/searchinput": {
-      "edsType": "search",
+      "edsType": "search-input",
       "propRenames": {
-        "searchId": "index",
-        "buttonLabel": "mobilePlaceholder"
+        "buttonLabel": "searchButtonPlaceholder",
+        "buttonLabelMobile": "searchButtonPlaceholderMobile",
+        "searchResultsPath": "searchResultsPagePath"
       },
       "skipProps": [
         "searchType",
-        "searchResultsPath",
-        "buttonLabelMobile",
+        "searchId",
         "alertText",
         "id"
       ]
@@ -529,11 +546,18 @@
       ]
     },
     "abbvie-com2/components/dashboardcards/v1/dashboardcards": {
-      "edsType": "cards",
-      "propRenames": {},
+      "edsType": "fact-card",
+      "propEdsTypeMatch": {
+        "prop": "fragmentPath",
+        "contains": {
+          "/link-lists/": "dashboard-card-link-list"
+        }
+      },
+      "propRenames": {
+        "fragmentPath": "contentFragment",
+        "hideImage": "hideImage"
+      },
       "skipProps": [
-        "fragmentPath",
-        "hideImage",
         "imagePreset",
         "imageModifiers",
         "id"
