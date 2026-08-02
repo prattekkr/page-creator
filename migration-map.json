@@ -75,15 +75,15 @@
       "propRenames": {
         "fileReference": "image",
         "alt": "imageAlt",
-        "linkTarget": "target",
+        "jcr:title": "caption",
+        "linkURL": "target",
+        "linkTarget": "clickBehavior",
         "altValueFromDAM": "getAltFromDAM",
         "isDecorative": "imageIsDecorative"
       },
       "skipProps": [
-        "linkURL",
         "openInNewWindow",
         "id",
-        "jcr:title",
         "displayPopupTitle",
         "titleValueFromDAM",
         "dmPresetType",
@@ -296,6 +296,8 @@
       "childPropRenames": {
         "text": "linkText",
         "linkURL": "link",
+        "linkDescription": "description",
+        "subTitle": "subtitle",
         "iconImage": "fontIcon",
         "iconPosition": "iconPosition",
         "icons": "fontIcon",

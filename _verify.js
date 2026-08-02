@@ -1,6 +1,7 @@
 // Read-only verification of AEM->EDS structural rules across every paired page.
 const fs = require('fs');
 const { XMLParser } = require('fast-xml-parser');
+const styleMap = JSON.parse(fs.readFileSync('style-map.json', 'utf8'));
 
 const P = new XMLParser({
   ignoreAttributes: false,
@@ -45,7 +46,23 @@ function aemLeafType(node) {
 
 function aemExtract(file) {
   const doc = P.parse(fs.readFileSync(file, 'utf8'));
-  const res = { gridColSeq: [], bgColors: [], leaves: {}, hasContainer: 0, containerBgImg: 0 };
+  const res = { gridColSeq: [], bgColors: [], leaves: {}, hasContainer: 0, containerBgImg: 0,
+    styles: { style_contentWidth: [], style_borderRadius: [], style_height: [], style_margin: [], style_padding: [], 'style_bg-color': [] } };
+  const addStyle = (field, value) => { if (value) res.styles[field].push(value); };
+  function extractLayoutStyles(a) {
+    const ids = String(a['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+    for (const id of ids) {
+      const entry = styleMap[id]; const cls = entry?.edsClass; const group = entry?.groupLabel;
+      if (!cls) continue;
+      if (group === 'Desktop Width') addStyle('style_contentWidth', cls);
+      else if (group === 'Radius') addStyle('style_borderRadius', /^(.+)-radius$/.test(cls)
+        ? 'radius-' + cls.replace(/-radius$/, '') : cls);
+      else if (group === 'Desktop Height') addStyle('style_height', cls);
+      else if (group === 'Margin and Padding') addStyle(/margin/.test(cls) ? 'style_margin' : 'style_padding', cls);
+    }
+    const bg = String(a['@backgroundColor'] || '').replace('#', '').toLowerCase();
+    if (bg && bg !== 'ffffff') addStyle('style_bg-color', 'bg-' + bg);
+  }
   function addLeaf(t) { if (!t) return; res.leaves[t] = (res.leaves[t] || 0) + 1; }
   function walk(node) {
     const a = attrs(node);
@@ -56,6 +73,7 @@ function aemExtract(file) {
       if (a['@backgroundImageReference'] || a['@fileReference'] && false) {}
       if (a['@backgroundImageReference']) res.containerBgImg++;
     }
+    if (r.includes('/container/') || r.includes('/grid/')) extractLayoutStyles(a);
     if (r.includes('/grid/')) {
       const rc = parseInt(a['@rowCount'] || '1') || 1;
       const ws = [];
@@ -95,13 +113,17 @@ function aemExtract(file) {
 // ---------- EDS extraction ----------
 function edsExtract(file) {
   const doc = P.parse(fs.readFileSync(file, 'utf8'));
-  const res = { gridColSeq: [], bgClasses: [], models: {} };
+  const res = { gridColSeq: [], bgClasses: [], models: {},
+    styles: { style_contentWidth: [], style_borderRadius: [], style_height: [], style_margin: [], style_padding: [], 'style_bg-color': [] } };
   function addModel(m) { if (!m) return; res.models[m] = (res.models[m] || 0) + 1; }
   function walk(node) {
     const a = attrs(node);
     const model = a['@model'];
     const dyn = a['@style_customDynamicClass'] || a['@classes_customDynamicClass'] || '';
     if (model) addModel(model);
+    if (model === 'section' || model === 'grid-container') {
+      for (const field of Object.keys(res.styles)) if (a['@' + field]) res.styles[field].push(a['@' + field]);
+    }
     if (model === 'grid-section') {
       const m = /grid-cols-(\d+)/.exec(dyn);
       res.gridColSeq.push(m ? m[1] : '?');
@@ -149,6 +171,7 @@ let S = {
   exact: 0, exactNoSpacer: 0, colTotal: 0, colHit: 0,
   bgAll: 0, bgAllHit: 0, bgNonWhite: 0, bgNonWhiteHit: 0, whiteCount: 0,
   blockChecks: 0, blockMatch: 0,
+  styleChecks: {},       // typed EDS style field -> {source, hit}
   perType: {},            // aemType -> {checks, match, aemTot, edsTot}
   regionShell: {},        // region -> {aemGrid, edsNone}
   mism: [],
@@ -200,6 +223,17 @@ for (const pr of pairs) {
     const t = (S.perType[aemT] = S.perType[aemT] || { checks: 0, match: 0, aemTot: 0, edsTot: 0 });
     t.checks++; if (ec === ac) t.match++; t.aemTot += ac; t.edsTot += ec;
   }
+
+  // Rule 4: AEM layout style IDs / backgrounds -> explicit EDS style fields.
+  // This is intentionally field-level (not positional): EDS may restructure
+  // wrapper nodes, but should still preserve the authored visual decision.
+  for (const field of Object.keys(A.styles)) {
+    const target = new Set(E.styles[field]);
+    for (const value of A.styles[field]) {
+      const stat = S.styleChecks[field] = S.styleChecks[field] || { source: 0, hit: 0 };
+      stat.source++; if (target.has(value)) stat.hit++;
+    }
+  }
 }
 
 const pct = (a, b) => b ? (100 * a / b).toFixed(1) + '%' : 'n/a';
@@ -226,6 +260,10 @@ console.log('  overall:', pct(S.blockMatch, S.blockChecks), `(${S.blockMatch}/${
 Object.entries(S.perType).sort((a, b) => b[1].checks - a[1].checks).forEach(([t, v]) =>
   console.log('   ', t.padEnd(14), '→', BLOCK_MAP[t].padEnd(22),
     pct(v.match, v.checks).padStart(6), `pages  (AEM ${v.aemTot} / EDS ${v.edsTot} instances)`));
+
+console.log('\n── RULE 4: AEM container/grid styles → typed EDS style fields ──');
+Object.entries(S.styleChecks).forEach(([field, v]) =>
+  console.log('  ', field.padEnd(22), pct(v.hit, v.source), `(${v.hit}/${v.source})`));
 
 console.log('\n── REGIONS where AEM has grids but EDS often has none (likely un-migrated shells) ──');
 Object.entries(S.regionShell).filter(([, v]) => v.aemGrid >= 3)

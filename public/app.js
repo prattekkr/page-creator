@@ -68,11 +68,11 @@ function normalizeCanvasBlocks(sections) {
   const visit = b => {
     if (b && b.props) {
       if (b.type === 'separator') {
-        // Height-only spacer, no line, no forced variation (matches live EDS: 81% no variation class).
+        // Keep height/variant classes derived from AEM style IDs. Use 24px only
+        // for a separator that has no source styling at all.
         const before = (b.props.classes_customDynamicClass || '') + '|' + b.props.showLine;
-        let cls = String(b.props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean)
-          .filter(c => c !== 'separator-divider' && c !== 'separator-standard');
-        if (!cls.some(c => /^separator-height-/.test(c))) cls.unshift('separator-height-24');
+        const cls = String(b.props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean);
+        if (!cls.length) cls.unshift('separator-height-24');
         b.props.classes_customDynamicClass = cls.join(','); b.props.showLine = '{Boolean}false';
         if (before !== (b.props.classes_customDynamicClass + '|' + b.props.showLine)) sep++;
       }
@@ -1366,7 +1366,7 @@ function bulkTabHtml() {
           <td><span class="bulk-status bulk-status-${p.status}">${p.status === 'ready' ? '✓ Ready' : p.status === 'publishing' ? '⏳' : p.status === 'done' ? '✓ Done' : p.status === 'error' ? '✗ Error' : p.status}</span>
             ${p.error ? `<span title="${x(p.error)}" style="color:var(--danger);cursor:help;margin-left:4px">ⓘ</span>` : ''}
           </td>
-          <td><button class="btn btn-xs btn-ghost" data-bulk-pub="${i}" ${p.status === 'publishing' ? 'disabled' : ''}>Publish</button></td>
+          <td><button class="btn btn-xs btn-ghost" data-bulk-pub="${i}" ${p.status === 'publishing' ? 'disabled' : ''}>Publish</button>${p.status === 'done' && p.authorUrl ? ` <button class="btn btn-xs btn-ghost" data-bulk-open-author="${i}">↗ Open authoring</button>` : ''}</td>
         </tr>`).join('')}
       </tbody>
     </table>
@@ -1562,13 +1562,13 @@ function migrateSiteTabHtml() {
     const doneN = p.rows.filter(r => r.status === 'done').length, readyN = p.rows.filter(r => r.status === 'ready').length;
     planHtml = `<div style="margin-top:14px">
       <div class="sv-section-title" style="margin:0 0 4px">${x(p.locale)} — ${p.total} pages · <strong>${p.withMatch}</strong> have a migrated match</div>
-      <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Pick each page's match → <strong>Prepare</strong> (import its EDS canvas + fill content) → <strong>Check</strong> to review/edit → create. <strong>No match?</strong> Hit <strong>🤖 Auto-build</strong> to generate a draft canvas straight from the AEM XML (the % shows mapping confidence — <strong>always Check before Create</strong>). Or build one in the <strong>Canvas</strong> tab and hit <strong>📋 Use canvas</strong>.</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Only exact same-path pages in selected locales are matched automatically. If that page does not exist in another locale, paste an EDS page path, or use <strong>🤖 Auto-build</strong> to generate a draft from its AEM XML.</div>
       <table class="bulk-table"><thead><tr><th>Source page</th><th>Reuse canvas from</th><th>Create at</th><th>Filled</th><th>Actions</th></tr></thead>
       <tbody>${p.rows.slice(0, 400).map((r, i) => `<tr class="bulk-row bulk-row-${r.status || ''}">
         <td style="font-size:.72rem"><code>${x(r.canon)}</code></td>
         <td>${r.matches.length
-          ? `<select class="form-input mig-match" data-mig-idx="${i}" style="font-size:.68rem;padding:2px 4px;max-width:220px">${r.matches.map((m, mi) => `<option value="${mi}" ${r.selIdx === mi ? 'selected' : ''}>${m.sameHierarchy ? x(m.region) : x(m.region) + '/' + x(m.canon) + ' ⚑'} · ${m.score}%</option>`).join('')}</select>${r.fallback ? '<div style="font-size:.62rem;color:#92400e">⚑ different path — review before use</div>' : ''}`
-          : '<span style="color:var(--danger);font-size:.7rem">no match — 🤖 auto-build</span>'}
+          ? `<select class="form-input mig-match" data-mig-idx="${i}" title="${x((r.matches[r.selIdx || 0] || {}).edsPath || '')}" style="font-size:.68rem;padding:2px 4px;max-width:320px">${r.matches.map((m, mi) => `<option value="${mi}" ${r.selIdx === mi ? 'selected' : ''} title="${x(m.edsPath || '')}">${x(m.region)}/${x(m.canon)} · ${m.score}%</option>`).join('')}</select>`
+          : `<span style="color:var(--muted);font-size:.7rem">no exact-path page found</span>`}
           <input class="form-input mig-custom" data-mig-idx="${i}" style="font-size:.66rem;padding:2px 4px;margin-top:3px" placeholder="…or paste an EDS page path to reuse" value="${x(r.customPath || '')}"/></td>
         <td><input class="form-input mig-target" data-mig-idx="${i}" style="font-size:.68rem;padding:2px 4px" value="${x(r.targetPath || '')}"/></td>
         <td style="text-align:center;font-size:.72rem">${r.status === 'ready' || r.status === 'done' ? `${r.filled}/${r.filled + r.skipped}` : '—'}</td>
@@ -1576,7 +1576,7 @@ function migrateSiteTabHtml() {
           ${r.matches.length ? `<button class="btn btn-xs" data-mig-prepare="${i}" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>${r.status === 'ready' || r.status === 'done' ? '↻' : '⚙ Prepare'}</button>` : ''}
           <button class="btn btn-xs ${r.matches.length ? 'btn-ghost' : 'btn-primary'}" data-mig-autobuild="${i}" title="Auto-generate a draft canvas from this page's AEM XML (no match needed)" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>🤖 Auto-build</button>
           <button class="btn btn-xs btn-ghost" data-mig-usecanvas="${i}" title="Apply the canvas open in the Canvas tab to this page (for no-match pages, or to override the match)">📋 Use canvas</button>
-          ${(r.status === 'ready' || r.status === 'done') ? ` <button class="btn btn-xs btn-ghost" data-mig-check="${i}">👁 Check</button> <button class="btn btn-xs btn-ghost" data-mig-create="${i}" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}
+          ${(r.status === 'ready' || r.status === 'done') ? ` <button class="btn btn-xs btn-ghost" data-mig-check="${i}">👁 Check</button> <button class="btn btn-xs btn-ghost" data-mig-create="${i}" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}${r.status === 'done' && r.authorUrl ? ` <button class="btn btn-xs btn-ghost" data-mig-open-author="${i}">↗ Open authoring</button>` : ''}
           ${r.auto ? ` <span class="vm-pill ${r.confidence >= 90 ? 'vm-pill-ok' : r.confidence >= 70 ? 'vm-pill-warn' : 'vm-pill-bad'}" title="${Object.keys(r.unknownTypes || {}).length ? 'Unmapped: ' + x(Object.entries(r.unknownTypes).map(([t, n]) => `${t}×${n}`).join(', ')) : 'all blocks mapped to known EDS types'}">🤖 ${r.confidence}%</span>` : ''}
           ${r.a11y ? (r.a11y.ok ? ` <span class="vm-pill vm-pill-ok" title="Accessibility filled from live AEM page">♿ ${(r.a11y.imageAlt || 0) + (r.a11y.caption || 0) + (r.a11y.ctaAria || 0) + (r.a11y.videoPoster || 0)}</span>` : ` <span class="vm-pill vm-pill-warn" title="A11y backfill failed: ${x(r.a11y.error || '')}">♿ ✗</span>`) : ''}
           ${r.manual ? ' <span class="vm-pill vm-pill-warn">manual</span>' : ''}
@@ -1639,7 +1639,7 @@ function migrateSiteTabHtml() {
         <select id="ms-locale" class="form-input">${localeOpts || '<option>loading…</option>'}</select>
       </div>
       <div class="settings-field" style="width:120px;margin:0">
-        <label>Only match ≥ %</label>
+        <label>Fallback match ≥ %</label>
         <input id="ms-minscore" class="form-input" type="number" min="0" max="100" value="${ms.minScore}"/>
       </div>
       <button class="btn btn-sm btn-primary" id="btn-ms-plan" ${ms.busy ? 'disabled' : ''}>${ms.busy ? '⏳ Building plan…' : '🔎 Build migration plan'}</button>
@@ -1848,7 +1848,7 @@ async function doMigCreateOne(i) {
   try {
     const meta = (r.meta && Object.keys(r.meta).length) ? r.meta : (r.pageTitle ? { 'jcr:title': r.pageTitle } : {});
     const res = await fetch('/api/pages', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: r.sections }) }).then(x => x.json());
-    if (res.ok) { r.status = 'done'; r.error = null; } else { r.status = 'error'; r.error = res.error || 'Create failed'; }
+    if (res.ok) { r.status = 'done'; r.error = null; r.authorUrl = res.authorUrl; } else { r.status = 'error'; r.error = res.error || 'Create failed'; }
   } catch (e) { r.status = 'error'; r.error = e.message; }
   render();
 }
@@ -2715,6 +2715,7 @@ function resultOverlayHtml() {
   </div>`;
 
   const ueUrl = buildUeUrl(r.path);
+  const authorUrl = safeAuthoringUrl(r.authorUrl);
   return `<div class="result-overlay">
     <div class="result-box">
       <div class="rb-icon">🎉</div>
@@ -2722,10 +2723,27 @@ function resultOverlayHtml() {
       <p style="font-size:.82rem;word-break:break-all;color:var(--muted)">${x(r.path)}</p>
       <div class="rb-actions">
         <a class="btn btn-primary" href="${x(ueUrl)}" target="_blank">Open in Universal Editor</a>
+        ${authorUrl ? `<a class="btn btn-ghost" href="${x(authorUrl)}" target="_blank" rel="noopener noreferrer">↗ Open in authoring</a>` : ''}
         <button class="btn btn-ghost" id="btn-close-result">Close</button>
       </div>
     </div>
   </div>`;
+}
+
+function safeAuthoringUrl(value) {
+  try {
+    const url = new URL(value);
+    return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+  } catch (_) {
+    return '';
+  }
+}
+
+function openAuthoringPage(value) {
+  const url = safeAuthoringUrl(value);
+  if (!url) { alert('The created page does not have a valid AEM authoring URL.'); return; }
+  const tab = window.open(url, '_blank', 'noopener,noreferrer');
+  if (tab) tab.opener = null;
 }
 
 // ── Events ────────────────────────────────────────────────────────────────────
@@ -3033,6 +3051,8 @@ function bind() {
   // Per-row publish buttons
   document.querySelectorAll('[data-bulk-pub]').forEach(el =>
     el.addEventListener('click', () => doBulkPublishOne(Number(el.dataset.bulkPub))));
+  document.querySelectorAll('[data-bulk-open-author]').forEach(el =>
+    el.addEventListener('click', () => openAuthoringPage(S.bulkPages[Number(el.dataset.bulkOpenAuthor)]?.authorUrl)));
 
   // Editable EDS path per row
   document.querySelectorAll('.bulk-path-input').forEach(el =>
@@ -3075,6 +3095,7 @@ function bind() {
     qAll('[data-mig-usecanvas]').forEach(el => el.addEventListener('click', () => doMigUseCurrentCanvas(Number(el.dataset.migUsecanvas))));
     qAll('[data-mig-check]').forEach(el => el.addEventListener('click', () => doMigCheckCanvas(Number(el.dataset.migCheck))));
     qAll('[data-mig-create]').forEach(el => el.addEventListener('click', () => doMigCreateOne(Number(el.dataset.migCreate))));
+    qAll('[data-mig-open-author]').forEach(el => el.addEventListener('click', () => openAuthoringPage(S.migrateSite.plan?.rows[Number(el.dataset.migOpenAuthor)]?.authorUrl)));
     qAll('.mig-match').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].selIdx = Number(el.value); }));
     qAll('.mig-target').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].targetPath = el.value.trim(); }));
     qAll('.mig-custom').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].customPath = el.value.trim(); }));

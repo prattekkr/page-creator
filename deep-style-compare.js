@@ -7,17 +7,16 @@
  * aggregates every MISSING token (twin has, converter doesn't → under-derivation) and EXTRA token
  * (converter emits, twin doesn't → over-emission), so systematic mapping errors surface.
  *
- * Usage:  node deep-style-compare.js [site]   (default cl/es)
+ * Usage:  node deep-style-compare.js [site|all]   (default cl/es)
  */
 const fs = require('fs');
-const cp = require('child_process');
 const { XMLParser } = require('fast-xml-parser');
 const { aemToCanvas } = require('./aem-canvas');
 const P = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '@', parseAttributeValue: false, trimValues: true, isArray: () => false });
 const SITE = process.argv[2] || 'cl/es';
 
 // approved defaults — flag separately so real derivation bugs stand out
-const APPROVED = new Set(['regular-padding', 'no-bottom-margin', 'no-side-margin', 'content-regular', 'grid-container']);
+const APPROVED = new Set(['regular-padding', 'no-bottom-margin', 'no-side-margin', 'content-wide', 'grid-container']);
 const clsSet = v => new Set(String(v || '').split(',').map(s => s.trim()).filter(Boolean));
 
 // anchor = stable content identifier found recursively under a node
@@ -64,8 +63,17 @@ function edsNodes(root) {
 }
 const jac = (a, b) => { if (!a.size && !b.size) return 1; let i = 0; for (const x of a) if (b.has(x)) i++; return i / (a.size + b.size - i); };
 
-const pages = cp.execSync(`find content-xml/${SITE} -name .content.xml`, { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
-  .map(f => f.replace(/^content-xml\//, '').replace(/\/\.content\.xml$/, '')).filter(r => fs.existsSync(`eds-xml/${r}/.content.xml`));
+function pageFiles(root, out = []) {
+  for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+    const file = `${root}/${entry.name}`;
+    if (entry.isDirectory()) pageFiles(file, out);
+    else if (entry.name === '.content.xml') out.push(file);
+  }
+  return out;
+}
+const sourceRoot = SITE === 'all' ? 'content-xml' : `content-xml/${SITE}`;
+const pages = pageFiles(sourceRoot).map(f => f.replace(/^content-xml\//, '').replace(/\/\.content\.xml$/, ''))
+  .filter(r => fs.existsSync(`eds-xml/${r}/.content.xml`));
 
 const missing = {}, extra = {}, missingReal = {}, extraReal = {};
 let aligned = 0, exact = 0, exactReal = 0;

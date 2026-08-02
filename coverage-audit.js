@@ -18,7 +18,6 @@
  */
 const fs = require('fs');
 const path = require('path');
-const cp = require('child_process');
 const { XMLParser } = require('fast-xml-parser');
 const { aemToCanvas } = require('./aem-canvas');
 
@@ -59,8 +58,18 @@ function buildValidClasses() {
   return valid;
 }
 function grepFiles(pattern, dir) {
-  try { return cp.execSync(`grep -rl "${pattern}" ${dir} --include=*.xml`, { encoding: 'utf8', maxBuffer: 1 << 28 }).trim().split('\n').filter(Boolean); }
-  catch { return []; }
+  const out = [];
+  const needle = String(pattern);
+  (function walk(folder) {
+    for (const entry of fs.readdirSync(folder, { withFileTypes: true })) {
+      const file = path.join(folder, entry.name);
+      if (entry.isDirectory()) walk(file);
+      else if (entry.name.endsWith('.xml')) {
+        try { if (fs.readFileSync(file, 'utf8').includes(needle)) out.push(file); } catch { /* unreadable XML: skip */ }
+      }
+    }
+  })(dir);
+  return out;
 }
 
 // ---- walk helpers ---------------------------------------------------------------------------

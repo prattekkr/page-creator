@@ -381,7 +381,7 @@ function coerceJcrTypes(v) {
 
 // Block/section types that consistently carry a `filter` attr in real EDS (UE authoring meta);
 // verified >88% present. Others (section, cta, custom-image, teaser, quote) omit it.
-const FILTER_TYPES = new Set(['custom-title', 'text-container', 'hero-container', 'separator', 'eyebrow-text', 'grid-container', 'grid-section']);
+const FILTER_TYPES = new Set(['custom-title', 'text-container', 'hero-container', 'separator', 'eyebrow-text', 'grid-container', 'grid-section', 'inner-grid']);
 
 function makeNode(item, kind, compMap, modelFieldsMap, contentDefaults) {
   const comp = compMap[item.type];
@@ -767,7 +767,12 @@ function extractPropsFromXmlNode(attrs, mapping, pm) {
       if (val === 'true')  val = 'false';
       else if (val === 'false') val = 'true';
     }
-    if (val !== '' && val !== null && val !== undefined) props[targetKey] = transformPath(val, pm);
+    if (val !== '' && val !== null && val !== undefined) {
+      props[targetKey] = transformPath(val, pm);
+      // A target alone is inert in the EDS image model; retain the source
+      // link by enabling the feature whenever AEM supplies a link URL.
+      if (mapping?.edsType === 'custom-image' && key === 'linkURL') props.enableLink = 'true';
+    }
   }
   return props;
 }
@@ -833,12 +838,21 @@ function walkXmlNode(node, ordered, depth = 0) {
     const propEdsType = mapping?.propEdsType;
     const rawPropVal  = propEdsType ? (child[`@${propEdsType.prop}`] || '').trim() : '';
     let type = (propEdsType?.map?.[rawPropVal]) || mapping?.edsType || rt.split('/').pop();
+    // Legacy YouTube components sometimes omit videoType; their URL is still authoritative.
+    if (type === 'brightcove-video' && /(?:youtube\.com|youtu\.be)/i.test(String(child['@youtubeUrl'] || '')))
+      type = 'video';
     // propEdsTypeMatch: pick block by a substring of a prop (dashboardcards fragmentPath →
     // .../facts/ = fact-card, .../link-lists/ = dashboard-card-link-list)
     const pmMatch = mapping?.propEdsTypeMatch;
     if (pmMatch) {
       const pv = String(child[`@${pmMatch.prop}`] || '');
       for (const [needle, t] of Object.entries(pmMatch.contains || {})) { if (pv.includes(needle)) { type = t; break; } }
+    }
+    // AEM reuses fileReference for both video providers. EDS expects posterImage
+    // for Brightcove and placeholderImage for the native video block.
+    if (type === 'brightcove-video' && props.placeholderImage) {
+      props.posterImage = props.placeholderImage;
+      delete props.placeholderImage;
     }
     // Translate AEM cq:styleIds → EDS classes_customDynamicClass via style-map
     const rawStyleIds = child['@cq:styleIds'];
@@ -2074,8 +2088,8 @@ app.post('/api/similar/site', (req, res) => {
   res.json({ ok: true, region, threshold, count: rows.length, rows: rows.slice(0, 2000) });
 });
 
-// ── Migrate Full Site: for every page in a locale, find its best ALREADY-MIGRATED
-// structural match (among user-configured migrated regions) to reuse as the canvas. ──
+// ── Migrate Full Site: automatically reuse only an exact canonical page path
+// in another selected locale. Structural cross-page matching is user-requested. ──
 app.post('/api/migrate-site/plan', (req, res) => {
   const idx = buildSimIndex();
   const locale = String(req.body?.locale || '').trim().replace(/^\/+|\/+$/g, '');
@@ -2087,36 +2101,23 @@ app.post('/api/migrate-site/plan', (req, res) => {
   const pagesInLocale = idx.pages.filter(p => p.region === locale);
   if (!pagesInLocale.length) return res.status(404).json({ error: `No pages found for locale "${locale}".` });
 
-  // Candidate pool for the fallback = all pages in migrated regions (any path).
-  const migPages = idx.pages.filter(p => migrated.has(p.region) && p.region !== locale);
-  const minScore = Math.max(0, Math.min(100, Number(req.body?.minScore) || 0));   // only show matches ≥ this
   const rows = pagesInLocale.map(src => {
-    // 1) Primary: same path hierarchy (same canon) in a migrated region.
-    let scored = (idx.byCanon[src.canon] || []).map(i => idx.pages[i])
-      .filter(p => migrated.has(p.region) && p.region !== locale)
-      .map(c => ({ region: c.region, canon: c.canon, score: simScore(src.sig, c.sig, idx.idf), edsPath: `${edsPrefix}/${c.region}/${c.canon}`, sameHierarchy: true }))
-      .filter(m => m.score >= minScore)
+    // Exact same page only: full path after country/language. Do not apply the
+    // structural-score threshold here; path identity is the matching rule.
+    const matches = (idx.byCanon[src.canon] || []).map(i => idx.pages[i])
+      .filter(candidate => migrated.has(candidate.region) && candidate.region !== locale)
+      .map(candidate => ({
+        region: candidate.region,
+        canon: candidate.canon,
+        score: simScore(src.sig, candidate.sig, idx.idf),
+        edsPath: `${edsPrefix}/${candidate.region}/${candidate.canon}`,
+        sameHierarchy: true,
+      }))
       .sort((a, b) => b.score - a.score);
-    let fallbackUsed = false;
-    // 2) Fallback: no same-path match (localized slug/hierarchy) → best structural match
-    //    in EVERY migrated locale (one per locale) so the user can pick across sites.
-    if (!scored.length) {
-      fallbackUsed = true;
-      const lo = src.sig.length * 0.55, hi = src.sig.length * 1.6;
-      const bestPerRegion = {};
-      for (const c of migPages) {
-        if (c.sig.length < lo || c.sig.length > hi) continue;
-        const s = simScore(src.sig, c.sig, idx.idf);
-        const cur = bestPerRegion[c.region];
-        if (!cur || s > cur.score)
-          bestPerRegion[c.region] = { region: c.region, canon: c.canon, score: s, edsPath: `${edsPrefix}/${c.region}/${c.canon}`, sameHierarchy: false };
-      }
-      scored = Object.values(bestPerRegion).filter(m => m.score >= minScore).sort((a, b) => b.score - a.score);
-    }
-    return { canon: src.canon, sourceRel: src.rel, fallback: fallbackUsed && scored.length > 0, best: scored[0] || null, matches: scored.slice(0, 40) };
-  }).sort((a, b) => (b.best ? b.best.score : -1) - (a.best ? a.best.score : -1));
+    return { canon: src.canon, sourceRel: src.rel, best: matches[0] || null, matches };
+  }).sort((a, b) => a.canon.localeCompare(b.canon));
 
-  res.json({ ok: true, locale, total: rows.length, withMatch: rows.filter(r => r.best).length, rows });
+  res.json({ ok: true, locale, total: rows.length, withMatch: rows.filter(row => row.best).length, rows });
 });
 
 // Detect already-migrated regions by querying the live AEM instance under the EDS
