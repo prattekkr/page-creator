@@ -628,6 +628,10 @@ function heroSectionClasses(node) {
 const isColorHero = node => !childEntries(node).length && heroColorOf(node) !== null;
 const isHeroContainer = node => isContainer(RT(node)) && !containerHasGrid(node) &&
   (!!node['@backgroundImageReference'] || isColorHero(node));
+// The hero's intro content sits in a following container that OVERLAPS the hero (styleId
+// overlap-predecessor) — verified 13/13 intro containers have it, 0/5 body containers do. Only such
+// containers are absorbed into the hero section; the first non-overlapping one starts the page body.
+const overlapsHero = node => splitCls([styleIdClasses(node)]).includes('overlap-predecessor');
 
 // Grid layout classification (derived from corpus): EDS drops two kinds of grid rows
 // from the grid-section sequence and renders their content as plain / card blocks:
@@ -1114,7 +1118,7 @@ function aemToCanvas(jcrContent, opts) {
       let j = i + 1;
       while (j < tops.length) {                     // absorb following plain content container(s)
         const nx = tops[j];
-        if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !containerHasGrid(nx) && !isColorHero(nx)) {
+        if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !containerHasGrid(nx) && !isColorHero(nx) && overlapsHero(nx)) {
           const split = splitHeroContinuation(nx);
           if (split) {
             collectLeaves(split.header, blocks, '', false);
