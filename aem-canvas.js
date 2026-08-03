@@ -545,12 +545,13 @@ function heroBlockOf(node) {
 }
 // section classes for a container: derived (minus height, which went to the hero block) + defaults
 function sectionProps(node, hero = false) {
-  let resolved = layoutStyleProps([node], {
+  const nodes = Array.isArray(node) ? node : [node];
+  let resolved = layoutStyleProps(nodes, {
     includeHeight: !hero,
     // This full-width AEM policy is a section/grid band rule, never a hero rule.
     excludeStyleIds: hero ? [FULL_WIDTH_CONTAINER_STYLE_ID] : [],
   });
-  if (!hero) resolved = applyFullWidthContainerRule(resolved, [node]);
+  if (!hero) resolved = applyFullWidthContainerRule(resolved, nodes);
   resolved = restrictNoSideMargin(resolved, hero);
   // A hero's image/color belongs to its hero-container-item. In particular, a
   // color hero must not also paint the enclosing section, or the background
@@ -684,6 +685,7 @@ function directGrids(node, out = []) {
   return out;
 }
 function gridHasCards(grid) {
+  if (!grid) return false;
   let found = false;
   (function scan(n) {
     for (const [, c] of childEntries(n)) {
@@ -694,6 +696,27 @@ function gridHasCards(grid) {
     }
   })(grid);
   return found;
+}
+
+function applyRelatedContentCardProps(blocks) {
+  for (const block of blocks || []) {
+    if (block.type !== 'story-card') continue;
+    const props = block.props || (block.props = {});
+    // These legacy style IDs are shared with quote/card policies. In the
+    // Related Content pattern their EDS representation is typed properties,
+    // never quote/card dynamic classes.
+    const classes = String(props.classes_customDynamicClass || '').split(',').map(c => c.trim())
+      .filter(c => c && !['quote-standard', 'card-medium', 'hide-description'].includes(c));
+    if (classes.length) props.classes_customDynamicClass = classes.join(',');
+    else delete props.classes_customDynamicClass;
+    props.storyCardVariant = 'relatedContent';
+    props.hideDescription = '{Boolean}true';
+    props.hidePublicationDate = '{Boolean}true';
+    props.hideReadTime = '{Boolean}true';
+    props.hideRole = '{Boolean}false';
+    props.showChevron = '{Boolean}true';
+    props.openInNewTab = '{Boolean}false';
+  }
 }
 // A grid gets UNWRAPPED (its cells emitted as plain-section blocks instead of grid-sections)
 // only for the cases EDS handles *deterministically* (validated across the corpus, zero regressions):
@@ -737,7 +760,7 @@ function gridCellContainer(par) {
 }
 
 // grid node → push its columns as grid-section blocks into `blocks`
-function expandGrid(grid, blocks, sourceScopes = []) {
+function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
   const cols = gridColumns(grid);
   const rowCount = parseInt(grid['@rowCount'] || '1') || 1;
   // dataPriority is only meaningful when the author changed the natural order.
@@ -765,6 +788,7 @@ function expandGrid(grid, blocks, sourceScopes = []) {
       Object.defineProperty(gs, '_sourceGrid', { value: grid, enumerable: false });
       Object.defineProperty(gs, '_sourceScopes', { value: sourceScopes, enumerable: false });
       if (par && typeof par === 'object') collectCellLeaves(par, gs.children);
+      if (relatedContent) applyRelatedContentCardProps(gs.children);
       blocks.push(gs);
     }
   }
@@ -837,6 +861,25 @@ function isTrailingCtaTeaser(teaser, next) {
     && isThreeUpImageGrid(next);
 }
 
+// A non-grid container immediately before a sibling grid is an intro band when
+// it carries both a heading and copy. It must remain a standalone section;
+// putting it into the first grid cell changes the authored layout entirely.
+function isIntroContainerBeforeGrid(container, next) {
+  if (!isContainer(RT(container)) || containerHasGrid(container) || !isGrid(RT(next))) return false;
+  let heading = false, copy = false;
+  (function scan(node) {
+    for (const [, child] of childEntries(node)) {
+      const rt = RT(child);
+      if (!rt || isLayoutWrapper(rt) || isContainer(rt)) { scan(child); continue; }
+      if (isGrid(rt)) continue;
+      const type = componentMap[rt]?.edsType;
+      if (type === 'custom-title' || type === 'eyebrow-text') heading = true;
+      if (type === 'text-container') copy = true;
+    }
+  })(container);
+  return heading && copy;
+}
+
 // emit sections for one top-level content node
 function emitNode(node, sections) {
   const rt = RT(node);
@@ -851,6 +894,7 @@ function emitNode(node, sections) {
       const gc = { type: 'grid-container', props: gridContainerProps([node]), blocks: [] };
       const leading = [], trailing = [];
       const deferredCtaTeasers = [];
+      let relatedGridPending = false;
       let firstContentGs = null, lastContentGs = null;
       const buf = () => (firstContentGs ? trailing : leading);
       const flushGridBand = () => {
@@ -879,19 +923,40 @@ function emitNode(node, sections) {
           const [, child] = entries[index];
           const crt = RT(child);
           if (isGrid(crt)) {
+            const relatedContent = relatedGridPending && gridHasCards(child);
+            if (relatedContent) {
+              const classes = splitCls([gc.props.style_customDynamicClass]);
+              if (!classes.includes('no-top-padding')) classes.push('no-top-padding');
+              gc.props.style_customDynamicClass = classes.join(',');
+            }
             if (isUnwrapGrid(child)) collectLeaves(child, buf());
             else {
               const start = gc.blocks.length;
-              expandGrid(child, gc.blocks, scopes);
+              expandGrid(child, gc.blocks, scopes, relatedContent);
               for (let i = start; i < gc.blocks.length; i++) {
                 if (gc.blocks[i].children && gc.blocks[i].children.length) { if (!firstContentGs) firstContentGs = gc.blocks[i]; lastContentGs = gc.blocks[i]; }
               }
             }
+            if (relatedContent) { flushGridBand(); relatedGridPending = false; gc.props = gridContainerProps([node]); }
             // A deferred CTA teaser belongs immediately after its associated
             // three-up image grid, not before it in XML order.
             if (deferredCtaTeasers.length) { flushGridBand(); emitDeferredCtaTeasers(); }
           } else if (!crt || isLayoutWrapper(crt)) scan(child, scopes);
           else if (isXF(crt)) continue;
+          else if (isIntroContainerBeforeGrid(child, entries[index + 1]?.[1])) {
+            flushGridBand();
+            const blocks = [];
+            collectLeaves(child, blocks, '', false);
+            if (blocks.length) sections.push({ type: 'section', props: sectionProps([node, child]), blocks });
+          }
+          else if (componentMap[crt]?.edsType === 'custom-title' && gridHasCards(entries[index + 1]?.[1])) {
+            // A direct heading immediately before cardpagestory cells is the
+            // related-content heading band, never content in the first card cell.
+            flushGridBand();
+            const blocks = mapLeafExpanded(child);
+            if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
+            relatedGridPending = true;
+          }
           else if (componentMap[crt]?.edsType === 'teaser') {
             const next = entries[index + 1] && entries[index + 1][1];
             if (isTrailingCtaTeaser(child, next)) {
@@ -935,6 +1000,45 @@ function emitNode(node, sections) {
 // current page's content-xml rel path (country/lang/…), used for breadcrumb homePagePath
 let _ctxRel = null;
 
+// A common AEM page shell is an image-only hero followed by an overlapping
+// container. Its first nested container holds the breadcrumb + H1, while later
+// sibling containers are the page body. Only that header group belongs in the
+// EDS hero; flattening the full overlap wrapper into the hero makes every H2
+// and paragraph render as hero content.
+function semanticChildren(node) {
+  const out = [];
+  for (const [, child] of childEntries(node)) {
+    const rt = RT(child);
+    if (!rt || isLayoutWrapper(rt)) out.push(...semanticChildren(child));
+    else out.push(child);
+  }
+  return out;
+}
+function isBreadcrumbH1Container(node) {
+  if (!isContainer(RT(node))) return false;
+  let breadcrumb = false, h1 = false;
+  (function scan(n) {
+    for (const [, child] of childEntries(n)) {
+      const rt = RT(child);
+      if (!rt || isLayoutWrapper(rt)) { scan(child); continue; }
+      // A nested semantic container is a separate layout group, never part of
+      // the header signature being tested here.
+      if (isContainer(rt) || isGrid(rt)) continue;
+      const type = componentMap[rt]?.edsType;
+      if (type === 'breadcrumb') breadcrumb = true;
+      if (type === 'custom-title' && String(child['@type'] || '').toLowerCase() === 'h1') h1 = true;
+    }
+  })(node);
+  return breadcrumb && h1;
+}
+function splitHeroContinuation(node) {
+  const children = semanticChildren(node);
+  const headerIndex = children.findIndex(isBreadcrumbH1Container);
+  if (headerIndex < 0) return null;
+  const body = children.filter((_, index) => index !== headerIndex);
+  return body.length ? { header: children[headerIndex], body } : null;
+}
+
 // find the content root (jcr:content) and walk its top-level content nodes
 function aemToCanvas(jcrContent, opts) {
   _ctxRel = (opts && opts.rel) ? String(opts.rel).replace(/^\/+|\/+$/g, '') : null;
@@ -957,19 +1061,34 @@ function aemToCanvas(jcrContent, opts) {
     const node = tops[i];
     if (isHeroContainer(node)) {
       const blocks = [heroBlockOf(node)];
+      const bodyGroups = [];
       // The merged hero section owns layout. Do not propagate a container width
       // onto title/text blocks in the hero or its absorbed intro content.
       collectLeaves(node, blocks, '', false);       // hero's own content, if any
       let j = i + 1;
       while (j < tops.length) {                     // absorb following plain content container(s)
         const nx = tops[j];
-        if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !containerHasGrid(nx) && !isColorHero(nx)) { collectLeaves(nx, blocks, '', false); j++; }
+        if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !containerHasGrid(nx) && !isColorHero(nx)) {
+          const split = splitHeroContinuation(nx);
+          if (split) {
+            collectLeaves(split.header, blocks, '', false);
+            bodyGroups.push({ wrapper: nx, nodes: split.body });
+            j++;
+            break;                                  // later containers are page body, not hero continuation
+          }
+          collectLeaves(nx, blocks, '', false); j++;
+        }
         else break;
       }
       i = j - 1;
       // Hero section keeps the container's width/radius/margin styleIds (height → hero block,
       // color/image → item). NOT bare — 1429 of 1438 twin hero sections carry classes.
       sections.push({ type: 'section', props: sectionProps(node, true), blocks });
+      for (const group of bodyGroups) {
+        const bodyBlocks = [];
+        for (const bodyNode of group.nodes) collectLeaves(bodyNode, bodyBlocks, '', false);
+        if (bodyBlocks.length) sections.push({ type: 'section', props: sectionProps(group.wrapper), blocks: bodyBlocks });
+      }
       continue;
     }
     emitNode(node, sections);
