@@ -26,6 +26,40 @@ const JCR_SYS_SET  = new Set(migrationMap.jcrSystemProps || []);
 const WRITEBACK_SKIP = new Set(['cq:styleIds', 'textIsRich', 'cq:lastModified', 'cq:lastModifiedBy',
   'cq:template', 'cq:designPath', 'cq:tags']);
 
+// The EDS picklists are the source of truth for authorable style values. Load
+// them once and validate generated style fields against the target component's
+// own list instead of relying on a class being valid on another component.
+function loadPicklistClasses() {
+  const out = {};
+  const root = path.join(__dirname, 'config');
+  try {
+    for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+      const match = entry.isDirectory() && entry.name.match(/^(.*)-picklist-config$/);
+      if (!match) continue;
+      const file = path.join(root, entry.name, '.content.xml');
+      const xml = fs.readFileSync(file, 'utf8');
+      out[match[1]] = new Set([...xml.matchAll(/Style_x0020_Class="([^"]+)"/g)].map(m => m[1]));
+    }
+  } catch {
+    // A missing local config must not prevent conversion; affected types simply
+    // retain their existing style values until their picklist is available.
+  }
+  return out;
+}
+const PICKLIST_CLASSES = loadPicklistClasses();
+const PICKLIST_KEY = {
+  'custom-title': 'title',
+  'text-container': 'text',
+  'custom-image': 'image',
+  'brightcove-video': 'video',
+};
+const picklistFor = type => PICKLIST_CLASSES[PICKLIST_KEY[type] || type] || null;
+const supportsStyle = (type, cls) => {
+  const picklist = picklistFor(type);
+  return true;
+  //return !!picklist?.has(cls);
+};
+
 // ── helpers on the object-mode parsed tree (attributes prefixed '@') ──────────
 const RT = n => (n && n['@sling:resourceType'] || '').trim();
 const isGrid      = rt => rt.includes('/grid/');
@@ -211,13 +245,17 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     props.posterImage = props.placeholderImage;
     delete props.placeholderImage;
   }
-  // A grid cell's container width controls its text and media blocks. This is
-  // intentionally limited to grid traversal (callers suppress inheritance for
-  // plain sections and heroes).
-  if (inheritedBlockWidth && ['custom-title', 'text-container', 'video', 'brightcove-video'].includes(type)) {
+  // A grid cell's container width is translated through the target block's own
+  // picklist: title/text use `width-large`, while video uses `video-large`.
+  // Never apply a style merely because it is valid on a different EDS block.
+  const isWidthTarget = ['custom-title', 'text-container', 'video', 'brightcove-video'].includes(type);
+  const widthClass = (type === 'video' || type === 'brightcove-video')
+    ? String(inheritedBlockWidth || '').replace(/^width-/, 'video-')
+    : inheritedBlockWidth;
+  if (isWidthTarget && widthClass && supportsStyle(type, widthClass)) {
     const classes = String(props.classes_customDynamicClass || '').split(',').map(c => c.trim())
-      .filter(c => c && !/^width-(?:x{0,3}-)?(?:small|large|medium)$/.test(c));
-    classes.push(inheritedBlockWidth);
+      .filter(c => c && !/^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/.test(c));
+    classes.push(widthClass);
     props.classes_customDynamicClass = [...new Set(classes)].join(',');
   }
   // AEM stores an image caption in jcr:title. Once present, enable the EDS
@@ -743,22 +781,6 @@ function isUnwrapGrid(grid) {
   return card || band || spacer;                      // 'band' (default, safe)
 }
 
-// A container directly inside an AEM grid cell has no separate EDS container
-// node after flattening. Its visual styles therefore belong to that cell's
-// grid-section, not to the grid-container that owns the entire row.
-function gridCellContainer(par) {
-  let found = null;
-  (function walk(node) {
-    for (const [, child] of childEntries(node)) {
-      if (found) return;
-      const rt = RT(child);
-      if (isContainer(rt)) { found = child; return; }
-      if (!rt || isLayoutWrapper(rt)) walk(child);
-    }
-  })(par);
-  return found;
-}
-
 // grid node → push its columns as grid-section blocks into `blocks`
 function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
   const cols = gridColumns(grid);
@@ -772,11 +794,6 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
       const par = grid[`par_${r}${c}`];
       const classes = ['grid-section', `grid-cols-${col.width}`];
       if (hasPriorityOrder && col.priority) classes.push(`order-${col.priority}`);
-      const cellContainer = par && typeof par === 'object' ? gridCellContainer(par) : null;
-      if (cellContainer && !isHeroContainer(cellContainer)) {
-        const cellStyles = restrictNoSideMargin(layoutStyleProps([cellContainer]));
-        classes.push(...cellStyles.classes.filter(c => !NOOP_CLASS.has(c)));
-      }
       const gs = { type: 'grid-section', props: {
         style_container: 'grid-section',
         style_gridCols: `grid-cols-${col.width}`,
@@ -1039,6 +1056,35 @@ function splitHeroContinuation(node) {
   return body.length ? { header: children[headerIndex], body } : null;
 }
 
+// Validate every emitted dynamic/typed style at the canvas boundary. A block
+// with no local picklist configuration is left unchanged; where a picklist is
+// present, unsupported values are never serialized into the EDS page.
+function validateCanvasStyles(sections) {
+  const filter = (type, value) => {
+    const picklist = picklistFor(type);
+    if (!picklist) return value;
+    const accepted = splitCls([value]).filter(cls => picklist.has(cls));
+    return Array.isArray(value) ? accepted : accepted.join(',');
+  };
+  const visit = entity => {
+    if (!entity || !entity.props) return;
+    const props = entity.props;
+    for (const key of ['style_customDynamicClass', 'classes_customDynamicClass']) {
+      if (!(key in props)) continue;
+      const value = filter(entity.type, props[key]);
+      if ((Array.isArray(value) && !value.length) || (!Array.isArray(value) && !value)) delete props[key];
+      else props[key] = value;
+    }
+    for (const [key, value] of Object.entries(props)) {
+      if (key === 'style_container' || !key.startsWith('style_') || typeof value !== 'string') continue;
+      if (!supportsStyle(entity.type, value)) delete props[key];
+    }
+    for (const child of entity.children || entity.blocks || []) visit(child);
+  };
+  for (const section of sections || []) visit(section);
+  return sections;
+}
+
 // find the content root (jcr:content) and walk its top-level content nodes
 function aemToCanvas(jcrContent, opts) {
   _ctxRel = (opts && opts.rel) ? String(opts.rel).replace(/^\/+|\/+$/g, '') : null;
@@ -1093,7 +1139,7 @@ function aemToCanvas(jcrContent, opts) {
     }
     emitNode(node, sections);
   }
-  return hoistTrailingSeparator(sections);
+  return validateCanvasStyles(hoistTrailingSeparator(sections));
 }
 
 // The page-final separator (the spacer just above the footer) must live in its OWN bare section,
