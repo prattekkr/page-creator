@@ -310,8 +310,7 @@ app.post('/api/pages', async (req, res) => {
 
   res.json({
     ok:        true,
-    path:      fullPath,
-    authorUrl: `${aemHost}/editor.html${fullPath}`
+    path:      fullPath
   });
 });
 

@@ -1848,7 +1848,7 @@ async function doMigCreateOne(i) {
   try {
     const meta = (r.meta && Object.keys(r.meta).length) ? r.meta : (r.pageTitle ? { 'jcr:title': r.pageTitle } : {});
     const res = await fetch('/api/pages', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: r.sections }) }).then(x => x.json());
-    if (res.ok) { r.status = 'done'; r.error = null; r.authorUrl = res.authorUrl; } else { r.status = 'error'; r.error = res.error || 'Create failed'; }
+    if (res.ok) { r.status = 'done'; r.error = null; r.authorUrl = buildUeUrl(res.path); } else { r.status = 'error'; r.error = res.error || 'Create failed'; }
   } catch (e) { r.status = 'error'; r.error = e.message; }
   render();
 }
@@ -2533,7 +2533,7 @@ async function doBulkPublishOne(idx) {
       body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: page.sections })
     });
     const data = await r.json();
-    if (data.ok) { page.status = 'done'; page.error = null; page.authorUrl = data.authorUrl; }
+    if (data.ok) { page.status = 'done'; page.error = null; page.authorUrl = buildUeUrl(data.path); }
     else { page.status = 'error'; page.error = data.error || 'Create failed'; }
   } catch (e) {
     page.status = 'error';
@@ -2714,16 +2714,14 @@ function resultOverlayHtml() {
     </div>
   </div>`;
 
-  const ueUrl = buildUeUrl(r.path);
-  const authorUrl = safeAuthoringUrl(r.authorUrl);
+  const authorUrl = safeAuthoringUrl(buildUeUrl(r.path));
   return `<div class="result-overlay">
     <div class="result-box">
       <div class="rb-icon">🎉</div>
       <h2>Page Created!</h2>
       <p style="font-size:.82rem;word-break:break-all;color:var(--muted)">${x(r.path)}</p>
       <div class="rb-actions">
-        <a class="btn btn-primary" href="${x(ueUrl)}" target="_blank">Open in Universal Editor</a>
-        ${authorUrl ? `<a class="btn btn-ghost" href="${x(authorUrl)}" target="_blank" rel="noopener noreferrer">↗ Open in authoring</a>` : ''}
+        ${authorUrl ? `<a class="btn btn-primary" href="${x(authorUrl)}" target="_blank" rel="noopener noreferrer">↗ Open in authoring</a>` : ''}
         <button class="btn btn-ghost" id="btn-close-result">Close</button>
       </div>
     </div>

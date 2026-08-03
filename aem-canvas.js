@@ -304,7 +304,14 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // when the CTA link is internal (a path/# rather than an external http(s) URL).
   if (type === 'teaser') {
     const set = new Set(String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean));
-    if (![...set].some(c => /^teaser-h[1-6]/.test(c))) set.add('teaser-h2');
+    // Style ID 5 is the legacy Dashboard Half-page x3 teaser policy. It is
+    // reused as a grid template too, so it cannot live in the global style map;
+    // on a teaser it consistently selects the h4 heading variation.
+    const teaserIds = String(node['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+    if (teaserIds.includes('5')) {
+      for (const c of [...set]) if (/^teaser-h[1-6]/.test(c)) set.delete(c);
+      set.add('teaser-h4');
+    } else if (![...set].some(c => /^teaser-h[1-6]/.test(c))) set.add('teaser-h2');
     const link = String(props.buttonURL || props.link || '').trim();
     if (link && /^(\/|#)/.test(link)) set.add('teaser-internal-link');
     props.classes_customDynamicClass = [...set].join(',');
@@ -801,24 +808,75 @@ function pushGridContainersByRows(sections, gc, propsForSource = null) {
   flush();
 }
 
+// Some legacy career pages place a CTA teaser immediately before a three-up
+// image/content grid in XML, even though the authored visual places that CTA
+// after the tiles. Keep this deliberately narrow: it must be a CTA teaser and
+// the next grid must be one 4/4/4 row with an image in every cell. Introductory
+// teasers and every other grid retain source order.
+function isThreeUpImageGrid(grid) {
+  if (!grid || !isGrid(RT(grid)) || (parseInt(grid['@rowCount'] || '1') || 1) !== 1) return false;
+  const cols = gridColumns(grid);
+  if (cols.length !== 3 || !cols.every(c => c.width === '4')) return false;
+  return cols.every((_, index) => {
+    const par = grid[`par_1${index + 1}`];
+    let image = false;
+    (function scan(n) {
+      for (const [, child] of childEntries(n || {})) {
+        if (image) return;
+        const rt = RT(child);
+        if (/\/image\//.test(rt)) { image = true; return; }
+        if (!rt || isLayoutWrapper(rt) || isContainer(rt)) scan(child);
+      }
+    })(par);
+    return image;
+  });
+}
+function isTrailingCtaTeaser(teaser, next) {
+  return componentMap[RT(teaser)]?.edsType === 'teaser'
+    && !!String(teaser['@ctaLink'] || teaser['@ctaText'] || '').trim()
+    && isThreeUpImageGrid(next);
+}
+
 // emit sections for one top-level content node
 function emitNode(node, sections) {
   const rt = RT(node);
   if (isContainer(rt)) {
     if (containerHasGrid(node)) {
-      // ONE grid-container (bg image + section styles on it). Real grids → grid-sections.
-      // Loose leaves that are direct children of the container (e.g. a leading/trailing
-      // separator) are folded INTO the grid content — leading ones prepended to the first
-      // content grid-section, trailing ones appended to the last — NOT emitted as their own
-      // section. filler/card grids unwrap into that same buffer.
+      // Real grids become grid-sections. A direct teaser next to a grid is its
+      // own visual band in AEM, so preserve it as a standalone EDS section in
+      // document order. Other loose leaves (notably separators) keep the
+      // existing first/last grid-cell treatment.
       // height-* belongs on grid-containers only when they're a background-IMAGE banner (twins keep
       // height-tall there); on color/plain grid-containers the height styleId is dropped.
       const gc = { type: 'grid-container', props: gridContainerProps([node]), blocks: [] };
       const leading = [], trailing = [];
+      const deferredCtaTeasers = [];
       let firstContentGs = null, lastContentGs = null;
       const buf = () => (firstContentGs ? trailing : leading);
+      const flushGridBand = () => {
+        if (firstContentGs) {
+          if (leading.length) firstContentGs.children.unshift(...leading);
+          if (trailing.length) lastContentGs.children.push(...trailing);
+        } else if (leading.length || trailing.length) {
+          sections.push({ type: 'section', props: sectionProps(node), blocks: [...leading, ...trailing] });
+        }
+        pushGridContainersByRows(sections, gc, (sourceGrid, scopes) => gridContainerProps(scopes.length ? scopes : [node], sourceGrid));
+        gc.blocks.length = 0;
+        leading.length = 0;
+        trailing.length = 0;
+        firstContentGs = null;
+        lastContentGs = null;
+      };
+      const emitDeferredCtaTeasers = () => {
+        for (const teaser of deferredCtaTeasers.splice(0)) {
+          const blocks = mapLeafExpanded(teaser);
+          if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
+        }
+      };
       (function scan(n, scopes = [node]) {
-        for (const [, child] of childEntries(n)) {
+        const entries = childEntries(n);
+        for (let index = 0; index < entries.length; index++) {
+          const [, child] = entries[index];
           const crt = RT(child);
           if (isGrid(crt)) {
             if (isUnwrapGrid(child)) collectLeaves(child, buf());
@@ -829,20 +887,28 @@ function emitNode(node, sections) {
                 if (gc.blocks[i].children && gc.blocks[i].children.length) { if (!firstContentGs) firstContentGs = gc.blocks[i]; lastContentGs = gc.blocks[i]; }
               }
             }
+            // A deferred CTA teaser belongs immediately after its associated
+            // three-up image grid, not before it in XML order.
+            if (deferredCtaTeasers.length) { flushGridBand(); emitDeferredCtaTeasers(); }
           } else if (!crt || isLayoutWrapper(crt)) scan(child, scopes);
           else if (isXF(crt)) continue;
+          else if (componentMap[crt]?.edsType === 'teaser') {
+            const next = entries[index + 1] && entries[index + 1][1];
+            if (isTrailingCtaTeaser(child, next)) {
+              flushGridBand();
+              deferredCtaTeasers.push(child);
+            } else {
+              flushGridBand();
+              const blocks = mapLeafExpanded(child);
+              if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
+            }
+          }
           else if (isContainer(crt)) collectLeaves(child, buf());
           else buf().push(...mapLeafExpanded(child));
         }
       })(node);
-      if (firstContentGs) {
-        if (leading.length) firstContentGs.children.unshift(...leading);
-        if (trailing.length) lastContentGs.children.push(...trailing);
-      } else if (leading.length || trailing.length) {
-        // grid has no content cell — put the loose leaves in their own section (fallback)
-        sections.push({ type: 'section', props: sectionProps(node), blocks: [...leading, ...trailing] });
-      }
-      pushGridContainersByRows(sections, gc, (sourceGrid, scopes) => gridContainerProps(scopes.length ? scopes : [node], sourceGrid));
+      flushGridBand();
+      emitDeferredCtaTeasers();
       return;
     }
     // plain / hero section (standalone; hero+content merging happens in aemToCanvas)
