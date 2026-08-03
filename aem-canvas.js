@@ -225,12 +225,12 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   if (type === 'custom-image' && props.caption) props.displayCaptionBelowImage = 'true';
   normalizeBlock({ type, props });   // separator = Standard/no-line, eyebrow = standard+bold
 
-  // Breadcrumb homePagePath: derive from the page locale + AEM startLevel (the "depth").
-  // AEM path = /content/abbvie-com2/<rel>; content+site = 2 fixed segments, so keep
-  // (startLevel-2) rel segments (startLevel 4 → country/lang locale home).
+  // Breadcrumb homePagePath: derive the EDS root from the AEM startLevel.
+  // EDS retains the first site branch below country/language, so its hierarchy is
+  // offset by one relative segment (startLevel 4 → country/lang/section).
   if (type === 'breadcrumb' && _ctxRel) {
     const startLevel = parseInt(node['@startLevel'] || '4') || 4;
-    const keep = Math.max(1, startLevel - 2);
+    const keep = Math.max(1, startLevel - 1);
     const localePath = _ctxRel.split('/').slice(0, keep).join('/');
     if (localePath) props.homePagePath = transformPath('/content/abbvie-com2/' + localePath, pathMap);
   }
@@ -1128,6 +1128,18 @@ function hoistTrailingSeparator(sections) {
   if (footerSpacer?.type === 'section' && footerSpacer.blocks?.length === 1
       && footerSpacer.blocks[0]?.type === 'separator') {
     footerSpacer.props = footerSeparatorSectionProps(footerSpacer.props);
+  }
+  // A separator-only section is a spacer band, not regular content. Keep an
+  // explicitly authored section-padding variation (and the footer rule above),
+  // but never carry regular-padding onto that section.
+  for (const section of sections) {
+    if (section?.type !== 'section' || section.blocks?.length !== 1 || section.blocks[0]?.type !== 'separator') continue;
+    const props = section.props || (section.props = {});
+    const classes = splitCls([props.style_customDynamicClass]).filter(c => c !== 'regular-padding');
+    if (!classes.includes('no-bottom-margin')) classes.push('no-bottom-margin');
+    props.style_customDynamicClass = classes.join(',');
+    if (props.style_padding === 'regular-padding') delete props.style_padding;
+    props.style_margin = 'no-bottom-margin';
   }
   return sections;
 }
