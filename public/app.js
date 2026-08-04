@@ -1605,7 +1605,7 @@ function migrateSiteTabHtml() {
         <input id="ms-prefix" class="form-input" value="${x(ms.edsPrefix)}" placeholder="/content/abbvie-nextgen-eds/corporate/abbvie-com"/>
       </div>
       <div class="settings-field" style="margin-bottom:8px">
-        <label>Already-migrated regions <span style="font-weight:400;color:var(--muted)">(check the ones to include)</span></label>
+        <label>Already-migrated regions <span style="font-weight:400;color:var(--muted)">(optional — leave empty to 🤖 Auto-build every page from its AEM XML)</span></label>
         <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap">
           <button class="btn btn-sm btn-ghost" id="btn-ms-detect" ${ms.detecting ? 'disabled' : ''}>${ms.detecting ? '⏳ Detecting…' : '🔄 Detect from AEM'}</button>
           <button class="btn btn-xs btn-ghost" id="btn-ms-region-all">Select all</button>
@@ -1674,7 +1674,8 @@ async function doBuildMigratePlan() {
   ms.minScore = Math.max(0, Math.min(100, Number(document.getElementById('ms-minscore')?.value) || 0));
   const regions = ms.regionSel.slice();
   if (!ms.locale) { ms.error = 'Pick a locale.'; render(); return; }
-  if (!regions.length) { ms.error = 'Enter at least one already-migrated region.'; render(); return; }
+  // Regions are optional: with none selected, every page becomes a "no-match" row
+  // you can 🤖 Auto-build from its AEM XML (no migrated match required).
   ms.busy = true; ms.error = null; ms.plan = null; render();
   try {
     const r = await fetch('/api/migrate-site/plan', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ locale: ms.locale, migratedRegions: regions, edsPrefix: ms.edsPrefix, minScore: ms.minScore }) });

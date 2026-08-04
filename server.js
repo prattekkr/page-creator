@@ -2096,7 +2096,8 @@ app.post('/api/migrate-site/plan', (req, res) => {
     .map(s => String(s).trim().replace(/^\/+|\/+$/g, '')).filter(Boolean));
   const edsPrefix = (String(req.body?.edsPrefix || '').trim() || '/content/abbvie-nextgen-eds/corporate/abbvie-com').replace(/\/+$/, '');
   if (!locale) return res.status(400).json({ error: 'locale is required' });
-  if (!migrated.size) return res.status(400).json({ error: 'Configure at least one migrated region.' });
+  // migratedRegions is optional. With none, no page gets an exact-path match and
+  // every row is a "no-match" row the user can Auto-build from its AEM XML.
   const pagesInLocale = idx.pages.filter(p => p.region === locale);
   if (!pagesInLocale.length) return res.status(404).json({ error: `No pages found for locale "${locale}".` });
 
