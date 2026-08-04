@@ -982,6 +982,23 @@ function isIntroContainerBeforeGrid(container, next) {
   return heading && copy;
 }
 
+// A run of direct heading leaves (eyebrow-text / custom-title) sitting immediately
+// before a sibling grid is a heading BAND introducing that grid — the author placed
+// it above the columns, not inside the first cell. Without this guard those leaves
+// fall through to the `leading` buffer and get unshifted into the first grid-cols-N
+// section (see flushGridBand). Card grids are excluded: a custom-title before a card
+// grid is the related-content heading, handled separately. Returns the index of the
+// grid that follows the heading run, or -1 when this is not a heading band.
+const isHeadingLeaf = rt => ['eyebrow-text', 'custom-title'].includes(componentMap[rt]?.edsType);
+function headingBandBeforeGrid(entries, index) {
+  if (!isHeadingLeaf(RT(entries[index]?.[1]))) return -1;
+  let j = index;
+  while (j < entries.length && isHeadingLeaf(RT(entries[j][1]))) j++;
+  const next = entries[j]?.[1];
+  if (!next || !isGrid(RT(next)) || gridHasCards(next)) return -1;
+  return j;
+}
+
 // emit sections for one top-level content node
 function emitNode(node, sections) {
   const rt = RT(node);
@@ -1036,6 +1053,7 @@ function emitNode(node, sections) {
       };
       (function scan(n, scopes = [node]) {
         const entries = childEntries(n);
+        let gridBandEnd;
         for (let index = 0; index < entries.length; index++) {
           const [, child] = entries[index];
           const crt = RT(child);
@@ -1073,6 +1091,16 @@ function emitNode(node, sections) {
             const blocks = mapLeafExpanded(child);
             if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
             relatedGridPending = true;
+          }
+          else if ((gridBandEnd = headingBandBeforeGrid(entries, index)) >= 0) {
+            // A direct eyebrow-text / custom-title run sitting above a non-card grid
+            // is the section's heading band. Emit it as its own standalone section so
+            // it renders full-width above the grid rather than inside the first cell.
+            flushGridBand();
+            const blocks = [];
+            for (let k = index; k < gridBandEnd; k++) blocks.push(...mapLeafExpanded(entries[k][1]));
+            if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
+            index = gridBandEnd - 1; // resume on the grid (the for-loop ++ advances onto it)
           }
           else if (componentMap[crt]?.edsType === 'teaser') {
             const next = entries[index + 1] && entries[index + 1][1];
@@ -1170,6 +1198,30 @@ function splitHeroContinuation(node) {
   return body.length ? { header: children[headerIndex], body } : null;
 }
 
+// After a hero absorbs the breadcrumb+H1 header of an overlap container, the rest
+// of that container's content is the page body. When the body carries a grid, EDS
+// does NOT keep it as one lumped section: each grid renders as an inner-grid, and a
+// NESTED container is a section boundary. This walker reproduces that — consecutive
+// direct grids/leaves accumulate in the current section (matching the multi-inner-grid
+// width-container pattern), while every nested container flushes and starts fresh
+// sections (matching the migraine-friendly-workplace twin). Section props derive from
+// the nearest container context, so styleless nested containers get clean defaults.
+function emitHeroContinuationSections(bodyNodes, wrapper, sections) {
+  let cur = null;
+  const ensure = props => { if (!cur) { cur = { type: 'section', props: { ...props }, blocks: [] }; sections.push(cur); } return cur; };
+  const walk = (list, ctxProps) => {
+    for (const child of list) {
+      const rt = RT(child);
+      if (!rt || isLayoutWrapper(rt)) { walk(childEntries(child).map(([, c]) => c), ctxProps); continue; }
+      if (isXF(rt)) continue;
+      if (isGrid(rt)) emitInnerGrid(child, ensure(ctxProps).blocks, 0);
+      else if (isContainer(rt)) { cur = null; walk(semanticChildren(child), sectionProps(child)); cur = null; }
+      else ensure(ctxProps).blocks.push(...mapLeafExpanded(child));
+    }
+  };
+  walk(bodyNodes, sectionProps(wrapper));
+}
+
 // Validate every emitted dynamic/typed style at the canvas boundary. A block
 // with no local picklist configuration is left unchanged; where a picklist is
 // present, unsupported values are never serialized into the EDS page.
@@ -1233,14 +1285,22 @@ function aemToCanvas(jcrContent, opts) {
       let j = i + 1;
       while (j < tops.length) {                     // absorb following plain content container(s)
         const nx = tops[j];
-        if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !containerHasGrid(nx) && !isColorHero(nx) && overlapsHero(nx)) {
+        if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !isColorHero(nx) && overlapsHero(nx)) {
           const split = splitHeroContinuation(nx);
           if (split) {
             collectLeaves(split.header, blocks, '', false);
-            bodyGroups.push({ wrapper: nx, nodes: split.body });
+            // Only a DIRECT grid in the overlap container triggers per-grid /
+            // per-nested-container splitting (emitHeroContinuationSections) — the case the
+            // prior `!containerHasGrid` guard wrongly excluded from hero absorption. A grid
+            // nested inside a width-style sub-container stays on the existing body-group path
+            // (cols-12 inner-grid), which the corpus already migrates correctly (e.g. contact-us).
+            bodyGroups.push({ wrapper: nx, nodes: split.body, split: containerHasGrid(nx) });
             j++;
             break;                                  // later containers are page body, not hero continuation
           }
+          // A direct grid with no breadcrumb+H1 header is page-body content, not hero
+          // continuation — leave it to emitNode (matches the prior `!containerHasGrid` guard).
+          if (containerHasGrid(nx)) break;
           // Any overlap container that contains ANY grid (at any depth) must go to bodyGroups
           // rather than collectLeaves, to prevent the grid structure from being flattened into
           // the hero section. splitHeroContinuation already handled the breadcrumb+H1 case above.
@@ -1259,6 +1319,9 @@ function aemToCanvas(jcrContent, opts) {
       // color/image → item). NOT bare — 1429 of 1438 twin hero sections carry classes.
       sections.push({ type: 'section', props: sectionProps(node, true), blocks });
       for (const group of bodyGroups) {
+        // Hero-continuation body that carries a grid: emit per-grid / per-nested-container
+        // sections instead of one lumped section (structure verified against the twin).
+        if (group.split) { emitHeroContinuationSections(group.nodes, group.wrapper, sections); continue; }
         const bodyBlocks = [];
         for (const bodyNode of group.nodes) {
           const brt = RT(bodyNode);
