@@ -1854,7 +1854,16 @@ async function doMigCreateOne(i) {
 }
 async function doMigCreateAll() {
   const rows = S.migrateSite.plan?.rows || [];
-  for (let i = 0; i < rows.length; i++) if (rows[i].status === 'ready') await doMigCreateOne(i);
+  // Create parents before children: order the ready rows by "Create at" path DEPTH (shallowest
+  // first, ties broken alphabetically) so a page's parent page always exists in AEM before the
+  // page itself is created — otherwise a deeper page fails when its parent isn't there yet.
+  const ready = rows.map((r, i) => ({ r, i }))
+    .filter(({ r }) => r.status === 'ready')
+    .sort((a, b) => {
+      const pa = (a.r.targetPath || '').replace(/\/+$/, ''), pb = (b.r.targetPath || '').replace(/\/+$/, '');
+      return pa.split('/').length - pb.split('/').length || pa.localeCompare(pb);
+    });
+  for (const { i } of ready) await doMigCreateOne(i);
 }
 
 function stylesTabHtml() {
