@@ -461,7 +461,16 @@ function collectLeaves(node, out, inheritedBlockWidth = '', applyContainerWidth 
     if (!rt || isLayoutWrapper(rt)) { collectLeaves(child, out, width, applyContainerWidth); continue; }
     if (isXF(rt)) continue;
     if (isGrid(rt)) { collectLeaves(child, out, width, applyContainerWidth); continue; }      // nested grid → flatten its cell content
-    if (isContainer(rt)) { collectLeaves(child, out, width, applyContainerWidth); continue; } // nested container → flatten
+    if (isContainer(rt)) {
+      // A nested container with a width style AND any grid uses the inner-grid pattern.
+      // Use collectCellLeaves so the inner grid becomes an inner-grid controller, not flattened.
+      if (containerHasWidthStyle(child) && containerHasAnyGrid(child)) {
+        collectCellLeaves(child, out, 0, width);
+      } else {
+        collectLeaves(child, out, width, applyContainerWidth);
+      }
+      continue;
+    }
     out.push(...mapLeafExpanded(child, width));
   }
 }
@@ -474,6 +483,45 @@ function containerHasGrid(node) {
     if (!rt || isLayoutWrapper(rt)) { if (containerHasGrid(child)) return true; }
   }
   return false;
+}
+
+// Does this container have a direct grid child (through layout wrappers only, not through containers)?
+// Used to detect the "container with width style + nested grid → inner-grid section" pattern.
+function containerHasDirectGrid(node) {
+  for (const [, child] of childEntries(node)) {
+    const rt = RT(child);
+    if (isGrid(rt)) return true;
+    if (!rt || isLayoutWrapper(rt)) { if (containerHasDirectGrid(child)) return true; }
+  }
+  return false;
+}
+
+// Does this container hold any grid anywhere in its subtree (crossing containers too)?
+// Used to trigger the inner-grid section path when the grid is nested inside child containers.
+function containerHasAnyGrid(node) {
+  for (const [, child] of childEntries(node)) {
+    const rt = RT(child);
+    if (isGrid(rt)) return true;
+    if (!rt || isLayoutWrapper(rt) || isContainer(rt)) { if (containerHasAnyGrid(child)) return true; }
+  }
+  return false;
+}
+
+// Width style IDs present on containers that should trigger the inner-grid section pattern.
+// Covers all container-* sizes: xxx-large → xxx-small (8 IDs from style-map.json).
+const WIDTH_STYLE_IDS = new Set([
+  '1653545825684', // container-xxx-large
+  '1653545825685', // container-xx-large
+  '1653545825686', // container-x-large
+  '1653545825687', // container-large
+  '1653545825688', // container-medium
+  '1653545825689', // container-small
+  '1653545825690', // container-x-small
+  '1653545825692', // container-xxx-small
+]);
+function containerHasWidthStyle(node) {
+  const ids = String(node?.['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+  return ids.some(id => WIDTH_STYLE_IDS.has(id));
 }
 
 const bgClass = node => {
@@ -594,7 +642,15 @@ function sectionProps(node, hero = false) {
   // A hero's image/color belongs to its hero-container-item. In particular, a
   // color hero must not also paint the enclosing section, or the background
   // leaks beyond the hero's visual bounds.
-  const derived = resolved.classes.filter(c => !hero || (!/^height-/.test(c) && !/^bg-/.test(c)));
+  let derived = resolved.classes.filter(c => !hero || (!/^height-/.test(c) && !/^bg-/.test(c)));
+  // `overlap-predecessor` and `homepage-overlap` are AEM rendering hints for the
+  // hero-overlap visual effect — they have no EDS section equivalent and must
+  // never appear in any section's style_customDynamicClass. When an overlap class
+  // is present, radius is also stripped: the overlap body section has no corner
+  // rounding in EDS (radius belongs only on the hero or standalone sections).
+  const hasOverlap = derived.some(c => c === 'overlap-predecessor' || c === 'homepage-overlap');
+  derived = derived.filter(c => c !== 'overlap-predecessor' && c !== 'homepage-overlap' && (!hasOverlap || !EXCL_RADIUS.has(c)));
+  if (hasOverlap) delete resolved.typed.style_borderRadius;
   const typed = { ...resolved.typed };
   if (hero) { delete typed.style_height; delete typed['style_bg-color']; }
   const classes = mergeDefaults('section', derived);
@@ -631,7 +687,7 @@ const isHeroContainer = node => isContainer(RT(node)) && !containerHasGrid(node)
 // The hero's intro content sits in a following container that OVERLAPS the hero (styleId
 // overlap-predecessor) — verified 13/13 intro containers have it, 0/5 body containers do. Only such
 // containers are absorbed into the hero section; the first non-overlapping one starts the page body.
-const overlapsHero = node => splitCls([styleIdClasses(node)]).includes('overlap-predecessor');
+const overlapsHero = node => { const cls = splitCls([styleIdClasses(node)]); return cls.includes('overlap-predecessor') || cls.includes('homepage-overlap'); };
 
 // Grid layout classification (derived from corpus): EDS drops two kinds of grid rows
 // from the grid-section sequence and renders their content as plain / card blocks:
@@ -710,7 +766,32 @@ function collectCellLeaves(node, out, innerDepth = 0, inheritedBlockWidth = '') 
     if (!rt || isLayoutWrapper(rt)) { collectCellLeaves(child, out, innerDepth, width); continue; }
     if (isXF(rt)) continue;
     if (isGrid(rt)) { emitInnerGrid(child, out, innerDepth); continue; }
-    if (isContainer(rt)) { collectCellLeaves(child, out, innerDepth, width); continue; }
+    if (isContainer(rt)) {
+      // A nested container with a width style becomes a single-column inner-grid:
+      //   container-medium → inner-grid {cols-12,width-medium}
+      // All its content (including nested AEM grids) becomes col-1 of that inner-grid.
+      // This matches the hand-crafted EDS pattern confirmed in contact-us and migraine pages.
+      if (containerHasWidthStyle(child)) {
+        const childWidth = containerBlockWidth(child, width);
+        const colsClass = 'cols-12' + (childWidth ? ',' + childWidth : '');
+        const controller = { type: 'inner-grid', props: { classes_customDynamicClass: colsClass }, children: [] };
+        out.push(controller);
+        const cellBlocks = [];
+        collectCellLeaves(child, cellBlocks, innerDepth + 1, childWidth);
+        const colClass = `${innerDepth === 0 ? 'col' : 'ncol'}-1`;
+        cellBlocks.forEach(block => {
+          if (block._innerManaged) return;
+          addCommonClass(block, colClass);
+          markInnerManaged(block);
+        });
+        // The inner-grid controller itself is a col of the parent level
+        addCommonClass(controller, innerDepth === 0 ? 'col-1' : 'ncol-1');
+        out.push(...cellBlocks);
+      } else {
+        collectCellLeaves(child, out, innerDepth, width);
+      }
+      continue;
+    }
     out.push(...mapLeafExpanded(child, width));
   }
 }
@@ -905,6 +986,21 @@ function isIntroContainerBeforeGrid(container, next) {
 function emitNode(node, sections) {
   const rt = RT(node);
   if (isContainer(rt)) {
+    // ── Inner-grid pattern ──────────────────────────────────────────────────
+    // A container with a width style (container-medium / large / x-large / xx-large / small)
+    // that contains any grid (at any depth, including inside nested containers) represents
+    // a "container inside grid" layout in AEM where the grid acts as an inner-grid layout.
+    // EDS represents this as a plain section where each grid becomes an inner-grid
+    // controller (cols-X-Y-Z) with sibling blocks carrying col-N column classes.
+    // This is confirmed across 360 pages in the corpus (scan-contact-pattern.js).
+    // IMPORTANT: This check must come BEFORE the general containerHasGrid check
+    // so that width-style containers are NOT incorrectly converted to grid-containers.
+    if (containerHasWidthStyle(node) && containerHasAnyGrid(node)) {
+      const blocks = [];
+      collectCellLeaves(node, blocks, 0, '');
+      if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
+      return;
+    }
     if (containerHasGrid(node)) {
       // Real grids become grid-sections. A direct teaser next to a grid is its
       // own visual band in AEM, so preserve it as a standalone EDS section in
@@ -989,7 +1085,18 @@ function emitNode(node, sections) {
               if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
             }
           }
-          else if (isContainer(crt)) collectLeaves(child, buf());
+          else if (isContainer(crt)) {
+            // A nested container with a width style AND a direct grid is an inner-grid
+            // sub-section of its parent band. Emit it as inner-grid blocks into the
+            // trailing buffer (after any grid-sections) rather than flattening it.
+            if (containerHasWidthStyle(child) && containerHasDirectGrid(child)) {
+              const igBlocks = [];
+              collectCellLeaves(child, igBlocks, 0, '');
+              trailing.push(...igBlocks);
+            } else {
+              collectLeaves(child, buf());
+            }
+          }
           else buf().push(...mapLeafExpanded(child));
         }
       })(node);
@@ -1037,6 +1144,9 @@ function semanticChildren(node) {
 }
 function isBreadcrumbH1Container(node) {
   if (!isContainer(RT(node))) return false;
+  // A container that holds any grid is a body content container, not a pure
+  // breadcrumb+H1 header. Absorbing it into the hero would swallow the grid.
+  if (containerHasAnyGrid(node)) return false;
   let breadcrumb = false, h1 = false;
   (function scan(n) {
     for (const [, child] of childEntries(n)) {
@@ -1063,11 +1173,16 @@ function splitHeroContinuation(node) {
 // Validate every emitted dynamic/typed style at the canvas boundary. A block
 // with no local picklist configuration is left unchanged; where a picklist is
 // present, unsupported values are never serialized into the EDS page.
+// Classes that are computed dynamically and must never be stripped by picklist validation.
+// `cols-*` and `ncol-*` / `col-*` are generated from AEM grid columnWidth values and are
+// not enumerated in any static EDS picklist configuration.
+const DYNAMIC_CLASS_RE = /^(?:cols-[\d-]+|n?col-\d+|width-(?:x{0,3}-)?(small|medium|large))$/;
+
 function validateCanvasStyles(sections) {
   const filter = (type, value) => {
     const picklist = picklistFor(type);
     if (!picklist) return value;
-    const accepted = splitCls([value]).filter(cls => picklist.has(cls));
+    const accepted = splitCls([value]).filter(cls => DYNAMIC_CLASS_RE.test(cls) || picklist.has(cls));
     return Array.isArray(value) ? accepted : accepted.join(',');
   };
   const visit = entity => {
@@ -1126,6 +1241,15 @@ function aemToCanvas(jcrContent, opts) {
             j++;
             break;                                  // later containers are page body, not hero continuation
           }
+          // Any overlap container that contains ANY grid (at any depth) must go to bodyGroups
+          // rather than collectLeaves, to prevent the grid structure from being flattened into
+          // the hero section. splitHeroContinuation already handled the breadcrumb+H1 case above.
+          if (containerHasAnyGrid(nx)) {
+            const allChildren = semanticChildren(nx);
+            if (allChildren.length) bodyGroups.push({ wrapper: nx, nodes: allChildren });
+            j++;
+            break;
+          }
           collectLeaves(nx, blocks, '', false); j++;
         }
         else break;
@@ -1136,8 +1260,39 @@ function aemToCanvas(jcrContent, opts) {
       sections.push({ type: 'section', props: sectionProps(node, true), blocks });
       for (const group of bodyGroups) {
         const bodyBlocks = [];
-        for (const bodyNode of group.nodes) collectLeaves(bodyNode, bodyBlocks, '', false);
-        if (bodyBlocks.length) sections.push({ type: 'section', props: sectionProps(group.wrapper), blocks: bodyBlocks });
+        for (const bodyNode of group.nodes) {
+          const brt = RT(bodyNode);
+          if (isContainer(brt) && containerHasWidthStyle(bodyNode) && containerHasAnyGrid(bodyNode)) {
+            // Body container with width style + grid → inner-grid pattern.
+            // The bodyNode itself IS the width-style container (e.g. container-medium),
+            // so we must emit the cols-12,width-X controller BEFORE calling collectCellLeaves,
+            // then mark all its content as col-1 (depth=0 column of the outer 12-col grid).
+            const childWidth = containerBlockWidth(bodyNode, '');
+            const colsClass = 'cols-12' + (childWidth ? ',' + childWidth : '');
+            const controller = { type: 'inner-grid', props: { classes_customDynamicClass: colsClass }, children: [] };
+            bodyBlocks.push(controller);
+            const cellBlocks = [];
+            collectCellLeaves(bodyNode, cellBlocks, 1, childWidth);
+            cellBlocks.forEach(block => {
+              if (block._innerManaged) return;
+              addCommonClass(block, 'col-1');
+              markInnerManaged(block);
+            });
+            bodyBlocks.push(...cellBlocks);
+          } else {
+            collectLeaves(bodyNode, bodyBlocks, '', false);
+          }
+        }
+        if (bodyBlocks.length) {
+          // The body section after the hero inherits the overlap container's props. Strip any
+          // radius class that belongs to the AEM container band visual — the EDS body content
+          // section has no corner rounding. The typed style_borderRadius is also removed.
+          const bp = sectionProps(group.wrapper);
+          const bClasses = splitCls([bp.style_customDynamicClass]).filter(c => !EXCL_RADIUS.has(c));
+          bp.style_customDynamicClass = bClasses.join(',');
+          delete bp.style_borderRadius;
+          sections.push({ type: 'section', props: bp, blocks: bodyBlocks });
+        }
       }
       continue;
     }
