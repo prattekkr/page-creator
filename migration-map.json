@@ -339,18 +339,22 @@
       "propRenames": {
         "author": "attributionName",
         "authorTitle": "attributionRole",
-        "quoteType": "quoteVariant",
         "attributionName": "attributionName",
         "attributionTitle": "attributionRole",
         "quote": "quotation",
         "backgroundImageFileReference": "backgroundImage",
         "fileReference": "attributionImage",
         "topLeftText": "toplefttext",
-        "bottomRightText": "toprighttext",
-        "dmPresetType": "dmPresetType"
+        "bottomRightText": "toprighttext"
       },
       "skipProps": [
-        "id"
+        "id",
+        "quoteType",
+        "textSize",
+        "bgImageModifiers",
+        "imageModifiers",
+        "fragmentPath",
+        "dmPresetType"
       ]
     },
     "abbvie-com2/components/carousel/v2/carousel": {

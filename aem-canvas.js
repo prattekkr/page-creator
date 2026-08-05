@@ -337,6 +337,44 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     }
     props.classes_customDynamicClass = [...out].join(',');
   }
+  
+  
+   // Linklist: AEM reuses numeric style IDs across component policies. The shared IDs that map to
+  // quote/card/carousel class names on other components map to linklist-specific variants here.
+  // Remap known cross-policy collisions to their correct linklist EDS class.
+  // When no style is authored, default to `list-standard` (rows with arrow) — the EDS picklist
+  // first entry and the visual default seen on all un-styled linklists in hand-crafted pages.
+  if (type === 'linklist') {
+    const LINKLIST_REMAP = {
+      'quote-standard': 'list-standard',
+      'carousel-default': 'list-carousel',
+    };
+    const llClasses = String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean);
+    const remapped = llClasses.map(c => LINKLIST_REMAP[c] || c).filter(c => {
+      // Drop classes that don't belong to linklist picklist: theme classes are valid, layout helpers are valid
+      // but component-specific classes from other policies (e.g. card-*, quote-*) must not appear.
+      if (/^(quote-|card-)/.test(c)) return false;
+      return true;
+    });
+    // When no list-type class is present, default to list-standard (rows with arrow indicator).
+    const hasListType = remapped.some(c => /^list-/.test(c));
+    if (!hasListType) remapped.unshift('list-standard');
+    props.classes_customDynamicClass = remapped.join(',');
+  }
+
+  // Quote: deduplicate classes (AEM can register the same style ID twice under different policy
+  // entries), and default to `quote-standard` when no quote variant is present.
+  if (type === 'quote') {
+    const seen = new Set();
+    const dedupedClasses = String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean)
+      .filter(c => { if (seen.has(c)) return false; seen.add(c); return true; });
+    // Default variant when none of the explicit quote variant classes is present.
+    const QUOTE_VARIANTS = new Set(['quote-standard', 'quote-dashboard', 'quote-animation']);
+    if (!dedupedClasses.some(c => QUOTE_VARIANTS.has(c))) dedupedClasses.unshift('quote-standard');
+    props.classes_customDynamicClass = dedupedClasses.join(',');
+  }
+  
+  
   // Teaser: EDS teasers carry a heading-size class the AEM teaser doesn't declare — teaser-h2 is the
   // plurality (172/348), so default it unless a size already derived. teaser-internal-link is added
   // when the CTA link is internal (a path/# rather than an external http(s) URL).
