@@ -106,7 +106,14 @@ function backfillA11y(sections, maps) {
         // hero alt is always a filename guess — override it; custom-image only if empty
         if (b.type === 'hero-container-item' || !clean(p.imageAlt)) { if (p.imageAlt !== maps.alt[k]) { p.imageAlt = maps.alt[k]; stats.imageAlt++; } }
       }
-      if (k && maps.caption[k] && !clean(p.caption)) { p.caption = maps.caption[k]; p.getCaptionFromDAM = 'false'; stats.caption++; }
+      // Fill caption from live site when: (a) no caption is set yet, OR (b) getCaptionFromDAM=true
+      // (meaning the caption lives in DAM metadata — bake the resolved value in as literal text so
+      // we don't rely on EDS fetching it at render time, and turn off the DAM-fetch flag).
+      if (k && maps.caption[k] && (!clean(p.caption) || p.getCaptionFromDAM === 'true')) {
+        p.caption = maps.caption[k];
+        p.getCaptionFromDAM = 'false';
+        stats.caption++;
+      }
     }
     if (b.type === 'cta' && !clean(p['aria-label'])) {
       const label = maps.ctaByHref[baseKey(p.link)] || maps.ctaByText[clean(p.linkText).toLowerCase()];

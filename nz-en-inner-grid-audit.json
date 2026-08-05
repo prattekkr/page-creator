@@ -1,0 +1,3114 @@
+{
+  "generated": "2026-08-05T13:17:39.868Z",
+  "locale": "nz/en",
+  "stats": {
+    "total": 79,
+    "withInnerGrid": 7,
+    "falsePositivePages": 0,
+    "overInnerGrid": 1,
+    "matchInnerGrid": 4,
+    "matchWithFP": 1,
+    "missingInnerGrid": 6,
+    "innerGridNotInTwin": 2,
+    "noInnerGrid": 66,
+    "noEdsXml": 0,
+    "totalFalsePositiveInstances": 1,
+    "totalLegitInnerGridInstances": 10
+  },
+  "patternFrequency": [
+    [
+      "cols-6-6",
+      {
+        "total": 5,
+        "fp": 0
+      }
+    ],
+    [
+      "cols-8-2-2",
+      {
+        "total": 3,
+        "fp": 0
+      }
+    ],
+    [
+      "cols-12",
+      {
+        "total": 1,
+        "fp": 1
+      }
+    ],
+    [
+      "cols-6-1-5",
+      {
+        "total": 1,
+        "fp": 0
+      }
+    ],
+    [
+      "cols-2-10",
+      {
+        "total": 1,
+        "fp": 0
+      }
+    ]
+  ],
+  "falsePositives": [],
+  "overExploitation": [
+    {
+      "page": "nz/en/patients",
+      "aemPath": "/content/abbvie-com2/nz/en/patients",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 2,
+        "falsePositiveCount": 0,
+        "legitimateCount": 2,
+        "gridContainerCount": 1,
+        "totalSections": 7,
+        "innerGridDetails": [
+          {
+            "classes": "cols-6-6",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 3
+          },
+          {
+            "classes": "cols-6-6",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 3
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 3,
+        "gridSectionCount": 5,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "separator",
+          "video",
+          "eyebrow-text"
+        ]
+      },
+      "verdict": "OVER_INNER_GRID",
+      "verdictDetail": "Generated 2 inner-grid(s) (0 FP cols-12 + 2 legit) but twin uses 3 grid-container(s) and 0 inner-grids."
+    }
+  ],
+  "matched": [
+    {
+      "page": "nz/en/grants-and-donation",
+      "aemPath": "/content/abbvie-com2/nz/en/grants-and-donation",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\grants-and-donation\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\grants-and-donation\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 2,
+        "falsePositiveCount": 1,
+        "legitimateCount": 1,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [
+          {
+            "classes": "cols-12,width-x-large",
+            "cols": "cols-12",
+            "widthCls": "width-x-large",
+            "isSingleCol": true,
+            "isCols12": true,
+            "isFalsePositive": true,
+            "parentType": "section",
+            "sectionIdx": 1
+          },
+          {
+            "classes": "cols-6-1-5",
+            "cols": "cols-6-1-5",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 1
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "hero-container-item",
+          "breadcrumb",
+          "custom-title",
+          "text-container",
+          "separator",
+          "inner-grid",
+          "accordion",
+          "accordion-item"
+        ]
+      },
+      "verdict": "MATCH_WITH_FP",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 2 (1 FP), twin: 4. ⚠ Some generated cols-12 inner-grids may be false positives."
+    },
+    {
+      "page": "nz/en/join-us/why-abbvie",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/why-abbvie",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\why-abbvie\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\why-abbvie\\.content.xml",
+      "aemGridCount": 7,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 2,
+        "falsePositiveCount": 0,
+        "legitimateCount": 2,
+        "gridContainerCount": 5,
+        "totalSections": 15,
+        "innerGridDetails": [
+          {
+            "classes": "cols-6-6,no-bottom-margin",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 11
+          },
+          {
+            "classes": "cols-8-2-2,no-bottom-margin",
+            "cols": "cols-8-2-2",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 13
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 10,
+        "gridSectionCount": 19,
+        "blockTypes": [
+          "section",
+          "hero-container",
+          "breadcrumb",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "quote",
+          "teaser",
+          "eyebrow-text",
+          "video",
+          "cta",
+          "inner-grid"
+        ]
+      },
+      "verdict": "MATCH",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 2 (0 FP), twin: 4. "
+    },
+    {
+      "page": "nz/en/sustainability/environmental-social-and-governance/environmental-sustainability",
+      "aemPath": "/content/abbvie-com2/nz/en/sustainability/environmental-social-and-governance/environmental-sustainability",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\sustainability\\environmental-social-and-governance\\environmental-sustainability\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\sustainability\\environmental-social-and-governance\\environmental-sustainability\\.content.xml",
+      "aemGridCount": 7,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 1,
+        "falsePositiveCount": 0,
+        "legitimateCount": 1,
+        "gridContainerCount": 5,
+        "totalSections": 9,
+        "innerGridDetails": [
+          {
+            "classes": "cols-6-6",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "grid-section",
+            "sectionIdx": 3
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 12,
+        "gridContainerCount": 6,
+        "gridSectionCount": 18,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "separator",
+          "inner-grid",
+          "eyebrow-text",
+          "accordion"
+        ]
+      },
+      "verdict": "MATCH",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 1 (0 FP), twin: 12. "
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\.content.xml",
+      "aemGridCount": 2,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 1,
+        "falsePositiveCount": 0,
+        "legitimateCount": 1,
+        "gridContainerCount": 1,
+        "totalSections": 5,
+        "innerGridDetails": [
+          {
+            "classes": "cols-2-10,no-bottom-margin",
+            "cols": "cols-2-10",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "grid-section",
+            "sectionIdx": 3
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 1,
+        "gridSectionCount": 2,
+        "blockTypes": [
+          "carousel",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "inner-grid",
+          "custom-title",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MATCH",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 1 (0 FP), twin: 4. "
+    }
+  ],
+  "missingInnerGrid": [
+    {
+      "page": "nz/en/patients/product-quality-and-safety",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/product-quality-and-safety",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\product-quality-and-safety\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\product-quality-and-safety\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 3,
+        "totalSections": 7,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 2,
+        "gridSectionCount": 5,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "inner-grid",
+          "grid-container",
+          "grid-section"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 4 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\.content.xml",
+      "aemGridCount": 5,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 5,
+        "totalSections": 11,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 4,
+        "gridSectionCount": 14,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "video",
+          "separator",
+          "eyebrow-text",
+          "inner-grid"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 4 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/oncology-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/oncology-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\oncology-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\oncology-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/science-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/science-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\science-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\science-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/sustainability-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/sustainability-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\sustainability-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\sustainability-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/working-at-abbvie-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/working-at-abbvie-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\working-at-abbvie-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\working-at-abbvie-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    }
+  ],
+  "allResults": [
+    {
+      "page": "nz/en",
+      "aemPath": "/content/abbvie-com2/nz/en",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\.content.xml",
+      "aemGridCount": 4,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 2,
+        "falsePositiveCount": 0,
+        "legitimateCount": 2,
+        "gridContainerCount": 2,
+        "totalSections": 12,
+        "innerGridDetails": [
+          {
+            "classes": "cols-6-6",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 1
+          },
+          {
+            "classes": "cols-8-2-2,no-bottom-margin",
+            "cols": "cols-8-2-2",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 8
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": []
+      },
+      "verdict": "INNER_GRID_NOT_IN_TWIN",
+      "verdictDetail": "Generated 2 inner-grid(s) but twin has NO inner-grid and NO grid-container."
+    },
+    {
+      "page": "nz/en/contactus",
+      "aemPath": "/content/abbvie-com2/nz/en/contactus",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\contactus\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\contactus\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 1,
+        "gridSectionCount": 3,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "separator",
+          "accordion",
+          "eyebrow-text",
+          "linklist"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/contactus/failure",
+      "aemPath": "/content/abbvie-com2/nz/en/contactus/failure",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\contactus\\failure\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\contactus\\failure\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/contactus/thank-you",
+      "aemPath": "/content/abbvie-com2/nz/en/contactus/thank-you",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\contactus\\thank-you\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\contactus\\thank-you\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/educational-event-sponsorship",
+      "aemPath": "/content/abbvie-com2/nz/en/educational-event-sponsorship",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\educational-event-sponsorship\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\educational-event-sponsorship\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/error",
+      "aemPath": "/content/abbvie-com2/nz/en/error",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\error\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\error\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": []
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/error/403",
+      "aemPath": "/content/abbvie-com2/nz/en/error/403",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\error\\403\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\error\\403\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "search-input"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/error/404",
+      "aemPath": "/content/abbvie-com2/nz/en/error/404",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\error\\404\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\error\\404\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "search-input"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/error/500",
+      "aemPath": "/content/abbvie-com2/nz/en/error/500",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\error\\500\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\error\\500\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "search-input"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/grants-and-donation",
+      "aemPath": "/content/abbvie-com2/nz/en/grants-and-donation",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\grants-and-donation\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\grants-and-donation\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 2,
+        "falsePositiveCount": 1,
+        "legitimateCount": 1,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [
+          {
+            "classes": "cols-12,width-x-large",
+            "cols": "cols-12",
+            "widthCls": "width-x-large",
+            "isSingleCol": true,
+            "isCols12": true,
+            "isFalsePositive": true,
+            "parentType": "section",
+            "sectionIdx": 1
+          },
+          {
+            "classes": "cols-6-1-5",
+            "cols": "cols-6-1-5",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 1
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "hero-container-item",
+          "breadcrumb",
+          "custom-title",
+          "text-container",
+          "separator",
+          "inner-grid",
+          "accordion",
+          "accordion-item"
+        ]
+      },
+      "verdict": "MATCH_WITH_FP",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 2 (1 FP), twin: 4. ⚠ Some generated cols-12 inner-grids may be false positives."
+    },
+    {
+      "page": "nz/en/join-us",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\.content.xml",
+      "aemGridCount": 4,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 1,
+        "falsePositiveCount": 0,
+        "legitimateCount": 1,
+        "gridContainerCount": 3,
+        "totalSections": 7,
+        "innerGridDetails": [
+          {
+            "classes": "cols-8-2-2,no-bottom-margin",
+            "cols": "cols-8-2-2",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 1
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "linklist"
+        ]
+      },
+      "verdict": "INNER_GRID_NOT_IN_TWIN",
+      "verdictDetail": "Generated 1 inner-grid(s) but twin has NO inner-grid and NO grid-container."
+    },
+    {
+      "page": "nz/en/join-us/life-at-abbvie",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/life-at-abbvie",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\life-at-abbvie\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\life-at-abbvie\\.content.xml",
+      "aemGridCount": 4,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 4,
+        "totalSections": 11,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 3,
+        "gridSectionCount": 8,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "accordion",
+          "linklist",
+          "video",
+          "carousel"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/join-us/life-at-abbvie/benefits",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/life-at-abbvie/benefits",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\life-at-abbvie\\benefits\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\life-at-abbvie\\benefits\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 3,
+        "totalSections": 6,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 2,
+        "gridSectionCount": 6,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "accordion",
+          "eyebrow-text",
+          "linklist"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/join-us/life-at-abbvie/employee-resource-groups",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/life-at-abbvie/employee-resource-groups",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\life-at-abbvie\\employee-resource-groups\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\life-at-abbvie\\employee-resource-groups\\.content.xml",
+      "aemGridCount": 2,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 4,
+        "totalSections": 6,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 4,
+        "gridSectionCount": 10,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "video"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/join-us/life-at-abbvie/learning-and-development",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/life-at-abbvie/learning-and-development",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\life-at-abbvie\\learning-and-development\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\life-at-abbvie\\learning-and-development\\.content.xml",
+      "aemGridCount": 5,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 5,
+        "totalSections": 9,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 5,
+        "gridSectionCount": 15,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "separator",
+          "linklist",
+          "video"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/join-us/life-at-abbvie/well-being-in-the-workplace",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/life-at-abbvie/well-being-in-the-workplace",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\life-at-abbvie\\well-being-in-the-workplace\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\life-at-abbvie\\well-being-in-the-workplace\\.content.xml",
+      "aemGridCount": 6,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 6,
+        "totalSections": 7,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 5,
+        "gridSectionCount": 15,
+        "blockTypes": [
+          "section",
+          "hero-container",
+          "breadcrumb",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "separator",
+          "quote",
+          "eyebrow-text",
+          "story-card",
+          "linklist",
+          "cta"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/join-us/opportunities",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/opportunities",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\opportunities\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\opportunities\\.content.xml",
+      "aemGridCount": 2,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 2,
+        "totalSections": 4,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 1,
+        "gridSectionCount": 3,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "accordion",
+          "separator"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/join-us/why-abbvie",
+      "aemPath": "/content/abbvie-com2/nz/en/join-us/why-abbvie",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\join-us\\why-abbvie\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\join-us\\why-abbvie\\.content.xml",
+      "aemGridCount": 7,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 2,
+        "falsePositiveCount": 0,
+        "legitimateCount": 2,
+        "gridContainerCount": 5,
+        "totalSections": 15,
+        "innerGridDetails": [
+          {
+            "classes": "cols-6-6,no-bottom-margin",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 11
+          },
+          {
+            "classes": "cols-8-2-2,no-bottom-margin",
+            "cols": "cols-8-2-2",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 13
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 10,
+        "gridSectionCount": 19,
+        "blockTypes": [
+          "section",
+          "hero-container",
+          "breadcrumb",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "quote",
+          "teaser",
+          "eyebrow-text",
+          "video",
+          "cta",
+          "inner-grid"
+        ]
+      },
+      "verdict": "MATCH",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 2 (0 FP), twin: 4. "
+    },
+    {
+      "page": "nz/en/media",
+      "aemPath": "/content/abbvie-com2/nz/en/media",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\media\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\media\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "section",
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/media/eczema-patients-struggle-with-life-restricting-physical-and-mental-impacts-new-survey-finds",
+      "aemPath": "/content/abbvie-com2/nz/en/media/eczema-patients-struggle-with-life-restricting-physical-and-mental-impacts-new-survey-finds",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\media\\eczema-patients-struggle-with-life-restricting-physical-and-mental-impacts-new-survey-finds\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\media\\eczema-patients-struggle-with-life-restricting-physical-and-mental-impacts-new-survey-finds\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "cta",
+          "story-card",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/media/living-with-eczema-the-real-life-impact-for-newzealanders",
+      "aemPath": "/content/abbvie-com2/nz/en/media/living-with-eczema-the-real-life-impact-for-newzealanders",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\media\\living-with-eczema-the-real-life-impact-for-newzealanders\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\media\\living-with-eczema-the-real-life-impact-for-newzealanders\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "hero-container-item",
+          "breadcrumb",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/media-contact",
+      "aemPath": "/content/abbvie-com2/nz/en/media-contact",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\media-contact\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\media-contact\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "hero-container-item",
+          "breadcrumb",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients",
+      "aemPath": "/content/abbvie-com2/nz/en/patients",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 2,
+        "falsePositiveCount": 0,
+        "legitimateCount": 2,
+        "gridContainerCount": 1,
+        "totalSections": 7,
+        "innerGridDetails": [
+          {
+            "classes": "cols-6-6",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 3
+          },
+          {
+            "classes": "cols-6-6",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "section",
+            "sectionIdx": 3
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 3,
+        "gridSectionCount": 5,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "separator",
+          "video",
+          "eyebrow-text"
+        ]
+      },
+      "verdict": "OVER_INNER_GRID",
+      "verdictDetail": "Generated 2 inner-grid(s) (0 FP cols-12 + 2 legit) but twin uses 3 grid-container(s) and 0 inner-grids."
+    },
+    {
+      "page": "nz/en/patients/product-quality-and-safety",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/product-quality-and-safety",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\product-quality-and-safety\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\product-quality-and-safety\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 3,
+        "totalSections": 7,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 2,
+        "gridSectionCount": 5,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "inner-grid",
+          "grid-container",
+          "grid-section"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 4 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/patients/products",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 5,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 1,
+        "gridSectionCount": 3,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "linklist"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/acular-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/acular-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\acular-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\acular-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/albalon-a-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/albalon-a-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\albalon-a-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\albalon-a-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/albalon-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/albalon-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\albalon-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\albalon-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/alphagan-p-1-0-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/alphagan-p-1-0-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\alphagan-p-1-0-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\alphagan-p-1-0-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/alphagan-p-1-5-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/alphagan-p-1-5-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\alphagan-p-1-5-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\alphagan-p-1-5-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/aquipta",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/aquipta",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\aquipta\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\aquipta\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/botox",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/botox",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\botox\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\botox\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/combigan-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/combigan-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\combigan-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\combigan-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/duodopa",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/duodopa",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\duodopa\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\duodopa\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/epkinly",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/epkinly",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\epkinly\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\epkinly\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/fml-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/fml-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\fml-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\fml-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/ganfort-pf-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/ganfort-pf-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\ganfort-pf-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\ganfort-pf-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/humira-pen",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/humira-pen",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\humira-pen\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\humira-pen\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/humira-pre-filled-syringe-solution-for-injection",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/humira-pre-filled-syringe-solution-for-injection",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\humira-pre-filled-syringe-solution-for-injection\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\humira-pre-filled-syringe-solution-for-injection\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/lucrin-depot-pds-injection",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/lucrin-depot-pds-injection",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\lucrin-depot-pds-injection\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\lucrin-depot-pds-injection\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/lumigan-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/lumigan-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\lumigan-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\lumigan-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/lumigan-pf-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/lumigan-pf-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\lumigan-pf-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\lumigan-pf-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/maviret",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/maviret",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\maviret\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\maviret\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/norvir",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/norvir",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\norvir\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\norvir\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/ozurdex",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/ozurdex",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\ozurdex\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\ozurdex\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/pred-forte-eye-drops",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/pred-forte-eye-drops",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\pred-forte-eye-drops\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\pred-forte-eye-drops\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/rinvoq",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/rinvoq",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\rinvoq\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\rinvoq\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/skyrizi",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/skyrizi",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\skyrizi\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\skyrizi\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/venclexta",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/venclexta",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\venclexta\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\venclexta\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/patients/products/xen",
+      "aemPath": "/content/abbvie-com2/nz/en/patients/products/xen",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\patients\\products\\xen\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\patients\\products\\xen\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/privacy",
+      "aemPath": "/content/abbvie-com2/nz/en/privacy",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\privacy\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\privacy\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 1,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-embed"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/science",
+      "aemPath": "/content/abbvie-com2/nz/en/science",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\science\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\science\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 2,
+        "totalSections": 7,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 1,
+        "gridSectionCount": 3,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/science/areas-of-focus",
+      "aemPath": "/content/abbvie-com2/nz/en/science/areas-of-focus",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\science\\areas-of-focus\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\science\\areas-of-focus\\.content.xml",
+      "aemGridCount": 2,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 3,
+        "totalSections": 7,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 3,
+        "gridSectionCount": 9,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/science/areas-of-innovation",
+      "aemPath": "/content/abbvie-com2/nz/en/science/areas-of-innovation",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\science\\areas-of-innovation\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\science\\areas-of-innovation\\.content.xml",
+      "aemGridCount": 2,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 2,
+        "totalSections": 5,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 2,
+        "gridSectionCount": 6,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "separator",
+          "linklist"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/science/clinical-trials",
+      "aemPath": "/content/abbvie-com2/nz/en/science/clinical-trials",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\science\\clinical-trials\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\science\\clinical-trials\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 3,
+        "totalSections": 4,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 1,
+        "gridSectionCount": 2,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "eyebrow-text",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "accordion"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/search-results",
+      "aemPath": "/content/abbvie-com2/nz/en/search-results",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\search-results\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\search-results\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 1,
+        "gridSectionCount": 3,
+        "blockTypes": [
+          "separator",
+          "grid-container",
+          "grid-section",
+          "search-input",
+          "search-results"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/site-map",
+      "aemPath": "/content/abbvie-com2/nz/en/site-map",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\site-map\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\site-map\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 3,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "linklist"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/social-media",
+      "aemPath": "/content/abbvie-com2/nz/en/social-media",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\social-media\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\social-media\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "separator",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/sustainability",
+      "aemPath": "/content/abbvie-com2/nz/en/sustainability",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\sustainability\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\sustainability\\.content.xml",
+      "aemGridCount": 2,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 2,
+        "totalSections": 6,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 2,
+        "gridSectionCount": 5,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/sustainability/environmental-social-and-governance",
+      "aemPath": "/content/abbvie-com2/nz/en/sustainability/environmental-social-and-governance",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\sustainability\\environmental-social-and-governance\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\sustainability\\environmental-social-and-governance\\.content.xml",
+      "aemGridCount": 4,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 6,
+        "totalSections": 10,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 6,
+        "gridSectionCount": 18,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/sustainability/environmental-social-and-governance/environmental-sustainability",
+      "aemPath": "/content/abbvie-com2/nz/en/sustainability/environmental-social-and-governance/environmental-sustainability",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\sustainability\\environmental-social-and-governance\\environmental-sustainability\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\sustainability\\environmental-social-and-governance\\environmental-sustainability\\.content.xml",
+      "aemGridCount": 7,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 1,
+        "falsePositiveCount": 0,
+        "legitimateCount": 1,
+        "gridContainerCount": 5,
+        "totalSections": 9,
+        "innerGridDetails": [
+          {
+            "classes": "cols-6-6",
+            "cols": "cols-6-6",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "grid-section",
+            "sectionIdx": 3
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 12,
+        "gridContainerCount": 6,
+        "gridSectionCount": 18,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "separator",
+          "inner-grid",
+          "eyebrow-text",
+          "accordion"
+        ]
+      },
+      "verdict": "MATCH",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 1 (0 FP), twin: 12. "
+    },
+    {
+      "page": "nz/en/terms-of-use",
+      "aemPath": "/content/abbvie-com2/nz/en/terms-of-use",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\terms-of-use\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\terms-of-use\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 3,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "section"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\.content.xml",
+      "aemGridCount": 5,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 5,
+        "totalSections": 11,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 4,
+        "gridSectionCount": 14,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "video",
+          "separator",
+          "eyebrow-text",
+          "inner-grid"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 4 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/equity-equality-inclusion-diversity",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/equity-equality-inclusion-diversity",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\equity-equality-inclusion-diversity\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\equity-equality-inclusion-diversity\\.content.xml",
+      "aemGridCount": 3,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 3,
+        "totalSections": 9,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 2,
+        "gridSectionCount": 7,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "linklist",
+          "separator"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/operating-with-integrity",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/operating-with-integrity",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\operating-with-integrity\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\operating-with-integrity\\.content.xml",
+      "aemGridCount": 4,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 4,
+        "totalSections": 7,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 4,
+        "gridSectionCount": 11,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "accordion"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/operating-with-integrity/protecting-human-rights-and-workplace-safety",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/operating-with-integrity/protecting-human-rights-and-workplace-safety",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\operating-with-integrity\\protecting-human-rights-and-workplace-safety\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\operating-with-integrity\\protecting-human-rights-and-workplace-safety\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 5,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 1,
+        "gridSectionCount": 3,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "eyebrow-text",
+          "separator"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/operating-with-integrity/transparency-in-payments",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/operating-with-integrity/transparency-in-payments",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\operating-with-integrity\\transparency-in-payments\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\operating-with-integrity\\transparency-in-payments\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 3,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-principles",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-principles",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-principles\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-principles\\.content.xml",
+      "aemGridCount": 4,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 4,
+        "totalSections": 9,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 3,
+        "gridSectionCount": 8,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "grid-container",
+          "grid-section",
+          "video",
+          "accordion",
+          "separator"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\.content.xml",
+      "aemGridCount": 2,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 1,
+        "falsePositiveCount": 0,
+        "legitimateCount": 1,
+        "gridContainerCount": 1,
+        "totalSections": 5,
+        "innerGridDetails": [
+          {
+            "classes": "cols-2-10,no-bottom-margin",
+            "cols": "cols-2-10",
+            "widthCls": "",
+            "isSingleCol": false,
+            "isCols12": false,
+            "isFalsePositive": false,
+            "parentType": "grid-section",
+            "sectionIdx": 3
+          }
+        ],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 4,
+        "gridContainerCount": 1,
+        "gridSectionCount": 2,
+        "blockTypes": [
+          "carousel",
+          "separator",
+          "grid-container",
+          "grid-section",
+          "inner-grid",
+          "custom-title",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MATCH",
+      "verdictDetail": "Both generated and twin use inner-grid. Gen: 1 (0 FP), twin: 4. "
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/10-years-of-clinical-trials",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/10-years-of-clinical-trials",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\10-years-of-clinical-trials\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\10-years-of-clinical-trials\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/35-years-of-joy",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/35-years-of-joy",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\35-years-of-joy\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\35-years-of-joy\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 3,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/in-our-sights",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/in-our-sights",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\in-our-sights\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\in-our-sights\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 3,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "video"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/oncology-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/oncology-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\oncology-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\oncology-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/science-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/science-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\science-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\science-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/stefs-volunteering-story",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/stefs-volunteering-story",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\stefs-volunteering-story\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\stefs-volunteering-story\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/sustainability-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/sustainability-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\sustainability-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\sustainability-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/value-of-hope",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/value-of-hope",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\value-of-hope\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\value-of-hope\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "separator",
+          "brightcove-video"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/well-being",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/well-being",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\well-being\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\well-being\\.content.xml",
+      "aemGridCount": 1,
+      "hasWidthContainerWithGrid": true,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 1,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 0,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "section",
+          "hero-container",
+          "cta",
+          "story-card",
+          "custom-title",
+          "text-container"
+        ]
+      },
+      "verdict": "no-inner-grid",
+      "verdictDetail": "No inner-grid generated."
+    },
+    {
+      "page": "nz/en/who-we-are/our-stories/working-at-abbvie-stories",
+      "aemPath": "/content/abbvie-com2/nz/en/who-we-are/our-stories/working-at-abbvie-stories",
+      "aemXmlFile": ".\\content-xml\\nz\\en\\who-we-are\\our-stories\\working-at-abbvie-stories\\.content.xml",
+      "edsXmlFile": ".\\eds-xml\\nz\\en\\who-we-are\\our-stories\\working-at-abbvie-stories\\.content.xml",
+      "aemGridCount": 0,
+      "hasWidthContainerWithGrid": false,
+      "generated": {
+        "innerGridTotal": 0,
+        "falsePositiveCount": 0,
+        "legitimateCount": 0,
+        "gridContainerCount": 0,
+        "totalSections": 2,
+        "innerGridDetails": [],
+        "error": null
+      },
+      "twin": {
+        "innerGridCount": 3,
+        "gridContainerCount": 0,
+        "gridSectionCount": 0,
+        "blockTypes": [
+          "hero-container",
+          "custom-title",
+          "text-container",
+          "inner-grid",
+          "editorial-feed"
+        ]
+      },
+      "verdict": "MISSING_INNER_GRID",
+      "verdictDetail": "Twin has 3 inner-grid(s) but generated output has none."
+    }
+  ]
+}

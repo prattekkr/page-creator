@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>inner-grid Scenarios Report</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; color: #222; margin: 0; padding: 24px 32px; }
+  h1 { font-size: 20px; color: #1a1a2e; border-bottom: 3px solid #0066f5; padding-bottom: 8px; margin-bottom: 4px; }
+  .meta { font-size: 10px; color: #666; margin-bottom: 24px; }
+  .summary { display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+  .summary-card { background: #f0f4ff; border: 1px solid #c0d0f0; border-radius: 6px; padding: 10px 16px; min-width: 160px; }
+  .summary-card .num { font-size: 28px; font-weight: 700; color: #0066f5; }
+  .summary-card .label { font-size: 10px; color: #444; margin-top: 2px; }
+  .scenario { page-break-inside: avoid; margin-bottom: 32px; }
+  .scenario-header { background: #1a1a2e; color: #fff; padding: 8px 14px; border-radius: 6px 6px 0 0; }
+  .scenario-header h2 { margin: 0; font-size: 13px; }
+  .scenario-header .badge { display: inline-block; background: #0066f5; color: #fff; border-radius: 10px; padding: 1px 8px; font-size: 10px; margin-left: 8px; }
+  .scenario-body { border: 1px solid #dde; border-top: none; border-radius: 0 0 6px 6px; padding: 12px 14px; }
+  .desc-row { display: flex; gap: 24px; margin-bottom: 10px; flex-wrap: wrap; }
+  .desc-block { flex: 1; min-width: 220px; }
+  .desc-block .label { font-size: 9px; text-transform: uppercase; color: #888; font-weight: 600; margin-bottom: 3px; }
+  .desc-block p { margin: 0; font-size: 10.5px; line-height: 1.5; }
+  .eds-badge { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 4px 8px; font-family: monospace; font-size: 10px; color: #2e7d32; margin-bottom: 10px; display: inline-block; }
+  table { width: 100%; border-collapse: collapse; font-size: 10px; }
+  th { background: #f5f7ff; text-align: left; padding: 5px 8px; border: 1px solid #dde; font-weight: 600; color: #333; }
+  td { padding: 5px 8px; border: 1px solid #eee; vertical-align: top; word-break: break-all; }
+  tr:nth-child(even) td { background: #fafbff; }
+  .aem-path { color: #0050b3; font-family: monospace; font-size: 9.5px; }
+  .node { color: #6a0dad; font-family: monospace; }
+  .width { color: #d35400; font-weight: 600; font-size: 9.5px; }
+  .par { color: #1565c0; font-family: monospace; }
+  .note { color: #555; font-size: 9px; font-style: italic; }
+  .footer { margin-top: 32px; border-top: 1px solid #dde; padding-top: 8px; font-size: 9px; color: #999; text-align: right; }
+  @media print {
+    body { padding: 16px 20px; }
+    .scenario { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>inner-grid Scenarios — AEM → EDS Migration Report</h1>
+<p class="meta">Generated: 2026-08-05T12:59:00.866Z &nbsp;|&nbsp; Source: content-xml corpus (3,584 XML files) &nbsp;|&nbsp; Scanner: _inner-grid-report.js</p>
+
+<div class="summary">
+  <div class="summary-card">
+    <div class="num">5</div>
+    <div class="label">S1: Top-level width<br>container + grid</div>
+  </div>
+  <div class="summary-card">
+    <div class="num">5</div>
+    <div class="label">S2: Grid inside<br>parsys cell</div>
+  </div>
+  <div class="summary-card">
+    <div class="num">5</div>
+    <div class="label">S3: Width container<br>inside parsys cell</div>
+  </div>
+  <div class="summary-card">
+    <div class="num">5</div>
+    <div class="label">S4: Hero continuation<br>body + width + grid</div>
+  </div>
+</div>
+
+<!-- SCENARIO 1 -->
+<div class="scenario">
+  <div class="scenario-header">
+    <h2>Scenario 1: Top-level container with width style + nested grid <span class="badge">5 examples</span></h2>
+  </div>
+  <div class="scenario-body">
+    <div class="desc-row">
+      <div class="desc-block">
+        <div class="label">Description</div>
+        <p>An AEM container with a container-* width styleId that contains any grid anywhere in its subtree. Triggers collectCellLeaves() at emitNode() level. The whole container becomes a plain section; each grid inside becomes an inner-grid controller with col-N blocks.</p>
+      </div>
+      <div class="desc-block">
+        <div class="label">Code Path</div>
+        <p><code>emitNode()</code> → <code>containerHasWidthStyle() &amp;&amp; containerHasAnyGrid()</code> → <code>collectCellLeaves(node, blocks, 0, '')</code></p>
+      </div>
+    </div>
+    <div class="eds-badge">EDS: section → [inner-grid {cols-X-Y,...widthClass}, block{col-1}, block{col-2}, ...]</div>
+    <table>
+      <thead><tr><th>#</th><th>AEM Page Path</th><th>JCR Container Node</th><th>Width Class</th><th>Note</th></tr></thead>
+      <tbody>
+        
+        <tr>
+          <td>1</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es</td>
+          <td class="node">container</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Top-level container 'container' (container-xx-large) contains a grid → page becomes a section with inner-grid blocks</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us</td>
+          <td class="node">container2</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Top-level container 'container2' (container-xx-large) contains a grid → page becomes a section with inner-grid blocks</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us</td>
+          <td class="node">container3</td>
+          <td class="width">container-x-large</td>
+          <td class="note">Top-level container 'container3' (container-x-large) contains a grid → page becomes a section with inner-grid blocks</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us</td>
+          <td class="node">container_829993285</td>
+          <td class="width">container-xxx-large</td>
+          <td class="note">Top-level container 'container_829993285' (container-xxx-large) contains a grid → page becomes a section with inner-grid blocks</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie</td>
+          <td class="node">container2</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Top-level container 'container2' (container-xx-large) contains a grid → page becomes a section with inner-grid blocks</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SCENARIO 2 -->
+<div class="scenario">
+  <div class="scenario-header">
+    <h2>Scenario 2: Grid inside a parsys cell (nested inner-grid) <span class="badge">5 examples</span></h2>
+  </div>
+  <div class="scenario-body">
+    <div class="desc-row">
+      <div class="desc-block">
+        <div class="label">Description</div>
+        <p>A par_RC parsys node inside one grid that itself contains another AEM grid. collectCellLeaves() encounters isGrid() → calls emitInnerGrid(). Depth > 0 means column classes become ncol-N instead of col-N.</p>
+      </div>
+      <div class="desc-block">
+        <div class="label">Code Path</div>
+        <p><code>collectCellLeaves()</code> → <code>isGrid(rt)</code> → <code>emitInnerGrid(child, out, depth+1)</code> → blocks get <code>ncol-N</code> class</p>
+      </div>
+    </div>
+    <div class="eds-badge">EDS: grid-section { children: [inner-grid {cols-X-Y}, block{ncol-1}, block{ncol-2}] }</div>
+    <table>
+      <thead><tr><th>#</th><th>AEM Page Path</th><th>Par Cell (contains inner grid)</th><th>Total Grids on Page</th><th>Note</th></tr></thead>
+      <tbody>
+        
+        <tr>
+          <td>1</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us</td>
+          <td class="par">par_13</td>
+          <td style="text-align:center">6</td>
+          <td class="note">Cell 'par_13' contains an inner grid. Total grids in page: 6</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/benefits</td>
+          <td class="par">par_12</td>
+          <td style="text-align:center">3</td>
+          <td class="note">Cell 'par_12' contains an inner grid. Total grids in page: 3</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/learning-and-development</td>
+          <td class="par">par_12</td>
+          <td style="text-align:center">4</td>
+          <td class="note">Cell 'par_12' contains an inner grid. Total grids in page: 4</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/well-being-in-the-workplace</td>
+          <td class="par">par_12</td>
+          <td style="text-align:center">5</td>
+          <td class="note">Cell 'par_12' contains an inner grid. Total grids in page: 5</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/why-abbvie</td>
+          <td class="par">par_12</td>
+          <td style="text-align:center">7</td>
+          <td class="note">Cell 'par_12' contains an inner grid. Total grids in page: 7</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SCENARIO 3 -->
+<div class="scenario">
+  <div class="scenario-header">
+    <h2>Scenario 3: Width-style container inside a parsys cell <span class="badge">5 examples</span></h2>
+  </div>
+  <div class="scenario-body">
+    <div class="desc-row">
+      <div class="desc-block">
+        <div class="label">Description</div>
+        <p>A container-* node found inside a par_RC parsys cell. collectCellLeaves() sees isContainer(rt) + containerHasWidthStyle() → emits a cols-12,widthClass inner-grid controller. All container content becomes col-1 blocks.</p>
+      </div>
+      <div class="desc-block">
+        <div class="label">Code Path</div>
+        <p><code>collectCellLeaves()</code> → <code>isContainer(rt) &amp;&amp; containerHasWidthStyle(child)</code> → emits <code>cols-12,widthClass</code> controller → content becomes <code>col-1</code> blocks</p>
+      </div>
+    </div>
+    <div class="eds-badge">EDS: grid-section { children: [inner-grid {cols-12,widthClass,col-1}, block{col-1}, ...] }</div>
+    <table>
+      <thead><tr><th>#</th><th>AEM Page Path</th><th>JCR Container Node</th><th>Width Class</th><th>Inside Par Cell</th><th>Note</th></tr></thead>
+      <tbody>
+        
+        <tr>
+          <td>1</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es</td>
+          <td class="node">container_829993285_</td>
+          <td class="width">container-xxx-large</td>
+          <td class="par">par_13</td>
+          <td class="note">Container 'container_829993285_' (container-xxx-large) inside parsys cell 'par_13' contains a grid → emits cols-12,container-xxx-large inner-grid in that cell</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/learning-and-development</td>
+          <td class="node">container_1199983605</td>
+          <td class="width">container-medium</td>
+          <td class="par">par_13</td>
+          <td class="note">Container 'container_1199983605' (container-medium) inside parsys cell 'par_13' contains a grid → emits cols-12,container-medium inner-grid in that cell</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/well-being-in-the-workplace</td>
+          <td class="node">container_675367643</td>
+          <td class="width">container-medium</td>
+          <td class="par">par_13</td>
+          <td class="note">Container 'container_675367643' (container-medium) inside parsys cell 'par_13' contains a grid → emits cols-12,container-medium inner-grid in that cell</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/why-abbvie</td>
+          <td class="node">container_195460670_</td>
+          <td class="width">container-medium</td>
+          <td class="par">par_13</td>
+          <td class="note">Container 'container_195460670_' (container-medium) inside parsys cell 'par_13' contains a grid → emits cols-12,container-medium inner-grid in that cell</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/why-abbvie</td>
+          <td class="node">container_829993285_</td>
+          <td class="width">container-xxx-large</td>
+          <td class="par">par_13</td>
+          <td class="note">Container 'container_829993285_' (container-xxx-large) inside parsys cell 'par_13' contains a grid → emits cols-12,container-xxx-large inner-grid in that cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SCENARIO 4 -->
+<div class="scenario">
+  <div class="scenario-header">
+    <h2>Scenario 4: Hero continuation body: width-style container + grid <span class="badge">5 examples</span></h2>
+  </div>
+  <div class="scenario-body">
+    <div class="desc-row">
+      <div class="desc-block">
+        <div class="label">Description</div>
+        <p>After a hero image container + overlap container merge, the body nodes may include a container-* with a grid. emitHeroContinuationSections() / hero body group logic emits a cols-12,widthClass inner-grid before calling collectCellLeaves() with col-1 assignment.</p>
+      </div>
+      <div class="desc-block">
+        <div class="label">Code Path</div>
+        <p><code>aemToCanvas()</code> hero merge → <code>bodyGroups</code> → <code>emitHeroContinuationSections()</code> or body group path → emits <code>cols-12,widthClass</code> inner-grid + <code>col-1</code> assignment</p>
+      </div>
+    </div>
+    <div class="eds-badge">EDS: section (after hero) → [inner-grid {cols-12,widthClass}, block{col-1}, ...]</div>
+    <table>
+      <thead><tr><th>#</th><th>AEM Page Path</th><th>JCR Container Node</th><th>Width Class</th><th>Note</th></tr></thead>
+      <tbody>
+        
+        <tr>
+          <td>1</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us</td>
+          <td class="node">container2</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie</td>
+          <td class="node">container2</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/benefits</td>
+          <td class="node">container2</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/employee-resource-groups</td>
+          <td class="node">container2</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="aem-path">/content/abbvie-com2/ar/es/join-us/life-at-abbvie/learning-and-development</td>
+          <td class="node">container2</td>
+          <td class="width">container-xx-large</td>
+          <td class="note">Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">
+  inner-grid-report.json &nbsp;|&nbsp; _inner-grid-report.js &nbsp;|&nbsp; aem-canvas.js &nbsp;|&nbsp; ACS Amplify
+</div>
+
+</body>
+</html>

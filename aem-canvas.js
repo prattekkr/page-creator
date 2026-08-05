@@ -52,6 +52,7 @@ const PICKLIST_KEY = {
   'text-container': 'text',
   'custom-image': 'image',
   'brightcove-video': 'video',
+  'grid-container': 'section',   // grid-containers are sections in EDS — validate against section picklist
 };
 const picklistFor = type => PICKLIST_CLASSES[PICKLIST_KEY[type] || type] || null;
 const supportsStyle = (type, cls) => {
@@ -155,7 +156,7 @@ function styleIdClasses(node) {
 // appears on a container's radius/default option. Resolve layout scopes through
 // a deliberately narrow allowlist instead of treating every mapped class as a
 // grid/container class.
-const LAYOUT_CLASS = /^(?:content-(?:wide|regular|narrow)|container-[a-z-]+|full-width|align-(?:left|center|right)|no-(?:padding|bottom-margin|bottom-padding|top-padding|top-bottom-padding|side-margin)|regular-padding|small-padding|section-padding|padding-bottom|section-bottom-margin|(?:large|medium|small)-radius|semi-transparent-layer|linear-gradient|static|float|homepage-overlap|overlap-predecessor|height-(?:short|tall|x-tall|xx-tall|default)|(?:light|dark)-theme)$/;
+const LAYOUT_CLASS = /^(?:content-(?:wide|regular|narrow)|container-[a-z-]+|full-width|align-(?:left|center|right)|no-(?:padding|bottom-margin|bottom-padding|top-padding|top-bottom-padding|side-margin)|regular-padding|small-padding|section-padding|padding-bottom|section-bottom-margin|(?:large|medium|small)-radius|semi-transparent-layer|linear-gradient|static|float|homepage-overlap|overlap-predecessor|height-(?:short|tall|x-tall|xx-tall|default)|(?:light|dark)-theme|grid-(?:full-page|half-page|meganav)-[\w-]+)$/;
 function layoutStyleClasses(node) {
   return splitCls([styleIdClasses(node)]).filter(c => LAYOUT_CLASS.test(c)).join(',');
 }
@@ -183,6 +184,7 @@ function layoutStyleProps(nodes, { includeHeight = true, excludeStyleIds = [] } 
       if (/margin/.test(cls)) typed.style_margin = cls;
       else typed.style_padding = cls;
     }
+    else if (group === 'PreBuilt Templates' || group === 'Menagav PreBuilt Templates') typed.style_gridTemplate = cls;
   };
   for (const node of nodes.filter(Boolean)) {
     const raw = node['@cq:styleIds'];
@@ -260,7 +262,11 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   }
   // AEM stores an image caption in jcr:title. Once present, enable the EDS
   // image caption explicitly so the migrated value is visible to readers.
-  if (type === 'custom-image' && props.caption) props.displayCaptionBelowImage = 'true';
+  // Also enable when titleValueFromDAM=true (mapped to getCaptionFromDAM), meaning
+  // the caption lives in DAM metadata and must be fetched at render time by EDS.
+  if (type === 'custom-image' && (props.caption || props.getCaptionFromDAM === 'true')) {
+    props.displayCaptionBelowImage = 'true';
+  }
   normalizeBlock({ type, props });   // separator = Standard/no-line, eyebrow = standard+bold
 
   // Breadcrumb homePagePath: derive the EDS root from the AEM startLevel.
@@ -805,26 +811,60 @@ function collectCellLeaves(node, out, innerDepth = 0, inheritedBlockWidth = '') 
     if (isXF(rt)) continue;
     if (isGrid(rt)) { emitInnerGrid(child, out, innerDepth); continue; }
     if (isContainer(rt)) {
-      // A nested container with a width style becomes a single-column inner-grid:
-      //   container-medium → inner-grid {cols-12,width-medium}
-      // All its content (including nested AEM grids) becomes col-1 of that inner-grid.
-      // This matches the hand-crafted EDS pattern confirmed in contact-us and migraine pages.
+      // A nested container with a width style becomes a single-column inner-grid ONLY
+      // when the inner grid is genuinely multi-column (cols != cols-12). A container-*
+      // width that wraps a single-column (cols-12) grid is purely a width-constraint —
+      // the EDS twin simply applies the width class on the enclosing grid-section and
+      // emits NO inner-grid. Emitting cols-12 inner-grid for these is a false positive
+      // confirmed across 130 us/en pages and 12 nz/en pages in the twin corpus audit.
+      //
+      // Rule: emit inner-grid {cols-12,widthClass} ONLY when the container holds a
+      // grid that has more than one column (i.e. NOT cols-12). For single-column grids,
+      // recurse through the container and let blocks inherit the width class directly.
       if (containerHasWidthStyle(child)) {
         const childWidth = containerBlockWidth(child, width);
-        const colsClass = 'cols-12' + (childWidth ? ',' + childWidth : '');
-        const controller = { type: 'inner-grid', props: { classes_customDynamicClass: colsClass }, children: [] };
-        out.push(controller);
-        const cellBlocks = [];
-        collectCellLeaves(child, cellBlocks, innerDepth + 1, childWidth);
-        const colClass = `${innerDepth === 0 ? 'col' : 'ncol'}-1`;
-        cellBlocks.forEach(block => {
-          if (block._innerManaged) return;
-          addCommonClass(block, colClass);
-          markInnerManaged(block);
-        });
-        // The inner-grid controller itself is a col of the parent level
-        addCommonClass(controller, innerDepth === 0 ? 'col-1' : 'ncol-1');
-        out.push(...cellBlocks);
+        // Inspect whether any direct grid inside this container is multi-column.
+        // A multi-column grid has more than one column entry, or its single column is not 12.
+        const hasMultiColGrid = (() => {
+          function scanForGrid(n) {
+            for (const [, c] of childEntries(n)) {
+              const crt = RT(c);
+              if (isGrid(crt)) {
+                const cols = gridColumns(c);
+                if (cols.length > 1) return true;          // genuine multi-col → keep inner-grid
+                if (cols.length === 1 && cols[0].width !== '12') return true; // non-12 single col
+                return false;                              // cols-12 single col → false positive
+              }
+              if (!crt || isLayoutWrapper(crt) || isContainer(crt)) {
+                if (scanForGrid(c)) return true;
+              }
+            }
+            return false;
+          }
+          return scanForGrid(child);
+        })();
+
+        if (hasMultiColGrid) {
+          // True multi-column inner layout — keep the inner-grid controller (correct behaviour).
+          const colsClass = 'cols-12' + (childWidth ? ',' + childWidth : '');
+          const controller = { type: 'inner-grid', props: { classes_customDynamicClass: colsClass }, children: [] };
+          out.push(controller);
+          const cellBlocks = [];
+          collectCellLeaves(child, cellBlocks, innerDepth + 1, childWidth);
+          const colClass = `${innerDepth === 0 ? 'col' : 'ncol'}-1`;
+          cellBlocks.forEach(block => {
+            if (block._innerManaged) return;
+            addCommonClass(block, colClass);
+            markInnerManaged(block);
+          });
+          addCommonClass(controller, innerDepth === 0 ? 'col-1' : 'ncol-1');
+          out.push(...cellBlocks);
+        } else {
+          // Single-column (cols-12) width-constraint only — skip inner-grid, propagate
+          // the width class to child blocks via the inherited width parameter.
+          // The enclosing grid-section already owns the width presentation.
+          collectCellLeaves(child, out, innerDepth, childWidth || width);
+        }
       } else {
         collectCellLeaves(child, out, innerDepth, width);
       }
@@ -1266,7 +1306,7 @@ function emitHeroContinuationSections(bodyNodes, wrapper, sections) {
 // Classes that are computed dynamically and must never be stripped by picklist validation.
 // `cols-*` and `ncol-*` / `col-*` are generated from AEM grid columnWidth values and are
 // not enumerated in any static EDS picklist configuration.
-const DYNAMIC_CLASS_RE = /^(?:cols-[\d-]+|n?col-\d+|width-(?:x{0,3}-)?(small|medium|large))$/;
+const DYNAMIC_CLASS_RE = /^(?:cols-[\d-]+|n?col-\d+|width-(?:x{0,3}-)?(small|medium|large)|grid-(?:full-page|half-page|meganav)-[\w-]+)$/;
 
 function validateCanvasStyles(sections) {
   const filter = (type, value) => {

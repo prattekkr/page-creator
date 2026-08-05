@@ -1,0 +1,184 @@
+{
+  "generated": "2026-08-05T12:59:00.866Z",
+  "summary": {
+    "scenario1_topLevelWidthContainerWithGrid": 5,
+    "scenario2_nestedGridInsideParsysCell": 5,
+    "scenario3_widthContainerInsideParsysCell": 5,
+    "scenario4_heroContinuationBodyWithWidthContainerAndGrid": 5
+  },
+  "scenarios": {
+    "scenario1": {
+      "title": "Top-level container with width style + nested grid",
+      "description": "An AEM container with a container-* width styleId that contains any grid anywhere in its subtree. Triggers collectCellLeaves() at emitNode() level. The whole container becomes a plain section; each grid inside becomes an inner-grid controller with col-N blocks.",
+      "edsBehaviour": "section → [inner-grid {cols-X-Y,...widthClass}, block{col-1}, block{col-2}, ...]",
+      "examples": [
+        {
+          "aemPage": "/content/abbvie-com2/ar/es",
+          "xmlFile": ".\\content-xml\\ar\\es\\.content.xml",
+          "containerNode": "container",
+          "widthClass": "container-xx-large",
+          "note": "Top-level container 'container' (container-xx-large) contains a grid → page becomes a section with inner-grid blocks"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\.content.xml",
+          "containerNode": "container2",
+          "widthClass": "container-xx-large",
+          "note": "Top-level container 'container2' (container-xx-large) contains a grid → page becomes a section with inner-grid blocks"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\.content.xml",
+          "containerNode": "container3",
+          "widthClass": "container-x-large",
+          "note": "Top-level container 'container3' (container-x-large) contains a grid → page becomes a section with inner-grid blocks"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\.content.xml",
+          "containerNode": "container_829993285",
+          "widthClass": "container-xxx-large",
+          "note": "Top-level container 'container_829993285' (container-xxx-large) contains a grid → page becomes a section with inner-grid blocks"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\.content.xml",
+          "containerNode": "container2",
+          "widthClass": "container-xx-large",
+          "note": "Top-level container 'container2' (container-xx-large) contains a grid → page becomes a section with inner-grid blocks"
+        }
+      ]
+    },
+    "scenario2": {
+      "title": "Grid inside a parsys cell (nested inner-grid)",
+      "description": "A par_RC parsys node inside one grid that itself contains another AEM grid. collectCellLeaves() encounters isGrid() → calls emitInnerGrid(). Depth > 0 means column classes become ncol-N instead of col-N.",
+      "edsBehaviour": "grid-section { children: [inner-grid {cols-X-Y}, block{ncol-1}, block{ncol-2}] }",
+      "examples": [
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\.content.xml",
+          "parNode": "par_13",
+          "gridCount": 6,
+          "note": "Cell 'par_13' contains an inner grid. Total grids in page: 6"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/benefits",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\benefits\\.content.xml",
+          "parNode": "par_12",
+          "gridCount": 3,
+          "note": "Cell 'par_12' contains an inner grid. Total grids in page: 3"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/learning-and-development",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\learning-and-development\\.content.xml",
+          "parNode": "par_12",
+          "gridCount": 4,
+          "note": "Cell 'par_12' contains an inner grid. Total grids in page: 4"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/well-being-in-the-workplace",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\well-being-in-the-workplace\\.content.xml",
+          "parNode": "par_12",
+          "gridCount": 5,
+          "note": "Cell 'par_12' contains an inner grid. Total grids in page: 5"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/why-abbvie",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\why-abbvie\\.content.xml",
+          "parNode": "par_12",
+          "gridCount": 7,
+          "note": "Cell 'par_12' contains an inner grid. Total grids in page: 7"
+        }
+      ]
+    },
+    "scenario3": {
+      "title": "Width-style container inside a parsys cell",
+      "description": "A container-* node found inside a par_RC parsys cell. collectCellLeaves() sees isContainer(rt) + containerHasWidthStyle() → emits a cols-12,widthClass inner-grid controller. All container content becomes col-1 blocks.",
+      "edsBehaviour": "grid-section { children: [inner-grid {cols-12,widthClass,col-1}, block{col-1}, ...] }",
+      "examples": [
+        {
+          "aemPage": "/content/abbvie-com2/ar/es",
+          "xmlFile": ".\\content-xml\\ar\\es\\.content.xml",
+          "containerNode": "container_829993285_",
+          "widthClass": "container-xxx-large",
+          "parCell": "par_13",
+          "note": "Container 'container_829993285_' (container-xxx-large) inside parsys cell 'par_13' contains a grid → emits cols-12,container-xxx-large inner-grid in that cell"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/learning-and-development",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\learning-and-development\\.content.xml",
+          "containerNode": "container_1199983605",
+          "widthClass": "container-medium",
+          "parCell": "par_13",
+          "note": "Container 'container_1199983605' (container-medium) inside parsys cell 'par_13' contains a grid → emits cols-12,container-medium inner-grid in that cell"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/well-being-in-the-workplace",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\well-being-in-the-workplace\\.content.xml",
+          "containerNode": "container_675367643",
+          "widthClass": "container-medium",
+          "parCell": "par_13",
+          "note": "Container 'container_675367643' (container-medium) inside parsys cell 'par_13' contains a grid → emits cols-12,container-medium inner-grid in that cell"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/why-abbvie",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\why-abbvie\\.content.xml",
+          "containerNode": "container_195460670_",
+          "widthClass": "container-medium",
+          "parCell": "par_13",
+          "note": "Container 'container_195460670_' (container-medium) inside parsys cell 'par_13' contains a grid → emits cols-12,container-medium inner-grid in that cell"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/why-abbvie",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\why-abbvie\\.content.xml",
+          "containerNode": "container_829993285_",
+          "widthClass": "container-xxx-large",
+          "parCell": "par_13",
+          "note": "Container 'container_829993285_' (container-xxx-large) inside parsys cell 'par_13' contains a grid → emits cols-12,container-xxx-large inner-grid in that cell"
+        }
+      ]
+    },
+    "scenario4": {
+      "title": "Hero continuation body: width-style container + grid",
+      "description": "After a hero image container + overlap container merge, the body nodes may include a container-* with a grid. emitHeroContinuationSections() / hero body group logic emits a cols-12,widthClass inner-grid before calling collectCellLeaves() with col-1 assignment.",
+      "edsBehaviour": "section (after hero) → [inner-grid {cols-12,widthClass}, block{col-1}, ...]",
+      "examples": [
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\.content.xml",
+          "containerNode": "container2",
+          "widthClass": "container-xx-large",
+          "note": "Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\.content.xml",
+          "containerNode": "container2",
+          "widthClass": "container-xx-large",
+          "note": "Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/benefits",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\benefits\\.content.xml",
+          "containerNode": "container2",
+          "widthClass": "container-xx-large",
+          "note": "Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/employee-resource-groups",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\employee-resource-groups\\.content.xml",
+          "containerNode": "container2",
+          "widthClass": "container-xx-large",
+          "note": "Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section"
+        },
+        {
+          "aemPage": "/content/abbvie-com2/ar/es/join-us/life-at-abbvie/learning-and-development",
+          "xmlFile": ".\\content-xml\\ar\\es\\join-us\\life-at-abbvie\\learning-and-development\\.content.xml",
+          "containerNode": "container2",
+          "widthClass": "container-xx-large",
+          "note": "Container 'container2' (container-xx-large) appears after hero container (backgroundImageReference) and contains a grid → emits inner-grid in the hero continuation body section"
+        }
+      ]
+    }
+  }
+}
