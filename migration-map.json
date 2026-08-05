@@ -35,7 +35,8 @@
       ],
       "propRenames": {
         "heading": "blockHeading",
-        "singleExpansion": "classes_allowMultipleOpen"
+        "singleExpansion": "classes_allowMultipleOpen",
+        "expandedItems": "expandedItems"
       },
       "skipProps": [
         "cq:styleIds",
@@ -467,8 +468,32 @@
     },
     "abbvie-com2/components/pipeline/v2/pipeline": {
       "edsType": "pipeline",
-      "propRenames": {},
-      "skipProps": []
+      "propRenames": {
+        "tablecolumn1txt": "tableColumn1Label",
+        "tablecolumn2txt": "tableColumn2Label",
+        "noResultsHeadingText": "noResultsHeadline",
+        "sharetext": "shareLabel",
+        "pronunciationtext": "pronunciationHeading",
+        "targetheadertext": "targetHeaderLabel",
+        "moleculetext": "moleculeLabel",
+        "pharmaceuticaltooltip": "pharmaceuticalTooltip",
+        "devicecol1txt": "deviceColumn1Label",
+        "devicecol2txt": "deviceColumn2Label",
+        "devicecol3txt": "deviceColumn3Label",
+        "devicecol4txt": "deviceColumn4Label",
+        "devicecol5txt": "deviceColumn5Label",
+        "devicecol6txt": "deviceColumn6Label",
+        "filterLabel": "filterLabel",
+        "clearLabel": "clearLabel",
+        "applyLabel": "applyLabel",
+        "showMoreLabel": "showMoreLabel",
+        "showLessLabel": "showLessLabel",
+        "searchPlaceholder": "searchPlaceholder",
+        "noResultsText": "noResultsLabel"
+      },
+      "skipProps": [
+        "id"
+      ]
     },
     "abbvie-com2/components/pipelineutilitynav": {
       "edsType": "pipeline-utility-nav",
@@ -509,10 +534,16 @@
         "aboutResultsLabel": "aboutResultsLabel",
         "dateLabel": "dateLabel",
         "nextLabel": "nextLabel",
-        "prevLabel": "previousLabel"
+        "prevLabel": "previousLabel",
+        "noOfItems": "pageSize",
+        "paginationLimit": "paginationLimit",
+        "relevanceLabel": "relevanceLabel",
+        "sortByLabel": "sortByLabel"
       },
       "skipProps": [
         "loadMoreLabel",
+        "searchResultsType",
+        "apiKey",
         "id"
       ]
     },
