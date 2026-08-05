@@ -1572,11 +1572,14 @@ function migrateSiteTabHtml() {
           <input class="form-input mig-custom" data-mig-idx="${i}" style="font-size:.66rem;padding:2px 4px;margin-top:3px" placeholder="…or paste an EDS page path to reuse" value="${x(r.customPath || '')}"/></td>
         <td><input class="form-input mig-target" data-mig-idx="${i}" style="font-size:.68rem;padding:2px 4px" value="${x(r.targetPath || '')}"/></td>
         <td style="text-align:center;font-size:.72rem">${r.status === 'ready' || r.status === 'done' ? `${r.filled}/${r.filled + r.skipped}` : '—'}</td>
-        <td style="white-space:nowrap">
-          ${r.matches.length ? `<button class="btn btn-xs" data-mig-prepare="${i}" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>${r.status === 'ready' || r.status === 'done' ? '↻' : '⚙ Prepare'}</button>` : ''}
+        <td style="min-width:220px;max-width:300px">
+          <div style="display:flex;flex-wrap:wrap;gap:3px;align-items:center">
+          ${r.matches.length ? `<button class="btn btn-xs" data-mig-prepare="${i}" title="${r.status === 'ready' || r.status === 'done' ? 'Re-prepare' : 'Prepare canvas from matched page'}" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>${r.status === 'ready' || r.status === 'done' ? '↻ Re-prep' : '⚙ Prepare'}</button>` : ''}
           <button class="btn btn-xs ${r.matches.length ? 'btn-ghost' : 'btn-primary'}" data-mig-autobuild="${i}" title="Auto-generate a draft canvas from this page's AEM XML (no match needed)" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>🤖 Auto-build</button>
-          <button class="btn btn-xs btn-ghost" data-mig-usecanvas="${i}" title="Apply the canvas open in the Canvas tab to this page (for no-match pages, or to override the match)">📋 Use canvas</button>
-          ${(r.status === 'ready' || r.status === 'done') ? ` <button class="btn btn-xs btn-ghost" data-mig-check="${i}">👁 Check</button> <button class="btn btn-xs btn-ghost" data-mig-create="${i}" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}${r.status === 'done' && r.authorUrl ? ` <button class="btn btn-xs btn-ghost" data-mig-open-author="${i}">↗ Open authoring</button>` : ''}
+          <button class="btn btn-xs btn-ghost" data-mig-usecanvas="${i}" title="Apply the canvas open in the Canvas tab to this page">📋 Use canvas</button>
+          ${(r.status === 'ready' || r.status === 'done') ? `<button class="btn btn-xs btn-ghost" data-mig-preview="${i}" title="Open a visual layout preview in a new tab">👁 Layout</button><button class="btn btn-xs btn-ghost" data-mig-preview-page="${i}" title="Create this page under /preview in AEM and open it" ${r._previewingPage ? 'disabled' : ''}>🔍 Preview</button><button class="btn btn-xs btn-ghost" data-mig-check="${i}" title="Edit canvas">✏ Edit</button><button class="btn btn-xs btn-ghost" data-mig-create="${i}" title="Create page in AEM" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}
+          ${r.status === 'done' && r.authorUrl ? `<button class="btn btn-xs btn-ghost" data-mig-open-author="${i}" title="Open in AEM authoring">↗ Author</button>` : ''}
+          </div>
           ${r.auto ? ` <span class="vm-pill ${r.confidence >= 90 ? 'vm-pill-ok' : r.confidence >= 70 ? 'vm-pill-warn' : 'vm-pill-bad'}" title="${Object.keys(r.unknownTypes || {}).length ? 'Unmapped: ' + x(Object.entries(r.unknownTypes).map(([t, n]) => `${t}×${n}`).join(', ')) : 'all blocks mapped to known EDS types'}">🤖 ${r.confidence}%</span>` : ''}
           ${r.a11y ? (r.a11y.ok ? ` <span class="vm-pill vm-pill-ok" title="Accessibility filled from live AEM page">♿ ${(r.a11y.imageAlt || 0) + (r.a11y.caption || 0) + (r.a11y.ctaAria || 0) + (r.a11y.videoPoster || 0)}</span>` : ` <span class="vm-pill vm-pill-warn" title="A11y backfill failed: ${x(r.a11y.error || '')}">♿ ✗</span>`) : ''}
           ${r.manual ? ' <span class="vm-pill vm-pill-warn">manual</span>' : ''}
@@ -1775,6 +1778,86 @@ async function doMigAutoBuild(i) {
   } catch (e) { r.status = 'error'; r.error = e.message; }
   render();
 }
+// Preview a prepared row's canvas in a new tab (no AEM needed).
+async function doMigPreviewOne(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r || !r.sections) { alert('Prepare or auto-build this page first before previewing.'); return; }
+  try {
+    const res = await fetch('/api/preview', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sections: r.sections, meta: r.meta || {} })
+    });
+    if (!res.ok) { const d = await res.json(); alert('Preview failed: ' + (d.error || res.status)); return; }
+    const html = await res.text();
+    const blob = new Blob([html], { type: 'text/html' });
+    const url  = URL.createObjectURL(blob);
+    const tab  = window.open(url, '_blank', 'noopener,noreferrer');
+    if (tab) tab.opener = null;
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  } catch (e) {
+    alert('Preview error: ' + e.message);
+  }
+}
+
+// Create a page under {root}/{country}/{lang}/preview/{pageName} in AEM for a specific migration row.
+async function doMigPreviewPageOne(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r || !r.sections) { alert('Prepare or auto-build this page first before creating a preview page.'); return; }
+  const { aemHost, username, password } = S.conn;
+  if (!aemHost || !username || !password) { alert('Configure the AEM connection (Connection tab) first.'); return; }
+
+  // Derive the preview parent path from the row's target path
+  // targetPath is like /content/.../ch/de/science/areas-of-focus/page-name
+  // We want /content/.../ch/de/preview
+  const targetPath = (r.targetPath || '').trim().replace(/\/+$/, '');
+  const edsPrefix = ms.edsPrefix || '/content/abbvie-nextgen-eds/corporate/abbvie-com';
+  const root = edsPrefix.replace(/\/+$/, '');
+
+  // Extract locale (country/lang) from targetPath relative to root
+  let previewParentPath = null;
+  if (targetPath.startsWith(root)) {
+    const rel = targetPath.slice(root.length).replace(/^\//, '');
+    const segs = rel.split('/').filter(Boolean);
+    if (segs.length >= 2) {
+      previewParentPath = `${root}/${segs[0]}/${segs[1]}/preview`;
+    }
+  }
+  if (!previewParentPath) {
+    alert('Cannot determine the locale from "Create at" path. Set the "Create at" field first (e.g. /content/…/ch/de/page-name).');
+    return;
+  }
+
+  // Page structure: .../preview/{pageName}/{timestamp}
+  // e.g. .../ch/de/preview/acne-inversa/1754401255000
+  // Timestamp guarantees uniqueness across sessions and browser refreshes.
+  const basePageName = targetPath ? targetPath.split('/').pop() : r.canon.split('/').pop();
+  if (!basePageName) { alert('Cannot determine page name. Set the "Create at" field first.'); return; }
+  // Nest under preview/{basePageName}/ so every preview click lands in its own named folder
+  previewParentPath = `${previewParentPath}/${basePageName}`;
+  const pageName = String(Date.now());
+
+  r._previewingPage = true; render();
+  try {
+    const meta = (r.meta && Object.keys(r.meta).length) ? r.meta : (r.pageTitle ? { 'jcr:title': r.pageTitle } : {});
+    const res = await fetch('/api/preview-page', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ aemHost, username, password, previewParentPath, pageName, meta, sections: r.sections })
+    });
+    const data = await res.json();
+    if (!data.ok) { alert('Preview page creation failed: ' + (data.error || 'Unknown error')); }
+    else {
+      // Open as AEM author preview (.html), not Universal Editor
+      const previewUrl = `${aemHost.replace(/\/+$/, '')}${data.path}.html`;
+      const tab = window.open(previewUrl, '_blank', 'noopener,noreferrer');
+      if (tab) tab.opener = null;
+    }
+  } catch (e) {
+    alert('Preview page error: ' + e.message);
+  }
+  r._previewingPage = false; render();
+}
+
 // Auto-build every row that has no migrated match — the main use for pending pages.
 async function doMigAutoBuildNoMatch() {
   const rows = S.migrateSite.plan?.rows || [];
@@ -1849,7 +1932,29 @@ async function doMigCreateOne(i) {
   try {
     const meta = (r.meta && Object.keys(r.meta).length) ? r.meta : (r.pageTitle ? { 'jcr:title': r.pageTitle } : {});
     const res = await fetch('/api/pages', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: r.sections }) }).then(x => x.json());
-    if (res.ok) { r.status = 'done'; r.error = null; r.authorUrl = buildUeUrl(res.path); } else { r.status = 'error'; r.error = res.error || 'Create failed'; }
+    if (res.ok) {
+      r.status = 'done'; r.error = null; r.authorUrl = buildUeUrl(res.path);
+      // Fire-and-forget: delete all preview pages for this row now that the real page is created.
+      // Preview folder path: {edsPrefix}/{country}/{lang}/preview/{pageName}
+      const ms2 = S.migrateSite;
+      const root2 = (ms2.edsPrefix || '/content/abbvie-nextgen-eds/corporate/abbvie-com').replace(/\/+$/, '');
+      const tgt = (r.targetPath || '').trim().replace(/\/+$/, '');
+      if (tgt.startsWith(root2)) {
+        const rel2 = tgt.slice(root2.length).replace(/^\//, '');
+        const segs2 = rel2.split('/').filter(Boolean);
+        if (segs2.length >= 3) {
+          const pgName = segs2[segs2.length - 1];
+          const previewFolder = `${root2}/${segs2[0]}/${segs2[1]}/preview/${pgName}`;
+          fetch('/api/preview-page', {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ aemHost, username, password, previewFolderPath: previewFolder })
+          }).then(d => d.json()).then(d => {
+            if (d.ok && !d.skipped) console.log(`[preview-cleanup] Deleted ${previewFolder}`);
+          }).catch(e => console.warn('[preview-cleanup] Failed:', e.message));
+        }
+      }
+    } else { r.status = 'error'; r.error = res.error || 'Create failed'; }
   } catch (e) { r.status = 'error'; r.error = e.message; }
   render();
 }
@@ -2758,6 +2863,8 @@ function openAuthoringPage(value) {
 function bind() {
   // Topbar
   on('btn-create', 'click', doCreate);
+  on('btn-preview', 'click', doPreview);
+  on('btn-preview-page', 'click', doPreviewPage);
   on('btn-mig-save-canvas', 'click', doMigSaveCanvas);   // review banner (canvas view)
   on('btn-fill-a11y', 'click', doFillA11yCanvas);        // review banner: fill a11y without rebuild
   on('btn-publish-aem', 'click', () => {
@@ -3101,6 +3208,8 @@ function bind() {
     qAll('[data-mig-prepare]').forEach(el => el.addEventListener('click', () => doMigPrepareOne(Number(el.dataset.migPrepare))));
     qAll('[data-mig-autobuild]').forEach(el => el.addEventListener('click', () => doMigAutoBuild(Number(el.dataset.migAutobuild))));
     qAll('[data-mig-usecanvas]').forEach(el => el.addEventListener('click', () => doMigUseCurrentCanvas(Number(el.dataset.migUsecanvas))));
+    qAll('[data-mig-preview]').forEach(el => el.addEventListener('click', () => doMigPreviewOne(Number(el.dataset.migPreview))));
+    qAll('[data-mig-preview-page]').forEach(el => el.addEventListener('click', () => doMigPreviewPageOne(Number(el.dataset.migPreviewPage))));
     qAll('[data-mig-check]').forEach(el => el.addEventListener('click', () => doMigCheckCanvas(Number(el.dataset.migCheck))));
     qAll('[data-mig-create]').forEach(el => el.addEventListener('click', () => doMigCreateOne(Number(el.dataset.migCreate))));
     qAll('[data-mig-open-author]').forEach(el => el.addEventListener('click', () => openAuthoringPage(S.migrateSite.plan?.rows[Number(el.dataset.migOpenAuthor)]?.authorUrl)));
@@ -3718,6 +3827,74 @@ function buildUeUrl(pagePath) {
   const hostNoProto = host.replace(/^https?:\/\//, '');
   const org = S.conn.ueOrg || 'abbviecommercial';
   return `${host}/ui#/@${org}/aem/universal-editor/canvas/${hostNoProto}${pagePath}.html`;
+}
+
+// ── Preview Page in AEM ───────────────────────────────────────────────────────
+// Computes the preview path: {root}/{country}/{lang}/preview/{pageName}
+// Ensures the /preview folder exists, then creates the page under it.
+function buildPreviewParentPath(parentPath, edsPrefix) {
+  // Strip the EDS root prefix to get the region+path segments
+  const root = (edsPrefix || S.migrateSite?.edsPrefix || '/content/abbvie-nextgen-eds/corporate/abbvie-com').replace(/\/+$/, '');
+  const rel  = parentPath.startsWith(root) ? parentPath.slice(root.length).replace(/^\//, '') : parentPath.replace(/^\//, '');
+  // rel is like "ch/de/science/areas-of-focus/immunology" → take first 2 segments (country/lang)
+  const segs = rel.split('/').filter(Boolean);
+  if (segs.length < 2) return null; // can't determine locale
+  const locale = segs.slice(0, 2).join('/');
+  return `${root}/${locale}/preview`;
+}
+
+async function doPreviewPage() {
+  const { aemHost, username, password, parentPath, pageName } = S.conn;
+  if (!aemHost || !username || !password || !parentPath || !pageName) {
+    alert('Configure AEM connection and set Parent Path + Page Name in Settings first.'); return;
+  }
+  if (!S.sections.length) { alert('Add some sections to the canvas first.'); return; }
+  const previewParentPath = buildPreviewParentPath(parentPath, S.migrateSite?.edsPrefix);
+  if (!previewParentPath) { alert('Could not determine the locale from the parent path. Ensure it contains at least country/language segments (e.g. /content/…/ch/de/…).'); return; }
+
+  S._previewingPage = true; render();
+  try {
+    const r = await fetch('/api/preview-page', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ aemHost, username, password, previewParentPath, pageName, meta: S.meta, sections: S.sections })
+    });
+    const data = await r.json();
+    if (!data.ok) { alert('Preview page creation failed: ' + (data.error || 'Unknown error')); return; }
+    // Open the page in AEM authoring / Universal Editor
+    const ueUrl = buildUeUrl(data.path);
+    const tab   = window.open(ueUrl, '_blank', 'noopener,noreferrer');
+    if (tab) tab.opener = null;
+    // Show the preview path as a brief notification in the topbar badge area
+    S._previewPagePath = data.path;
+  } catch (e) {
+    alert('Preview page error: ' + e.message);
+  }
+  S._previewingPage = false; render();
+}
+
+async function doPreview() {
+  if (!S.sections.length) return;
+  const btn = document.getElementById('btn-preview');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Building…'; }
+  try {
+    const res = await fetch('/api/preview', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sections: S.sections, meta: S.meta })
+    });
+    if (!res.ok) { const d = await res.json(); alert('Preview failed: ' + (d.error || res.status)); return; }
+    const html = await res.text();
+    const blob = new Blob([html], { type: 'text/html' });
+    const url  = URL.createObjectURL(blob);
+    const tab  = window.open(url, '_blank', 'noopener,noreferrer');
+    if (tab) tab.opener = null;
+    // Revoke after a short delay so the tab has time to load it
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  } catch (e) {
+    alert('Preview error: ' + e.message);
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '👁 Preview'; }
+  }
 }
 
 async function doCreate() {

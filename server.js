@@ -2263,6 +2263,262 @@ app.post('/api/a11y-backfill', express.json({ limit: '8mb' }), async (req, res) 
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// ── Preview Page in AEM ───────────────────────────────────────────────────────
+// Creates the page under {root}/{country}/{lang}/preview/{pageName} in AEM.
+// Ensures the /preview folder exists first; creates it as a cq:Page if missing.
+app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) => {
+  const { aemHost, username, password, previewParentPath, pageName, meta, sections } = req.body || {};
+  if (!aemHost || !username || !password || !previewParentPath || !pageName)
+    return res.status(400).json({ error: 'aemHost, username, password, previewParentPath and pageName required' });
+
+  const auth = Buffer.from(`${username}:${password}`).toString('base64');
+  const hdrs = { Authorization: `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' };
+  const host = aemHost.replace(/\/+$/, '');
+
+  // Step 1 — ensure /preview folder exists
+  const previewCheck = await fetch(`${host}${previewParentPath}.1.json`, {
+    headers: { Authorization: `Basic ${auth}` }
+  }).catch(() => null);
+
+  if (!previewCheck || !previewCheck.ok) {
+    // Create /preview folder: parentPath is everything before the last segment
+    const lastSlash = previewParentPath.lastIndexOf('/');
+    const folderParent = previewParentPath.slice(0, lastSlash);   // e.g. .../ch/de
+    const folderLabel  = previewParentPath.slice(lastSlash + 1);  // 'preview'
+    const folderParams = new URLSearchParams({
+      cmd:      'createPage',
+      parentPath: folderParent,
+      title:    'Preview',
+      label:    folderLabel,
+      template: '/libs/core/franklin/templates/page'
+    });
+    const fc = await fetch(`${host}/bin/wcmcommand`, {
+      method: 'POST', headers: hdrs, body: folderParams.toString()
+    });
+    if (!fc.ok) {
+      const txt = await fc.text();
+      return res.status(502).json({ ok: false, error: `Could not create /preview folder (${fc.status}): ${/<html/i.test(txt) ? 'AEM rejected the request — check that the parent path "' + folderParent + '" exists' : txt.slice(0, 200)}` });
+    }
+  }
+
+  // Step 2 — create the preview page (same logic as /api/pages)
+  const pageParams = new URLSearchParams({
+    cmd:        'createPage',
+    parentPath: previewParentPath,
+    title:      meta?.['jcr:title'] || pageName,
+    label:      pageName,
+    template:   '/libs/core/franklin/templates/page'
+  });
+  const r1 = await fetch(`${host}/bin/wcmcommand`, {
+    method: 'POST', headers: hdrs, body: pageParams.toString()
+  });
+  if (!r1.ok) {
+    const txt = await r1.text();
+    // 409 = already exists — that's fine, we'll just overwrite the content
+    if (r1.status !== 409) {
+      return res.status(502).json({ ok: false, error: `Page creation failed (${r1.status}): ${txt.slice(0, 200)}` });
+    }
+  }
+
+  // Step 3 — import full content into jcr:content
+  const fullPath = `${previewParentPath}/${pageName}`;
+  const { compMap, modelFieldsMap, contentDefaults } = loadConfig();
+  normalizeSections(sections || []);
+  const jcrContent = buildJcr(meta || {}, sections || [], compMap, modelFieldsMap, contentDefaults);
+
+  const importParams = new URLSearchParams({
+    ':operation':         'import',
+    ':contentType':       'json',
+    ':replace':           'true',
+    ':replaceProperties': 'true',
+    ':content':           JSON.stringify(jcrContent)
+  });
+  let r2 = await fetch(`${host}${fullPath}/jcr:content`, {
+    method: 'POST', headers: hdrs, body: importParams.toString()
+  });
+  if (r2.status === 409) {
+    await new Promise(ok => setTimeout(ok, 1500));
+    r2 = await fetch(`${host}${fullPath}/jcr:content`, {
+      method: 'POST', headers: hdrs, body: importParams.toString()
+    });
+  }
+  if (!r2.ok) {
+    const txt = await r2.text();
+    return res.status(502).json({ ok: false, error: `Content import failed (${r2.status}): ${txt.slice(0, 200)}` });
+  }
+
+  res.json({ ok: true, path: fullPath, previewUrl: `${host}${fullPath}.html` });
+});
+
+// ── Delete Preview Pages ──────────────────────────────────────────────────────
+// Deletes the entire {pageName} folder under /preview/ in AEM, wiping all
+// timestamp-named preview pages created for that page in one Sling POST.
+// Called automatically after a page is successfully created via /api/pages.
+app.delete('/api/preview-page', express.json(), async (req, res) => {
+  const { aemHost, username, password, previewFolderPath } = req.body || {};
+  if (!aemHost || !username || !password || !previewFolderPath)
+    return res.status(400).json({ error: 'aemHost, username, password and previewFolderPath required' });
+  const auth = Buffer.from(`${username}:${password}`).toString('base64');
+  const host = aemHost.replace(/\/+$/, '');
+  try {
+    // First check if the preview folder actually exists — skip silently if not
+    const check = await fetch(`${host}${previewFolderPath}.1.json`, {
+      headers: { Authorization: `Basic ${auth}` }
+    }).catch(() => null);
+    if (!check || !check.ok) {
+      return res.json({ ok: true, skipped: true, reason: 'Preview folder does not exist' });
+    }
+    // Sling POST servlet :operation=delete removes the node and all its descendants
+    const r = await fetch(`${host}${previewFolderPath}`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${auth}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: ':operation=delete',
+    });
+    if (!r.ok) {
+      const txt = await r.text().catch(() => '');
+      console.warn(`[preview-delete] DELETE ${previewFolderPath} → ${r.status}: ${txt.slice(0, 200)}`);
+      return res.status(502).json({ ok: false, error: `AEM returned ${r.status} while deleting preview folder` });
+    }
+    console.log(`[preview-delete] Deleted preview folder: ${previewFolderPath}`);
+    res.json({ ok: true, deleted: previewFolderPath });
+  } catch (err) {
+    console.error('[preview-delete]', err.message);
+    res.status(502).json({ ok: false, error: err.message });
+  }
+});
+
+// ── Page Preview (visual HTML) ────────────────────────────────────────────────
+// Generates a stand-alone HTML page that renders the canvas visually — no AEM
+// needed. Images use their actual URLs; blocks are shown as styled EDS cards.
+app.post('/api/preview', express.json({ limit: '8mb' }), (req, res) => {
+  const { sections = [], meta = {} } = req.body || {};
+  const pageTitle = meta['jcr:title'] || 'Preview';
+
+  const LABEL_PROPS = ['title','jcr:title','text','linkText','quotation','eyebrow','blockHeading',
+    'description','caption','buttonLabel','overlayHeading','videoId','uri','reference'];
+  const IMAGE_PROPS = ['image','fileReference','backgroundImage','posterImage','placeholderImage','attributionImage'];
+  const CLASS_PROPS = ['classes_customDynamicClass','style_customDynamicClass'];
+
+  function escHtml(v) {
+    return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function blockCardHtml(block, depth) {
+    const p = block.props || {};
+    const label = LABEL_PROPS.map(k => p[k]).filter(Boolean)[0] || '';
+    const imgSrc = IMAGE_PROPS.map(k => p[k]).filter(v => v && /^(https?:\/\/|\/content\/dam\/)/.test(v))[0] || '';
+    const classes = CLASS_PROPS.map(k => p[k]).filter(Boolean).join(' ');
+    const allProps = Object.entries(p)
+      .filter(([k,v]) => v && !IMAGE_PROPS.includes(k) && !CLASS_PROPS.includes(k) && !LABEL_PROPS.includes(k))
+      .map(([k,v]) => `<span class="prop-pill">${escHtml(k)}: <em>${escHtml(String(v).slice(0,60))}</em></span>`)
+      .join('');
+    const labelPills = LABEL_PROPS.filter(k => p[k]).map(k =>
+      `<span class="prop-pill prop-pill--label">${escHtml(k)}: <em>${escHtml(String(p[k]).slice(0,120))}</em></span>`).join('');
+    const children = (block.children||[]).map(c => blockCardHtml(c, depth+1)).join('');
+    const indent = depth > 0 ? ' child-block' : '';
+    return `
+      <div class="block-card${indent}" data-type="${escHtml(block.type)}">
+        <div class="block-header">
+          <span class="block-badge">${escHtml(block.type)}</span>
+          ${classes ? `<span class="block-classes">${escHtml(classes)}</span>` : ''}
+        </div>
+        ${imgSrc ? `<div class="block-image"><img src="${escHtml(imgSrc)}" alt="${escHtml(label)}" onerror="this.style.display='none'"/></div>` : ''}
+        ${(labelPills||allProps) ? `<div class="block-props">${labelPills}${allProps}</div>` : ''}
+        ${children ? `<div class="block-children">${children}</div>` : ''}
+      </div>`;
+  }
+
+  function sectionHtml(sec) {
+    const p = sec.props || {};
+    const sClasses = CLASS_PROPS.map(k => p[k]).filter(Boolean).join(' ');
+    const bgColor = (p['style_bg-color'] || '').replace('bg-','#') || '';
+    const bgStyle = bgColor.match(/^#[0-9a-f]{3,6}$/i) ? `background:#${bgColor.slice(1)}` : '';
+
+    if (sec.type === 'grid-container') {
+      const cols = (sec.blocks||[]).map(gs => {
+        const gridCols = (gs.props?.style_gridCols||'').replace('grid-cols-','');
+        const colStyle = gridCols ? `flex:0 0 calc(${Math.round(parseInt(gridCols)/12*100)}% - 8px)` : 'flex:1';
+        return `<div class="grid-col" style="${colStyle}">
+          ${(gs.children||[]).map(b => blockCardHtml(b, 0)).join('')}
+        </div>`;
+      }).join('');
+      return `
+        <section class="preview-section preview-grid" data-type="${escHtml(sec.type)}" ${bgStyle ? `style="${bgStyle}"` : ''}>
+          <div class="section-badge">${escHtml(sec.type)}${sClasses ? ` · ${escHtml(sClasses)}` : ''}</div>
+          <div class="grid-row">${cols}</div>
+        </section>`;
+    }
+
+    const blocks = (sec.blocks||[]).map(b => blockCardHtml(b, 0)).join('');
+    return `
+      <section class="preview-section" data-type="${escHtml(sec.type)}" ${bgStyle ? `style="${bgStyle}"` : ''}>
+        <div class="section-badge">${escHtml(sec.type)}${sClasses ? ` · ${escHtml(sClasses)}` : ''}</div>
+        ${blocks}
+      </section>`;
+  }
+
+  const sectionsHtml = sections.map(sectionHtml).join('\n');
+
+  const metaRows = Object.entries(meta).filter(([,v])=>v)
+    .map(([k,v]) => `<tr><td>${escHtml(k)}</td><td>${escHtml(String(v))}</td></tr>`).join('');
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${escHtml(pageTitle)} — Preview</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:14px/1.5 system-ui,sans-serif;background:#f3f4f6;color:#1f2937;padding:0}
+  .preview-bar{background:#1e40af;color:#fff;padding:10px 20px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
+  .preview-bar h1{font-size:15px;font-weight:600}
+  .preview-bar .badge{background:#3b82f6;border-radius:4px;padding:2px 8px;font-size:11px}
+  .preview-meta{background:#fff;border-bottom:1px solid #e5e7eb;padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px}
+  .preview-meta table{font-size:11px;border-collapse:collapse}
+  .preview-meta td{padding:2px 8px 2px 0;color:#374151}
+  .preview-meta td:first-child{color:#6b7280;font-weight:500;white-space:nowrap}
+  .preview-body{padding:16px 20px;display:flex;flex-direction:column;gap:12px;max-width:1400px;margin:0 auto}
+  .preview-section{background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;padding:12px}
+  .preview-section[data-type="grid-container"]{border-color:#c4b5fd}
+  .section-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#6b7280;margin-bottom:8px;padding:3px 8px;background:#f9fafb;border-radius:4px;display:inline-block}
+  .grid-row{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start}
+  .grid-col{min-width:80px;border:1px dashed #ddd;border-radius:6px;padding:8px;background:#fafafa}
+  .block-card{border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;background:#f9fafb;margin-bottom:6px}
+  .block-card.child-block{margin:4px 0 0 12px;border-color:#fde68a;background:#fffbeb}
+  .block-header{display:flex;align-items:center;gap:6px;padding:6px 10px;background:#fff;border-bottom:1px solid #f3f4f6}
+  .block-badge{font-size:10px;font-weight:700;background:#1e40af;color:#fff;padding:2px 7px;border-radius:3px}
+  .block-classes{font-size:10px;color:#7c3aed;background:#ede9fe;padding:2px 6px;border-radius:3px;max-width:calc(100% - 120px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .block-image{padding:8px 10px 0}
+  .block-image img{max-width:100%;max-height:200px;border-radius:4px;object-fit:cover;display:block}
+  .block-props{padding:6px 10px 8px;display:flex;flex-wrap:wrap;gap:4px}
+  .prop-pill{font-size:10px;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:3px;padding:1px 6px;color:#374151;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .prop-pill--label{background:#dbeafe;border-color:#93c5fd;color:#1e3a8a}
+  .prop-pill em{font-style:normal;color:#6b7280}
+  .block-children{padding:0 8px 8px}
+  .empty-msg{text-align:center;padding:40px;color:#9ca3af;font-size:13px}
+</style>
+</head>
+<body>
+<div class="preview-bar">
+  <h1>⚡ EDS Page Preview</h1>
+  <span class="badge">${escHtml(pageTitle)}</span>
+  <span class="badge">${sections.length} section${sections.length!==1?'s':''}</span>
+</div>
+${metaRows ? `<div class="preview-meta"><table><tbody>${metaRows}</tbody></table></div>` : ''}
+<div class="preview-body">
+${sectionsHtml || '<div class="empty-msg">No sections yet — build your canvas first.</div>'}
+</div>
+</body>
+</html>`;
+
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.send(html);
+});
+
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
 app.listen(PORT, () => console.log(`AEM Page Builder -> http://localhost:${PORT}`));
