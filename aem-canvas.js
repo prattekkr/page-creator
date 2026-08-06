@@ -826,11 +826,13 @@ function heroBlockOf(node, overlapNode = null) {
     const props = { filter: 'hero-container', classes_customDynamicClass: ctrlClasses.join(',') };
     return { type: 'hero-container', props, children: [item] };
   } else {
-    // Color hero: item carries only backgroundVariant — no style classes per authoring rule.
+    // Color hero: item carries the color class derived from C1 backgroundColor.
+    const colorClass = heroColorOf(node) || '';
     item = {
       type: 'hero-container-item',
       props: {
         backgroundVariant: 'color',
+        ...(colorClass ? { classes_customDynamicClass: colorClass } : {}),
       },
       children: [],
     };
