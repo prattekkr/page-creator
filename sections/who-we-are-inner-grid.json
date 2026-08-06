@@ -1,0 +1,54 @@
+{
+  "id": "who-we-are-inner-grid",
+  "title": "who-we-are-inner-grid",
+  "description": "",
+  "icon": "⊞",
+  "section": {
+    "type": "section",
+    "props": {
+      "language": "none",
+      "backgroundMimeType": "image/jpeg",
+      "background": "https://delivery-p157365-e1665873.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1a9300d5-fbd8-4fca-9313-b945e62c302b/as/man-woman-walking-lake.jpg",
+      "style_customDynamicClass": "section-padding,no-bottom-margin,container-full-width,content-wide,large-radius"
+    },
+    "blocks": [
+      {
+        "type": "inner-grid",
+        "props": {
+          "language": "none",
+          "classes_customDynamicClass": "cols-3-8-1,section-bottom-margin"
+        },
+        "children": []
+      },
+      {
+        "type": "fact-card",
+        "props": {
+          "language": "none",
+          "contentFragment": "/content/dam/corporate/abbvie-com2/dashboard-cards/content-fragments-affiliate/new-zealand/facts/rd-impact",
+          "hideImage": false,
+          "classes_commonCustomClass": "col-1"
+        },
+        "children": []
+      },
+      {
+        "type": "dashboard-card-link-list",
+        "props": {
+          "language": "none",
+          "classes_customDynamicClass": "size-medium-horizontal",
+          "contentFragment": "/content/dam/corporate/abbvie-com2/dashboard-cards/link-lists/investor-resources ",
+          "classes_commonCustomClass": "col-2"
+        },
+        "children": []
+      },
+      {
+        "type": "separator",
+        "props": {
+          "language": "none",
+          "classes_customDynamicClass": "separator-height-80",
+          "showLine": false
+        },
+        "children": []
+      }
+    ]
+  }
+}
