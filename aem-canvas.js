@@ -795,13 +795,11 @@ function heroBlockOf(node, overlapNode = null) {
   if (c1Classes.includes('content-full-width') && !c1ItemClasses.includes('full-width'))
     c1ItemClasses.unshift('full-width');
 
-  // Resolve c2 (overlap container) height → controller height + overlay classes
-  let c2Height = null;
-  let overlayClasses = [];
+  // Resolve c2 (overlap container): pull radius class → appended to controller
+  let c2Radius = null;
   if (overlapNode) {
     const c2Classes = splitCls([styleIdClasses(overlapNode)]);
-    c2Height = c2Classes.find(c => /^height-/.test(c)) || null;
-    if (c2Height && HEIGHT_TO_OVERLAY[c2Height]) overlayClasses = HEIGHT_TO_OVERLAY[c2Height];
+    c2Radius = c2Classes.find(c => EXCL_RADIUS.has(c)) || null;
   }
 
   let item;
@@ -823,10 +821,8 @@ function heroBlockOf(node, overlapNode = null) {
       },
       children: [],
     };
-    // Controller: height from c2 (if c2 has a height class), otherwise c1's height
-    // Plus overlay-height classes derived from c2's height
-    const ctrlHeight = c2Height || c1Height;
-    const ctrlClasses = [ctrlHeight, ...overlayClasses].filter(Boolean);
+    // Controller: c1 height + overlay-height-default (always) + c2 radius (if present)
+    const ctrlClasses = [c1Height, 'overlay-height-default', c2Radius].filter(Boolean);
     const props = { filter: 'hero-container', classes_customDynamicClass: ctrlClasses.join(',') };
     return { type: 'hero-container', props, children: [item] };
   } else {
@@ -838,8 +834,8 @@ function heroBlockOf(node, overlapNode = null) {
       },
       children: [],
     };
-    // Controller for color hero: height + overlay only. No color class, no radius.
-    const ctrlParts = [c1Height, ...overlayClasses].filter(Boolean);
+    // Controller for color hero: c1 height + overlay-height-default (always) + c2 radius (if present)
+    const ctrlParts = [c1Height, 'overlay-height-default', c2Radius].filter(Boolean);
     const props = { filter: 'hero-container', classes_customDynamicClass: ctrlParts.join(',') };
     return { type: 'hero-container', props, children: [item] };
   }
