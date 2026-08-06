@@ -126,10 +126,11 @@ function extractProps(node, mapping) {
   return props;
 }
 
-// `cmp-title-xx-large` is the default title/text policy width, not a child
-// layout override. The enclosing AEM container/grid owns the rendered width;
-// emitting it on a child can override an explicit parent `container-*` width.
-const DROP_CLASS = new Set(['width-xx-large']);
+// DROP_CLASS is intentionally empty: all styles mapped on content blocks (title, text,
+// video, carousel, linklist, CTA, etc.) must pass through to EDS unchanged.
+// Layout containers (section, grid-container) are already protected — layoutStyleProps()
+// only adds classes matching the LAYOUT_CLASS regex, which excludes block-level styles.
+const DROP_CLASS = new Set([]);
 // Accordion Expand/Collapse-All labels by page language. The AEM accordion has no labels, and EDS
 // localizes them per language. en/es/el are corpus-confirmed from the migrated twins; the rest are
 // standard translations of "Expand All"/"Collapse All".
@@ -188,7 +189,7 @@ function styleIdClasses(node) {
   if (!raw || !Object.keys(styleMap).length) return '';
   const ids = String(raw).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
   const compType = rtToComponentType(RT(node));
-  return ids.map(id => resolveStyleId(id, compType)?.edsClass).filter(c => c && !DROP_CLASS.has(c)).join(',');
+  return ids.map(id => resolveStyleId(id, compType)?.edsClass).filter(c => !!c).join(',');
 }
 
 // Style IDs are reused by several AEM component policies. A class such as
@@ -293,15 +294,29 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // A grid cell's container width is translated through the target block's own
   // picklist: title/text use `width-large`, while video uses `video-large`.
   // Never apply a style merely because it is valid on a different EDS block.
+  // Blocks that have a picklist-aware width style: title, text, video each map
+  // width-* / video-* as their own classes_customDynamicClass entry.
+  // All OTHER blocks that receive an inherited container width don't have a
+  // matching style picklist for it — write it to classes_commonCustomClass instead.
   const isWidthTarget = ['custom-title', 'text-container', 'video', 'brightcove-video'].includes(type);
   const widthClass = (type === 'video' || type === 'brightcove-video')
     ? String(inheritedBlockWidth || '').replace(/^width-/, 'video-')
     : inheritedBlockWidth;
-  if (isWidthTarget && widthClass && supportsStyle(type, widthClass)) {
-    const classes = String(props.classes_customDynamicClass || '').split(',').map(c => c.trim())
-      .filter(c => c && !/^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/.test(c));
-    classes.push(widthClass);
-    props.classes_customDynamicClass = [...new Set(classes)].join(',');
+  if (widthClass) {
+    if (isWidthTarget && supportsStyle(type, widthClass)) {
+      // Inherited container width always wins — replace any own width class with the
+      // ancestor container's width so all sibling blocks carry the same width value.
+      const existingClasses = String(props.classes_customDynamicClass || '').split(',').map(c => c.trim()).filter(Boolean);
+      const withoutWidth = existingClasses.filter(c => !/^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/.test(c));
+      withoutWidth.push(widthClass);
+      props.classes_customDynamicClass = [...new Set(withoutWidth)].join(',');
+    } else if (!isWidthTarget) {
+      // Block has no corresponding width style (e.g. cta, accordion, carousel, etc.)
+      // → carry the inherited width as a custom class so it still reaches EDS.
+      const existing = String(props.classes_commonCustomClass || '').split(',').map(s => s.trim()).filter(Boolean);
+      if (!existing.includes(widthClass)) existing.push(widthClass);
+      props.classes_commonCustomClass = existing.join(',');
+    }
   }
   // Always pull the image caption from DAM metadata on the live site.
   // Setting getCaptionFromDAM=true tells EDS to fetch the caption at render
@@ -613,8 +628,19 @@ const CONTAINER_TO_BLOCK_WIDTH = {
   'container-xxx-large': 'width-xxx-large',
 };
 function containerBlockWidth(node, inherited = '') {
-  const own = splitCls([layoutStyleClasses(node)]).find(cls => CONTAINER_TO_BLOCK_WIDTH[cls]);
-  return own ? CONTAINER_TO_BLOCK_WIDTH[own] : inherited;
+  // layoutStyleClasses → styleIdClasses → rtToComponentType returns null for containers,
+  // so style IDs under the 'section' namespace are never found. Look up the raw style IDs
+  // directly using 'section' as compType (where container-* IDs live in style-map.json).
+  const raw = node?.['@cq:styleIds'];
+  if (raw) {
+    const ids = String(raw).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+    for (const id of ids) {
+      const entry = resolveStyleId(id, 'section') || resolveStyleId(id, null);
+      const cls = entry?.edsClass;
+      if (cls && CONTAINER_TO_BLOCK_WIDTH[cls]) return CONTAINER_TO_BLOCK_WIDTH[cls];
+    }
+  }
+  return inherited;
 }
 function collectLeaves(node, out, inheritedBlockWidth = '', applyContainerWidth = true) {
   const width = applyContainerWidth && isContainer(RT(node))
@@ -1403,9 +1429,11 @@ function emitNode(node, sections) {
     const isHero = !!node['@backgroundImageReference'] || isColorHero(node);
     const blocks = [];
     if (isHero) blocks.push(heroBlockOf(node));
-    // Section content controls its own block width. Parent container widths are
-    // inherited only while mapping content inside an EDS grid-container.
-    collectLeaves(node, blocks, '', false);
+    // Enable container width inheritance so inner containers (container-medium,
+    // container-large, etc.) propagate their width class to child blocks.
+    // Known width-bearing blocks (title, text, video) get it on classes_customDynamicClass;
+    // all others (cta, carousel, accordion, etc.) get it on classes_commonCustomClass.
+    collectLeaves(node, blocks, '', true);
     sections.push({ type: 'section', props: sectionProps(node, isHero), blocks });
     return;
   }
@@ -1554,7 +1582,7 @@ function aemToCanvas(jcrContent, opts) {
         }
         if (isHeroContainer(pk)) break;
       }
-      const blocks = [heroBlockOf(node, overlapNode)];
+    const blocks = [heroBlockOf(node, overlapNode)];
       const bodyGroups = [];
       // The merged hero section owns layout. Do not propagate a container width
       // onto title/text blocks in the hero or its absorbed intro content.
@@ -1565,13 +1593,16 @@ function aemToCanvas(jcrContent, opts) {
         if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !isColorHero(nx) && overlapsHero(nx)) {
           const split = splitHeroContinuation(nx);
           if (split) {
-            collectLeaves(split.header, blocks, '', false);
+            const headerBlocks = [];
+            collectLeaves(split.header, headerBlocks, '', false);
+            blocks.push(...headerBlocks);
             // Only a DIRECT grid in the overlap container triggers per-grid /
             // per-nested-container splitting (emitHeroContinuationSections) — the case the
             // prior `!containerHasGrid` guard wrongly excluded from hero absorption. A grid
             // nested inside a width-style sub-container stays on the existing body-group path
             // (cols-12 inner-grid), which the corpus already migrates correctly (e.g. contact-us).
             bodyGroups.push({ wrapper: nx, nodes: split.body, split: containerHasGrid(nx) });
+            // strip width classes from header blocks absorbed into hero
             j++;
             break;                                  // later containers are page body, not hero continuation
           }
@@ -1594,6 +1625,25 @@ function aemToCanvas(jcrContent, opts) {
       i = j - 1;
       // Hero section keeps the container's width/radius/margin styleIds (height → hero block,
       // color/image → item). NOT bare — 1429 of 1438 twin hero sections carry classes.
+      // Strip all width classes (width-*, video-*) from every block inside the hero section.
+      // Hero blocks must not carry inherited or own-style width classes — the hero layout
+      // uses full-bleed / overlay positioning, not the EDS content-width constraint system.
+      const WIDTH_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
+      function stripHeroWidthClasses(blockList) {
+        for (const b of blockList || []) {
+          if (b.props) {
+            for (const key of ['classes_customDynamicClass', 'classes_commonCustomClass']) {
+              if (!b.props[key]) continue;
+              const cleaned = String(b.props[key]).split(',').map(s => s.trim())
+                .filter(c => !WIDTH_RE.test(c)).join(',');
+              if (cleaned) b.props[key] = cleaned;
+              else delete b.props[key];
+            }
+          }
+          stripHeroWidthClasses(b.children || []);
+        }
+      }
+      stripHeroWidthClasses(blocks);
       sections.push({ type: 'section', props: sectionProps(node, true), blocks });
       for (const group of bodyGroups) {
         // Hero-continuation body that carries a grid: emit per-grid / per-nested-container
@@ -1619,8 +1669,8 @@ function aemToCanvas(jcrContent, opts) {
               markInnerManaged(block);
             });
             bodyBlocks.push(...cellBlocks);
-          } else {
-            collectLeaves(bodyNode, bodyBlocks, '', false);
+        } else {
+            collectLeaves(bodyNode, bodyBlocks, '', true);
           }
         }
         if (bodyBlocks.length) {
