@@ -745,43 +745,57 @@ const heroColorOf = node => {
 };
 
 // Build the hero-container block from a container's background IMAGE or COLOR.
-// Image heroes use the three EDS default height controls; color heroes retain
-// their compact short-height presentation.
+//
+// EDS style distribution (verified against nz/en who-we-are and corpus):
+//   hero-container                → ALWAYS "height-default" (the controller outer frame)
+//   hero-container-item           → ALL authored container cq:styleIds classes go here:
+//                                    height-*, large-radius, full-width, no-bottom-margin,
+//                                    no-padding, semi-transparent, etc.
+//   section (enclosing)           → width/radius/margin classes via sectionProps()
+//
+// AEM container1 (has backgroundImageReference) carries cq:styleIds that encode:
+//   height variant, radius, full-width, margin, padding, semi-transparent overlay.
+// ALL of these translate to classes on the hero-container-item, not on the controller.
 function heroBlockOf(node) {
   const bgImg = node['@backgroundImageReference'];
-  const cont = splitCls([styleIdClasses(node)]);   // color/image go on the ITEM, not these classes
-  const height = cont.filter(c => /^height-/.test(c));
-  const overlayHeight = cont.filter(c => /^overlay-height-/.test(c) && !/^overlay-inner-/.test(c));
-  const overlayInnerHeight = cont.filter(c => /^overlay-inner-height-/.test(c));
-  const radius = cont.filter(c => EXCL_RADIUS.has(c) && c !== 'large-radius');
+  // All authored AEM styles go on the item — the controller stays at height-default.
+  const cont = splitCls([styleIdClasses(node)]);
   const imageHero = !!bgImg;
-  // Use the authored AEM styles if present; fall back to EDS defaults for each hero type.
-  const imageHeight = height.length ? height : ['height-default'];
-  const colorHeight = height.length ? height : ['height-short'];
-  const imageOverlayHeight = overlayHeight.length ? overlayHeight : ['overlay-height-default'];
-  const imageOverlayInner = overlayInnerHeight.length ? overlayInnerHeight : ['overlay-inner-height-default'];
-  const colorOverlayHeight = overlayHeight.length ? overlayHeight : ['overlay-height-short'];
-  const heroDyn = imageHero
-    ? [...imageHeight, ...imageOverlayHeight, ...imageOverlayInner]
-    : [...colorHeight, ...colorOverlayHeight, ...radius];
+
   let item;
   if (bgImg) {
     const alt = bgImg.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
     const ext = (bgImg.split('.').pop() || '').toLowerCase();
-    item = { type: 'hero-container-item', props: { image: transformPath(bgImg, pathMap), backgroundVariant: 'image', imageAlt: alt, imageMimeType: MIME[ext] || 'image/jpeg' }, children: [] };
+    // All container cq:styleIds classes (height, radius, full-width, margin, padding, etc.)
+    // go on the item — this matches the EDS twin corpus (e.g. nz/en who-we-are).
+    // Map AEM `content-full-width` → EDS `full-width` (the item picklist uses full-width).
+    const itemClasses = cont.map(c => c === 'content-full-width' ? 'full-width' : c).filter(Boolean);
+    item = {
+      type: 'hero-container-item',
+      props: {
+        image: transformPath(bgImg, pathMap),
+        backgroundVariant: 'image',
+        imageAlt: alt,
+        imageMimeType: MIME[ext] || 'image/jpeg',
+        ...(itemClasses.length ? { classes_customDynamicClass: itemClasses.join(',') } : {}),
+      },
+      children: [],
+    };
   } else {
-    // color hero (e.g. leader pages): the brand background color becomes the item's color variation.
-    item = { type: 'hero-container-item', props: { backgroundVariant: 'color', classes_customDynamicClass: heroColorOf(node) || '' }, children: [] };
+    // Color hero (e.g. leader pages): brand background color → item's color variation.
+    const colorClass = heroColorOf(node) || '';
+    item = {
+      type: 'hero-container-item',
+      props: {
+        backgroundVariant: 'color',
+        ...(colorClass ? { classes_customDynamicClass: colorClass } : {}),
+      },
+      children: [],
+    };
   }
-  const props = { filter: 'hero-container', classes_customDynamicClass: heroDyn.join(',') };
-  if (imageHero) {
-    props.classes = imageHeight;
-    props.classes_overlayHeight = imageOverlayHeight[0];
-    props.classes_overlayHeightInner = imageOverlayInner[0];
-  } else {
-    props.classes = colorHeight;
-    props.classes_overlayHeight = colorOverlayHeight[0];
-  }
+
+  // hero-container controller always uses height-default (EDS renders the item height separately).
+  const props = { filter: 'hero-container', classes_customDynamicClass: 'height-default' };
   return { type: 'hero-container', props, children: [item] };
 }
 // section classes for a container: derived (minus height, which went to the hero block) + defaults
