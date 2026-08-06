@@ -753,9 +753,12 @@ function heroBlockOf(node) {
   const height = cont.filter(c => /^height-/.test(c));
   const radius = cont.filter(c => EXCL_RADIUS.has(c) && c !== 'large-radius');
   const imageHero = !!bgImg;
+  // Use the authored AEM height style if present; fall back to the EDS default for each hero type.
+  const imageHeight = height.length ? height : ['height-default'];
+  const colorHeight = height.length ? height : ['height-short'];
   const heroDyn = imageHero
-    ? ['height-default', 'overlay-height-default', 'overlay-inner-height-default']
-    : [...(height.length ? height : ['height-short']), 'overlay-height-short', ...radius];
+    ? [...imageHeight, 'overlay-height-default', 'overlay-inner-height-default']
+    : [...colorHeight, 'overlay-height-short', ...radius];
   let item;
   if (bgImg) {
     const alt = bgImg.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
@@ -767,11 +770,11 @@ function heroBlockOf(node) {
   }
   const props = { filter: 'hero-container', classes_customDynamicClass: heroDyn.join(',') };
   if (imageHero) {
-    props.classes = ['height-default'];
+    props.classes = imageHeight;
     props.classes_overlayHeight = 'overlay-height-default';
     props.classes_overlayHeightInner = 'overlay-inner-height-default';
   } else {
-    props.classes = height.length ? height : ['height-short'];
+    props.classes = colorHeight;
     props.classes_overlayHeight = 'overlay-height-short';
   }
   return { type: 'hero-container', props, children: [item] };
