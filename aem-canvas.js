@@ -477,14 +477,23 @@ function mapLeaf(node, inheritedBlockWidth = '') {
 
   // Quote: deduplicate classes (AEM can register the same style ID twice under different policy
   // entries), and default to `quote-standard` when no quote variant is present.
+  // When AEM quoteType=content-fragment, set quoteVariant=content-fragment and pass fragmentPath through.
   if (type === 'quote') {
-    const seen = new Set();
-    const dedupedClasses = String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean)
-      .filter(c => { if (seen.has(c)) return false; seen.add(c); return true; });
-    // Default variant when none of the explicit quote variant classes is present.
-    const QUOTE_VARIANTS = new Set(['quote-standard', 'quote-dashboard', 'quote-animation']);
-    if (!dedupedClasses.some(c => QUOTE_VARIANTS.has(c))) dedupedClasses.unshift('quote-standard');
-    props.classes_customDynamicClass = dedupedClasses.join(',');
+    const quoteType = String(node['@quoteType'] || '').trim();
+    if (quoteType === 'content-fragment') {
+      props.quoteVariant = 'content-fragment';
+      // fragmentPath is now NOT in skipProps, so it passes through — no extra action needed.
+      // Clear classes as content-fragment variant uses no dynamic style classes.
+      delete props.classes_customDynamicClass;
+    } else {
+      const seen = new Set();
+      const dedupedClasses = String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean)
+        .filter(c => { if (seen.has(c)) return false; seen.add(c); return true; });
+      // Default variant when none of the explicit quote variant classes is present.
+      const QUOTE_VARIANTS = new Set(['quote-standard', 'quote-dashboard', 'quote-animation']);
+      if (!dedupedClasses.some(c => QUOTE_VARIANTS.has(c))) dedupedClasses.unshift('quote-standard');
+      props.classes_customDynamicClass = dedupedClasses.join(',');
+    }
   }
   
   
