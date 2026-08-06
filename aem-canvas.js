@@ -1635,7 +1635,7 @@ function aemToCanvas(jcrContent, opts) {
     }
     emitNode(node, sections);
   }
-  return validateCanvasStyles(hoistTrailingSeparator(sections));
+  return applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections)));
 }
 
 // The page-final separator (the spacer just above the footer) must live in its OWN bare section,
@@ -1711,6 +1711,46 @@ function normalizeSections(sections) {
   const visit = b => { const r = normalizeBlock(b); if (r === 'separator') stats.separators++; else if (r === 'eyebrow') stats.eyebrows++; for (const c of (b.children || [])) visit(c); };
   for (const s of (sections || [])) for (const b of (s.blocks || [])) visit(b);
   return stats;
+}
+
+// Post-processing: when a section or grid-container has an authored background
+// image AND contains a quote block, add the semi-transparent-layer style so
+// the quote text is readable against the image.
+function applyQuoteTransparencyRule(sections) {
+  function containsQuote(blocks) {
+    if (!blocks) return false;
+    for (const blk of blocks) {
+      if (blk.type === 'quote') return true;
+      // grid-section children
+      if (blk.children && blk.children.length && containsQuote(blk.children)) return true;
+    }
+    return false;
+  }
+
+  for (const sec of sections || []) {
+    if (!sec.props || !sec.props.background) continue; // no background image → skip
+    // Collect all blocks to check (grid-container uses .blocks → grid-sections → .children)
+    let quoteFound = false;
+    if (sec.type === 'grid-container') {
+      for (const gs of sec.blocks || []) {
+        if (containsQuote(gs.children)) { quoteFound = true; break; }
+      }
+    } else {
+      quoteFound = containsQuote(sec.blocks);
+    }
+    if (!quoteFound) continue;
+
+    const existing = new Set(
+      String(sec.props.style_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean)
+    );
+    if (!existing.has('semi-transparent-layer')) {
+      existing.add('semi-transparent-layer');
+      sec.props.style_customDynamicClass = [...existing].join(',');
+      // Also set the typed picklist prop so the authoring UI reflects the selection
+      sec.props.style_transparency = 'semi-transparent-layer';
+    }
+  }
+  return sections;
 }
 
 module.exports = { aemToCanvas, mapLeaf, normalizeBlock, normalizeSections };
