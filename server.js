@@ -133,6 +133,45 @@ function resolveStyleId(id, compType) {
   return null;
 }
 
+// ── Page properties mapping (AEM jcr:content attrs → EDS page meta) ──────────
+let pagePropsMapping = [];
+try {
+  pagePropsMapping = JSON.parse(fs.readFileSync(path.join(__dirname, 'page-properties-mapping.json'), 'utf8'));
+} catch (_) { console.warn('[config] page-properties-mapping.json not found'); }
+
+// Extract and translate AEM page-level properties to EDS meta using page-properties-mapping.json.
+// Rules:
+//   { aem, eds }                          → rename AEM key to EDS key
+//   { aem, eds, transform:"dam-to-dm-openapi" } → rename + resolve asset path via pathMap
+//   { eds, value, valueType }             → inject a static EDS value (no AEM source needed)
+// AEM type-hint prefixes like {Boolean}, {Long}, {Date} are stripped from values.
+function extractPageMeta(jcrContent, mapping, pm) {
+  const meta = {};
+  // Build a flat map of AEM attr key → raw value from jcr:content
+  const aemAttrs = {};
+  for (const [k, v] of Object.entries(jcrContent)) {
+    if (!k.startsWith('@')) continue;
+    const key = k.slice(1);
+    if (typeof v === 'string' && v) aemAttrs[key] = v.replace(/^\{[A-Za-z:]+\}/, '').trim();
+  }
+
+  for (const rule of (mapping || [])) {
+    if (rule.aem) {
+      const raw = aemAttrs[rule.aem];
+      if (!raw) continue;
+      let val = raw;
+      if (rule.transform === 'dam-to-dm-openapi') val = transformPath(raw.startsWith('/') ? raw : '/' + raw, pm) || raw;
+      // Ensure it's a real path before transforming (ogimage may already be an https URL)
+      if (rule.transform === 'dam-to-dm-openapi' && raw.startsWith('http')) val = raw;
+      meta[rule.eds] = val;
+    } else if (rule.eds && rule.value !== undefined) {
+      // Static value — always inject (e.g. pageVariant: "otherPage")
+      meta[rule.eds] = String(rule.value);
+    }
+  }
+  return meta;
+}
+
 // ── Path map (AEM → EDS path/asset transformations) ──────────────────────────
 let pathMap = { contentPrefixRules: [], damPrefixRules: [], assetMap: [] };
 try {
@@ -1024,13 +1063,13 @@ app.post('/api/parse-jcr-xml', xmlUpload.single('jcrFile'), (req, res) => {
     const contentKeys = Object.keys(jcrContent);
     console.log('[parse-jcr-xml] jcr:content keys:', contentKeys.slice(0, 30));
 
-    // Extract page-level metadata
-    const meta = {};
-    const metaKeySet = new Set(migrationMap.metaKeys || []);
+    // Extract page-level metadata using page-properties-mapping.json
+    const meta = extractPageMeta(jcrContent, pagePropsMapping, pathMap);
+    const metaKeySetPjcr = new Set(migrationMap.metaKeys || []);
     for (const [k, v] of Object.entries(jcrContent)) {
       if (!k.startsWith('@')) continue;
       const key = k.replace(/^@/, '');
-      if (metaKeySet.has(key) && v) meta[key] = v;
+      if (metaKeySetPjcr.has(key) && v && !meta[key]) meta[key] = String(v).replace(/^\{[A-Za-z:]+\}/, '').trim();
     }
 
     // Walk the content tree
@@ -1115,11 +1154,11 @@ app.post('/api/bulk-parse-folder', (req, res) => {
       const tree       = JCR_XML_PARSER.parse(fs.readFileSync(cxml, 'utf8'));
       const jcrRoot     = tree['jcr:root'] || tree;
       const jcrContent  = jcrRoot['jcr:content'] || jcrRoot;
-      const meta = {};
+      const meta = extractPageMeta(jcrContent, pagePropsMapping, pathMap);
       for (const [k, v] of Object.entries(jcrContent)) {
         if (!k.startsWith('@')) continue;
         const key = k.replace(/^@/, '');
-        if (metaKeySet.has(key) && v) meta[key] = v;
+        if (metaKeySet.has(key) && v && !meta[key]) meta[key] = String(v).replace(/^\{[A-Za-z:]+\}/, '').trim();
       }
       const ordered = [];
       walkXmlNode(jcrContent, ordered);
@@ -2262,12 +2301,12 @@ app.post('/api/parse-local-xml', (req, res) => {
   try {
     const tree = JCR_XML_PARSER.parse(xml);
     const jcrContent = (tree['jcr:root'] || tree)['jcr:content'] || tree;
-    const meta = {};
+    const meta = extractPageMeta(jcrContent, pagePropsMapping, pathMap);
     const metaKeySet = new Set(migrationMap.metaKeys || []);
     for (const [k, v] of Object.entries(jcrContent)) {
       if (!k.startsWith('@')) continue;
       const key = k.replace(/^@/, '');
-      if (metaKeySet.has(key) && v) meta[key] = v;
+      if (metaKeySet.has(key) && v && !meta[key]) meta[key] = String(v).replace(/^\{[A-Za-z:]+\}/, '').trim();
     }
     const ordered = [];
     walkXmlNode(jcrContent, ordered);
@@ -2293,12 +2332,17 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
     const tree = JCR_XML_PARSER.parse(xml);
     const jcrContent = (tree['jcr:root'] || tree)['jcr:content'] || tree;
 
-    const meta = {};
+    // Apply page-properties-mapping.json: translate AEM jcr:content attrs → EDS meta props.
+    // This covers renames (eyebrow→eyebrowText, description→cardDescription, hideInNav→hideFromNavigation),
+    // asset transforms (ogimage/fileReference → DM Open API URL via pathMap), and static value
+    // injections (pageVariant: "otherPage"). Falls back to raw metaKeys for any unlisted props.
+    const meta = extractPageMeta(jcrContent, pagePropsMapping, pathMap);
+    // Backfill any metaKeys not covered by the mapping (e.g. custom fields)
     const metaKeySet = new Set(migrationMap.metaKeys || []);
     for (const [k, v] of Object.entries(jcrContent)) {
       if (!k.startsWith('@')) continue;
       const key = k.replace(/^@/, '');
-      if (metaKeySet.has(key) && v) meta[key] = v;
+      if (metaKeySet.has(key) && v && !meta[key]) meta[key] = String(v).replace(/^\{[A-Za-z:]+\}/, '').trim();
     }
     const pageTitle = String(jcrContent['@jcr:title'] || meta['jcr:title'] || '').trim() || (rel ? rel.split('/').pop() : 'page');
 
