@@ -1564,7 +1564,7 @@ function migrateSiteTabHtml() {
       <div class="sv-section-title" style="margin:0 0 4px">${x(p.locale)} — ${p.total} pages · <strong>${p.withMatch}</strong> have a migrated match</div>
       <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Only exact same-path pages in selected locales are matched automatically. If that page does not exist in another locale, paste an EDS page path, or use <strong>🤖 Auto-build</strong> to generate a draft from its AEM XML.</div>
       <table class="bulk-table"><thead><tr><th>Source page</th><th>Reuse canvas from</th><th>Create at</th><th>Filled</th><th>Actions</th></tr></thead>
-      <tbody>${p.rows.slice(0, 400).map((r, i) => `<tr class="bulk-row bulk-row-${r.status || ''}">
+      <tbody>${p.rows.slice(0, 400).map((r, i) => `<tr class="bulk-row bulk-row-${r.status || ''}" style="${r.status === 'done' ? 'background:#d1fae5;' : ''}">
         <td style="font-size:.72rem"><code>${x(r.canon)}</code></td>
         <td>${r.matches.length
           ? `<select class="form-input mig-match" data-mig-idx="${i}" title="${x((r.matches[r.selIdx || 0] || {}).edsPath || '')}" style="font-size:.68rem;padding:2px 4px;max-width:320px">${r.matches.map((m, mi) => `<option value="${mi}" ${r.selIdx === mi ? 'selected' : ''} title="${x(m.edsPath || '')}">${x(m.region)}/${x(m.canon)} · ${m.score}%</option>`).join('')}</select>`
@@ -1578,7 +1578,6 @@ function migrateSiteTabHtml() {
           <button class="btn btn-xs ${r.matches.length ? 'btn-ghost' : 'btn-primary'}" data-mig-autobuild="${i}" title="Auto-generate a draft canvas from this page's AEM XML (no match needed)" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>🤖 Auto-build</button>
           <button class="btn btn-xs btn-ghost" data-mig-usecanvas="${i}" title="Apply the canvas open in the Canvas tab to this page">📋 Use canvas</button>
           ${(r.status === 'ready' || r.status === 'done') ? `<button class="btn btn-xs btn-ghost" data-mig-preview="${i}" title="Open a visual layout preview in a new tab">👁 Layout</button><button class="btn btn-xs btn-ghost" data-mig-preview-page="${i}" title="Create this page under /preview in AEM and open it" ${r._previewingPage ? 'disabled' : ''}>🔍 Preview</button><button class="btn btn-xs btn-ghost" data-mig-check="${i}" title="Edit canvas">✏ Edit</button><button class="btn btn-xs btn-ghost" data-mig-create="${i}" title="Create page in AEM" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}
-          ${r.status === 'done' && r.authorUrl ? `<button class="btn btn-xs btn-ghost" data-mig-open-author="${i}" title="Open in AEM authoring">↗ Author</button>` : ''}
           </div>
           ${r.auto ? ` <span class="vm-pill ${r.confidence >= 90 ? 'vm-pill-ok' : r.confidence >= 70 ? 'vm-pill-warn' : 'vm-pill-bad'}" title="${Object.keys(r.unknownTypes || {}).length ? 'Unmapped: ' + x(Object.entries(r.unknownTypes).map(([t, n]) => `${t}×${n}`).join(', ')) : 'all blocks mapped to known EDS types'}">🤖 ${r.confidence}%</span>` : ''}
           ${r.a11y ? (r.a11y.ok ? ` <span class="vm-pill vm-pill-ok" title="Accessibility filled from live AEM page">♿ ${(r.a11y.imageAlt || 0) + (r.a11y.caption || 0) + (r.a11y.ctaAria || 0) + (r.a11y.videoPoster || 0)}</span>` : ` <span class="vm-pill vm-pill-warn" title="A11y backfill failed: ${x(r.a11y.error || '')}">♿ ✗</span>`) : ''}
@@ -1934,6 +1933,8 @@ async function doMigCreateOne(i) {
     const res = await fetch('/api/pages', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: r.sections }) }).then(x => x.json());
     if (res.ok) {
       r.status = 'done'; r.error = null; r.authorUrl = buildUeUrl(res.path);
+      // Auto-open in Universal Editor immediately after page creation.
+      window.open(r.authorUrl, '_blank');
       // Fire-and-forget: delete all preview pages for this row now that the real page is created.
       // Preview folder path: {edsPrefix}/{country}/{lang}/preview/{pageName}
       const ms2 = S.migrateSite;
