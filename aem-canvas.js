@@ -751,14 +751,19 @@ function heroBlockOf(node) {
   const bgImg = node['@backgroundImageReference'];
   const cont = splitCls([styleIdClasses(node)]);   // color/image go on the ITEM, not these classes
   const height = cont.filter(c => /^height-/.test(c));
+  const overlayHeight = cont.filter(c => /^overlay-height-/.test(c) && !/^overlay-inner-/.test(c));
+  const overlayInnerHeight = cont.filter(c => /^overlay-inner-height-/.test(c));
   const radius = cont.filter(c => EXCL_RADIUS.has(c) && c !== 'large-radius');
   const imageHero = !!bgImg;
-  // Use the authored AEM height style if present; fall back to the EDS default for each hero type.
+  // Use the authored AEM styles if present; fall back to EDS defaults for each hero type.
   const imageHeight = height.length ? height : ['height-default'];
   const colorHeight = height.length ? height : ['height-short'];
+  const imageOverlayHeight = overlayHeight.length ? overlayHeight : ['overlay-height-default'];
+  const imageOverlayInner = overlayInnerHeight.length ? overlayInnerHeight : ['overlay-inner-height-default'];
+  const colorOverlayHeight = overlayHeight.length ? overlayHeight : ['overlay-height-short'];
   const heroDyn = imageHero
-    ? [...imageHeight, 'overlay-height-default', 'overlay-inner-height-default']
-    : [...colorHeight, 'overlay-height-short', ...radius];
+    ? [...imageHeight, ...imageOverlayHeight, ...imageOverlayInner]
+    : [...colorHeight, ...colorOverlayHeight, ...radius];
   let item;
   if (bgImg) {
     const alt = bgImg.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
@@ -771,11 +776,11 @@ function heroBlockOf(node) {
   const props = { filter: 'hero-container', classes_customDynamicClass: heroDyn.join(',') };
   if (imageHero) {
     props.classes = imageHeight;
-    props.classes_overlayHeight = 'overlay-height-default';
-    props.classes_overlayHeightInner = 'overlay-inner-height-default';
+    props.classes_overlayHeight = imageOverlayHeight[0];
+    props.classes_overlayHeightInner = imageOverlayInner[0];
   } else {
     props.classes = colorHeight;
-    props.classes_overlayHeight = 'overlay-height-short';
+    props.classes_overlayHeight = colorOverlayHeight[0];
   }
   return { type: 'hero-container', props, children: [item] };
 }
