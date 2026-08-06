@@ -847,16 +847,27 @@ function heroBlockOf(node, overlapNode = null) {
 // section classes for a container: derived (minus height, which went to the hero block) + defaults
 function sectionProps(node, hero = false) {
   const nodes = Array.isArray(node) ? node : [node];
-  let resolved = layoutStyleProps(nodes, {
-    includeHeight: !hero,
-    // This full-width AEM policy is a section/grid band rule, never a hero rule.
-  });
-  // Apply full-width rule for all sections including heroes so content-full-width → content-wide
+
+  // ── HERO SECTION RULE ────────────────────────────────────────────────────
+  // From C1 only two classes are distributed:
+  //   • radius class  → section (style_customDynamicClass)
+  //   • height class  → hero-container (handled in heroBlockOf)
+  // Everything else from C1 is ignored for the section.
+  if (hero) {
+    const c1 = Array.isArray(node) ? node[0] : node;
+    const c1Classes = splitCls([styleIdClasses(c1)]);
+    const radiusClass = c1Classes.find(c => EXCL_RADIUS.has(c));
+    const derived = radiusClass ? [radiusClass] : [];
+    const typed = radiusClass
+      ? { style_borderRadius: 'radius-' + radiusClass.replace(/-radius$/, '') }
+      : {};
+    return { ...typed, style_customDynamicClass: derived.join(',') };
+  }
+
+  // ── NON-HERO SECTION ─────────────────────────────────────────────────────
+  let resolved = layoutStyleProps(nodes);
   resolved = applyFullWidthContainerRule(resolved, nodes);
-  resolved = restrictNoSideMargin(resolved, hero);
-  // content-full-width is the AEM edsClass for the Full-Width container style ID.
-  // In EDS it renders as content-wide (the section width token). Remap it here so
-  // hero sections get content-wide instead of the non-existent content-full-width token.
+  resolved = restrictNoSideMargin(resolved, false);
   resolved = {
     ...resolved,
     classes: resolved.classes.map(c => c === 'content-full-width' ? 'content-wide' : c),
@@ -864,28 +875,12 @@ function sectionProps(node, hero = false) {
       Object.entries(resolved.typed).map(([k, v]) => [k, v === 'content-full-width' ? 'content-wide' : v])
     ),
   };
-  // A hero's image/color belongs to its hero-container-item. In particular, a
-  // color hero must not also paint the enclosing section, or the background
-  // leaks beyond the hero's visual bounds.
-  // For hero sections: strip height (goes on hero block), bg-color (goes on item),
-  // and no-bottom-margin (EDS hero sections never carry this on the section itself).
-  let derived = resolved.classes.filter(c => !hero
-    || (!/^height-/.test(c) && !/^bg-/.test(c) && c !== 'no-bottom-margin'));
-  // `overlap-predecessor` and `homepage-overlap` are AEM rendering hints for the
-  // hero-overlap visual effect — they have no EDS section equivalent and must
-  // never appear in any section's style_customDynamicClass. When an overlap class
-  // is present, radius is also stripped: the overlap body section has no corner
-  // rounding in EDS (radius belongs only on the hero or standalone sections).
+  let derived = resolved.classes;
   const hasOverlap = derived.some(c => c === 'overlap-predecessor' || c === 'homepage-overlap');
   derived = derived.filter(c => c !== 'overlap-predecessor' && c !== 'homepage-overlap' && (!hasOverlap || !EXCL_RADIUS.has(c)));
   if (hasOverlap) delete resolved.typed.style_borderRadius;
   const typed = { ...resolved.typed };
-  if (hero) { delete typed.style_height; delete typed['style_bg-color']; }
   const classes = mergeDefaults('section', derived);
-  // Hero sections retain authored padding styles, but never receive the
-  // automatic section-padding default.
-  const automaticPadding = classes.indexOf('section-padding');
-  if (hero && !derived.includes('section-padding') && automaticPadding >= 0) classes.splice(automaticPadding, 1);
   return { ...typed, style_customDynamicClass: classes.join(',') };
 }
 function gridContainerProps(containers, grid = null) {
