@@ -48,7 +48,55 @@ let _view = 'canvas'; // 'canvas' | 'settings' | 'help'
 
 
 // ── Canvas persistence ────────────────────────────────────────────────────────
-const CANVAS_KEY = 'aem_canvas_draft';
+const CANVAS_KEY   = 'aem_canvas_draft';
+const MIGRATE_KEY  = 'aem_migrate_plan';
+
+// ── Migrate-plan persistence ──────────────────────────────────────────────────
+function saveMigratePlan() {
+  try {
+    const ms = S.migrateSite;
+    if (!ms.plan) { localStorage.removeItem(MIGRATE_KEY); return; }
+    // Strip heavy sections[] from done rows to keep storage lean; keep them for
+    // ready rows so they can still be published after a refresh.
+    const rows = ms.plan.rows.map(r => {
+      const row = { ...r };
+      if (r.status === 'done') delete row.sections;
+      return row;
+    });
+    const payload = {
+      plan:       { ...ms.plan, rows },
+      edsPrefix:  ms.edsPrefix,
+      regionSel:  ms.regionSel,
+      targetRoot: ms.targetRoot,
+      locale:     ms.locale,
+      minScore:   ms.minScore,
+      liveBase:   ms.liveBase,
+      a11yBackfill: ms.a11yBackfill,
+    };
+    localStorage.setItem(MIGRATE_KEY, JSON.stringify(payload));
+  } catch (_) {}
+}
+
+function loadMigratePlan() {
+  try {
+    const raw = localStorage.getItem(MIGRATE_KEY);
+    if (!raw) return false;
+    const payload = JSON.parse(raw);
+    if (!payload || !payload.plan) return false;
+    Object.assign(S.migrateSite, {
+      plan:       payload.plan,
+      edsPrefix:  payload.edsPrefix  ?? S.migrateSite.edsPrefix,
+      regionSel:  payload.regionSel  ?? S.migrateSite.regionSel,
+      targetRoot: payload.targetRoot ?? S.migrateSite.targetRoot,
+      locale:     payload.locale     ?? S.migrateSite.locale,
+      minScore:   payload.minScore   ?? S.migrateSite.minScore,
+      liveBase:   payload.liveBase   ?? S.migrateSite.liveBase,
+      a11yBackfill: payload.a11yBackfill ?? S.migrateSite.a11yBackfill,
+    });
+    return true;
+  } catch (_) {}
+  return false;
+}
 
 function saveCanvas() {
   try {
@@ -122,6 +170,7 @@ function loadCanvas() {
     if (saved) Object.assign(S.conn, JSON.parse(saved));
   } catch (_) {}
   const hasDraft = loadCanvas();
+  loadMigratePlan();
 
   const [configRes, sectionsRes, migrRes, pathMapRes] = await Promise.all([
     fetch('/api/config'), fetch('/api/sections'), fetch('/api/migration-map'), fetch('/api/path-map')
@@ -142,6 +191,7 @@ function loadCanvas() {
 // ── Render ───────────────────────────────────────────────────────────────────
 function render() {
   saveCanvas();
+  saveMigratePlan();
   document.getElementById('root').innerHTML = html();
   bind();
 }
@@ -1645,6 +1695,7 @@ function migrateSiteTabHtml() {
         <input id="ms-minscore" class="form-input" type="number" min="0" max="100" value="${ms.minScore}"/>
       </div>
       <button class="btn btn-sm btn-primary" id="btn-ms-plan" ${ms.busy ? 'disabled' : ''}>${ms.busy ? '⏳ Building plan…' : '🔎 Build migration plan'}</button>
+      ${ms.plan ? `<button class="btn btn-sm btn-ghost" id="btn-ms-clear-plan" style="color:var(--danger)" title="Discard migration plan and progress">✕ Clear progress</button>` : ''}
     </div>
     ${planHtml}`;
 }
@@ -3200,6 +3251,12 @@ function bind() {
       S.migrateSite.regionSel = [...set];
       const c = document.getElementById('ms-region-count'); if (c) c.textContent = `${S.migrateSite.regionSel.length} selected`;
     }));
+    on('btn-ms-clear-plan', 'click', () => {
+      if (!confirm('Clear the migration plan and all progress? This cannot be undone.')) return;
+      S.migrateSite.plan = null; S.migrateSite.error = null;
+      localStorage.removeItem(MIGRATE_KEY);
+      render();
+    });
     on('btn-ms-plan', 'click', doBuildMigratePlan);
     { const el = document.getElementById('ms-livebase'); if (el) el.addEventListener('change', () => { S.migrateSite.liveBase = el.value.trim(); }); }
     { const el = document.getElementById('ms-a11y'); if (el) el.addEventListener('change', () => { S.migrateSite.a11yBackfill = el.checked; }); }
