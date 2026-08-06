@@ -54,6 +54,9 @@ const PICKLIST_KEY = {
   'custom-image': 'image',
   'brightcove-video': 'video',
   // grid-container has its own picklist (regular-padding, content-wide, etc.)
+  // Hero blocks are generated (not authored), so bypass picklist filtering.
+  'hero-container': '_bypass',
+  'hero-container-item': '_bypass',
 };
 const picklistFor = type => PICKLIST_CLASSES[PICKLIST_KEY[type] || type] || null;
 const supportsStyle = (type, cls) => {
@@ -193,7 +196,7 @@ function styleIdClasses(node) {
 // appears on a container's radius/default option. Resolve layout scopes through
 // a deliberately narrow allowlist instead of treating every mapped class as a
 // grid/container class.
-const LAYOUT_CLASS = /^(?:content-(?:wide|regular|narrow)|container-[a-z-]+|full-width|align-(?:left|center|right)|no-(?:padding|bottom-margin|bottom-padding|top-padding|top-bottom-padding|side-margin)|regular-padding|small-padding|section-padding|padding-bottom|section-bottom-margin|(?:large|medium|small)-radius|semi-transparent-layer|linear-gradient|static|float|homepage-overlap|overlap-predecessor|height-(?:short|tall|x-tall|xx-tall|default)|(?:light|dark)-theme|grid-(?:full-page|half-page|meganav)-[\w-]+)$/;
+const LAYOUT_CLASS = /^(?:content-(?:wide|regular|narrow|full-width)|container-[a-z-]+|full-width|align-(?:left|center|right)|no-(?:padding|bottom-margin|bottom-padding|top-padding|top-bottom-padding|side-margin)|regular-padding|small-padding|section-padding|padding-bottom|section-bottom-margin|(?:large|medium|small)-radius|semi-transparent-layer|linear-gradient|static|float|homepage-overlap|overlap-predecessor|height-(?:short|tall|x-tall|xx-tall|default)|(?:light|dark)-theme|grid-(?:full-page|half-page|meganav)-[\w-]+)$/;
 function layoutStyleClasses(node) {
   return splitCls([styleIdClasses(node)]).filter(c => LAYOUT_CLASS.test(c)).join(',');
 }
@@ -229,7 +232,8 @@ function layoutStyleProps(nodes, { includeHeight = true, excludeStyleIds = [] } 
       const ids = String(raw).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
       for (const id of ids) {
         if (excluded.has(id)) continue;
-        const entry = styleMap[id];
+        // Use full resolveStyleId so _shared and namespaced entries are found.
+        const entry = resolveStyleId(id, null);
         add(entry?.edsClass, entry);
       }
     }
@@ -719,14 +723,17 @@ function applyFullWidthContainerRule(resolved, containers) {
 // (width/radius); ALWAYS defaults fill required gaps; FALLBACK padding/margin apply only when the
 // AEM node yielded no styling at all (`derived` empty = nothing inferred).
 function mergeDefaults(kind, derived) {
-  const out = [...derived]; const has = new Set(derived);
-  const hasW = derived.some(isWidthCls), hasR = derived.some(c => EXCL_RADIUS.has(c));
+  // Deduplicate derived first (layoutStyleProps + applyFullWidthContainerRule can both add content-wide)
+  const seen = new Set();
+  const deduped = derived.filter(c => { if (seen.has(c)) return false; seen.add(c); return true; });
+  const out = [...deduped]; const has = new Set(deduped);
+  const hasW = deduped.some(isWidthCls), hasR = deduped.some(c => EXCL_RADIUS.has(c));
   const add = list => { for (const d of list) {
     if (has.has(d) || (isWidthCls(d) && hasW) || (EXCL_RADIUS.has(d) && hasR)) continue;
     out.push(d); has.add(d);
   } };
   add(STYLE_DEFAULTS_ALWAYS[kind] || []);
-  if (!derived.length) add(STYLE_DEFAULTS_FALLBACK[kind] || []);   // nothing inferred from AEM → backfill
+  if (!deduped.length) add(STYLE_DEFAULTS_FALLBACK[kind] || []);   // nothing inferred from AEM → backfill
   return out;
 }
 
@@ -746,30 +753,66 @@ const heroColorOf = node => {
 
 // Build the hero-container block from a container's background IMAGE or COLOR.
 //
-// EDS style distribution (verified against nz/en who-we-are and corpus):
-//   hero-container                → ALWAYS "height-default" (the controller outer frame)
-//   hero-container-item           → ALL authored container cq:styleIds classes go here:
-//                                    height-*, large-radius, full-width, no-bottom-margin,
-//                                    no-padding, semi-transparent, etc.
-//   section (enclosing)           → width/radius/margin classes via sectionProps()
+// EDS style distribution (verified against nz/en corpus, 78 pages):
 //
-// AEM container1 (has backgroundImageReference) carries cq:styleIds that encode:
-//   height variant, radius, full-width, margin, padding, semi-transparent overlay.
-// ALL of these translate to classes on the hero-container-item, not on the controller.
-function heroBlockOf(node) {
+//   IMAGE hero (c1 has backgroundImageReference):
+//     section                    → content-wide, large-radius, no-bottom-margin  (from c1, content-full-width→content-wide)
+//     hero-container (ctrl)      → height from c2 if present; overlay-height from c2-height→overlay map;
+//                                  if no c2, height from c1
+//     hero-container-item        → c1 classes: full-width (from content-full-width), height-*, radius, margin, padding
+//
+//   COLOR hero (c1 has backgroundColor, no bg image):
+//     section                    → large-radius, no-bottom-margin  (no content-wide for color heroes)
+//     hero-container (ctrl)      → height from c1, color-class, overlay-height if applicable
+//     hero-container-item        → color-class only (or navy/purple/accent-blue), container-xx-large if present
+//
+// Container2 (overlap) height → overlay-height mapping:
+//   height-short  → overlay-height-short  + overlay-inner-height-short
+//   height-default→ overlay-height-default + overlay-inner-height-default
+//   height-tall   → overlay-height-tall   + overlay-inner-height-tall
+//
+// c2 node is passed as `overlapNode` from `aemToCanvas` hero merge.
+const HEIGHT_TO_OVERLAY = {
+  'height-short':   ['overlay-height-short',   'overlay-inner-height-short'],
+  'height-default': ['overlay-height-default',  'overlay-inner-height-default'],
+  'height-tall':    ['overlay-height-tall',     'overlay-inner-height-tall'],
+  'height-x-tall':  ['overlay-height-x-tall',   'overlay-inner-height-x-tall'],
+  'height-xx-tall': ['overlay-height-xx-tall',  'overlay-inner-height-xx-tall'],
+};
+
+function heroBlockOf(node, overlapNode = null) {
   const bgImg = node['@backgroundImageReference'];
-  // All authored AEM styles go on the item — the controller stays at height-default.
-  const cont = splitCls([styleIdClasses(node)]);
   const imageHero = !!bgImg;
 
+  // Resolve c1 classes (container1 = hero image/color source)
+  const c1Classes = splitCls([styleIdClasses(node)]);
+  const c1Height   = c1Classes.find(c => /^height-/.test(c)) || 'height-default';
+  // Map content-full-width → full-width for the item picklist
+  const c1ItemClasses = c1Classes
+    .filter(c => !['content-full-width', 'overlap-predecessor', 'homepage-overlap'].includes(c))
+    .map(c => c === 'content-full-width' ? 'full-width' : c);
+  // Add full-width when content-full-width was present in c1
+  if (c1Classes.includes('content-full-width') && !c1ItemClasses.includes('full-width'))
+    c1ItemClasses.unshift('full-width');
+
+  // Resolve c2 (overlap container) height → controller height + overlay classes
+  let c2Height = null;
+  let overlayClasses = [];
+  if (overlapNode) {
+    const c2Classes = splitCls([styleIdClasses(overlapNode)]);
+    c2Height = c2Classes.find(c => /^height-/.test(c)) || null;
+    if (c2Height && HEIGHT_TO_OVERLAY[c2Height]) overlayClasses = HEIGHT_TO_OVERLAY[c2Height];
+  }
+
   let item;
-  if (bgImg) {
+  if (imageHero) {
     const alt = bgImg.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
     const ext = (bgImg.split('.').pop() || '').toLowerCase();
-    // All container cq:styleIds classes (height, radius, full-width, margin, padding, etc.)
-    // go on the item — this matches the EDS twin corpus (e.g. nz/en who-we-are).
-    // Map AEM `content-full-width` → EDS `full-width` (the item picklist uses full-width).
-    const itemClasses = cont.map(c => c === 'content-full-width' ? 'full-width' : c).filter(Boolean);
+    // Item carries c1's visual classes: full-width, height, radius, margin, padding, semi-transparent.
+    // Keep ALL non-layout classes (radius, height, full-width, no-bottom-margin etc) that belong on the item.
+    const itemClasses = c1ItemClasses.filter(c =>
+      /^(full-width|height-|large-radius|medium-radius|small-radius|no-bottom-margin|no-bottom-padding|no-padding|semi-transparent|container-)/.test(c)
+    );
     item = {
       type: 'hero-container-item',
       props: {
@@ -781,22 +824,30 @@ function heroBlockOf(node) {
       },
       children: [],
     };
+    // Controller: height from c2 (if c2 has a height class), otherwise c1's height
+    // Plus overlay-height classes derived from c2's height
+    const ctrlHeight = c2Height || c1Height;
+    const ctrlClasses = [ctrlHeight, ...overlayClasses].filter(Boolean);
+    const props = { filter: 'hero-container', classes_customDynamicClass: ctrlClasses.join(',') };
+    return { type: 'hero-container', props, children: [item] };
   } else {
-    // Color hero (e.g. leader pages): brand background color → item's color variation.
+    // Color hero: color class + container-xx-large on item when present
     const colorClass = heroColorOf(node) || '';
+    const sizeClass = c1Classes.find(c => /^container-/.test(c)) || '';
+    const itemClasses = [colorClass, sizeClass].filter(Boolean);
     item = {
       type: 'hero-container-item',
       props: {
         backgroundVariant: 'color',
-        ...(colorClass ? { classes_customDynamicClass: colorClass } : {}),
+        ...(itemClasses.length ? { classes_customDynamicClass: itemClasses.join(',') } : {}),
       },
       children: [],
     };
+    // Controller for color hero: height + overlay only. No color class, no radius.
+    const ctrlParts = [c1Height, ...overlayClasses].filter(Boolean);
+    const props = { filter: 'hero-container', classes_customDynamicClass: ctrlParts.join(',') };
+    return { type: 'hero-container', props, children: [item] };
   }
-
-  // hero-container controller always uses height-default (EDS renders the item height separately).
-  const props = { filter: 'hero-container', classes_customDynamicClass: 'height-default' };
-  return { type: 'hero-container', props, children: [item] };
 }
 // section classes for a container: derived (minus height, which went to the hero block) + defaults
 function sectionProps(node, hero = false) {
@@ -804,14 +855,27 @@ function sectionProps(node, hero = false) {
   let resolved = layoutStyleProps(nodes, {
     includeHeight: !hero,
     // This full-width AEM policy is a section/grid band rule, never a hero rule.
-    excludeStyleIds: hero ? [FULL_WIDTH_CONTAINER_STYLE_ID] : [],
   });
-  if (!hero) resolved = applyFullWidthContainerRule(resolved, nodes);
+  // Apply full-width rule for all sections including heroes so content-full-width → content-wide
+  resolved = applyFullWidthContainerRule(resolved, nodes);
   resolved = restrictNoSideMargin(resolved, hero);
+  // content-full-width is the AEM edsClass for the Full-Width container style ID.
+  // In EDS it renders as content-wide (the section width token). Remap it here so
+  // hero sections get content-wide instead of the non-existent content-full-width token.
+  resolved = {
+    ...resolved,
+    classes: resolved.classes.map(c => c === 'content-full-width' ? 'content-wide' : c),
+    typed: Object.fromEntries(
+      Object.entries(resolved.typed).map(([k, v]) => [k, v === 'content-full-width' ? 'content-wide' : v])
+    ),
+  };
   // A hero's image/color belongs to its hero-container-item. In particular, a
   // color hero must not also paint the enclosing section, or the background
   // leaks beyond the hero's visual bounds.
-  let derived = resolved.classes.filter(c => !hero || (!/^height-/.test(c) && !/^bg-/.test(c)));
+  // For hero sections: strip height (goes on hero block), bg-color (goes on item),
+  // and no-bottom-margin (EDS hero sections never carry this on the section itself).
+  let derived = resolved.classes.filter(c => !hero
+    || (!/^height-/.test(c) && !/^bg-/.test(c) && c !== 'no-bottom-margin'));
   // `overlap-predecessor` and `homepage-overlap` are AEM rendering hints for the
   // hero-overlap visual effect — they have no EDS section equivalent and must
   // never appear in any section's style_customDynamicClass. When an overlap class
@@ -1480,7 +1544,17 @@ function aemToCanvas(jcrContent, opts) {
   for (let i = 0; i < tops.length; i++) {
     const node = tops[i];
     if (isHeroContainer(node)) {
-      const blocks = [heroBlockOf(node)];
+      // Peek ahead for the overlap container (c2) so heroBlockOf can derive
+      // controller height and overlay classes from container2's height style.
+      let overlapNode = null;
+      for (let k = i + 1; k < tops.length; k++) {
+        const pk = tops[k];
+        if (isContainer(RT(pk)) && !pk['@backgroundImageReference'] && !isColorHero(pk) && overlapsHero(pk)) {
+          overlapNode = pk; break;
+        }
+        if (isHeroContainer(pk)) break;
+      }
+      const blocks = [heroBlockOf(node, overlapNode)];
       const bodyGroups = [];
       // The merged hero section owns layout. Do not propagate a container width
       // onto title/text blocks in the hero or its absorbed intro content.
