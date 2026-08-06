@@ -8,6 +8,7 @@ const puppeteer  = require('puppeteer');
 const { XMLParser } = require('fast-xml-parser');
 const { aemToCanvas, normalizeSections } = require('./aem-canvas');
 const { fetchRenderedHtml, extractA11y, backfillA11y } = require('./a11y-backfill');
+const { validatePage, serveCachedFile } = require('./validate-page');
 
 // ── Migration map (AEM Sites resourceType → EDS block) ───────────────────────
 let migrationMap = { componentMap: {}, layoutResources: [], metaKeys: [], jcrSystemProps: [] };
@@ -2711,6 +2712,60 @@ ${sectionsHtml || '<div class="empty-msg">No sections yet — build your canvas 
 
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.send(html);
+});
+
+// ── Page Validation endpoints ─────────────────────────────────────────────────
+
+// POST /api/validate-page
+// Body: { aemUrl, edsUrl, viewports?: ['desktop','mobile'], id? }
+// Runs full multi-layer validation and returns scores + image URLs.
+app.post('/api/validate-page', express.json({ limit: '1mb' }), async (req, res) => {
+  const { aemUrl, edsUrl, viewports, id } = req.body || {};
+  if (!aemUrl || !edsUrl) return res.status(400).json({ error: 'aemUrl and edsUrl are required' });
+  try {
+    const result = await validatePage(aemUrl, edsUrl, {
+      id:        id || Date.now().toString(),
+      viewports: viewports || ['desktop'],
+    });
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+// Batch validation — POST /api/validate-page/batch
+// Body: { pages: [{ aemUrl, edsUrl, id? }], viewports? }
+// Runs sequentially (Puppeteer is CPU/memory-heavy).
+app.post('/api/validate-page/batch', express.json({ limit: '1mb' }), async (req, res) => {
+  const { pages = [], viewports } = req.body || {};
+  if (!pages.length) return res.status(400).json({ error: 'pages[] is required' });
+  const results = [];
+  for (const p of pages) {
+    try {
+      const r = await validatePage(p.aemUrl, p.edsUrl, {
+        id:        p.id || Date.now().toString() + '_' + results.length,
+        viewports: viewports || ['desktop'],
+      });
+      results.push(r);
+    } catch (e) {
+      results.push({ ok: false, aemUrl: p.aemUrl, edsUrl: p.edsUrl, error: e.message });
+    }
+  }
+  res.json({ ok: true, results });
+});
+
+// Serve cached screenshots: GET /api/validate-page/screenshot/:filename
+app.get('/api/validate-page/screenshot/:filename', (req, res) => {
+  const file = serveCachedFile(req.params.filename);
+  if (!file) return res.status(404).json({ error: 'Not found' });
+  res.sendFile(file);
+});
+
+// Serve cached diff images: GET /api/validate-page/diff/:filename
+app.get('/api/validate-page/diff/:filename', (req, res) => {
+  const file = serveCachedFile('diff_' + req.params.filename);
+  if (!file) return res.status(404).json({ error: 'Not found' });
+  res.sendFile(file);
 });
 
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
