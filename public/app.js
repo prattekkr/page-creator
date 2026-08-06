@@ -203,6 +203,7 @@ function html() {
     ${S.modal === 'save-template'     ? saveTemplateModalHtml()    : ''}
     ${S.modal === 'bundle-save'       ? bundleSaveModalHtml()      : ''}
     ${S.modal === 'publish-aem'       ? renderPublishModal(S._publishChanges || []) : ''}
+    ${S.modal === 'validation-detail' ? validationDetailModalHtml()                 : ''}
     ${topbarHtml()}
     ${S._draftRestored ? `<div class="draft-banner" id="draft-banner">
       Draft restored — ${S.sections.length} section${S.sections.length !== 1 ? 's' : ''} reloaded from your last session.
@@ -1628,6 +1629,8 @@ function migrateSiteTabHtml() {
           <button class="btn btn-xs ${r.matches.length ? 'btn-ghost' : 'btn-primary'}" data-mig-autobuild="${i}" title="Auto-generate a draft canvas from this page's AEM XML (no match needed)" ${r.status === 'preparing' || r.status === 'creating' ? 'disabled' : ''}>🤖 Auto-build</button>
           <button class="btn btn-xs btn-ghost" data-mig-usecanvas="${i}" title="Apply the canvas open in the Canvas tab to this page">📋 Use canvas</button>
           ${(r.status === 'ready' || r.status === 'done') ? `<button class="btn btn-xs btn-ghost" data-mig-preview="${i}" title="Open a visual layout preview in a new tab">👁 Layout</button><button class="btn btn-xs btn-ghost" data-mig-preview-page="${i}" title="Create this page under /preview in AEM and open it" ${r._previewingPage ? 'disabled' : ''}>🔍 Preview</button><button class="btn btn-xs btn-ghost" data-mig-check="${i}" title="Edit canvas">✏ Edit</button><button class="btn btn-xs btn-ghost" data-mig-create="${i}" title="Create page in AEM" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}
+          ${r.status === 'done' ? `<button class="btn btn-xs btn-ghost" data-mig-validate="${i}" title="Validate migrated page vs live AEM" ${r._validating ? 'disabled' : ''}>${r._validating ? '⏳' : '✓ Validate'}</button>` : ''}
+          ${r.validation ? `<button class="btn btn-xs btn-ghost" data-show-validation="${i}" title="View validation report" style="color:${r.validation.finalScore >= 85 ? '#15803d' : r.validation.finalScore >= 70 ? '#ca8a04' : '#dc2626'}">📊 ${r.validation.finalScore ?? '?'}%</button>` : ''}
           </div>
           ${r.auto ? ` <span class="vm-pill ${r.confidence >= 90 ? 'vm-pill-ok' : r.confidence >= 70 ? 'vm-pill-warn' : 'vm-pill-bad'}" title="${Object.keys(r.unknownTypes || {}).length ? 'Unmapped: ' + x(Object.entries(r.unknownTypes).map(([t, n]) => `${t}×${n}`).join(', ')) : 'all blocks mapped to known EDS types'}">🤖 ${r.confidence}%</span>` : ''}
           ${r.a11y ? (r.a11y.ok ? ` <span class="vm-pill vm-pill-ok" title="Accessibility filled from live AEM page">♿ ${(r.a11y.imageAlt || 0) + (r.a11y.caption || 0) + (r.a11y.ctaAria || 0) + (r.a11y.videoPoster || 0)}</span>` : ` <span class="vm-pill vm-pill-warn" title="A11y backfill failed: ${x(r.a11y.error || '')}">♿ ✗</span>`) : ''}
@@ -3271,6 +3274,12 @@ function bind() {
     qAll('[data-mig-check]').forEach(el => el.addEventListener('click', () => doMigCheckCanvas(Number(el.dataset.migCheck))));
     qAll('[data-mig-create]').forEach(el => el.addEventListener('click', () => doMigCreateOne(Number(el.dataset.migCreate))));
     qAll('[data-mig-open-author]').forEach(el => el.addEventListener('click', () => openAuthoringPage(S.migrateSite.plan?.rows[Number(el.dataset.migOpenAuthor)]?.authorUrl)));
+    qAll('[data-mig-validate]').forEach(el => el.addEventListener('click', () => doValidateOne(Number(el.dataset.migValidate))));
+    qAll('[data-show-validation]').forEach(el => el.addEventListener('click', () => {
+      const i = Number(el.dataset.showValidation);
+      const r = S.migrateSite.plan?.rows[i];
+      if (r?.validation) { S._validationDetail = { rowIdx: i, validation: r.validation }; S.modal = 'validation-detail'; render(); }
+    }));
     qAll('.mig-match').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].selIdx = Number(el.value); }));
     qAll('.mig-target').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].targetPath = el.value.trim(); }));
     qAll('.mig-custom').forEach(el => el.addEventListener('change', () => { const i = Number(el.dataset.migIdx); if (S.migrateSite.plan) S.migrateSite.plan.rows[i].customPath = el.value.trim(); }));
@@ -4205,4 +4214,100 @@ function openSectionPreview(id) {
 function closeSectionPreview() {
   const el = document.getElementById('slc-prev-overlay');
   if (el) el.remove();
+}
+
+// ── Page Validation ───────────────────────────────────────────────────────────
+function validationDetailModalHtml() {
+  const d = S._validationDetail;
+  if (!d) return '';
+  const v = d.validation;
+  const sl = v.scoreLabel || { label: 'Unknown', color: '#6b7280' };
+  const scoreColor = v.finalScore >= 95 ? '#15803d' : v.finalScore >= 85 ? '#ca8a04' : v.finalScore >= 70 ? '#d97706' : '#dc2626';
+
+  function bar(label, score, weight, color) {
+    return `<div style="margin-bottom:6px">
+      <div style="display:flex;justify-content:space-between;font-size:.72rem;margin-bottom:2px">
+        <span>${label} <span style="color:var(--muted);font-size:.65rem">(${weight}%)</span></span>
+        <strong style="color:${score >= 85 ? '#15803d' : score >= 70 ? '#ca8a04' : '#dc2626'}">${score}%</strong>
+      </div>
+      <div style="height:6px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+        <div style="height:100%;width:${score}%;background:${color};border-radius:3px"></div>
+      </div>
+    </div>`;
+  }
+
+  const issuesHtml = (v.issues || []).length
+    ? `<ul style="margin:0;padding:0 0 0 16px;font-size:.74rem;color:#374151">${(v.issues || []).map(i => `<li style="margin-bottom:3px">${x(i)}</li>`).join('')}</ul>`
+    : `<div style="font-size:.74rem;color:#15803d">✓ No issues found</div>`;
+
+  const vpNames = Object.keys(v.viewports || {});
+  const shotHtml = vpNames.map(vp => {
+    const aemUrl = v.screenshotUrls?.[`${vp}_aem`];
+    const edsUrl = v.screenshotUrls?.[`${vp}_eds`];
+    const diffUrl = v.diffUrls?.[vp];
+    return `<div style="margin-bottom:12px">
+      <div style="font-weight:600;font-size:.75rem;text-transform:uppercase;margin-bottom:6px;color:var(--muted)">${vp}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        ${aemUrl ? `<div style="flex:1;min-width:200px"><div style="font-size:.68rem;color:var(--muted);margin-bottom:3px">AEM</div><img src="${x(aemUrl)}" style="width:100%;border:1px solid #e5e7eb;border-radius:4px" loading="lazy"></div>` : ''}
+        ${edsUrl ? `<div style="flex:1;min-width:200px"><div style="font-size:.68rem;color:var(--muted);margin-bottom:3px">EDS</div><img src="${x(edsUrl)}" style="width:100%;border:1px solid #e5e7eb;border-radius:4px" loading="lazy"></div>` : ''}
+        ${diffUrl ? `<div style="flex:1;min-width:200px"><div style="font-size:.68rem;color:var(--muted);margin-bottom:3px">Diff (red = changed)</div><img src="${x(diffUrl)}" style="width:100%;border:1px solid #e5e7eb;border-radius:4px" loading="lazy"></div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  return `<div class="modal-overlay" id="modal-overlay">
+    <div class="modal modal-lg" style="max-width:860px">
+      <div class="modal-header">
+        <h2>📊 Validation Report</h2>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+      <div class="modal-body" style="max-height:75vh;overflow-y:auto">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;padding:12px;background:#f8fafc;border-radius:8px;border:1px solid #e5e7eb">
+          <div style="text-align:center">
+            <div style="font-size:2.5rem;font-weight:800;color:${scoreColor};line-height:1">${v.finalScore ?? '?'}</div>
+            <div style="font-size:.7rem;font-weight:700;color:${scoreColor};text-transform:uppercase">${sl.label}</div>
+          </div>
+          <div style="flex:1">
+            ${bar('Visual Similarity', v.scores?.visual || 0, 40, '#3b82f6')}
+            ${bar('Content Match',     v.scores?.content || 0, 30, '#10b981')}
+            ${bar('Structure Match',   v.scores?.structure || 0, 20, '#8b5cf6')}
+            ${bar('A11y Match',        v.scores?.a11y || 0, 10, '#f59e0b')}
+          </div>
+        </div>
+        <div style="margin-bottom:14px">
+          <div style="font-weight:600;font-size:.78rem;margin-bottom:6px">Issues</div>
+          ${issuesHtml}
+        </div>
+        ${shotHtml ? `<div style="margin-bottom:6px"><div style="font-weight:600;font-size:.78rem;margin-bottom:8px">Screenshots</div>${shotHtml}</div>` : ''}
+        <div style="font-size:.68rem;color:var(--muted);margin-top:8px">
+          AEM: ${x(v.aemUrl || '')} · EDS: ${x(v.edsUrl || '')} · ${v.timestamp ? new Date(v.timestamp).toLocaleString() : ''}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost btn-sm" id="modal-close">Close</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+async function doValidateOne(i) {
+  const ms = S.migrateSite, r = ms.plan?.rows[i];
+  if (!r) return;
+  const liveBase = (ms.liveBase || '').trim().replace(/\/+$/, '');
+  if (!liveBase) { alert('Set the Live AEM base URL in the Migrate Full Site config first.'); return; }
+  const aemUrl = liveUrlFor(r.sourceRel);
+  const edsUrl = r.targetPath ? `${(S.conn.aemHost || '').replace(/\/+$/, '')}${r.targetPath}.html` : '';
+  if (!aemUrl || !edsUrl) { alert('Cannot determine page URLs. Ensure Live base URL and Create at path are set.'); return; }
+  r._validating = true; render();
+  try {
+    const res = await fetch('/api/validate-page', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ aemUrl, edsUrl, viewports: ['desktop'], id: `row_${i}_${Date.now()}` })
+    });
+    const data = await res.json();
+    r.validation = data;
+  } catch (e) {
+    r.validation = { ok: false, error: e.message, finalScore: null, scores: {}, issues: [e.message], scoreLabel: { label: 'Error', color: '#dc2626' } };
+  }
+  r._validating = false; render();
 }
