@@ -85,6 +85,54 @@ try {
   styleMap = JSON.parse(fs.readFileSync(path.join(__dirname, 'style-map.json'), 'utf8'));
 } catch (_) {}
 
+// Component-aware style-map helpers (mirrors aem-canvas.js — both pipelines must agree).
+// Maps every AEM sling:resourceType to its EDS component namespace key in style-map.json.
+// Priority: pattern match → migration-map exact RT lookup (handles all many-to-one cases).
+function rtToComponentType(rt) {
+  if (!rt) return null;
+  if (rt.includes('/grid/')) return 'grid';
+  if (rt.includes('/header/') || rt.includes('/eyebrow-text') || rt.includes('/eyebrow/')) return 'eyebrow-text';
+  if (rt.includes('/teaser/')) return 'teaser';
+  if (rt.includes('/video/') || rt.includes('/brightcove')) return 'brightcove-video';
+  if (rt.includes('/accordion/')) return 'accordion';
+  if (rt.includes('/carousel/')) return 'carousel';
+  if (rt.includes('/linklist/') || rt.includes('/link-list/')) return 'linklist';
+  if (rt.includes('/newsfeed') || rt.includes('/news-feed')) return 'news-feed';
+  if (rt.includes('/button/') || rt.includes('/cta')) return 'cta';
+  if (rt.includes('/quote')) return 'quote';
+  if (rt.includes('/cardpagestory') || rt.includes('/storyinfo')) return 'story-card';
+  if (rt.includes('/image/') || rt.includes('/dynamicmedia')) return 'custom-image';
+  if (rt.includes('/text/')) return 'text-container';
+  if (rt.includes('/title/')) return 'custom-title';
+  if (rt.includes('/separator/')) return 'separator';
+  if (rt.includes('/dashboardcards') && rt.includes('/link')) return 'dashboard-card-link-list';
+  if (rt.includes('/dashboardcards')) return 'fact-card';
+  if (rt.includes('/stockticker')) return 'stock-ticker';
+  if (rt.includes('/homepage-hero-controller')) return 'hero-container';
+  if (rt.includes('/hero-container-item') || rt.includes('/herocontaineritem')) return 'hero-container-item';
+  if (rt.includes('/grid-container')) return 'grid-container';
+  if (rt.includes('/grid-section')) return 'grid-section';
+  if (rt.includes('/inner-grid')) return 'inner-grid';
+  if (rt.includes('/container/') || rt.includes('/responsivegrid')) return 'section';
+  if (rt.includes('/section')) return 'section';
+  // Fallback: consult migration-map for exact RT → edsType (handles all many-to-one mappings,
+  // e.g. microsite-header → eyebrow-text, dynamicmedia → custom-image that don't match patterns above).
+  return migrationMap.componentMap?.[rt]?.edsType || null;
+}
+// Pure 1:1 style ID lookup — no cross-component fallback scan.
+// Each AEM component's cq:styleIds are scoped to that component's policy namespace.
+function resolveStyleId(id, compType) {
+  if (!id || !Object.keys(styleMap).length) return null;
+  // 1. Component-specific namespace — correct 1:1 match
+  if (compType && styleMap[compType] && styleMap[compType][id]) return styleMap[compType][id];
+  // 2. Shared (large globally-unique IDs)
+  if (styleMap._shared && styleMap._shared[id]) return styleMap._shared[id];
+  // 3. Legacy flat root-level entry (backward compat)
+  const root = styleMap[id];
+  if (root && typeof root === 'object' && 'edsClass' in root) return root;
+  return null;
+}
+
 // ── Path map (AEM → EDS path/asset transformations) ──────────────────────────
 let pathMap = { contentPrefixRules: [], damPrefixRules: [], assetMap: [] };
 try {
@@ -822,7 +870,7 @@ function walkXmlNode(node, ordered, depth = 0) {
         const rawStyleIds = child['@cq:styleIds'];
         if (rawStyleIds && Object.keys(styleMap).length) {
           const ids = String(rawStyleIds).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
-          const edsClasses = ids.map(id => styleMap[id]?.edsClass).filter(Boolean);
+          const edsClasses = ids.map(id => resolveStyleId(id, null)?.edsClass).filter(Boolean);
           if (edsClasses.length) heroProps['classes_customDynamicClass'] = edsClasses.join(',');
         }
         ordered.push({ type: 'hero-container-item', resourceType: rt, props: heroProps, children: [] });
@@ -853,12 +901,67 @@ function walkXmlNode(node, ordered, depth = 0) {
       props.posterImage = props.placeholderImage;
       delete props.placeholderImage;
     }
-    // Translate AEM cq:styleIds → EDS classes_customDynamicClass via style-map
+    // Translate AEM cq:styleIds → EDS classes_customDynamicClass via component-aware style-map
     const rawStyleIds = child['@cq:styleIds'];
     if (rawStyleIds && Object.keys(styleMap).length) {
       const ids = String(rawStyleIds).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
-      const edsClasses = ids.map(id => styleMap[id]?.edsClass).filter(Boolean);
+      const edsClasses = ids.map(id => resolveStyleId(id, rtToComponentType(rt))?.edsClass).filter(Boolean);
       if (edsClasses.length) props['classes_customDynamicClass'] = edsClasses.join(',');
+    }
+    // Linklist: translate AEM cq:styleIds CSS classes → EDS block properties (variant, layout).
+    // AEM stores the variant as a style ID on the component; EDS expects it as a typed block prop.
+    // This mirrors the identical post-processing block in aem-canvas.js mapLeaf().
+    if (type === 'linklist') {
+      const LINKLIST_REMAP = {
+        'quote-standard':   'linklist-standard',
+        'carousel-default': 'linklist-carousel',
+        'list-standard':    'linklist-standard',
+        'list-dashboard':   'linklist-rows-with-arrows',
+        'list-icons':       'linklist-icons',
+        'list-footer-primary':         'linklist-footer-primary',
+        'list-footer-legal':           'linklist-footer-legal',
+        'list-dashboard-publications': 'linklist-detailed',
+        'list-carousel':    'linklist-carousel',
+      };
+      const CLASS_TO_VARIANT = {
+        'linklist-standard':         'standard',
+        'linklist-rows-with-arrows': 'rows-with-arrows',
+        'linklist-icons':            'icons',
+        'linklist-footer-primary':   'footer-primary',
+        'linklist-footer-legal':     'footer-legal',
+        'linklist-detailed':         'detailed-list',
+        'linklist-carousel':         'carousel',
+      };
+      const CLASS_TO_LAYOUT = {
+        'single-column':        'single-column',
+        'two-columns-stack':    'two-columns-stack',
+        'two-columns--stack':   'two-columns-stack',
+        'two-columns-no-stack':    'two-columns-nostack',
+        'two-columns--no-stack':   'two-columns-nostack',
+      };
+      const llClasses = String(props['classes_customDynamicClass'] || '').split(',').map(s => s.trim()).filter(Boolean);
+      const remapped = llClasses.map(c => LINKLIST_REMAP[c] || c).filter(c => !/^(quote-|card-)/.test(c));
+
+      let variant = null;
+      for (const c of remapped) { const v = CLASS_TO_VARIANT[c]; if (v) { variant = v; break; } }
+      if (!variant) variant = 'standard';
+      props['variant'] = variant;
+
+      let layout = null;
+      for (const c of remapped) { const l = CLASS_TO_LAYOUT[c]; if (l) { layout = l; break; } }
+      if (layout) props['layout'] = layout;
+
+      // Translate AEM listFrom → EDS linkSource value
+      // propRenames already renamed the key; now translate the value.
+      const LISTSOURCE_MAP = { static: 'custom', children: 'child-pages', icons: 'icons' };
+      if (props['linkSource']) props['linkSource'] = LISTSOURCE_MAP[props['linkSource']] || props['linkSource'];
+      else props['linkSource'] = 'custom'; // EDS model default
+
+      const LINKLIST_VARIANT_CLASSES = new Set([...Object.keys(CLASS_TO_VARIANT), ...Object.keys(CLASS_TO_LAYOUT),
+        'single-column', 'two-columns--stack', 'two-columns--no-stack']);
+      const remaining = remapped.filter(c => !LINKLIST_VARIANT_CLASSES.has(c));
+      if (remaining.length) props['classes_customDynamicClass'] = remaining.join(',');
+      else delete props['classes_customDynamicClass'];
     }
 
     // Count child component nodes and store as a prop (e.g. totalSlides for carousel)
@@ -2275,29 +2378,49 @@ app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) =
   const hdrs = { Authorization: `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' };
   const host = aemHost.replace(/\/+$/, '');
 
-  // Step 1 — ensure /preview folder exists
-  const previewCheck = await fetch(`${host}${previewParentPath}.1.json`, {
-    headers: { Authorization: `Basic ${auth}` }
-  }).catch(() => null);
-
-  if (!previewCheck || !previewCheck.ok) {
-    // Create /preview folder: parentPath is everything before the last segment
-    const lastSlash = previewParentPath.lastIndexOf('/');
-    const folderParent = previewParentPath.slice(0, lastSlash);   // e.g. .../ch/de
-    const folderLabel  = previewParentPath.slice(lastSlash + 1);  // 'preview'
-    const folderParams = new URLSearchParams({
-      cmd:      'createPage',
-      parentPath: folderParent,
-      title:    'Preview',
-      label:    folderLabel,
-      template: '/libs/core/franklin/templates/page'
-    });
-    const fc = await fetch(`${host}/bin/wcmcommand`, {
-      method: 'POST', headers: hdrs, body: folderParams.toString()
-    });
-    if (!fc.ok) {
-      const txt = await fc.text();
-      return res.status(502).json({ ok: false, error: `Could not create /preview folder (${fc.status}): ${/<html/i.test(txt) ? 'AEM rejected the request — check that the parent path "' + folderParent + '" exists' : txt.slice(0, 200)}` });
+  // Step 1 — ensure every segment of previewParentPath exists in AEM.
+  // The client sends previewParentPath as e.g. .../ch/de/preview/page-name
+  // (both /preview AND /preview/page-name may be missing).
+  // Strategy: find the locale root (first 2 segments after /content/<repo-root>),
+  // then createPage for each additional segment in order, treating 409=already-exists as OK.
+  //
+  // Example: /content/abbvie-nextgen-eds/corporate/abbvie-com/ch/de/preview/my-page
+  //   segments: ['content','abbvie-nextgen-eds','corporate','abbvie-com','ch','de','preview','my-page']
+  //   locale root index: 5 (index of 'de', the 2nd region segment after abbvie-com)
+  //   → create from index 6 onward: 'preview', then 'my-page'
+  {
+    const allSegs = previewParentPath.split('/').filter(Boolean);
+    // Path structure: /content(0)/abbvie-nextgen-eds(1)/corporate(2)/abbvie-com(3)/ch(4)/de(5)/preview(6)/...
+    // country/lang are at indices 4 and 5 — we start creating from index 6 onward (everything after country/lang).
+    const LOCALE_DEPTH = 6; // /content/repo/site/country/lang = 6 segments (0-indexed: 5 = lang)
+    for (let i = LOCALE_DEPTH; i < allSegs.length; i++) {
+      const seg        = allSegs[i];
+      const parentSeg  = '/' + allSegs.slice(0, i).join('/');
+      const currentSeg = '/' + allSegs.slice(0, i + 1).join('/');
+      const title      = seg === 'preview' ? 'Preview' : seg;
+      const createParams = new URLSearchParams({
+        cmd:        'createPage',
+        parentPath: parentSeg,
+        title,
+        label:      seg,
+        template:   '/libs/core/franklin/templates/page'
+      });
+      const cr = await fetch(`${host}/bin/wcmcommand`, {
+        method: 'POST', headers: hdrs, body: createParams.toString()
+      });
+      // 302 = created (AEM redirects to new page), 200 = ok, 409 = already exists — all fine.
+      const crOk = cr.status < 400 || cr.status === 409;
+      if (!crOk) {
+        const txt = await cr.text();
+        return res.status(502).json({
+          ok: false,
+          error: `Could not create path segment "${currentSeg}" (${cr.status}): ${/<html/i.test(txt)
+            ? `AEM rejected — verify "${parentSeg}" exists and you have create permission`
+            : txt.slice(0, 200)}`
+        });
+      }
+      // Brief pause so AEM commits the node before creating a child inside it
+      if (cr.status !== 409) await new Promise(resolve => setTimeout(resolve, 600));
     }
   }
 

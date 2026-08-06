@@ -32,17 +32,18 @@ const WRITEBACK_SKIP = new Set(['cq:styleIds', 'textIsRich', 'cq:lastModified', 
 function loadPicklistClasses() {
   const out = {};
   const root = path.join(__dirname, 'config');
-  try {
-    for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
-      const match = entry.isDirectory() && entry.name.match(/^(.*)-picklist-config$/);
-      if (!match) continue;
-      const file = path.join(root, entry.name, '.content.xml');
+  let entries = [];
+  try { entries = fs.readdirSync(root, { withFileTypes: true }); } catch { return out; }
+  for (const entry of entries) {
+    const match = entry.isDirectory() && entry.name.match(/^(.*)-picklist-config$/);
+    if (!match) continue;
+    const file = path.join(root, entry.name, '.content.xml');
+    try {
       const xml = fs.readFileSync(file, 'utf8');
       out[match[1]] = new Set([...xml.matchAll(/Style_x0020_Class="([^"]+)"/g)].map(m => m[1]));
+    } catch {
+      // A missing or unreadable config must not prevent conversion for other types.
     }
-  } catch {
-    // A missing local config must not prevent conversion; affected types simply
-    // retain their existing style values until their picklist is available.
   }
   return out;
 }
@@ -52,7 +53,7 @@ const PICKLIST_KEY = {
   'text-container': 'text',
   'custom-image': 'image',
   'brightcove-video': 'video',
-  'grid-container': 'section',   // grid-containers are sections in EDS — validate against section picklist
+  // grid-container has its own picklist (regular-padding, content-wide, etc.)
 };
 const picklistFor = type => PICKLIST_CLASSES[PICKLIST_KEY[type] || type] || null;
 const supportsStyle = (type, cls) => {
@@ -144,11 +145,47 @@ const ACCORDION_LABELS = {
   sv: ['Expandera alla', 'Komprimera alla'],     tr: ['Tümünü genişlet', 'Tümünü daralt'],
   no: ['Utvid alle', 'Skjul alle'],              uk: ['Розгорнути все', 'Згорнути все'],
 };
+// Derive the component-aware style-map namespace key from the AEM sling:resourceType.
+function rtToComponentType(rt) {
+  if (!rt) return null;
+  if (rt.includes('/grid/')) return 'grid';
+  if (rt.includes('/eyebrow-text') || rt.includes('/eyebrow/')) return 'eyebrow-text';
+  if (rt.includes('/header/')) return 'eyebrow-text';
+  if (rt.includes('/teaser/')) return 'teaser';
+  if (rt.includes('/video/') || rt.includes('/brightcove')) return 'video';
+  if (rt.includes('/accordion/')) return 'accordion';
+  if (rt.includes('/carousel/')) return 'carousel';
+  if (rt.includes('/linklist/') || rt.includes('/link-list/')) return 'linklist';
+  if (rt.includes('/newsfeed') || rt.includes('/news-feed')) return 'newsfeed';
+  if (rt.includes('/button/') || rt.includes('/cta')) return 'cta';
+  if (rt.includes('/quote')) return 'quote';
+  if (rt.includes('/cardpagestory') || rt.includes('/storyinfo')) return 'story-card';
+  if (rt.includes('/image/') || rt.includes('/dynamicmedia')) return 'image';
+  if (rt.includes('/text/')) return 'text';
+  if (rt.includes('/title/')) return 'title';
+  if (rt.includes('/separator/')) return 'separator';
+  if (rt.includes('/dashboardcards')) return 'fact-card';
+  if (rt.includes('/stockticker')) return 'stock-ticker';
+  return null;
+}
+// Component-aware style ID resolution — lookup order:
+//   1. Component-specific namespace (e.g. styleMap.linklist["1663000046218"])
+//   2. _shared — globally unique long IDs shared across all components
+//   3. Legacy flat root-level entry (backward compat)
+function resolveStyleId(id, compType) {
+  if (!id || !Object.keys(styleMap).length) return null;
+  if (compType && styleMap[compType] && styleMap[compType][id]) return styleMap[compType][id];
+  if (styleMap._shared && styleMap._shared[id]) return styleMap._shared[id];
+  const root = styleMap[id];
+  if (root && typeof root === 'object' && 'edsClass' in root) return root;
+  return null;
+}
 function styleIdClasses(node) {
   const raw = node['@cq:styleIds'];
   if (!raw || !Object.keys(styleMap).length) return '';
   const ids = String(raw).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
-  return ids.map(id => styleMap[id]?.edsClass).filter(c => c && !DROP_CLASS.has(c)).join(',');
+  const compType = rtToComponentType(RT(node));
+  return ids.map(id => resolveStyleId(id, compType)?.edsClass).filter(c => c && !DROP_CLASS.has(c)).join(',');
 }
 
 // Style IDs are reused by several AEM component policies. A class such as
@@ -335,11 +372,28 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // style → no variation, the dominant case). Derive it faithfully from the raw AEM styleIds.
   if (type === 'eyebrow-text') {
     const ids = String(node['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
-    const aemClasses = ids.map(id => styleMap[id]?.aemClass).filter(Boolean);
+    // Use component-aware resolveStyleId so namespaced entries (styleMap.header / styleMap['eyebrow-text'])
+    // are found correctly alongside legacy flat entries.
+    const compType = rtToComponentType(rt);
+    const aemClasses = ids.map(id => resolveStyleId(id, compType)?.aemClass).filter(Boolean);
+    const edsClasses = ids.map(id => resolveStyleId(id, compType)?.edsClass).filter(Boolean);
     const out = new Set();
+    // Eyebrow picklist uses short names: divider, mini, standard, pretitle.
+    // The style-map edsClass may carry an 'eyebrow-' prefix (e.g. 'eyebrow-divider') —
+    // strip it to match the picklist entries.
+    const EYEBROW_THEME = new Set(['light-theme', 'dark-theme', 'bold-font', 'regular-font',
+      'full-width', 'width-x-large', 'width-large', 'width-medium', 'width-small', 'width-x-small']);
+    const EYEBROW_VARIANTS = new Set(['divider', 'mini', 'standard', 'pretitle']);
+    // First pass: direct EDS classes (strip 'eyebrow-' prefix if present)
+    for (const c of edsClasses) {
+      const norm = c.replace(/^eyebrow-/, '');
+      if (EYEBROW_VARIANTS.has(norm)) out.add(norm);
+      else if (EYEBROW_THEME.has(c)) out.add(c);
+    }
+    // Second pass: legacy AEM-class remapping (dark-theme → divider, full-page-5 grid → mini)
     for (const c of aemClasses) {
-      if (c === 'dark-theme') out.add('divider');
-      else if (/full-page-5/.test(c)) out.add('mini');
+      if (c === 'dark-theme' && !out.has('divider')) out.add('divider');
+      else if (/full-page-5/.test(c) && !out.has('mini')) out.add('mini');
     }
     props.classes_customDynamicClass = [...out].join(',');
   }
@@ -352,20 +406,69 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // first entry and the visual default seen on all un-styled linklists in hand-crafted pages.
   if (type === 'linklist') {
     const LINKLIST_REMAP = {
-      'quote-standard': 'list-standard',
-      'carousel-default': 'list-carousel',
+      'quote-standard':   'linklist-standard',
+      'carousel-default': 'linklist-carousel',
+      'list-standard':    'linklist-standard',
+      'list-dashboard':   'linklist-rows-with-arrows',
+      'list-icons':       'linklist-icons',
+      'list-footer-primary':          'linklist-footer-primary',
+      'list-footer-legal':            'linklist-footer-legal',
+      'list-dashboard-publications':  'linklist-detailed',
+      'list-carousel':    'linklist-carousel',
     };
+    // CSS class → EDS variant prop value
+    const CLASS_TO_VARIANT = {
+      'linklist-standard':       'standard',
+      'linklist-rows-with-arrows': 'rows-with-arrows',
+      'linklist-icons':          'icons',
+      'linklist-footer-primary': 'footer-primary',
+      'linklist-footer-legal':   'footer-legal',
+      'linklist-detailed':       'detailed-list',
+      'linklist-carousel':       'carousel',
+    };
+    // CSS class → EDS layout prop value
+    const CLASS_TO_LAYOUT = {
+      'single-column':       'single-column',
+      'two-columns-stack':   'two-columns-stack',
+      'two-columns--stack':  'two-columns-stack',
+      'two-columns-no-stack':   'two-columns-nostack',
+      'two-columns--no-stack':  'two-columns-nostack',
+    };
+
     const llClasses = String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean);
-    const remapped = llClasses.map(c => LINKLIST_REMAP[c] || c).filter(c => {
-      // Drop classes that don't belong to linklist picklist: theme classes are valid, layout helpers are valid
-      // but component-specific classes from other policies (e.g. card-*, quote-*) must not appear.
-      if (/^(quote-|card-)/.test(c)) return false;
-      return true;
-    });
-    // When no list-type class is present, default to list-standard (rows with arrow indicator).
-    const hasListType = remapped.some(c => /^list-/.test(c));
-    if (!hasListType) remapped.unshift('list-standard');
-    props.classes_customDynamicClass = remapped.join(',');
+    const remapped = llClasses.map(c => LINKLIST_REMAP[c] || c).filter(c => !/^(quote-|card-)/.test(c));
+
+    // Translate to variant prop (first match wins)
+    let variant = null;
+    for (const c of remapped) {
+      const v = CLASS_TO_VARIANT[c];
+      if (v) { variant = v; break; }
+    }
+    if (!variant) variant = 'standard'; // EDS model default
+
+    // Translate to layout prop
+    let layout = null;
+    for (const c of remapped) {
+      const l = CLASS_TO_LAYOUT[c];
+      if (l) { layout = l; break; }
+    }
+
+    // Translate AEM listFrom → EDS linkSource value
+    // propRenames already renamed the key; now translate the value.
+    const LISTSOURCE_MAP = { static: 'custom', children: 'child-pages', icons: 'icons' };
+    if (props.linkSource) props.linkSource = LISTSOURCE_MAP[props.linkSource] || props.linkSource;
+    else props.linkSource = 'custom'; // EDS model default
+
+    // Set as proper block properties (not CSS classes)
+    props.variant = variant;
+    if (layout) props.layout = layout;
+
+    // Keep only non-variant/non-layout classes (e.g. theme classes like dark-theme)
+    const LINKLIST_VARIANT_CLASSES = new Set([...Object.keys(CLASS_TO_VARIANT), ...Object.keys(CLASS_TO_LAYOUT),
+      'single-column', 'two-columns--stack', 'two-columns--no-stack']);
+    const remaining = remapped.filter(c => !LINKLIST_VARIANT_CLASSES.has(c));
+    if (remaining.length) props.classes_customDynamicClass = remaining.join(',');
+    else delete props.classes_customDynamicClass;
   }
 
   // Quote: deduplicate classes (AEM can register the same style ID twice under different policy
@@ -597,7 +700,7 @@ const STYLE_DEFAULTS_ALWAYS = {
   'grid-container': ['content-wide', 'regular-padding'],
 };
 const STYLE_DEFAULTS_FALLBACK = {
-  section:          ['regular-padding', 'no-bottom-margin'],
+  section:          ['no-bottom-margin'],
   'grid-container': [],
 };
 const NOOP_CLASS = new Set(['height-default']);              // EDS omits the "default" height (no-op) on sections/grids
