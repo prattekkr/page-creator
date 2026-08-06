@@ -2477,9 +2477,14 @@ app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) =
         label:      seg,
         template:   '/libs/core/franklin/templates/page'
       });
-      const cr = await fetch(`${host}/bin/wcmcommand`, {
-        method: 'POST', headers: hdrs, body: createParams.toString()
-      });
+      let cr;
+      try {
+        cr = await fetch(`${host}/bin/wcmcommand`, {
+          method: 'POST', headers: hdrs, body: createParams.toString()
+        });
+      } catch (networkErr) {
+        return res.status(503).json({ ok: false, error: `Cannot reach AEM host "${host}": ${networkErr.cause?.message || networkErr.message}. Check that you are connected to VPN and the host is correct.` });
+      }
       // 302 = created (AEM redirects to new page), 200 = ok, 409 = already exists — all fine.
       const crOk = cr.status < 400 || cr.status === 409;
       if (!crOk) {
@@ -2504,9 +2509,14 @@ app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) =
     label:      pageName,
     template:   '/libs/core/franklin/templates/page'
   });
-  const r1 = await fetch(`${host}/bin/wcmcommand`, {
-    method: 'POST', headers: hdrs, body: pageParams.toString()
-  });
+  let r1;
+  try {
+    r1 = await fetch(`${host}/bin/wcmcommand`, {
+      method: 'POST', headers: hdrs, body: pageParams.toString()
+    });
+  } catch (networkErr) {
+    return res.status(503).json({ ok: false, error: `Cannot reach AEM host "${host}": ${networkErr.cause?.message || networkErr.message}. Check VPN.` });
+  }
   if (!r1.ok) {
     const txt = await r1.text();
     // 409 = already exists — that's fine, we'll just overwrite the content
@@ -2528,14 +2538,23 @@ app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) =
     ':replaceProperties': 'true',
     ':content':           JSON.stringify(jcrContent)
   });
-  let r2 = await fetch(`${host}${fullPath}/jcr:content`, {
-    method: 'POST', headers: hdrs, body: importParams.toString()
-  });
-  if (r2.status === 409) {
-    await new Promise(ok => setTimeout(ok, 1500));
+  let r2;
+  try {
     r2 = await fetch(`${host}${fullPath}/jcr:content`, {
       method: 'POST', headers: hdrs, body: importParams.toString()
     });
+  } catch (networkErr) {
+    return res.status(503).json({ ok: false, error: `Cannot reach AEM host "${host}": ${networkErr.cause?.message || networkErr.message}. Check VPN.` });
+  }
+  if (r2.status === 409) {
+    await new Promise(ok => setTimeout(ok, 1500));
+    try {
+      r2 = await fetch(`${host}${fullPath}/jcr:content`, {
+        method: 'POST', headers: hdrs, body: importParams.toString()
+      });
+    } catch (networkErr) {
+      return res.status(503).json({ ok: false, error: `Cannot reach AEM host "${host}": ${networkErr.cause?.message || networkErr.message}. Check VPN.` });
+    }
   }
   if (!r2.ok) {
     const txt = await r2.text();

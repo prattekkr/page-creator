@@ -303,11 +303,12 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     classes.push(widthClass);
     props.classes_customDynamicClass = [...new Set(classes)].join(',');
   }
-  // AEM stores an image caption in jcr:title. Once present, enable the EDS
-  // image caption explicitly so the migrated value is visible to readers.
-  // Also enable when titleValueFromDAM=true (mapped to getCaptionFromDAM), meaning
-  // the caption lives in DAM metadata and must be fetched at render time by EDS.
-  if (type === 'custom-image' && (props.caption || props.getCaptionFromDAM === 'true')) {
+  // Always pull the image caption from DAM metadata on the live site.
+  // Setting getCaptionFromDAM=true tells EDS to fetch the caption at render
+  // time from the DAM asset, so it is always up-to-date even if the AEM XML
+  // has no jcr:title. displayCaptionBelowImage=true enables the caption UI.
+  if (type === 'custom-image') {
+    props.getCaptionFromDAM = 'true';
     props.displayCaptionBelowImage = 'true';
   }
   normalizeBlock({ type, props });   // separator = Standard/no-line, eyebrow = standard+bold
@@ -897,7 +898,7 @@ function gridContainerProps(containers, grid = null) {
   // particular grid inside that band and therefore must be applied only when
   // that source grid is emitted as its own EDS grid-container.
   const chain = Array.isArray(containers) ? containers : [containers];
-  const resolved = restrictNoSideMargin(applyFullWidthContainerRule(layoutStyleProps([...chain, grid]), chain));
+  const resolved = restrictNoSideMargin(applyFullWidthContainerRule(layoutStyleProps([...chain, grid], { compType: 'grid-container' }), chain));
   const container = chain[chain.length - 1];
   const derived = resolved.classes
     .filter(c => !NOOP_CLASS.has(c))
