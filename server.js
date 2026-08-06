@@ -430,11 +430,17 @@ app.post('/api/pages', async (req, res) => {
 //      component-definition template defaults (e.g. name:"Grid Section") are
 //      never clobbered by empty model field defaults
 function buildJcr(meta, sections, compMap, modelFieldsMap, contentDefaults = {}) {
+  // cq:tags is stored in meta as a comma-separated string (for EDS metadata table),
+  // but AEM requires it as String[] — convert back to array before spreading into JCR.
+  const metaForJcr = { ...meta };
+  if (typeof metaForJcr['cq:tags'] === 'string' && metaForJcr['cq:tags']) {
+    metaForJcr['cq:tags'] = metaForJcr['cq:tags'].split(',').map(t => t.trim()).filter(Boolean);
+  }
   const jcr = {
     'jcr:primaryType':    'cq:PageContent',
     'sling:resourceType': 'core/franklin/components/page/v1/page',
     'cq:template':        '/libs/core/franklin/templates/page',
-    ...meta,
+    ...metaForJcr,
     root: {
       'jcr:primaryType':   'nt:unstructured',
       'sling:resourceType':'core/franklin/components/root/v1/root'
