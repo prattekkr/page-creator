@@ -1,0 +1,62 @@
+[
+  {
+    "aem": "cq:tags",
+    "eds": "cq:tags",
+    "transform": "aem-tag-to-eds"
+  },
+  {
+    "aem": "ctaAltText",
+    "eds": "ctaAltText"
+  },
+  {
+    "aem": "ctaText",
+    "eds": "ctaText"
+  },
+  {
+    "aem": "description",
+    "eds": "cardDescription"
+  },
+  {
+    "aem": "eyebrow",
+    "eds": "eyebrowText"
+  },
+  {
+    "aem": "fileReference",
+    "eds": "cardImage",
+    "transform": "dam-to-dm-openapi"
+  },
+  {
+    "aem": "hideInNav",
+    "eds": "hideFromNavigation"
+  },
+  {
+    "aem": "jcr:description",
+    "eds": "jcr:description"
+  },
+  {
+    "aem": "jcr:title",
+    "eds": "jcr:title"
+  },
+  {
+    "aem": "navTitle",
+    "eds": "navTitle"
+  },
+  {
+    "aem": "ogimage",
+    "eds": "image",
+    "transform": "dam-to-dm-openapi"
+  },
+  {
+    "aem": "pageTitle",
+    "eds": "pageTitle"
+  },
+  {
+    "aem": "title",
+    "eds": "cardTitle"
+  },
+  {
+    "eds": "pageVariant",
+    "value": "otherPage",
+    "valueType": "String"
+  }
+]

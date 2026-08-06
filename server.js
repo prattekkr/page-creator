@@ -141,9 +141,11 @@ try {
 
 // Extract and translate AEM page-level properties to EDS meta using page-properties-mapping.json.
 // Rules:
-//   { aem, eds }                          → rename AEM key to EDS key
-//   { aem, eds, transform:"dam-to-dm-openapi" } → rename + resolve asset path via pathMap
-//   { eds, value, valueType }             → inject a static EDS value (no AEM source needed)
+//   { aem, eds }                               → rename AEM key to EDS key
+//   { aem, eds, transform:"dam-to-dm-openapi"} → rename + resolve asset path via pathMap
+//   { aem, eds, transform:"aem-tag-to-eds"}    → strip AEM tag namespace (abbvie-com-2:) and
+//                                                  brackets, produce comma-separated tag paths
+//   { eds, value, valueType }                  → inject a static EDS value (no AEM source needed)
 // AEM type-hint prefixes like {Boolean}, {Long}, {Date} are stripped from values.
 function extractPageMeta(jcrContent, mapping, pm) {
   const meta = {};
@@ -160,9 +162,28 @@ function extractPageMeta(jcrContent, mapping, pm) {
       const raw = aemAttrs[rule.aem];
       if (!raw) continue;
       let val = raw;
-      if (rule.transform === 'dam-to-dm-openapi') val = transformPath(raw.startsWith('/') ? raw : '/' + raw, pm) || raw;
-      // Ensure it's a real path before transforming (ogimage may already be an https URL)
-      if (rule.transform === 'dam-to-dm-openapi' && raw.startsWith('http')) val = raw;
+      if (rule.transform === 'dam-to-dm-openapi') {
+        // Resolve DAM path → DM Open API URL via pathMap; pass through https URLs unchanged
+        val = raw.startsWith('http') ? raw : (transformPath(raw.startsWith('/') ? raw : '/' + raw, pm) || raw);
+      } else if (rule.transform === 'aem-tag-to-eds') {
+        // AEM tag format: [namespace:path/to/tag,namespace:path/to/tag2]
+        // EDS format: corporate:namespace/path/to/tag,corporate:namespace/path/to/tag2
+        // e.g. abbvie-com-2:categories/company-stories → corporate:abbvie-com-2/categories/company-stories
+        const tags = raw
+          .replace(/^\[|\]$/g, '')  // strip [ and ]
+          .split(',')
+          .map(t => t.trim())
+          .filter(Boolean)
+          .map(tag => {
+            const colonIdx = tag.indexOf(':');
+            if (colonIdx === -1) return tag;
+            const ns   = tag.slice(0, colonIdx);
+            const rest = tag.slice(colonIdx + 1);
+            return `corporate:${ns}/${rest}`;
+          });
+        if (!tags.length) continue;
+        val = tags.join(',');
+      }
       meta[rule.eds] = val;
     } else if (rule.eds && rule.value !== undefined) {
       // Static value — always inject (e.g. pageVariant: "otherPage")
