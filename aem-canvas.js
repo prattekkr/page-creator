@@ -820,7 +820,6 @@ function heroBlockOf(node, overlapNode = null) {
         backgroundVariant: 'image',
         imageAlt: alt,
         imageMimeType: MIME[ext] || 'image/jpeg',
-        ...(itemClasses.length ? { classes_customDynamicClass: itemClasses.join(',') } : {}),
       },
       children: [],
     };
@@ -831,15 +830,11 @@ function heroBlockOf(node, overlapNode = null) {
     const props = { filter: 'hero-container', classes_customDynamicClass: ctrlClasses.join(',') };
     return { type: 'hero-container', props, children: [item] };
   } else {
-    // Color hero: color class + container-xx-large on item when present
-    const colorClass = heroColorOf(node) || '';
-    const sizeClass = c1Classes.find(c => /^container-/.test(c)) || '';
-    const itemClasses = [colorClass, sizeClass].filter(Boolean);
+    // Color hero: item carries only backgroundVariant — no style classes per authoring rule.
     item = {
       type: 'hero-container-item',
       props: {
         backgroundVariant: 'color',
-        ...(itemClasses.length ? { classes_customDynamicClass: itemClasses.join(',') } : {}),
       },
       children: [],
     };
