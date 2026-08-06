@@ -1694,7 +1694,7 @@ function migrateSiteTabHtml() {
         <label>Fallback match ≥ %</label>
         <input id="ms-minscore" class="form-input" type="number" min="0" max="100" value="${ms.minScore}"/>
       </div>
-      <button class="btn btn-sm btn-primary" id="btn-ms-plan" ${ms.busy ? 'disabled' : ''}>${ms.busy ? '⏳ Building plan…' : '🔎 Build migration plan'}</button>
+      <button class="btn btn-sm btn-primary" id="btn-ms-plan" ${ms.busy ? 'disabled' : ''}>${ms.busy ? '⏳ Starting…' : '🚀 Start Migration'}</button>
       ${ms.plan ? `<button class="btn btn-sm btn-ghost" id="btn-ms-clear-plan" style="color:var(--danger)" title="Discard migration plan and progress">✕ Clear progress</button>` : ''}
     </div>
     ${planHtml}`;
