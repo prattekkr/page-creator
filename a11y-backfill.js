@@ -107,11 +107,16 @@ function backfillA11y(sections, maps) {
         if (b.type === 'hero-container-item' || !clean(p.imageAlt)) { if (p.imageAlt !== maps.alt[k]) { p.imageAlt = maps.alt[k]; stats.imageAlt++; } }
       }
       // Fill caption from live site when: (a) no caption is set yet, OR (b) getCaptionFromDAM=true
-      // (meaning the caption lives in DAM metadata — bake the resolved value in as literal text so
+      // (meaning the caption lives in DAM metadata — always fetch the live resolved value even when
+      // AEM itself set getCaptionFromDAM=true, because the DAM metadata is not in the JCR XML).
       // we don't rely on EDS fetching it at render time, and turn off the DAM-fetch flag).
-      if (k && maps.caption[k] && (!clean(p.caption) || p.getCaptionFromDAM === 'true')) {
+        if (k && maps.caption[k] && (!clean(p.caption) || p.getCaptionFromDAM === 'true')) {
         p.caption = maps.caption[k];
         p.getCaptionFromDAM = 'false';
+        // Always enable the display flag when a caption is present. When the image
+        // was authored with getCaptionFromDAM=true the JCR XML carries no caption text,
+        // so displayCaptionBelowImage was never set at parse time — set it now.
+        p.displayCaptionBelowImage = 'true';
         stats.caption++;
       }
     }
