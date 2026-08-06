@@ -1809,7 +1809,9 @@ async function doMigPrepareAll() {
 function liveUrlFor(sourceRel) {
   const base = (S.migrateSite.liveBase || '').trim().replace(/\/+$/, '');
   if (!base) return '';
-  const path = String(sourceRel).replace(/^\/+|\/+$/g, '').split('/').slice(1).join('/');
+  // sourceRel is like "nz/en/join-us/life-at-abbvie/benefits"
+  // Strip BOTH country (nz) and language (en) segments → "join-us/life-at-abbvie/benefits"
+  const path = String(sourceRel).replace(/^\/+|\/+$/g, '').split('/').slice(2).join('/');
   return `${base}/${path}.html`;
 }
 async function doMigAutoBuild(i) {
@@ -1957,8 +1959,17 @@ async function doFillA11yCanvas() {
     else if (pageUrl) parts.push('♿ nothing new to fill');
     const norm = (s.separators || 0) + (s.eyebrows || 0);
     if (norm) parts.push(`🔧 ${s.separators || 0} separators, ${s.eyebrows || 0} eyebrows fixed`);
-    if (pageUrl && d.a11y && !d.a11y.ok) parts.push(`a11y fetch failed: ${d.a11y.error}`);
-    S._a11yErr = !!(pageUrl && d.a11y && !d.a11y.ok);
+    const a11yErr = d.a11y && !d.a11y.ok;
+    if (a11yErr) {
+      const errText = d.a11y.error || '';
+      const is404   = errText.includes('404');
+      const is403   = errText.includes('403');
+      const hint    = is404 ? ' (page not found — check Live AEM base URL)'
+                    : is403 ? ' (bot challenge — retry may help)'
+                    : '';
+      parts.push(`a11y fetch failed: ${errText}${hint}`);
+    }
+    S._a11yErr = !!(pageUrl && a11yErr);
     S._a11yMsg = parts.join(' · ');
   } catch (e) { S._a11yErr = true; S._a11yMsg = '✗ ' + e.message; }
   S._a11yBusy = false; render();

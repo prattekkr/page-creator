@@ -206,7 +206,7 @@ function layoutStyleClasses(node) {
 // and in the dynamic class list (for rendering).  Keep the source hierarchy in
 // order so that a child container can override an equivalent parent setting.
 const FULL_WIDTH_CONTAINER_STYLE_ID = '1653545825683';
-function layoutStyleProps(nodes, { includeHeight = true, excludeStyleIds = [] } = {}) {
+function layoutStyleProps(nodes, { includeHeight = true, excludeStyleIds = [], compType = null } = {}) {
   const classes = [];
   const typed = {};
   const excluded = new Set(excludeStyleIds);
@@ -214,7 +214,7 @@ function layoutStyleProps(nodes, { includeHeight = true, excludeStyleIds = [] } 
     if (!cls || !LAYOUT_CLASS.test(cls) || DROP_CLASS.has(cls)) return;
     if (!classes.includes(cls)) classes.push(cls);
     const group = entry?.groupLabel || '';
-    if (group === 'Desktop Width') typed.style_contentWidth = cls;
+    if (group === 'Desktop Width' || group === 'Desktop Container Width' || group === 'Content Width') typed.style_contentWidth = cls;
     // The authoring picklist uses `radius-large`, while the rendering class is
     // `large-radius`; they are intentionally different EDS representations.
     else if (group === 'Radius') typed.style_borderRadius = /^(.+)-radius$/.test(cls)
@@ -232,8 +232,10 @@ function layoutStyleProps(nodes, { includeHeight = true, excludeStyleIds = [] } 
       const ids = String(raw).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
       for (const id of ids) {
         if (excluded.has(id)) continue;
-        // Use full resolveStyleId so _shared and namespaced entries are found.
-        const entry = resolveStyleId(id, null);
+        // Prefer component-specific namespace (e.g. 'section') so that
+        // section-block overrides (container-large, content-narrow, etc.)
+        // take priority over _shared fallbacks for the same style ID.
+        const entry = resolveStyleId(id, compType) || resolveStyleId(id, null);
         add(entry?.edsClass, entry);
       }
     }
@@ -872,7 +874,7 @@ function sectionProps(node, hero = false) {
   }
 
   // ── NON-HERO SECTION ─────────────────────────────────────────────────────
-  let resolved = layoutStyleProps(nodes);
+  let resolved = layoutStyleProps(nodes, { compType: 'section' });
   resolved = applyFullWidthContainerRule(resolved, nodes);
   resolved = restrictNoSideMargin(resolved, false);
   resolved = {

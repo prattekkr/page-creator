@@ -52,14 +52,16 @@ function curlOnce(pageUrl) {
 async function fetchRenderedHtml(pageUrl, tries = 8) {
   assertPublicHttps(pageUrl);
   let last = '?';
+  let attempted = 0;
   for (let i = 0; i < tries; i++) {
+    attempted++;
     let r; try { r = await curlOnce(pageUrl); } catch (e) { last = e.message; await sleep(300); continue; }
     if (r.code >= 200 && r.code < 400) return r.html;
     last = 'HTTP ' + (r.code || '?');
     if (r.code === 404 || r.code === 410) break;      // genuinely missing — don't retry
     await sleep(300 + i * 250);                        // brief backoff between challenges
   }
-  throw new Error(last + ' (after ' + tries + ' tries)');
+  throw new Error(last + ' (after ' + attempted + ' tr' + (attempted === 1 ? 'y' : 'ies') + ')');
 }
 
 // Parse the rendered HTML into lookup maps.
