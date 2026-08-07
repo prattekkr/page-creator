@@ -651,13 +651,9 @@ function collectLeaves(node, out, inheritedBlockWidth = '', applyContainerWidth 
     if (isXF(rt)) continue;
     if (isGrid(rt)) { collectLeaves(child, out, width, applyContainerWidth); continue; }      // nested grid → flatten its cell content
     if (isContainer(rt)) {
-      // A nested container with a width style AND any grid uses the inner-grid pattern.
-      // Use collectCellLeaves so the inner grid becomes an inner-grid controller, not flattened.
-      if (containerHasWidthStyle(child) && containerHasAnyGrid(child)) {
-        collectCellLeaves(child, out, 0, width);
-      } else {
-        collectLeaves(child, out, width, applyContainerWidth);
-      }
+      // Always flatten container contents regardless of width style — grids inside containers
+      // are treated as section-level grids, not inner-grids.
+      collectLeaves(child, out, width, applyContainerWidth);
       continue;
     }
     out.push(...mapLeafExpanded(child, width));
@@ -1227,34 +1223,6 @@ function pushGridContainersByRows(sections, gc, propsForSource = null) {
   flush();
 }
 
-// Some legacy career pages place a CTA teaser immediately before a three-up
-// image/content grid in XML, even though the authored visual places that CTA
-// after the tiles. Keep this deliberately narrow: it must be a CTA teaser and
-// the next grid must be one 4/4/4 row with an image in every cell. Introductory
-// teasers and every other grid retain source order.
-function isThreeUpImageGrid(grid) {
-  if (!grid || !isGrid(RT(grid)) || (parseInt(grid['@rowCount'] || '1') || 1) !== 1) return false;
-  const cols = gridColumns(grid);
-  if (cols.length !== 3 || !cols.every(c => c.width === '4')) return false;
-  return cols.every((_, index) => {
-    const par = grid[`par_1${index + 1}`];
-    let image = false;
-    (function scan(n) {
-      for (const [, child] of childEntries(n || {})) {
-        if (image) return;
-        const rt = RT(child);
-        if (/\/image\//.test(rt)) { image = true; return; }
-        if (!rt || isLayoutWrapper(rt) || isContainer(rt)) scan(child);
-      }
-    })(par);
-    return image;
-  });
-}
-function isTrailingCtaTeaser(teaser, next) {
-  return componentMap[RT(teaser)]?.edsType === 'teaser'
-    && !!String(teaser['@ctaLink'] || teaser['@ctaText'] || '').trim()
-    && isThreeUpImageGrid(next);
-}
 
 // A non-grid container immediately before a sibling grid is an intro band when
 // it carries both a heading and copy. It must remain a standalone section;
@@ -1296,21 +1264,6 @@ function headingBandBeforeGrid(entries, index) {
 function emitNode(node, sections) {
   const rt = RT(node);
   if (isContainer(rt)) {
-    // ── Inner-grid pattern ──────────────────────────────────────────────────
-    // A container with a width style (container-medium / large / x-large / xx-large / small)
-    // that contains any grid (at any depth, including inside nested containers) represents
-    // a "container inside grid" layout in AEM where the grid acts as an inner-grid layout.
-    // EDS represents this as a plain section where each grid becomes an inner-grid
-    // controller (cols-X-Y-Z) with sibling blocks carrying col-N column classes.
-    // This is confirmed across 360 pages in the corpus (scan-contact-pattern.js).
-    // IMPORTANT: This check must come BEFORE the general containerHasGrid check
-    // so that width-style containers are NOT incorrectly converted to grid-containers.
-    if (containerHasWidthStyle(node) && containerHasAnyGrid(node)) {
-      const blocks = [];
-      collectCellLeaves(node, blocks, 0, '');
-      if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
-      return;
-    }
     if (containerHasGrid(node)) {
       // Real grids become grid-sections. A direct teaser next to a grid is its
       // own visual band in AEM, so preserve it as a standalone EDS section in
@@ -1396,15 +1349,9 @@ function emitNode(node, sections) {
             index = gridBandEnd - 1; // resume on the grid (the for-loop ++ advances onto it)
           }
           else if (componentMap[crt]?.edsType === 'teaser') {
-            const next = entries[index + 1] && entries[index + 1][1];
-            if (isTrailingCtaTeaser(child, next)) {
-              flushGridBand();
-              deferredCtaTeasers.push(child);
-            } else {
-              flushGridBand();
-              const blocks = mapLeafExpanded(child);
-              if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
-            }
+            flushGridBand();
+            const blocks = mapLeafExpanded(child);
+            if (blocks.length) sections.push({ type: 'section', props: sectionProps(node), blocks });
           }
           else if (isContainer(crt)) {
             // A nested container with a width style AND a direct grid is an inner-grid
