@@ -204,6 +204,7 @@ function html() {
     ${S.modal === 'bundle-save'       ? bundleSaveModalHtml()      : ''}
     ${S.modal === 'publish-aem'       ? renderPublishModal(S._publishChanges || []) : ''}
     ${S.modal === 'validation-detail' ? validationDetailModalHtml()                 : ''}
+    ${S.modal === 'a11y-warning'      ? a11yWarningModalHtml(S._a11yIssues || [], S._a11yPendingAction || '') : ''}
     ${topbarHtml()}
     ${S._draftRestored ? `<div class="draft-banner" id="draft-banner">
       Draft restored — ${S.sections.length} section${S.sections.length !== 1 ? 's' : ''} reloaded from your last session.
@@ -1991,6 +1992,18 @@ async function doMigCreateOne(i) {
   if (!aemHost || !username || !password) { alert('Configure the AEM connection first.'); return; }
   const clean = (r.targetPath || '').trim().replace(/\/+$/, ''); const cut = clean.lastIndexOf('/');
   if (!clean.startsWith('/') || cut <= 0 || cut === clean.length - 1) { r.status = 'error'; r.error = 'Set a full "Create at" path like /content/.../parent/' + r.canon; render(); return; }
+  // A11y pre-flight
+  if (!r._a11yOverride) {
+    const issues = checkA11y(r.sections || []);
+    if (issues.length) {
+      S.modal = 'a11y-warning';
+      S._a11yIssues = issues;
+      S._a11yPendingAction = 'mig-create:' + i;
+      render();
+      return;
+    }
+  }
+  r._a11yOverride = false;
   const parentPath = clean.slice(0, cut), pageName = clean.slice(cut + 1);
   r.status = 'creating'; r.error = null; render();
   try {
@@ -3617,6 +3630,59 @@ function bind() {
 
   // Result overlay
   on('btn-close-result', 'click', () => { S.result = null; render(); });
+
+  // A11y warning modal buttons
+  on('btn-a11y-cancel',  'click', () => { S.modal = null; S._a11yIssues = null; S._a11yPendingAction = null; render(); });
+  on('btn-a11y-cancel2', 'click', () => { S.modal = null; S._a11yIssues = null; S._a11yPendingAction = null; render(); });
+  on('btn-a11y-anyway',  'click', async () => {
+    const action = S._a11yPendingAction;
+    S.modal = null; S._a11yIssues = null; S._a11yPendingAction = null;
+    if (action === 'create') {
+      S._a11yOverride = true;
+      await doCreate();
+    } else if (action && action.startsWith('mig-create:')) {
+      const i = parseInt(action.split(':')[1], 10);
+      S.migrateSite.plan.rows[i]._a11yOverride = true;
+      await doMigCreateOne(i);
+    }
+  });
+  on('btn-a11y-fill', 'click', async () => {
+    const action = S._a11yPendingAction;
+    S.modal = null; S._a11yIssues = null; S._a11yPendingAction = null;
+    // Trigger a11y fill, then re-run create after
+    S._a11yBusy = true; S._a11yMsg = null; S._a11yErr = false;
+    // For mig-create, load the row's sections into main canvas temporarily
+    let rowIdx = -1;
+    if (action && action.startsWith('mig-create:')) {
+      rowIdx = parseInt(action.split(':')[1], 10);
+      const row = S.migrateSite.plan?.rows[rowIdx];
+      if (row?.sections) S.sections = JSON.parse(JSON.stringify(row.sections));
+    }
+    render();
+    try {
+      const pageUrl = (() => {
+        if (rowIdx >= 0) return liveUrlFor(S.migrateSite.plan.rows[rowIdx].sourceRel);
+        return (window.prompt('Live AEM page URL for accessibility (leave blank to just normalize):', '') || '').trim();
+      })();
+      const d = await fetch('/api/a11y-backfill', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sections: S.sections, pageUrl })
+      }).then(x => x.json());
+      if (!d.ok) throw new Error(d.error || 'A11y fill failed');
+      S.sections = d.sections;
+      if (rowIdx >= 0) S.migrateSite.plan.rows[rowIdx].sections = JSON.parse(JSON.stringify(d.sections));
+      const s = d.stats || {};
+      const a = (s.imageAlt || 0) + (s.caption || 0) + (s.ctaAria || 0) + (s.videoPoster || 0);
+      S._a11yMsg = `♿ Filled ${a} a11y field${a !== 1 ? 's' : ''}. Re-checking before create…`;
+      S._a11yBusy = false; render();
+      // Now re-run the create (a11y check will pass if fill was successful)
+      if (action === 'create') await doCreate();
+      else if (rowIdx >= 0) await doMigCreateOne(rowIdx);
+    } catch (e) {
+      S._a11yErr = true; S._a11yMsg = '✗ ' + e.message;
+      S._a11yBusy = false; render();
+    }
+  });
 }
 
 async function saveMigrationMap() {
@@ -3975,11 +4041,112 @@ async function doPreview() {
   }
 }
 
+// ── Accessibility pre-flight ─────────────────────────────────────────────────
+// Scans sections[] and returns an array of issue objects:
+//   { blockType, field, label, path }
+// Checks:
+//   • custom-image     — imageAlt missing (unless imageIsDecorative=true or getAltFromDAM=true)
+//   • cta              — aria-label missing when linkText is empty/icon-only
+//   • hero-container-item — imageAlt missing when backgroundVariant=image
+//   • teaser           — no specific a11y field but checked for buttonURL without buttonLabel
+//   • brightcove-video — posterAccessibilityLabel missing when placeholderImage/posterImage present
+function checkA11y(sections) {
+  const issues = [];
+  let sIdx = 0;
+  function blockPath(secIndex, blockType) { return `Section ${secIndex + 1} › ${blockType}`; }
+  function visitBlock(b, secIndex) {
+    const p = b.props || {};
+    const t = b.type;
+    if (t === 'custom-image') {
+      const decorative = String(p.imageIsDecorative || '').toLowerCase() === 'true';
+      const fromDAM    = String(p.getAltFromDAM || '').toLowerCase() === 'true';
+      if (!decorative && !fromDAM && !String(p.imageAlt || '').trim()) {
+        issues.push({ blockType: t, field: 'imageAlt', label: 'Image alt text', path: blockPath(secIndex, t) });
+      }
+    }
+    if (t === 'hero-container-item') {
+      if (String(p.backgroundVariant || '') === 'image' && !String(p.imageAlt || '').trim()) {
+        issues.push({ blockType: t, field: 'imageAlt', label: 'Hero image alt text', path: blockPath(secIndex, 'hero-container-item') });
+      }
+    }
+    if (t === 'cta') {
+      const linkText = String(p.linkText || '').trim();
+      const ariaLabel = String(p['aria-label'] || '').trim();
+      // If no visible link text and no aria-label, screen readers have nothing to announce
+      if (!linkText && !ariaLabel) {
+        issues.push({ blockType: t, field: 'aria-label', label: 'CTA aria-label (no link text)', path: blockPath(secIndex, 'cta') });
+      }
+    }
+    if (t === 'brightcove-video' || t === 'video') {
+      const poster = p.posterImage || p.placeholderImage || '';
+      if (poster && !String(p.posterAccessibilityLabel || '').trim()) {
+        issues.push({ blockType: t, field: 'posterAccessibilityLabel', label: 'Video poster image alt text', path: blockPath(secIndex, t) });
+      }
+    }
+    for (const c of b.children || []) visitBlock(c, secIndex);
+  }
+  for (let i = 0; i < (sections || []).length; i++) {
+    const sec = sections[i];
+    for (const blk of sec.blocks || []) visitBlock(blk, i);
+    // grid-container → grid-section → children
+    for (const gs of sec.blocks || []) {
+      for (const c of gs.children || []) visitBlock(c, i);
+    }
+  }
+  return issues;
+}
+
+function a11yWarningModalHtml(issues, actionKey) {
+  const rows = issues.map(iss =>
+    `<tr><td style="padding:4px 8px"><code>${iss.path}</code></td><td style="padding:4px 8px;color:#d97706">${iss.label}</td></tr>`
+  ).join('');
+  return `
+  <div class="modal-overlay" id="a11y-warn-modal">
+    <div class="modal" style="max-width:620px">
+      <div class="modal-header">
+        <span style="font-size:1.1em">⚠️ Accessibility Issues Found</span>
+        <button class="modal-close" id="btn-a11y-cancel">✕</button>
+      </div>
+      <div class="modal-body" style="max-height:320px;overflow-y:auto">
+        <p style="margin:0 0 12px">The following blocks are missing accessibility fields. Screen readers may not be able to describe this content correctly.</p>
+        <table style="width:100%;border-collapse:collapse;font-size:0.88em">
+          <thead><tr style="background:#f3f4f6">
+            <th style="padding:4px 8px;text-align:left">Location</th>
+            <th style="padding:4px 8px;text-align:left">Missing</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      <div class="modal-footer" style="display:flex;gap:8px;justify-content:flex-end;padding:12px 16px">
+        <button class="btn btn-secondary btn-sm" id="btn-a11y-cancel2">Cancel</button>
+        <button class="btn btn-warning btn-sm" id="btn-a11y-fill" data-action="${actionKey || ''}">
+          🔧 Fill A11y First, Then Create
+        </button>
+        <button class="btn btn-primary btn-sm" id="btn-a11y-anyway" data-action="${actionKey || ''}">
+          Create Anyway
+        </button>
+      </div>
+    </div>
+  </div>`;
+}
+
 async function doCreate() {
-  const { aemHost, username, password, parentPath, pageName } = S.conn;
+const { aemHost, username, password, parentPath, pageName } = S.conn;
   if (!aemHost || !username || !password || !parentPath || !pageName) {
     _view = 'settings'; render(); return;
   }
+  // A11y pre-flight: check for missing alt text, aria-labels, etc.
+  if (!S._a11yOverride) {
+    const issues = checkA11y(S.sections);
+    if (issues.length) {
+      S.modal = 'a11y-warning';
+      S._a11yIssues = issues;
+      S._a11yPendingAction = 'create';
+      render();
+      return;
+    }
+  }
+  S._a11yOverride = false;
   S.creating = true; render();
   try {
     const r = await fetch('/api/pages', {
