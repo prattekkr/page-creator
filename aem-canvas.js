@@ -643,6 +643,57 @@ function containerBlockWidth(node, inherited = '') {
   }
   return inherited;
 }
+// Nested background-color container that directly wraps a grid:
+// → emit as inner-grid with combined container + grid styles + bg-color class.
+// Column layout (par_RC cells) is preserved via col-N assignments on child blocks.
+// This is the "grey band image+text card" pattern (container_609876501_ in benefits pages):
+//   container (bg=#F4F4F4, container-xxx-large, align-center) + grid (no-bottom-margin, cols 6-1-5)
+//   → inner-grid { cols-6-1-5, bg-f4f4f4, container-xxx-large, align-center, no-bottom-margin }
+function emitNestedBgGrid(containerNode, out, inheritedBlockWidth = '') {
+  // Collect direct grids through layout wrappers (not through nested containers)
+  const grids = directGrids(containerNode);
+  const grid = grids[0];
+  if (!grid) { collectLeaves(containerNode, out, inheritedBlockWidth); return; }
+
+  const cols = gridColumns(grid);
+  if (!cols.length) { collectLeaves(containerNode, out, inheritedBlockWidth); return; }
+
+  // Build the inner-grid controller classes:
+  //   1. Column spec from grid columns
+  //   2. bg-color from container backgroundColor
+  //   3. Layout style classes from container styleIds (container-xxx-large, align-center, height-default, …)
+  //   4. Layout style classes from grid styleIds (no-bottom-margin, …)
+  const colSpec   = `cols-${cols.map(c => c.width).join('-')}`;
+  const bg        = bgClass(containerNode);
+  const contCls   = splitCls([layoutStyleClasses(containerNode)]);
+  const gridCls   = splitCls([layoutStyleClasses(grid)]);
+  const allCls    = [...new Set([colSpec, bg, ...contCls, ...gridCls].filter(Boolean))];
+
+  const controller = {
+    type: 'inner-grid',
+    props: { classes_customDynamicClass: allCls.join(',') },
+    children: [],
+  };
+  out.push(controller);
+
+  // Emit grid column cells with col-N assignments
+  const rowCount = parseInt(grid['@rowCount'] || '1') || 1;
+  for (let r = 1; r <= rowCount; r++) {
+    for (let c = 1; c <= cols.length; c++) {
+      const par = grid[`par_${r}${c}`];
+      const cellBlocks = [];
+      if (par && typeof par === 'object') collectCellLeaves(par, cellBlocks, 0, inheritedBlockWidth);
+      const colClass = `col-${c}`;
+      cellBlocks.forEach(block => {
+        if (block._innerManaged) return;
+        addCommonClass(block, colClass);
+        markInnerManaged(block);
+      });
+      out.push(...cellBlocks);
+    }
+  }
+}
+
 function collectLeaves(node, out, inheritedBlockWidth = '', applyContainerWidth = true) {
   const width = applyContainerWidth && isContainer(RT(node))
     ? containerBlockWidth(node, inheritedBlockWidth) : inheritedBlockWidth;
@@ -652,6 +703,13 @@ function collectLeaves(node, out, inheritedBlockWidth = '', applyContainerWidth 
     if (isXF(rt)) continue;
     if (isGrid(rt)) { collectLeaves(child, out, width, applyContainerWidth); continue; }      // nested grid → flatten its cell content
     if (isContainer(rt)) {
+      // ── NEW PATTERN: nested container with backgroundColor + direct grid ──
+      // Preserve the bg-color band and grid column layout as an inner-grid
+      // instead of flattening everything into the parent section.
+      if (bgClass(child) && containerHasDirectGrid(child)) {
+        emitNestedBgGrid(child, out, width);
+        continue;
+      }
       // Always flatten container contents regardless of width style — grids inside containers
       // are treated as section-level grids, not inner-grids.
       collectLeaves(child, out, width, applyContainerWidth);
@@ -1131,9 +1189,30 @@ function applyRelatedContentCardProps(blocks) {
     props.openInNewTab = '{Boolean}false';
   }
 }
+// Style IDs for the AEM grid template policies that produce card-band layouts.
+// Only grids authored with one of these templates should be unwrapped into flat
+// sibling card blocks in the EDS section. Without this guard a generic 3×4 grid
+// (e.g. a 3-column image+text layout) would also be mistakenly unwrapped.
+//   id 1 / 165354545645741 → cmp-grid-full-page-4   (grid-full-page-4)
+//   id 2 / 165354545645742 → cmp-grid-full-page-5-v1
+//   id 3 / 165354545645743 → cmp-grid-full-page-5-v2
+//   id 4 / 165354545645744 → cmp-grid-half-page-2
+//   id 5 / 165354545645745 → cmp-grid-half-page-3
+const CARD_GRID_TEMPLATE_IDS = new Set([
+  '1', '2', '3', '4', '5',
+  '165354545645741', '165354545645742', '165354545645743', '165354545645744', '165354545645745',
+]);
+function gridHasCardTemplate(grid) {
+  const ids = String(grid['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+  return ids.some(id => CARD_GRID_TEMPLATE_IDS.has(id));
+}
+
 // A grid gets UNWRAPPED (its cells emitted as plain-section blocks instead of grid-sections)
 // only for the cases EDS handles *deterministically* (validated across the corpus, zero regressions):
-//   • card       — every column width 4 AND cells hold cardpagestory/story → EDS story-cards
+//   • card       — every column width 4 AND the cells hold cardpagestory/story components
+//                  AND the grid carries one of the 5 known card-band AEM template style IDs
+//                  (cmp-grid-full-page-4/5-v1/v2, cmp-grid-half-page-2/3). Without the
+//                  template ID check a generic 3×4 image+text grid would also be unwrapped.
 //   • band       — one full-width column ≥10 with only ≤2 gutters and NO width-1 gutter (e.g. 10,2)
 //   • spacer     — pure width-1 gutter grid (decorative spacer row)
 // NOTE: `1,11` is intentionally NOT unwrapped — the data shows EDS keeps it ~half the time
@@ -1147,7 +1226,9 @@ function isUnwrapGrid(grid) {
   // card grid cannot: flattening it loses the row boundaries needed for the
   // target EDS grid-container sequence.
   const rowCount = parseInt(grid['@rowCount'] || '1') || 1;
-  const card   = rowCount === 1 && g.allFour && gridHasCards(grid);
+  // Card unwrap requires BOTH the all-4-columns shape AND an explicit card-band
+  // template style ID. A plain 3×4 content grid must NOT be unwrapped.
+  const card   = rowCount === 1 && g.allFour && gridHasCards(grid) && gridHasCardTemplate(grid);
   const band   = maxW >= 10 && g.cols.every(w => w === maxW || w <= 2) && !g.cols.includes(1);
   const spacer = g.cols.length > 0 && g.cols.every(w => w <= 1);
   if (_R === 'none') return false;
@@ -1377,18 +1458,47 @@ function emitNode(node, sections) {
     const isHero = !!node['@backgroundImageReference'] || isColorHero(node);
     const blocks = [];
     if (isHero) blocks.push(heroBlockOf(node));
-    // Enable container width inheritance so inner containers (container-medium,
-    // container-large, etc.) propagate their width class to child blocks.
-    // Known width-bearing blocks (title, text, video) get it on classes_customDynamicClass;
-    // all others (cta, carousel, accordion, etc.) get it on classes_commonCustomClass.
-    collectLeaves(node, blocks, '', true);
-    sections.push({ type: 'section', props: sectionProps(node, isHero), blocks });
+    // The top-level container becomes the section and its container-* width class is
+    // already placed on the section itself via sectionProps(). Do NOT also put
+    // width-* on each individual child block — the section's container-* class
+    // already controls the width for the entire band. Strip any width class that
+    // came from either inherited container propagation OR the block's own styleIds.
+    collectLeaves(node, blocks, '', false);
+    const secProps = sectionProps(node, isHero);
+    if (!isHero && splitCls([secProps.style_customDynamicClass]).some(c => /^container-/.test(c))) {
+      const BLOCK_WIDTH_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
+      for (const b of blocks) {
+        if (!b.props) continue;
+        for (const key of ['classes_customDynamicClass', 'classes_commonCustomClass']) {
+          if (!b.props[key]) continue;
+          const cleaned = String(b.props[key]).split(',').map(s => s.trim())
+            .filter(c => !BLOCK_WIDTH_RE.test(c)).join(',');
+          if (cleaned) b.props[key] = cleaned; else delete b.props[key];
+        }
+      }
+    }
+    sections.push({ type: 'section', props: secProps, blocks });
     return;
   }
-  if (isGrid(rt)) {                     // bare top-level grid → wrap in a grid-container
-    const gc = { type: 'grid-container', props: gridContainerProps([node], node), blocks: [] };
-    expandGrid(node, gc.blocks, []);
-    pushGridContainersByRows(sections, gc);
+  if (isGrid(rt)) {
+    // A bare top-level grid that carries a card-band template style ID (cmp-grid-full-page-4,
+    // cmp-grid-full-page-5-v1/v2, cmp-grid-half-page-2/3) AND whose cells all hold card
+    // components is a card-band section. EDS authors it as a flat section with the grid
+    // template class (grid-full-page-4 etc.) on the section itself — never as a grid-container.
+    // The gridHasCardTemplate() guard ensures a plain 4-col content grid is never mismatched.
+    if (isUnwrapGrid(node)) {
+      const blocks = [];
+      collectLeaves(node, blocks, '', false);
+      // Resolve the grid's own template class (grid-full-page-4 etc.) for the section.
+      const gridCls = splitCls([styleIdClasses(node)]).filter(c => LAYOUT_CLASS.test(c));
+      const classes = mergeDefaults('section', gridCls);
+      sections.push({ type: 'section', props: { style_customDynamicClass: classes.join(',') }, blocks });
+    } else {
+      // Regular bare grid → grid-container
+      const gc = { type: 'grid-container', props: gridContainerProps([node], node), blocks: [] };
+      expandGrid(node, gc.blocks, []);
+      pushGridContainersByRows(sections, gc);
+    }
     return;
   }
   // bare leaf at top level → its own section
