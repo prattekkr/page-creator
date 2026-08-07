@@ -114,11 +114,11 @@ function backfillA11y(sections, maps) {
       // we don't rely on EDS fetching it at render time, and turn off the DAM-fetch flag).
         if (k && maps.caption[k] && (!clean(p.caption) || p.getCaptionFromDAM === 'true')) {
         p.caption = maps.caption[k];
-        p.getCaptionFromDAM = 'false';
+        p.getCaptionFromDAM = '{Boolean}false';
         // Always enable the display flag when a caption is present. When the image
         // was authored with getCaptionFromDAM=true the JCR XML carries no caption text,
         // so displayCaptionBelowImage was never set at parse time — set it now.
-        p.displayCaptionBelowImage = 'false';
+        p.displayCaptionBelowImage = '{Boolean}false';
         stats.caption++;
       }
     }
@@ -313,7 +313,7 @@ async function backfillCaptionsFromDam(sections, aemHost, auth) {
     if (cap) {
       console.log(`[dam-caption] ✓ filled caption for "${damPath}" → "${cap}"`);
       block.props.caption = cap;
-      block.props.displayCaptionBelowImage = 'false';
+      block.props.displayCaptionBelowImage = '{Boolean}false';
       captionFromDam++;
     } else {
       console.log(`[dam-caption] ✗ no caption found for "${damPath}"`);

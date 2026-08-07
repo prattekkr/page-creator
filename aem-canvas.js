@@ -324,8 +324,8 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // has no jcr:title. displayCaptionBelowImage is always false — the caption
   // is used for a11y alt-text purposes only, not rendered below the image.
   if (type === 'custom-image') {
-    props.getCaptionFromDAM = 'true';
-    props.displayCaptionBelowImage = 'false';
+    props.getCaptionFromDAM = '{Boolean}true';
+    props.displayCaptionBelowImage = '{Boolean}false';
   }
   normalizeBlock({ type, props });   // separator = Standard/no-line, eyebrow = standard+bold
 
