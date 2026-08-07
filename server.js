@@ -7,7 +7,7 @@ const multer     = require('multer');
 const puppeteer  = require('puppeteer');
 const { XMLParser } = require('fast-xml-parser');
 const { aemToCanvas, normalizeSections } = require('./aem-canvas');
-const { fetchRenderedHtml, extractA11y, backfillA11y } = require('./a11y-backfill');
+const { fetchRenderedHtml, extractA11y, backfillA11y, backfillCaptionsFromDam } = require('./a11y-backfill');
 const { validatePage, serveCachedFile } = require('./validate-page');
 
 // ── Migration map (AEM Sites resourceType → EDS block) ───────────────────────
@@ -459,7 +459,10 @@ function buildJcr(meta, sections, compMap, modelFieldsMap, contentDefaults = {})
       for (const gs of (sec.blocks || [])) {
         const gsNode = makeNode(gs, 'section', compMap, modelFieldsMap, contentDefaults);
         let i = 0;
-        for (const blk of (gs.children || [])) {
+        // Canvas stores grid-section content blocks in .blocks (set by import/auto-build).
+        // Legacy defs may use .children — fall back to it so both shapes work.
+        const gsBlocks = (gs.blocks && gs.blocks.length) ? gs.blocks : (gs.children || []);
+        for (const blk of gsBlocks) {
           gsNode[`${safe(blk.type)}_${i++}`] = makeBlockNode(blk, compMap, modelFieldsMap, contentDefaults);
         }
         jcr.root[`${safe(gs.type)}_${rootIdx++}`] = gsNode;
@@ -2429,12 +2432,66 @@ app.post('/api/a11y-backfill', express.json({ limit: '8mb' }), async (req, res) 
     if (!Array.isArray(sections)) return res.status(400).json({ error: 'sections[] required' });
     // Normalize separators/eyebrows first — pure, always works even if the a11y fetch fails.
     const norm = normalizeSections(sections);
-    let stats = {}, a11y = { ok: false };
+    let stats = {}, a11y = { ok: false }, damStats = {};
     if (pageUrl) {
       try { stats = backfillA11y(sections, extractA11y(await fetchRenderedHtml(pageUrl))); a11y = { ok: true }; }
       catch (e) { a11y = { ok: false, error: e.message }; }
     }
-    res.json({ ok: true, sections, stats: { ...stats, ...norm }, a11y });
+    // DAM metadata caption fallback — only for blocks still missing caption after XML fill + live scraping.
+    const aemHost = String(req.body?.aemHost || '').trim();
+    const aemUser = String(req.body?.aemUser || req.body?.username || '').trim();
+    const aemPass = String(req.body?.aemPass || req.body?.password || '').trim();
+    if (aemHost && aemUser && aemPass) {
+      const auth = 'Basic ' + Buffer.from(`${aemUser}:${aemPass}`).toString('base64');
+      try {
+        damStats = await backfillCaptionsFromDam(sections, aemHost, auth);
+        console.log('[a11y] DAM result:', JSON.stringify(damStats));
+      } catch (e) {
+        damStats = { captionFromDam: 0, damError: e.message };
+        console.warn('[a11y] DAM error:', e.message);
+      }
+
+      // Auto-write filled captions back to AEM immediately when pagePath is supplied.
+      // This avoids requiring a manual "Write to AEM" step after the backfill.
+      const pagePath = String(req.body?.pagePath || '').trim().replace(/\.(html|json|xml)$/i, '').replace(/\/+$/, '');
+      if (pagePath && (damStats.captionFromDam > 0 || stats.caption > 0)) {
+        const base = `${pagePath}/jcr:content/root`;
+        const writeResults = [];
+        const hdrs = { Authorization: `Basic ${Buffer.from(`${aemUser}:${aemPass}`).toString('base64')}`, 'Content-Type': 'application/x-www-form-urlencoded' };
+        const host = aemHost.replace(/\/+$/, '');
+        const visitForWrite = async (block, sectionJcrKey) => {
+          if (!block || typeof block !== 'object') return;
+          const p = block.props || {};
+          // Only write if block has a _jcrKey (came from import) and has a caption
+          if (block._jcrKey && p.caption) {
+            const jcrPath = `${base}/${sectionJcrKey}/${block._jcrKey}`;
+            const body = new URLSearchParams();
+            body.set('caption', p.caption);
+            body.set('displayCaptionBelowImage', 'false');
+            try {
+              const r = await fetch(`${host}${jcrPath}`, { method: 'POST', headers: hdrs, body: body.toString() });
+              writeResults.push({ jcrPath, ok: r.ok, status: r.status });
+              console.log(`[a11y] wrote caption to AEM: ${jcrPath} → ${r.status}`);
+            } catch (e) {
+              writeResults.push({ jcrPath, ok: false, error: e.message });
+            }
+          }
+          for (const c of (block.children || [])) await visitForWrite(c, sectionJcrKey);
+          for (const c of (block.blocks   || [])) await visitForWrite(c, sectionJcrKey);
+        };
+        for (const sec of sections) {
+          if (!sec._jcrKey) continue;
+          for (const blk of (sec.blocks || [])) await visitForWrite(blk, sec._jcrKey);
+        }
+        damStats.aemWriteResults = writeResults;
+        damStats.captionWrittenToAem = writeResults.filter(r => r.ok).length;
+        console.log('[a11y] auto-wrote captions to AEM:', damStats.captionWrittenToAem, 'of', writeResults.length);
+      }
+    } else {
+      console.log('[a11y] DAM skipped — host:', !!aemHost, 'user:', !!aemUser, 'pass:', !!aemPass);
+    }
+    console.log('[a11y] live stats:', JSON.stringify(stats), '| norm:', JSON.stringify(norm));
+    res.json({ ok: true, sections, stats: { ...stats, ...norm, ...damStats }, a11y });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 

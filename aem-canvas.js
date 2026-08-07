@@ -321,10 +321,11 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // Always pull the image caption from DAM metadata on the live site.
   // Setting getCaptionFromDAM=true tells EDS to fetch the caption at render
   // time from the DAM asset, so it is always up-to-date even if the AEM XML
-  // has no jcr:title. displayCaptionBelowImage=true enables the caption UI.
+  // has no jcr:title. displayCaptionBelowImage is always false — the caption
+  // is used for a11y alt-text purposes only, not rendered below the image.
   if (type === 'custom-image') {
     props.getCaptionFromDAM = 'true';
-    props.displayCaptionBelowImage = 'true';
+    props.displayCaptionBelowImage = 'false';
   }
   normalizeBlock({ type, props });   // separator = Standard/no-line, eyebrow = standard+bold
 

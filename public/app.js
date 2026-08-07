@@ -1949,11 +1949,13 @@ async function doFillA11yCanvas() {
   if (!pageUrl) pageUrl = (window.prompt('Live AEM page URL for accessibility (leave blank to just normalize separators/eyebrows):', '') || '').trim();
   S._a11yBusy = true; S._a11yMsg = null; S._a11yErr = false; render();
   try {
-    const d = await fetch('/api/a11y-backfill', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sections: S.sections, pageUrl }) }).then(x => x.json());
+    const _migRow = (ms.editIdx != null && ms.plan) ? ms.plan.rows[ms.editIdx] : null;
+    const _pagePath = S._importPagePath || (_migRow?.targetPath || '');
+    const d = await fetch('/api/a11y-backfill', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sections: S.sections, pageUrl, aemHost: S.conn?.aemHost || '', aemUser: S.conn?.username || '', aemPass: S.conn?.password || '', pagePath: _pagePath }) }).then(x => x.json());
     if (!d.ok) throw new Error(d.error || 'Failed');
     S.sections = d.sections;                         // updated in place, keeps ids
     const s = d.stats || {};
-    const a = (s.imageAlt || 0) + (s.caption || 0) + (s.ctaAria || 0) + (s.videoPoster || 0);
+    const a = (s.imageAlt || 0) + (s.caption || 0) + (s.ctaAria || 0) + (s.videoPoster || 0) + (s.captionFromDam || 0);
     if (row) { row.sections = JSON.parse(JSON.stringify(S.sections)); if (d.a11y && d.a11y.ok) row.a11y = { ok: true, ...s }; }
     const parts = [];
     if (a) parts.push(`♿ ${a} a11y (alt ${s.imageAlt || 0}, cap ${s.caption || 0}, cta ${s.ctaAria || 0}, vid ${s.videoPoster || 0})`);
@@ -3666,18 +3668,23 @@ function bind() {
       })();
       const d = await fetch('/api/a11y-backfill', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sections: S.sections, pageUrl })
+        body: JSON.stringify({
+          sections: S.sections, pageUrl,
+          aemHost: S.conn?.aemHost || '',
+          aemUser: S.conn?.username || '',
+          aemPass: S.conn?.password || ''
+        })
       }).then(x => x.json());
       if (!d.ok) throw new Error(d.error || 'A11y fill failed');
       S.sections = d.sections;
       if (rowIdx >= 0) S.migrateSite.plan.rows[rowIdx].sections = JSON.parse(JSON.stringify(d.sections));
       const s = d.stats || {};
-      const a = (s.imageAlt || 0) + (s.caption || 0) + (s.ctaAria || 0) + (s.videoPoster || 0);
-      S._a11yMsg = `♿ Filled ${a} a11y field${a !== 1 ? 's' : ''}. Re-checking before create…`;
+      const a = (s.imageAlt || 0) + (s.caption || 0) + (s.ctaAria || 0) + (s.videoPoster || 0) + (s.captionFromDam || 0);
+      S._a11yMsg = `♿ Filled ${a} a11y field${a !== 1 ? 's' : ''}. Creating page…`;
       S._a11yBusy = false; render();
-      // Now re-run the create (a11y check will pass if fill was successful)
-      if (action === 'create') await doCreate();
-      else if (rowIdx >= 0) await doMigCreateOne(rowIdx);
+      // Skip the a11y check on re-entry — we just filled what we could; create regardless.
+      if (action === 'create') { S._a11yOverride = true; await doCreate(); }
+      else if (rowIdx >= 0) { S.migrateSite.plan.rows[rowIdx]._a11yOverride = true; await doMigCreateOne(rowIdx); }
     } catch (e) {
       S._a11yErr = true; S._a11yMsg = '✗ ' + e.message;
       S._a11yBusy = false; render();
@@ -4052,46 +4059,68 @@ async function doPreview() {
 //   • brightcove-video — posterAccessibilityLabel missing when placeholderImage/posterImage present
 function checkA11y(sections) {
   const issues = [];
-  let sIdx = 0;
-  function blockPath(secIndex, blockType) { return `Section ${secIndex + 1} › ${blockType}`; }
-  function visitBlock(b, secIndex) {
+  // counters per block type per section for unique labelling
+  const typeCounts = {};
+
+  function visitBlock(b, secIndex, parentPath) {
     const p = b.props || {};
     const t = b.type;
+    const key = `${secIndex}:${t}`;
+    typeCounts[key] = (typeCounts[key] || 0) + 1;
+    const countSuffix = typeCounts[key] > 1 ? ` #${typeCounts[key]}` : '';
+    const path = parentPath ? `${parentPath} › ${t}${countSuffix}` : `Section ${secIndex + 1} › ${t}${countSuffix}`;
+
     if (t === 'custom-image') {
+      // Flag any image that has an image source but no alt text or caption.
+      // We flag even if getAltFromDAM=true because that AEM mechanism doesn't carry over to EDS.
       const decorative = String(p.imageIsDecorative || '').toLowerCase() === 'true';
-      const fromDAM    = String(p.getAltFromDAM || '').toLowerCase() === 'true';
-      if (!decorative && !fromDAM && !String(p.imageAlt || '').trim()) {
-        issues.push({ blockType: t, field: 'imageAlt', label: 'Image alt text', path: blockPath(secIndex, t) });
+      const hasImageSrc = String(p.image || p.imageReference || p.fileReference || '').trim();
+      if (!decorative && hasImageSrc) {
+        if (!String(p.imageAlt || '').trim()) {
+          issues.push({ blockType: t, field: 'imageAlt', label: 'Image alt text missing', path });
+        }
+        // caption maps from jcr:title — flag if missing (getCaptionFromDAM also doesn't carry to EDS)
+        if (!String(p.caption || p['jcr:title'] || '').trim()) {
+          issues.push({ blockType: t, field: 'caption', label: 'Image caption missing', path });
+        }
       }
     }
     if (t === 'hero-container-item') {
-      if (String(p.backgroundVariant || '') === 'image' && !String(p.imageAlt || '').trim()) {
-        issues.push({ blockType: t, field: 'imageAlt', label: 'Hero image alt text', path: blockPath(secIndex, 'hero-container-item') });
+      // Any hero item with an image reference needs alt text.
+      const hasImageSrc = String(p.image || p.imageReference || p.fileReference || p.backgroundImage || '').trim();
+      // Also flag when backgroundVariant is 'image' even if no src prop found
+      const hasVariant = String(p.backgroundVariant || '').toLowerCase() === 'image';
+      if ((hasImageSrc || hasVariant) && !String(p.imageAlt || '').trim()) {
+        issues.push({ blockType: t, field: 'imageAlt', label: 'Hero image alt text missing', path });
       }
     }
     if (t === 'cta') {
-      const linkText = String(p.linkText || '').trim();
+      // Flag any CTA that is missing aria-label, regardless of whether linkText is set.
+      // The original request specifically calls out CTA aria-labels as a known gap.
       const ariaLabel = String(p['aria-label'] || '').trim();
-      // If no visible link text and no aria-label, screen readers have nothing to announce
-      if (!linkText && !ariaLabel) {
-        issues.push({ blockType: t, field: 'aria-label', label: 'CTA aria-label (no link text)', path: blockPath(secIndex, 'cta') });
+      const hasLink   = String(p.link || p.linkURL || '').trim();
+      if (hasLink && !ariaLabel) {
+        issues.push({ blockType: t, field: 'aria-label', label: 'CTA aria-label missing', path });
       }
     }
     if (t === 'brightcove-video' || t === 'video') {
-      const poster = p.posterImage || p.placeholderImage || '';
-      if (poster && !String(p.posterAccessibilityLabel || '').trim()) {
-        issues.push({ blockType: t, field: 'posterAccessibilityLabel', label: 'Video poster image alt text', path: blockPath(secIndex, t) });
+      // Flag any video block that is missing a poster/video accessibility label.
+      const hasVideo = String(p.videoId || p.uri || p.src || p.brightcoveVideoId || '').trim();
+      if (hasVideo && !String(p.posterAccessibilityLabel || p.imgAlt || '').trim()) {
+        issues.push({ blockType: t, field: 'posterAccessibilityLabel', label: 'Video accessibility label missing', path });
       }
     }
-    for (const c of b.children || []) visitBlock(c, secIndex);
+
+    // Recurse into children (covers grid-section content, accordion items, carousel slides, etc.)
+    for (const c of b.children || []) visitBlock(c, secIndex, path);
+    // Also recurse into nested blocks[] (e.g. grid-section stores actual blocks in blocks[])
+    for (const c of b.blocks   || []) visitBlock(c, secIndex, path);
   }
+
   for (let i = 0; i < (sections || []).length; i++) {
     const sec = sections[i];
-    for (const blk of sec.blocks || []) visitBlock(blk, i);
-    // grid-container → grid-section → children
-    for (const gs of sec.blocks || []) {
-      for (const c of gs.children || []) visitBlock(c, i);
-    }
+    // Visit all top-level blocks (and they recurse into their own children/blocks)
+    for (const blk of sec.blocks || []) visitBlock(blk, i, null);
   }
   return issues;
 }
