@@ -1617,7 +1617,7 @@ function migrateSiteTabHtml() {
       <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px">Only exact same-path pages in selected locales are matched automatically. If that page does not exist in another locale, paste an EDS page path, or use <strong>🤖 Auto-build</strong> to generate a draft from its AEM XML.</div>
       <table class="bulk-table"><thead><tr><th>Source page</th><th>Reuse canvas from</th><th>Create at</th><th>Filled</th><th>Actions</th></tr></thead>
       <tbody>${p.rows.slice(0, 400).map((r, i) => `<tr class="bulk-row bulk-row-${r.status || ''}" style="${r.status === 'done' ? 'background:#d1fae5;' : ''}">
-        <td style="font-size:.72rem"><code>${x(r.canon)}</code></td>
+        <td style="font-size:.72rem">${ms.liveBase ? `<a href="${x((ms.liveBase).replace(/\/+$/,'') + '/' + r.canon)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none"><code style="color:var(--primary)">${x(r.canon)}</code> ↗</a>` : `<code>${x(r.canon)}</code>`}</td>
         <td>${r.matches.length
           ? `<select class="form-input mig-match" data-mig-idx="${i}" title="${x((r.matches[r.selIdx || 0] || {}).edsPath || '')}" style="font-size:.68rem;padding:2px 4px;max-width:320px">${r.matches.map((m, mi) => `<option value="${mi}" ${r.selIdx === mi ? 'selected' : ''} title="${x(m.edsPath || '')}">${x(m.region)}/${x(m.canon)} · ${m.score}%</option>`).join('')}</select>`
           : `<span style="color:var(--muted);font-size:.7rem">no exact-path page found</span>`}

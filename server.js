@@ -2526,6 +2526,20 @@ app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) =
       const seg        = allSegs[i];
       const parentSeg  = '/' + allSegs.slice(0, i).join('/');
       const currentSeg = '/' + allSegs.slice(0, i + 1).join('/');
+
+      // Check if segment already exists BEFORE calling createPage.
+      // AEM's createPage does NOT return 409 for existing pages — it silently
+      // creates an auto-incremented duplicate (preview0, preview1, …). We must
+      // skip createPage entirely when the node is already present.
+      let existsCheck;
+      try {
+        existsCheck = await fetch(`${host}${currentSeg}.json`, {
+          method: 'GET',
+          headers: { Authorization: `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}` },
+        });
+      } catch { existsCheck = null; }
+      if (existsCheck && existsCheck.ok) continue; // node already exists — skip createPage
+
       const title      = seg === 'preview' ? 'Preview' : seg;
       const createParams = new URLSearchParams({
         cmd:        'createPage',
@@ -2542,7 +2556,7 @@ app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) =
       } catch (networkErr) {
         return res.status(503).json({ ok: false, error: `Cannot reach AEM host "${host}": ${networkErr.cause?.message || networkErr.message}. Check that you are connected to VPN and the host is correct.` });
       }
-      // 302 = created (AEM redirects to new page), 200 = ok, 409 = already exists — all fine.
+      // 302 = created (AEM redirects to new page), 200 = ok — 409 should not occur now but handle anyway.
       const crOk = cr.status < 400 || cr.status === 409;
       if (!crOk) {
         const txt = await cr.text();
@@ -2554,7 +2568,7 @@ app.post('/api/preview-page', express.json({ limit: '8mb' }), async (req, res) =
         });
       }
       // Brief pause so AEM commits the node before creating a child inside it
-      if (cr.status !== 409) await new Promise(resolve => setTimeout(resolve, 600));
+      await new Promise(resolve => setTimeout(resolve, 600));
     }
   }
 

@@ -313,9 +313,11 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     } else if (!isWidthTarget) {
       // Block has no corresponding width style (e.g. cta, accordion, carousel, etc.)
       // → carry the inherited width as a custom class so it still reaches EDS.
-      const existing = String(props.classes_commonCustomClass || '').split(',').map(s => s.trim()).filter(Boolean);
+      // Use space-separated to match how classes_commonCustomClass is read/written
+      // everywhere else in mapLeaf (richtext body-unica handling uses split(/\s+/) + join(' ')).
+      const existing = String(props.classes_commonCustomClass || '').split(/\s+/).filter(Boolean);
       if (!existing.includes(widthClass)) existing.push(widthClass);
-      props.classes_commonCustomClass = existing.join(',');
+      props.classes_commonCustomClass = existing.join(' ');
     }
   }
   // Always pull the image caption from DAM metadata on the live site.
@@ -801,15 +803,23 @@ const STYLE_DEFAULTS_FALLBACK = {
   'grid-container': [],
 };
 const NOOP_CLASS = new Set(['height-default']);              // EDS omits the "default" height (no-op) on sections/grids
+// Classes that are never valid on grid-containers (container-level padding overrides that
+// don't translate to grid-container EDS styling). `no-padding` is a section-level visual
+// tweak on AEM containers but the EDS grid-container equivalent uses `regular-padding`.
+const GRID_CONTAINER_EXCL = new Set(['no-padding', 'container-full-width']);
 const isWidthCls  = c => ['content-wide', 'content-regular', 'content-narrow', 'full-width'].includes(c) || /^container-/.test(c);
 const EXCL_RADIUS = new Set(['large-radius', 'medium-radius', 'small-radius', 'no-radius']);
 const splitCls = arr => arr.filter(Boolean).flatMap(c => String(c).split(',')).map(c => c.trim()).filter(Boolean);
 const hasStyleId = (node, id) => String(node?.['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',').includes(id);
-function applyFullWidthContainerRule(resolved, containers) {
+function applyFullWidthContainerRule(resolved, containers, targetWidth = 'content-wide') {
   if (!containers.some(node => hasStyleId(node, FULL_WIDTH_CONTAINER_STYLE_ID))) return resolved;
+  // FULL_WIDTH_CONTAINER_STYLE_ID (1653545825683) is the AEM "container-full-width" rendering hint.
+  // For EDS sections (Rule 7 inner-grid bands) this is content-wide.
+  // For EDS grid-containers it is content-regular (standard readable width).
+  // Callers pass the appropriate targetWidth value.
   return {
-    classes: [...resolved.classes.filter(c => !isWidthCls(c)), 'content-wide'],
-    typed: { ...resolved.typed, style_contentWidth: 'content-wide' },
+    classes: [...resolved.classes.filter(c => !isWidthCls(c)), targetWidth],
+    typed: { ...resolved.typed, style_contentWidth: targetWidth },
   };
 }
 // merge template defaults into derived classes: derived (from AEM) wins on exclusive families
@@ -888,22 +898,20 @@ function heroBlockOf(node, overlapNode = null) {
   if (c1Classes.includes('content-full-width') && !c1ItemClasses.includes('full-width'))
     c1ItemClasses.unshift('full-width');
 
-  // Resolve c2 (overlap container): pull radius class → appended to controller
+  // Resolve c2 (overlap container): pull radius + height → overlay derivation
   let c2Radius = null;
+  let overlayClasses = HEIGHT_TO_OVERLAY['height-default']; // fallback
   if (overlapNode) {
     const c2Classes = splitCls([styleIdClasses(overlapNode)]);
     c2Radius = c2Classes.find(c => EXCL_RADIUS.has(c)) || null;
+    const c2Height = c2Classes.find(c => /^height-/.test(c)) || 'height-default';
+    overlayClasses = HEIGHT_TO_OVERLAY[c2Height] || HEIGHT_TO_OVERLAY['height-default'];
   }
 
   let item;
   if (imageHero) {
     const alt = bgImg.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
     const ext = (bgImg.split('.').pop() || '').toLowerCase();
-    // Item carries c1's visual classes: full-width, height, radius, margin, padding, semi-transparent.
-    // Keep ALL non-layout classes (radius, height, full-width, no-bottom-margin etc) that belong on the item.
-    const itemClasses = c1ItemClasses.filter(c =>
-      /^(full-width|height-|large-radius|medium-radius|small-radius|no-bottom-margin|no-bottom-padding|no-padding|semi-transparent|container-)/.test(c)
-    );
     item = {
       type: 'hero-container-item',
       props: {
@@ -914,8 +922,8 @@ function heroBlockOf(node, overlapNode = null) {
       },
       children: [],
     };
-    // Controller: c1 height + overlay-height-default (always) + c2 radius (if present)
-    const ctrlClasses = [c1Height, 'overlay-height-default', c2Radius].filter(Boolean);
+    // Controller: c1 height + overlay heights (derived from c2's height, 1:1 mapping) + c2 radius
+    const ctrlClasses = [c1Height, ...overlayClasses, c2Radius].filter(Boolean);
     const props = { filter: 'hero-container', classes_customDynamicClass: ctrlClasses.join(',') };
     return { type: 'hero-container', props, children: [item] };
   } else {
@@ -929,8 +937,8 @@ function heroBlockOf(node, overlapNode = null) {
       },
       children: [],
     };
-    // Controller for color hero: c1 height + overlay-height-default (always) + c2 radius (if present)
-    const ctrlParts = [c1Height, 'overlay-height-default', c2Radius].filter(Boolean);
+    // Controller for color hero: c1 height + overlay heights (derived from c2) + c2 radius
+    const ctrlParts = [c1Height, ...overlayClasses, c2Radius].filter(Boolean);
     const props = { filter: 'hero-container', classes_customDynamicClass: ctrlParts.join(',') };
     return { type: 'hero-container', props, children: [item] };
   }
@@ -940,35 +948,84 @@ function sectionProps(node, hero = false) {
   const nodes = Array.isArray(node) ? node : [node];
 
   // ── HERO SECTION RULE ────────────────────────────────────────────────────
-  // From C1 only two classes are distributed:
-  //   • radius class  → section (style_customDynamicClass)
-  //   • height class  → hero-container (handled in heroBlockOf)
-  // Everything else from C1 is ignored for the section.
+  // EDS hero sections carry a NARROW set of classes from C1:
+  //   • width   : content-full-width → content-wide; container-* SIZE classes (e.g. container-xxx-large)
+  //   • radius  : large-radius / medium-radius / small-radius
+  //   • margin  : no-bottom-margin (added when C1 has no-bottom-margin OR has a background image)
+  //               no-side-margin, no-bottom-padding, padding-bottom, section-padding, regular-padding
+  //
+  // EXCLUDED from section (handled elsewhere):
+  //   • height-*          → hero-container ctrl block (heroBlockOf)
+  //   • bg-* color        → hero-container-item (color hero)
+  //   • bg-image          → hero-container-item
+  //   • container-full-width  → this is an AEM wrapper ID, NOT a width class (it means the AEM
+  //                             container renders full-width within its parent, NOT a content-wide override)
   if (hero) {
     const c1 = Array.isArray(node) ? node[0] : node;
-    const c1Classes = splitCls([styleIdClasses(c1)]);
-    const radiusClass = c1Classes.find(c => EXCL_RADIUS.has(c));
-    const derived = radiusClass ? [radiusClass] : [];
-    const typed = radiusClass
-      ? { style_borderRadius: 'radius-' + radiusClass.replace(/-radius$/, '') }
-      : {};
+    const c1Resolved = layoutStyleProps([c1], { compType: 'section', includeHeight: false });
+    const c1Classes = c1Resolved.classes;
+
+    // Classes explicitly excluded from the hero section
+    const HERO_SEC_EXCL = new Set([
+      'container-full-width', // AEM wrapper ID — NOT a width class on EDS sections
+      'height-default', 'height-short', 'height-tall', 'height-x-tall', 'height-xx-tall', // → hero ctrl
+      'no-padding',       // AEM padding reset — not a valid EDS section class
+      // no-bottom-margin is intentionally NOT excluded — when C1 has the no-bottom-margin styleId,
+      // it flows through to the hero section (twin-confirmed: ch/de/join-us, and many others).
+    ]);
+    // Background color/image → hero item only, not section
+    const filteredClasses = c1Classes.filter(c => !HERO_SEC_EXCL.has(c) && !/^bg-/.test(c));
+
+    // content-full-width → content-wide; keep container-xxx-large etc as-is
+    const widthMapped = filteredClasses.map(c => c === 'content-full-width' ? 'content-wide' : c);
+
+    // Ensure content-wide when C1 has content-full-width or FULL_WIDTH_CONTAINER_STYLE_ID
+    const hasFullWidth = hasStyleId(c1, FULL_WIDTH_CONTAINER_STYLE_ID) ||
+      c1Classes.includes('content-full-width');
+    if (hasFullWidth && !widthMapped.includes('content-wide')) widthMapped.unshift('content-wide');
+
+    const derived = [...new Set(widthMapped)];
+    const typed = { ...c1Resolved.typed };
+    delete typed['style_height'];  // height → hero ctrl only
+    if (typed.style_contentWidth === 'content-full-width') typed.style_contentWidth = 'content-wide';
+    if (typed.style_contentWidth === 'container-full-width') delete typed.style_contentWidth;
+
     return { ...typed, style_customDynamicClass: derived.join(',') };
   }
 
   // ── NON-HERO SECTION ─────────────────────────────────────────────────────
+  // Note: applyFullWidthContainerRule is intentionally NOT applied here.
+  // `container-full-width` (ID 1653545825683) is an AEM container rendering instruction,
+  // NOT a valid EDS section width class. It must be stripped from section derived classes.
+  // EDS section width (content-wide/content-regular/content-narrow) only comes from the
+  // explicit EDS picklist style IDs (17805012834871, 1780501283488, etc.).
   let resolved = layoutStyleProps(nodes, { compType: 'section' });
-  resolved = applyFullWidthContainerRule(resolved, nodes);
   resolved = restrictNoSideMargin(resolved, false);
   resolved = {
     ...resolved,
-    classes: resolved.classes.map(c => c === 'content-full-width' ? 'content-wide' : c),
+    // container-full-width → content-wide (AEM full-width wrapper → EDS wide width)
+    classes: resolved.classes.map(c => c === 'container-full-width' ? 'content-wide' : c === 'content-full-width' ? 'content-wide' : c),
     typed: Object.fromEntries(
       Object.entries(resolved.typed).map(([k, v]) => [k, v === 'content-full-width' ? 'content-wide' : v])
     ),
   };
+  // Map container-full-width → content-regular in typed styles
+  // FULL_WIDTH_CONTAINER_STYLE_ID (1653545825683) = AEM "container-full-width" rendering hint.
+  // In EDS this is NOT a content-wide override — it maps to `content-regular` (the default
+  // readable content width). Only the explicit EDS content-wide picklist IDs should produce content-wide.
+  if (resolved.typed.style_contentWidth === 'container-full-width') resolved.typed.style_contentWidth = 'content-regular';
+  // Plain content-regular wrapper (no bg): emit ONLY content-regular, no section-padding, no margin.
+  // The EDS twin confirms these pure-width-wrapper sections carry only content-regular (confirmed
+  // across us/en/science, nz/en/site-map, and multiple other pages).
+  const hasFullWidthStyle = nodes.some(n => hasStyleId(n, FULL_WIDTH_CONTAINER_STYLE_ID));
+  if (hasFullWidthStyle && !nodes.some(n => bgClass(n) || n['@backgroundImageReference'])) {
+    return { style_contentWidth: 'content-regular', style_customDynamicClass: 'content-regular' };
+  }
   let derived = resolved.classes;
   const hasOverlap = derived.some(c => c === 'overlap-predecessor' || c === 'homepage-overlap');
-  derived = derived.filter(c => c !== 'overlap-predecessor' && c !== 'homepage-overlap' && (!hasOverlap || !EXCL_RADIUS.has(c)));
+  // 'no-padding' is an AEM container styling reset that has no valid EDS section equivalent —
+  // exclude it so it never leaks onto the section style_customDynamicClass.
+  derived = derived.filter(c => c !== 'overlap-predecessor' && c !== 'homepage-overlap' && c !== 'no-padding' && (!hasOverlap || !EXCL_RADIUS.has(c)));
   if (hasOverlap) delete resolved.typed.style_borderRadius;
   const typed = { ...resolved.typed };
   const classes = mergeDefaults('section', derived);
@@ -979,10 +1036,31 @@ function gridContainerProps(containers, grid = null) {
   // particular grid inside that band and therefore must be applied only when
   // that source grid is emitted as its own EDS grid-container.
   const chain = Array.isArray(containers) ? containers : [containers];
-  const resolved = restrictNoSideMargin(applyFullWidthContainerRule(layoutStyleProps([...chain, grid], { compType: 'grid-container' }), chain));
   const container = chain[chain.length - 1];
+  const hasBg = !!bgClass(container) || !!container['@backgroundImageReference'];
+
+  // FULL_WIDTH_CONTAINER_STYLE_ID (1653545825683) = AEM "container-full-width" rendering hint.
+  // For EDS grid-containers WITHOUT a background:
+  //   → emit content-regular only (no regular-padding, no no-bottom-margin defaults).
+  //     The EDS twin confirms plain wrapper grid-containers carry ONLY `grid-container,content-regular`.
+  // For EDS grid-containers WITH a background (bg-color or bg-image):
+  //   → content-wide (the EDS full-bleed background band width). The no-side-margin and other
+  //     defaults still apply normally via mergeDefaults.
+  const hasFullWidthId = chain.some(n => hasStyleId(n, FULL_WIDTH_CONTAINER_STYLE_ID));
+  if (hasFullWidthId && !hasBg) {
+    // Plain content-regular wrapper grid-container: only emit the bare minimum.
+    return {
+      style_container: 'grid-container',
+      style_contentWidth: 'content-regular',
+      style_customDynamicClass: 'grid-container,content-regular',
+    };
+  }
+
+  // For bg grid-containers, FULL_WIDTH_CONTAINER_STYLE_ID → content-wide (full-bleed width).
+  const fullWidthTarget = hasBg ? 'content-wide' : 'content-regular';
+  const resolved = restrictNoSideMargin(applyFullWidthContainerRule(layoutStyleProps([...chain, grid], { compType: 'grid-container' }), chain, fullWidthTarget));
   const derived = resolved.classes
-    .filter(c => !NOOP_CLASS.has(c))
+    .filter(c => !NOOP_CLASS.has(c) && !GRID_CONTAINER_EXCL.has(c))
     .filter(c => container['@backgroundImageReference'] || !/^height-/.test(c));
   const classes = ['grid-container', ...mergeDefaults('grid-container', derived)].join(',');
   return { style_container: 'grid-container', ...resolved.typed, style_customDynamicClass: classes, ...bgImageProps(container) };
@@ -998,10 +1076,32 @@ function heroSectionClasses(node) {
 const isColorHero = node => !childEntries(node).length && heroColorOf(node) !== null;
 const isHeroContainer = node => isContainer(RT(node)) && !containerHasGrid(node) &&
   (!!node['@backgroundImageReference'] || isColorHero(node));
-// The hero's intro content sits in a following container that OVERLAPS the hero (styleId
-// overlap-predecessor) — verified 13/13 intro containers have it, 0/5 body containers do. Only such
-// containers are absorbed into the hero section; the first non-overlapping one starts the page body.
-const overlapsHero = node => { const cls = splitCls([styleIdClasses(node)]); return cls.includes('overlap-predecessor') || cls.includes('homepage-overlap'); };
+// A container "overlaps" the hero (should be absorbed into it) when:
+//   1. It carries the overlap-predecessor or homepage-overlap styleId (explicit AEM authoring signal), OR
+//   2. It structurally contains an H1 title or breadcrumb (structure-based detection —
+//      removes dependency on the overlap-predecessor styleId being present on every page).
+// Rule 2 fires when: the container (or any nested container without its own grid) holds
+// a custom-title with type="h1" or a breadcrumb component.
+function containerHasH1OrBreadcrumb(node) {
+  for (const [, child] of childEntries(node)) {
+    const rt = RT(child);
+    if (!rt || isLayoutWrapper(rt)) { if (containerHasH1OrBreadcrumb(child)) return true; continue; }
+    if (isXF(rt)) continue;
+    if (isGrid(rt)) continue;          // grids = body content, not intro header
+    if (isContainer(rt)) { if (containerHasH1OrBreadcrumb(child)) return true; continue; }
+    const type = componentMap[rt]?.edsType;
+    if (type === 'breadcrumb') return true;
+    if (type === 'custom-title' && String(child['@type'] || '').toLowerCase() === 'h1') return true;
+  }
+  return false;
+}
+const overlapsHero = node => {
+  const cls = splitCls([styleIdClasses(node)]);
+  if (cls.includes('overlap-predecessor') || cls.includes('homepage-overlap')) return true;
+  // Structural fallback: container that holds an H1 or breadcrumb (no grid) is the hero intro band.
+  if (!containerHasGrid(node) && containerHasH1OrBreadcrumb(node)) return true;
+  return false;
+};
 
 // Grid layout classification (derived from corpus): EDS drops two kinds of grid rows
 // from the grid-section sequence and renders their content as plain / card blocks:
@@ -1244,6 +1344,15 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
   // dataPriority is only meaningful when the author changed the natural order.
   // In that case preserve every column priority, including explicit order-1.
   const hasPriorityOrder = cols.some(col => col.priority && col.priority !== '1');
+  // Extract the container width from the source scopes so that ALL leaf blocks
+  // inside each grid cell (title/text → classes_customDynamicClass; eyebrow/cta/etc.
+  // → classes_commonCustomClass) inherit the enclosing container's width class.
+  // Without this, non-width-target blocks (eyebrow, cta, accordion…) inside a grid
+  // never received the inherited width because collectCellLeaves was called with no
+  // inheritedBlockWidth parameter (defaulting to '').
+  const containerWidth = sourceScopes.length > 0
+    ? containerBlockWidth(sourceScopes[sourceScopes.length - 1], '')
+    : '';
   for (let r = 1; r <= rowCount; r++) {
     for (let c = 1; c <= cols.length; c++) {
       const col = cols[c - 1];
@@ -1260,7 +1369,7 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
       // one-row grids from the same enclosing AEM container.
       Object.defineProperty(gs, '_sourceGrid', { value: grid, enumerable: false });
       Object.defineProperty(gs, '_sourceScopes', { value: sourceScopes, enumerable: false });
-      if (par && typeof par === 'object') collectCellLeaves(par, gs.children);
+      if (par && typeof par === 'object') collectCellLeaves(par, gs.children, 0, containerWidth);
       if (relatedContent) applyRelatedContentCardProps(gs.children);
       blocks.push(gs);
     }
@@ -1343,9 +1452,206 @@ function headingBandBeforeGrid(entries, index) {
 }
 
 // emit sections for one top-level content node
+// Count ALL grids in a node's subtree at any depth (crossing containers too)
+function countAllGrids(node) {
+  let count = 0;
+  for (const [, child] of childEntries(node)) {
+    const rt = RT(child);
+    if (isGrid(rt)) { count++; continue; }
+    if (!rt || isLayoutWrapper(rt) || isContainer(rt)) count += countAllGrids(child);
+  }
+  return count;
+}
+
+// Collect all grids in subtree in document order
+function collectAllGrids(node, out = []) {
+  for (const [, child] of childEntries(node)) {
+    const rt = RT(child);
+    if (isGrid(rt)) { out.push(child); continue; }
+    if (!rt || isLayoutWrapper(rt) || isContainer(rt)) collectAllGrids(child, out);
+  }
+  return out;
+}
+
+// Check if node (container or grid) has a PreBuilt Template styleId
+function hasPrebuiltTemplateStyle(node) {
+  if (!node) return false;
+  const raw = String(node['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '');
+  return raw.split(',').some(id => CARD_GRID_TEMPLATE_IDS.has(id));
+}
+
+// Does any node in the entire subtree (including root) have a PreBuilt Template styleId?
+function subtreeHasPrebuiltTemplate(node) {
+  if (hasPrebuiltTemplateStyle(node)) return true;
+  for (const [, child] of childEntries(node)) {
+    const rt = RT(child);
+    if (!rt || isLayoutWrapper(rt) || isGrid(rt) || isContainer(rt)) {
+      if (subtreeHasPrebuiltTemplate(child)) return true;
+    }
+  }
+  return false;
+}
+
 function emitNode(node, sections) {
   const rt = RT(node);
   if (isContainer(rt)) {
+    // Rule 7 — Container with PreBuilt Template grid (checked BEFORE Rule 6)
+    // Trigger: any node in the subtree (container or grid) has a PreBuilt Template styleId
+    if (subtreeHasPrebuiltTemplate(node)) {
+      // Rule 7 — Container with PreBuilt Template grid.
+      // The EDS twin uses inner-grids inside a section for this pattern.
+      // Class derivation rules for Rule 7 sections (from twin corpus):
+      //   • container-full-width → content-wide (via applyFullWidthContainerRule)
+      //   • radius, padding, margin classes from the outer container
+      //   • no-side-margin when the container has a background image/color (full-bleed)
+      //   • grid template classes (grid-full-page-*) are NEVER on the section
+      //   • NOOP classes (height-default) are excluded
+      //   • bg-* color classes are excluded from section classes
+      //   • padding-bottom added when bg image is present
+      const RULE7_EXCL = new Set(['height-default', 'no-padding', 'no-bottom-margin']);
+      const GRID_TEMPLATE_RE = /^grid-(?:full-page|half-page|meganav)-/;
+      let r7Resolved = layoutStyleProps([node], { compType: 'section' });
+      r7Resolved = applyFullWidthContainerRule(r7Resolved, [node]);
+      // Add no-side-margin when there's a background color/image (full-bleed band)
+      if (bgClass(node) || node['@backgroundImageReference']) {
+        r7Resolved = {
+          ...r7Resolved,
+          classes: r7Resolved.classes.includes('no-side-margin') ? r7Resolved.classes : [...r7Resolved.classes, 'no-side-margin'],
+        };
+      }
+      // Remap content-full-width → content-wide; ensure content-wide is first
+      let r7Classes = r7Resolved.classes.map(c => c === 'content-full-width' ? 'content-wide' : c);
+      // Move content-wide to front if present
+      if (r7Classes.includes('content-wide')) {
+        r7Classes = ['content-wide', ...r7Classes.filter(c => c !== 'content-wide')];
+      }
+      const r7Derived = r7Classes
+        .filter(c => !RULE7_EXCL.has(c) && !GRID_TEMPLATE_RE.test(c) && !/^bg-/.test(c));
+      const secClasses = mergeDefaults('section', r7Derived);
+      // padding-bottom added after section-padding (ALWAYS default) so order is correct
+      if (node['@backgroundImageReference'] && !secClasses.includes('padding-bottom')) {
+        secClasses.push('padding-bottom');
+      }
+      const secProps = { style_customDynamicClass: secClasses.join(',') };
+      Object.assign(secProps, bgImageProps(node));
+      // Emit one section with inner-grids (twin structure confirmed)
+      const blocks = [];
+      const allGrids = collectAllGrids(node);
+      for (const grid of allGrids) {
+        emitInnerGrid(grid, blocks, 0);
+      }
+      sections.push({ type: 'section', props: secProps, blocks });
+      return;
+    }
+
+    // Rule 6 — Container with nested container children
+    // Trigger: any direct child (through layout wrappers) is itself a container
+    const hasNestedContainerChild = (() => {
+      for (const [, child] of childEntries(node)) {
+        const crt = RT(child);
+        if (isContainer(crt)) return true;
+        if (!crt || isLayoutWrapper(crt)) {
+          for (const [, gc] of childEntries(child)) if (isContainer(RT(gc))) return true;
+        }
+      }
+      return false;
+    })();
+    if (hasNestedContainerChild) {
+      // Walk outer container's direct children. For each nested container, apply
+      // Rule 4-style logic (components→section, grids→grid-container) inheriting
+      // outer + nested container styles. Direct components/grids use outer styles only.
+      const outerStyleClasses = splitCls([layoutStyleClasses(node), bgClass(node)]).filter(Boolean);
+      const outerBg = bgClass(node);
+      for (const [, child] of childEntries(node)) {
+        const crt = RT(child);
+        if (!crt || isLayoutWrapper(crt)) {
+          // layout wrapper — look inside
+          for (const [, gc] of childEntries(child)) {
+            const gcrt = RT(gc);
+            if (isContainer(gcrt)) {
+              // nested container → emit its grids as grid-containers
+              const nestedBg = bgClass(gc);
+              const nestedCls = splitCls([layoutStyleClasses(gc)]).filter(Boolean);
+              const combinedCls = [...new Set([...outerStyleClasses, ...nestedCls, nestedBg].filter(Boolean))];
+              const hasBg = !!(nestedBg || outerBg);
+              // gather grids inside nested container
+              const nestedGrids = directGrids(gc);
+              if (nestedGrids.length) {
+                for (const grid of nestedGrids) {
+              const gcBlock = { type: 'grid-container', props: gridContainerProps([node, gc], grid), blocks: [] };
+              expandGrid(grid, gcBlock.blocks, [node, gc]);
+              pushGridContainersByRows(sections, gcBlock);
+            }
+          } else {
+            // no grid in nested container → emit as section
+            const rule6NoGridHasFW = [node, gc].some(n => hasStyleId(n, FULL_WIDTH_CONTAINER_STYLE_ID));
+            const rule6NoGridHasBg = !!(outerBg || bgClass(gc));
+            const r6Derived = combinedCls.filter(c => !NOOP_CLASS.has(c) && c !== 'no-padding' && c !== 'container-full-width');
+            // When the outer container is a plain full-width wrapper (FULL_WIDTH_CONTAINER_STYLE_ID,
+            // no bg), section-padding is NOT added by EDS — strip it to match the twin.
+      // Also: when r6Derived contains only margin classes (e.g. no-bottom-margin) with no
+            // width class, mergeDefaults still adds section-padding (ALWAYS). Strip it when the
+            // combined context is a bare no-bg FULL_WIDTH_CONTAINER wrapper.
+            let secCls = mergeDefaults('section', r6Derived);
+            if (rule6NoGridHasFW && !rule6NoGridHasBg) secCls = secCls.filter(c => c !== 'section-padding');
+            // When the node itself has FULL_WIDTH_CONTAINER_STYLE_ID + no bg, also strip
+            // section-padding even if gc doesn't — the outer wrapper is the plain band.
+            if (hasStyleId(node, FULL_WIDTH_CONTAINER_STYLE_ID) && !rule6NoGridHasBg && !outerBg) secCls = secCls.filter(c => c !== 'section-padding');
+            const secProps = { style_customDynamicClass: secCls.join(',') };
+            const blocks = [];
+            collectLeaves(gc, blocks, '', false);
+            if (blocks.length) sections.push({ type: 'section', props: secProps, blocks });
+          }
+        } else if (isGrid(gcrt)) {
+          const gcBlock = { type: 'grid-container', props: gridContainerProps([node], gc), blocks: [] };
+          expandGrid(gc, gcBlock.blocks, [node]);
+          pushGridContainersByRows(sections, gcBlock);
+            } else if (!gcrt || isLayoutWrapper(gcrt)) {
+              // skip layout wrappers
+            }
+          }
+          continue;
+        }
+        if (isContainer(crt)) {
+          // direct nested container
+          const nestedBg = bgClass(child);
+          const nestedCls = splitCls([layoutStyleClasses(child)]).filter(Boolean);
+          const combinedCls = [...new Set([...outerStyleClasses, ...nestedCls, nestedBg].filter(Boolean))];
+          const hasBg = !!(nestedBg || outerBg);
+          const nestedGrids = directGrids(child);
+          if (nestedGrids.length) {
+            for (const grid of nestedGrids) {
+              const gcBlock = { type: 'grid-container', props: gridContainerProps([node, child], grid), blocks: [] };
+              expandGrid(grid, gcBlock.blocks, [node, child]);
+              pushGridContainersByRows(sections, gcBlock);
+            }
+          } else {
+            const rule6cNoGridHasFW = [node, child].some(n => hasStyleId(n, FULL_WIDTH_CONTAINER_STYLE_ID));
+            const rule6cNoGridHasBg = !!(outerBg || bgClass(child));
+            const r6cDerived = combinedCls.filter(c => !NOOP_CLASS.has(c) && c !== 'no-padding' && c !== 'container-full-width');
+            let secCls = mergeDefaults('section', r6cDerived);
+            if (rule6cNoGridHasFW && !rule6cNoGridHasBg) secCls = secCls.filter(c => c !== 'section-padding');
+            const secProps = { style_customDynamicClass: secCls.join(',') };
+            const blocks = [];
+            collectLeaves(child, blocks, '', false);
+            if (blocks.length) sections.push({ type: 'section', props: secProps, blocks });
+          }
+        } else if (isGrid(crt)) {
+          const gcBlock = { type: 'grid-container', props: gridContainerProps([node], child), blocks: [] };
+          expandGrid(child, gcBlock.blocks, [node]);
+          pushGridContainersByRows(sections, gcBlock);
+        } else if (!crt || isLayoutWrapper(crt) || isXF(crt)) {
+          // skip
+        } else {
+          // direct component
+          const secCls = mergeDefaults('section', outerStyleClasses.filter(c => !NOOP_CLASS.has(c)));
+          const blocks = mapLeafExpanded(child);
+          if (blocks.length) sections.push({ type: 'section', props: { style_customDynamicClass: secCls.join(',') }, blocks });
+        }
+      }
+      return;
+    }
+
     if (containerHasGrid(node)) {
       // Real grids become grid-sections. A direct teaser next to a grid is its
       // own visual band in AEM, so preserve it as a standalone EDS section in
@@ -1360,11 +1666,16 @@ function emitNode(node, sections) {
       let firstContentGs = null, lastContentGs = null;
       const buf = () => (firstContentGs ? trailing : leading);
       const flushGridBand = () => {
+        // Rule 4: leading blocks (components before a grid) always emit as their own
+        // standalone section BEFORE the grid-container — never merged into grid-section cells.
+        if (leading.length) {
+          sections.push({ type: 'section', props: sectionProps(node), blocks: [...leading] });
+          leading.length = 0;
+        }
         if (firstContentGs) {
-          if (leading.length) firstContentGs.children.unshift(...leading);
           if (trailing.length) lastContentGs.children.push(...trailing);
-        } else if (leading.length || trailing.length) {
-          sections.push({ type: 'section', props: sectionProps(node), blocks: [...leading, ...trailing] });
+        } else if (trailing.length) {
+          sections.push({ type: 'section', props: sectionProps(node), blocks: [...trailing] });
         }
         pushGridContainersByRows(sections, gc, (sourceGrid, scopes) => gridContainerProps(scopes.length ? scopes : [node], sourceGrid));
         gc.blocks.length = 0;
@@ -1501,9 +1812,16 @@ function emitNode(node, sections) {
     }
     return;
   }
-  // bare leaf at top level → its own section
+  // bare leaf at top level → its own section (Rule 5 / Rule 2)
+  // Fixed classes: content-regular + no-bottom-margin (EDS twin uses content-regular for bare leaf sections)
   const blocks = mapLeafExpanded(node);
-  if (blocks.length) sections.push({ type: 'section', props: {}, blocks });
+  if (blocks.length) {
+    sections.push({ type: 'section', props: {
+      style_contentWidth: 'content-regular',
+      style_margin: 'no-bottom-margin',
+      style_customDynamicClass: 'content-regular,no-bottom-margin',
+    }, blocks });
+  }
 }
 
 // current page's content-xml rel path (country/lang/…), used for breadcrumb homePagePath
@@ -1755,12 +2073,14 @@ function aemToCanvas(jcrContent, opts) {
 // requires the wide band with section padding and no trailing margin.
 function footerSeparatorSectionProps(props = {}) {
   const required = ['content-wide', 'section-padding', 'no-bottom-margin'];
+  // Strip any conflicting width classes from existing before adding content-wide
+  const existing = splitCls([props.style_customDynamicClass]).filter(c => !isWidthCls(c));
   return {
     ...props,
     style_contentWidth: 'content-wide',
     style_padding: 'section-padding',
     style_margin: 'no-bottom-margin',
-    style_customDynamicClass: [...new Set([...splitCls([props.style_customDynamicClass]), ...required])].join(','),
+    style_customDynamicClass: [...new Set([...existing, ...required])].join(','),
   };
 }
 function hoistTrailingSeparator(sections) {
