@@ -2867,71 +2867,148 @@ app.get('/api/proxy', async (req, res) => {
   if (!url || !/^https?:\/\//i.test(url))
     return res.status(400).send('Invalid URL');
   try {
-    const fetchHeaders = { 'User-Agent': 'Mozilla/5.0 (compatible; PageCreator/1.0)' };
-    // Pass Basic Auth when AEM credentials are provided
+    const fetchHeaders = {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'en-US,en;q=0.5',
+    };
     if (user && pass)
       fetchHeaders['Authorization'] = 'Basic ' + Buffer.from(user + ':' + pass).toString('base64');
 
+    console.log(`[proxy] fetching: ${url}`);
     const r = await fetch(url, { headers: fetchHeaders, redirect: 'follow' });
+    console.log(`[proxy] response: ${r.status} ${r.statusText}`);
+    console.log(`[proxy] content-type: ${r.headers.get('content-type')}`);
+    console.log(`[proxy] x-frame-options: ${r.headers.get('x-frame-options')}`);
+    console.log(`[proxy] csp: ${(r.headers.get('content-security-policy') || '').slice(0, 200)}`);
+
     const contentType = (r.headers.get('content-type') || 'text/html');
 
-    // For non-HTML responses (CSS, JS, fonts, images) fetch through proxy transparently
+    // For non-HTML responses (CSS, JS, fonts, images) proxy them through and add CORS header
+    // so the iframe can load them cross-origin.
     if (!contentType.includes('text/html')) {
       const buf = await r.arrayBuffer();
       res.setHeader('Content-Type', contentType);
+      res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Cache-Control', 'public, max-age=300');
       return res.send(Buffer.from(buf));
     }
 
     let html = await r.text();
-    const parsed    = new URL(url);
-    const origin    = parsed.origin;   // e.g. https://www.abbvie.ch
-    // basePath = everything up to the last slash (for resolving relative paths)
-    const basePath  = parsed.href.replace(/\?.*/, '').replace(/[^/]+$/, '');
+    console.log(`[proxy] html length: ${html.length} chars`);
+    console.log(`[proxy] html snippet: ${html.slice(0, 300).replace(/\n/g,' ')}`);
 
-    // Build the proxy prefix for routing asset requests through our server
-    const proxyBase = '/api/proxy?url=';
+    const parsed = new URL(url);
+    const origin = parsed.origin;   // e.g. https://www.abbvie.ch
 
-    // Convert any URL value → proxied absolute URL so ALL sub-resources
-    // (CSS, JS, images, fonts) go through the server and bypass CORS/CSP.
-    function toProxied(val) {
-      if (!val) return val;
-      const v = val.trim();
-      // Pass-throughs — never proxy
-      if (v.startsWith('data:') || v.startsWith('javascript:') ||
-          v.startsWith('#')     || v.startsWith('mailto:')     ||
-          v.startsWith('tel:')  || v.startsWith('blob:'))       return v;
-      // Already through our proxy
-      if (v.startsWith(proxyBase)) return v;
-      // Resolve to an absolute external URL first, then wrap in proxy
-      let abs;
-      if (v.startsWith('https://') || v.startsWith('http://'))  abs = v;
-      else if (v.startsWith('//'))  abs = parsed.protocol + v;
-      else if (v.startsWith('/'))   abs = origin + v;
-      else abs = basePath + v;
-      return proxyBase + encodeURIComponent(abs);
+    // ── Strategy: NO URL rewriting ───────────────────────────────────────────
+    // Rewriting src/href through /api/proxy?url=… breaks EDS ES module scripts:
+    // when a proxied script does import('./blocks/…'), the browser resolves the
+    // relative path against the SCRIPT's URL (e.g. /api/proxy), not the original
+    // host — so all imports 404 and the page renders blank.
+    //
+    // Instead: inject <base href="https://original-origin/"> so ALL relative URLs
+    // in HTML attributes AND inside scripts resolve against the real origin. The
+    // browser fetches scripts/CSS/images directly from EDS/AEM — no proxy needed
+    // for sub-resources. The ONLY reason to proxy the HTML at all is to remove the
+    // X-Frame-Options / frame-ancestors HTTP header, which we do by serving it here.
+    //
+    // Also: strip any <meta http-equiv="Content-Security-Policy"> embedded in the
+    // HTML — those meta CSPs can block script execution inside the iframe even when
+    // X-Frame-Options is absent. (frame-ancestors in CSP is HTTP-only, but script-src
+    // self restrictions applied to proxied origins confuse rendering.)
+    // ─────────────────────────────────────────────────────────────────────────
+
+    // 1. Strip embedded meta CSP (keeps the page functional inside our iframe).
+    // The content attribute may span multiple lines so use [\s\S]*? (non-greedy dotAll).
+    // Also strip <meta name="referrer"> which can block cross-origin resource loads.
+    const beforeCspStrip = html.length;
+    html = html.replace(/<meta[\s\S]*?http-equiv\s*=\s*["']?content-security-policy["']?[\s\S]*?>/gi, '');
+    html = html.replace(/<meta[\s\S]*?name\s*=\s*["']?referrer["']?[\s\S]*?>/gi, '');
+    console.log(`[proxy] meta-csp strip: html went from ${beforeCspStrip} to ${html.length} chars (removed ${beforeCspStrip - html.length} chars)`);
+    // Also strip any inline <script> that sets document.domain (breaks iframe same-origin)
+    // and any window.location redirects that navigate the iframe away
+    html = html.replace(/<script[\s\S]*?document\.domain\s*=[\s\S]*?<\/script>/gi, '');
+
+    // 2. Remove AEM login-redirect meta tags (avoid being sent to login page inside iframe)
+    html = html.replace(/<meta[^>]*granite\.login[^>]*>/gi, '');
+    html = html.replace(/<meta[^>]*http-equiv\s*=\s*["']?refresh["']?[^>]*>/gi, '');
+
+    // 3. Inject <base href> so HTML attribute src/href resolve to the real origin
+    const baseTag = `<base href="${origin}/">`;
+    if (/<head[>\s]/i.test(html)) {
+      html = html.replace(/(<head[^>]*>)/i, '$1' + baseTag);
+    } else {
+      html = baseTag + html;
     }
 
-    // Rewrite href / src / action attributes (double-quoted and single-quoted)
-    // Exception: anchor hrefs (#fragments, mailto:, tel:) are left alone.
-    html = html.replace(/(href|src|action)\s*=\s*"([^"]*)"/gi,
-      (_, attr, val) => attr + '="' + toProxied(val) + '"');
-    html = html.replace(/(href|src|action)\s*=\s*'([^']*)'/gi,
-      (_, attr, val) => attr + "='" + toProxied(val) + "'");
-
-    // Rewrite srcset (comma-separated list of "url [descriptor]" pairs)
-    html = html.replace(/srcset\s*=\s*"([^"]*)"/gi, (_, val) => {
-      const rewritten = val.split(',').map(s => {
-        const parts = s.trim().split(/\s+/);
-        if (parts[0]) parts[0] = toProxied(parts[0]);
-        return parts.join(' ');
-      }).join(', ');
-      return 'srcset="' + rewritten + '"';
+    // 4. Inject fetch/XHR monkey-patch so relative URLs inside ES module scripts
+    //    (fetch('/query-index.json'), import('./blocks/…'), etc.) resolve to the
+    //    real origin instead of localhost:4000. <base href> only fixes HTML attrs;
+    //    JS fetch() uses window.location, which is the proxy URL.
+    //
+    //    ALSO spoof window.location so EDS pathname-based routing works:
+    //    EDS reads window.location.pathname to determine which content to show.
+    //    When proxied, pathname is '/api/proxy' — EDS renders nothing. Override
+    //    the Location object to return the real EDS page pathname/href.
+    const realPathname = parsed.pathname;   // e.g. /join-us
+    const realHref     = url;               // full original URL
+    const patchScript = `<script>
+(function(){
+  var _ORIGIN   = ${JSON.stringify(origin)};
+  var _PATHNAME = ${JSON.stringify(realPathname)};
+  var _HREF     = ${JSON.stringify(realHref)};
+  var _SEARCH   = ${JSON.stringify(parsed.search || '')};
+  var _HASH     = ${JSON.stringify(parsed.hash   || '')};
+  // Spoof window.location so EDS pathname-based routing fires correctly.
+  // Many browsers disallow full Location replacement, so we override each
+  // property individually on the window object.
+  try {
+    Object.defineProperty(window, 'location', {
+      configurable: true,
+      get: function() {
+        return {
+          href:     _HREF,
+          origin:   _ORIGIN,
+          protocol: ${JSON.stringify(parsed.protocol)},
+          host:     ${JSON.stringify(parsed.host)},
+          hostname: ${JSON.stringify(parsed.hostname)},
+          port:     ${JSON.stringify(parsed.port || '')},
+          pathname: _PATHNAME,
+          search:   _SEARCH,
+          hash:     _HASH,
+          toString: function(){ return _HREF; },
+          assign:   function(){},
+          replace:  function(){},
+          reload:   function(){}
+        };
+      }
     });
-
-    // Rewrite CSS url(...) inside inline <style> blocks and style="" attributes
-    html = html.replace(/url\(\s*(['"]?)([^'")]+)\1\s*\)/gi,
-      (_, q, val) => 'url(' + q + toProxied(val.trim()) + q + ')');
+  } catch(e) {}
+  function abs(u){
+    if(!u||/^(https?:|data:|blob:|\/\/)/i.test(u))return u;
+    return u.startsWith('/') ? _ORIGIN+u : _ORIGIN+'/'+u;
+  }
+  // Patch fetch
+  var _fetch = window.fetch;
+  window.fetch = function(input,init){
+    if(typeof input==='string') input=abs(input);
+    else if(input instanceof Request) input=new Request(abs(input.url),input);
+    return _fetch.call(this,input,init);
+  };
+  // Patch XMLHttpRequest
+  var _open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(m,u){
+    arguments[1]=abs(u);
+    return _open.apply(this,arguments);
+  };
+})();
+</script>`;
+    if (/<head[>\s]/i.test(html)) {
+      html = html.replace(/(<head[^>]*>)/i, '$1' + patchScript);
+    } else {
+      html = patchScript + html;
+    }
 
     // Inject postMessage scroll-sync script just before </body>
     const scrollScript =
@@ -2951,8 +3028,12 @@ app.get('/api/proxy', async (req, res) => {
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.setHeader('X-Content-Type-Options', 'nosniff');
+    // Strip framing-block headers from OUR response so this page can be iframed
+    res.removeHeader('X-Frame-Options');
+    res.removeHeader('Content-Security-Policy');
     res.send(html);
   } catch (err) {
+    console.error(`[proxy] ERROR for ${url}:`, err.message);
     res.status(502).send(
       '<html><body style="font:14px sans-serif;padding:40px;color:#dc2626">' +
       '<h2>Proxy Error</h2><p>' + err.message + '</p>' +

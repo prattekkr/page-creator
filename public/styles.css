@@ -698,3 +698,66 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",sans-serif;
   padding: 1px 6px;
   font-weight: 600;
 }
+
+/* Breakpoint toolbar */
+.compare-bp-bar {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.compare-bp-btn {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: .72rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s, border-color .15s;
+}
+.compare-bp-btn:hover { background: rgba(255,255,255,.25); }
+.compare-bp-btn.active {
+  background: rgba(255,255,255,.9);
+  color: var(--brand, #2563eb);
+  border-color: rgba(255,255,255,.9);
+  font-weight: 700;
+}
+
+/* Viewport wrapper — constrains iframe width for breakpoint simulation */
+.compare-viewport {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  /* max-width set via JS for mobile/tablet breakpoints */
+}
+.compare-viewport iframe {
+  flex: 1;
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* XFO / CSP block banner shown when AEM rejects iframe embedding */
+.compare-xfo-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fef3c7;
+  border-top: 1px solid #fbbf24;
+  color: #92400e;
+  font-size: .78rem;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+.compare-xfo-banner.hidden { display: none; }
+.compare-xfo-banner a { color: var(--brand, #2563eb); font-weight: 600; }

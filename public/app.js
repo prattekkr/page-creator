@@ -22,7 +22,7 @@ const S = {
   bulkPages:      [],     // [{ fileName, slug, pageTitle, edsPath, sections, filled, skipped, status, error }]
   findSimilar:    { info: null, mode: 'page', path: '', region: '', threshold: 88, busy: false, result: null, error: null, expanded: {} },
   compareModal:   null,   // { liveUrl, migratedUrl, canon } — split-view comparison modal
-  migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', minScore: 80, liveBase: '', a11yBackfill: true, busy: false, plan: null, error: null, editIdx: null },
+  migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', minScore: 80, liveBase: '', edsLiveBase: '', a11yBackfill: true, busy: false, plan: null, error: null, editIdx: null },
 };
 
 let _uid = 0;
@@ -1689,6 +1689,7 @@ function migrateSiteTabHtml() {
           ♿ Backfill accessibility from the live AEM page <span style="font-weight:400;color:var(--muted)">(fills image alt, captions, CTA labels missing from the XML)</span>
         </label>
         <input id="ms-livebase" class="form-input" style="margin-top:6px" value="${x(ms.liveBase)}" placeholder="Live AEM base URL, e.g. https://www.abbvie.ch  (page path derived from the source, minus the country segment)"/>
+        <input id="ms-edslivebase" class="form-input" style="margin-top:6px" value="${x(ms.edsLiveBase)}" placeholder="EDS Live Base URL for Compare, e.g. https://main--repo--org.aem.live  (canon path appended for right pane)"/>
       </div>
     </div>
 
@@ -3290,8 +3291,9 @@ function bind() {
       render();
     });
     on('btn-ms-plan', 'click', doBuildMigratePlan);
-    { const el = document.getElementById('ms-livebase'); if (el) el.addEventListener('change', () => { S.migrateSite.liveBase = el.value.trim(); }); }
-    { const el = document.getElementById('ms-a11y'); if (el) el.addEventListener('change', () => { S.migrateSite.a11yBackfill = el.checked; }); }
+    { const el = document.getElementById('ms-livebase');    if (el) el.addEventListener('change', () => { S.migrateSite.liveBase    = el.value.trim(); }); }
+    { const el = document.getElementById('ms-edslivebase'); if (el) el.addEventListener('change', () => { S.migrateSite.edsLiveBase = el.value.trim(); }); }
+    { const el = document.getElementById('ms-a11y');        if (el) el.addEventListener('change', () => { S.migrateSite.a11yBackfill = el.checked; }); }
     on('btn-mig-prepare-all', 'click', doMigPrepareAll);
     on('btn-mig-autobuild-nomatch', 'click', doMigAutoBuildNoMatch);
     on('btn-mig-create-all', 'click', doMigCreateAll);
@@ -3309,9 +3311,12 @@ function bind() {
       const r = S.migrateSite.plan?.rows[i];
       if (!r) return;
       const liveUrl = liveUrlFor(r.sourceRel);
-      const migratedUrl = r.targetPath ? `${(S.conn.aemHost || '').replace(/\/+$/, '')}${r.targetPath}.html` : '';
+      const edsLiveBase = (S.migrateSite.edsLiveBase || '').trim().replace(/\/+$/, '');
+      const migratedUrl = edsLiveBase
+        ? `${edsLiveBase}/${r.canon}`
+        : (r.targetPath ? `${(S.conn.aemHost || '').replace(/\/+$/, '')}${r.targetPath}.html` : '');
       if (!liveUrl) { alert('Set the Live AEM base URL in the Migrate Full Site config first.'); return; }
-      if (!migratedUrl) { alert('Set the "Create at" path for this row first.'); return; }
+      if (!migratedUrl) { alert('Set the EDS Live Base URL in the Migrate Full Site config, or set the "Create at" path.'); return; }
       S.compareModal = { liveUrl, migratedUrl, canon: r.canon || '' };
       render();
       setTimeout(setupCompareScrollSync, 800);
@@ -4538,22 +4543,37 @@ async function doValidateOne(i) {
 function compareModalHtml() {
   const cm = S.compareModal;
 
-  // Both panes go through /api/proxy so the server strips X-Frame-Options / CSP frame-ancestors.
-  // Left pane  (live public site) — no auth needed.
-  // Right pane (AEM Cloud author) — proxy passes Basic Auth so the AEM Cloud render endpoint
-  //   returns a real HTML page (the .html suffix renders the published/preview page, not the
-  //   JCR editor, so Basic Auth works fine for read-only page rendering).
-  const liveProxied      = `/api/proxy?url=${encodeURIComponent(cm.liveUrl)}`;
-  const { username = '', password = '' } = S.conn || {};
-  const aemProxied = cm.migratedUrl
-    ? `/api/proxy?url=${encodeURIComponent(cm.migratedUrl)}&user=${encodeURIComponent(username)}&pass=${encodeURIComponent(password)}`
-    : '';
+  // Left pane (live AEM) always needs proxying — AEM sets X-Frame-Options: SAMEORIGIN.
+  // Right pane (EDS live) must load DIRECTLY so its scripts run with the correct
+  // window.location. EDS uses fetch('/query-index.json') and pathname-based routing;
+  // proxying breaks everything because window.location becomes localhost:4000.
+  // Exception: AEM author URLs (preview pages) still need proxy + credentials.
+  const liveProxied = `/api/proxy?url=${encodeURIComponent(cm.liveUrl)}`;
+  const aemHost = (S.conn.aemHost || '').replace(/\/+$/, '');
+  const isAemAuthorUrl = cm.migratedUrl && aemHost && cm.migratedUrl.startsWith(aemHost);
+  const edsProxiedBase = cm.migratedUrl ? `/api/proxy?url=${encodeURIComponent(cm.migratedUrl)}` : '';
+  // Always proxy the migrated URL — the proxy strips X-Frame-Options and injects
+  // <base href> so relative scripts/assets resolve against the original origin.
+  // EDS live URLs (*.aem.live / *.hlx.live) also set X-Frame-Options: SAMEORIGIN
+  // and cannot be embedded directly, so they must go through the proxy too.
+  const edsProxied = isAemAuthorUrl && S.conn.username && S.conn.password
+    ? `${edsProxiedBase}&user=${encodeURIComponent(S.conn.username)}&pass=${encodeURIComponent(S.conn.password)}`
+    : edsProxiedBase;
+
+  const BREAKPOINTS = [
+    { id: 'bp-mobile',  label: '📱', title: 'Mobile (375px)',  width: 375  },
+    { id: 'bp-tablet',  label: '💻', title: 'Tablet (768px)',  width: 768  },
+    { id: 'bp-desktop', label: '🖥',  title: 'Desktop (1280px)', width: 0  },
+  ];
 
   return `
-  <div class="compare-overlay" id="compare-overlay">
+  <div class="compare-overlay" id="compare-overlay" data-bp="desktop">
     <div class="compare-header">
       <h2>⚖ Side-by-Side Compare${cm.canon ? ` — ${x(cm.canon)}` : ''}</h2>
       <span class="compare-urls">${x(cm.liveUrl)} ↔ ${x(cm.migratedUrl)}</span>
+      <div class="compare-bp-bar">
+        ${BREAKPOINTS.map(bp => `<button class="compare-bp-btn${bp.id==='bp-desktop'?' active':''}" id="${bp.id}" data-width="${bp.width}" title="${bp.title}">${bp.label} ${bp.title.replace(/\(.*\)/,'').trim()}</button>`).join('')}
+      </div>
       <button class="compare-close-btn" id="btn-compare-close" title="Close">✕</button>
     </div>
     <div class="compare-pane-labels">
@@ -4565,18 +4585,26 @@ function compareModalHtml() {
     </div>
     <div class="compare-body" id="compare-body">
       <div class="compare-pane" id="compare-pane-left">
-        <iframe id="compare-iframe-left" name="compare-left"
-          src="${x(liveProxied)}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+        <div class="compare-viewport" id="compare-vp-left">
+          <iframe id="compare-iframe-left" name="compare-left"
+            src="${x(liveProxied)}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+        </div>
       </div>
       <div class="compare-divider" id="compare-divider"></div>
       <div class="compare-pane" id="compare-pane-right">
-        ${aemProxied
-          ? `<iframe id="compare-iframe-right" name="compare-right"
-               src="${x(aemProxied)}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>`
-          : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#6b7280;font-size:.85rem">
-               No migrated URL — set the "Create at" path for this row first.
-             </div>`
-        }
+        <div class="compare-viewport" id="compare-vp-right">
+          ${edsProxied
+            ? `<iframe id="compare-iframe-right" name="compare-right"
+                 src="${x(edsProxied)}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+               <div class="compare-xfo-banner hidden" id="compare-xfo-banner">
+                 ⚠ Proxy error loading EDS page.
+                 <a href="${x(cm.migratedUrl || '')}" target="_blank" rel="noopener noreferrer">↗ Open in new tab</a> to view.
+               </div>`
+            : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#6b7280;font-size:.85rem">
+                 No migrated URL — set the "Create at" path for this row first.
+               </div>`
+          }
+        </div>
       </div>
       <div class="compare-loading" id="compare-loading">
         <span class="spinner"></span> Loading pages…
@@ -4599,18 +4627,77 @@ function setupCompareScrollSync() {
     render();
   });
 
-  // Hide loading spinner once both iframes load
+  // Breakpoint buttons — Chrome DevTools-style:
+  // Set the iframe to the exact device width, then scale it down via CSS transform
+  // so the iframe's own media queries fire at the correct breakpoint.
+  const vpLeft  = document.getElementById('compare-vp-left');
+  const vpRight = document.getElementById('compare-vp-right');
+
+  // Desktop width — large enough that EDS desktop breakpoints fire (EDS uses ~900px+).
+  const DESKTOP_WIDTH = 1440;
+
+  function applyBreakpoint(bpWidth) {
+    // 0 = Desktop — use DESKTOP_WIDTH and scale down so page renders at full desktop size.
+    const targetWidth = bpWidth > 0 ? bpWidth : DESKTOP_WIDTH;
+    [vpLeft, vpRight].forEach(vp => {
+      if (!vp) return;
+      const iframe = vp.querySelector('iframe');
+      if (!iframe) return;
+      const paneW = vp.getBoundingClientRect().width || targetWidth;
+      const scale = Math.min(1, paneW / targetWidth);
+      iframe.style.width           = targetWidth + 'px';
+      iframe.style.height          = Math.round(100 / scale) + '%';
+      iframe.style.transform       = `scale(${scale})`;
+      iframe.style.transformOrigin = 'top left';
+      vp.style.overflow            = 'hidden';
+      vp.dataset.bpWidth           = targetWidth;
+    });
+  }
+
+  // Re-apply active breakpoint when divider resizes panes
+  function reapplyBreakpointOnResize() {
+    const activeBtn = document.querySelector('.compare-bp-btn.active');
+    const w = parseInt(activeBtn?.dataset.width) || 0;
+    if (w > 0) applyBreakpoint(w);
+  }
+
+  document.querySelectorAll('.compare-bp-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.compare-bp-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyBreakpoint(parseInt(btn.dataset.width) || 0);
+    });
+  });
+
+  // Apply Desktop breakpoint immediately so iframes render at 1440px from the start
+  applyBreakpoint(0);
+
+  // Hide loading spinner once either iframe loads.
+  // Also set a hard 5-second fallback so the spinner never blocks the UI.
   const loading = document.getElementById('compare-loading');
+  const hideLoading = () => { if (loading) loading.classList.add('hidden'); };
+  setTimeout(hideLoading, 5000);
   const leftIframe  = document.getElementById('compare-iframe-left');
   const rightIframe = document.getElementById('compare-iframe-right');
   if (leftIframe) {
-    leftIframe.addEventListener('load', () => {
-      if (loading) loading.classList.add('hidden');
-    });
+    if (leftIframe.contentDocument?.readyState === 'complete') hideLoading();
+    leftIframe.addEventListener('load', hideLoading);
   }
   if (rightIframe) {
+    if (rightIframe.contentDocument?.readyState === 'complete') hideLoading();
     rightIframe.addEventListener('load', () => {
-      if (loading) loading.classList.add('hidden');
+      hideLoading();
+      // Detect X-Frame-Options block: if the iframe loaded but contentDocument is null
+      // or empty (cross-origin block), show the XFO banner.
+      try {
+        const doc = rightIframe.contentDocument;
+        if (!doc || !doc.body) {
+          document.getElementById('compare-xfo-banner')?.classList.remove('hidden');
+        }
+      } catch (_) {
+        // cross-origin block → show banner
+        document.getElementById('compare-xfo-banner')?.classList.remove('hidden');
+      }
     });
   }
 
@@ -4637,7 +4724,13 @@ function setupCompareScrollSync() {
       right.style.width = (total - newLeft) + 'px';
     });
     document.addEventListener('mouseup', () => {
-      if (dragging) { dragging = false; divider.classList.remove('dragging'); document.body.style.userSelect = ''; }
+      if (dragging) {
+        dragging = false;
+        divider.classList.remove('dragging');
+        document.body.style.userSelect = '';
+        // Re-scale iframes after pane resize
+        reapplyBreakpointOnResize();
+      }
     });
   }
 

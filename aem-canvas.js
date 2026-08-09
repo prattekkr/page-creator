@@ -1732,7 +1732,11 @@ function emitNode(node, sections) {
         if (hasBg && leading.length > 0 && leading[0].type === 'separator') {
           const sepBlock = leading[0];
           const rest = leading.slice(1);
-          // Prepend the separator to every grid-section in the current gc
+          // Port the separator as the first child of EVERY grid-section inside the current gc.
+          // When the container has bg-image or bg-color, the separator visually belongs
+          // inside the coloured/image band — wrapping it in its own standalone section
+          // would break the visual continuity of the band. This rule applies to both
+          // bg-color and bg-image containers.
           for (const gs of gc.blocks) {
             if (gs.type === 'grid-section') {
               gs.children.unshift({ type: sepBlock.type, props: { ...sepBlock.props }, children: [...(sepBlock.children || [])] });
