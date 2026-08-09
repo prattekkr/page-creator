@@ -2858,6 +2858,110 @@ app.get('/api/validate-page/diff/:filename', (req, res) => {
   res.sendFile(file);
 });
 
+// ── Compare proxy ─────────────────────────────────────────────────────────────
+// Fetches an external URL server-side so both iframes are same-origin → scroll sync works.
+app.get('/api/proxy', async (req, res) => {
+  const url  = String(req.query.url  || '').trim();
+  const user = String(req.query.user || '').trim();
+  const pass = String(req.query.pass || '').trim();
+  if (!url || !/^https?:\/\//i.test(url))
+    return res.status(400).send('Invalid URL');
+  try {
+    const fetchHeaders = { 'User-Agent': 'Mozilla/5.0 (compatible; PageCreator/1.0)' };
+    // Pass Basic Auth when AEM credentials are provided
+    if (user && pass)
+      fetchHeaders['Authorization'] = 'Basic ' + Buffer.from(user + ':' + pass).toString('base64');
+
+    const r = await fetch(url, { headers: fetchHeaders, redirect: 'follow' });
+    const contentType = (r.headers.get('content-type') || 'text/html');
+
+    // For non-HTML responses (CSS, JS, fonts, images) fetch through proxy transparently
+    if (!contentType.includes('text/html')) {
+      const buf = await r.arrayBuffer();
+      res.setHeader('Content-Type', contentType);
+      res.setHeader('Cache-Control', 'public, max-age=300');
+      return res.send(Buffer.from(buf));
+    }
+
+    let html = await r.text();
+    const parsed    = new URL(url);
+    const origin    = parsed.origin;   // e.g. https://www.abbvie.ch
+    // basePath = everything up to the last slash (for resolving relative paths)
+    const basePath  = parsed.href.replace(/\?.*/, '').replace(/[^/]+$/, '');
+
+    // Build the proxy prefix for routing asset requests through our server
+    const proxyBase = '/api/proxy?url=';
+
+    // Convert any URL value → proxied absolute URL so ALL sub-resources
+    // (CSS, JS, images, fonts) go through the server and bypass CORS/CSP.
+    function toProxied(val) {
+      if (!val) return val;
+      const v = val.trim();
+      // Pass-throughs — never proxy
+      if (v.startsWith('data:') || v.startsWith('javascript:') ||
+          v.startsWith('#')     || v.startsWith('mailto:')     ||
+          v.startsWith('tel:')  || v.startsWith('blob:'))       return v;
+      // Already through our proxy
+      if (v.startsWith(proxyBase)) return v;
+      // Resolve to an absolute external URL first, then wrap in proxy
+      let abs;
+      if (v.startsWith('https://') || v.startsWith('http://'))  abs = v;
+      else if (v.startsWith('//'))  abs = parsed.protocol + v;
+      else if (v.startsWith('/'))   abs = origin + v;
+      else abs = basePath + v;
+      return proxyBase + encodeURIComponent(abs);
+    }
+
+    // Rewrite href / src / action attributes (double-quoted and single-quoted)
+    // Exception: anchor hrefs (#fragments, mailto:, tel:) are left alone.
+    html = html.replace(/(href|src|action)\s*=\s*"([^"]*)"/gi,
+      (_, attr, val) => attr + '="' + toProxied(val) + '"');
+    html = html.replace(/(href|src|action)\s*=\s*'([^']*)'/gi,
+      (_, attr, val) => attr + "='" + toProxied(val) + "'");
+
+    // Rewrite srcset (comma-separated list of "url [descriptor]" pairs)
+    html = html.replace(/srcset\s*=\s*"([^"]*)"/gi, (_, val) => {
+      const rewritten = val.split(',').map(s => {
+        const parts = s.trim().split(/\s+/);
+        if (parts[0]) parts[0] = toProxied(parts[0]);
+        return parts.join(' ');
+      }).join(', ');
+      return 'srcset="' + rewritten + '"';
+    });
+
+    // Rewrite CSS url(...) inside inline <style> blocks and style="" attributes
+    html = html.replace(/url\(\s*(['"]?)([^'")]+)\1\s*\)/gi,
+      (_, q, val) => 'url(' + q + toProxied(val.trim()) + q + ')');
+
+    // Inject postMessage scroll-sync script just before </body>
+    const scrollScript =
+      '<script>(function(){' +
+      'window.addEventListener("scroll",function(){' +
+      '  try{' +
+      '    var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;' +
+      '    window.parent.postMessage({type:"iframe-scroll",' +
+      '      pct:h>0?document.documentElement.scrollTop/h:0,src:window.name},"*");' +
+      '  }catch(e){}' +
+      '},{passive:true});' +
+      '})();<\/script>';
+
+    html = html.includes('</body>')
+      ? html.replace(/<\/body>/i, scrollScript + '</body>')
+      : html + scrollScript;
+
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.send(html);
+  } catch (err) {
+    res.status(502).send(
+      '<html><body style="font:14px sans-serif;padding:40px;color:#dc2626">' +
+      '<h2>Proxy Error</h2><p>' + err.message + '</p>' +
+      '<p style="color:#6b7280;font-size:12px">' + url + '</p>' +
+      '</body></html>'
+    );
+  }
+});
+
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
 app.listen(PORT, () => console.log(`AEM Page Builder -> http://localhost:${PORT}`));

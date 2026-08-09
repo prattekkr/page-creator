@@ -21,6 +21,7 @@ const S = {
   bulkTemplate:   null,   // deep clone of S.sections used as layout template for bulk import
   bulkPages:      [],     // [{ fileName, slug, pageTitle, edsPath, sections, filled, skipped, status, error }]
   findSimilar:    { info: null, mode: 'page', path: '', region: '', threshold: 88, busy: false, result: null, error: null, expanded: {} },
+  compareModal:   null,   // { liveUrl, migratedUrl, canon } — split-view comparison modal
   migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', minScore: 80, liveBase: '', a11yBackfill: true, busy: false, plan: null, error: null, editIdx: null },
 };
 
@@ -205,6 +206,7 @@ function html() {
     ${S.modal === 'publish-aem'       ? renderPublishModal(S._publishChanges || []) : ''}
     ${S.modal === 'validation-detail' ? validationDetailModalHtml()                 : ''}
     ${S.modal === 'a11y-warning'      ? a11yWarningModalHtml(S._a11yIssues || [], S._a11yPendingAction || '') : ''}
+    ${S.compareModal                  ? compareModalHtml()                                                    : ''}
     ${topbarHtml()}
     ${S._draftRestored ? `<div class="draft-banner" id="draft-banner">
       Draft restored — ${S.sections.length} section${S.sections.length !== 1 ? 's' : ''} reloaded from your last session.
@@ -1632,6 +1634,7 @@ function migrateSiteTabHtml() {
           ${(r.status === 'ready' || r.status === 'done') ? `<button class="btn btn-xs btn-ghost" data-mig-preview="${i}" title="Open a visual layout preview in a new tab">👁 Layout</button><button class="btn btn-xs btn-ghost" data-mig-preview-page="${i}" title="Create this page under /preview in AEM and open it" ${r._previewingPage ? 'disabled' : ''}>🔍 Preview</button><button class="btn btn-xs btn-ghost" data-mig-check="${i}" title="Edit canvas">✏ Edit</button><button class="btn btn-xs btn-ghost" data-mig-create="${i}" title="Create page in AEM" ${r.status === 'creating' ? 'disabled' : ''}>↑ Create</button>` : ''}
           ${r.status === 'done' ? `<button class="btn btn-xs btn-ghost" data-mig-validate="${i}" title="Validate migrated page vs live AEM" ${r._validating ? 'disabled' : ''}>${r._validating ? '⏳' : '✓ Validate'}</button>` : ''}
           ${r.validation ? `<button class="btn btn-xs btn-ghost" data-show-validation="${i}" title="View validation report" style="color:${r.validation.finalScore >= 85 ? '#15803d' : r.validation.finalScore >= 70 ? '#ca8a04' : '#dc2626'}">📊 ${r.validation.finalScore ?? '?'}%</button>` : ''}
+          ${r.status === 'done' && ms.liveBase ? `<button class="btn btn-xs btn-ghost" data-mig-compare="${i}" title="Side-by-side comparison with scroll sync">⚖ Compare</button>` : ''}
           </div>
           ${r.auto ? ` <span class="vm-pill ${r.confidence >= 90 ? 'vm-pill-ok' : r.confidence >= 70 ? 'vm-pill-warn' : 'vm-pill-bad'}" title="${Object.keys(r.unknownTypes || {}).length ? 'Unmapped: ' + x(Object.entries(r.unknownTypes).map(([t, n]) => `${t}×${n}`).join(', ')) : 'all blocks mapped to known EDS types'}">🤖 ${r.confidence}%</span>` : ''}
           ${r.a11y ? (r.a11y.ok ? ` <span class="vm-pill vm-pill-ok" title="Accessibility filled from live AEM page">♿ ${(r.a11y.imageAlt || 0) + (r.a11y.caption || 0) + (r.a11y.ctaAria || 0) + (r.a11y.videoPoster || 0)}</span>` : ` <span class="vm-pill vm-pill-warn" title="A11y backfill failed: ${x(r.a11y.error || '')}">♿ ✗</span>`) : ''}
@@ -3301,6 +3304,18 @@ function bind() {
     qAll('[data-mig-create]').forEach(el => el.addEventListener('click', () => doMigCreateOne(Number(el.dataset.migCreate))));
     qAll('[data-mig-open-author]').forEach(el => el.addEventListener('click', () => openAuthoringPage(S.migrateSite.plan?.rows[Number(el.dataset.migOpenAuthor)]?.authorUrl)));
     qAll('[data-mig-validate]').forEach(el => el.addEventListener('click', () => doValidateOne(Number(el.dataset.migValidate))));
+    qAll('[data-mig-compare]').forEach(el => el.addEventListener('click', () => {
+      const i = Number(el.dataset.migCompare);
+      const r = S.migrateSite.plan?.rows[i];
+      if (!r) return;
+      const liveUrl = liveUrlFor(r.sourceRel);
+      const migratedUrl = r.targetPath ? `${(S.conn.aemHost || '').replace(/\/+$/, '')}${r.targetPath}.html` : '';
+      if (!liveUrl) { alert('Set the Live AEM base URL in the Migrate Full Site config first.'); return; }
+      if (!migratedUrl) { alert('Set the "Create at" path for this row first.'); return; }
+      S.compareModal = { liveUrl, migratedUrl, canon: r.canon || '' };
+      render();
+      setTimeout(setupCompareScrollSync, 800);
+    }));
     qAll('[data-show-validation]').forEach(el => el.addEventListener('click', () => {
       const i = Number(el.dataset.showValidation);
       const r = S.migrateSite.plan?.rows[i];
@@ -4517,4 +4532,156 @@ async function doValidateOne(i) {
     r.validation = { ok: false, error: e.message, finalScore: null, scores: {}, issues: [e.message], scoreLabel: { label: 'Error', color: '#dc2626' } };
   }
   r._validating = false; render();
+}
+
+// ── Compare Modal (split-view with scroll sync) ───────────────────────────────
+function compareModalHtml() {
+  const cm = S.compareModal;
+
+  // Both panes go through /api/proxy so the server strips X-Frame-Options / CSP frame-ancestors.
+  // Left pane  (live public site) — no auth needed.
+  // Right pane (AEM Cloud author) — proxy passes Basic Auth so the AEM Cloud render endpoint
+  //   returns a real HTML page (the .html suffix renders the published/preview page, not the
+  //   JCR editor, so Basic Auth works fine for read-only page rendering).
+  const liveProxied      = `/api/proxy?url=${encodeURIComponent(cm.liveUrl)}`;
+  const { username = '', password = '' } = S.conn || {};
+  const aemProxied = cm.migratedUrl
+    ? `/api/proxy?url=${encodeURIComponent(cm.migratedUrl)}&user=${encodeURIComponent(username)}&pass=${encodeURIComponent(password)}`
+    : '';
+
+  return `
+  <div class="compare-overlay" id="compare-overlay">
+    <div class="compare-header">
+      <h2>⚖ Side-by-Side Compare${cm.canon ? ` — ${x(cm.canon)}` : ''}</h2>
+      <span class="compare-urls">${x(cm.liveUrl)} ↔ ${x(cm.migratedUrl)}</span>
+      <button class="compare-close-btn" id="btn-compare-close" title="Close">✕</button>
+    </div>
+    <div class="compare-pane-labels">
+      <div class="compare-pane-label">🌐 Live AEM <span class="cpl-url">${x(cm.liveUrl)}</span></div>
+      <div class="compare-pane-label compare-pane-label--right">
+        ✅ Migrated EDS <span class="cpl-url">${x(cm.migratedUrl)}</span>
+        <a class="cpl-open-link" href="${x(cm.migratedUrl || '')}" target="_blank" rel="noopener noreferrer" title="Open in new tab">↗ open</a>
+      </div>
+    </div>
+    <div class="compare-body" id="compare-body">
+      <div class="compare-pane" id="compare-pane-left">
+        <iframe id="compare-iframe-left" name="compare-left"
+          src="${x(liveProxied)}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+      </div>
+      <div class="compare-divider" id="compare-divider"></div>
+      <div class="compare-pane" id="compare-pane-right">
+        ${aemProxied
+          ? `<iframe id="compare-iframe-right" name="compare-right"
+               src="${x(aemProxied)}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>`
+          : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#6b7280;font-size:.85rem">
+               No migrated URL — set the "Create at" path for this row first.
+             </div>`
+        }
+      </div>
+      <div class="compare-loading" id="compare-loading">
+        <span class="spinner"></span> Loading pages…
+      </div>
+    </div>
+    <div class="compare-status">
+      <span class="compare-sync-badge" id="compare-sync-badge">⟳ Scroll sync: waiting</span>
+      <span>Drag divider to resize panes · Scroll either pane to sync both</span>
+    </div>
+  </div>`;
+}
+
+function setupCompareScrollSync() {
+  const overlay  = document.getElementById('compare-overlay');
+  if (!overlay) return;
+
+  // Close button
+  document.getElementById('btn-compare-close')?.addEventListener('click', () => {
+    S.compareModal = null;
+    render();
+  });
+
+  // Hide loading spinner once both iframes load
+  const loading = document.getElementById('compare-loading');
+  const leftIframe  = document.getElementById('compare-iframe-left');
+  const rightIframe = document.getElementById('compare-iframe-right');
+  if (leftIframe) {
+    leftIframe.addEventListener('load', () => {
+      if (loading) loading.classList.add('hidden');
+    });
+  }
+  if (rightIframe) {
+    rightIframe.addEventListener('load', () => {
+      if (loading) loading.classList.add('hidden');
+    });
+  }
+
+  // Divider drag to resize panes
+  const divider = document.getElementById('compare-divider');
+  const body    = document.getElementById('compare-body');
+  const left    = document.getElementById('compare-pane-left');
+  const right   = document.getElementById('compare-pane-right');
+  if (divider && body && left && right) {
+    let dragging = false, startX = 0, startLeft = 0;
+    divider.addEventListener('mousedown', e => {
+      dragging = true; startX = e.clientX;
+      startLeft = left.getBoundingClientRect().width;
+      divider.classList.add('dragging');
+      document.body.style.userSelect = 'none';
+    });
+    document.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      const total = body.getBoundingClientRect().width - 4;
+      const newLeft = Math.max(200, Math.min(total - 200, startLeft + (e.clientX - startX)));
+      left.style.flex  = 'none';
+      right.style.flex = 'none';
+      left.style.width  = newLeft + 'px';
+      right.style.width = (total - newLeft) + 'px';
+    });
+    document.addEventListener('mouseup', () => {
+      if (dragging) { dragging = false; divider.classList.remove('dragging'); document.body.style.userSelect = ''; }
+    });
+  }
+
+  // Scroll sync via postMessage (injected by proxy) and direct iframe scroll events
+  const badge = document.getElementById('compare-sync-badge');
+  let isSyncing = false;
+
+  function syncScroll(pct, sourceId) {
+    if (isSyncing) return;
+    isSyncing = true;
+    const targetId = sourceId === 'compare-left' ? 'compare-iframe-right' : 'compare-iframe-left';
+    const target   = document.getElementById(targetId);
+    if (target) {
+      try {
+        const doc = target.contentDocument || target.contentWindow?.document;
+        if (doc) {
+          const h = doc.documentElement.scrollHeight - doc.documentElement.clientHeight;
+          doc.documentElement.scrollTop = pct * h;
+        }
+      } catch (_) { /* cross-origin blocked */ }
+    }
+    if (badge) badge.textContent = '✓ Scroll sync: active';
+    setTimeout(() => { isSyncing = false; }, 50);
+  }
+
+  window.addEventListener('message', e => {
+    if (e.data?.type === 'iframe-scroll') syncScroll(e.data.pct, e.data.src);
+  });
+
+  // Direct scroll on left iframe (if same-origin after proxy)
+  ['compare-iframe-left','compare-iframe-right'].forEach(id => {
+    const f = document.getElementById(id);
+    if (!f) return;
+    f.addEventListener('load', () => {
+      try {
+        const doc = f.contentDocument || f.contentWindow?.document;
+        if (doc) {
+          doc.addEventListener('scroll', () => {
+            const h = doc.documentElement.scrollHeight - doc.documentElement.clientHeight;
+            const pct = h > 0 ? doc.documentElement.scrollTop / h : 0;
+            syncScroll(pct, f.name);
+          }, { passive: true });
+        }
+      } catch (_) {}
+    });
+  });
 }
