@@ -576,9 +576,11 @@ function mapLeaf(node, inheritedBlockWidth = '') {
 
       if (podcastParam && typeof podcastParam === 'object') {
         // Old embed/v2/embed format: @attributeName / @attributeValue
+        // Normalize "script src" (with space) → "script-src" (with hyphen) for EDS compatibility.
         for (const [, item] of Object.entries(podcastParam)) {
           if (!item || typeof item !== 'object') continue;
-          const key = String(item['@attributeName'] || '').trim();
+          const rawKey = String(item['@attributeName'] || '').trim();
+          const key = rawKey === 'script src' ? 'script-src' : rawKey;
           const value = String(item['@attributeValue'] || '').trim();
           if (key) jcrItems[`item${idx++}`] = { 'jcr:primaryType': 'nt:unstructured', key, value };
         }
