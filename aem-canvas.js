@@ -555,12 +555,46 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     // embeddableResourceType was skipped from extractProps, so read it directly from the node.
     const embRt = String(node['@embeddableResourceType'] || '').trim();
     const suffix = embRt.split('/').pop().toLowerCase();
+
     if (suffix && EMBEDDABLE_MAP[suffix]) {
       props.embeddable = EMBEDDABLE_MAP[suffix];
     } else if (!props.embeddable) {
       // Fallback: infer from which props are populated
       if (props.oneTrustId) props.embeddable = 'oneTrust';
       else if (props.videoId) props.embeddable = 'podcast';
+    }
+
+    // Podcast embed: rebuild the podcastDataAttributes nested JCR node.
+    // AEM (old embed/v2/embed) stores attrs in `podcastparam` as itemN with @attributeName/@attributeValue.
+    // AEM (new block/v1/block) stores attrs in `podcastDataAttributes` as itemN with @key/@value (or key/value).
+    // EDS JCR block model expects: podcastDataAttributes.item0.key / podcastDataAttributes.item0.value
+    if (props.embeddable === 'podcast') {
+      const podcastParam = node.podcastparam;
+      const podcastDataAttr = node.podcastDataAttributes;
+      const jcrItems = {};
+      let idx = 0;
+
+      if (podcastParam && typeof podcastParam === 'object') {
+        // Old embed/v2/embed format: @attributeName / @attributeValue
+        for (const [, item] of Object.entries(podcastParam)) {
+          if (!item || typeof item !== 'object') continue;
+          const key = String(item['@attributeName'] || '').trim();
+          const value = String(item['@attributeValue'] || '').trim();
+          if (key) jcrItems[`item${idx++}`] = { 'jcr:primaryType': 'nt:unstructured', key, value };
+        }
+      } else if (podcastDataAttr && typeof podcastDataAttr === 'object') {
+        // New block/v1/block format: @key/@value (XML) or key/value (JSON)
+        for (const [, item] of Object.entries(podcastDataAttr)) {
+          if (!item || typeof item !== 'object') continue;
+          const key = String(item['@key'] !== undefined ? item['@key'] : (item.key ?? '')).trim();
+          const value = String(item['@value'] !== undefined ? item['@value'] : (item.value ?? '')).trim();
+          if (key) jcrItems[`item${idx++}`] = { 'jcr:primaryType': 'nt:unstructured', key, value };
+        }
+      }
+
+      if (idx > 0) {
+        props.podcastDataAttributes = { 'jcr:primaryType': 'nt:unstructured', ...jcrItems };
+      }
     }
   }
 
