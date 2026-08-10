@@ -731,7 +731,17 @@ function collectLeaves(node, out, inheritedBlockWidth = '', applyContainerWidth 
     const rt = RT(child);
     if (!rt || isLayoutWrapper(rt)) { collectLeaves(child, out, width, applyContainerWidth); continue; }
     if (isXF(rt)) continue;
-    if (isGrid(rt)) { collectLeaves(child, out, width, applyContainerWidth); continue; }      // nested grid → flatten its cell content
+    if (isGrid(rt)) {
+      const cols = gridColumns(child);
+      // Multi-column grid nested inside a container or section → preserve as inner-grid.
+      // Single-column / no-columns grids are transparent wrappers → flatten (legacy behaviour).
+      if (cols.length && (cols.length > 1 || cols[0].width !== '12')) {
+        emitInnerGrid(child, out, 0);
+      } else {
+        collectLeaves(child, out, width, applyContainerWidth);   // no real columns → flatten
+      }
+      continue;
+    }
     if (isContainer(rt)) {
       // ── NEW PATTERN: nested container with backgroundColor + direct grid ──
       // Preserve the bg-color band and grid column layout as an inner-grid
