@@ -538,6 +538,32 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     props.classes_customDynamicClass = [...set].join(',');
   }
 
+  // Custom-embed: derive the EDS `embeddable` select value from the AEM embeddableResourceType.
+  // AEM stores the full sling:resourceType path (e.g. "…/embed/embeddable/onetrust") while EDS
+  // expects a short selector string matching the component-model select options.
+  // Also: when the parent embed node has no embeddableResourceType but does have oneTrustId,
+  // default to "oneTrust" so the EDS UI shows the correct conditional fields.
+  if (type === 'custom-embed') {
+    const EMBEDDABLE_MAP = {
+      onetrust:    'oneTrust',
+      podcast:     'podcast',
+      wallsio:     'wallsio',
+      jobpixel:    'jobPixle',
+      toolselector: 'toolSelector',
+      chatbot:     'chatbot',
+    };
+    // embeddableResourceType was skipped from extractProps, so read it directly from the node.
+    const embRt = String(node['@embeddableResourceType'] || '').trim();
+    const suffix = embRt.split('/').pop().toLowerCase();
+    if (suffix && EMBEDDABLE_MAP[suffix]) {
+      props.embeddable = EMBEDDABLE_MAP[suffix];
+    } else if (!props.embeddable) {
+      // Fallback: infer from which props are populated
+      if (props.oneTrustId) props.embeddable = 'oneTrust';
+      else if (props.videoId) props.embeddable = 'podcast';
+    }
+  }
+
   // AEM inline richtext typography classes (body-unica-*) → the block's classes_commonCustomClass
   // ("Custom Class"), and unwrap ALL <span>s so the text isn't double-styled. Only body-unica-*
   // is kept — theme classes (light-font) and Word-paste junk (BCX*, NormalTextRun, SCXW*…) are dropped.

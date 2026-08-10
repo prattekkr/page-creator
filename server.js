@@ -1034,6 +1034,28 @@ function walkXmlNode(node, ordered, depth = 0) {
       else delete props['classes_customDynamicClass'];
     }
 
+    // Custom-embed: derive the EDS `embeddable` select value from AEM embeddableResourceType.
+    // AEM stores "…/embed/embeddable/onetrust" etc.; EDS expects a short selector string.
+    // embeddableResourceType is in skipProps so it never lands in props — read directly from node.
+    if (type === 'custom-embed') {
+      const EMBEDDABLE_MAP = {
+        onetrust:     'oneTrust',
+        podcast:      'podcast',
+        wallsio:      'wallsio',
+        jobpixel:     'jobPixle',
+        toolselector: 'toolSelector',
+        chatbot:      'chatbot',
+      };
+      const embRt = String(child['@embeddableResourceType'] || '').trim();
+      const suffix = embRt.split('/').pop().toLowerCase();
+      if (suffix && EMBEDDABLE_MAP[suffix]) {
+        props.embeddable = EMBEDDABLE_MAP[suffix];
+      } else if (!props.embeddable) {
+        if (props.oneTrustId) props.embeddable = 'oneTrust';
+        else if (props.videoId) props.embeddable = 'podcast';
+      }
+    }
+
     // Count child component nodes and store as a prop (e.g. totalSlides for carousel)
     if (mapping?.countChildrenAsProp) {
       const childCount = Object.entries(child).filter(([k, v]) =>
