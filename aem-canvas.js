@@ -1182,6 +1182,10 @@ const overlapsHero = node => {
   if (cls.includes('overlap-predecessor') || cls.includes('homepage-overlap')) return true;
   // Structural fallback: container that holds an H1 or breadcrumb (no grid) is the hero intro band.
   if (!containerHasGrid(node) && containerHasH1OrBreadcrumb(node)) return true;
+  // Mixed header fallback: a container whose CHILD has breadcrumb+H1 (even with grids) is an
+  // overlap container. The child will be split at its first grid by splitMixedHeaderContainer.
+  const children = semanticChildren(node);
+  if (children.some(isBreadcrumbH1Container) || children.some(isMixedHeaderContainer)) return true;
   return false;
 };
 
@@ -2020,12 +2024,81 @@ function isBreadcrumbH1Container(node) {
   })(node);
   return breadcrumb && h1;
 }
+
+// A "mixed" header container has breadcrumb+H1 (intro content for the hero) but ALSO
+// contains grids (badges, episode lists, etc.) that belong in body sections.
+// These must be split: pre-grid leaf components → absorbed into hero, grids → body sections.
+// Example: parlons-en-saison-1 container3 has breadcrumb+H1+text+separator+grid(badges).
+function isMixedHeaderContainer(node) {
+  if (!isContainer(RT(node))) return false;
+  if (!containerHasAnyGrid(node)) return false; // pure header handled by isBreadcrumbH1Container
+  let breadcrumb = false, h1 = false;
+  (function scan(n) {
+    for (const [, child] of childEntries(n)) {
+      const rt = RT(child);
+      if (!rt || isLayoutWrapper(rt)) { scan(child); continue; }
+      if (isGrid(rt)) continue; // grids present but don't disqualify breadcrumb+H1 test
+      if (isContainer(rt)) continue; // nested containers are separate scopes
+      const type = componentMap[rt]?.edsType;
+      if (type === 'breadcrumb') breadcrumb = true;
+      if (type === 'custom-title' && String(child['@type'] || '').toLowerCase() === 'h1') h1 = true;
+    }
+  })(node);
+  return breadcrumb && h1;
+}
+
+// For a mixed header container, collect all leaf nodes that appear BEFORE the first grid
+// (in document order). These are the hero intro blocks: breadcrumb, H1, text, separators.
+// Returns { heroLeaves: node[], gridsAndRest: node[] } where gridsAndRest are grids +
+// any nodes after the first grid.
+function splitMixedHeaderContainer(node) {
+  const heroLeaves = [];
+  const gridsAndRest = [];
+  let foundFirstGrid = false;
+  function walk(n) {
+    for (const [, child] of childEntries(n)) {
+      const rt = RT(child);
+      if (!rt || isLayoutWrapper(rt)) { walk(child); continue; }
+      if (isGrid(rt)) {
+        foundFirstGrid = true;
+        gridsAndRest.push(child);
+      } else if (isContainer(rt)) {
+        if (foundFirstGrid) { gridsAndRest.push(child); }
+        else { walk(child); }
+      } else {
+        if (foundFirstGrid) { gridsAndRest.push(child); }
+        else { heroLeaves.push(child); }
+      }
+    }
+  }
+  walk(node);
+  return { heroLeaves, gridsAndRest };
+}
 function splitHeroContinuation(node) {
   const children = semanticChildren(node);
+  // First try pure breadcrumb+H1 container (no grids inside it)
   const headerIndex = children.findIndex(isBreadcrumbH1Container);
-  if (headerIndex < 0) return null;
-  const body = children.filter((_, index) => index !== headerIndex);
-  return body.length ? { header: children[headerIndex], body } : null;
+  if (headerIndex >= 0) {
+    const body = children.filter((_, index) => index !== headerIndex);
+    return body.length ? { header: children[headerIndex], body } : null;
+  }
+  // Special case: a child container that has breadcrumb+H1 AND grids (mixed header).
+  // Split it at its first grid: pre-grid leaves → hero, grids+rest → body.
+  const mixedIndex = children.findIndex(isMixedHeaderContainer);
+  if (mixedIndex >= 0) {
+    const mixedNode = children[mixedIndex];
+    const { heroLeaves, gridsAndRest } = splitMixedHeaderContainer(mixedNode);
+    if (heroLeaves.length === 0) return null; // nothing to absorb into hero
+    // Build a synthetic header object that collectLeaves can walk:
+    // wrap heroLeaves in a container-like structure
+    const syntheticHeader = { '@sling:resourceType': mixedNode['@sling:resourceType'], ...Object.fromEntries(heroLeaves.map((n, i) => [`_heroLeaf${i}`, n])) };
+    // Collect the rest of the overlap container's children (after the mixed container) as body
+    const bodySiblings = children.filter((_, i) => i !== mixedIndex);
+    // gridsAndRest go first (the grids from inside the mixed container), then bodySiblings
+    const body = [...gridsAndRest, ...bodySiblings];
+    return { header: syntheticHeader, heroLeaves, body, mixedSplit: true };
+  }
+  return null;
 }
 
 // After a hero absorbs the breadcrumb+H1 header of an overlap container, the rest
@@ -2036,7 +2109,11 @@ function splitHeroContinuation(node) {
 // width-container pattern), while every nested container flushes and starts fresh
 // sections (matching the migraine-friendly-workplace twin). Section props derive from
 // the nearest container context, so styleless nested containers get clean defaults.
-function emitHeroContinuationSections(bodyNodes, wrapper, sections) {
+// mixedSplit=true: grids emit as top-level grid-containers (grid-container + grid-sections).
+// mixedSplit=false (default): grids emit as inner-grids inside sections (standard hero continuation).
+// This flag is ONLY set when the overlap container was a mixed-header (breadcrumb+H1+grids),
+// so no other hero continuation patterns are affected.
+function emitHeroContinuationSections(bodyNodes, wrapper, sections, mixedSplit = false) {
   let cur = null;
   const ensure = props => { if (!cur) { cur = { type: 'section', props: { ...props }, blocks: [] }; sections.push(cur); } return cur; };
   const walk = (list, ctxProps) => {
@@ -2044,7 +2121,30 @@ function emitHeroContinuationSections(bodyNodes, wrapper, sections) {
       const rt = RT(child);
       if (!rt || isLayoutWrapper(rt)) { walk(childEntries(child).map(([, c]) => c), ctxProps); continue; }
       if (isXF(rt)) continue;
-      if (isGrid(rt)) emitInnerGrid(child, ensure(ctxProps).blocks, 0);
+      if (isGrid(rt)) {
+        if (mixedSplit) {
+          // Mixed-header special case: each grid emits as its own grid-container + grid-sections.
+          // Flush any pending section first so the grid-container stands alone.
+          // Strip hero-overlap-specific classes (overlap-predecessor, medium-radius, homepage-overlap)
+          // from the wrapper scope so they don't leak onto the grid-container props.
+          const HERO_OVERLAP_CLS = new Set(['overlap-predecessor', 'homepage-overlap', 'large-radius', 'medium-radius', 'small-radius', 'semi-transparent-layer', 'align-center']);
+          const cleanProps = (gcProps) => {
+            const cls = splitCls([gcProps.style_customDynamicClass]).filter(c => !HERO_OVERLAP_CLS.has(c));
+            return { ...gcProps, style_customDynamicClass: ['grid-container', ...cls.filter(c => c !== 'grid-container')].join(',') };
+          };
+          cur = null;
+          const gc = { type: 'grid-container', props: cleanProps(gridContainerProps([wrapper], child)), blocks: [] };
+          expandGrid(child, gc.blocks, [wrapper]);
+          pushGridContainersByRows(sections, gc, (sourceGrid, scopes) =>
+            cleanProps(gridContainerProps(scopes.length ? scopes : [wrapper], sourceGrid)));
+        } else {
+          // Standard hero continuation: inner-grid inside a section.
+          // Flush cur before and after so consecutive grids don't pile into one section.
+          cur = null;
+          emitInnerGrid(child, ensure(ctxProps).blocks, 0);
+          cur = null;
+        }
+      }
       else if (isContainer(rt)) { cur = null; walk(semanticChildren(child), sectionProps(child)); cur = null; }
       else ensure(ctxProps).blocks.push(...mapLeafExpanded(child));
     }
@@ -2129,14 +2229,25 @@ function aemToCanvas(jcrContent, opts) {
           const split = splitHeroContinuation(nx);
           if (split) {
             const headerBlocks = [];
-            collectLeaves(split.header, headerBlocks, '', false);
+            if (split.mixedSplit && split.heroLeaves) {
+              // Mixed header: heroLeaves are actual AEM leaf nodes, not a container.
+              // Map them directly instead of using collectLeaves on a synthetic wrapper.
+              for (const leaf of split.heroLeaves) {
+                headerBlocks.push(...mapLeafExpanded(leaf, ''));
+              }
+            } else {
+              collectLeaves(split.header, headerBlocks, '', false);
+            }
             blocks.push(...headerBlocks);
             // Only a DIRECT grid in the overlap container triggers per-grid /
             // per-nested-container splitting (emitHeroContinuationSections) — the case the
             // prior `!containerHasGrid` guard wrongly excluded from hero absorption. A grid
             // nested inside a width-style sub-container stays on the existing body-group path
             // (cols-12 inner-grid), which the corpus already migrates correctly (e.g. contact-us).
-            bodyGroups.push({ wrapper: nx, nodes: split.body, split: containerHasGrid(nx) });
+            // For mixedSplit, body always contains grids (from gridsAndRest + body siblings).
+            // Use emitHeroContinuationSections unconditionally for mixedSplit so that the
+            // badge grid and episode grids each emit as their own sections.
+            bodyGroups.push({ wrapper: nx, nodes: split.body, split: split.mixedSplit || containerHasGrid(nx), mixedSplit: !!split.mixedSplit });
             // strip width classes from header blocks absorbed into hero
             j++;
             break;                                  // later containers are page body, not hero continuation
@@ -2183,7 +2294,10 @@ function aemToCanvas(jcrContent, opts) {
       for (const group of bodyGroups) {
         // Hero-continuation body that carries a grid: emit per-grid / per-nested-container
         // sections instead of one lumped section (structure verified against the twin).
-        if (group.split) { emitHeroContinuationSections(group.nodes, group.wrapper, sections); continue; }
+        // Pass mixedSplit flag so grids from a mixed-header overlap emit as grid-containers
+        // (not inner-grids). group.split is true for both standard and mixed-header cases;
+        // the mixedSplit flag distinguishes which grid emission path to use.
+        if (group.split) { emitHeroContinuationSections(group.nodes, group.wrapper, sections, !!group.mixedSplit); continue; }
         const bodyBlocks = [];
         for (const bodyNode of group.nodes) {
           const brt = RT(bodyNode);

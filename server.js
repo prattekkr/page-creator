@@ -276,10 +276,21 @@ function loadConfig() {
   // Skips tab/container pseudo-fields and mimetype helpers.
   const modelFieldsMap = {};
   for (const m of models) {
-    modelFieldsMap[m.id] = (m.fields || [])
-      .filter(f => f.component !== 'tab' && f.component !== 'container' &&
-                   f.component !== 'custom-asset-namespace:custom-asset-mimetype')
-      .map(f => `${f.name}@${f.component}`);
+    const flatFields = [];
+    for (const f of (m.fields || [])) {
+      if (f.component === 'tab' || f.component === 'custom-asset-namespace:custom-asset-mimetype') continue;
+      if (f.component === 'container' && Array.isArray(f.fields)) {
+        // Expand container sub-fields as parentName/subFieldName@component
+        // (e.g. podcastDataAttributes/key@text, wallsioDataAttributes/wallsioKey@text)
+        for (const sf of f.fields) {
+          if (sf.component === 'tab') continue;
+          flatFields.push(`${f.name}/${sf.name}@${sf.component}`);
+        }
+      } else if (f.component !== 'container') {
+        flatFields.push(`${f.name}@${f.component}`);
+      }
+    }
+    modelFieldsMap[m.id] = flatFields;
   }
 
   // Load content defaults from scanned real-page data
