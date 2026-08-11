@@ -2454,9 +2454,12 @@ function applyQuoteTransparencyRule(sections) {
   return sections;
 }
 
-// Post-processing: when a section or grid-container has a background (bg-color or bg-image),
-// add align-left to every custom-title and text-container that doesn't already have an
-// explicit alignment class (align-left, align-center, align-right).
+// Post-processing: add align-left to custom-title and text-container blocks that don't
+// already have an explicit alignment class (align-left, align-center, align-right).
+// Rules:
+//   • grid-container → ALWAYS add align-left to all custom-title/text-container inside
+//     every grid-section (regardless of background).
+//   • section → add align-left ONLY when the section has a background (bg-color or bg-image).
 function applyBgAlignLeftRule(sections) {
   const ALIGN_RE = /^align-(?:left|center|right)$/;
   const TARGET_TYPES = new Set(['custom-title', 'text-container']);
@@ -2472,13 +2475,15 @@ function applyBgAlignLeftRule(sections) {
   }
 
   for (const sec of sections || []) {
-    const hasBg = !!(sec.props?.background || (sec.props?.style_customDynamicClass || '').split(',').some(c => c.trim().startsWith('bg-')));
-    if (!hasBg) continue;
-
     if (sec.type === 'grid-container') {
+      // Grid-containers: always add align-left to custom-title/text-container
+      // inside every grid-section, regardless of background.
       for (const gs of sec.blocks || [])
         for (const child of gs.children || []) addAlignLeft(child);
     } else {
+      // Sections: only add align-left when a background (color or image) is present.
+      const hasBg = !!(sec.props?.background || (sec.props?.style_customDynamicClass || '').split(',').some(c => c.trim().startsWith('bg-')));
+      if (!hasBg) continue;
       for (const block of sec.blocks || []) addAlignLeft(block);
     }
   }
