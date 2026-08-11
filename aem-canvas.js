@@ -317,9 +317,9 @@ function mapLeaf(node, inheritedBlockWidth = '') {
       // → carry the inherited width as a custom class so it still reaches EDS.
       // Use space-separated to match how classes_commonCustomClass is read/written
       // everywhere else in mapLeaf (richtext body-unica handling uses split(/\s+/) + join(' ')).
-      const existing = String(props.classes_commonCustomClass || '').split(/\s+/).filter(Boolean);
+      const existing = String(props.classes_commonCustomClass || '').split(/[,\s]+/).filter(Boolean);
       if (!existing.includes(widthClass)) existing.push(widthClass);
-      props.classes_commonCustomClass = existing.join(' ');
+      props.classes_commonCustomClass = existing.join(',');
     }
   }
   // Always pull the image caption from DAM metadata on the live site.
@@ -603,7 +603,7 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // AEM inline richtext typography classes (body-unica-*) → the block's classes_commonCustomClass
   // ("Custom Class"), and unwrap ALL <span>s so the text isn't double-styled. Only body-unica-*
   // is kept — theme classes (light-font) and Word-paste junk (BCX*, NormalTextRun, SCXW*…) are dropped.
-  const existing = String(props.classes_commonCustomClass || '').split(/\s+/).filter(Boolean);
+  const existing = String(props.classes_commonCustomClass || '').split(/[,\s]+/).filter(Boolean);
   const nonBody = existing.filter(c => !/^body-unica/.test(c));
   const bodyFreq = {};                                    // body-unica-* → occurrence count
   existing.filter(c => /^body-unica/.test(c)).forEach(c => (bodyFreq[c] = (bodyFreq[c] || 0) + 1));
@@ -618,7 +618,7 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // mixes sizes across spans, keep only the DOMINANT (most-frequent) one.
   const topBody = Object.entries(bodyFreq).sort((a, b) => b[1] - a[1])[0];
   const outCls = [...nonBody, ...(topBody ? [topBody[0]] : [])];
-  if (outCls.length) props.classes_commonCustomClass = outCls.join(' ');
+  if (outCls.length) props.classes_commonCustomClass = outCls.join(',');
 
   // Text alignment lives INLINE in the richtext (`text-align: left|center|right`); EDS lifts it to
   // an `align-*` class on the text-container. Use the dominant alignment across the block's markup.
@@ -1025,22 +1025,20 @@ function heroBlockOf(node, overlapNode = null) {
   }
 }
 // section classes for a container: derived (minus height, which went to the hero block) + defaults
-function sectionProps(node, hero = false) {
+function sectionProps(node, hero = false, overlapNode = null) {
   const nodes = Array.isArray(node) ? node : [node];
 
   // ── HERO SECTION RULE ────────────────────────────────────────────────────
-  // EDS hero sections carry a NARROW set of classes from C1:
-  //   • width   : content-full-width → content-wide; container-* SIZE classes (e.g. container-xxx-large)
+  // EDS hero sections carry a NARROW set of classes from C1 only:
+  //   • width   : content-full-width → content-wide
   //   • radius  : large-radius / medium-radius / small-radius
-  //   • margin  : no-bottom-margin (added when C1 has no-bottom-margin OR has a background image)
-  //               no-side-margin, no-bottom-padding, padding-bottom, section-padding, regular-padding
   //
-  // EXCLUDED from section (handled elsewhere):
+  // EXCLUDED from section:
+  //   • no-bottom-margin  → dropped (hero sections do not carry bottom margin)
   //   • height-*          → hero-container ctrl block (heroBlockOf)
   //   • bg-* color        → hero-container-item (color hero)
   //   • bg-image          → hero-container-item
-  //   • container-full-width  → this is an AEM wrapper ID, NOT a width class (it means the AEM
-  //                             container renders full-width within its parent, NOT a content-wide override)
+  //   • container-full-width  → AEM wrapper ID, NOT a valid EDS section width class
   if (hero) {
     const c1 = Array.isArray(node) ? node[0] : node;
     const c1Resolved = layoutStyleProps([c1], { compType: 'section', includeHeight: false });
@@ -1050,9 +1048,8 @@ function sectionProps(node, hero = false) {
     const HERO_SEC_EXCL = new Set([
       'container-full-width', // AEM wrapper ID — NOT a width class on EDS sections
       'height-default', 'height-short', 'height-tall', 'height-x-tall', 'height-xx-tall', // → hero ctrl
-      'no-padding',       // AEM padding reset — not a valid EDS section class
-      // no-bottom-margin is intentionally NOT excluded — when C1 has the no-bottom-margin styleId,
-      // it flows through to the hero section (twin-confirmed: ch/de/join-us, and many others).
+      'no-padding',           // AEM padding reset — not a valid EDS section class
+      'no-bottom-margin',     // hero sections do not carry bottom margin
     ]);
     // Background color/image → hero item only, not section
     const filteredClasses = c1Classes.filter(c => !HERO_SEC_EXCL.has(c) && !/^bg-/.test(c));
@@ -1215,10 +1212,10 @@ function gridColumns(grid) {
 
 function addCommonClass(block, cls) {
   if (!block || !cls) return;
-  const set = new Set(String(block.props?.classes_commonCustomClass || '').split(/[\s,]+/).filter(Boolean));
+  const set = new Set(String(block.props?.classes_commonCustomClass || '').split(/[,\s]+/).filter(Boolean));
   set.add(cls);
   block.props = block.props || {};
-  block.props.classes_commonCustomClass = [...set].join(' ');
+  block.props.classes_commonCustomClass = [...set].join(',');
 }
 
 // EDS inner-grid is a controller block followed by its sibling content blocks.
@@ -2290,7 +2287,7 @@ function aemToCanvas(jcrContent, opts) {
         }
       }
       stripHeroWidthClasses(blocks);
-      sections.push({ type: 'section', props: sectionProps(node, true), blocks });
+      sections.push({ type: 'section', props: sectionProps(node, true, overlapNode), blocks });
       for (const group of bodyGroups) {
         // Hero-continuation body that carries a grid: emit per-grid / per-nested-container
         // sections instead of one lumped section (structure verified against the twin).
