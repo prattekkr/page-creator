@@ -246,22 +246,28 @@ function layoutStyleProps(nodes, { includeHeight = true, excludeStyleIds = [], c
   return { classes, typed };
 }
 
-// `no-side-margin` makes a visual band full-bleed. It is meaningful only when
-// an author has assigned that band a background color; never use it on heroes,
-// whose background belongs to the hero item rather than the enclosing section.
-function restrictNoSideMargin(resolved, hero = false) {
-  if (!hero && resolved.typed['style_bg-color']) {
+// `no-side-margin` is applied when any container in the chain has a styleId that resolves
+// to aemClass 'cmp-container-full-width' (full-bleed band). Never applied on hero sections.
+function restrictNoSideMargin(resolved, hero = false, nodes = []) {
+  if (hero) return resolved;
+  const hasCmpFullWidth = nodes.some(node => {
+    const raw = node?.['@cq:styleIds'];
+    if (!raw) return false;
+    const ids = String(raw).replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+    return ids.some(id => {
+      const entry = resolveStyleId(id, 'section') || resolveStyleId(id, null);
+      return entry?.aemClass === 'cmp-container-full-width';
+    });
+  });
+  if (hasCmpFullWidth) {
     return {
       ...resolved,
-      // This is an automatic rendering variation, not a single-select authoring
-      // value; leave any explicit margin field intact.
-      classes: resolved.classes.includes('no-side-margin') ? resolved.classes : [...resolved.classes, 'no-side-margin'],
+      classes: resolved.classes.includes('no-side-margin')
+        ? resolved.classes
+        : [...resolved.classes, 'no-side-margin'],
     };
   }
-  const classes = resolved.classes.filter(c => c !== 'no-side-margin');
-  const typed = { ...resolved.typed };
-  if (typed.style_margin === 'no-side-margin') delete typed.style_margin;
-  return { classes, typed };
+  return resolved;
 }
 
 // AEM leaf component node → EDS block { type, props, children }
@@ -1078,7 +1084,7 @@ function sectionProps(node, hero = false, overlapNode = null) {
   // EDS section width (content-wide/content-regular/content-narrow) only comes from the
   // explicit EDS picklist style IDs (17805012834871, 1780501283488, etc.).
   let resolved = layoutStyleProps(nodes, { compType: 'section' });
-  resolved = restrictNoSideMargin(resolved, false);
+  resolved = restrictNoSideMargin(resolved, false, nodes);
   resolved = {
     ...resolved,
     // container-full-width → content-wide (AEM full-width wrapper → EDS wide width)
@@ -1131,7 +1137,7 @@ function gridContainerProps(containers, grid = null) {
   // FULL_WIDTH_CONTAINER_STYLE_ID (1653545825683) present → content-wide.
   // Absent → mergeDefaults supplies content-regular as the default width.
   // No special-casing for background presence — width mapping is purely driven by the style ID.
-  const resolved = restrictNoSideMargin(applyFullWidthContainerRule(layoutStyleProps([...chain, grid], { compType: 'grid-container' }), chain));
+  const resolved = restrictNoSideMargin(applyFullWidthContainerRule(layoutStyleProps([...chain, grid], { compType: 'grid-container' }), chain), false, chain);
   const derived = resolved.classes
     .filter(c => !NOOP_CLASS.has(c) && !GRID_CONTAINER_EXCL.has(c))
     .filter(c => !/^container-/.test(c));  // grid-containers use only content-* widths, never container-*
