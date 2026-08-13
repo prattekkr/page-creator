@@ -2502,11 +2502,20 @@ app.post('/api/a11y-backfill', express.json({ limit: '8mb' }), async (req, res) 
             body.set('caption', p.caption);
             body.set('displayCaptionBelowImage', 'false');
             try {
-              const r = await fetch(`${host}${jcrPath}`, { method: 'POST', headers: hdrs, body: body.toString() });
+              const r = await fetch(`${host}${jcrPath}`, {
+                method: 'POST',
+                headers: hdrs,
+                body: body.toString(),
+                signal: AbortSignal.timeout(8000),
+              });
               writeResults.push({ jcrPath, ok: r.ok, status: r.status });
               console.log(`[a11y] wrote caption to AEM: ${jcrPath} → ${r.status}`);
             } catch (e) {
-              writeResults.push({ jcrPath, ok: false, error: e.message });
+              // Network errors (ENOTFOUND, ECONNREFUSED, timeout) are non-fatal for caption write-back.
+              // The caption was already backfilled in memory — the user can still save manually.
+              const msg = e.cause?.message || e.message || String(e);
+              writeResults.push({ jcrPath, ok: false, error: msg });
+              console.warn(`[a11y] caption write-back failed for ${jcrPath}: ${msg}`);
             }
           }
           for (const c of (block.children || [])) await visitForWrite(c, sectionJcrKey);
