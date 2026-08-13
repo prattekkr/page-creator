@@ -993,12 +993,14 @@ function heroBlockOf(node, overlapNode = null) {
 
   // Resolve c2 (overlap container): pull radius + height → overlay derivation
   let c2Radius = null;
-  let overlayClasses = HEIGHT_TO_OVERLAY['height-default']; // fallback
+  let overlayClasses = []; // only set when height is non-default
   if (overlapNode) {
     const c2Classes = splitCls([styleIdClasses(overlapNode)]);
     c2Radius = c2Classes.find(c => EXCL_RADIUS.has(c)) || null;
     const c2Height = c2Classes.find(c => /^height-/.test(c)) || 'height-default';
-    overlayClasses = HEIGHT_TO_OVERLAY[c2Height] || HEIGHT_TO_OVERLAY['height-default'];
+    // overlay-height-* classes are only needed when the height is non-default.
+    // height-default is the EDS implicit baseline — no overlay class required.
+    overlayClasses = (c2Height !== 'height-default') ? (HEIGHT_TO_OVERLAY[c2Height] || []) : [];
   }
 
   let item;
@@ -1061,7 +1063,8 @@ function sectionProps(node, hero = false, overlapNode = null) {
       'container-full-width', // AEM wrapper ID — NOT a width class on EDS sections
       'height-default', 'height-short', 'height-tall', 'height-x-tall', 'height-xx-tall', // → hero ctrl
       'no-padding',           // AEM padding reset — not a valid EDS section class
-      'no-bottom-margin',     // hero sections do not carry bottom margin
+      // NOTE: no-bottom-margin is intentionally NOT excluded here — when AEM explicitly
+      // authors it on C1 (styleId 1653545835879) it must appear on the hero section.
     ]);
     // Background color/image → hero item only, not section
     const filteredClasses = c1Classes.filter(c => !HERO_SEC_EXCL.has(c) && !/^bg-/.test(c));
@@ -1952,9 +1955,13 @@ function emitNode(node, sections) {
     // When the section already carries a container-* width class, child blocks must have
     // NO width-* or video-* classes at all — not inherited, not from their own styleIds.
     // The section's container-* class is the sole width control for the entire band.
-    // Mark them with _hasInheritedWidth so applySectionBlockPadding can add padding classes.
+    // Mark them with _hasInheritedWidth so applySectionBlockPadding can add padding classes —
+    // UNLESS the container also has no-padding (styleId 1653545835982) authored, in which case
+    // width is still stripped but NO padding signal is set on the blocks.
+    const NO_PADDING_STYLE_ID = '1653545835982';
     if (!isHero && containerBlockWidth(node, '') !== '') {
       const WIDTH_STRIP_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
+      const sectionHasNoPadding = hasStyleId(node, NO_PADDING_STYLE_ID);
       for (const b of blocks) {
         if (!b.props) b.props = {};
         // Strip width-* / video-* from classes_customDynamicClass
@@ -1971,7 +1978,11 @@ function emitNode(node, sections) {
           if (cleaned) b.props.classes_commonCustomClass = cleaned;
           else delete b.props.classes_commonCustomClass;
         }
-        if (!b._hasInheritedWidth) Object.defineProperty(b, '_hasInheritedWidth', { value: true, enumerable: false });
+        // Only stamp _hasInheritedWidth (padding signal) when the container does NOT have no-padding.
+        // no-padding means the author wants zero padding on this band — respect that.
+        if (!sectionHasNoPadding && !b._hasInheritedWidth) {
+          Object.defineProperty(b, '_hasInheritedWidth', { value: true, enumerable: false });
+        }
       }
     }
     sections.push({ type: 'section', props: secProps, blocks });
@@ -2358,7 +2369,7 @@ function aemToCanvas(jcrContent, opts) {
     }
     emitNode(node, sections);
   }
-  return applySectionBlockPadding(applyBgAlignLeftRule(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections)))));
+  return applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections))));
 }
 
 // The page-final separator (the spacer just above the footer) must live in its OWN bare section,
@@ -2492,34 +2503,6 @@ function applySectionBlockPadding(sections) {
       if (!classes.includes('section-padding')) classes.push('section-padding');
       if (!isFirst && !classes.includes('no-top-padding')) classes.push('no-top-padding');
       block.props.classes_customDynamicClass = classes.join(',');
-    }
-  }
-  return sections;
-}
-
-// Post-processing: add align-left to ALL custom-title and text-container blocks that
-// don't already have an explicit alignment class (align-left, align-center, align-right).
-// Applies unconditionally to every section and grid-container.
-function applyBgAlignLeftRule(sections) {
-  const ALIGN_RE = /^align-(?:left|center|right)$/;
-  const TARGET_TYPES = new Set(['custom-title', 'text-container']);
-
-  function addAlignLeft(block) {
-    if (!TARGET_TYPES.has(block.type)) return;
-    const props = block.props || (block.props = {});
-    const classes = String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean);
-    if (!classes.some(c => ALIGN_RE.test(c))) {
-      classes.push('align-left');
-      props.classes_customDynamicClass = classes.join(',');
-    }
-  }
-
-  for (const sec of sections || []) {
-    if (sec.type === 'grid-container') {
-      for (const gs of sec.blocks || [])
-        for (const child of gs.children || []) addAlignLeft(child);
-    } else {
-      for (const block of sec.blocks || []) addAlignLeft(block);
     }
   }
   return sections;
