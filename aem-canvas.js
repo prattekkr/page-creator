@@ -308,24 +308,24 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   const widthClass = (type === 'video' || type === 'brightcove-video')
     ? String(inheritedBlockWidth || '').replace(/^width-/, 'video-')
     : inheritedBlockWidth;
+  const WIDTH_CLS_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
+  let _inheritedWidthApplied = false;
   if (widthClass) {
     if (isWidthTarget && supportsStyle(type, widthClass)) {
+      // Always apply inherited container width, replacing any own width styleId.
       const existingClasses = String(props.classes_customDynamicClass || '').split(',').map(c => c.trim()).filter(Boolean);
-      const hasOwnWidth = existingClasses.some(c => /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/.test(c));
-      if (!hasOwnWidth) {
-        // Block has no own width style → apply inherited container width as fallback.
-        existingClasses.push(widthClass);
-        props.classes_customDynamicClass = [...new Set(existingClasses)].join(',');
-      }
-      // Block already has its own width style → keep it (container width is fallback only).
+      const withoutWidth = existingClasses.filter(c => !WIDTH_CLS_RE.test(c));
+      withoutWidth.push(widthClass);
+      props.classes_customDynamicClass = [...new Set(withoutWidth)].join(',');
+      _inheritedWidthApplied = true;
     } else if (!isWidthTarget) {
-      // Block has no corresponding width style (e.g. cta, accordion, carousel, etc.)
+      // Non-width-target blocks (cta, accordion, carousel, etc.)
       // → carry the inherited width as a custom class so it still reaches EDS.
-      // Use space-separated to match how classes_commonCustomClass is read/written
-      // everywhere else in mapLeaf (richtext body-unica handling uses split(/\s+/) + join(' ')).
       const existing = String(props.classes_commonCustomClass || '').split(/[,\s]+/).filter(Boolean);
-      if (!existing.includes(widthClass)) existing.push(widthClass);
-      props.classes_commonCustomClass = existing.join(',');
+      const withoutWidth = existing.filter(c => !WIDTH_CLS_RE.test(c));
+      if (!withoutWidth.includes(widthClass)) withoutWidth.push(widthClass);
+      props.classes_commonCustomClass = withoutWidth.join(',');
+      _inheritedWidthApplied = true;
     }
   }
   // Always pull the image caption from DAM metadata on the live site.
@@ -662,15 +662,21 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     // NOTE: a dynamic linklist (listFrom=children) legitimately has no static items —
     // EDS renders it from parentPage/linkSource at request time, so we keep the config
     // props and leave children empty rather than baking in a stale snapshot.
-    return { type, props, children: items };
+    const blk0 = { type, props, children: items };
+    if (_inheritedWidthApplied) Object.defineProperty(blk0, '_hasInheritedWidth', { value: true, enumerable: false });
+    return blk0;
   }
   // single content child (e.g. text → text-container-text)
   if (mapping?.childType && mapping?.childProp && props[mapping.childProp] !== undefined) {
     const cv = props[mapping.childProp];
     delete props[mapping.childProp];
-    return { type, props, children: [{ type: mapping.childType, props: { [mapping.childProp]: cv }, children: [] }] };
+    const blk1 = { type, props, children: [{ type: mapping.childType, props: { [mapping.childProp]: cv }, children: [] }] };
+    if (_inheritedWidthApplied) Object.defineProperty(blk1, '_hasInheritedWidth', { value: true, enumerable: false });
+    return blk1;
   }
-  return { type, props, children: [] };
+  const blk2 = { type, props, children: [] };
+  if (_inheritedWidthApplied) Object.defineProperty(blk2, '_hasInheritedWidth', { value: true, enumerable: false });
+  return blk2;
 }
 
 // Separators are meaningful only when their AEM author explicitly chose a style.
@@ -1938,22 +1944,34 @@ function emitNode(node, sections) {
     const blocks = [];
     if (isHero) blocks.push(heroBlockOf(node));
     // The top-level container becomes the section and its container-* width class is
-    // already placed on the section itself via sectionProps(). Do NOT also put
-    // width-* on each individual child block — the section's container-* class
-    // already controls the width for the entire band. Strip any width class that
-    // came from either inherited container propagation OR the block's own styleIds.
+    // already placed on the section itself via sectionProps(). Do NOT propagate a
+    // width-* class to individual child blocks — the section's container-* class already
+    // controls the band width for all children.
     collectLeaves(node, blocks, '', false);
     const secProps = sectionProps(node, isHero);
-    if (!isHero && splitCls([secProps.style_customDynamicClass]).some(c => /^container-/.test(c))) {
-      const BLOCK_WIDTH_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
+    // When the section already carries a container-* width class, child blocks must have
+    // NO width-* or video-* classes at all — not inherited, not from their own styleIds.
+    // The section's container-* class is the sole width control for the entire band.
+    // Mark them with _hasInheritedWidth so applySectionBlockPadding can add padding classes.
+    if (!isHero && containerBlockWidth(node, '') !== '') {
+      const WIDTH_STRIP_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
       for (const b of blocks) {
-        if (!b.props) continue;
-        for (const key of ['classes_customDynamicClass', 'classes_commonCustomClass']) {
-          if (!b.props[key]) continue;
-          const cleaned = String(b.props[key]).split(',').map(s => s.trim())
-            .filter(c => !BLOCK_WIDTH_RE.test(c)).join(',');
-          if (cleaned) b.props[key] = cleaned; else delete b.props[key];
+        if (!b.props) b.props = {};
+        // Strip width-* / video-* from classes_customDynamicClass
+        if (b.props.classes_customDynamicClass) {
+          const cleaned = String(b.props.classes_customDynamicClass).split(',').map(s => s.trim())
+            .filter(c => !WIDTH_STRIP_RE.test(c)).join(',');
+          if (cleaned) b.props.classes_customDynamicClass = cleaned;
+          else delete b.props.classes_customDynamicClass;
         }
+        // Strip width-* / video-* from classes_commonCustomClass too
+        if (b.props.classes_commonCustomClass) {
+          const cleaned = String(b.props.classes_commonCustomClass).split(',').map(s => s.trim())
+            .filter(c => !WIDTH_STRIP_RE.test(c)).join(',');
+          if (cleaned) b.props.classes_commonCustomClass = cleaned;
+          else delete b.props.classes_commonCustomClass;
+        }
+        if (!b._hasInheritedWidth) Object.defineProperty(b, '_hasInheritedWidth', { value: true, enumerable: false });
       }
     }
     sections.push({ type: 'section', props: secProps, blocks });
@@ -2340,7 +2358,7 @@ function aemToCanvas(jcrContent, opts) {
     }
     emitNode(node, sections);
   }
-  return applyBgAlignLeftRule(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections))));
+  return applySectionBlockPadding(applyBgAlignLeftRule(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections)))));
 }
 
 // The page-final separator (the spacer just above the footer) must live in its OWN bare section,
@@ -2452,6 +2470,28 @@ function applyQuoteTransparencyRule(sections) {
       sec.props.style_customDynamicClass = [...existing].join(',');
       // Also set the typed picklist prop so the authoring UI reflects the selection
       sec.props.style_transparency = 'semi-transparent-layer';
+    }
+  }
+  return sections;
+}
+
+// Post-processing: for every regular section that has blocks with an inherited container width
+// (_hasInheritedWidth), add section-padding to the first such block and section-padding +
+// no-top-padding to all subsequent ones. Non-width-inherited blocks are untouched.
+function applySectionBlockPadding(sections) {
+  for (const sec of sections || []) {
+    if (sec.type !== 'section') continue;
+    const widthBlocks = (sec.blocks || []).filter(b => b._hasInheritedWidth);
+    if (!widthBlocks.length) continue;
+    for (const block of sec.blocks) {
+      if (!block._hasInheritedWidth) continue;
+      if (!block.props) block.props = {};
+      const classes = String(block.props.classes_customDynamicClass || '')
+        .split(',').map(c => c.trim()).filter(Boolean);
+      const isFirst = widthBlocks[0] === block;
+      if (!classes.includes('section-padding')) classes.push('section-padding');
+      if (!isFirst && !classes.includes('no-top-padding')) classes.push('no-top-padding');
+      block.props.classes_customDynamicClass = classes.join(',');
     }
   }
   return sections;
