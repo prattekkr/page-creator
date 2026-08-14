@@ -1468,6 +1468,28 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
       Object.defineProperty(gs, '_sourceScopes', { value: sourceScopes, enumerable: false });
       if (par && typeof par === 'object') collectCellLeaves(par, gs.children, 0, containerWidth);
       if (relatedContent) applyRelatedContentCardProps(gs.children);
+      // Strip width-* / video-* classes from all grid-section blocks EXCEPT custom-image and accordion.
+      // Width classes on image and accordion are meaningful (image size variants, accordion width).
+      // On title, text, cta, eyebrow, teaser, separator etc. the width class is redundant —
+      // the grid-section's col-width (grid-cols-N) already controls the column layout.
+      const WIDTH_GRID_STRIP_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
+      const WIDTH_GRID_KEEP = new Set(['custom-image', 'accordion']);
+      for (const child of gs.children) {
+        if (WIDTH_GRID_KEEP.has(child.type)) continue;
+        if (!child.props) continue;
+        if (child.props.classes_customDynamicClass) {
+          const cleaned = String(child.props.classes_customDynamicClass).split(',').map(s => s.trim())
+            .filter(c => !WIDTH_GRID_STRIP_RE.test(c)).join(',');
+          if (cleaned) child.props.classes_customDynamicClass = cleaned;
+          else delete child.props.classes_customDynamicClass;
+        }
+        if (child.props.classes_commonCustomClass) {
+          const cleaned = String(child.props.classes_commonCustomClass).split(',').map(s => s.trim())
+            .filter(c => !WIDTH_GRID_STRIP_RE.test(c)).join(',');
+          if (cleaned) child.props.classes_commonCustomClass = cleaned;
+          else delete child.props.classes_commonCustomClass;
+        }
+      }
       blocks.push(gs);
     }
   }
