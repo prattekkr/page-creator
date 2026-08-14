@@ -1468,16 +1468,6 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
       Object.defineProperty(gs, '_sourceScopes', { value: sourceScopes, enumerable: false });
       if (par && typeof par === 'object') collectCellLeaves(par, gs.children, 0, containerWidth);
       if (relatedContent) applyRelatedContentCardProps(gs.children);
-      // Apply align-left to all title and text blocks inside grid-sections.
-      for (const child of gs.children) {
-        if (child.type !== 'custom-title' && child.type !== 'text-container') continue;
-        child.props = child.props || {};
-        const existing = String(child.props.classes_customDynamicClass || '').split(',').map(c => c.trim()).filter(Boolean);
-        if (!existing.some(c => /^align-/.test(c))) {
-          existing.push('align-left');
-          child.props.classes_customDynamicClass = existing.join(',');
-        }
-      }
       blocks.push(gs);
     }
   }
