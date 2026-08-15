@@ -324,12 +324,18 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   // All OTHER blocks that receive an inherited container width don't have a
   // matching style picklist for it — write it to classes_commonCustomClass instead.
   const isWidthTarget = ['custom-title', 'text-container', 'video', 'brightcove-video'].includes(type);
+  // Blocks that manage their own width vocabulary and must NEVER receive an inherited
+  // container width — not on classes_customDynamicClass nor classes_commonCustomClass:
+  //   • custom-image  — has its own image-size width vocabulary (width-small, width-large etc.)
+  //   • accordion     — its own width class (accordion-large, accordion-medium) is set
+  //                     independently; container width must not be mixed in
+  const WIDTH_INHERIT_EXCLUDE = new Set(['custom-image', 'accordion']);
   const widthClass = (type === 'video' || type === 'brightcove-video')
     ? String(inheritedBlockWidth || '').replace(/^width-/, 'video-')
     : inheritedBlockWidth;
   const WIDTH_CLS_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
   let _inheritedWidthApplied = false;
-  if (widthClass) {
+  if (widthClass && !WIDTH_INHERIT_EXCLUDE.has(type)) {
     if (isWidthTarget && supportsStyle(type, widthClass)) {
       // Always apply inherited container width, replacing any own width styleId.
       const existingClasses = String(props.classes_customDynamicClass || '').split(',').map(c => c.trim()).filter(Boolean);
@@ -338,7 +344,7 @@ function mapLeaf(node, inheritedBlockWidth = '') {
       props.classes_customDynamicClass = [...new Set(withoutWidth)].join(',');
       _inheritedWidthApplied = true;
     } else if (!isWidthTarget) {
-      // Non-width-target blocks (cta, accordion, carousel, etc.)
+      // Non-width-target blocks (cta, carousel, etc.)
       // → carry the inherited width as a custom class so it still reaches EDS.
       const existing = String(props.classes_commonCustomClass || '').split(/[,\s]+/).filter(Boolean);
       const withoutWidth = existing.filter(c => !WIDTH_CLS_RE.test(c));
@@ -404,6 +410,22 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     if (![...set].some(c => /^h[1-6]-size$/.test(c))) {
       const he = String(node['@headingElement'] || '').toLowerCase();
       set.add(he === 'h4' ? 'h4-size' : 'h5-size');
+    }
+    // Always add align-center to accordion blocks.
+    set.add('align-center');
+    // Reduce the accordion width class by one step (accordion-xx-large → accordion-x-large, etc.).
+    // This compensates for the EDS layout rendering the accordion at a larger effective width
+    // than the AEM authoring preview, so stepping down one size preserves visual parity.
+    const ACCORDION_WIDTH_DOWNSIZE = {
+      'accordion-xxx-large': 'accordion-xx-large',
+      'accordion-xx-large':  'accordion-x-large',
+      'accordion-x-large':   'accordion-large',
+      'accordion-large':     'accordion-medium',
+      'accordion-medium':    'accordion-small',
+      'accordion-small':     'accordion-x-small',
+    };
+    for (const [big, small] of Object.entries(ACCORDION_WIDTH_DOWNSIZE)) {
+      if (set.has(big)) { set.delete(big); set.add(small); break; }
     }
     props.classes_customDynamicClass = [...set].join(',');
     // Localize the Expand/Collapse-All labels from the page language (AEM carries no labels).
@@ -1316,49 +1338,13 @@ function collectCellLeaves(node, out, innerDepth = 0, inheritedBlockWidth = '') 
       // grid that has more than one column (i.e. NOT cols-12). For single-column grids,
       // recurse through the container and let blocks inherit the width class directly.
       if (containerHasWidthStyle(child)) {
+        // A container with a width styleId (container-large etc.) inside a cell is
+        // purely a width-constraint wrapper. Its job is to propagate the width class
+        // to its leaf children — it must NEVER emit an extra cols-12 inner-grid shell.
+        // Any multi-column grids inside the container will emit their own inner-grid
+        // controllers naturally when collectCellLeaves recurses into them.
         const childWidth = containerBlockWidth(child, width);
-        // Inspect whether any direct grid inside this container is multi-column.
-        // A multi-column grid has more than one column entry, or its single column is not 12.
-        const hasMultiColGrid = (() => {
-          function scanForGrid(n) {
-            for (const [, c] of childEntries(n)) {
-              const crt = RT(c);
-              if (isGrid(crt)) {
-                const cols = gridColumns(c);
-                if (cols.length > 1) return true;          // genuine multi-col → keep inner-grid
-                if (cols.length === 1 && cols[0].width !== '12') return true; // non-12 single col
-                return false;                              // cols-12 single col → false positive
-              }
-              if (!crt || isLayoutWrapper(crt) || isContainer(crt)) {
-                if (scanForGrid(c)) return true;
-              }
-            }
-            return false;
-          }
-          return scanForGrid(child);
-        })();
-
-        if (hasMultiColGrid) {
-          // True multi-column inner layout — keep the inner-grid controller (correct behaviour).
-          const colsClass = 'cols-12' + (childWidth ? ',' + childWidth : '');
-          const controller = { type: 'inner-grid', props: { classes_customDynamicClass: colsClass }, children: [] };
-          out.push(controller);
-          const cellBlocks = [];
-          collectCellLeaves(child, cellBlocks, innerDepth + 1, childWidth);
-          const colClass = `${innerDepth === 0 ? 'col' : 'ncol'}-1`;
-          cellBlocks.forEach(block => {
-            if (block._innerManaged) return;
-            addCommonClass(block, colClass);
-            markInnerManaged(block);
-          });
-          addCommonClass(controller, innerDepth === 0 ? 'col-1' : 'ncol-1');
-          out.push(...cellBlocks);
-        } else {
-          // Single-column (cols-12) width-constraint only — skip inner-grid, propagate
-          // the width class to child blocks via the inherited width parameter.
-          // The enclosing grid-section already owns the width presentation.
-          collectCellLeaves(child, out, innerDepth, childWidth || width);
-        }
+        collectCellLeaves(child, out, innerDepth, childWidth || width);
       } else {
         collectCellLeaves(child, out, innerDepth, width);
       }
@@ -1547,7 +1533,9 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
               const inner = findWidthContainer(k);
               if (inner) return inner;
             } else if (isContainer(krt)) {
-              if (containerHasWidthStyle(k) && !containerHasDirectGrid(k)) return k;
+              // Accept any container with a width styleId, regardless of whether it
+              // contains a grid. Leaf siblings of the nested grid also need the width.
+              if (containerHasWidthStyle(k)) return k;
             }
           }
           return null;
@@ -1595,16 +1583,20 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
             }
             if (containerStart >= 0) {
               // Blocks excluded from container-width propagation:
-              //   • custom-image — has its own image-size width vocabulary (width-small, width-large etc.)
-              //     that must not be overridden by the enclosing container width.
+              //   • inner-grid controller — structural block, not a content block
               //   • accordion — its own width class (accordion-large, accordion-medium) is set
               //     independently and must not be mixed with container-* width inheritance.
-              const PROPAGATION_EXCLUDE = new Set(['custom-image', 'accordion']);
+              // NOTE: custom-image IS included — the container width overrides the image's
+              // own size class (e.g. x-small → width-large). All other blocks not in the
+              // eligible type list are implicitly skipped (widthClass stays null).
+              const PROPAGATION_EXCLUDE = new Set(['accordion']);
+              const WIDTH_CLS_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
               for (let idx = containerStart; idx < containerEnd && idx < gs.children.length; idx++) {
                 const child = gs.children[idx];
+                if (child.type === 'inner-grid') continue;           // skip structural controller
                 if (PROPAGATION_EXCLUDE.has(child.type)) continue;
                 let widthClass = null;
-                if (child.type === 'custom-title' || child.type === 'text-container') {
+                if (['custom-title', 'text-container', 'custom-image'].includes(child.type)) {
                   widthClass = cellContainerWidth; // e.g. 'width-large'
                 } else if (child.type === 'video' || child.type === 'brightcove-video') {
                   widthClass = CONTAINER_TO_VIDEO_WIDTH[containerClass] || null; // e.g. 'video-large'
@@ -1612,10 +1604,19 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
                 if (!widthClass || !child.props) continue;
                 const existing = String(child.props.classes_customDynamicClass || '')
                   .split(',').map(c => c.trim()).filter(Boolean);
-                if (!existing.includes(widthClass)) existing.push(widthClass);
-                child.props.classes_customDynamicClass = existing.join(',');
+                // For custom-image: container width REPLACES the image's own size class.
+                // AEM image size classes come in two forms:
+                //   • bare:   x-small, small, medium, large, x-large, xx-large, xxx-large
+                //   • prefixed: width-x-small, width-small, width-large, etc.
+                // Both must be stripped so the container width class is the only width on the image.
+                const IMAGE_SIZE_RE = /^(?:(?:width-)?(?:x{0,3}-)?(small|medium|large)|(?:width-)?(?:x{1,3}-)?large)$/;
+                const filtered = child.type === 'custom-image'
+                  ? existing.filter(c => !WIDTH_CLS_RE.test(c) && !IMAGE_SIZE_RE.test(c))
+                  : [...existing];
+                if (!filtered.includes(widthClass)) filtered.push(widthClass);
+                child.props.classes_customDynamicClass = filtered.join(',');
                 // Mark all eligible blocks so global stripWidthFromBlock does not remove
-                // the propagated width-* / video-* class (title, text, video).
+                // the propagated width-* / video-* class.
                 Object.defineProperty(child, '_cellContainerWidth', { value: widthClass, enumerable: false, configurable: true });
               }
             }
