@@ -1825,7 +1825,7 @@ async function doMigAutoBuild(i) {
   r.status = 'preparing'; r.error = null; render();
   try {
     const pageUrl = ms.a11yBackfill ? liveUrlFor(r.sourceRel) : '';
-    const d = await fetch('/api/aem-to-canvas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rel: r.sourceRel, pageUrl }) }).then(x => x.json());
+    const d = await fetch('/api/aem-to-canvas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rel: r.sourceRel, pageUrl, aemHost: S.conn.aemHost, username: S.conn.username, password: S.conn.password }) }).then(x => x.json());
     if (!d.ok || !d.sections) throw new Error('Auto-build failed: ' + (d.error || 'no sections'));
     r.a11y = d.a11y || null;
     const ids = items => (items || []).map(it => ({ ...it, id: uid(), children: ids(it.children) }));
@@ -1991,7 +1991,7 @@ function doMigSaveCanvas() {
   render();
 }
 
-async function doMigCreateOne(i) {
+async function doMigCreateOne(i, openInEditor = true, isBulk = false) {
   const ms = S.migrateSite, r = ms.plan?.rows[i];
   if (!r || r.status !== 'ready') return;
   const { aemHost, username, password } = S.conn;
@@ -2002,11 +2002,36 @@ async function doMigCreateOne(i) {
   if (!r._a11yOverride) {
     const issues = checkA11y(r.sections || []);
     if (issues.length) {
-      S.modal = 'a11y-warning';
-      S._a11yIssues = issues;
-      S._a11yPendingAction = 'mig-create:' + i;
-      render();
-      return;
+      if (isBulk) {
+        // Bulk mode: auto-fill a11y silently then create — no modal interruption
+        r.status = 'preparing'; r.error = null; render();
+        try {
+          const pageUrl = liveUrlFor(r.sourceRel);
+          const d = await fetch('/api/a11y-backfill', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sections: r.sections, pageUrl,
+              aemHost: S.conn?.aemHost || '',
+              aemUser: S.conn?.username || '',
+              aemPass: S.conn?.password || '',
+              pagePath: r.targetPath || ''
+            })
+          }).then(x => x.json());
+          if (d.ok) {
+            r.sections = d.sections;
+            const s = d.stats || {};
+            r.a11y = { ok: true, ...s };
+          }
+        } catch (_) { /* a11y fill failed — proceed with creation anyway */ }
+        r.status = 'ready'; // reset back to ready so creation continues
+      } else {
+        // Single page mode: show modal for user to decide
+        S.modal = 'a11y-warning';
+        S._a11yIssues = issues;
+        S._a11yPendingAction = 'mig-create:' + i;
+        render();
+        return;
+      }
     }
   }
   r._a11yOverride = false;
@@ -2017,8 +2042,8 @@ async function doMigCreateOne(i) {
     const res = await fetch('/api/pages', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ aemHost, username, password, parentPath, pageName, meta, sections: r.sections }) }).then(x => x.json());
     if (res.ok) {
       r.status = 'done'; r.error = null; r.authorUrl = buildUeUrl(res.path);
-      // Auto-open in Universal Editor immediately after page creation.
-      window.open(r.authorUrl, '_blank');
+      // Auto-open in Universal Editor only for single-page creation (not bulk).
+      if (openInEditor) window.open(r.authorUrl, '_blank');
       // Fire-and-forget: delete all preview pages for this row now that the real page is created.
       // Preview folder path: {edsPrefix}/{country}/{lang}/preview/{pageName}
       const ms2 = S.migrateSite;
@@ -2054,7 +2079,8 @@ async function doMigCreateAll() {
       const pa = (a.r.targetPath || '').replace(/\/+$/, ''), pb = (b.r.targetPath || '').replace(/\/+$/, '');
       return pa.split('/').length - pb.split('/').length || pa.localeCompare(pb);
     });
-  for (const { i } of ready) await doMigCreateOne(i);
+  // Bulk mode: no auto-open in editor, auto-fill a11y instead of showing modal
+  for (const { i } of ready) await doMigCreateOne(i, false, true);
 }
 
 function stylesTabHtml() {

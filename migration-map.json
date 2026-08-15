@@ -125,10 +125,13 @@
         "linkURL": "link",
         "linkTarget": "ctaTarget",
         "accessibilityLabel": "aria-label",
-        "link": "link"
+        "link": "link",
+        "popupSelectedByLinkBtn": "warnOnDeparturePopupFragmentPath"
+      },
+      "propTransforms": {
+        "warnOnDeparturePopupFragmentPath": "xf-warn-departure"
       },
       "skipProps": [
-        "popupSelectedByLinkBtn",
         "langAttribute",
         "id"
       ]

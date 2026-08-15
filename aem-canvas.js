@@ -97,9 +97,24 @@ function transformPath(value) {
   return value;
 }
 
+// mirror of server.js applyPropTransform
+function applyPropTransform(transformName, val) {
+  if (transformName === 'xf-warn-departure') {
+    // AEM XF path: /content/experience-fragments/abbvie-com2/{country}/{lang}/site/popups/...
+    // EDS path:    /content/abbvie-nextgen-eds/corporate/abbvie-com/{country}/{lang}/modal-fragment/warn-departure-modal
+    const parts = val.split('/').filter(Boolean);
+    const locale = (parts[3] && parts[4]) ? `${parts[3]}/${parts[4]}` : '';
+    return locale
+      ? `/content/abbvie-nextgen-eds/corporate/abbvie-com/${locale}/modal-fragment/warn-departure-modal`
+      : val;
+  }
+  return val;
+}
+
 // mirror of server.js extractPropsFromXmlNode
 function extractProps(node, mapping) {
-  const renames   = mapping?.propRenames || {};
+  const renames   = mapping?.propRenames    || {};
+  const propTrans = mapping?.propTransforms || {};
   const skipSet   = new Set([...(mapping?.skipProps || []), ...JCR_SYS_SET, ...WRITEBACK_SKIP]);
   const invertSet = new Set(mapping?.invertBoolProps || []);
   const props = {};
@@ -112,7 +127,11 @@ function extractProps(node, mapping) {
     if (typeof val === 'string' && val.startsWith('[') && val.endsWith(']')) val = val.slice(1, -1).trim();
     if (invertSet.has(key)) { if (val === 'true') val = 'false'; else if (val === 'false') val = 'true'; }
     if (val !== '' && val != null) {
-      props[renames[key] || key] = transformPath(val, pathMap);
+      const targetKey = renames[key] || key;
+      val = transformPath(val, pathMap);
+      // Apply propTransforms if defined for this EDS key
+      if (propTrans[targetKey]) val = applyPropTransform(propTrans[targetKey], val);
+      props[targetKey] = val;
       // A target alone is inert in the EDS image model; retain the source
       // link by enabling the feature whenever AEM supplies a link URL.
       if (mapping?.edsType === 'custom-image' && key === 'linkURL') props.enableLink = 'true';
@@ -2391,7 +2410,45 @@ function aemToCanvas(jcrContent, opts) {
     }
     emitNode(node, sections);
   }
-  return applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections))));
+  return stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections)))));
+}
+
+// Strip width-* / video-* classes from every block in the canvas EXCEPT custom-image and accordion.
+// These are the only two block types where a width class has a meaningful EDS picklist meaning.
+// All other blocks (title, text, cta, eyebrow, teaser, separator, etc.) must not carry width classes —
+// their visual width is controlled by the section's container-* class or the grid column layout.
+const WIDTH_GLOBAL_STRIP_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
+const WIDTH_GLOBAL_KEEP = new Set(['custom-image', 'accordion']);
+function stripWidthFromBlock(block) {
+  if (!block || WIDTH_GLOBAL_KEEP.has(block.type)) return;
+  if (block.props) {
+    if (block.props.classes_customDynamicClass) {
+      const cleaned = String(block.props.classes_customDynamicClass)
+        .split(',').map(s => s.trim()).filter(c => c && !WIDTH_GLOBAL_STRIP_RE.test(c)).join(',');
+      if (cleaned) block.props.classes_customDynamicClass = cleaned;
+      else delete block.props.classes_customDynamicClass;
+    }
+    if (block.props.classes_commonCustomClass) {
+      const cleaned = String(block.props.classes_commonCustomClass)
+        .split(/[\s,]+/).map(s => s.trim()).filter(c => c && !WIDTH_GLOBAL_STRIP_RE.test(c)).join(' ');
+      if (cleaned) block.props.classes_commonCustomClass = cleaned;
+      else delete block.props.classes_commonCustomClass;
+    }
+  }
+  if (Array.isArray(block.children)) block.children.forEach(stripWidthFromBlock);
+}
+function stripWidthClasses(sections) {
+  for (const sec of sections || []) {
+    for (const block of sec.blocks || []) {
+      // For grid-containers walk into grid-sections
+      if (block.type === 'grid-section') {
+        (block.children || []).forEach(stripWidthFromBlock);
+      } else {
+        stripWidthFromBlock(block);
+      }
+    }
+  }
+  return sections;
 }
 
 // The page-final separator (the spacer just above the footer) must live in its OWN bare section,

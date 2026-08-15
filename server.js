@@ -166,6 +166,14 @@ function extractPageMeta(jcrContent, mapping, pm) {
       if (rule.transform === 'dam-to-dm-openapi') {
         // Resolve DAM path → DM Open API URL via pathMap; pass through https URLs unchanged
         val = raw.startsWith('http') ? raw : (transformPath(raw.startsWith('/') ? raw : '/' + raw, pm) || raw);
+      } else if (rule.transform === 'xf-warn-departure') {
+        // AEM XF path: /content/experience-fragments/abbvie-com2/{country}/{lang}/site/popups/...
+        // EDS path:    /content/abbvie-nextgen-eds/corporate/abbvie-com/{country}/{lang}/modal-fragment/warn-departure-modal
+        const parts = raw.split('/').filter(Boolean); // ['content','experience-fragments','abbvie-com2','cz','cs',...]
+        const locale = (parts[3] && parts[4]) ? `${parts[3]}/${parts[4]}` : '';
+        val = locale
+          ? `/content/abbvie-nextgen-eds/corporate/abbvie-com/${locale}/modal-fragment/warn-departure-modal`
+          : raw;
       } else if (rule.transform === 'aem-tag-to-eds') {
         // AEM tag format: [namespace:path/to/tag,namespace:path/to/tag2]
         // EDS format: corporate:namespace/path/to/tag,corporate:namespace/path/to/tag2
@@ -873,8 +881,22 @@ function isMigrationLayout(rt) {
     rt.startsWith('core/wcm/');
 }
 
+function applyPropTransform(transformName, val) {
+  if (transformName === 'xf-warn-departure') {
+    // AEM XF path: /content/experience-fragments/abbvie-com2/{country}/{lang}/site/popups/...
+    // EDS path:    /content/abbvie-nextgen-eds/corporate/abbvie-com/{country}/{lang}/modal-fragment/warn-departure-modal
+    const parts = val.split('/').filter(Boolean);
+    const locale = (parts[3] && parts[4]) ? `${parts[3]}/${parts[4]}` : '';
+    return locale
+      ? `/content/abbvie-nextgen-eds/corporate/abbvie-com/${locale}/modal-fragment/warn-departure-modal`
+      : val;
+  }
+  return val;
+}
+
 function extractPropsFromXmlNode(attrs, mapping, pm) {
   const renames    = mapping?.propRenames    || {};
+  const propTrans  = mapping?.propTransforms || {};
   // AEM_WRITEBACK_SKIP drops cq:styleIds and other AEM-classic props that must never
   // land on an EDS page (cq:styleIds is translated to classes_customDynamicClass separately).
   const skipSet    = new Set([...(mapping?.skipProps || []), ...JCR_SYS_SET, ...AEM_WRITEBACK_SKIP]);
@@ -896,7 +918,10 @@ function extractPropsFromXmlNode(attrs, mapping, pm) {
       else if (val === 'false') val = 'true';
     }
     if (val !== '' && val !== null && val !== undefined) {
-      props[targetKey] = transformPath(val, pm);
+      val = transformPath(val, pm);
+      // Apply propTransforms if defined for this EDS key
+      if (propTrans[targetKey]) val = applyPropTransform(propTrans[targetKey], val);
+      props[targetKey] = val;
       // A target alone is inert in the EDS image model; retain the source
       // link by enabling the feature whenever AEM supplies a link URL.
       if (mapping?.edsType === 'custom-image' && key === 'linkURL') props.enableLink = 'true';
@@ -2423,6 +2448,25 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
       } catch (e) { a11y = { ok: false, error: e.message }; }
     }
 
+    // DAM caption backfill: fills captions still missing after live-HTML scrape
+    // (stored as DAM asset metadata, not visible in rendered HTML).
+    // Uses AEM credentials passed from the bulk auto-build caller — silently skipped
+    // when credentials are absent (e.g. local dev without AEM connection).
+    const aemHostAuto   = String(req.body?.aemHost   || '').trim();
+    const usernameAuto  = String(req.body?.username  || '').trim();
+    const passwordAuto  = String(req.body?.password  || '').trim();
+    let damStats = {};
+    if (aemHostAuto && usernameAuto && passwordAuto) {
+      const authAuto = 'Basic ' + Buffer.from(`${usernameAuto}:${passwordAuto}`).toString('base64');
+      try {
+        damStats = await backfillCaptionsFromDam(sections, aemHostAuto, authAuto);
+        console.log('[aem-to-canvas] DAM caption backfill:', JSON.stringify(damStats));
+      } catch (e) {
+        damStats = { captionFromDam: 0, damError: e.message };
+        console.warn('[aem-to-canvas] DAM caption backfill failed:', e.message);
+      }
+    }
+
     // Confidence estimate: fraction of leaf blocks that mapped to a known EDS type
     // (unmapped AEM components fall back to their raw name and need manual attention).
     const KNOWN = new Set(['section', 'grid-container', 'grid-section', 'hero-container', 'hero-container-item', 'text-container-text']);
@@ -2451,7 +2495,7 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
 
     res.json({
       ok: true, rel, pageTitle, meta, sections, jcr, a11y,
-      stats: { sections: sections.length, gridContainers, gridSections, blocks: total, mappedBlocks: mapped, confidence, unknownTypes: unknown }
+      stats: { sections: sections.length, gridContainers, gridSections, blocks: total, mappedBlocks: mapped, confidence, unknownTypes: unknown, ...damStats }
     });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
