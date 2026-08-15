@@ -1266,7 +1266,11 @@ function emitInnerGrid(grid, out, depth = 0) {
   const classes = [`cols-${cols.map(c => c.width).join('-')}`, ...splitCls([layoutStyleClasses(grid)])];
   const controller = { type: 'inner-grid', props: { classes_customDynamicClass: classes.join(',') }, children: [] };
   Object.defineProperty(controller, '_innerController', { value: true, enumerable: false });
-  out.push(controller);
+  // Collect all cell content into a temp buffer first.
+  // If the entire grid produced no content blocks, discard the controller too —
+  // an empty inner-grid controller with no following blocks is meaningless and
+  // causes orphaned nodes in the EDS canvas.
+  const temp = [];
   const rowCount = parseInt(grid['@rowCount'] || '1') || 1;
   for (let r = 1; r <= rowCount; r++) {
     for (let c = 1; c <= cols.length; c++) {
@@ -1283,9 +1287,12 @@ function emitInnerGrid(grid, out, depth = 0) {
         addCommonClass(block, columnClass);
         markInnerManaged(block);
       });
-      out.push(...cellBlocks);
+      temp.push(...cellBlocks);
     }
   }
+  if (temp.length === 0) return;  // empty grid — discard controller silently
+  out.push(controller);
+  out.push(...temp);
 }
 
 // As collectLeaves(), but a grid inside a cell is preserved as an inner-grid
@@ -1509,6 +1516,114 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
           else delete child.props.classes_commonCustomClass;
         }
       }
+
+      // ── Container-width propagation rule ────────────────────────────────────
+      // When a parsys cell's ONLY direct child is a container that:
+      //   (a) has a container-* width styleId (container-large, container-medium, etc.)
+      //   (b) contains only leaf components — NO direct grid children
+      // → propagate that container width to each eligible child block:
+      //   • custom-title, text-container → container-* class (e.g. container-large)
+      //   • video, brightcove-video      → video-* equivalent (e.g. video-large)
+      //   • all other types              → skip (image, cta, eyebrow, separator etc.)
+      // This runs AFTER the width-strip loop so the inherited classes are not stripped.
+      if (par && typeof par === 'object') {
+        const CONTAINER_TO_VIDEO_WIDTH = {
+          'container-full-width': 'video-full-width',
+          'container-x-large':    'video-x-large',
+          'container-large':      'video-large',
+          'container-medium':     'video-medium',
+          'container-small':      'video-small',
+          'container-x-small':    'video-x-small',
+        };
+        // Find the first direct container child of par (through layout wrappers) that:
+        //   (a) has a container-* width styleId
+        //   (b) has NO direct grid children
+        // par may have multiple direct children (container + loose components) — that's fine,
+        // we only need to find ONE width-bearing container to know the intended width for the cell.
+        const findWidthContainer = (n) => {
+          for (const [, k] of childEntries(n)) {
+            const krt = RT(k);
+            if (!krt || isLayoutWrapper(krt)) {
+              const inner = findWidthContainer(k);
+              if (inner) return inner;
+            } else if (isContainer(krt)) {
+              if (containerHasWidthStyle(k) && !containerHasDirectGrid(k)) return k;
+            }
+          }
+          return null;
+        };
+        const wrappingContainer = findWidthContainer(par);
+        if (wrappingContainer) {
+          const cellContainerWidth = containerBlockWidth(wrappingContainer, '');
+          if (cellContainerWidth) {
+            // cellContainerWidth is already 'width-large' etc. (from CONTAINER_TO_BLOCK_WIDTH).
+            // For video blocks, map width-large → video-large via CONTAINER_TO_VIDEO_WIDTH keyed on container-*.
+            // Derive the container-* key by reverse-mapping only for the video lookup.
+            const containerClass = Object.entries(CONTAINER_TO_BLOCK_WIDTH)
+              .find(([, v]) => v === cellContainerWidth)?.[0] || '';
+            // Identify which blocks in gs.children came from INSIDE the wrapping container
+            // using index-range tracking: record gs.children.length before and after a fresh
+            // collectCellLeaves run on the wrapping container into a temp array, then map the
+            // resulting blocks back to the already-collected gs.children by position.
+            // Direct par siblings (e.g. disclaimer text) appear at other positions and are skipped.
+            //
+            // Strategy: walk par's direct semantic children in order, tracking which slice of
+            // gs.children was contributed by wrappingContainer vs other direct siblings.
+            // We know gs.children was populated by collectCellLeaves(par, gs.children) above.
+            // Re-walk par's direct children to find exactly which blocks came from which source.
+            let containerStart = -1;
+            let containerEnd = -1;
+            {
+              let pos = 0;
+              const walkParDirect = (n) => {
+                for (const [, k] of childEntries(n)) {
+                  const krt = RT(k);
+                  if (!krt || isLayoutWrapper(krt)) { walkParDirect(k); continue; }
+                  if (isXF(krt)) continue;
+                  // Count how many blocks this child would contribute
+                  const temp = [];
+                  collectCellLeaves(k, temp, 0);
+                  const count = temp.length;
+                  if (k === wrappingContainer) {
+                    containerStart = pos;
+                    containerEnd = pos + count;
+                  }
+                  pos += count;
+                }
+              };
+              walkParDirect(par);
+            }
+            if (containerStart >= 0) {
+              // Blocks excluded from container-width propagation:
+              //   • custom-image — has its own image-size width vocabulary (width-small, width-large etc.)
+              //     that must not be overridden by the enclosing container width.
+              //   • accordion — its own width class (accordion-large, accordion-medium) is set
+              //     independently and must not be mixed with container-* width inheritance.
+              const PROPAGATION_EXCLUDE = new Set(['custom-image', 'accordion']);
+              for (let idx = containerStart; idx < containerEnd && idx < gs.children.length; idx++) {
+                const child = gs.children[idx];
+                if (PROPAGATION_EXCLUDE.has(child.type)) continue;
+                let widthClass = null;
+                if (child.type === 'custom-title' || child.type === 'text-container') {
+                  widthClass = cellContainerWidth; // e.g. 'width-large'
+                } else if (child.type === 'video' || child.type === 'brightcove-video') {
+                  widthClass = CONTAINER_TO_VIDEO_WIDTH[containerClass] || null; // e.g. 'video-large'
+                }
+                if (!widthClass || !child.props) continue;
+                const existing = String(child.props.classes_customDynamicClass || '')
+                  .split(',').map(c => c.trim()).filter(Boolean);
+                if (!existing.includes(widthClass)) existing.push(widthClass);
+                child.props.classes_customDynamicClass = existing.join(',');
+                // Mark all eligible blocks so global stripWidthFromBlock does not remove
+                // the propagated width-* / video-* class (title, text, video).
+                Object.defineProperty(child, '_cellContainerWidth', { value: widthClass, enumerable: false, configurable: true });
+              }
+            }
+          }
+        }
+      }
+      // ── End container-width propagation rule ────────────────────────────────
+
       blocks.push(gs);
     }
   }
@@ -2231,7 +2346,7 @@ function emitHeroContinuationSections(bodyNodes, wrapper, sections, mixedSplit =
 // Classes that are computed dynamically and must never be stripped by picklist validation.
 // `cols-*` and `ncol-*` / `col-*` are generated from AEM grid columnWidth values and are
 // not enumerated in any static EDS picklist configuration.
-const DYNAMIC_CLASS_RE = /^(?:cols-[\d-]+|n?col-\d+|width-(?:x{0,3}-)?(small|medium|large)|grid-(?:full-page|half-page|meganav)-[\w-]+)$/;
+const DYNAMIC_CLASS_RE = /^(?:cols-[\d-]+|n?col-\d+|width-(?:x{0,3}-)?(small|medium|large)|video-(?:x{0,3}-)?(small|medium|large|full-width)|container-(?:[a-z]+-)*(?:large|medium|small|x-large|x-small|xx-large|xxx-large|full-width)|grid-(?:full-page|half-page|meganav)-[\w-]+)$/;
 
 function validateCanvasStyles(sections) {
   const filter = (type, value) => {
@@ -2421,6 +2536,10 @@ const WIDTH_GLOBAL_STRIP_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|mediu
 const WIDTH_GLOBAL_KEEP = new Set(['custom-image', 'accordion']);
 function stripWidthFromBlock(block) {
   if (!block || WIDTH_GLOBAL_KEEP.has(block.type)) return;
+  // Preserve video-* class that was explicitly propagated from a wrapping container
+  // (container-large → video-large). The _cellContainerWidth property is set by the
+  // container-width propagation rule in expandGrid() and must survive the global strip.
+  if (block._cellContainerWidth) return;
   if (block.props) {
     if (block.props.classes_customDynamicClass) {
       const cleaned = String(block.props.classes_customDynamicClass)
