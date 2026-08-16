@@ -2575,15 +2575,35 @@ function stripWidthClasses(sections) {
 // never nested inside the last grid — verified: of 786 EDS pages ending in a separator, 0 nest it
 // in a grid and 474 have it alone in a bare section. It is always the footer spacer, so EDS
 // requires the wide band with section padding and no trailing margin.
-function footerSeparatorSectionProps(props = {}, siblingProps = null) {
+// Returns true only if the section/grid-container has story-card blocks anywhere inside it.
+// Used to gate bg-* inheritance on the hoisted footer separator — we only want the bg to
+// carry over when the preceding band is a story-card grid (Related Content pattern), not
+// for arbitrary bg-colored bands like a CTA strip.
+function sectionHasStoryCards(sec) {
+  if (!sec) return false;
+  for (const blk of sec.blocks || []) {
+    if (blk.type === 'story-card') return true;
+    // grid-sections inside a grid-container
+    for (const gs of blk.blocks || blk.children || []) {
+      if (gs.type === 'story-card') return true;
+      for (const child of gs.children || []) {
+        if (child.type === 'story-card') return true;
+      }
+    }
+  }
+  return false;
+}
+
+function footerSeparatorSectionProps(props = {}, siblingSection = null) {
   const required = ['content-wide', 'section-padding', 'no-bottom-margin'];
   // Strip any conflicting width classes from existing before adding content-wide
   const existing = splitCls([props.style_customDynamicClass]).filter(c => !isWidthCls(c));
-  // Inherit bg-* from the sibling section/grid-container (the story-card grid) when the
-  // separator section itself carries no background — ensures the gray band is continuous.
+  // Only inherit bg-* from the sibling section/grid-container when it contains story-card blocks
+  // (the Related Content / nos-principes pattern). Do NOT inherit from arbitrary bg-colored bands
+  // like a blue CTA strip — that would bleed the wrong color into the footer spacer.
   const ownBg = existing.find(c => /^bg-/.test(c));
-  const siblingBg = !ownBg && siblingProps
-    ? splitCls([siblingProps.style_customDynamicClass]).find(c => /^bg-/.test(c))
+  const siblingBg = !ownBg && siblingSection && sectionHasStoryCards(siblingSection)
+    ? splitCls([siblingSection.props?.style_customDynamicClass]).find(c => /^bg-/.test(c))
     : null;
   const bgCls = ownBg || siblingBg || '';
   const base = existing.filter(c => !/^bg-/.test(c));
@@ -2643,22 +2663,33 @@ function hoistTrailingSeparator(sections) {
         const sep = kids.pop();
         // Inherit bg-* from the grid-container so the hoisted separator section
         // continues the same background band (e.g. bg-f4f4f4 on a gray story-card band).
-        sections.push({ type: 'section', props: footerSeparatorSectionProps({}, last.props), blocks: [sep] });
+        // Only pass last (the grid-container) as siblingSection so bg-* is inherited only
+        // when the grid contains story-cards (checked inside footerSeparatorSectionProps).
+        sections.push({ type: 'section', props: footerSeparatorSectionProps({}, last), blocks: [sep] });
       }
       break;                                                     // only the last non-empty grid-section
     }
   } else if (last.type === 'section' && Array.isArray(last.blocks) && last.blocks.length > 1
              && last.blocks[last.blocks.length - 1].type === 'separator') {
-    // Inherit bg-* from the preceding section/grid-container when hoisting from a multi-block section.
-    const prevProps = sections.length >= 2 ? sections[sections.length - 2]?.props : null;
-    sections.push({ type: 'section', props: footerSeparatorSectionProps({}, prevProps), blocks: [last.blocks.pop()] });
+    // Inherit bg-* from the preceding section/grid-container when hoisting from a multi-block section,
+    // but only if that sibling contains story-cards (checked inside footerSeparatorSectionProps).
+    const prevSec = sections.length >= 2 ? sections[sections.length - 2] : null;
+    sections.push({ type: 'section', props: footerSeparatorSectionProps({}, prevSec), blocks: [last.blocks.pop()] });
   }
   const footerSpacer = sections[sections.length - 1];
   if (footerSpacer?.type === 'section' && footerSpacer.blocks?.length === 1
       && footerSpacer.blocks[0]?.type === 'separator') {
-    // Pass the preceding sibling so footerSeparatorSectionProps can inherit bg-* if needed.
-    const prevProps = sections.length >= 2 ? sections[sections.length - 2]?.props : null;
-    footerSpacer.props = footerSeparatorSectionProps(footerSpacer.props, prevProps);
+    // Pass the preceding sibling section so footerSeparatorSectionProps can inherit bg-* only
+    // when it contains story-cards (the Related Content pattern).
+    const prevSec = sections.length >= 2 ? sections[sections.length - 2] : null;
+    footerSpacer.props = footerSeparatorSectionProps(footerSpacer.props, prevSec);
+    // The grid-container immediately before the footer separator seams directly into the
+    // spacer — it must NOT carry section-bottom-margin (which adds a visual gap between
+    // the last content band and the spacer). Replace with no-bottom-margin.
+    if (prevSec?.type === 'grid-container' && prevSec.props?.style_customDynamicClass) {
+      prevSec.props.style_customDynamicClass = prevSec.props.style_customDynamicClass
+        .split(',').map(c => c.trim() === 'section-bottom-margin' ? 'no-bottom-margin' : c).join(',');
+    }
   }
   // A separator-only section is a spacer band, not regular content. Keep an
   // explicitly authored section-padding variation (and the footer rule above),
