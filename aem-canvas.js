@@ -2526,7 +2526,7 @@ function aemToCanvas(jcrContent, opts) {
     }
     emitNode(node, sections);
   }
-  return stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections)))));
+  return appendRelatedContentFooterSeparator(stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections))))));
 }
 
 // Strip width-* / video-* classes from every block in the canvas EXCEPT custom-image and accordion.
@@ -2575,15 +2575,63 @@ function stripWidthClasses(sections) {
 // never nested inside the last grid — verified: of 786 EDS pages ending in a separator, 0 nest it
 // in a grid and 474 have it alone in a bare section. It is always the footer spacer, so EDS
 // requires the wide band with section padding and no trailing margin.
-function footerSeparatorSectionProps(props = {}) {
+function footerSeparatorSectionProps(props = {}, siblingProps = null) {
   const required = ['content-wide', 'section-padding', 'no-bottom-margin'];
   // Strip any conflicting width classes from existing before adding content-wide
   const existing = splitCls([props.style_customDynamicClass]).filter(c => !isWidthCls(c));
+  // Inherit bg-* from the sibling section/grid-container (the story-card grid) when the
+  // separator section itself carries no background — ensures the gray band is continuous.
+  const ownBg = existing.find(c => /^bg-/.test(c));
+  const siblingBg = !ownBg && siblingProps
+    ? splitCls([siblingProps.style_customDynamicClass]).find(c => /^bg-/.test(c))
+    : null;
+  const bgCls = ownBg || siblingBg || '';
+  const base = existing.filter(c => !/^bg-/.test(c));
   return {
     ...props,
-    style_customDynamicClass: [...new Set([...existing, ...required])].join(','),
+    style_customDynamicClass: [...new Set([...(bgCls ? [bgCls] : []), ...base, ...required])].join(','),
   };
 }
+
+// Post-processing: when the last canvas output is an all-story-card grid-container and
+// the AEM XML had no trailing separator, inject a footer spacer section with:
+//   - separator-height-96 (our default when no AEM separator was authored)
+//   - bg-* inherited from the grid-container
+//   - content-wide, section-padding, no-bottom-margin
+// This ensures every related-content band ends with a consistent footer spacer.
+// Safe: hoistTrailingSeparator() runs first — if a separator was already hoisted,
+// the last entry is a separator-only section (not a grid-container) and this function no-ops.
+function appendRelatedContentFooterSeparator(sections) {
+  if (!sections.length) return sections;
+  const last = sections[sections.length - 1];
+  if (last.type !== 'grid-container') return sections;
+  // Check: every non-empty grid-section contains only story-card blocks
+  const nonEmpty = (last.blocks || []).filter(gs => gs.children && gs.children.length);
+  if (!nonEmpty.length) return sections;
+  const allStoryCards = nonEmpty.every(gs => gs.children.every(b => b.type === 'story-card'));
+  if (!allStoryCards) return sections;
+  // Inherit bg-* from the grid-container
+  const gcCls = splitCls([last.props && last.props.style_customDynamicClass]);
+  const bgCls = gcCls.find(c => /^bg-/.test(c)) || '';
+  // The grid-container is directly followed by the footer separator — no bottom margin needed.
+  // Replace section-bottom-margin with no-bottom-margin so the two sections seam cleanly.
+  if (last.props && last.props.style_customDynamicClass) {
+    last.props.style_customDynamicClass = last.props.style_customDynamicClass
+      .split(',').map(c => c.trim() === 'section-bottom-margin' ? 'no-bottom-margin' : c.trim()).join(',');
+  }
+  const secClasses = [...new Set([...(bgCls ? [bgCls] : []), 'no-bottom-margin', 'section-padding', 'content-wide'])];
+  sections.push({
+    type: 'section',
+    props: { style_customDynamicClass: secClasses.join(',') },
+    blocks: [{
+      type: 'separator',
+      props: { classes_customDynamicClass: 'separator-height-96', showLine: '{Boolean}false' },
+      children: [],
+    }],
+  });
+  return sections;
+}
+
 function hoistTrailingSeparator(sections) {
   if (!sections.length) return sections;
   const last = sections[sections.length - 1];
@@ -2591,17 +2639,26 @@ function hoistTrailingSeparator(sections) {
     for (let gi = last.blocks.length - 1; gi >= 0; gi--) {
       const kids = last.blocks[gi] && last.blocks[gi].children;
       if (!kids || !kids.length) continue;                       // skip empty grid-sections
-      if (kids[kids.length - 1].type === 'separator') sections.push({ type: 'section', props: footerSeparatorSectionProps(), blocks: [kids.pop()] });
+      if (kids[kids.length - 1].type === 'separator') {
+        const sep = kids.pop();
+        // Inherit bg-* from the grid-container so the hoisted separator section
+        // continues the same background band (e.g. bg-f4f4f4 on a gray story-card band).
+        sections.push({ type: 'section', props: footerSeparatorSectionProps({}, last.props), blocks: [sep] });
+      }
       break;                                                     // only the last non-empty grid-section
     }
   } else if (last.type === 'section' && Array.isArray(last.blocks) && last.blocks.length > 1
              && last.blocks[last.blocks.length - 1].type === 'separator') {
-    sections.push({ type: 'section', props: footerSeparatorSectionProps(), blocks: [last.blocks.pop()] });
+    // Inherit bg-* from the preceding section/grid-container when hoisting from a multi-block section.
+    const prevProps = sections.length >= 2 ? sections[sections.length - 2]?.props : null;
+    sections.push({ type: 'section', props: footerSeparatorSectionProps({}, prevProps), blocks: [last.blocks.pop()] });
   }
   const footerSpacer = sections[sections.length - 1];
   if (footerSpacer?.type === 'section' && footerSpacer.blocks?.length === 1
       && footerSpacer.blocks[0]?.type === 'separator') {
-    footerSpacer.props = footerSeparatorSectionProps(footerSpacer.props);
+    // Pass the preceding sibling so footerSeparatorSectionProps can inherit bg-* if needed.
+    const prevProps = sections.length >= 2 ? sections[sections.length - 2]?.props : null;
+    footerSpacer.props = footerSeparatorSectionProps(footerSpacer.props, prevProps);
   }
   // A separator-only section is a spacer band, not regular content. Keep an
   // explicitly authored section-padding variation (and the footer rule above),
