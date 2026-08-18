@@ -174,6 +174,22 @@ function extractPageMeta(jcrContent, mapping, pm) {
         val = locale
           ? `/content/abbvie-nextgen-eds/corporate/abbvie-com/${locale}/modal-fragment/warn-departure-modal`
           : raw;
+      } else if (rule.transform === 'aem-date-to-readable') {
+        // Convert AEM ISO date to human-readable format in UTC
+        // e.g. {Date}2023-11-04T08:00:00.000+05:30 → "November 04, 2023"
+        try {
+          const d = new Date(raw);
+          if (!isNaN(d.getTime())) {
+            val = d.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: '2-digit',
+              timeZone: 'UTC'
+            });
+          }
+        } catch (_) {
+          // Keep original value if date parsing fails
+        }
       } else if (rule.transform === 'aem-tag-to-eds') {
         // AEM tag format: [namespace:path/to/tag,namespace:path/to/tag2]
         // EDS format: corporate:namespace/path/to/tag,corporate:namespace/path/to/tag2
@@ -2435,7 +2451,35 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
     }
     const pageTitle = String(jcrContent['@jcr:title'] || meta['jcr:title'] || '').trim() || (rel ? rel.split('/').pop() : 'page');
 
+    const msmEnabled = req.body?.msmEnabled === true;
+    const edsPrefix  = String(req.body?.edsPrefix || '').trim().replace(/\/+$/, '');
     const sections = aemToCanvas(jcrContent, { rel });
+
+    // MSM link rewriting: replace country segment with `language-masters` in all internal paths.
+    // /content/{root}/{country}/{lang}/...  →  /content/{root}/language-masters/{lang}/...
+    if (msmEnabled && edsPrefix) {
+      const escPrefix = edsPrefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Match: edsPrefix / {country} / {lang} / rest
+      // country = 2-3 letters, lang = 2-3 letters (ISO codes like 'ch', 'de', 'nz', 'en')
+      const MSM_RE = new RegExp(
+        '(' + escPrefix + ')' +
+        '\\/([a-z]{2,3})' +        // country  (group 2)
+        '(\\/[a-z]{2,3})' +        // /lang    (group 3)
+        '(\\/|$)',                  // separator (group 4)
+        'g'
+      );
+      const rewritePath = v => typeof v === 'string'
+        ? v.replace(MSM_RE, (_, pfx, _country, lang, sep) => `${pfx}/language-masters${lang}${sep}`)
+        : v;
+      const rewriteBlock = b => {
+        if (b && b.props) {
+          for (const [k, v] of Object.entries(b.props)) b.props[k] = rewritePath(v);
+        }
+        for (const c of b.children || []) rewriteBlock(c);
+        for (const c of b.blocks   || []) rewriteBlock(c);
+      };
+      for (const s of sections) rewriteBlock(s);
+    }
 
     // Accessibility backfill from the live AEM render (optional): fills empty image alt,
     // captions, CTA aria-labels, video poster labels that the JCR XML doesn't carry.

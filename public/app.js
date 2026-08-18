@@ -22,7 +22,7 @@ const S = {
   bulkPages:      [],     // [{ fileName, slug, pageTitle, edsPath, sections, filled, skipped, status, error }]
   findSimilar:    { info: null, mode: 'page', path: '', region: '', threshold: 88, busy: false, result: null, error: null, expanded: {} },
   compareModal:   null,   // { liveUrl, migratedUrl, canon } — split-view comparison modal
-  migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', minScore: 80, liveBase: '', edsLiveBase: '', a11yBackfill: true, busy: false, plan: null, error: null, editIdx: null },
+  migrateSite:    { edsPrefix: '/content/abbvie-nextgen-eds/corporate/abbvie-com', regionSel: [], targetRoot: '', locale: '', minScore: 80, liveBase: '', edsLiveBase: '', a11yBackfill: true, msmEnabled: false, busy: false, plan: null, error: null, editIdx: null },
 };
 
 let _uid = 0;
@@ -1703,6 +1703,7 @@ function migrateSiteTabHtml() {
         <input id="ms-minscore" class="form-input" type="number" min="0" max="100" value="${ms.minScore}"/>
       </div>
       <button class="btn btn-sm btn-primary" id="btn-ms-plan" ${ms.busy ? 'disabled' : ''}>${ms.busy ? '⏳ Starting…' : '🚀 Start Migration'}</button>
+      <button class="btn btn-sm ${ms.msmEnabled ? 'btn-warning' : 'btn-ghost'}" id="btn-enable-msm" title="${ms.msmEnabled ? 'MSM ON — pages created under language-masters, internal page links rewritten' : 'Enable MSM'}">🔗 ${ms.msmEnabled ? 'MSM: ON' : 'Enable MSM'}</button>
       ${ms.plan ? `<button class="btn btn-sm btn-ghost" id="btn-ms-clear-plan" style="color:var(--danger)" title="Discard migration plan and progress">✕ Clear progress</button>` : ''}
     </div>
     ${planHtml}`;
@@ -1825,7 +1826,7 @@ async function doMigAutoBuild(i) {
   r.status = 'preparing'; r.error = null; render();
   try {
     const pageUrl = ms.a11yBackfill ? liveUrlFor(r.sourceRel) : '';
-    const d = await fetch('/api/aem-to-canvas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rel: r.sourceRel, pageUrl, aemHost: S.conn.aemHost, username: S.conn.username, password: S.conn.password }) }).then(x => x.json());
+    const d = await fetch('/api/aem-to-canvas', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rel: r.sourceRel, pageUrl, aemHost: S.conn.aemHost, username: S.conn.username, password: S.conn.password, msmEnabled: ms.msmEnabled === true, edsPrefix: ms.edsPrefix || '' }) }).then(x => x.json());
     if (!d.ok || !d.sections) throw new Error('Auto-build failed: ' + (d.error || 'no sections'));
     r.a11y = d.a11y || null;
     const ids = items => (items || []).map(it => ({ ...it, id: uid(), children: ids(it.children) }));
@@ -3317,6 +3318,10 @@ function bind() {
       render();
     });
     on('btn-ms-plan', 'click', doBuildMigratePlan);
+    on('btn-enable-msm', 'click', () => {
+      S.migrateSite.msmEnabled = !S.migrateSite.msmEnabled;
+      render();
+    });
     { const el = document.getElementById('ms-livebase');    if (el) el.addEventListener('change', () => { S.migrateSite.liveBase    = el.value.trim(); }); }
     { const el = document.getElementById('ms-edslivebase'); if (el) el.addEventListener('change', () => { S.migrateSite.edsLiveBase = el.value.trim(); }); }
     { const el = document.getElementById('ms-a11y');        if (el) el.addEventListener('change', () => { S.migrateSite.a11yBackfill = el.checked; }); }
