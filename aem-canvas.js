@@ -393,40 +393,31 @@ function mapLeaf(node, inheritedBlockWidth = '') {
       String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean)
         .map(c => c.replace(/^cmp-accordion-/, 'accordion-'))   // AEM width class → EDS width class
     );
-    set.delete('light-theme');   // default theme — EDS omits it (89% of accordions carry no theme)
-    // Desktop Width: the ONLY AEM signal is the grid-context styleId (half-page grid → accordion-
-    // medium, full-page-5 → accordion-large; ~70% of those pairs). Most accordion widths are a
-    // per-page EDS redesign choice absent from the AEM XML, so with no signal we leave it unset
-    // (many live EDS accordions also carry no width). Alignment (align-center) already flows
-    // through from the AEM align styleId via styleIdClasses.
+    // light-theme IS a valid EDS accordion picklist class — do NOT delete it.
+    // Theme (light-theme / dark-theme), alignment (align-left / align-center / align-right),
+    // padding (section-padding, padding-bottom, no-top-padding), and margin (margin-bottom-0)
+    // all flow through from AEM styleIds via styleIdClasses(). Do not override or delete any.
+
+    // Desktop Width: resolve from AEM styleIds (accordion-full-width, accordion-xx-large,
+    // accordion-x-large, accordion-large, accordion-medium). Use exact EDS picklist values —
+    // NO downsize. When no explicit width styleId is authored, infer from grid template context.
     if (![...set].some(c => /^accordion-/.test(c))) {
       const aem = String(node['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',')
         .map(id => styleMap[id]?.aemClass || '').join(' ');
-      const cmp = aem.match(/cmp-accordion-([a-z-]+)/);   // explicit AEM accordion width (accordion-only)
+      const cmp = aem.match(/cmp-accordion-([a-z-]+)/);   // explicit AEM accordion width
       if (cmp) set.add('accordion-' + cmp[1]);
       else if (/half-page-2/.test(aem)) set.add('accordion-medium');
       else if (/full-page-5/.test(aem)) set.add('accordion-large');
     }
+    // Heading size: derive from AEM headingElement (h2–h6). Default h5-size.
     if (![...set].some(c => /^h[1-6]-size$/.test(c))) {
       const he = String(node['@headingElement'] || '').toLowerCase();
-      set.add(he === 'h4' ? 'h4-size' : 'h5-size');
+      const sizeMap = { h2: 'h2-size', h3: 'h3-size', h4: 'h4-size', h5: 'h5-size', h6: 'h6-size' };
+      set.add(sizeMap[he] || 'h5-size');
     }
-    // Always add align-center to accordion blocks.
-    set.add('align-center');
-    // Reduce the accordion width class by one step (accordion-xx-large → accordion-x-large, etc.).
-    // This compensates for the EDS layout rendering the accordion at a larger effective width
-    // than the AEM authoring preview, so stepping down one size preserves visual parity.
-    const ACCORDION_WIDTH_DOWNSIZE = {
-      'accordion-xxx-large': 'accordion-xx-large',
-      'accordion-xx-large':  'accordion-x-large',
-      'accordion-x-large':   'accordion-large',
-      'accordion-large':     'accordion-medium',
-      'accordion-medium':    'accordion-small',
-      'accordion-small':     'accordion-x-small',
-    };
-    for (const [big, small] of Object.entries(ACCORDION_WIDTH_DOWNSIZE)) {
-      if (set.has(big)) { set.delete(big); set.add(small); break; }
-    }
+    // Alignment: respect AEM authored align-left / align-center / align-right.
+    // Do NOT hardcode align-center — no default alignment is applied when AEM does not author one.
+    // (The AEM accordion picklist has align-left, align-center, align-right as explicit options.)
     props.classes_customDynamicClass = [...set].join(',');
     // Localize the Expand/Collapse-All labels from the page language (AEM carries no labels).
     const lbl = ACCORDION_LABELS[String(_ctxRel ? _ctxRel.split('/')[1] : '').toLowerCase()];
@@ -666,6 +657,18 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   const topBody = Object.entries(bodyFreq).sort((a, b) => b[1] - a[1])[0];
   const outCls = [...nonBody, ...(topBody ? [topBody[0]] : [])];
   if (outCls.length) props.classes_commonCustomClass = outCls.join(',');
+
+  // Text-container: convert <b> / </b> tags to <strong> / </strong> for semantic HTML.
+  // AEM richtext editors frequently emit <b> for bold text; EDS expects <strong>.
+  if (type === 'text-container') {
+    for (const k of Object.keys(props)) {
+      if (typeof props[k] === 'string' && /<b[\s>]/i.test(props[k])) {
+        props[k] = props[k].replace(/<b(\s[^>]*)?>/gi, '<strong$1>').replace(/<\/b>/gi, '</strong>');
+      }
+    }
+    // Also convert in child text nodes
+    for (const child of []) { /* children handled below via childProp */ }
+  }
 
   // Text alignment lives INLINE in the richtext (`text-align: left|center|right`); EDS lifts it to
   // an `align-*` class on the text-container. Use the dominant alignment across the block's markup.
@@ -1104,8 +1107,7 @@ function sectionProps(node, hero = false, overlapNode = null) {
       'container-full-width', // AEM wrapper ID — NOT a width class on EDS sections
       'height-default', 'height-short', 'height-tall', 'height-x-tall', 'height-xx-tall', // → hero ctrl
       'no-padding',           // AEM padding reset — not a valid EDS section class
-      // NOTE: no-bottom-margin is intentionally NOT excluded here — when AEM explicitly
-      // authors it on C1 (styleId 1653545835879) it must appear on the hero section.
+      'no-bottom-margin',     // hero sections never carry bottom margin — always excluded regardless of AEM authoring
     ]);
     // Background color/image → hero item only, not section
     const filteredClasses = c1Classes.filter(c => !HERO_SEC_EXCL.has(c) && !/^bg-/.test(c));
@@ -1826,20 +1828,38 @@ function emitNode(node, sections) {
       if (r7Classes.includes('content-wide')) {
         r7Classes = ['content-wide', ...r7Classes.filter(c => c !== 'content-wide')];
       }
+      // Keep bg-* classes on the section — Rule 7 containers with bg-color (e.g. #F4F4F4)
+      // must propagate their background to the EDS section, not strip it.
       const r7Derived = r7Classes
-        .filter(c => !RULE7_EXCL.has(c) && !GRID_TEMPLATE_RE.test(c) && !/^bg-/.test(c));
-      const secClasses = mergeDefaults('section', r7Derived);
+        .filter(c => !RULE7_EXCL.has(c) && !GRID_TEMPLATE_RE.test(c));
+      // Add the PreBuilt Template grid class (e.g. grid-full-page-5-v1) to the section itself.
+      // The EDS twin places this class on the section, NOT on an inner-grid controller block.
+      const allGrids = collectAllGrids(node);
+      const gridTemplateClass = allGrids.length > 0
+        ? splitCls([styleIdClasses(allGrids[0])]).find(c => GRID_TEMPLATE_RE.test(c))
+        : null;
+      const secClasses = mergeDefaults('section', [...r7Derived, gridTemplateClass].filter(Boolean));
       // padding-bottom added after section-padding (ALWAYS default) so order is correct
       if (node['@backgroundImageReference'] && !secClasses.includes('padding-bottom')) {
         secClasses.push('padding-bottom');
       }
       const secProps = { style_customDynamicClass: secClasses.join(',') };
       Object.assign(secProps, bgImageProps(node));
-      // Emit one section with inner-grids (twin structure confirmed)
+      // Rule 7: flatten all grid cells into plain sibling blocks (NO inner-grid controller).
+      // The EDS twin places card/fact blocks as direct children of the section, with the
+      // grid-full-page-* template class on the section itself — not wrapped in an inner-grid.
       const blocks = [];
-      const allGrids = collectAllGrids(node);
       for (const grid of allGrids) {
-        emitInnerGrid(grid, blocks, 0);
+        const cols = gridColumns(grid);
+        const rowCount = parseInt(grid['@rowCount'] || '1') || 1;
+        for (let r = 1; r <= rowCount; r++) {
+          for (let c = 1; c <= cols.length; c++) {
+            const par = grid[`par_${r}${c}`];
+            if (par && typeof par === 'object') {
+              collectCellLeaves(par, blocks, 0, '');
+            }
+          }
+        }
       }
       sections.push({ type: 'section', props: secProps, blocks });
       return;
@@ -2436,7 +2456,7 @@ function aemToCanvas(jcrContent, opts) {
             // For mixedSplit, body always contains grids (from gridsAndRest + body siblings).
             // Use emitHeroContinuationSections unconditionally for mixedSplit so that the
             // badge grid and episode grids each emit as their own sections.
-            bodyGroups.push({ wrapper: nx, nodes: split.body, split: split.mixedSplit || containerHasGrid(nx), mixedSplit: !!split.mixedSplit });
+            bodyGroups.push({ wrapper: nx, nodes: split.body, split: split.mixedSplit || containerHasAnyGrid(nx), mixedSplit: !!split.mixedSplit });
             // strip width classes from header blocks absorbed into hero
             j++;
             break;                                  // later containers are page body, not hero continuation
@@ -2598,11 +2618,13 @@ function footerSeparatorSectionProps(props = {}, siblingSection = null) {
   const required = ['content-wide', 'section-padding', 'no-bottom-margin'];
   // Strip any conflicting width classes from existing before adding content-wide
   const existing = splitCls([props.style_customDynamicClass]).filter(c => !isWidthCls(c));
-  // Only inherit bg-* from the sibling section/grid-container when it contains story-card blocks
-  // (the Related Content / nos-principes pattern). Do NOT inherit from arbitrary bg-colored bands
-  // like a blue CTA strip — that would bleed the wrong color into the footer spacer.
+  // Inherit bg-* from the sibling section/grid-container when:
+  //   1. The separator section itself has no bg-* class, AND
+  //   2. The preceding sibling section/grid-container has a bg-* class
+  // This ensures the footer spacer visually continues the background band above it
+  // (e.g. section 6 has bg-f1f3ff → separator section also gets bg-f1f3ff).
   const ownBg = existing.find(c => /^bg-/.test(c));
-  const siblingBg = !ownBg && siblingSection && sectionHasStoryCards(siblingSection)
+  const siblingBg = !ownBg && siblingSection
     ? splitCls([siblingSection.props?.style_customDynamicClass]).find(c => /^bg-/.test(c))
     : null;
   const bgCls = ownBg || siblingBg || '';
