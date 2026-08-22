@@ -65,6 +65,231 @@ const supportsStyle = (type, cls) => {
   //return !!picklist?.has(cls);
 };
 
+// ── Homepage-hero-controller detection ────────────────────────────────────────
+const HOMEPAGE_HERO_RT = 'abbvie-com2/components/homepage-hero-controller/v1/homepage-hero-controller';
+const isHomepageHeroController = n => RT(n) === HOMEPAGE_HERO_RT;
+
+// Detect if a jcr:content node is a homepage (has homepage-hero-controller anywhere)
+function pageIsHomepage(jcrContent) {
+  if (!jcrContent || typeof jcrContent !== 'object') return false;
+  function scan(node, depth = 0) {
+    if (depth > 10) return false;
+    for (const [, child] of Object.entries(node)) {
+      if (!child || typeof child !== 'object') continue;
+      const rt = (child['@sling:resourceType'] || '').trim();
+      if (rt === HOMEPAGE_HERO_RT) return true;
+      if (scan(child, depth + 1)) return true;
+    }
+    return false;
+  }
+  return scan(jcrContent);
+}
+
+// ── XF file reading for homepage hero ─────────────────────────────────────────
+// Reads an AEM XF from the local ams-xf folder and parses it.
+// xfPath: AEM content path e.g. /content/experience-fragments/abbvie-com2/nz/en/site/homepage-hero/first-time/nz-master
+function readXfFile(xfPath) {
+  if (!xfPath || typeof xfPath !== 'string') return null;
+  // Strip /content/experience-fragments/abbvie-com2 prefix; map to ams-xf folder
+  const XF_BASE_PATHS = [
+    '/content/experience-fragments/abbvie-com2',
+  ];
+  let rel = null;
+  for (const prefix of XF_BASE_PATHS) {
+    if (xfPath.startsWith(prefix)) { rel = xfPath.slice(prefix.length); break; }
+  }
+  if (!rel) return null;
+  // File is at: ams-xf/jcr_root/content/experience-fragments/abbvie-com2/<rel>/.content.xml
+  const filePath = path.join(__dirname, 'ams-xf', 'jcr_root', 'content', 'experience-fragments', 'abbvie-com2', ...rel.split('/').filter(Boolean), '.content.xml');
+  try {
+    const xml = fs.readFileSync(filePath, 'utf8');
+    // Parse XML — reuse same parser options as server.js
+    const { XMLParser } = require('fast-xml-parser');
+    const parser = new XMLParser({
+      ignoreAttributes: false, attributeNamePrefix: '@',
+      parseAttributeValue: false, trimValues: true, isArray: () => false,
+    });
+    return parser.parse(xml);
+  } catch (_) { return null; }
+}
+
+// Extract hero content from a parsed XF tree.
+// Returns: { bgImage, bgImageAlt, bgMime, videoId, accountId, playerId, titleText, linkHref, linkText } or null
+function extractXfHeroContent(xfTree) {
+  if (!xfTree) return null;
+  // Navigate: jcr:root > jcr:content > root > responsivegrid > container
+  const jcrContent = (xfTree['jcr:root'] || xfTree)['jcr:content'] || xfTree;
+  const root = jcrContent.root || jcrContent;
+  // Descend through layout wrappers to find the first container with backgroundImageReference
+  function findHeroContainer(node, depth = 0) {
+    if (depth > 8) return null;
+    for (const [key, child] of Object.entries(node || {})) {
+      if (key.startsWith('@') || !child || typeof child !== 'object') continue;
+      const bgImg = child['@backgroundImageReference'];
+      const rt = (child['@sling:resourceType'] || '').trim();
+      if (bgImg || (rt.includes('/container/') && bgImg)) return child;
+      // Descend through layout wrappers and responsivegrid
+      const last = rt.split('/').pop();
+      if (!rt || last === 'responsivegrid' || last === 'iparsys' || last === 'parsys' || last === 'xfpage') {
+        const found = findHeroContainer(child, depth + 1);
+        if (found) return found;
+      }
+    }
+    return null;
+  }
+  const container = findHeroContainer(root);
+  if (!container) return null;
+
+  const bgImage = container['@backgroundImageReference'] || '';
+  const ext = (bgImage.split('.').pop() || '').toLowerCase().split('?')[0];
+  const MIME_MAP = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'image/gif', svg: 'image/svg+xml' };
+
+  // Extract brightcove video (direct child named 'video' or any child with brightcove RT)
+  let videoId = '', accountId = '', playerId = '';
+  for (const [, child] of Object.entries(container)) {
+    if (!child || typeof child !== 'object') continue;
+    const rt = (child['@sling:resourceType'] || '').trim();
+    if (rt.includes('/brightcove') || rt.includes('/video/')) {
+      videoId   = child['@brightcoveVideoId'] || child['@videoId'] || '';
+      accountId = child['@brightcoveAccount']  || child['@accountId'] || '';
+      playerId  = child['@brightcovePlayerId'] || child['@playerId']  || '';
+      if (videoId) break;
+    }
+  }
+
+  // Extract title + link from container2 (the text overlay container)
+  let titleText = '', linkHref = '', linkText = '';
+  for (const [, child] of Object.entries(container)) {
+    if (!child || typeof child !== 'object') continue;
+    const rt = (child['@sling:resourceType'] || '').trim();
+    if (!rt.includes('/container/')) continue;
+    // This is container2 — look for title and text children
+    for (const [, sub] of Object.entries(child)) {
+      if (!sub || typeof sub !== 'object') continue;
+      const srt = (sub['@sling:resourceType'] || '').trim();
+      if (srt.includes('/title/') && !titleText) {
+        titleText = sub['@jcr:title'] || '';
+      }
+      if (srt.includes('/text/') && !linkHref) {
+        const rawText = sub['@text'] || '';
+        // Extract href from <a href="...">...</a>
+        const hrefMatch = rawText.match(/href="([^"]+)"/);
+        const textMatch = rawText.match(/>([^<]+)</);
+        if (hrefMatch) linkHref = hrefMatch[1];
+        if (textMatch) linkText = textMatch[1].trim();
+      }
+    }
+    if (titleText) break;
+  }
+
+  return {
+    bgImage: bgImage ? transformPath(bgImage) : '',
+    bgImageAlt: bgImage ? bgImage.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ') : '',
+    bgMime: MIME_MAP[ext] || 'image/jpeg',
+    videoId,
+    accountId,
+    playerId,
+    titleText,
+    linkHref,
+    linkText,
+  };
+}
+
+// Default Brightcove account IDs (from EDS model select options)
+const BRIGHTCOVE_ACCOUNT_CORPORATE = '2157889325001';
+const BRIGHTCOVE_ACCOUNT_PUBLIC    = '2157889328001';
+
+// Build EDS hero-container-item block from XF hero content.
+// EDS model fields: backgroundVariant, image, imageMimeType, imageAlt,
+//   accountId, playerId, videoId, text (richtext h1), ctaLabel, ctaUrl, ctaAlt,
+//   classes_customDynamicClass
+function buildHomepageHeroItem(xfContent) {
+  if (!xfContent || !xfContent.bgImage) return null;
+  const hasVideo = !!xfContent.videoId;
+  const props = {
+    backgroundVariant: hasVideo ? 'video' : 'image',
+    image:             xfContent.bgImage,
+    imageMimeType:     xfContent.bgMime || 'image/jpeg',
+    imageAlt:          xfContent.bgImageAlt || '',
+    // accountId: use the one from the XF video node; fall back to Corporate
+    accountId: xfContent.accountId || (hasVideo ? BRIGHTCOVE_ACCOUNT_PUBLIC : BRIGHTCOVE_ACCOUNT_CORPORATE),
+  };
+  if (hasVideo) {
+    if (xfContent.playerId) props.playerId = xfContent.playerId;
+    props.videoId = xfContent.videoId;
+    // Video items carry the ambient + full-width styling
+    props.classes_customDynamicClass = 'full-width,height-default,no-bottom-margin,ambient,container-xxx-large';
+  } else {
+    // Image-only items just get the container width class
+    props.classes_customDynamicClass = 'container-xxx-large';
+  }
+  // Heading: EDS uses a `text` richtext field with <h1> markup
+  if (xfContent.titleText) props.text = `<h1>${xfContent.titleText}</h1>`;
+  // CTA: EDS model uses ctaUrl / ctaLabel / ctaAlt (NOT ctaLink / ctaText)
+  if (xfContent.linkHref)  props.ctaUrl   = xfContent.linkHref;
+  if (xfContent.linkText)  { props.ctaLabel = xfContent.linkText; props.ctaAlt = xfContent.linkText; }
+  return { type: 'hero-container-item', props, children: [] };
+}
+
+// Convert a homepage-hero-controller node + its sibling white container into EDS sections.
+// Styles are taken verbatim from the nz/en/index EDS sample page:
+//   section:              content-wide,large-radius,homepage-overlap,height-xx-tall,no-padding,linear-gradient
+//   hero-container ctrl:  medium-radius,height-xx-tall,overlay-inner-height-short,overlay-height-default
+//   hero-container-item (video): full-width,height-default,no-bottom-margin,ambient,container-xxx-large
+//   hero-container-item (image): container-xxx-large
+function convertHomepageHero(controllerNode, whiteContainerNode) {
+  const sections = [];
+
+  // Collect XF paths: primary + item0..N from alternative child
+  const xfPaths = [];
+  const primaryNode = controllerNode.primary || {};
+  const primary = primaryNode['@fragmentVariationPath'] || '';
+  if (primary) xfPaths.push(primary);
+  const alts = controllerNode.alternative || controllerNode.alternatives || {};
+  for (const [key, val] of Object.entries(alts)) {
+    if (key.startsWith('@') || !val || typeof val !== 'object') continue;
+    const fp = val['@fragmentVariationPath'] || '';
+    if (fp) xfPaths.push(fp);
+  }
+
+  // Build hero items from XF content
+  const heroItems = [];
+  for (const xfPath of xfPaths) {
+    const tree = readXfFile(xfPath);
+    const content = extractXfHeroContent(tree);
+    const item = buildHomepageHeroItem(content);
+    if (item) heroItems.push(item);
+  }
+
+  // hero-container controller — exact classes from nz/en/index EDS sample
+  const heroCtrl = {
+    type: 'hero-container',
+    props: {
+      filter: 'hero-container',
+      classes_customDynamicClass: 'medium-radius,height-xx-tall,overlay-inner-height-short,overlay-height-default',
+    },
+    children: heroItems,
+  };
+
+  // Collect white container blocks (inner-grid + col blocks) to merge into the hero section
+  const whiteBlocks = [];
+  if (whiteContainerNode) {
+    collectLeaves(whiteContainerNode, whiteBlocks, '', false);
+  }
+
+  // Section — exact classes from nz/en/index EDS sample
+  const heroSection = {
+    type: 'section',
+    props: {
+      style_customDynamicClass: 'content-wide,large-radius,homepage-overlap,height-xx-tall,no-padding,linear-gradient',
+    },
+    blocks: [heroCtrl, ...whiteBlocks],
+  };
+  sections.push(heroSection);
+
+  return sections;
+}
+
 // ── helpers on the object-mode parsed tree (attributes prefixed '@') ──────────
 const RT = n => (n && n['@sling:resourceType'] || '').trim();
 const isGrid      = rt => rt.includes('/grid/');
@@ -2483,11 +2708,36 @@ function aemToCanvas(jcrContent, opts) {
     for (const [, child] of childEntries(n)) {
       const rt = RT(child);
       if (isXF(rt)) continue;
-      if (isContainer(rt) || isGrid(rt)) { tops.push(child); continue; }
+      // Include homepage-hero-controller even though it's not a container/grid
+      if (isContainer(rt) || isGrid(rt) || isHomepageHeroController(child)) { tops.push(child); continue; }
       if (!rt || isLayoutWrapper(rt)) { gather(child); continue; }
       tops.push(child);                 // bare leaf
     }
   })(jcrContent);
+
+  // Homepage hero: detect homepage-hero-controller and handle it specially.
+  // The controller references XF fragments for each hero variant.
+  // The sibling white container immediately after holds the inner-grid layout.
+  const hpHeroIdx = tops.findIndex(n => isHomepageHeroController(n));
+  if (hpHeroIdx >= 0) {
+    const controllerNode = tops[hpHeroIdx];
+    // Find the first plain container after the controller (no bg-image, no bg-color)
+    let whiteContainerNode = null;
+    for (let k = hpHeroIdx + 1; k < tops.length; k++) {
+      const nx = tops[k];
+      if (isContainer(RT(nx)) && !nx['@backgroundImageReference'] && !bgClass(nx)) {
+        whiteContainerNode = nx;
+        break;
+      }
+    }
+    // Emit homepage hero section(s)
+    const homepageSections = convertHomepageHero(controllerNode, whiteContainerNode);
+    sections.push(...homepageSections);
+    // Emit remaining tops (after the white container, or after the controller if no white container)
+    const skipUntilIdx = whiteContainerNode ? tops.indexOf(whiteContainerNode) : hpHeroIdx;
+    for (let k = skipUntilIdx + 1; k < tops.length; k++) emitNode(tops[k], sections);
+    return appendRelatedContentFooterSeparator(stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections))))));
+  }
   // Hero merge: EDS wraps the hero image + the following intro content into ONE section
   // (see sections/hero-*.json templates). AEM authors it as an empty bg-image container
   // followed by a sibling content container — merge them here.
@@ -2895,4 +3145,4 @@ function applySectionBlockPadding(sections) {
   return sections;
 }
 
-module.exports = { aemToCanvas, mapLeaf, normalizeBlock, normalizeSections };
+module.exports = { aemToCanvas, mapLeaf, normalizeBlock, normalizeSections, pageIsHomepage };

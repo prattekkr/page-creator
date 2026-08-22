@@ -6,7 +6,7 @@ const fs         = require('fs');
 const multer     = require('multer');
 const puppeteer  = require('puppeteer');
 const { XMLParser } = require('fast-xml-parser');
-const { aemToCanvas, normalizeSections } = require('./aem-canvas');
+const { aemToCanvas, normalizeSections, pageIsHomepage } = require('./aem-canvas');
 const { fetchRenderedHtml, extractA11y, backfillA11y, backfillCaptionsFromDam } = require('./a11y-backfill');
 const { validatePage, serveCachedFile } = require('./validate-page');
 
@@ -2453,6 +2453,7 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
 
     const msmEnabled = req.body?.msmEnabled === true;
     const edsPrefix  = String(req.body?.edsPrefix || '').trim().replace(/\/+$/, '');
+    const isHomepage = pageIsHomepage(jcrContent);
     const sections = aemToCanvas(jcrContent, { rel });
 
     // MSM link rewriting: replace country segment with `language-masters` in all internal paths.
@@ -2539,6 +2540,7 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
 
     res.json({
       ok: true, rel, pageTitle, meta, sections, jcr, a11y,
+      isHomepage,
       stats: { sections: sections.length, gridContainers, gridSections, blocks: total, mappedBlocks: mapped, confidence, unknownTypes: unknown, ...damStats }
     });
   } catch (e) { res.status(500).json({ error: e.message }); }

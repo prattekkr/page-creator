@@ -1744,7 +1744,15 @@ async function doBuildMigratePlan() {
     const d = await r.json();
     if (!r.ok) { ms.error = d.error || 'Failed'; }
     else {
-      d.rows.forEach(r2 => { r2.selIdx = 0; r2.targetPath = ms.targetRoot ? `${ms.targetRoot}/${r2.canon}` : ''; r2.customPath = ''; r2.status = null; r2.filled = 0; r2.skipped = 0; });
+      d.rows.forEach(r2 => {
+        r2.selIdx = 0;
+        // Homepage canon is "country/lang" (2 segments) → target must be .../country/lang/index
+        const canonSlug = r2.canon && r2.canon.split('/').filter(Boolean).length <= 2
+          ? r2.canon + '/index'
+          : r2.canon;
+        r2.targetPath = ms.targetRoot ? `${ms.targetRoot}/${canonSlug}` : '';
+        r2.customPath = ''; r2.status = null; r2.filled = 0; r2.skipped = 0;
+      });
       ms.plan = d;
     }
   } catch (e) { ms.error = e.message; }
