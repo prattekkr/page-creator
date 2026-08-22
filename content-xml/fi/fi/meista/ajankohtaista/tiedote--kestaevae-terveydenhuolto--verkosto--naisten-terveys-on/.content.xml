@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-07-03T01:01:03.581-04:00"
+        cq:lastModifiedBy="MANTYJX"
+        cq:tags="[abbvie-com-2:categories/company-stories]"
+        cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-07-03T00:55:39.995-04:00"
+        jcr:lastModifiedBy="MANTYJX"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Tiedote: Kestävä terveydenhuolto -verkosto: Naisten terveys on Suomen tuottavuuden sokea piste"
+        jcr:uuid="d966168d-46d8-48f1-a96f-9dacc7fe306b"
+        sling:resourceType="abbvie-com2/components/storypage"
+        fileReference="/content/dam/abbvie-com2/fi/images/2880/KTH 1080 x 1080 px v2.png"
+        hideInNav="true"
+        publishDate="{Date}2026-06-24T07:48:00.000+03:00"
+        readTime="5"
+        readWatchTimeSel="read-time"
+        title="Kestävä terveydenhuolto -verkosto: Naisten terveys on Suomen tuottavuuden sokea piste">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <experiencefragmentHeader
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                <responsivegrid1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <container2
+                        cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <container3
+                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container">
+                            <button
+                                cq:styleIds="[1659997787460,1659997787459]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="All Stories"
+                                sling:resourceType="abbvie-com2/components/button/v2/button"
+                                accessibilityLabel="View All Stories"/>
+                            <storyinfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>
+                            <title
+                                cq:styleIds="[1659545825678,1651545824678]"
+                                jcr:lastModified="{Date}2026-07-03T00:57:41.253-04:00"
+                                jcr:lastModifiedBy="MANTYJX"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Kestävä terveydenhuolto -verkosto:  Naisten terveys on Suomen tuottavuuden sokea piste"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h1"
+                                variant="h"/>
+                        </container3>
+                    </container2>
+                    <grid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="8"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container4
+                                cq:styleIds="[1653545847150,1653242825678,1653545825687,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <text2
+                                    cq:styleIds="[1659545825678,1659545835858]"
+                                    jcr:lastModified="{Date}2026-07-03T01:00:00.857-04:00"
+                                    jcr:lastModifiedBy="MANTYJX"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>&lt;b>Suomessa naiset elävät miehiä pidempään, mutta kärsivät useammin pitkäaikaissairauksista, yhden päivän sairauspoissaoloista ja työkykyä heikentävistä oireista. Kun vielä hoivavastuu vie naisilta työvuosia ja -panosta, ovat naisten terveys ja hoitovaje nousemassa kynnyskysymyksiksi Suomen työllisyydelle ja talouskasvulle. &lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Terveyden ja hyvinvoinnin laitos THL:n tutkimuspäällikkö, FT &lt;b>Suvi Parikan&lt;/b> mukaan tutkimus piirtää sukupuolieroista terveydenhuollossa kaksijakoisen kuvan. Miehet menettävät enemmän elinvuosia ennenaikaisen kuolleisuuden vuoksi, mutta naiset sairastavat enemmän ja työikäisten naisten koettu työkyky on heikentynyt viime vuosina.&lt;/p>&#xd;&#xa;&lt;p>”Naisilla on miehiä enemmän pitkäaikaissairauksia tai pitkäaikaisia terveysongelmia, mutta myös lyhyitä poissaoloja. Lisäksi mielenterveysperustaiset sairauspoissaolot ovat naisilla yleisempiä kuin miehillä ja ne ovat yleistyneet erityisen jyrkästi 25–34-vuotiailla naisilla, mutta kasvu on ollut selvää myös muissa ikäryhmissä”, Parikka kertoo.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Parikan mukaan tutkimukset osoittavat myös, että naiset käyttävät terveyspalveluja miehiä enemmän mutta raportoivat silti miehiä useammin, etteivät saa riittävästi tarvitsemaansa hoitoa tai apua.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Vähättely viivästyttää diagnoosia&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>LKT, naistentautien ja synnytysten erikoislääkäri &lt;b>Aura Pyykösen&lt;/b> mukaan syynä tähän on se, että terveydenhuollossa ei aina tunnisteta riittävän hyvin naisten tyypillisiä oirekuvia.&lt;/p>&#xd;&#xa;&lt;p>&amp;quot;Jos naisen täytyy vastaanotolla ensin todistaa olevansa sairas ennen kuin häntä kuunnellaan, järjestelmässä on rakenteellinen ongelma&amp;quot;, Pyykönen sanoo.&lt;/p>&#xd;&#xa;&lt;p>Ilmiö näkyy esimerkiksi Suomen Gynekologiset Syöpäpotilaat ry:n tuoreessa selvityksessä, jonka mukaan joka viides munasarjasyöpään sairastunut ei saanut ensimmäisellä terveydenhuollon käyntikerralla lainkaan apua ja joka kymmenes vastaaja joutui olemaan yhteydessä terveydenhuoltoon yli viisi kertaa päästäkseen tutkimuksiin.&lt;/p>&#xd;&#xa;&lt;p>Pyykönen huomauttaa, että oireiden tunnistamisen ongelmat ulottuvat gynekologian ulkopuolelle: lääketiede on pitkään rakentunut pääosin miehillä tehdyn tutkimuksen varaan, ja vinouma näkyy edelleen hoitopoluissa. &lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Yksi parempaa tunnistamista vaativa ilmiö on naisten työoloihin liittyvät terveysriskit; tiedetään, että esimerkiksi naisten yleisimmällä syövällä, rintasyövällä, on osoitettu tutkimuksissa yhteys vuoro- ja yötyöhön.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Kyse ei ole vain terveydestä vaan myös Suomen tulevaisuudesta&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Eduskunnan varapuhemies, kansanedustaja &lt;b>Paula Risikko&lt;/b> muistuttaa, että naisten terveyden vaikutukset ulottuvat paljon terveydenhuoltoa laajemmalle.&lt;/p>&#xd;&#xa;&lt;p>Suomen väestö ikääntyy nopeasti ja työvoimapula koskettaa erityisesti naisvaltaisia aloja. Lisäksi naiset kantavat usein hoivavastuuta niin lapsista kuin vanhuksista, ja menettävät uramahdollisuuksia ja tärkeitä työvuosia. Siksi naisten työ- ja toimintakyvyn vahvistaminen on myös talouspoliittinen kysymys.&lt;/p>&#xd;&#xa;&lt;p>”Naisten terveyttä ei pitäisi nähdä pelkästään hyvinvointi- tai tasa-arvokysymyksenä. Se vaikuttaa työkykyyn, työuriin, syntyvyyteen, omaishoivaan ja koko yhteiskunnan toimintakykyyn”, Risikko sanoo.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Tietoa on, hyödyntäminen ontuu&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Ratkaisut ovat olemassa, mutta niiden toteuttaminen edellyttää nykyistä selvästi vahvempaa panostusta kolmelle alueelle: tutkimukseen, koulutukseen ja palvelujärjestelmään.&lt;/p>&#xd;&#xa;&lt;p>Suomessa on runsaasti tietoa sukupuolten terveyseroista, mutta tieto on hajallaan, eikä se kata riittävästi terveyden, työolojen, palvelujen käytön ja työkyvyn välistä yhteyttä. Samaan aikaan sukupuolen vaikutukset terveyteen jäävät terveydenhuollon koulutuksessa liian vähälle huomiolle, mikä voi näkyä oireiden tunnistamisen ja hoidon viiveinä.&lt;/p>&#xd;&#xa;&lt;p>Paula Risikon mukaan palvelujärjestelmässä tulisikin pyrkiä hoidon viiveiden vähentämiseen, vahvistaa hoidon jatkuvuutta ja kuunnella potilaiden kokemuksia nykyistä paremmin.&lt;/p>&#xd;&#xa;&lt;p>”Terveydenhuollossa kohtaa aina kaksi asiantuntijaa: ammattilainen ja potilas. Jos toista ei kuunnella, vaikuttavaa hoitoa ei synny”, Risikko sanoo.&lt;/p>&#xd;&#xa;&lt;p>Konkreettinen askel eteenpäin on sosiaali- ja terveysministeriön asettama kansallinen naisten terveysstrategiavalmistelu. Kyse on investoinnista, jonka vaikutukset ulottuvat terveydenhuoltoa laajemmalle.&lt;/p>&#xd;&#xa;&lt;p>”Naisten terveyden vahvistaminen on yksi harvoista politiikkatoimista, joilla voidaan samanaikaisesti edistää kansanterveyttä, tasa-arvoa, työkykyä ja talouskasvua”, Risikko kiteyttää. &lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;i>Kestävä terveydenhuolto -verkoston järjestämässä aamiaisseminaarissa 24.6.2026 keskusteltiin sukupuolen vaikutuksesta terveyteen sekä naisten hoitovajeen kustannuksista yhteiskunnalle.&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Tekstissä on viitattu seuraaviin lähteisiin:&lt;/p>&#xd;&#xa;&lt;p>1 &amp;nbsp;&amp;nbsp;Terveyden ja hyvinvoinnin laitos (THL). Aikuisväestön hyvinvointi ja terveys – Terve Suomi 2024. Tilastoraportti 31/2025.&lt;/p>&#xd;&#xa;&lt;p>2 Taskinen, Pertti, Heikura, Tuomo. Yhden ja kahden päivän sairauspoissaolot yleisiä. Tilastokeskus 10.8.2023. Saatavilla verkossa: &lt;a href=&quot;https://stat.fi/tietotrendit/artikkelit/2023/yhden-ja-kahden-paivan-sairauspoissaolot-yleisia&quot;>Yhden ja kahden päivän sairauspoissaolot yleisiä | Tieto&amp;amp;trendit&lt;/a> Viitattu 11.6.2026.&lt;/p>&#xd;&#xa;&lt;p>3 Blomgren J, Perhoniemi R (2024). Mielenterveyden häiriöistä johtuvien sairauspoissaolojen kasvu jatkuu – kehityksen taustalla useita yhtä aikaa vaikuttavia tekijöitä. Kelan tutkimusblogi 13.5.2024.&lt;/p>&#xd;&#xa;&lt;p>4 Suomen Gynekologiset Syöpäpotilaat ry:n munasarjasyöpäkysely 2026. &lt;a href=&quot;https://gysy.fi/wp-content/uploads/2026/06/GySy-munasarjasyopakyselyn-yhteenveto_8.5.2026.pdf&quot;>https://gysy.fi/wp-content/uploads/2026/06/GySy-munasarjasyopakyselyn-yhteenveto_8.5.2026.pdf&lt;/a> Viitattu 17.6.2026&lt;/p>&#xd;&#xa;&lt;p>5 Wei F, Chen W, Lin X. Night-shift work, breast cancer incidence, and all-cause mortality: an updated meta-analysis of prospective cohort studies. Sleep &amp;amp; breathing = Schlaf &amp;amp; Atmung. 2022 Dec;26(4):1509–1526. PMID: 34775538&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Lisätietoa:&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Marketta Piskonen, External Affairs Manager, AbbVie Oy, marketta.piskonen@abbvie.com, puh. 040 902 2446&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Haastattelupyynnöt:&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Karoliina Heimo, Rud Pedersen&lt;br>&#xd;&#xa; karoliina.heimo@rudpedersen.com, puh. 040 509 0437&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Tietoa Kestävä terveydenhuolto -verkostosta:&lt;/b>&lt;br>&#xd;&#xa; &lt;i>Kestävä terveydenhuolto -verkoston tavoitteena on haastaa yhteiskuntaa ja terveydenhuollon toimintaympäristöä pohtimaan, miten suomalaista terveydenhuoltoa uudistetaan asiakaslähtöisesti ja ennakkoluulottomasti. Verkoston tarkoitus on myös tarjota uusia näkökulmia siihen, miten ihmisten hyvinvointi sekä työ- ja toimintakyky pystytään turvaamaan nyt ja tulevaisuudessa. Verkosto on perustettu 2015, ja siinä ovat mukana AbbVie, Suomen Hammaslääkäriliitto, Hyvinvointiala HALI ry, Lääkäriliitto, SOSTE ja Tehy. Kestävän terveydenhuollon tilaisuuksiin osallistuu vuosittain satoja terveydenhuollon ja poliittisen päätöksenteon asiantuntijoita&lt;/i>&lt;b>.&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>FI-ABBV-260044/06.2026&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container4>
+                        </par_12>
+                        <par_13
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container5
+                                cq:styleIds="[1653545847150,1653242825678,1653545835982]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"/>
+                        </par_13>
+                    </grid>
+                </responsivegrid1>
+                <experiencefragmentFooter
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="abbvie-com2/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

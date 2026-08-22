@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <social-media-guidelines/>
     <jcr:content
-        cq:lastModified="{Date}2026-03-12T13:23:53.672-04:00"
+        cq:lastModified="{Date}2026-07-20T08:59:14.105-04:00"
         cq:lastModifiedBy="vickekx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Privacy"
-        jcr:uuid="b6087c55-2960-4604-a7a5-3dcd6d4319ad"
+        jcr:uuid="8d3c7ac1-31c8-40e2-94d9-6c2168b4de7c"
         sling:resourceType="abbvie-com2/components/remotepage"
         hideInNav="true"
         navTitle="Privacy"
@@ -40,10 +40,16 @@
                         sling:resourceType="abbvie-com2/components/container/v2/container"
                         backgroundColor="#071D49"/>
                     <container2
-                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        cq:styleIds="[1653545835855,1653545835860,1653545825688,1653242825678,1653545835879,1653545835982]"
+                        jcr:lastModified="{Date}2026-06-18T10:21:17.880-04:00"
+                        jcr:lastModifiedBy="vickekx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundColor="#FFFFFF">
+                        backgroundColor="#FFFFFF"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none">
                         <container3
                             cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
                             jcr:lastModified="{Date}2026-02-18T09:23:44.419-05:00"
@@ -54,13 +60,14 @@
                             enableFetchPriority="false"
                             enableLazyLoading="false"
                             id="to-top">
-                            <breadcrumb
+                            <separator
+                                cq:styleIds="[1662756456518]"
+                                jcr:created="{Date}2026-06-18T11:35:12.475-04:00"
+                                jcr:createdBy="vickekx"
+                                jcr:lastModified="{Date}2026-06-18T11:35:12.475-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/breadcrumb/v2/breadcrumb"
-                                disableShadowing="false"
-                                hideCurrent="false"
-                                showHidden="true"
-                                startLevel="4"/>
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                             <title_copy
                                 cq:styleIds="[1659545825678,1661545829678,1651242825678,1651545825694]"
                                 jcr:created="{Date}2026-02-17T12:39:41.340-05:00"
@@ -76,34 +83,24 @@
                                 cq:styleIds="[1659545825678]"
                                 jcr:created="{Date}2026-02-17T12:41:15.236-05:00"
                                 jcr:createdBy="singarx"
-                                jcr:lastModified="{Date}2026-02-17T14:18:18.631-05:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-06-18T10:13:40.729-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Effective Date: December 2023&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Effective Date: June 2026&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </container3>
-                    </container2>
-                    <container
-                        cq:styleIds="[1653545825688,1653545835879]"
-                        jcr:created="{Date}2026-02-17T12:44:29.137-05:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2026-02-17T14:21:11.334-05:00"
-                        jcr:lastModifiedBy="singarx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container"
-                        dmPresetType="imagePreset"
-                        enableFetchPriority="false"
-                        enableLazyLoading="false">
                         <text
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:45:15.959-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T14:09:36.584-05:00"
-                            jcr:lastModifiedBy="singarx"
+                            jcr:lastModified="{Date}2026-06-18T11:34:57.957-04:00"
+                            jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>This Privacy Notice explains how AbbVie Ltd, AbbVie House, Vanwall Road, Maidenhead, SL6 4UB (referred to as “AbbVie,” “we,” “our,” or “us”) may process Personal Data about you through your online and off-line interactions with us through AbbVie services, products, communications, and digital properties (including websites and mobile applications) that refer to this Privacy Notice and where AbbVie may obtain and control your Personal Data from a third party (collectively, “AbbVie Relationships”).&lt;/p>&#xd;&#xa;&lt;p>Your Personal Data We May Collect&lt;br>&#xd;&#xa;How we may use Personal Data&lt;br>&#xd;&#xa;How we may&amp;nbsp;disclose&amp;nbsp;Personal Data&amp;nbsp;&lt;br>&#xd;&#xa;Additional&amp;nbsp;information for online interactions and cookies privacy statement&lt;br>&#xd;&#xa;Additional&amp;nbsp;information for job applicants&lt;br>&#xd;&#xa;Additional information for health care professionals&lt;br>&#xd;&#xa;Additional&amp;nbsp;information for participants in patient and customer programs&amp;nbsp;&lt;br>&#xd;&#xa;Privacy of children&lt;br>&#xd;&#xa;Our contact information&lt;br>&#xd;&#xa;Your privacy rights and choices&lt;br>&#xd;&#xa;Data security and retention&amp;nbsp;&lt;br>&#xd;&#xa;Accessing our sites globally&lt;br>&#xd;&#xa;Changes to our Privacy Notice&lt;img width=&quot;11&quot; height=&quot;12&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAQSURBVChTYxgFo2DoAAYGAAKxAAHjb6mZAAAAAElFTkSuQmCC&quot; style=&quot;font-size: 0.8125rem;&quot;>&lt;/p>&#xd;&#xa;"
+                            langAttribute="none"
+                            text="&lt;p>This Privacy Notice explains how AbbVie Ltd, AbbVie House, Vanwall Road, Maidenhead, SL6 4UB (referred to as “AbbVie,” “we,” “our,” or “us”) may process Personal Data about you through your online and off-line interactions with us through AbbVie services, products, communications, and digital properties (including websites and mobile applications) that refer to this Privacy Notice and where AbbVie may obtain and control your Personal Data from a third party (collectively, “AbbVie Relationships”).&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <title
                             cq:styleIds="[1659545825678,1651545825694]"
@@ -126,13 +123,6 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>This section describes the&amp;nbsp;general categories&amp;nbsp;of Personal Data that we may collect for the purposes described in this Privacy Notice. You can find&amp;nbsp;additional&amp;nbsp;information on the types of Personal Data we collect for online interactions, job applicants, healthcare professionals, and patient and customer&amp;nbsp;programs by&amp;nbsp;clicking on the relevant links.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator
-                            jcr:created="{Date}2026-02-17T12:48:15.264-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:48:15.264-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                         <title_copy
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
@@ -154,13 +144,6 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>AbbVie may collect Personal Data from you directly, for example as part of a registration or in response to a questionnaire. AbbVie may also obtain Personal Data indirectly, such as from publicly available sources (e.g., websites or publicly accessible databases), third-party data vendors, health care providers and health insurance companies, and third-party partners and collaborators. We may combine Personal Data from multiple online and off-line sources. The categories of Personal Data that AbbVie may collect about you include:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Direct identifiers and contact information, including your name, address, phone number, or email address&lt;/li>&#xd;&#xa;&lt;li>Registration information, such as your username and password&lt;/li>&#xd;&#xa;&lt;li>Relationship data, including information about products, treatments and health conditions that are of interest to you&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Transaction data, including purchases and inquiries&lt;/li>&#xd;&#xa;&lt;li>Financial account data, such as your credit card number&lt;/li>&#xd;&#xa;&lt;li>Income and demographic information, such as when you request financial&amp;nbsp;assistance&amp;nbsp;for one of our products&lt;/li>&#xd;&#xa;&lt;li>Health-related information, such as information about&amp;nbsp;a health&amp;nbsp;condition,&amp;nbsp;safety&amp;nbsp;and health information in relation to any of our products, or insurance and demographic information&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Payment-related information if you provide a service to AbbVie&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;#to-top&quot;>[Top]&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_586185185
-                            jcr:created="{Date}2026-02-17T12:50:05.004-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:50:05.004-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                         <title_copy_697038093
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
@@ -172,6 +155,13 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
+                        <separator
+                            jcr:created="{Date}2026-02-17T12:48:15.264-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-02-17T12:48:15.264-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                         <text_318522307_copy
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:47:58.318-05:00"
@@ -182,14 +172,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may use your Personal Data for&amp;nbsp;the business&amp;nbsp;and commercial purposes relating to your AbbVie Relationships, communicating with you, improving AbbVie Relationships and our products and services, and for other internal business purposes.  You can find&amp;nbsp;additional&amp;nbsp;information on how we use Personal Data for online interactions, job applicants, healthcare professionals, and patient and customer programs by clicking on the relevant links. &lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_1839757576
+                        <title_copy_697038093_1036638795
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -210,14 +193,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may use your Personal Data for everyday business purposes, such as payment processing and financial account management, contract management, website administration, fulfilment, corporate governance, and reporting obligations.  We may also use your Personal Data to provide you with the programs or services that you&amp;nbsp;requested, or to administer AbbVie services, such as direct purchasing,&amp;nbsp;participating&amp;nbsp;in a savings program or signing up to receive a rebate. This means that we may use your Personal Data to respond to your questions, provide you with your requested services, offer you&amp;nbsp;an optimal&amp;nbsp;customer experience, perform our contractual obligations to you, or perform actions based on your consent.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113_
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_640528235
+                        <title_copy_697038093_478814976
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -238,14 +214,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We provide marketing communications that promote the use of or offer participation in AbbVie products, services, programs, research events or provide other information that may be of interest to you, such as information on certain health conditions. We will use your Personal Data to send you marketing communications and to determine the types of marketing communications to send.&lt;/p>&#xd;&#xa;&lt;p>You can opt-out of marketing communications at any time. Marketing communication opt-out instructions are included in each marketing communication you receive, or you can email us at privacyoffice@abbvie.com.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113__2117815429
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_347864119
+                        <title_copy_697038093_98376269
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -266,14 +235,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>Personal Data may be used to create customized offers, information, or services tailored to your interests and preferences. It may also be used to develop and improve your AbbVie Relationships. In some cases, we collect your Personal Data with your consent. In other cases, we collect this information for our legitimate business&amp;nbsp;interests&amp;nbsp;to&amp;nbsp;optimize&amp;nbsp;and customize AbbVie Relationships.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113__1201712886
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_2114071160
+                        <title_copy_697038093_967970215
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -294,14 +256,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>In order to&amp;nbsp;discover new facts that could help AbbVie better understand customer needs and help improve, develop, and evaluate product services, materials, programs, and treatments, AbbVie analyses Personal Data for its legitimate interests in business and product improvement.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113__1463521003
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_354391416
+                        <title_copy_697038093_2062366808
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -312,7 +267,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__137012656
+                        <text_550066730_copy__1392318656
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -322,14 +277,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may process your Personal Data to&amp;nbsp;comply with&amp;nbsp;laws and regulations, including those related to pharmacovigilance.  We may also use Personal Data to&amp;nbsp;monitor&amp;nbsp;compliance with our policies and procedures, for fraud prevention, and to investigate and prosecute users who violate our rules or who engage in&amp;nbsp;behaviour&amp;nbsp;that is illegal or harmful to others or to others’ property.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;#to-top&quot;>[Top]&lt;/a>&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113__1838573242
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_1002308310
+                        <title_copy_697038093_227160100
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -340,7 +288,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__1530016439
+                        <text_550066730_copy__1467481778
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -350,14 +298,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We&amp;nbsp;generally share&amp;nbsp;Personal Data with third parties for the business and commercial purposes described below.  We do not sell Personal Data to third parties.  You can find&amp;nbsp;additional&amp;nbsp;information on how we share Personal Data for online interactions, job applicants, healthcare professionals, and patient and customer programs by clicking on the relevant links.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113__171703897
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_854343221
+                        <title_copy_697038093_1612593707
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -368,7 +309,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__343353912
+                        <text_550066730_copy__204829882
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -378,14 +319,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We have relationships with various vendors, including our affiliated companies, that help us&amp;nbsp;operate&amp;nbsp;our business and for whom it may&amp;nbsp;be required&amp;nbsp;to have access to your Personal Data&amp;nbsp;in the course of&amp;nbsp;providing services to AbbVie. We require them to handle your Personal Data collected through&amp;nbsp;the AbbVie&amp;nbsp;Relationships&amp;nbsp;in accordance with&amp;nbsp;appropriate contractual&amp;nbsp;privacy and security provisions.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_912011113__390810848
-                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_2086097311
+                        <title_copy_697038093_790257643
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -396,7 +330,14 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__49724567
+                        <separator_912011113__889038450
+                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <text_550066730_copy__1278694138
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -406,14 +347,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may partner with other companies and public and private organizations to provide you with products, content, or services on a joint or “co-branded” basis.  You should be aware that, in such cases, in addition to this Privacy Notice, the relevant&amp;nbsp;partner’s&amp;nbsp;privacy notice may also apply, and, in limited cases, there may be a shared privacy notice.&lt;/p>&#xd;&#xa;&lt;p>For co-branded forms and sites, you will see&amp;nbsp;displayed both the AbbVie logo and the logo of the co-branding partner. To access co-branded services, you may have to complete a registration form, and this registration information may be shared with AbbVie’s co-branding partners, and you should read the individual privacy policies of our co-branding partners, as they may differ in some respects from ours.&lt;/p>&#xd;&#xa;&lt;p>In addition, we may&amp;nbsp;disclose&amp;nbsp;Personal Data to our external auditors, attorneys, accountants, and similar professionals based on our legitimate interest in the operation of our business and our obligations to&amp;nbsp;comply with&amp;nbsp;applicable laws and regulations.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_2053688149
-                            jcr:created="{Date}2026-02-17T13:04:28.990-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:04:28.990-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_508041397
+                        <title_copy_697038093_1800921375
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -424,7 +358,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__1239813578
+                        <text_550066730_copy__1849260453
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -434,14 +368,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>If you contact AbbVie regarding your experience using our products, we may use the information you provide to us to submit our reports to the U.S. Food and Drug Administration, other similar health and medicine government agencies across the world, and as otherwise required of us by law. We also may use the information to&amp;nbsp;contact your prescribing physician to follow up&amp;nbsp;regarding&amp;nbsp;an unexpected event involving the use of our product.&lt;/p>&#xd;&#xa;&lt;p>In certain limited circumstances, we may need to disclose your Personal Data to comply with a legal obligation, process, or demand and for reasons of public interest, such as to comply with reporting obligations to our governing regulatory authorities regarding the safety of our products, in response to a subpoena, or to meet national security or law enforcement requirements.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1433978903
-                            jcr:created="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_943033032
+                        <title_copy_697038093_825343016
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -452,7 +379,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__628659179
+                        <text_550066730_copy__1910993606
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -462,14 +389,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may transfer your Personal Data to a successor entity upon a merger,&amp;nbsp;consolidation&amp;nbsp;or other corporate reorganization, to a purchaser of all or a&amp;nbsp;portion&amp;nbsp;of our assets, or&amp;nbsp;pursuant to&amp;nbsp;a financing arrangement or co-promotional agreement. The Personal Data we have about you may be transferred to parties to the transaction based on our legitimate interest in preparing for and completing the transaction.&amp;nbsp;Any successor entity shall be bound by terms and conditions reasonably&amp;nbsp;similar to&amp;nbsp;this Privacy Notice.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;#to-top&quot;>[Top]&amp;nbsp;&lt;/a>&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1433978903_1478497976
-                            jcr:created="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_803279206
+                        <title_copy_697038093_947483625
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -480,7 +400,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__973335516
+                        <text_550066730_copy__1171977406
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -490,14 +410,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may collect&amp;nbsp;additional&amp;nbsp;categories of Personal Data relating to your online interactions with us, as described in this section. We also use, share, and&amp;nbsp;disclose&amp;nbsp;your Personal Data for online interactions for the&amp;nbsp;additional&amp;nbsp;purposes described in the section. The categories of Personal Data&amp;nbsp;collected,&amp;nbsp;and the purposes of use and disclosure described in this section are in addition to any other collection, use and disclosure of Personal Data practices described separately in this Privacy Notice.&lt;/p>&#xd;&#xa;&lt;p>This section also describes how we use cookies and other data-collection technologies and how you can manage cookies that are not&amp;nbsp;required&amp;nbsp;to&amp;nbsp;operate&amp;nbsp;our websites and mobile applications.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1433978903_245228510
-                            jcr:created="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_1840802924
+                        <title_copy_697038093_1062660703
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -508,7 +421,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__1659342086
+                        <text_550066730_copy__1239671688
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -518,14 +431,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may collect the following&amp;nbsp;additional&amp;nbsp;categories of Personal Data through your usage of our websites and mobile applications.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1433978903_2093683925
-                            jcr:created="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_218861493
+                        <title_copy_697038093_1009730788
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -536,7 +442,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__1623193441
+                        <text_550066730_copy__1317842481
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -546,14 +452,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We may record the Internet Protocol (“IP”) address of your computer or other electronic device when you visit our website. An IP address&amp;nbsp;identifies&amp;nbsp;the electronic device you use to access websites, which allows us to&amp;nbsp;maintain&amp;nbsp;communication with your device and to customize content.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1433978903_122367132
-                            jcr:created="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:06:05.980-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_1609162526
+                        <title_copy_697038093_26589102
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -564,7 +463,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__1170331626
+                        <text_550066730_copy__2039146217
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -574,14 +473,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>We collect information automatically through your online interactions with us through tracking and data-collection technologies such as cookies, web beacons and pixels, APIs, web services, scripts, browser analysis tools, and server logs.   A “cookie” is a unique numeric code that is transferred to your computer to track your interests and preferences and to recognize you as a return visitor. A “Web beacon” (also known as a pixel tag) is a transparent graphic image placed on a website, email, or advertisement that enables the monitoring of things such as user activity and site traffic, including the collection of data about the website and mobile application you were visiting before and after you came to our website or mobile application. To learn more about cookies and other&amp;nbsp;data-collection&amp;nbsp;technologies, please visit&amp;nbsp;the All About Cookies website: https://www.allaboutcookies.org/.&lt;/p>&#xd;&#xa;&lt;p>We classify our cookies into the following categories:&lt;/p>&#xd;&#xa;&lt;p>&lt;ul>&#xd;&#xa;&lt;li>Required Cookies: These cookies are necessary for core features of a site to&amp;nbsp;operate&amp;nbsp;properly.&lt;/li>&#xd;&#xa;&lt;li>Functional Cookies: These cookies allow us to analyze site usage to evaluate and improve&amp;nbsp;its&amp;nbsp;performance. They are also used to provide&amp;nbsp;a better&amp;nbsp;user experience on the site, such as measuring interactions with&amp;nbsp;particular content&amp;nbsp;or remembering settings.&lt;/li>&#xd;&#xa;&lt;li>Advertising Cookies: These cookies are used to show you ads that are more relevant to you. We may share this information with advertisers or use it to better understand your interests. For example, advertising cookies may be used to share data with advertisers so that the ads you see are more relevant to you, allow you to share certain pages with social networks, or allow you to post comments on our site.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>If you would like to see a detailed list of the cookies we use on our websites, including the third parties that place cookies on our websites, the specific cookie, and cookie lifespan, please click on cookie settings at the footer of this page. If the cookie lifespan is not&amp;nbsp;disclosed&amp;nbsp;in the cookie settings, we use a default life span of thirteen (13) months, unless a shorter period is required by law. You can also use the “cookie settings” to opt out of a nonrequired cookie category.&lt;/p>&#xd;&#xa;&lt;p>In addition to the cookie settings feature, you can disable cookies through your browser. Please note that some cookies are essential to the functioning of our&amp;nbsp;websites&amp;nbsp;and&amp;nbsp;deleting&amp;nbsp;or disabling them on your browser will reduce the site’s functionality.&lt;/p>&#xd;&#xa;&lt;p>If you want to use your browser instead of our cookie settings feature to opt-out of the Google Analytics or Adobe Analytics tracking cookies, you can install the Google Analytics opt-out browser add-on, and you can opt-out of Adobe Analytics. &lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1849120984
-                            jcr:created="{Date}2026-02-17T13:14:52.567-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:14:52.567-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_241766868
+                        <title_copy_697038093_415970994
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -592,7 +484,14 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__1340693683
+                        <separator_912011113_
+                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                        <text_550066730_copy__505310146
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -602,21 +501,7 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>Some AbbVie Relationships are available as either mobile applications or mobile sites that you can use on your mobile device. If you use a mobile device to access and use the AbbVie Relationships, we may collect the following mobile-specific information in addition to the other information described above: device or advertising ID, device type, hardware type, media access control (“MAC”) address, international mobile equipment identity (“IMEI”), the version of your mobile operating system, the platform used to access or download the AbbVie sites and applications (e.g., Apple, Google, Amazon, Windows), location information and usage information about your device and your use of the AbbVie Relationships.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1849120984_115576540
-                            jcr:created="{Date}2026-02-17T13:14:52.567-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:14:52.567-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <separator_1849120984_160691716
-                            jcr:created="{Date}2026-02-17T13:14:52.567-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:14:52.567-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_26794879
+                        <title_copy_697038093_1692029996
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -627,7 +512,7 @@
                             sling:resourceType="abbvie-com2/components/title/v2/title"
                             type="h1"
                             variant="h"/>
-                        <text_550066730_copy__651670385
+                        <text_550066730_copy__1395710009
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T12:55:22.778-05:00"
                             jcr:createdBy="singarx"
@@ -637,14 +522,27 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>In addition to the uses described separately in this Privacy Notice, we may use your Personal Data collected online for&amp;nbsp;the additional&amp;nbsp;purposes as described in this section.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator_1849120984_1464896069
-                            jcr:created="{Date}2026-02-17T13:14:52.567-05:00"
+                    </container2>
+                    <container
+                        cq:styleIds="[1653545847148,1653545835879,1653545835982,1653545825688]"
+                        jcr:created="{Date}2026-02-17T12:44:29.137-05:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2026-06-18T10:20:42.118-04:00"
+                        jcr:lastModifiedBy="vickekx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none">
+                        <separator_912011113__171703897
+                            jcr:created="{Date}2026-02-17T12:52:57.416-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:14:52.567-05:00"
+                            jcr:lastModified="{Date}2026-02-17T12:52:57.416-05:00"
                             jcr:lastModifiedBy="singarx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_copy_697038093_632924810
+                        <title_copy_697038093
                             cq:styleIds="[1659545825678,1651545825694]"
                             jcr:created="{Date}2026-02-17T12:47:36.201-05:00"
                             jcr:createdBy="singarx"
@@ -1109,12 +1007,12 @@
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T13:48:25.180-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-03-12T13:19:54.665-04:00"
+                            jcr:lastModified="{Date}2026-06-18T10:31:49.725-04:00"
                             jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             langAttribute="none"
-                            text="&lt;p>Under applicable data protection law, you have the right to request access to and/or rectify, block, or delete Personal Data relating to you, transmit Personal Data to another controller, withdraw your consent at any time (this will not affect the lawfulness of previous data-processing activities), or object to any use of your Personal Data. If we&amp;nbsp;are not able to&amp;nbsp;provide the requested information or make the change you&amp;nbsp;requested, you will be provided with the reasons for such decisions. Under local law, you are entitled&amp;nbsp;to also&amp;nbsp;reach out to your local&amp;nbsp;data-protection&amp;nbsp;authority.  In the UK this is the Information Commissioner Office (ICO) who can be contacted using live chat&amp;nbsp;on https://ico.org.uk/global/contact-us/live-chat or&amp;nbsp;by calling the helpline 0303 123 1113.&lt;/p>&#xd;&#xa;&lt;p>You may have the right to object to the processing activities described in this Privacy Notice that are based on our legitimate interests.&lt;/p>&#xd;&#xa;&lt;p>Please submit your privacy requests or inquiries  &lt;a href=&quot;https://abbviemetadata.my.site.com/AbbvieDSRM/s/?language=en_US&quot;>here.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;#to-top&quot;>[Top]&lt;/a>&lt;/p>&#xd;&#xa;"
+                            text="&lt;p>Under applicable data protection law, you have the right to request access to and/or rectify, block, or delete Personal Data relating to you, transmit Personal Data to another controller, withdraw your consent at any time (this will not affect the lawfulness of previous data-processing activities), or object to any use of your Personal Data. If we&amp;nbsp;are not able to&amp;nbsp;provide the requested information or make the change you&amp;nbsp;requested, you will be provided with the reasons for such decisions.&amp;nbsp;Under local law, you are entitled to make complaints to us and also reach out to your local data-protection authority.&amp;nbsp; In the UK this is the Information Commissioner Office (ICO) who can be contacted on https://ico.org.uk/for-organisations/advice-for-small-organisations/contact-us/ or by calling the helpline 0303 123 1113.&lt;/p>&#xd;&#xa;&lt;p> You may have the right to object to the processing activities described in this Privacy Notice that are based on our legitimate interests.&lt;/p>&#xd;&#xa;&lt;p>Please submit your privacy requests or inquiries  &lt;a href=&quot;https://abbviemetadata.my.site.com/AbbvieDSRM/s/?language=en_US&quot;>here.&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;#to-top&quot;>[Top]&lt;/a>&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <separator_1421696697
                             jcr:created="{Date}2026-02-17T13:49:36.282-05:00"
@@ -1194,11 +1092,12 @@
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T13:49:50.460-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:54:29.870-05:00"
-                            jcr:lastModifiedBy="singarx"
+                            jcr:lastModified="{Date}2026-06-18T10:21:50.906-04:00"
+                            jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Personal Data may be transferred and processed by and among AbbVie Inc. in the U.S., the parent company of AbbVie, and its affiliates in other countries. For a full list of AbbVie Inc.’s affiliates and their&amp;nbsp;jurisdictions, please see our most recent SEC filing here:&amp;nbsp;https://www.sec.gov/Archives/edgar/data/1551152/000155115221000008/abbv-20201231xex21.htm.  Our company&amp;nbsp;maintains&amp;nbsp;several inter-company data transfer agreements, which are based on EU model contracts and covers Personal Data transfers among AbbVie Inc. and its affiliates worldwide to ensure&amp;nbsp;the adequate&amp;nbsp;protection of Personal Data. Copies of these agreements can be obtained by sending an email to privacyoffice@abbvie.com.&lt;/p>&#xd;&#xa;"
+                            langAttribute="none"
+                            text="&lt;p>Personal Data may be transferred and processed by and among AbbVie Inc. in the U.S., the parent company of AbbVie, and its affiliates in other countries. For a full list of AbbVie Inc.’s affiliates and their jurisdictions, please see our most recent SEC filing here: https://www.sec.gov/Archives/edgar/data/1551152/000155115221000008/abbv-20201231xex21.htm.  Our company maintains several inter-company data transfer agreements, which are based on EU model contracts and covers Personal Data transfers among AbbVie Inc. and its affiliates worldwide to ensure the adequate protection of Personal Data. Copies of these agreements can be obtained by sending an email to privacyoffice@abbvie.com.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <separator_356314466
                             jcr:created="{Date}2026-02-17T13:50:49.273-05:00"
@@ -1296,11 +1195,12 @@
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2026-02-17T13:59:47.112-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-17T13:59:57.570-05:00"
-                            jcr:lastModifiedBy="singarx"
+                            jcr:lastModified="{Date}2026-07-20T08:59:14.095-04:00"
+                            jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>UK-ABBV-260003 | February 2026&lt;/p>&#xd;&#xa;"
+                            langAttribute="none"
+                            text="&lt;p>UK-ABBV-260217 | July 2026&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                     </container>
                     <separator

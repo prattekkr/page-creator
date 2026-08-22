@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-03-19T08:29:17.185-04:00"
+        cq:lastModified="{Date}2026-08-13T08:29:20.474-04:00"
         cq:lastModifiedBy="levhx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
@@ -11,7 +11,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="מיגרנה"
-        jcr:uuid="e9406cff-be37-4519-a0c9-ee469efc8e33"
+        jcr:uuid="2e9be564-589d-47dd-8f8c-642bc962fcfe"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="קראו עוד"
         ctaText="קראו עוד"
@@ -38,11 +38,15 @@
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <container
                         cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
-                        jcr:lastModified="{Date}2025-01-19T08:55:11.831-05:00"
-                        jcr:lastModifiedBy="gabayyx"
+                        jcr:lastModified="{Date}2026-08-13T08:07:11.542-04:00"
+                        jcr:lastModifiedBy="levhx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/il/images/migraine/header-brain-png.png"/>
+                        backgroundImageReference="/content/dam/abbvie-com2/il/images/migraine/migraine-ta.png"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
                     <container2
                         cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678,1653545835879]"
                         jcr:lastModified="{Date}2026-01-08T06:53:36.637-05:00"
@@ -90,7 +94,7 @@
                         jcr:lastModifiedBy="singarx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                    <grid_824406910_copy__1135670323
+                    <grid_824406910_copy__558378655
                         jcr:created="{Date}2026-01-06T08:58:24.731-05:00"
                         jcr:createdBy="bryanjx9"
                         jcr:lastModified="{Date}2026-01-07T09:06:20.572-05:00"
@@ -115,7 +119,7 @@
                                 <image_copy_copy_copy
                                     jcr:created="{Date}2026-01-08T04:37:14.308-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-03-19T05:22:33.118-04:00"
+                                    jcr:lastModified="{Date}2026-06-16T14:17:13.243-04:00"
                                     jcr:lastModifiedBy="levhx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/image/v2/image"
@@ -123,32 +127,32 @@
                                     altValueFromDAM="true"
                                     displayPopupTitle="true"
                                     dmPresetType="imagePreset"
-                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/insurance-article.jpg"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/emily.jpeg"
                                     isDecorative="false"
-                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/private-insurance"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/prepare"
                                     openInNewWindow="false"
                                     titleValueFromDAM="true"/>
-                                <text_copy_copy_copy_
+                                <text_copy_copy_copy__1291158384
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-03-19T05:19:48.078-04:00"
+                                    jcr:lastModified="{Date}2026-06-16T14:16:48.698-04:00"
                                     jcr:lastModifiedBy="levhx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
                                     langAttribute="none"
-                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/private-insurance.html&quot;>מיצוי זכויות בביטוח הבריאות הפרטי&lt;/a>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/prepare.html&quot;>סובלים ממיגרנה? כך תתכוננו לביקור אצל נוירולוג.ית&lt;/a>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <text_1582387479_copy
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2025-01-06T04:02:34.097-05:00"
                                     jcr:createdBy="gabayyx"
-                                    jcr:lastModified="{Date}2026-03-19T08:29:17.176-04:00"
-                                    jcr:lastModifiedBy="levhx"
+                                    jcr:lastModified="{Date}2026-06-11T08:06:24.830-04:00"
+                                    jcr:lastModifiedBy="kvityox"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
                                     langAttribute="none"
-                                    text="&lt;p>במקרים רבים ניתן לקבל החזרים על עלות טיפולים מחברות הביטוח, אבל כשמתמודדים עם מחלה - למי יש זמן ואנרגיה להתעמק בתנאי הפוליסה ולנווט בנבכי הביורוקרטיה? במצבים כאלה, סוכן ביטוח שמומחה בביטוחים רפואיים יכול לסייע למטופלים לקצר תהליכים ולקבל את מה שמגיע להם  &lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    text="&lt;p>מה חשוב להכין לקראת הפגישה עם הנוירולוג.ית? על מה כדאי לדבר? ואיך למצות את הזמן המשותף? ד״ר אמילי אלפנט טוויג מספקת תשע עצות חשובות שיעזרו לכם להגיע מוכנים לשיחה עם הרופא&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                             </container>
                         </par_12>
@@ -166,7 +170,7 @@
                                 <image_copy_copy
                                     jcr:created="{Date}2026-01-08T04:37:14.308-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-03-19T05:16:35.595-04:00"
+                                    jcr:lastModified="{Date}2026-06-16T14:18:43.760-04:00"
                                     jcr:lastModifiedBy="levhx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/image/v2/image"
@@ -174,32 +178,32 @@
                                     altValueFromDAM="true"
                                     displayPopupTitle="true"
                                     dmPresetType="imagePreset"
-                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/fayga-marks-lobby.png"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/calderon.jpeg"
                                     isDecorative="false"
-                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/fayga-marks"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/new-treatments"
                                     openInNewWindow="false"
                                     titleValueFromDAM="true"/>
-                                <text_copy_copy_copy_
+                                <text_copy_copy_copy__129876855
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-03-19T05:17:55.350-04:00"
+                                    jcr:lastModified="{Date}2026-06-16T14:18:17.199-04:00"
                                     jcr:lastModifiedBy="levhx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
                                     langAttribute="none"
-                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/fayga-marks.html&quot;>&amp;quot;אנשים עם מיגרנה כבר לא מפחדים לחיות - כללי המשחק השתנו!״&lt;/a>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/new-treatments.html&quot;>״מתחוללת בשטח מהפכה״: מפת הטיפולים החדשה במיגרנה&lt;/a>&lt;/b> &lt;/span>&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <text_copy
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2026-01-08T04:53:37.031-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-03-19T05:18:07.512-04:00"
-                                    jcr:lastModifiedBy="levhx"
+                                    jcr:lastModified="{Date}2026-06-23T04:48:09.843-04:00"
+                                    jcr:lastModifiedBy="kvityox"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
                                     langAttribute="none"
-                                    text="&lt;p>פייגא מרקס נאבקת במיגרנה מאז ילדותה. כשעלתה לישראל גילתה מחסור במידע זמין על המחלה - והחליטה לשנות את המצב. היא הקימה את עמותת ״הראש הכרוני שלי״ שמנגישה מידע על טיפולים וזכויות, מסייעת עם הבירוקרטיה ופועלת לשינוי היחס כלפי הסובלים ממיגרנה&lt;/p>&#xd;&#xa;"
+                                    text="&lt;p style=&quot;direction: rtl;&quot;>מיגרנה היא מחלה נוירולוגית שעלולה לשבש לחלוטין את היכולת לתפקד, אך זו כבר לא גזירת גורל. ד״ר נדב קלדרון מסביר על ההבדל בין טיפול אקוטי למניעתי, וסוקר את משפחות הטיפולים במיגרנה: מהדור הישן ועד לפריצת הדרך החדשה ביותר&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                             </container_copy>
                         </par_11>
@@ -213,8 +217,8 @@
                                 columnWidth="6"
                                 dataPriority="2"/>
                         </columns>
-                    </grid_824406910_copy__1135670323>
-                    <grid_824406910_copy__1933092655
+                    </grid_824406910_copy__558378655>
+                    <grid_824406910_copy__1390779326
                         jcr:created="{Date}2026-01-06T08:58:24.731-05:00"
                         jcr:createdBy="bryanjx9"
                         jcr:lastModified="{Date}2026-01-07T09:06:20.572-05:00"
@@ -236,40 +240,40 @@
                                 dmPresetType="imagePreset"
                                 enableFetchPriority="false"
                                 enableLazyLoading="false">
-                                <image_702134195_copy
-                                    jcr:created="{Date}2026-01-08T04:48:40.363-05:00"
+                                <image_1728464072_cop
+                                    jcr:created="{Date}2025-12-29T01:19:47.996-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T06:53:38.196-05:00"
-                                    jcr:lastModifiedBy="levhx"
+                                    jcr:lastModified="{Date}2026-06-11T08:11:38.689-04:00"
+                                    jcr:lastModifiedBy="kvityox"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/image/v2/image"
                                     altValueFromDAM="true"
                                     displayPopupTitle="true"
                                     dmPresetType="smartCrop"
-                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/migrain-brain-cube.png"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/migraine_header.png"
                                     isDecorative="false"
-                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/acute"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/prodrome"
                                     openInNewWindow="false"
                                     titleValueFromDAM="true"/>
-                                <text_copy_copy_copy_
+                                <text_copy_copy_copy__1378277450
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T06:54:10.594-05:00"
+                                    jcr:lastModified="{Date}2026-01-12T07:00:49.872-05:00"
                                     jcr:lastModifiedBy="levhx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/acute.html&quot;>טיפולים אקוטיים למיגרנה&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/prodrome.html&quot;>מיגרנה ושלב הפרודרום&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
-                                <text_1582387479_copy
+                                <text_copy
                                     cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2025-01-06T04:02:34.097-05:00"
-                                    jcr:createdBy="gabayyx"
-                                    jcr:lastModified="{Date}2025-01-19T09:00:02.689-05:00"
-                                    jcr:lastModifiedBy="gabayyx"
+                                    jcr:created="{Date}2026-01-08T06:41:10.013-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-08T06:41:23.479-05:00"
+                                    jcr:lastModifiedBy="singarx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p style=&quot;text-align: right;&quot;>הטיפולים הקיימים לטיפול בהתקפי מיגרנה&lt;/p>&#xd;&#xa;"
+                                    text="&lt;p>המדריך לסימני האזהרה המתריעים על התקף מיגרנה מתקרב&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                             </container>
                         </par_12>
@@ -284,6 +288,79 @@
                                 jcr:lastModifiedBy="bryanjx9"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <image_copy_copy
+                                    jcr:created="{Date}2026-01-08T04:37:14.308-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-06-16T14:20:12.066-04:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="ai-gallery"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/roni2.jpeg"
+                                    isDecorative="false"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/meet-migraine"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                                <text_copy_copy_copy__2031021460
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-06-16T14:20:27.250-04:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/meet-migraine.html&quot;>מיגרנה – לא נעים להכיר!&lt;/a>&lt;/b>&lt;br>&#xd;&#xa; &lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-01-08T04:53:37.031-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-06-11T08:07:40.933-04:00"
+                                    jcr:lastModifiedBy="kvityox"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>זה לא סתם כאב ראש. מי שמתמודד עם מיגרנה יודע כמה סבל היא גורמת, גם אם הסביבה לא תמיד מבינה זאת. ד״ר רוני שרון מסביר מה קורה בזמן התקף מיגרנה, איך מאבחנים וכיצד טיפולים חדשים שינו את התמונה&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_copy>
+                        </par_11>
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="6"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="6"
+                                dataPriority="2"/>
+                        </columns>
+                    </grid_824406910_copy__1390779326>
+                    <grid_824406910_copy__1135670323
+                        jcr:created="{Date}2026-01-06T08:58:24.731-05:00"
+                        jcr:createdBy="bryanjx9"
+                        jcr:lastModified="{Date}2026-01-07T09:06:20.572-05:00"
+                        jcr:lastModifiedBy="levhx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545835982,1653545835879]"
+                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
+                                jcr:createdBy="bryanjx9"
+                                jcr:lastModified="{Date}2026-01-07T09:04:24.314-05:00"
+                                jcr:lastModifiedBy="levhx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false">
                                 <image_copy_copy
                                     jcr:created="{Date}2026-01-08T04:37:14.308-05:00"
                                     jcr:createdBy="singarx"
@@ -319,6 +396,56 @@
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
                                     text="&lt;p>כיצד שימוש בכלי בינה מלאכותית מסייע לסובלים וסובלות ממיגרנה לתאר איך המחלה משפיעה על חייהם באופן אישי וייחודי&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
+                            </container>
+                        </par_12>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy
+                                cq:styleIds="[1653545835982,1653545835879]"
+                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
+                                jcr:createdBy="bryanjx9"
+                                jcr:lastModified="{Date}2026-01-06T08:58:54.662-05:00"
+                                jcr:lastModifiedBy="bryanjx9"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <image_copy_copy_copy
+                                    jcr:created="{Date}2026-01-08T04:37:14.308-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-08-13T08:29:20.461-04:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="ai-gallery"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/insurance-article-600x400.png"
+                                    isDecorative="false"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/private-insurance"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                                <text_copy_copy_copy_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-03-19T05:19:48.078-04:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/private-insurance.html&quot;>מיצוי זכויות בביטוח הבריאות הפרטי&lt;/a>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_1582387479_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-01-06T04:02:34.097-05:00"
+                                    jcr:createdBy="gabayyx"
+                                    jcr:lastModified="{Date}2026-03-19T08:29:17.176-04:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>במקרים רבים ניתן לקבל החזרים על עלות טיפולים מחברות הביטוח, אבל כשמתמודדים עם מחלה - למי יש זמן ואנרגיה להתעמק בתנאי הפוליסה ולנווט בנבכי הביורוקרטיה? במצבים כאלה, סוכן ביטוח שמומחה בביטוחים רפואיים יכול לסייע למטופלים לקצר תהליכים ולקבל את מה שמגיע להם  &lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
                             </container_copy>
                         </par_11>
                         <columns jcr:primaryType="nt:unstructured">
@@ -331,8 +458,8 @@
                                 columnWidth="6"
                                 dataPriority="2"/>
                         </columns>
-                    </grid_824406910_copy__1933092655>
-                    <grid_824406910_copy__2068425352
+                    </grid_824406910_copy__1135670323>
+                    <grid_824406910_copy__1933092655
                         jcr:created="{Date}2026-01-06T08:58:24.731-05:00"
                         jcr:createdBy="bryanjx9"
                         jcr:lastModified="{Date}2026-01-07T09:06:20.572-05:00"
@@ -341,54 +468,6 @@
                         sling:resourceType="abbvie-com2/components/grid/v2/grid"
                         rowCount="1">
                         <par_12
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="wcm/foundation/components/parsys">
-                            <container_copy
-                                cq:styleIds="[1653545835982,1653545835879]"
-                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
-                                jcr:createdBy="bryanjx9"
-                                jcr:lastModified="{Date}2026-01-06T08:58:54.662-05:00"
-                                jcr:lastModifiedBy="bryanjx9"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/container/v2/container">
-                                <image_2054695660_cop
-                                    jcr:created="{Date}2025-12-29T01:06:06.226-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T06:56:05.773-05:00"
-                                    jcr:lastModifiedBy="levhx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/image/v2/image"
-                                    altValueFromDAM="true"
-                                    displayPopupTitle="true"
-                                    dmPresetType="smartCrop"
-                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/cronic-migraine.jpeg"
-                                    isDecorative="false"
-                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/life-with-migraine"
-                                    openInNewWindow="false"
-                                    titleValueFromDAM="true"/>
-                                <text_copy_copy_copy_
-                                    cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T06:55:55.080-05:00"
-                                    jcr:lastModifiedBy="levhx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/life-with-migraine.html&quot;>״חייבת חושך, או שזה יימשך ימים״: החיים לצד המיגרנה&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                                <text_copy
-                                    cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2026-01-08T05:52:57.471-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-08T05:53:25.955-05:00"
-                                    jcr:lastModifiedBy="singarx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>מטופלות מספרות&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                            </container_copy>
-                        </par_12>
-                        <par_11
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="wcm/foundation/components/parsys">
                             <container
@@ -439,6 +518,54 @@
                                     text="&lt;p>הטיפולים הקיימים למניעת מיגרנה&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                             </container>
+                        </par_12>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container_copy
+                                cq:styleIds="[1653545835982,1653545835879]"
+                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
+                                jcr:createdBy="bryanjx9"
+                                jcr:lastModified="{Date}2026-01-06T08:58:54.662-05:00"
+                                jcr:lastModifiedBy="bryanjx9"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                <image_702134195_copy
+                                    jcr:created="{Date}2026-01-08T04:48:40.363-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-12T06:53:38.196-05:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="smartCrop"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/migrain-brain-cube.png"
+                                    isDecorative="false"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/acute"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                                <text_copy_copy_copy_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-12T06:54:10.594-05:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/acute.html&quot;>טיפולים אקוטיים למיגרנה&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_1582387479_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-01-06T04:02:34.097-05:00"
+                                    jcr:createdBy="gabayyx"
+                                    jcr:lastModified="{Date}2025-01-19T09:00:02.689-05:00"
+                                    jcr:lastModifiedBy="gabayyx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p style=&quot;text-align: right;&quot;>הטיפולים הקיימים לטיפול בהתקפי מיגרנה&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_copy>
                         </par_11>
                         <columns jcr:primaryType="nt:unstructured">
                             <item0
@@ -450,8 +577,8 @@
                                 columnWidth="6"
                                 dataPriority="2"/>
                         </columns>
-                    </grid_824406910_copy__2068425352>
-                    <grid_824406910_copy__1612671586
+                    </grid_824406910_copy__1933092655>
+                    <grid_824406910_copy__2068425352
                         jcr:created="{Date}2026-01-06T08:58:24.731-05:00"
                         jcr:createdBy="bryanjx9"
                         jcr:lastModified="{Date}2026-01-07T09:06:20.572-05:00"
@@ -470,57 +597,6 @@
                                 jcr:lastModifiedBy="bryanjx9"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/container/v2/container">
-                                <image_1728464072_cop
-                                    jcr:created="{Date}2025-12-29T01:19:47.996-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T06:58:24.638-05:00"
-                                    jcr:lastModifiedBy="levhx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/image/v2/image"
-                                    altValueFromDAM="true"
-                                    displayPopupTitle="true"
-                                    dmPresetType="smartCrop"
-                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/humira-disease-fatigue.jpeg"
-                                    isDecorative="false"
-                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/migraine-episodes"
-                                    openInNewWindow="false"
-                                    titleValueFromDAM="true"/>
-                                <text_copy_copy_copy_
-                                    cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T06:58:14.265-05:00"
-                                    jcr:lastModifiedBy="levhx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/migraine-episodes.html&quot;>התקפי מיגרנה – יש מה לעשות!&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                                <text_copy
-                                    cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2026-01-08T06:32:13.118-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-02-04T03:40:38.333-05:00"
-                                    jcr:lastModifiedBy="levhx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>מאת: פרופ' שלומית יוסט כץ&lt;/p>&#xa;"
-                                    textIsRich="true"/>
-                            </container_copy>
-                        </par_12>
-                        <par_11
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="wcm/foundation/components/parsys">
-                            <container
-                                cq:styleIds="[1653545835982,1653545835879]"
-                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
-                                jcr:createdBy="bryanjx9"
-                                jcr:lastModified="{Date}2026-01-07T09:04:24.314-05:00"
-                                jcr:lastModifiedBy="levhx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/container/v2/container"
-                                dmPresetType="imagePreset"
-                                enableFetchPriority="false"
-                                enableLazyLoading="false">
                                 <image_copy_copy_copy
                                     jcr:created="{Date}2025-12-29T00:54:07.230-05:00"
                                     jcr:createdBy="singarx"
@@ -556,6 +632,57 @@
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
                                     text="&lt;p style=&quot;text-align: right;&quot;>מאת: ד&amp;quot;ר רחל הרינג חנית&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
+                            </container_copy>
+                        </par_12>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545835982,1653545835879]"
+                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
+                                jcr:createdBy="bryanjx9"
+                                jcr:lastModified="{Date}2026-01-07T09:04:24.314-05:00"
+                                jcr:lastModifiedBy="levhx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false">
+                                <image_2054695660_cop
+                                    jcr:created="{Date}2025-12-29T01:06:06.226-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-12T06:56:05.773-05:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="smartCrop"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/cronic-migraine.jpeg"
+                                    isDecorative="false"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/life-with-migraine"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                                <text_copy_copy_copy_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-12T06:55:55.080-05:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/life-with-migraine.html&quot;>״חייבת חושך, או שזה יימשך ימים״: החיים לצד המיגרנה&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-01-08T05:52:57.471-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-08T05:53:25.955-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>מטופלות מספרות&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
                             </container>
                         </par_11>
                         <columns jcr:primaryType="nt:unstructured">
@@ -568,8 +695,8 @@
                                 columnWidth="6"
                                 dataPriority="2"/>
                         </columns>
-                    </grid_824406910_copy__1612671586>
-                    <grid_824406910_copy_
+                    </grid_824406910_copy__2068425352>
+                    <grid_824406910_copy__1612671586
                         jcr:created="{Date}2026-01-06T08:58:24.731-05:00"
                         jcr:createdBy="bryanjx9"
                         jcr:lastModified="{Date}2026-01-07T09:06:20.572-05:00"
@@ -588,57 +715,6 @@
                                 jcr:lastModifiedBy="bryanjx9"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/container/v2/container">
-                                <image_1728464072_cop
-                                    jcr:created="{Date}2025-12-29T01:19:47.996-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T07:00:05.961-05:00"
-                                    jcr:lastModifiedBy="levhx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/image/v2/image"
-                                    altValueFromDAM="true"
-                                    displayPopupTitle="true"
-                                    dmPresetType="smartCrop"
-                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/migraine_header.png"
-                                    isDecorative="false"
-                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/prodrome"
-                                    openInNewWindow="false"
-                                    titleValueFromDAM="true"/>
-                                <text_copy_copy_copy_
-                                    cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-12T07:00:49.872-05:00"
-                                    jcr:lastModifiedBy="levhx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/prodrome.html&quot;>מיגרנה ושלב הפרודרום&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                                <text_copy
-                                    cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2026-01-08T06:41:10.013-05:00"
-                                    jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2026-01-08T06:41:23.479-05:00"
-                                    jcr:lastModifiedBy="singarx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>המדריך לסימני האזהרה המתריעים על התקף מיגרנה מתקרב&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                            </container_copy>
-                        </par_12>
-                        <par_11
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="wcm/foundation/components/parsys">
-                            <container
-                                cq:styleIds="[1653545835982,1653545835879]"
-                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
-                                jcr:createdBy="bryanjx9"
-                                jcr:lastModified="{Date}2026-01-07T09:04:24.314-05:00"
-                                jcr:lastModifiedBy="levhx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/container/v2/container"
-                                dmPresetType="imagePreset"
-                                enableFetchPriority="false"
-                                enableLazyLoading="false">
                                 <image_2054695660_cop
                                     jcr:created="{Date}2025-12-29T01:06:06.226-05:00"
                                     jcr:createdBy="singarx"
@@ -674,6 +750,57 @@
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
                                     text="&lt;p style=&quot;text-align: right;&quot;>ראיון עם ד&amp;quot;ר שירה מרקוביץ&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
+                            </container_copy>
+                        </par_12>
+                        <par_11
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545835982,1653545835879]"
+                                jcr:created="{Date}2026-01-06T08:58:54.662-05:00"
+                                jcr:createdBy="bryanjx9"
+                                jcr:lastModified="{Date}2026-01-07T09:04:24.314-05:00"
+                                jcr:lastModifiedBy="levhx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false">
+                                <image_1728464072_cop
+                                    jcr:created="{Date}2025-12-29T01:19:47.996-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-12T06:58:24.638-05:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    altValueFromDAM="true"
+                                    displayPopupTitle="true"
+                                    dmPresetType="smartCrop"
+                                    fileReference="/content/dam/abbvie-com2/il/images/migraine/humira-disease-fatigue.jpeg"
+                                    isDecorative="false"
+                                    linkURL="/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/migraine-episodes"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                                <text_copy_copy_copy_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2025-11-17T04:08:13.083-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-01-12T06:58:14.265-05:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>&lt;a href=&quot;/content/abbvie-com2/il/he/therapeutic-focus-areas/migraine/migraine-episodes.html&quot;>התקפי מיגרנה – יש מה לעשות!&lt;/a>&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-01-08T06:32:13.118-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-04T03:40:38.333-05:00"
+                                    jcr:lastModifiedBy="levhx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>מאת: פרופ' שלומית יוסט כץ&lt;/p>&#xa;"
+                                    textIsRich="true"/>
                             </container>
                         </par_11>
                         <columns jcr:primaryType="nt:unstructured">
@@ -686,7 +813,7 @@
                                 columnWidth="6"
                                 dataPriority="2"/>
                         </columns>
-                    </grid_824406910_copy_>
+                    </grid_824406910_copy__1612671586>
                     <text_copy_copy_copy__1219208992
                         cq:styleIds="[1659545825678]"
                         jcr:created="{Date}2025-01-19T09:28:05.335-05:00"
@@ -723,6 +850,8 @@
     <migraine-episodes/>
     <how-to-prevent-a-migraine/>
     <prodrome/>
-    <fayga-marks/>
     <private-insurance/>
+    <prepare/>
+    <new-treatments/>
+    <meet-migraine/>
 </jcr:root>

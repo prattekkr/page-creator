@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-07-10T16:43:29.874-04:00"
+        cq:lastModified="{Date}2026-06-30T14:07:03.342-04:00"
         cq:lastModifiedBy="VALENSX5"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/primary-page-template"
         jcr:description="Fornecer uma visão geral de ESG (Meio Ambiente, Responsabilidade Social e Governança) e Filantropia Global da AbbVie. "
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Sustentabilidade  "
-        jcr:uuid="f90a4668-50b5-4e67-a57b-d6885c599223"
+        jcr:uuid="016106bc-6858-4f86-8c75-537fbcb6dab8"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Saber mais"
         ctaText="Saber mais"
@@ -63,12 +63,13 @@
                                 type="h1"
                                 variant="h"/>
                             <text
-                                cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2023-07-06T09:14:53.308-04:00"
-                                jcr:lastModifiedBy="DEVIJX1"
+                                cq:styleIds="[1659545825678,,,]"
+                                jcr:lastModified="{Date}2026-06-30T14:00:32.952-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>Liderando com propósito, estamos dispostos a fazer as escolhas que proporcionam um impacto duradouro aos pacientes, às comunidades e ao nosso mundo.&lt;/span>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>Liderando com propósito, estamos dispostos a fazer escolhas que proporcionem um impacto duradouro aos pacientes, comunidades e ao nosso mundo.&lt;/span>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <separator_copy
                                 cq:styleIds="[1662756486159]"
@@ -78,26 +79,16 @@
                                 jcr:lastModifiedBy="chiucx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <text_copy
-                                cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2022-12-05T12:22:18.771-05:00"
-                                jcr:createdBy="chiucx"
-                                jcr:lastModified="{Date}2024-06-12T02:37:10.733-04:00"
-                                jcr:lastModifiedBy="singarx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Reconhecemos que nossa organização e nossa indústria têm uma oportunidade única de fazer uma diferença real na vida das pessoas. Mas não são apenas as descobertas que alcançamos que importam, também são os caminhos que trilhamos para alcançá-las.&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
                         </container3>
                     </container2>
                     <teaser_copy
                         jcr:created="{Date}2022-11-21T14:18:06.856-05:00"
                         jcr:createdBy="chiucx"
                         jcr:description="&lt;p>Avançar nas iniciativas ambientais, sociais e de governança (ESG) que contribuem para o crescimento sustentável de nossa empresa é como estamos criando um impacto positivo para as gerações futuras.&lt;/p>&#xd;&#xa;"
-                        jcr:lastModified="{Date}2024-06-12T02:35:39.195-04:00"
-                        jcr:lastModifiedBy="singarx"
+                        jcr:lastModified="{Date}2026-06-30T14:01:36.755-04:00"
+                        jcr:lastModifiedBy="VALENSX5"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="&lt;p>Investindo em um futuro melhor para todos&lt;/p>&#xd;&#xa;"
+                        jcr:title="&lt;p>Investindo em um futuro &lt;span style=&quot;color: #338700;&quot;>melhor para todos&lt;/span>&lt;/p>&#xd;&#xa;"
                         sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
                         ctaLink="/content/abbvie-com2/br/pt/sustentabilidade/ambiental-social-e-governanca.html"
                         ctaTarget="_self"
@@ -170,48 +161,31 @@
                                 cq:styleIds="[1663000046218]"
                                 jcr:created="{Date}2024-09-11T07:40:38.803-04:00"
                                 jcr:createdBy="kanchrx3"
-                                jcr:lastModified="{Date}2024-09-11T08:01:16.747-04:00"
-                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:lastModified="{Date}2026-06-30T14:05:35.539-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
                                 childDepth="1"
                                 excludeCurrentPage="true"
                                 linkItems="true"
+                                linksTarget="_self"
                                 listFrom="static"
+                                showDate="false"
+                                showDesc="false"
+                                showSubtitle="false"
+                                showTags="false"
                                 sortOrder="asc"
-                                tagsMatch="any">
+                                tagsMatch="any"
+                                textIsRich="[true,true,true]">
                                 <pages jcr:primaryType="nt:unstructured">
                                     <item0
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/br/pt/sustainability/environmental-social-and-governance/environmental-sustainability"
-                                        oneTrustEnabled="false"
-                                        text="Sustentabilidade ambiental"
-                                        textIconTarget="_self"/>
-                                    <item1
                                         jcr:primaryType="nt:unstructured"
                                         linkTarget="_self"
                                         linkURL="/content/abbvie-com2/br/pt/science/areas-of-innovation/patient-focused-drug-development"
                                         oneTrustEnabled="false"
                                         text="Desenvolvimento de Medicamentos Centrados no Paciente"
                                         textIconTarget="_self"/>
-                                    <item2
-                                        jcr:primaryType="nt:unstructured"
-                                        alt="Gerenciamento de capital humano"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/br/pt/sustainability/environmental-social-and-governance/human-capital-management"
-                                        oneTrustEnabled="false"
-                                        text="Gerenciamento de capital humano"
-                                        textIconTarget="_self"/>
-                                    <item3
-                                        jcr:primaryType="nt:unstructured"
-                                        alt="Programas de Suporte ao Paciente e Serviços ao Cliente AbbVie"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/br/pt/patients/patient-support"
-                                        oneTrustEnabled="false"
-                                        text="Programas de Suporte ao Paciente e Serviços ao Cliente AbbVie"
-                                        textIconTarget="_self"/>
-                                    <item4
+                                    <item1
                                         jcr:primaryType="nt:unstructured"
                                         alt="Qualidade e segurança do produto"
                                         linkTarget="_self"
@@ -219,19 +193,12 @@
                                         oneTrustEnabled="false"
                                         text="Qualidade e segurança do produto"
                                         textIconTarget="_self"/>
-                                    <item5
+                                    <item2
                                         jcr:primaryType="nt:unstructured"
                                         linkTarget="_self"
                                         linkURL="/content/abbvie-com2/br/pt/who-we-are/operating-with-integrity"
                                         oneTrustEnabled="false"
                                         text="Trabalhando com Integridade"
-                                        textIconTarget="_self"/>
-                                    <item6
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/br/pt/patients/patient-support"
-                                        oneTrustEnabled="false"
-                                        text="Programas de Suporte ao Paciente e Serviços ao Cliente AbbVie"
                                         textIconTarget="_self"/>
                                 </pages>
                             </linklist_copy>
@@ -387,7 +354,7 @@
                         </grid_1839283064_copy>
                     </Copy_x0020_of_x0020_container>
                     <container_813888030
-                        cq:styleIds="[1653545825683,1653545847150,1653545835879]"
+                        cq:styleIds="[1653545825683,1653545847150]"
                         jcr:created="{Date}2022-12-21T15:34:37.508-05:00"
                         jcr:createdBy="chiucx"
                         jcr:lastModified="{Date}2022-12-21T15:35:18.435-05:00"
@@ -400,112 +367,17 @@
                             jcr:created="{Date}2022-11-07T16:24:27.134-05:00"
                             jcr:createdBy="chiucx"
                             jcr:description="&lt;p>Nossa cultura de doação se reflete em nossa filantropia e nas maneiras como nossos colaboradores apoiam as comunidades por meio de doações e voluntariado.&lt;/p>&#xd;&#xa;"
-                            jcr:lastModified="{Date}2024-09-09T13:41:11.117-04:00"
-                            jcr:lastModifiedBy="kanchrx3"
+                            jcr:lastModified="{Date}2026-06-30T14:06:10.923-04:00"
+                            jcr:lastModifiedBy="VALENSX5"
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="&lt;p>Retribuir às comunidades faz parte da nossa cultura&lt;/p>&#xd;&#xa;"
+                            jcr:title="&lt;p>Retribuir faz parte da nossa cultura&lt;/p>&#xd;&#xa;"
                             sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
                             ctaLink="/content/abbvie-com2/br/pt/sustainability/philanthropy"
                             ctaTarget="_blank"
                             ctaText="Explore nossa filantropia"
                             pretitle="FILANTROPIA "
                             textIsRich="[true,true]"/>
-                        <grid
-                            jcr:created="{Date}2024-09-09T13:47:54.568-04:00"
-                            jcr:createdBy="kanchrx3"
-                            jcr:lastModified="{Date}2024-09-09T13:48:41.292-04:00"
-                            jcr:lastModifiedBy="kanchrx3"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                            rowCount="1">
-                            <columns jcr:primaryType="nt:unstructured">
-                                <item0
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="6"
-                                    dataPriority="1"/>
-                                <item1
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="6"
-                                    dataPriority="1"/>
-                            </columns>
-                            <par_11
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/foundation/components/parsys">
-                                <image
-                                    jcr:created="{Date}2024-09-09T13:48:50.946-04:00"
-                                    jcr:createdBy="kanchrx3"
-                                    jcr:lastModified="{Date}2024-09-09T13:49:56.211-04:00"
-                                    jcr:lastModifiedBy="kanchrx3"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/image/v2/image"
-                                    alt="ABBVIE_ARRASTAO"
-                                    altValueFromDAM="false"
-                                    displayPopupTitle="true"
-                                    dmPresetType="imagePreset"
-                                    fileReference="/content/dam/abbvie-com2/br/images/ABBVIE_ARRASTAO-109.jpg"
-                                    isDecorative="false"
-                                    titleValueFromDAM="true"/>
-                            </par_11>
-                        </grid>
                     </container_813888030>
-                    <container_810842760_
-                        cq:styleIds="[1653545825683,1653545847149,1653545835879,1653545835982]"
-                        jcr:created="{Date}2022-11-07T16:23:34.630-05:00"
-                        jcr:createdBy="chiucx"
-                        jcr:lastModified="{Date}2022-11-07T17:57:03.676-05:00"
-                        jcr:lastModifiedBy="chiucx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundColor="#F4F4F4">
-                        <carousel
-                            cq:styleIds="[1653545825683,1653545847149,1653545835879]"
-                            jcr:created="{Date}2022-12-14T12:08:33.383-05:00"
-                            jcr:createdBy="chiucx"
-                            jcr:lastModified="{Date}2022-12-14T12:09:34.160-05:00"
-                            jcr:lastModifiedBy="chiucx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
-                            autopauseDisabled="false"
-                            autoplay="false"
-                            carouselType="static"
-                            delay="5000">
-                            <item_1671037749251
-                                cq:panelTitle="volunteers"
-                                cq:styleIds="[1111111111110,1111111111114,1111111111116]"
-                                jcr:lastModified="{Date}2023-07-06T09:22:07.183-04:00"
-                                jcr:lastModifiedBy="DEVIJX1"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                hideImage="false"
-                                linkURL="/content/abbvie-com2/br/pt/who-we-are/our-stories/card-temp"/>
-                            <item_1671037758467
-                                cq:panelTitle="step by step"
-                                cq:styleIds="[1111111111110,1111111111114,1111111111116]"
-                                jcr:lastModified="{Date}2023-07-06T09:22:25.833-04:00"
-                                jcr:lastModifiedBy="DEVIJX1"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                hideImage="false"
-                                linkURL="/content/abbvie-com2/br/pt/who-we-are/our-stories/card-temp"/>
-                            <item_1671037770161
-                                cq:panelTitle="injecting hope"
-                                cq:styleIds="[1111111111110,1111111111114,1111111111116]"
-                                jcr:lastModified="{Date}2023-07-06T09:21:49.651-04:00"
-                                jcr:lastModifiedBy="DEVIJX1"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                hideImage="false"
-                                linkURL="/content/abbvie-com2/br/pt/who-we-are/our-stories/card-temp"/>
-                        </carousel>
-                        <separator
-                            cq:styleIds="[1662756526578]"
-                            jcr:created="{Date}2022-12-18T15:03:54.773-05:00"
-                            jcr:createdBy="chiucx"
-                            jcr:lastModified="{Date}2022-12-18T15:03:54.773-05:00"
-                            jcr:lastModifiedBy="chiucx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                    </container_810842760_>
                 </responsivegrid1>
                 <experiencefragmentFooter
                     jcr:lastModified="{Date}2023-07-06T09:22:55.649-04:00"

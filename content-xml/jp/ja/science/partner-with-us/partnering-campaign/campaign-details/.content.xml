@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-04-14T00:09:27.985-04:00"
+        cq:lastModified="{Date}2026-07-29T21:07:09.086-04:00"
         cq:lastModifiedBy="tadankx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="Partner with AbbVie Japan to bring your late-stage asset to patients in Japan"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="AbbVie Japan Partnering Campaign 2026 Details"
-        jcr:uuid="58567f2d-9735-4522-9c54-28e39f0361f5"
+        jcr:uuid="84213a36-1b5e-4f92-a769-acddbb51fc50"
         sling:resourceType="abbvie-com2/components/remotepage"
         description="Partner with AbbVie Japan to bring your late-stage asset to patients in Japan"
         eyebrow="サイエンス"
@@ -76,17 +76,50 @@
                                 langAttribute="none"
                                 type="h1"
                                 variant="h"/>
-                            <button_copy
-                                jcr:created="{Date}2026-04-08T04:57:25.094-04:00"
+                            <separator_21060779
+                                cq:styleIds="[1662756456518]"
+                                jcr:created="{Date}2026-07-23T01:43:50.478-04:00"
                                 jcr:createdBy="tadankx"
-                                jcr:lastModified="{Date}2026-04-13T03:57:08.141-04:00"
+                                jcr:lastModified="{Date}2026-07-23T01:43:50.478-04:00"
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="APPLY NOW"
-                                sling:resourceType="abbvie-com2/components/button/v2/button"
-                                langAttribute="none"
-                                linkTarget="_self"
-                                linkURL="mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie Japan Partnering - Your name&amp;body=Thank you for your interest. Please send items 1 to 4 via email. 1. Company name 2. Contact person's name 3. Program summary 4. Non-confidential deck (PDF)"/>
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835859,1653545847150,1653545835879]"
+                                jcr:created="{Date}2026-07-24T04:12:50.617-04:00"
+                                jcr:createdBy="tadankx"
+                                jcr:lastModified="{Date}2026-07-29T21:00:18.178-04:00"
+                                jcr:lastModifiedBy="tadankx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#071D49"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false"
+                                langAttribute="none">
+                                <text
+                                    cq:styleIds="[1659545825678,1659545835859]"
+                                    jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                    jcr:createdBy="tadankx"
+                                    jcr:lastModified="{Date}2026-07-29T04:26:20.793-04:00"
+                                    jcr:lastModifiedBy="tadankx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Rolling review - 1st deadline: Aug 31&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678,1659545835859]"
+                                    jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                    jcr:createdBy="tadankx"
+                                    jcr:lastModified="{Date}2026-07-29T04:33:41.103-04:00"
+                                    jcr:lastModifiedBy="tadankx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie%20Japan%20Partnering%20-%20Your%20name&amp;amp;body=Thank%20you%20for%20your%20interest.%20Please%20send%20items%201%20to%204%20via%20email.%201.%20Company%20name%202.%20Contact%20person%27s%20name%203.%20Program%20summary%204.%20Non-confidential%20deck%20(PDF)&quot;>APPLY NOW&amp;nbsp;&amp;gt;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container_copy_copy_>
                             <separator
                                 cq:styleIds="[1662756515133]"
                                 jcr:created="{Date}2026-04-10T01:14:45.397-04:00"
@@ -101,12 +134,12 @@
                         cq:styleIds="[1659545825678]"
                         jcr:created="{Date}2026-04-06T21:56:36.681-04:00"
                         jcr:createdBy="tadankx"
-                        jcr:lastModified="{Date}2026-04-13T03:59:03.412-04:00"
+                        jcr:lastModified="{Date}2026-07-22T03:59:28.219-04:00"
                         jcr:lastModifiedBy="tadankx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/text/v2/text"
                         langAttribute="none"
-                        text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>What the 1:1 meetings offer&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Direct discussion with AbbVie Japan Corporate Strategy Team (Business Development and Commercial Assessment teams)&lt;/li>&#xd;&#xa;&lt;li>High-level feedback on strategic fit for Japan&lt;/li>&#xd;&#xa;&lt;li>Exploration of potential Japan-specific deal structures&lt;/li>&#xd;&#xa;&lt;li>A confidential follow-up process for selected opportunities&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Who should apply (must fulfill all criteria)&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Biopharma companies with marketed assets or Phase 3/Pivotal-ready assets (include Phase 2 assets for oncology) in the US, EU, or China&lt;/li>&#xd;&#xa;&lt;li>Assets with or without current clinical development in Japan&lt;/li>&#xd;&#xa;&lt;li>Companies open to discussing Japan-only and Japan-inclusive regional rights&lt;/li>&#xd;&#xa;&lt;li>Assets aligned with AbbVie Japan priorities and therapeutic areas of interest&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>AbbVie Japan partnering priorities and areas of interest&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Assets in the following therapeutic areas that compliment AbbVie Japan’s portfolio and pipeline without cannibalizing ongoing development&lt;ul>&#xd;&#xa;&lt;li>Immunology&lt;/li>&#xd;&#xa;&lt;li>Oncology&lt;/li>&#xd;&#xa;&lt;li>Neuroscience&lt;/li>&#xd;&#xa;&lt;li>Eye Care&lt;/li>&#xd;&#xa;&lt;li>Hepatology&amp;nbsp; (including MASH/NASH)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Key Evaluation Criteria&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Development stage (Late stage or&amp;nbsp; marketed outside Japan)&lt;/li>&#xd;&#xa;&lt;li>Strategic fit with AbbVie’s therapeutic focus&lt;/li>&#xd;&#xa;&lt;li>Clear differentiation versus existing standards of care&lt;/li>&#xd;&#xa;&lt;li>Potential value and feasibility for the Japan market&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Important – non-confidential submissions only&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>All information submitted via email must be non-confidential&lt;/li>&#xd;&#xa;&lt;li>Do not include data that could compromise patentability or confidentiality&lt;/li>&#xd;&#xa;&lt;li>Detailed discussions will proceed under appropriate confidentiality agreements after selection&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Call to action&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Click&amp;nbsp;&lt;a href=&quot;mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie%20Japan%20Partnering%20-%20Your%20name&amp;amp;body=Thank%20you%20for%20your%20interest.%20Please%20send%20items%201%20to%204%20via%20email.%201.%20Company%20name%202.%20Contact%20person%27s%20name%203.%20Program%20summary%204.%20Non-confidential%20deck%20(PDF)&quot;>here&lt;/a> to apply for a 1:1 meeting by Nov 30, 2026&lt;/li>&#xd;&#xa;&lt;li>Selected applicants will be invited to 1:1 meetings scheduled through Dec 18, 2026&lt;/li>&#xd;&#xa;&lt;li>We look forward to exploring innovative late-stage assets for Japan&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                        text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>What the 1:1 meetings offer&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Direct discussion with AbbVie Japan Corporate Strategy Team (Business Development and Commercial Assessment teams)&lt;/li>&#xd;&#xa;&lt;li>High-level feedback on strategic fit for Japan&lt;/li>&#xd;&#xa;&lt;li>Exploration of potential Japan-specific deal structures&lt;/li>&#xd;&#xa;&lt;li>A confidential follow-up process for selected opportunities&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Who should apply (must fulfill all criteria)&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Biopharma companies with marketed assets or Phase 3/Pivotal-ready assets (include Phase 2 assets for oncology) in the US, EU, or China&lt;/li>&#xd;&#xa;&lt;li>Assets with or without current clinical development in Japan&lt;/li>&#xd;&#xa;&lt;li>Companies open to discussing Japan-only and Japan-inclusive regional rights&lt;/li>&#xd;&#xa;&lt;li>Assets aligned with AbbVie Japan priorities and therapeutic areas of interest&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>AbbVie Japan partnering priorities and areas of interest&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Assets in the following therapeutic areas that compliment AbbVie Japan’s portfolio and pipeline without cannibalizing ongoing development&lt;ul>&#xd;&#xa;&lt;li>Immunology&lt;/li>&#xd;&#xa;&lt;li>Oncology&lt;/li>&#xd;&#xa;&lt;li>Neuroscience&lt;/li>&#xd;&#xa;&lt;li>Eye Care&lt;/li>&#xd;&#xa;&lt;li>Hepatology&amp;nbsp; (including MASH/NASH)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Key Evaluation Criteria&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Development stage (Late stage or&amp;nbsp; marketed outside Japan)&lt;/li>&#xd;&#xa;&lt;li>Strategic fit with AbbVie’s therapeutic focus&lt;/li>&#xd;&#xa;&lt;li>Clear differentiation versus existing standards of care&lt;/li>&#xd;&#xa;&lt;li>Potential value and feasibility for the Japan market&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Important – non-confidential submissions only&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>All information submitted via email must be non-confidential&lt;/li>&#xd;&#xa;&lt;li>Do not include data that could compromise patentability or confidentiality&lt;/li>&#xd;&#xa;&lt;li>Detailed discussions will proceed under appropriate confidentiality agreements after selection&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Call to action&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Click&amp;nbsp;&lt;a href=&quot;mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie%20Japan%20Partnering%20-%20Your%20name&amp;amp;body=Thank%20you%20for%20your%20interest.%20Please%20send%20items%201%20to%204%20via%20email.%201.%20Company%20name%202.%20Contact%20person%27s%20name%203.%20Program%20summary%204.%20Non-confidential%20deck%20(PDF)&quot;>here&lt;/a> to&amp;nbsp;apply for priority rolling review:&lt;ul>&#xd;&#xa;&lt;li>1st-round deadline: Aug 31, 2026 (1:1 meetings by Sep 30, 2026)&lt;/li>&#xd;&#xa;&lt;li>Final-round deadline: Nov 30, 2026 (1 meetings by Dec 18, 2026)&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>Selection is ongoing: applications are reviewed on a rolling basis, so act quickly for early 1:1 meeting consideration&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
                         textIsRich="true"/>
                     <separator_copy_20120_970183499
                         cq:styleIds="[1662756756047,1662756502570]"

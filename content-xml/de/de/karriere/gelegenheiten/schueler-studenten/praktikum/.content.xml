@@ -2,24 +2,26 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2024-12-06T03:12:09.144-05:00"
-        cq:lastModifiedBy="WINTELX"
+        cq:lastModified="{Date}2026-08-11T10:06:50.736-04:00"
+        cq:lastModifiedBy="MURRARX3"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Schüler*innen &amp; Studierende bei AbbVie: Sammle Praxiserfahrung in Praktika, Werkstudentenjobs und Ferienarbeit in einem internationalen Unternehmen.&#xd;&#xa;&#xd;&#xa;"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2024-11-22T08:26:57.868-05:00"
-        jcr:lastModifiedBy="ZEMSCJX"
+        jcr:lastModified="{Date}2026-07-20T07:55:24.032-04:00"
+        jcr:lastModifiedBy="LENNIAM"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Praktikum"
-        jcr:uuid="93396079-2ec5-4f84-ad2c-f18dd2c26b54"
+        jcr:title="Praktikum, Werkstudententätigkeit und Abschlussarbeit"
+        jcr:uuid="33e537b6-3524-4257-8b0b-3a2ab9256ec3"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Erfahre mehr"
         ctaText="Erfahre mehr"
         description="Bei AbbVie haben Praktikant*innen die Möglichkeit mit anzupacken."
         eyebrow="Schüler &amp; Studenten"
         fileReference="/content/dam/abbvie-com2/de/images/archiv/karriere/abbvie-de-talent-acquisition.jpg"
-        navTitle="Praktikum"
-        pageTitle="Praktikum"
+        navTitle="Praktikum, Werkstudententätigkeit und Abschlussarbeit"
+        ogimage="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/praktikum/abbvie-de-praktikum-og.jpg"
+        pageTitle="Praktikum, Werkstudententätigkeit und Abschlussarbeit"
         title="Praktikum"
         warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/de/de/site/popups/warn-on-departure/master">
         <root
@@ -39,11 +41,15 @@
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <container
                         cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
-                        jcr:lastModified="{Date}2024-10-24T04:13:05.332-04:00"
-                        jcr:lastModifiedBy="singarx"
+                        jcr:lastModified="{Date}2026-05-08T08:54:45.092-04:00"
+                        jcr:lastModifiedBy="LENNIAM"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/de/images/archiv/karriere/abbvie-de-talent-acquisition.jpg"/>
+                        backgroundImageReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/praktikum/abbvie-de-praktikum-header.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
                     <container2
                         cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678]"
                         jcr:lastModified="{Date}2024-12-06T03:05:28.778-05:00"
@@ -64,185 +70,546 @@
                                 startLevel="4"/>
                             <title
                                 cq:styleIds="[1659545825678,1661545829678]"
-                                jcr:lastModified="{Date}2024-10-23T07:18:28.948-04:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-07-16T09:20:13.046-04:00"
+                                jcr:lastModifiedBy="LENNIAM"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="Praktikum"
+                                jcr:title="Praktikum, Werkstudententätigkeit und Abschlussarbeit"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
                                 type="h1"
                                 variant="h"/>
                             <text
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-10-23T07:18:00.229-04:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-07-16T09:22:13.068-04:00"
+                                jcr:lastModifiedBy="LENNIAM"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Bei AbbVie haben Praktikant*innen die Möglichkeit mit anzupacken, eigenen Ideen einzubringen und von Expert*innen zu lernen.&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Bei AbbVie sammelst du als Student*in wertvolle Praxiserfahrung in einem internationalen, forschungsnahen Umfeld und erhältst die Möglichkeit, dein theoretisches Wissen praktisch anzuwenden.&amp;nbsp;&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </container3>
                     </container2>
-                    <container_885755255
-                        cq:styleIds="[1653545825687]"
-                        jcr:created="{Date}2024-10-23T07:24:16.142-04:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-12-06T03:05:12.700-05:00"
-                        jcr:lastModifiedBy="WINTELX"
+                    <grid_copy
+                        jcr:created="{Date}2026-02-24T06:05:22.440-05:00"
+                        jcr:createdBy="kunkefx"
+                        jcr:lastModified="{Date}2026-02-24T06:05:35.434-05:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container">
-                        <title
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:24:43.240-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:26:06.286-04:00"
-                            jcr:lastModifiedBy="singarx"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="9"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Ein Fundament für deine Karriere"
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h4"
-                            variant="h"/>
-                        <text
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:24:54.620-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:26:17.925-04:00"
-                            jcr:lastModifiedBy="singarx"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                                jcr:created="{Date}2026-02-24T06:05:47.396-05:00"
+                                jcr:createdBy="kunkefx"
+                                jcr:lastModified="{Date}2026-02-24T06:07:02.814-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false">
+                                <text_385847365_copy__1948336365
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-23T07:27:10.441-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-16T09:22:48.653-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Ob im Rahmen eines Praktikums, einer Werkstudententätigkeit oder deiner Abschlussarbeit – du arbeitest aktiv an spannenden Projekten mit, übernimmst Verantwortung und gewinnst Einblicke in die Arbeitsweise eines globalen Pharmaunternehmens.&lt;/p>&#xd;&#xa;&lt;p>Dabei wirst du von erfahrenen Kolleg*innen begleitet, bringst deine Ideen und dein Fachwissen ein und lernst verschiedene Fachbereiche kennen. Nutze die Chance, wertvolle berufliche Erfahrungen zu sammeln, dein Netzwerk aufzubauen und wichtige Schritte für deinen zukünftigen Karriereweg zu gehen.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1840982084_384099507
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-10-24T01:23:44.183-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-24T01:23:44.183-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1661545829678,1651545825691]"
+                                    jcr:created="{Date}2024-10-23T07:24:43.240-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-22T03:41:57.045-04:00"
+                                    jcr:lastModifiedBy="autzeax"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Studierende"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_385847365_copy_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-23T07:27:10.441-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T07:31:41.584-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Du möchtest dein Studium mit praktischer Erfahrung verbinden und bereits während deiner Studienzeit Einblicke in ein internationales Pharmaunternehmen gewinnen? Bei AbbVie hast du die Möglichkeit, in spannenden Projekten mitzuarbeiten, dein Wissen aus dem Studium direkt anzuwenden und dich fachlich sowie persönlich weiterzuentwickeln.&lt;/p>&#xd;&#xa;&lt;p>Ob im Praktikum oder als Werkstudent*in – du wirst Teil interdisziplinärer Teams, arbeitest an realen Fragestellungen mit und erhältst wertvolle Einblicke in Forschung, Entwicklung, Marketing, Kommunikation und viele weitere Unternehmensbereiche. So legst du den Grundstein für deinen weiteren Karriereweg in der Wissenschaft oder Industrie.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <accordion_copy
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2026-04-13T09:46:44.876-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-07-02T07:32:43.391-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <item_1776088022230
+                                        cq:panelTitle="Praktikum"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-06-08T09:58:06.386-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Du möchtest dein Studium durch praktische Erfahrung ergänzen und an echten Projekten mitarbeiten? Im Praktikum bei AbbVie wirst du Teil interdisziplinärer Teams und arbeitest an Aufgaben mit direktem Bezug zur pharmazeutischen Forschung und Unternehmenspraxis.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Mitarbeit an Projekten in Forschung, Entwicklung oder Business-Bereichen&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Einblicke in internationale Unternehmensstrukturen&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Persönliches Mentoring durch erfahrene Kolleg*innen&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Aufbau eines beruflichen Netzwerks für deine Zukunft&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Rahmen&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Dauer: mind. 6 Monate&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Voraussetzung: gültige Immatrikulation während der gesamten Tätigkeitsdauer&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1776088025595
+                                        cq:panelTitle="Werkstudententätigkeit"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-06-08T09:59:14.094-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Du möchtest neben dem Studium wertvolle Praxiserfahrung sammeln und aktiv in Projekten mitarbeiten? Als Werkstudent*in bist du Teil interdisziplinärer Teams mit echtem Impact.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Flexible Arbeitszeit (bis zu 20 Stunden pro Woche in der Vorlesungszeit; Erhöhung in den Semesterferien ggf. möglich)&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Mitarbeit an realen Projekten mit direktem Mehrwert&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Einblicke in verschiedene Fachbereiche und Entwicklungsmöglichkeiten&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Attraktive Vergütung und moderne Arbeitsbedingungen&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Rahmen&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Dauer: 6–24 Monate – idealerweise mindestens 12 Monate&lt;/li>&#xd;&#xa;&lt;li>Voraussetzung: gültige Immatrikulation während der gesamten Tätigkeitsdauer&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782991957584
+                                        cq:panelTitle="Abschlussarbeiten – Dein Einstieg in die Praxis"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-02T07:34:25.844-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Verbinde Theorie mit realer Forschung&lt;/p>&#xd;&#xa;&lt;p>Du suchst ein anspruchsvolles Thema für deine Bachelor-, Master- oder Diplomarbeit?&lt;/p>&#xd;&#xa;&lt;p>Bei AbbVie arbeitest du an aktuellen Herausforderungen der pharmazeutischen Forschung und entwickelst Lösungen mit direkter Relevanz.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Deine Vorteile&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Individuelle Betreuung durch erfahrene Fachabteilungen&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Zugang zu modernsten Technologien, Laboren und Daten&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Präsentation deiner Ergebnisse im Unternehmen&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Perspektiven für deinen Berufseinstieg&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Rahmenbedingungen&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Dauer: 3 - 6 Monate (37,5 h/Woche)&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Voraussetzung: Immatrikulation &amp;amp; Abstimmung mit deiner Hochschule&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Bitte beachte, dass wir keine Initiativbewerbungen für Abschlussarbeiten annehmen können. Offene Stellen findest du auf unserem Stellenportal. Oft ergeben sich Abschlussarbeiten aus einer vorhergehenden Praktikums- und/oder Werkstudententätigkeit.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion_copy>
+                                <separator_1983422596
+                                    jcr:created="{Date}2024-10-23T07:29:56.671-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-23T07:29:56.671-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <copy_of_container_co_1864009241
+                                    cq:styleIds="[1653545835859,1653545825683,1653545847148]"
+                                    jcr:created="{Date}2022-11-28T14:38:18.752-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-05-12T06:22:37.465-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container"
+                                    backgroundColor="#071D49"
+                                    enableFetchPriority="false"
+                                    enableLazyLoading="false"
+                                    langAttribute="none">
+                                    <grid_copy_copy
+                                        cq:styleIds="[0,1653545835880]"
+                                        jcr:created="{Date}2022-11-28T14:55:37.084-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-05-12T07:48:14.354-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <par_12
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote_copy
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T08:19:08.176-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Mohamed Chouihna"
+                                                attributionTitle="ehemaliger Werkstudent und Masterand"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Durch meine Werkstudententätigkeit im Medical-Bereich habe ich wertvolle Einblicke in die Pharmaindustrie gewonnen, die mir geholfen haben, mich beruflich besser zu orientieren und meine Interessen für die Zeit nach dem Studium zu schärfen. Im Rahmen meiner anschließenden Bachelorarbeit bei AbbVie hatte ich zudem die Möglichkeit, die praktischen Erfahrungen aus meiner Werkstudententätigkeit gezielt mit meinem im Studium erworbenen Wissen zu verknüpfen und weiter auszubauen.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_12>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <separator_copy
+                                                cq:styleIds="[1662756515133]"
+                                                jcr:created="{Date}2024-10-24T02:12:37.454-04:00"
+                                                jcr:createdBy="singarx"
+                                                jcr:lastModified="{Date}2026-05-12T07:49:22.125-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                            <image_84741686_copy
+                                                cq:styleIds="[1402843082813,1402843082822,1402843082832]"
+                                                jcr:created="{Date}2024-08-01T08:36:59.572-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T08:17:54.983-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                                alt="Mohamed Chouihna"
+                                                altValueFromDAM="false"
+                                                displayPopupTitle="true"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duales-studium/abbvie-de-duales-studium-mohamed-chouihna.jpg"
+                                                isDecorative="false"
+                                                openInNewWindow="false"
+                                                titleValueFromDAM="false"/>
+                                        </par_11>
+                                        <par_13
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys"/>
+                                        <quote_1661374647
+                                            cq:styleIds="[1000000000021,1000000000033,1000000000040,1000000000000]"
+                                            jcr:created="{Date}2022-12-10T14:46:52.954-05:00"
+                                            jcr:createdBy="chiucx"
+                                            jcr:lastModified="{Date}2024-08-22T04:57:59.401-04:00"
+                                            jcr:lastModifiedBy="HERZOBW"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/quote"
+                                            attributionName="Mag. Ingo Raimon "
+                                            attributionTitle="General Manager AbbVie Österreich "
+                                            quote="Wir haben einen klaren Auftrag: durch medizinischen Fortschritt das Leben von Patient:innen zu verbessern. Dabei kommt der klinischen Forschung eine Schlüsselrolle zu: durch intensive Forschung können wir höhere Standards in der Behandlung und Patient:innenversorgung erzielen. Unsere Mitarbeiter:innen arbeiten in starken Teams, um Herausforderungen zu meistern. Die offene Arbeitskultur auf Augenhöhe ist wichtig für unseren gemeinsamen Unternehmenserfolg. "
+                                            quoteType="regular"
+                                            textSize="h0"/>
+                                        <par_14
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T07:45:04.892-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Anna Chlipala"
+                                                attributionTitle="ehemalige Auszubildende zur Biologielaborantin"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Ausbildung zur Biologielaborantin war unglaublich vielseitig. Ich habe mit unterschiedlichsten biologischen Systemen gearbeitet – von einzelnen Zellen bis hin zu komplexeren Organismen – und konnte viele Inhalte direkt praktisch im Labor anwenden. Besonders begeistert hat mich die enge Verbindung von Theorie und Praxis. Genau diese Mischung hat die Ausbildung für mich so spannend und abwechslungsreich gemacht.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_14>
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="3"
+                                                dataPriority="1"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="9"
+                                                dataPriority="2"/>
+                                        </columns>
+                                    </grid_copy_copy>
+                                </copy_of_container_co_1864009241>
+                                <text_1522895075_copy_1921957080
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-23T07:31:54.206-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T07:35:01.127-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Alle aktuellen Stellen für Praktika, Werkstudententätigkeiten und Abschlussarbeiten&amp;nbsp;findest du in&amp;nbsp;&lt;a title=&quot;Stellenangebote&quot; href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot;>unserem Jobportal&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1840982084
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-10-24T01:23:44.183-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-24T01:23:44.183-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <copy_of_container_co
+                                    cq:styleIds="[1653545835859,1653545825683,1653545847148]"
+                                    jcr:created="{Date}2022-11-28T14:38:18.752-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-05-12T06:22:37.465-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container"
+                                    backgroundColor="#071D49"
+                                    enableFetchPriority="false"
+                                    enableLazyLoading="false"
+                                    langAttribute="none">
+                                    <grid_copy_copy
+                                        cq:styleIds="[0,1653545835880]"
+                                        jcr:created="{Date}2022-11-28T14:55:37.084-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-05-12T07:48:14.354-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <par_12
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote_copy
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-08-11T10:06:50.718-04:00"
+                                                jcr:lastModifiedBy="MURRARX3"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Ana-Lea Bode"
+                                                attributionTitle="ehemalige Werkstudentin"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Werkstudententätigkeit hat mir nicht nur Einblicke in verschiedene Abteilungen ermöglicht, sondern mir auch geholfen, besser zu erkennen, wo ich meine Stärken am besten einbringen kann. Besonders wertvoll war für mich, dass sie nicht nur ein Einstieg war, sondern ein Raum, in dem ich mich entwickeln, ausprobieren und orientieren konnte – durch offenen Austausch, frühe Einbindung ins Team und die Unterstützung durch eine Mentorin.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_12>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <separator_copy
+                                                cq:styleIds="[1662756515133]"
+                                                jcr:created="{Date}2024-10-24T02:12:37.454-04:00"
+                                                jcr:createdBy="singarx"
+                                                jcr:lastModified="{Date}2026-05-12T07:49:22.125-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                            <image_84741686_copy
+                                                cq:styleIds="[1402843082813,1402843082822,1402843082832]"
+                                                jcr:created="{Date}2024-08-01T08:36:59.572-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T08:18:21.462-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                                alt="Ana Lea Bode"
+                                                altValueFromDAM="false"
+                                                displayPopupTitle="true"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/praktikum/abbvie-de-praktikum-ana-lea-bode.jpg"
+                                                isDecorative="false"
+                                                openInNewWindow="false"
+                                                titleValueFromDAM="false"/>
+                                        </par_11>
+                                        <par_13
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys"/>
+                                        <quote_1661374647
+                                            cq:styleIds="[1000000000021,1000000000033,1000000000040,1000000000000]"
+                                            jcr:created="{Date}2022-12-10T14:46:52.954-05:00"
+                                            jcr:createdBy="chiucx"
+                                            jcr:lastModified="{Date}2024-08-22T04:57:59.401-04:00"
+                                            jcr:lastModifiedBy="HERZOBW"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/quote"
+                                            attributionName="Mag. Ingo Raimon "
+                                            attributionTitle="General Manager AbbVie Österreich "
+                                            quote="Wir haben einen klaren Auftrag: durch medizinischen Fortschritt das Leben von Patient:innen zu verbessern. Dabei kommt der klinischen Forschung eine Schlüsselrolle zu: durch intensive Forschung können wir höhere Standards in der Behandlung und Patient:innenversorgung erzielen. Unsere Mitarbeiter:innen arbeiten in starken Teams, um Herausforderungen zu meistern. Die offene Arbeitskultur auf Augenhöhe ist wichtig für unseren gemeinsamen Unternehmenserfolg. "
+                                            quoteType="regular"
+                                            textSize="h0"/>
+                                        <par_14
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T07:45:04.892-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Anna Chlipala"
+                                                attributionTitle="ehemalige Auszubildende zur Biologielaborantin"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Ausbildung zur Biologielaborantin war unglaublich vielseitig. Ich habe mit unterschiedlichsten biologischen Systemen gearbeitet – von einzelnen Zellen bis hin zu komplexeren Organismen – und konnte viele Inhalte direkt praktisch im Labor anwenden. Besonders begeistert hat mich die enge Verbindung von Theorie und Praxis. Genau diese Mischung hat die Ausbildung für mich so spannend und abwechslungsreich gemacht.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_14>
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="3"
+                                                dataPriority="1"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="9"
+                                                dataPriority="2"/>
+                                        </columns>
+                                    </grid_copy_copy>
+                                </copy_of_container_co>
+                                <text_708170422_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T01:24:14.040-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-12-05T04:49:13.442-05:00"
+                                    jcr:lastModifiedBy="MURRARX3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p style=&quot;text-align: right;&quot;>DE-ABBV-240799&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                        </par_12>
+                        <par_13
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Wir legen Wert auf deinen frischen Blick! Bei AbbVie kann jede*r Mitarbeiter*in einen Beitrag zu unserer Arbeit, unserer Kultur und unserem Erfolg leisten – auch als Praktikant*in, Auszubildende*r oder Werkstudent*in. Quer über unsere Tätigkeitsfelder hinweg bieten wir Praktika an, bei denen du mit anpacken kannst und so deinen Teil dazu beiträgst, die Lebensqualität von Menschen auf der ganzen Welt zu verbessern.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Weil wir auf individuelle Talente eingehen, folgen unsere Praktika im Regelfall keinem vorgefertigten Ablaufplan. Je nach Tätigkeitsbereich und persönlichen Vorkenntnissen gestalten wir gemeinsam einen Arbeitsalltag, der uns unterstützt und dich voranbringt. Du möchtest an Projekten mitarbeiten und Verantwortung übernehmen? Das kannst du bei uns! Praktika dauern im Regelfall drei bis sechs Monate – je mehr Zeit du hast, desto besser. Es besteht grundsätzlich auch die Möglichkeit, bei uns eine Abschlussarbeit (Bachelor oder Master) zu schreiben.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <separator
-                            jcr:created="{Date}2024-10-23T07:26:52.967-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:26:52.967-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_950275474
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:27:04.469-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:27:48.334-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Du bist Student*in in technischer, naturwissenschaftlicher, betriebswirtschaftlicher Fachrichtung?"
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h4"
-                            variant="h"/>
-                        <text_385847365
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:27:10.441-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-12-06T03:10:24.141-05:00"
-                            jcr:lastModifiedBy="WINTELX"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Bewirb dich auf unsere ausgeschriebenen Praktikumsstellen und werde Teil des Teams! Je nach gewünschter Abteilung finden die Praktika in Wiesbaden, Ludwigshafen oder Berlin statt. Ganz gleich, für welchen Bereich du dich entscheidest: Du triffst auf engagierte und leistungsstarke Teams, die wirklich etwas bewegen wollen.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Du willst unsere Mitarbeiter*innen kennenlernen? &lt;a href=&quot;https://www.abbvie.de/karriere/nce-pharmaceutical-development.html&quot; title=&quot;Pharmazeutische Entwicklung&quot;>Hier&lt;/a> bekommst du einen Einblick in die pharmazeutische Entwicklung und findest aktuelle Praktikumsangebote in diesem Bereich.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <separator_1949465183
-                            jcr:created="{Date}2024-10-23T07:28:41.114-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:28:41.114-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_308021034
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:28:56.830-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:29:29.828-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Pharmazie-Studenten*innen aufgepasst: Praktikum in der BioPharma "
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h4"
-                            variant="h"/>
-                        <text_1999641246
-                            jcr:created="{Date}2024-10-23T07:29:35.627-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:29:50.473-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Du bist Pharmazie-Student*in und willst im Praktischen Jahr sechs Monate Praktikum bei einem forschenden BioPharma-Unternehmen absolvieren? Zweimal im Jahr bieten wir&amp;nbsp;Praktikumsplätze gemäß Approbationsordnung für Apotheker*innen an. Bitte gib den Bereich, der dich interessiert, auf deiner Bewerbung an: Forschung, Entwicklung, Formulierung, Analytik, Qualitätssicherung, (klinische) Produktion, Regulatory Affairs, Marketing. Starttermine: immer zum 1. Mai oder 1. November.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <separator_1983422596
-                            jcr:created="{Date}2024-10-23T07:29:56.671-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:29:56.671-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <title_164208695
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:30:06.713-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:30:36.600-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Wir suchen auch Werkstudenten*innen!"
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h4"
-                            variant="h"/>
-                        <text_1323448732
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:30:44.898-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:31:04.971-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Eingeschriebene Student*innen können bei uns auch als Werkstudent*innen unterstützen. Bei einer maximalen Wochenarbeitszeit von 20 Stunden kannst du dein Wissen vertiefen und praktische Erfahrung sammeln.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <separator_1891304686
-                            cq:styleIds="[1662756502570]"
-                            jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:31:19.135-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <text_1522895075
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-23T07:31:54.206-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-12-06T03:11:03.380-05:00"
-                            jcr:lastModifiedBy="WINTELX"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Alle aktuellen Praktikums- und Werkstudent*innenstellen findest du in&amp;nbsp;&lt;a title=&quot;Stellenangebote&quot; href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot;>unserem Jobportal&lt;/a>.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <separator_1840982084
-                            cq:styleIds="[1662756486159]"
-                            jcr:created="{Date}2024-10-24T01:23:44.183-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T01:23:44.183-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <text_708170422
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-24T01:24:14.040-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-12-05T04:49:13.442-05:00"
-                            jcr:lastModifiedBy="MURRARX3"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: right;&quot;>DE-ABBV-240799&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                    </container_885755255>
-                    <container_2066502532
-                        cq:styleIds="[1653545825683]"
-                        jcr:created="{Date}2024-10-23T07:32:41.096-04:00"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <cardpagestory_copy_c
+                                cq:styleIds="[1111111111110,1111111111112,1111111111117]"
+                                jcr:created="{Date}2022-12-16T17:58:51.417-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:52:46.340-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                hideImage="false"
+                                linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"
+                                openInNewTab="false"/>
+                            <separator_1294049852
+                                cq:styleIds="[1662756387452]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-24T03:53:11.126-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1294049852_2096330971
+                                cq:styleIds="[1662756423318,1662756756047]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-24T03:52:34.800-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1294049852_656147762
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:55:18.142-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <header_1821235473_co
+                                cq:styleIds="[3]"
+                                jcr:created="{Date}2022-12-14T13:11:04.446-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-05-10T07:52:25.568-04:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="THEMEN"/>
+                            <separator_1294049852_278608911
+                                cq:styleIds="[1662756387452]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-24T03:53:18.557-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <linklist_copy_copy_c
+                                jcr:created="{Date}2022-12-14T13:11:54.007-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:55:01.055-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                childDepth="1"
+                                excludeCurrentPage="true"
+                                linkItems="true"
+                                linksTarget="_self"
+                                listFrom="children"
+                                parentPage="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"
+                                showDate="false"
+                                showDesc="false"
+                                showSubtitle="false"
+                                showTags="false"
+                                sortOrder="asc"
+                                tagsMatch="any"
+                                textIsRich="[true,true,true,true,true]">
+                                <pages jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Onkologie  "
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/de/de/wissenschaft/schwerpunktbereiche/onkologie"
+                                        oneTrustEnabled="false"
+                                        text="Onkologie  "
+                                        textIconTarget="_self"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Neuroscience"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/de/de/wissenschaft/schwerpunktbereiche/neurologie"
+                                        oneTrustEnabled="false"
+                                        text="Neuroscience"
+                                        textIconTarget="_self"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Eye Care"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/eye-care"
+                                        oneTrustEnabled="false"
+                                        text="Eye Care"
+                                        textIconTarget="_self"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Aesthetics"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/aesthetics"
+                                        oneTrustEnabled="false"
+                                        text="Aesthetics"
+                                        textIconTarget="_self"/>
+                                    <item4
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Other Specialties"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/other-specialties"
+                                        oneTrustEnabled="false"
+                                        text="Other Specialties"
+                                        textIconTarget="_self"/>
+                                </pages>
+                            </linklist_copy_copy_c>
+                        </par_13>
+                    </grid_copy>
+                    <container_840033068_
+                        cq:styleIds="[1653545825683,1653545847150]"
+                        jcr:created="{Date}2024-10-23T05:50:34.224-04:00"
                         jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-10-23T07:33:08.123-04:00"
-                        jcr:lastModifiedBy="singarx"
+                        jcr:lastModified="{Date}2026-02-24T04:53:26.147-05:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundColor="#F4F4F4">
-                        <grid
-                            jcr:created="{Date}2024-10-23T07:33:14.391-04:00"
+                        backgroundColor="#A6B5E0"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false">
+                        <grid_copy
+                            jcr:created="{Date}2024-10-23T05:50:47.655-04:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-23T07:33:38.006-04:00"
+                            jcr:lastModified="{Date}2024-10-23T05:51:05.146-04:00"
                             jcr:lastModifiedBy="singarx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/grid/v2/grid"
@@ -260,39 +627,83 @@
                             <par_11
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/foundation/components/parsys">
-                                <teaser
-                                    cq:styleIds="[6]"
-                                    jcr:created="{Date}2024-10-23T07:34:00.690-04:00"
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1651545825678,1661545829678,1651545825694]"
+                                    jcr:created="{Date}2024-10-23T05:23:35.216-04:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2024-12-06T03:11:33.314-05:00"
-                                    jcr:lastModifiedBy="WINTELX"
+                                    jcr:lastModified="{Date}2026-02-24T05:21:31.850-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="&lt;p>&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenangebote&quot;>Finde den Job, der zu dir passt&lt;/a>&lt;/p>&#xd;&#xa;"
-                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
-                                    ctaLink="https://abbvie.taleo.net/careersection/2/jobsearch.ftl?location=10140125194&amp;lang=de"
-                                    ctaTarget="_self"
-                                    pretitle="Offene Stellen"
-                                    textIsRich="[true,true]"/>
+                                    jcr:title="Offene Stellen"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="noh"/>
+                                <separator_1891304686_978224001
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686_191853332
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <button
+                                    cq:styleIds="[1659997740832,1659997787460]"
+                                    jcr:created="{Date}2026-02-24T04:54:25.788-05:00"
+                                    jcr:createdBy="kunkefx"
+                                    jcr:lastModified="{Date}2026-02-24T05:16:26.453-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Finde den Job, der zu Dir passt"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Stellenangebote ansehen"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com/de/"/>
                             </par_11>
                             <par_12
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/foundation/components/parsys">
-                                <teaser
-                                    cq:styleIds="[6]"
-                                    jcr:created="{Date}2024-10-23T07:34:07.487-04:00"
+                                <title_copy_copy
+                                    cq:styleIds="[1651545825678,1661545829678,1651545825694,1659545825678]"
+                                    jcr:created="{Date}2024-10-23T05:23:35.216-04:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2024-12-06T03:12:09.139-05:00"
-                                    jcr:lastModifiedBy="WINTELX"
+                                    jcr:lastModified="{Date}2026-02-24T05:19:14.852-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="&lt;p>&lt;a href=&quot;/content/abbvie-com2/de/de/karriere/arbeiten-bei-abbvie/patients-heart.html&quot; title=&quot;Patients Heart&quot;>Praktika für chronisch kranke Menschen&lt;/a>&lt;/p>&#xd;&#xa;"
-                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
-                                    ctaLink="/content/abbvie-com/de/de/karriere/patients-at-heart"
-                                    ctaTarget="_self"
-                                    pretitle="Patients@Heart"
-                                    textIsRich="[true,true]"/>
+                                    jcr:title="Interessierst du dich für eine Karriere bei AbbVie?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="noh"/>
+                                <button_copy_copy
+                                    cq:styleIds="[1659997740832,1659997787460]"
+                                    jcr:created="{Date}2026-02-24T04:54:25.788-05:00"
+                                    jcr:createdBy="kunkefx"
+                                    jcr:lastModified="{Date}2026-02-24T05:16:20.687-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Werde Teil der Talent Community"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Werde Teil der Talent Community"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com/de/talent-community"/>
                             </par_12>
-                        </grid>
-                    </container_2066502532>
+                        </grid_copy>
+                    </container_840033068_>
                     <separator
                         cq:styleIds="[1662756542862]"
                         jcr:created="{Date}2024-10-24T01:25:21.676-04:00"

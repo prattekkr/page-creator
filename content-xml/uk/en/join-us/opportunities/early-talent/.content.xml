@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
+    <graduate-cv-tips-how-to-write-a-cv-that-stands-out/>
     <jcr:content
-        cq:lastModified="{Date}2026-02-12T10:25:35.337-05:00"
-        cq:lastModifiedBy="singarx"
+        cq:lastModified="{Date}2026-08-14T04:38:21.666-04:00"
+        cq:lastModifiedBy="vickekx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2026-08-14T04:38:21.645-04:00"
+        jcr:lastModifiedBy="vickekx"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Early Talent"
-        jcr:uuid="3fd4072d-bfb3-4cb5-b785-38bec925a63e"
+        jcr:uuid="ce549292-c904-4412-bf46-171f76d01168"
         sling:resourceType="abbvie-com2/components/remotepage"
+        fileReference="/content/dam/abbvie-com2/images/employee/two-women-in-cafe.jpg"
         navTitle="Early Talent"
-        pageTitle="Early Talent">
+        pageTitle="Early Talent"
+        title="Early Talent">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -28,23 +33,20 @@
                 <responsivegrid1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <container
-                        cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
-                        jcr:lastModified="{Date}2026-02-12T08:11:05.498-05:00"
-                        jcr:lastModifiedBy="singarx"
+                    <container_copy
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2023-01-25T15:56:06.921-05:00"
+                        jcr:lastModifiedBy="chiucx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/images/student-program/female-male-students-walking-to-meeting.jpg"
-                        dmPresetType="imagePreset"
-                        enableFetchPriority="false"
-                        enableLazyLoading="false"/>
-                    <container2
-                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/two-women-in-cafe.jpg"/>
+                    <container2_copy
+                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
                         backgroundColor="#FFFFFF">
                         <container3
-                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                            cq:styleIds="[1653545835982,1653545835879,1653242825678,1653545847150,1653545825686]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/container/v2/container">
                             <breadcrumb
@@ -56,141 +58,504 @@
                                 startLevel="4"/>
                             <title
                                 cq:styleIds="[1659545825678,1661545829678]"
-                                jcr:lastModified="{Date}2025-11-21T05:59:23.183-05:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-07-02T08:24:21.840-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="Early Talent"
+                                jcr:title="Early Talent Programme"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
                                 type="h1"
                                 variant="h"/>
-                            <separator
-                                jcr:created="{Date}2025-11-21T06:18:58.063-05:00"
-                                jcr:createdBy="singarx"
-                                jcr:lastModified="{Date}2025-11-21T06:18:58.063-05:00"
-                                jcr:lastModifiedBy="singarx"
+                            <title_1382338800
+                                cq:styleIds="[1659545825678,1661545829678]"
+                                jcr:created="{Date}2022-12-10T16:40:31.549-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-07-02T08:26:07.241-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <text_copy
+                                jcr:title="Where curiosity meets real impact"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h5"
+                                variant="h"/>
+                            <text_1044727654_copy
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2026-02-10T07:57:05.233-05:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:created="{Date}2022-12-10T16:39:49.979-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-08-10T13:46:46.823-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Jumpstart your career at AbbVie and take on challenging work that changes lives.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa; Are you the kind of person who never gives up on a problem? Who thrives when challenged? Who finds your best ideas when you’re faced with the toughest problems? Then we want you.&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>Ready to work on problems that matter, and be trusted to help solve them?&lt;/p>&#xd;&#xa;&lt;p>Our Early Talent Programme gives students and graduates the opportunity to contribute to meaningful work, learn from experienced colleagues and gain exposure to different areas of the business from day one.&lt;/p>&#xd;&#xa;&lt;p>Whether you're passionate about science, healthcare, technology or business, you'll have the chance to make an impact while developing the skills and experience to shape your future career.&lt;/p>&#xd;&#xa;&lt;p>If you like big questions more than easy answers, you'll fit right in.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </container3>
-                        <grid
-                            jcr:created="{Date}2026-02-05T03:26:27.607-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-12T08:31:59.127-05:00"
-                            jcr:lastModifiedBy="singarx"
+                        <container
+                            cq:styleIds="[1653545835860,1653242825678,1653545835879,1653545825683]"
+                            jcr:created="{Date}2026-07-02T08:33:57.943-04:00"
+                            jcr:createdBy="vickekx"
+                            jcr:lastModified="{Date}2026-07-02T08:33:57.943-04:00"
+                            jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                            rowCount="1">
-                            <par_11
+                            sling:resourceType="abbvie-com2/components/container/v2/container"
+                            backgroundColor="#FFFFFF">
+                            <title_1905673451_cop
+                                cq:styleIds="[1659545825678,1651545825678,1661545829678,1651545825692]"
+                                jcr:lastModified="{Date}2026-07-02T12:33:52.576-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/foundation/components/parsys"/>
-                            <par_13
+                                jcr:title="Choose your route"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h1"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678]"
+                                jcr:lastModified="{Date}2026-08-10T13:48:58.150-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/foundation/components/parsys"/>
-                            <columns jcr:primaryType="nt:unstructured">
-                                <item0
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="1"
-                                    dataPriority="1"/>
-                                <item1
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="9"
-                                    dataPriority="1"/>
-                                <item2
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="1"
-                                    dataPriority="1"/>
-                            </columns>
-                            <par_12
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>Our Early Talent programme runs across two very different businesses, so you can find the right fit for your interests and ambitions. You'll rotate in roles across our business, taking real ownership from day one.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <text_660149018
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2026-07-02T08:38:08.438-04:00"
+                                jcr:createdBy="vickekx"
+                                jcr:lastModified="{Date}2026-07-23T05:23:33.646-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/foundation/components/parsys"/>
-                        </grid>
-                    </container2>
-                    <container_1338468903
-                        cq:styleIds="[1653545825686,1653545847150,1653545835879]"
-                        jcr:created="{Date}2025-11-26T05:32:41.135-05:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2026-01-23T02:28:53.686-05:00"
-                        jcr:lastModifiedBy="singarx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container"
-                        dmPresetType="imagePreset"
-                        enableFetchPriority="false"
-                        enableLazyLoading="false">
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;span class=&quot;body-unica-40-reg&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Therapeutics:&lt;/b>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>Discovering and delivering innovative medicines in areas like immunology, oncology, and neuroscience.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <grid_copy_copy
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                rowCount="1">
+                                <columns jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="6"
+                                        dataPriority="1"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="1"
+                                        dataPriority="1"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="5"
+                                        dataPriority="1"/>
+                                </columns>
+                                <par_11
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <carousel_1124352072
+                                        jcr:created="{Date}2026-07-02T07:42:13.566-04:00"
+                                        jcr:createdBy="vickekx"
+                                        jcr:lastModified="{Date}2026-07-02T12:03:39.905-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                        accessibilityAutoItemTitles="false"
+                                        autopauseDisabled="false"
+                                        autoplay="false"
+                                        carouselType="static"
+                                        delay="5000">
+                                        <item_1783007582499
+                                            cq:panelTitle="Customer Excellence"
+                                            jcr:lastModified="{Date}2026-08-10T14:33:21.135-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            altValueFromDAM="true"
+                                            displayPopupTitle="true"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/Marketing.png"
+                                            isDecorative="false"
+                                            openInNewWindow="false"
+                                            titleValueFromDAM="true"/>
+                                        <item_1783008070328
+                                            cq:panelTitle="Market Access"
+                                            jcr:lastModified="{Date}2026-08-10T14:33:33.741-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/Customer Excellence.png"/>
+                                        <item_1783008098663
+                                            cq:panelTitle="In-Field Sales"
+                                            jcr:lastModified="{Date}2026-08-10T14:34:59.761-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/Market Access.png"/>
+                                        <item_1783008212902
+                                            cq:panelTitle="Marketing"
+                                            jcr:lastModified="{Date}2026-08-10T14:32:54.451-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/In-Field Sales.png"/>
+                                    </carousel_1124352072>
+                                </par_11>
+                                <video_copy_copy_copy
+                                    cq:styleIds="[1,1]"
+                                    jcr:created="{Date}2025-11-26T06:48:19.837-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2025-12-22T08:52:06.515-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/video/v2/video"
+                                    brightcoveAutoPlay="false"
+                                    brightcovePlaylistAccount="2157889325001"
+                                    btnText="Watch"
+                                    dmPresetType="imagePreset"
+                                    loopVideo="false"
+                                    showBrightcoveControls="false"
+                                    showPlayerControls="false"
+                                    textIsRich="[true,true]"
+                                    title="Early Talent"
+                                    videoType="youtube"
+                                    youtubeAutoPlay="true"
+                                    youtubeUrl="https://www.youtube.com/embed/eYlfQN00BQU?si=ZLJ3eVbjOJybXMl0"/>
+                                <video
+                                    jcr:created="{Date}2026-07-02T08:35:47.714-04:00"
+                                    jcr:createdBy="vickekx"
+                                    jcr:lastModified="{Date}2026-07-02T08:35:47.714-04:00"
+                                    jcr:lastModifiedBy="vickekx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/video/v2/video"/>
+                                <par_13
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <separator_copy
+                                        cq:styleIds="[1662756526578]"
+                                        jcr:created="{Date}2026-08-10T13:24:01.191-04:00"
+                                        jcr:createdBy="vickekx"
+                                        jcr:lastModified="{Date}2026-08-10T13:24:01.191-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                    <text
+                                        jcr:created="{Date}2026-08-10T13:48:14.701-04:00"
+                                        jcr:createdBy="vickekx"
+                                        jcr:lastModified="{Date}2026-08-10T13:48:39.284-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>Meet our Therapeutics Early Talent community:&lt;/b>&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <video_copy_copy_copy
+                                        cq:styleIds="[1,1]"
+                                        jcr:created="{Date}2025-11-26T06:48:19.837-05:00"
+                                        jcr:createdBy="singarx"
+                                        jcr:lastModified="{Date}2026-08-10T13:23:23.732-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/video/v2/video"
+                                        autoPlayBrightcovePlaylistvideo="false"
+                                        brightcoveAutoPlay="false"
+                                        brightcovePlaylistAccount="2157889325001"
+                                        btnText="Watch"
+                                        dmPresetType="imagePreset"
+                                        fileReference="/content/dam/abbvie-com2/uk/images/Therapeutics Early Talent Thumbnail.png"
+                                        imgAlt="Life at AbbVie's Early Talent Programme, real graduate perspectives on the scheme"
+                                        loopBrightcovePlaylistVideo="false"
+                                        loopVideo="false"
+                                        showBrightcoveControls="false"
+                                        showBrightcovePlaylistControls="false"
+                                        showPlayerControls="true"
+                                        textIsRich="[true,true]"
+                                        videoType="youtube"
+                                        youtubeAutoPlay="false"
+                                        youtubeUrl="&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FYOP1ojffjs?si=gPjQKfuUcka5R222&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen>&lt;/iframe>"/>
+                                </par_13>
+                            </grid_copy_copy>
+                            <text_660149018_copy
+                                cq:styleIds="[1659545825678]"
+                                jcr:created="{Date}2026-07-02T08:38:08.438-04:00"
+                                jcr:createdBy="vickekx"
+                                jcr:lastModified="{Date}2026-07-02T12:34:06.633-04:00"
+                                jcr:lastModifiedBy="vickekx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Aesthetics:&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>Shaping the future of medical aesthetics with world-leading brands and cutting-edge science.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <grid_copy_copy_copy
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                rowCount="1">
+                                <columns jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="6"
+                                        dataPriority="1"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="1"
+                                        dataPriority="1"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="5"
+                                        dataPriority="1"/>
+                                </columns>
+                                <carousel_1124352072__857675166
+                                    jcr:created="{Date}2026-07-02T07:42:13.566-04:00"
+                                    jcr:createdBy="vickekx"
+                                    jcr:lastModified="{Date}2026-07-02T08:48:23.871-04:00"
+                                    jcr:lastModifiedBy="vickekx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                    accessibilityAutoItemTitles="false"
+                                    autopauseDisabled="false"
+                                    autoplay="false"
+                                    carouselType="static"
+                                    delay="5000">
+                                    <item_1782992618711
+                                        cq:panelTitle="Marketing"
+                                        jcr:lastModified="{Date}2026-07-02T08:47:03.084-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>Market Access:&lt;/span>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Discover how innovative medicines reach the patients who need them, through health economics, NHS policy and real-world value.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782992646905
+                                        cq:panelTitle="Market Access"
+                                        jcr:lastModified="{Date}2026-07-02T08:47:27.290-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>Marketing:&lt;/span>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Work alongside brand teams to bring our medicines to life — from campaigns and content to customer insight and market data.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782992651954
+                                        cq:panelTitle="In-Field Sales"
+                                        jcr:lastModified="{Date}2026-07-02T08:48:21.029-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>Customer Excellence:&lt;/span>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Help shape how AbbVie engages with healthcare professionals. You'll explore data, tools and channels that make every customer interaction smarter.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782992627810
+                                        cq:panelTitle="Customer Excellence"
+                                        jcr:lastModified="{Date}2026-07-02T08:47:05.736-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>In-Field Sales:&lt;/span>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Take AbbVie's story directly to clinicians and specialists across your territory. A full UK driving licence is required.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </carousel_1124352072__857675166>
+                                <par_11
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <separator
+                                        cq:styleIds="[1662756526578]"
+                                        jcr:created="{Date}2026-08-10T13:24:01.191-04:00"
+                                        jcr:createdBy="vickekx"
+                                        jcr:lastModified="{Date}2026-08-10T13:24:01.191-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                    <text_copy
+                                        jcr:created="{Date}2026-08-10T13:48:14.701-04:00"
+                                        jcr:createdBy="vickekx"
+                                        jcr:lastModified="{Date}2026-08-10T13:49:18.998-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>Meet our Aesthetics Early Talent community:&lt;/b>&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <video_copy_copy_copy
+                                        cq:styleIds="[1,1]"
+                                        jcr:created="{Date}2025-11-26T06:48:19.837-05:00"
+                                        jcr:createdBy="singarx"
+                                        jcr:lastModified="{Date}2026-08-10T13:23:46.005-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/video/v2/video"
+                                        autoPlayBrightcovePlaylistvideo="false"
+                                        brightcoveAutoPlay="false"
+                                        brightcovePlaylistAccount="2157889325001"
+                                        btnText="Watch"
+                                        dmPresetType="imagePreset"
+                                        fileReference="/content/dam/abbvie-com2/uk/images/Aesthetics Early Talent Thumbnail.png"
+                                        loopBrightcovePlaylistVideo="false"
+                                        loopVideo="false"
+                                        showBrightcoveControls="false"
+                                        showBrightcovePlaylistControls="false"
+                                        showPlayerControls="false"
+                                        textIsRich="[true,true]"
+                                        videoType="youtube"
+                                        youtubeAutoPlay="false"
+                                        youtubeUrl="&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/He1GiIsooLw?si=6yFiZ6dXtMvHY1kI&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen>&lt;/iframe>"/>
+                                </par_11>
+                                <carousel_1124352072_
+                                    jcr:created="{Date}2026-07-02T07:42:13.566-04:00"
+                                    jcr:createdBy="vickekx"
+                                    jcr:lastModified="{Date}2026-07-02T07:49:37.753-04:00"
+                                    jcr:lastModifiedBy="vickekx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                    accessibilityAutoItemTitles="false"
+                                    autopauseDisabled="false"
+                                    autoplay="false"
+                                    carouselType="static"
+                                    delay="5000">
+                                    <item_1782992913435
+                                        cq:panelTitle="Marketing &amp; AMI"
+                                        jcr:lastModified="{Date}2026-07-02T07:51:22.217-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>PR &amp;amp; Comms:&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>In PR &amp;amp; Comms, graduates will help shape how Allergan Aesthetics is perceived by the outside world. From supporting media relations and managing social content to working on corporate communications and stakeholder engagement, you'll develop your storytelling and communications skills in a fast-paced, creative environment. This is a brilliant rotation for those who love crafting a narrative and understanding the power of brand reputation.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782992920586
+                                        cq:panelTitle="Business Excellence"
+                                        jcr:lastModified="{Date}2026-07-02T07:51:44.332-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>In-Field Sales:&lt;/b>&lt;br>&#xd;&#xa;&lt;/span>&lt;br>&#xd;&#xa;In this rotation, graduates will represent the Allergan Aesthetics portfolio directly with aesthetic clinics, practitioners, and healthcare professionals. You'll build strong customer relationships, understand the competitive landscape of the aesthetics market, and develop the consultative selling skills needed to thrive in this unique and exciting sector. A full UK driving licence is required for this rotation.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782992929418
+                                        cq:panelTitle="PR &amp; Comms"
+                                        jcr:lastModified="{Date}2026-07-02T07:50:47.853-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>Marketing &amp;amp; AMI:&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>In this rotation, graduates will support the marketing strategy for Allergan Aesthetics' iconic product portfolio. You'll work at the intersection of brand marketing and education, helping to develop campaigns and Allergan Medical Institute (AMI) initiatives that engage and inspire aesthetic healthcare professionals. Expect to flex your creativity, data skills, and passion for a fast-moving, trend-led category.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782992941085
+                                        cq:panelTitle="In-Field Sales"
+                                        jcr:lastModified="{Date}2026-07-02T07:51:06.428-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>Business Excellence:&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Graduates in Business Excellence will work behind the scenes to make the commercial engine run smoothly. This rotation focuses on performance analytics, commercial planning, and process optimisation - giving you a bird's-eye view of how the business operates. You'll use data and insights to identify opportunities, track progress against key objectives, and support strategic decision-making across the Allergan Aesthetics business.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </carousel_1124352072_>
+                                <video_copy_copy_copy
+                                    cq:styleIds="[1,1]"
+                                    jcr:created="{Date}2025-11-26T06:48:19.837-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2025-12-22T08:52:06.515-05:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/video/v2/video"
+                                    brightcoveAutoPlay="false"
+                                    brightcovePlaylistAccount="2157889325001"
+                                    btnText="Watch"
+                                    dmPresetType="imagePreset"
+                                    loopVideo="false"
+                                    showBrightcoveControls="false"
+                                    showPlayerControls="false"
+                                    textIsRich="[true,true]"
+                                    title="Early Talent"
+                                    videoType="youtube"
+                                    youtubeAutoPlay="true"
+                                    youtubeUrl="https://www.youtube.com/embed/eYlfQN00BQU?si=ZLJ3eVbjOJybXMl0"/>
+                                <video
+                                    jcr:created="{Date}2026-07-02T08:35:47.714-04:00"
+                                    jcr:createdBy="vickekx"
+                                    jcr:lastModified="{Date}2026-07-02T08:35:47.714-04:00"
+                                    jcr:lastModifiedBy="vickekx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/video/v2/video"/>
+                                <par_13
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <carousel_1124352072_
+                                        jcr:created="{Date}2026-07-02T07:42:13.566-04:00"
+                                        jcr:createdBy="vickekx"
+                                        jcr:lastModified="{Date}2026-08-10T14:36:20.964-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                        accessibilityAutoItemTitles="false"
+                                        autopauseDisabled="false"
+                                        autoplay="false"
+                                        carouselType="static"
+                                        delay="5000">
+                                        <item_1783009867877
+                                            cq:panelTitle="PR &amp; Communications"
+                                            jcr:lastModified="{Date}2026-08-10T14:35:17.894-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/PR Communications.png"/>
+                                        <item_1786386938601
+                                            cq:panelTitle="Marketing &amp; AMI"
+                                            jcr:lastModified="{Date}2026-08-10T14:36:53.800-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/In-field Sales (Aesthetics).png"/>
+                                        <item_1786386952513
+                                            cq:panelTitle="Business Excellence"
+                                            jcr:lastModified="{Date}2026-08-10T14:36:36.052-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/Marketing AMI.png"/>
+                                        <item_1786386965030
+                                            cq:panelTitle="International Marketing"
+                                            jcr:lastModified="{Date}2026-08-10T14:36:44.382-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/Business Excellence.png"/>
+                                        <item_1786386972360
+                                            cq:panelTitle="In-field Sales"
+                                            jcr:lastModified="{Date}2026-08-10T14:36:48.785-04:00"
+                                            jcr:lastModifiedBy="vickekx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/image/v2/image"
+                                            fileReference="/content/dam/abbvie-com2/uk/images/International Marketing.png"/>
+                                    </carousel_1124352072_>
+                                </par_13>
+                            </grid_copy_copy_copy>
+                        </container>
                         <accordion_copy
                             cq:styleIds="[1]"
                             jcr:created="{Date}2025-11-26T06:44:13.433-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-01-23T04:49:07.648-05:00"
-                            jcr:lastModifiedBy="singarx"
+                            jcr:lastModified="{Date}2026-08-10T13:47:33.169-04:00"
+                            jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
                             heading=" "
                             singleExpansion="false">
-                            <item_1764157483483
-                                cq:panelTitle="What will you be doing?"
-                                cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2026-02-11T11:20:32.073-05:00"
-                                jcr:lastModifiedBy="singarx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>You’ll&amp;nbsp;be part of an innovative&amp;nbsp;organisation&amp;nbsp;with an unparalleled culture, given the opportunity to dive into projects and work alongside industry leaders, who will guide and mentor you along the way. Discover your potential and be part of a company committed to making possibilities real.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;b>Join one of our business areas and make a difference:&amp;nbsp;&lt;/b>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;b>Therapeutics: &lt;/b>Rotate in 12-month rotations in AbbVie key business areas, such as Marketing, Customer Excellence, Market Access, and Sales.&amp;nbsp;&lt;br>&#xd;&#xa;&lt;b>Aesthetics:&lt;/b>&amp;nbsp;Rotate in 12-month rotations in Allergan Aesthetics key business areas, such as Allergan Medical Institute, Business Excellence, Marketing/PR Communications and Sales.&lt;/p>&#xd;&#xa;&lt;p>If you meet or exceed our&amp;nbsp;expectation,&amp;nbsp;you’ll&amp;nbsp;have the opportunity to secure a permanent position in a variety of commercial areas. At AbbVie, possibilities are limitless, how much will you accelerate your potential?&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
                             <item_1764157488557
                                 cq:panelTitle="What are we looking for?"
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2026-02-12T08:15:59.037-05:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-08-10T13:18:49.819-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Graduates with a passion for healthcare or life sciences and&amp;nbsp;excited&amp;nbsp;to be a part of the future within our global&amp;nbsp;organisation.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Curiosity,&amp;nbsp;adaptability&amp;nbsp;and a growth mindset&lt;/li>&#xd;&#xa;&lt;li>Innovative, creative and a drive to challenge the status quo&lt;/li>&#xd;&#xa;&lt;li>Strong communication&amp;nbsp;and&amp;nbsp;teamwork&amp;nbsp;skills&lt;/li>&#xd;&#xa;&lt;li>Strategic thinking and strong problem-solving abilities&lt;/li>&#xd;&#xa;&lt;li>Demonstrates leadership skills&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>A degree helps, but it's not the whole story. We hire for potential, not just polish. You'll thrive here if you're:&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Curious: &lt;/b>You ask questions, dig deeper, and enjoy learning fast&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Bold:&lt;/b>&amp;nbsp;You're not afraid to challenge the status quo or share a fresh idea&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Collaborative:&lt;/b>&amp;nbsp;You know the best work happens with (and through) other people&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Analytical: &lt;/b>You can turn complexity into clear thinking&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Ready to lead: &lt;/b>Whether that's a project, a moment, or a room&lt;/p>&#xd;&#xa;&lt;p>In addition, you must also hold a full UK driving licence and be able to commute to our Maidenhead Office (Therapeutics) and Marlow Office (Aesthetics).&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <item_1764157492515
-                                cq:panelTitle="What's in it for you? "
+                                cq:panelTitle="What you'll gain from joining AbbVie "
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2026-02-11T11:21:53.198-05:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-08-10T13:20:10.493-04:00"
+                                jcr:lastModifiedBy="vickekx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Rotations allow experience of different business units and skillsets&lt;/li>&#xd;&#xa;&lt;li>Launchpad for your career within AbbVie / Allergan Aesthetics&lt;/li>&#xd;&#xa;&lt;li>Competitive salary&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>World-class office facilities&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&amp;nbsp;Strong development culture, coaching opportunities and learn from experiences of past graduates&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;ul>&#xd;&#xa;&lt;li>&lt;b>A culture that has your back: &lt;/b>We've placed in the UK's Great Place to Work Awards for the past 12 years.&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Rotations that drive perspective: &lt;/b>Try different parts of the business and find where you thrive&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Real ownership from day one: &lt;/b>Projects that shape strategy, not shadow it&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Mentorship that matters:&lt;/b>&amp;nbsp;Coaching from leaders who've been where you are&lt;/li>&#xd;&#xa;&lt;li>&lt;b>A launchpad career: &lt;/b>Potential to take on a permanent role in one of our business areas&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Competitive salary and benefits&lt;/b>: Plus modern offices designed for how people actually work&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </accordion_copy>
-                        <separator_500119231
-                            jcr:created="{Date}2026-01-23T02:23:48.706-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-01-23T02:23:48.706-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <separator_1418810529
-                            jcr:created="{Date}2026-01-23T02:24:10.615-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-01-23T02:24:10.615-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                    </container_1338468903>
-                    <separator
-                        cq:styleIds="[1662756423318]"
-                        jcr:created="{Date}2026-01-12T06:11:49.217-05:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2026-01-21T06:19:00.370-05:00"
-                        jcr:lastModifiedBy="singarx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                    <separator_719155259
-                        jcr:created="{Date}2026-02-12T10:04:51.126-05:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2026-02-12T10:04:51.126-05:00"
-                        jcr:lastModifiedBy="singarx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </container2_copy>
                     <container_1094989783
                         cq:styleIds="[1653545825685]"
                         jcr:created="{Date}2026-02-12T10:05:27.249-05:00"
@@ -206,30 +571,25 @@
                             cq:styleIds="[1659545825678,1651545825692]"
                             jcr:created="{Date}2025-11-26T06:48:44.213-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2025-11-26T06:49:04.636-05:00"
-                            jcr:lastModifiedBy="singarx"
+                            jcr:lastModified="{Date}2026-08-10T13:38:53.591-04:00"
+                            jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="What’s it like to work in AbbVie? "
+                            jcr:title="Why join AbbVie?"
                             sling:resourceType="abbvie-com2/components/title/v2/title"
+                            langAttribute="none"
                             type="h1"
                             variant="h"/>
                         <text_1721398848_copy
                             cq:styleIds="[1659545825678]"
                             jcr:created="{Date}2025-12-22T08:46:54.336-05:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-11T11:24:03.319-05:00"
-                            jcr:lastModifiedBy="singarx"
+                            jcr:lastModified="{Date}2026-08-10T13:39:19.848-04:00"
+                            jcr:lastModifiedBy="vickekx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>&lt;span class=&quot;body-unica-20-reg&quot;>Watch as our team highlight the impact made by our Early Talent:&lt;/span>&lt;/p>&#xd;&#xa;"
+                            langAttribute="none"
+                            text="&lt;p>Choosing where to start your career is about more than the role itself. It's also about finding an organisation where you can learn, grow and contribute to something meaningful.&lt;/p>&#xd;&#xa;&lt;p>At AbbVie, we're united by a purpose to make a remarkable impact on people's lives. Through our Early Talent Programme, you'll gain hands-on experience, develop valuable skills and work alongside colleagues who are passionate about what they do.&lt;/p>&#xd;&#xa;&lt;p>Watch to learn more about life at AbbVie and our global mission.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <separator
-                            jcr:created="{Date}2026-02-12T10:08:00.840-05:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2026-02-12T10:08:00.840-05:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                         <grid_copy
                             jcr:created="{Date}2026-02-12T09:55:11.182-05:00"
                             jcr:createdBy="singarx"
@@ -263,28 +623,99 @@
                                     jcr:lastModifiedBy="singarx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                                <video_copy_copy_copy_744770871
+                                <video_copy_copy_copy
                                     cq:styleIds="[1,1]"
                                     jcr:created="{Date}2025-11-26T06:48:19.837-05:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2025-12-22T08:52:06.515-05:00"
-                                    jcr:lastModifiedBy="singarx"
+                                    jcr:lastModified="{Date}2026-08-10T13:51:29.904-04:00"
+                                    jcr:lastModifiedBy="vickekx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/video/v2/video"
+                                    autoPlayBrightcovePlaylistvideo="false"
                                     brightcoveAutoPlay="false"
                                     brightcovePlaylistAccount="2157889325001"
                                     btnText="Watch"
                                     dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/images/science/female-scientist-lab-hero.jpg"
+                                    loopBrightcovePlaylistVideo="false"
                                     loopVideo="false"
                                     showBrightcoveControls="false"
+                                    showBrightcovePlaylistControls="false"
                                     showPlayerControls="false"
                                     textIsRich="[true,true]"
-                                    title="Early Talent"
+                                    title="We Are AbbVie"
                                     videoType="youtube"
-                                    youtubeAutoPlay="true"
-                                    youtubeUrl="https://www.youtube.com/embed/eYlfQN00BQU?si=ZLJ3eVbjOJybXMl0"/>
+                                    youtubeAutoPlay="false"
+                                    youtubeUrl="&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/88HNitSQdxU?si=5T4yBwgjo8nNkPFF&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen>&lt;/iframe>"/>
                             </par_11>
                             <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-08-10T13:53:09.376-04:00"
+                                    jcr:createdBy="vickekx"
+                                    jcr:lastModified="{Date}2026-08-10T13:54:12.338-04:00"
+                                    jcr:lastModifiedBy="vickekx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;h3>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Make an impact&lt;/b>&lt;/span>&lt;/span>&lt;/h3>&#xd;&#xa;&lt;p>Whatever your role, you'll contribute to work that helps improve people's lives.&lt;/p>&#xd;&#xa;&lt;h3>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Learn from experts&lt;/b>&lt;/span>&lt;/h3>&#xd;&#xa;&lt;p>Work alongside experienced colleagues and gain insight into different areas of the business.&lt;/p>&#xd;&#xa;&lt;h3>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;b>Build your future&lt;/b>&lt;/span>&lt;/h3>&#xd;&#xa;&lt;p>Develop the skills, confidence and connections that will support the next stage of your career.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </par_13>
+                        </grid_copy>
+                    </container_1094989783>
+                    <container2_copy_155904488
+                        cq:styleIds="[1653545835859,1653545825683,1653242825678,1653545835879]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#FFFFFF">
+                        <title_1905673451_cop
+                            cq:styleIds="[1659545825678,1651545825692]"
+                            jcr:created="{Date}2025-11-26T06:48:44.213-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-07-02T08:28:07.062-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Our application process: what to expect"
+                            sling:resourceType="abbvie-com2/components/title/v2/title"
+                            langAttribute="none"
+                            type="h1"
+                            variant="h"/>
+                        <text
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2026-06-26T05:15:54.111-04:00"
+                            jcr:createdBy="vickekx"
+                            jcr:lastModified="{Date}2026-08-10T13:20:27.309-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>We want you to feel prepared and supported at every stage. Here's how it works, from first click to final offer.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <grid_copy_copy
+                            jcr:created="{Date}2026-02-12T09:55:11.182-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-02-12T09:55:46.627-05:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="1"
+                                    dataPriority="1"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="5"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_11
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/foundation/components/parsys">
                                 <image_copy_copy_copy
@@ -302,19 +733,178 @@
                                     isDecorative="false"
                                     openInNewWindow="false"
                                     titleValueFromDAM="true"/>
+                            </par_11>
+                            <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <accordion_copy_copy
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2025-11-26T06:44:13.433-05:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-06-26T05:36:56.996-04:00"
+                                    jcr:lastModifiedBy="vickekx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    heading=" "
+                                    singleExpansion="false">
+                                    <item_1764157483483
+                                        cq:panelTitle="Application"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-23T05:24:51.217-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Upload your CV and cover letter through our careers portal. Want a sneak peek into what we're after? Our &lt;a href=&quot;/content/abbvie-com2/uk/en/join-us/opportunities/early-talent/graduate-cv-tips-how-to-write-a-cv-that-stands-out.html&quot;>CV prep guide&lt;/a> is a good place to start.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1764157488557
+                                        cq:panelTitle="Screening"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-02T08:29:15.727-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>If you're shortlisted, we'll invite you to a short call with one of our team. It's a two-way conversation. A chance for us to hear what drives you, and for you to ask the questions you really want answered about the programme.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1764157492515
+                                        cq:panelTitle="Video Interview"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-02T08:29:48.288-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Next, you'll record answers to a set of structured questions in your own time. There's no trick to it, we're looking for authenticity, not a rehearsed pitch. Tell us your story, in your words.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782466304642
+                                        cq:panelTitle="Assessment Day"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-02T08:30:38.670-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>If you progress, you'll join us in person at our Maidenhead office for an assessment day. You'll take part in:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>A short presentation on a topic we share in advance (so you can prepare properly)&lt;/li>&#xd;&#xa;&lt;li>A competency-based interview built around our behaviours&lt;/li>&#xd;&#xa;&lt;li>A group exercise You'll also get to meet some of the team and see where you could be working.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1782466311066
+                                        cq:panelTitle="Outcome &amp; Offer"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-02T08:31:04.426-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>After your assessment day, we'll take time to review everything carefully. Whatever the outcome, you'll hear from us, with feedback, next steps, and (we hope) an offer.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion_copy_copy>
                             </par_13>
-                        </grid_copy>
-                    </container_1094989783>
-                    <text_copy_copy
-                        cq:styleIds="[1659545825678]"
-                        jcr:created="{Date}2026-01-12T06:11:26.182-05:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2026-01-12T06:11:39.566-05:00"
-                        jcr:lastModifiedBy="singarx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/text/v2/text"
-                        text="&lt;p>UK-ABBV-260046 | February 2026&lt;/p>&#xd;&#xa;"
-                        textIsRich="true"/>
+                        </grid_copy_copy>
+                        <text_1489405165
+                            jcr:created="{Date}2026-06-26T05:45:54.233-04:00"
+                            jcr:createdBy="vickekx"
+                            jcr:lastModified="{Date}2026-07-02T08:31:38.190-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>&lt;b>&lt;span class=&quot;body-unica-32-reg&quot;>Adjustments and Support&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_901131163
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2026-06-26T05:47:06.049-04:00"
+                            jcr:createdBy="vickekx"
+                            jcr:lastModified="{Date}2026-07-02T08:32:04.742-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>We want every candidate to feel able to do their best at every stage. If you need adjustments, whether that's extra time, a different format, accessibility support, or something we haven't thought of, just let us know when you apply, or at any point in the process. We'll work with you to make it happen.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <container_829993285_
+                            cq:styleIds="[1653545835860,1653545825684,1653545847150]"
+                            jcr:created="{Date}2022-12-10T14:52:43.800-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2026-08-10T14:04:09.550-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/container/v2/container"
+                            backgroundColor="#338700"
+                            enableFetchPriority="false"
+                            enableLazyLoading="false"
+                            langAttribute="none">
+                            <grid
+                                cq:styleIds="[0,1653545835880]"
+                                jcr:created="{Date}2022-12-10T14:54:19.535-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2022-12-10T14:55:03.005-05:00"
+                                jcr:lastModifiedBy="chiucx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                rowCount="1">
+                                <columns jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="8"
+                                        dataPriority="1"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="2"
+                                        dataPriority="1"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="2"
+                                        dataPriority="1"/>
+                                </columns>
+                                <par_11
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <title
+                                        cq:styleIds="[1651545824668]"
+                                        jcr:created="{Date}2022-12-10T14:53:27.324-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-08-10T14:02:27.958-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Ready to apply?"
+                                        sling:resourceType="abbvie-com2/components/title/v2/title"
+                                        langAttribute="none"
+                                        type="h4"
+                                        variant="h"/>
+                                    <text
+                                        cq:styleIds="[1659545825678,1659545835859]"
+                                        jcr:created="{Date}2022-12-10T15:01:55.584-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-08-10T14:02:02.846-04:00"
+                                        jcr:lastModifiedBy="vickekx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Applications open in late 2026.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </par_11>
+                                <par_13
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <button
+                                        cq:styleIds="[1659997787461,1659997740832]"
+                                        jcr:created="{Date}2022-12-10T14:55:13.693-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-01-13T01:10:32.874-05:00"
+                                        jcr:lastModifiedBy="singarx"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Browse jobs"
+                                        sling:resourceType="abbvie-com2/components/button/v2/button"
+                                        accessibilityLabel="Browse jobs"
+                                        linkTarget="_blank"
+                                        linkURL="https://careers.abbvie.com"/>
+                                </par_13>
+                                <par_12
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"/>
+                            </grid>
+                        </container_829993285_>
+                    </container2_copy_155904488>
                     <separator_copy
                         jcr:created="{Date}2026-02-12T10:08:00.840-05:00"
                         jcr:createdBy="singarx"
@@ -326,11 +916,12 @@
                         cq:styleIds="[1659545825678]"
                         jcr:created="{Date}2026-01-21T06:19:47.864-05:00"
                         jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2026-01-21T06:22:46.411-05:00"
-                        jcr:lastModifiedBy="singarx"
+                        jcr:lastModified="{Date}2026-07-02T09:25:58.688-04:00"
+                        jcr:lastModifiedBy="vickekx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/text/v2/text"
-                        text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Related Content&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                        langAttribute="none"
+                        text="&lt;p>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>More about Life at AbbVie&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
                         textIsRich="true"/>
                     <separator_1592854153
                         jcr:created="{Date}2026-02-12T10:13:21.747-05:00"
@@ -399,6 +990,17 @@
                                     openInNewTab="false"/>
                             </par_12>
                         </grid>
+                        <text_copy_copy
+                            cq:styleIds="[1659545825678]"
+                            jcr:created="{Date}2026-01-12T06:11:26.182-05:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-08-10T14:41:05.172-04:00"
+                            jcr:lastModifiedBy="vickekx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>UK-ABBV-260265&amp;nbsp;| August 2026&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
                     </container_427648814__643229937>
                 </responsivegrid1>
                 <experiencefragmentFooter

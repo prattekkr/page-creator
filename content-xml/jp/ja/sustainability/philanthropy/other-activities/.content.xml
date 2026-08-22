@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-04-14T21:19:07.608-04:00"
+        cq:lastModified="{Date}2026-07-13T04:52:15.509-04:00"
         cq:lastModifiedBy="tadankx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="中学生・高校生の企業訪問や、小児がん治療中または小児がん経験者のお子さんとご家族を対象としたキッズセミナーを通して、薬についての学びやお仕事体験などのプログラムを提供しています。"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="教育支援プログラム​"
-        jcr:uuid="0a435467-da18-45c0-be69-a27259d90be3"
+        jcr:uuid="4b1a0691-48aa-4cbe-88fe-5045ce902dee"
         sling:resourceType="abbvie-com2/components/remotepage"
         description="中学生・高校生の企業訪問や、小児がん治療中または小児がん経験者のお子さんとご家族を対象としたキッズセミナーを通して、薬についての学びやお仕事体験などのプログラムを提供しています。"
         eyebrow="サステナビリティ"
@@ -38,11 +38,15 @@
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <container
                         cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
-                        jcr:lastModified="{Date}2024-04-25T03:39:04.708-04:00"
+                        jcr:lastModified="{Date}2026-07-13T04:52:15.500-04:00"
                         jcr:lastModifiedBy="tadankx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/japan/images/sustainability/philanthropy/other-activities-hero.jpg"/>
+                        backgroundImageReference="/content/dam/abbvie-com2/japan/images/sustainability/philanthropy/2026/other-activities-hero-2026.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
                     <container2
                         cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678,1653545835879]"
                         jcr:primaryType="nt:unstructured"

@@ -2,16 +2,16 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-02-23T03:11:10.293-05:00"
+        cq:lastModified="{Date}2026-08-10T07:16:21.019-04:00"
         cq:lastModifiedBy="kunkefx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/primary-page-template"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2026-02-17T09:10:03.436-05:00"
+        jcr:lastModified="{Date}2026-08-10T07:16:20.997-04:00"
         jcr:lastModifiedBy="kunkefx"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Karriere"
-        jcr:uuid="5646da22-f390-4a65-b902-41c91ec939bb"
+        jcr:uuid="34e8f6d4-0796-4277-8a95-b0fb42a39c57"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Erfahre mehr über den Beitritt zu AbbVie"
         description="Wir sind immer auf der Suche nach Menschen, die leidenschaftlich, motiviert und bereit sind, sich schwierigen Herausforderungen zu stellen."
@@ -134,17 +134,26 @@
                                     cq:styleIds="[1659997740832,1659997787461]"
                                     jcr:created="{Date}2022-12-10T14:55:13.693-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2026-02-23T03:11:10.277-05:00"
+                                    jcr:lastModified="{Date}2026-03-24T05:10:34.474-04:00"
                                     jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     jcr:title="STELLENANGEBOTE ANSEHEN"
                                     sling:resourceType="abbvie-com2/components/button/v2/button"
                                     accessibilityLabel="Stellenangebote ansehen"
+                                    langAttribute="none"
                                     linkTarget="_blank"
                                     linkURL="https://careers.abbvie.com/de/"/>
                             </par_13>
                         </grid>
                     </container_829993285>
+                    <separator_322197521_
+                        cq:styleIds="[1662756456518]"
+                        jcr:created="{Date}2022-12-10T15:46:00.715-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-10T15:46:00.715-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                     <separator
                         cq:styleIds="[1662756409908]"
                         jcr:created="{Date}2022-12-22T16:12:56.697-05:00"
@@ -156,8 +165,8 @@
                     <grid_752592403
                         jcr:created="{Date}2022-12-22T16:08:39.373-05:00"
                         jcr:createdBy="chiucx"
-                        jcr:lastModified="{Date}2024-09-17T17:55:02.849-04:00"
-                        jcr:lastModifiedBy="jewitca"
+                        jcr:lastModified="{Date}2026-08-06T08:58:58.175-04:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/grid/v2/grid"
                         rowCount="1">
@@ -165,6 +174,21 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="wcm/foundation/components/parsys">
                             <cardpagestory
+                                cq:styleIds="[1111111111111,1111111111113,1111111111124,1111111111121]"
+                                jcr:created="{Date}2022-12-10T15:05:49.619-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-08-06T08:49:46.851-04:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                hideImage="false"
+                                linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"
+                                openInNewTab="false"/>
+                        </par_11>
+                        <par_12
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <cardpagestory_copy
                                 cq:styleIds="[1111111111111,1111111111120,1111111111124,1111111111113]"
                                 jcr:created="{Date}2022-12-10T15:05:49.619-05:00"
                                 jcr:createdBy="chiucx"
@@ -174,8 +198,8 @@
                                 sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
                                 hideImage="false"
                                 linkURL="/content/abbvie-com2/de/de/karriere/warum-abbvie"/>
-                        </par_11>
-                        <par_12
+                        </par_12>
+                        <par_13
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="wcm/foundation/components/parsys">
                             <cardpagestory
@@ -188,11 +212,11 @@
                                 sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
                                 hideImage="false"
                                 linkURL="/content/abbvie-com2/de/de/ueber-uns"/>
-                        </par_12>
-                        <par_13
+                        </par_13>
+                        <par_14
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="wcm/foundation/components/parsys">
-                            <cardpagestory
+                            <cardpagestory_copy
                                 cq:styleIds="[1111111111111,1111111111113,1111111111120,1111111111120,1111111111124]"
                                 jcr:created="{Date}2022-12-10T15:41:06.847-05:00"
                                 jcr:createdBy="chiucx"
@@ -202,17 +226,21 @@
                                 sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
                                 hideImage="false"
                                 linkURL="/content/abbvie-com2/de/de/karriere/arbeiten-bei-abbvie"/>
-                        </par_13>
+                        </par_14>
                         <columns jcr:primaryType="nt:unstructured">
                             <item0
                                 jcr:primaryType="nt:unstructured"
-                                columnWidth="4"
+                                columnWidth="3"
                                 dataPriority="1"/>
                             <item1
                                 jcr:primaryType="nt:unstructured"
-                                columnWidth="5"
+                                columnWidth="3"
                                 dataPriority="1"/>
                             <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="3"
+                                dataPriority="1"/>
+                            <item3
                                 jcr:primaryType="nt:unstructured"
                                 columnWidth="3"
                                 dataPriority="1"/>

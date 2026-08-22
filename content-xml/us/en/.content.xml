@@ -3,15 +3,15 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="/conf/abbvie-com2/settings/wcm/templates/(?!(xf-|home-)).*"
-        cq:lastModified="{Date}2026-05-28T12:13:26.156-04:00"
-        cq:lastModifiedBy="VALENSX5"
+        cq:lastModified="{Date}2026-07-06T14:09:40.865-04:00"
+        cq:lastModifiedBy="reference-adjustment-service"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/home-page-template"
         jcr:description="AbbVie pharmaceuticals combines advanced science with expertise to make strides in drug and treatment discovery, making a remarkable impact on people's lives"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="en"
-        jcr:uuid="ff6df79f-67db-4d7e-ab21-c979983fc8f8"
+        jcr:uuid="9d8dfdf6-cad8-4576-b3d6-fc4db36d4e09"
         sling:resourceType="abbvie-com2/components/homepage"
         accessCodeVal="hcp1"
         dateFormat="MMMM dd, YYYY"
@@ -56,7 +56,7 @@
                         </alternative>
                     </homepage_hero_contro>
                     <container
-                        cq:styleIds="[1653565835856,1653545835860,1653545825685,1653545847150,1653242825678]"
+                        cq:styleIds="[1653565835856,1653545835860,1653545825685,1653545847150,1653242825678,1653545835879]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
                         backgroundColor="#FFFFFF">
@@ -139,72 +139,17 @@
                                     jcr:lastModifiedBy="millicx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                                <grid
-                                    jcr:created="{Date}2026-04-22T12:15:29.096-04:00"
-                                    jcr:createdBy="VALENSX5"
-                                    jcr:lastModified="{Date}2026-04-22T12:21:07.756-04:00"
+                                <cardpagestory_copy_c
+                                    cq:styleIds="[1111111111110,1111111111113,1111111111120,1111111111120,1111111111117]"
+                                    jcr:created="{Date}2022-12-20T20:05:16.533-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2026-06-18T16:40:11.874-04:00"
                                     jcr:lastModifiedBy="VALENSX5"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                                    rowCount="1">
-                                    <par_12
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="wcm/foundation/components/parsys">
-                                        <title
-                                            cq:styleIds="[1659545825678,1651545825694]"
-                                            jcr:created="{Date}2026-04-22T12:17:03.643-04:00"
-                                            jcr:createdBy="VALENSX5"
-                                            jcr:lastModified="{Date}2026-05-15T14:14:52.906-04:00"
-                                            jcr:lastModifiedBy="VALENSX5"
-                                            jcr:primaryType="nt:unstructured"
-                                            jcr:title="See how we’re pursuing cancer treatment innovation"
-                                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                                            langAttribute="none"
-                                            type="h5"
-                                            variant="h"/>
-                                        <button
-                                            cq:styleIds="[1659997756584]"
-                                            jcr:created="{Date}2026-04-22T12:17:40.539-04:00"
-                                            jcr:createdBy="VALENSX5"
-                                            jcr:lastModified="{Date}2026-05-28T11:39:02.299-04:00"
-                                            jcr:lastModifiedBy="VALENSX5"
-                                            jcr:primaryType="nt:unstructured"
-                                            jcr:title="learn more"
-                                            sling:resourceType="abbvie-com2/components/button/v2/button"
-                                            accessibilityLabel="learn more"
-                                            langAttribute="none"
-                                            linkTarget="_self"
-                                            linkURL="https://www.abbviescience.com/"/>
-                                    </par_12>
-                                    <par_11
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="wcm/foundation/components/parsys">
-                                        <image
-                                            jcr:created="{Date}2026-04-22T12:19:27.997-04:00"
-                                            jcr:createdBy="VALENSX5"
-                                            jcr:lastModified="{Date}2026-05-20T17:10:15.825-04:00"
-                                            jcr:lastModifiedBy="stromkx1"
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="abbvie-com2/components/image/v2/image"
-                                            altValueFromDAM="true"
-                                            displayPopupTitle="true"
-                                            dmPresetType="imagePreset"
-                                            fileReference="/content/dam/abbvie-com2/images/cell/oncology-cell-feature.jpg"
-                                            isDecorative="false"
-                                            openInNewWindow="false"
-                                            titleValueFromDAM="true"/>
-                                    </par_11>
-                                    <columns jcr:primaryType="nt:unstructured">
-                                        <item0
-                                            jcr:primaryType="nt:unstructured"
-                                            columnWidth="5"
-                                            dataPriority="1"/>
-                                        <item1
-                                            jcr:primaryType="nt:unstructured"
-                                            columnWidth="7"
-                                            dataPriority="1"/>
-                                    </columns>
-                                </grid>
+                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                    hideImage="false"
+                                    linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/the-answer-is-inside-you-the-complexities-of-autoimmune-research"
+                                    openInNewTab="false"/>
                             </par_13>
                             <columns jcr:primaryType="nt:unstructured">
                                 <item0
@@ -964,5 +909,6 @@
     <aliada-therapeutics/>
     <nimbletherapeutics/>
     <partnerships-chicago-cubs/>
+    <privacy-center/>
     <manufacturing-investments/>
 </jcr:root>

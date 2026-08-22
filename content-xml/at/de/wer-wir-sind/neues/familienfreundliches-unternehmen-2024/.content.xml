@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-11-06T09:07:30.849-05:00"
+        cq:lastModified="{Date}2026-08-04T07:08:53.472-04:00"
         cq:lastModifiedBy="klavimx"
         cq:tags="[abbvie-com-2:categories/company-stories]"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/story-landing-page"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Familienfreundliches Unternehmen"
-        jcr:uuid="bb887056-f305-411f-8907-d7fef66c8e2a"
+        jcr:uuid="81fdc945-8206-4a60-99c3-19cfa9e1f893"
         sling:resourceType="abbvie-com2/components/storypage"
         ctaAltText="WEITERE INFORMATIONEN"
         fileReference="/content/dam/abbvie-com2/at/images/who-we-are/neuigkeiten/Lifestyle and office_Bayard_Abbvie_ATB_9702_Jun 07 2022.jpg"
@@ -56,12 +56,17 @@
                             jcr:lastModifiedBy="klavimx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/container/v2/container">
-                            <button
-                                cq:styleIds="[1659997787460,1659997787459]"
+                            <button_copy
+                                cq:styleIds="[1659997787459,1659997787460]"
+                                jcr:lastModified="{Date}2026-08-04T07:07:39.761-04:00"
+                                jcr:lastModifiedBy="klavimx"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="All Stories"
+                                jcr:title="Alle Neues"
                                 sling:resourceType="abbvie-com2/components/button/v2/button"
-                                accessibilityLabel="View All Stories"/>
+                                accessibilityLabel="View All Stories"
+                                langAttribute="none"
+                                linkTarget="_self"
+                                linkURL="/content/abbvie-com2/at/de/wer-wir-sind/neues"/>
                             <storyinfo
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/storyinfo/v2/storyinfo"/>

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-03-05T21:15:46.215-05:00"
+        cq:lastModified="{Date}2026-07-09T23:12:21.432-04:00"
         cq:lastModifiedBy="tadankx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="アッヴィの従業員リソースグループ【アビリティ】をご紹介いたします。アッヴィでは個々の声を尊重し合う多様でインクルーシブな文化の醸成に取り組んでいます。"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Ability（アビリティ）​"
-        jcr:uuid="25cc2533-58ea-4e6e-99ab-dbe9a9599677"
+        jcr:uuid="9f876b27-9678-4bc5-92e0-9c24dd7065b1"
         sling:resourceType="abbvie-com2/components/remotepage"
         description="アッヴィの従業員リソースグループ【アビリティ】をご紹介いたします。アッヴィでは個々の声を尊重し合う多様でインクルーシブな文化の醸成に取り組んでいます。"
         eyebrow="従業員リソースグループ（ERG）"
@@ -341,15 +341,18 @@
                             <grid_2075537892
                                 jcr:created="{Date}2025-03-18T01:30:06.858-04:00"
                                 jcr:createdBy="tadankx"
-                                jcr:lastModified="{Date}2025-03-18T01:30:56.482-04:00"
+                                jcr:lastModified="{Date}2026-07-09T23:11:41.399-04:00"
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/grid/v2/grid"
                                 rowCount="1">
                                 <par_12
                                     jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys"/>
+                                <par_11
+                                    jcr:primaryType="nt:unstructured"
                                     sling:resourceType="wcm/foundation/components/parsys">
-                                    <image_copy
+                                    <image_copy_copy
                                         jcr:created="{Date}2024-03-08T03:12:48.425-05:00"
                                         jcr:createdBy="tadankx"
                                         jcr:lastModified="{Date}2025-03-18T01:51:41.451-04:00"
@@ -364,7 +367,7 @@
                                         isDecorative="false"
                                         openInNewWindow="false"
                                         titleValueFromDAM="false"/>
-                                    <text
+                                    <text_copy
                                         cq:styleIds="[1659545825678]"
                                         jcr:created="{Date}2025-03-18T01:51:52.075-04:00"
                                         jcr:createdBy="tadankx"
@@ -374,15 +377,49 @@
                                         sling:resourceType="abbvie-com2/components/text/v2/text"
                                         text="&lt;p>日頃から筋肉を鍛えている社員と一緒に行うラジオ体操企画&lt;/p>&#xd;&#xa;"
                                         textIsRich="true"/>
-                                </par_12>
+                                </par_11>
+                                <par_13
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/parsys">
+                                    <image_copy
+                                        jcr:created="{Date}2024-03-08T03:12:48.425-05:00"
+                                        jcr:createdBy="tadankx"
+                                        jcr:lastModified="{Date}2026-07-09T23:08:00.580-04:00"
+                                        jcr:lastModifiedBy="tadankx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/image/v2/image"
+                                        alt=" "
+                                        altValueFromDAM="false"
+                                        displayPopupTitle="false"
+                                        dmPresetType="imagePreset"
+                                        fileReference="/content/dam/abbvie-com2/japan/images/join-us/erg/0707_02.jpg"
+                                        isDecorative="false"
+                                        openInNewWindow="false"
+                                        titleValueFromDAM="false"/>
+                                    <text
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:created="{Date}2025-03-18T01:51:52.075-04:00"
+                                        jcr:createdBy="tadankx"
+                                        jcr:lastModified="{Date}2026-07-09T23:09:34.759-04:00"
+                                        jcr:lastModifiedBy="tadankx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>上半期の手話カフェを振り返る手話ランチも開催&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </par_13>
                                 <columns jcr:primaryType="nt:unstructured">
                                     <item0
                                         jcr:primaryType="nt:unstructured"
-                                        columnWidth="2"
+                                        columnWidth="5"
                                         dataPriority="1"/>
                                     <item1
                                         jcr:primaryType="nt:unstructured"
-                                        columnWidth="8"
+                                        columnWidth="1"
+                                        dataPriority="1"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        columnWidth="6"
                                         dataPriority="1"/>
                                 </columns>
                             </grid_2075537892>

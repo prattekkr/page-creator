@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-07-03T04:58:25.964-04:00"
+        cq:lastModified="{Date}2026-08-04T04:52:32.200-04:00"
         cq:lastModifiedBy="klavimx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="Die Riesenzellarteriitis ist eine entzündliche Erkrankung der Blutgefäße, die vor allem mittelgroße und große Arterien betrifft. Sie tritt fast ausschließlich bei älteren Erwachsenen auf und benötigt eine frühzeitige Diagnose und Behandlung, um ernsthafte Komplikationen zu vermeiden."
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Riesenzellarteriitis"
-        jcr:uuid="3ef908bb-a018-4e3d-a0aa-e3d5745f98df"
+        jcr:uuid="037a2bfb-c700-449e-aab7-6ea642ba8ec1"
         sling:resourceType="abbvie-com2/components/remotepage"
         hideInNav="true"
         navTitle="Riesenzellarteriitis"
@@ -64,13 +64,14 @@
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
                                 type="h1"
                                 variant="h"/>
-                            <text
+                            <text_copy_266949047
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2025-06-27T05:39:55.839-04:00"
+                                jcr:lastModified="{Date}2026-08-04T04:47:24.407-04:00"
                                 jcr:lastModifiedBy="klavimx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Riesenzellarteriitis ist eine chronische Entzündung der großen und mittelgroßen Arterien, die vor allem bei älteren Menschen, häufiger bei Frauen, auftritt.&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Riesenzellarteriitis ist eine chronische Entzündung der großen und mittelgroßen Arterien, die vor allem bei älteren Menschen, häufiger bei Frauen, auftritt.&amp;nbsp;&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <text_copy
                                 cq:styleIds="[1659545825678]"
@@ -141,11 +142,12 @@
                                 cq:styleIds="[1659545825678]"
                                 jcr:created="{Date}2024-05-27T00:57:24.751-04:00"
                                 jcr:createdBy="singarx"
-                                jcr:lastModified="{Date}2025-06-27T05:42:02.258-04:00"
+                                jcr:lastModified="{Date}2026-08-04T04:47:51.679-04:00"
                                 jcr:lastModifiedBy="klavimx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Typische Anzeichen für die Riesenzellarteriitis sind:&lt;/p>&#xd;&#xa;&lt;p>• Starke, neu auftretende Kopfschmerzen, oft im Schläfenbereich&lt;/p>&#xd;&#xa;&lt;p>• Empfindliche Kopfhaut&lt;/p>&#xd;&#xa;&lt;p>• Schmerzen in Oberarmen, Schulter oder Becken&lt;/p>&#xd;&#xa;&lt;p>• Verminderte Sehkraft oder vorübergehender Sehverlust&lt;/p>&#xd;&#xa;&lt;p>• Allgemeine Müdigkeit, Fieber und Gewichtsverlust&lt;/p>&#xd;&#xa;&lt;p>Eine frühzeitige Diagnose und Behandlung sind entscheidend, um schwere Komplikationen wie dauerhaften Sehverlust zu verhindern.&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>Typische Anzeichen für die Riesenzellarteriitis sind:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Starke, neu auftretende Kopfschmerzen, oft im Schläfenbereich&lt;/li>&#xd;&#xa;&lt;li>Empfindliche Kopfhaut&lt;/li>&#xd;&#xa;&lt;li>Schmerzen in Oberarmen, Schulter oder Becken&lt;/li>&#xd;&#xa;&lt;li>Verminderte Sehkraft oder vorübergehender Sehverlust&lt;/li>&#xd;&#xa;&lt;li>Allgemeine Müdigkeit, Fieber und Gewichtsverlust&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Eine frühzeitige Diagnose und Behandlung sind entscheidend, um schwere Komplikationen wie dauerhaften Sehverlust zu verhindern.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <separator
                                 cq:styleIds="[1662756423318]"
@@ -253,103 +255,111 @@
                                 text="&lt;p>&lt;span class=&quot;body-unica-14-reg&quot;>*https://rheumatologie.at/storage/app/media/pdf/Publikationen/Rheuma_Report_OEGR.pdf&lt;/span>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </container_1293850164>
-                        <container_1293850164_1165578219
-                            cq:styleIds="[1653545835859,1653545825683,1653545847149,1653242825678,1653545835879]"
-                            jcr:created="{Date}2024-06-26T11:10:35.798-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2025-06-27T05:45:32.812-04:00"
+                    </container2>
+                    <container_1293850164_272162998
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653242825678,1653545835879]"
+                        jcr:created="{Date}2024-06-26T11:10:35.798-04:00"
+                        jcr:createdBy="singarx"
+                        jcr:lastModified="{Date}2025-06-27T05:45:32.812-04:00"
+                        jcr:lastModifiedBy="klavimx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#F1F3FF">
+                        <grid_copy_copy
+                            cq:styleIds="[0]"
+                            jcr:created="{Date}2023-01-17T10:37:32.775-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2025-01-20T08:41:11.268-05:00"
                             jcr:lastModifiedBy="klavimx"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/container/v2/container"
-                            backgroundColor="#F1F3FF">
-                            <grid_copy_copy
-                                cq:styleIds="[0]"
-                                jcr:created="{Date}2023-01-17T10:37:32.775-05:00"
-                                jcr:createdBy="chiucx"
-                                jcr:lastModified="{Date}2025-01-20T08:41:11.268-05:00"
-                                jcr:lastModifiedBy="klavimx"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <par_11
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                                rowCount="1">
-                                <par_11
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <header_copy_copy
+                                    jcr:created="{Date}2024-06-12T13:12:25.588-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2024-12-09T05:28:32.607-05:00"
+                                    jcr:lastModifiedBy="klavimx"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/foundation/components/parsys">
-                                    <header_copy_copy
-                                        jcr:created="{Date}2024-06-12T13:12:25.588-04:00"
-                                        jcr:createdBy="washidx10"
-                                        jcr:lastModified="{Date}2024-12-09T05:28:32.607-05:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="abbvie-com2/components/header/v2/header"
-                                        eyebrow="Weitere Informationen"/>
-                                    <title_copy_copy
-                                        cq:styleIds="[1659545825678,1661545829678,1651545825692]"
-                                        jcr:created="{Date}2024-06-12T13:12:31.317-04:00"
-                                        jcr:createdBy="washidx10"
-                                        jcr:lastModified="{Date}2025-06-27T06:04:04.232-04:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        jcr:title="lebenmitrheuma.at"
-                                        sling:resourceType="abbvie-com2/components/title/v2/title"
-                                        type="h2"
-                                        variant="noh"/>
-                                    <button_copy_copy
-                                        cq:styleIds="[1659997777274]"
-                                        jcr:created="{Date}2024-06-12T13:12:37.950-04:00"
-                                        jcr:createdBy="washidx10"
-                                        jcr:lastModified="{Date}2025-06-27T06:04:35.280-04:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        jcr:title="Zur Website"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        accessibilityLabel="Zu den wichtigsten Fakten über AbbVie"
-                                        linkTarget="_blank"
-                                        linkURL="https://www.lebenmitrheuma.at/"/>
-                                    <text_copy_copy_copy
-                                        cq:styleIds="[1659545825678]"
-                                        jcr:created="{Date}2024-06-12T13:13:19.963-04:00"
-                                        jcr:createdBy="washidx10"
-                                        jcr:lastModified="{Date}2025-06-27T06:03:57.006-04:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="abbvie-com2/components/text/v2/text"
-                                        text="&lt;p>Diese Plattform bietet Wissenswertes über entzündliches Rheuma, moderne Therapien, aber ebenso hilfreiche Tipps und Videos. Patient:innen finden hier auch einen Selbsttest und viele Expertenvideos zu Themen wie Schmerz, Remission und Krankheitskontrolle.&lt;/p>&#xd;&#xa;"
-                                        textIsRich="true"/>
-                                </par_11>
-                                <par_12
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="Weitere Informationen"/>
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1661545829678,1651545825692]"
+                                    jcr:created="{Date}2024-06-12T13:12:31.317-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2025-06-27T06:04:04.232-04:00"
+                                    jcr:lastModifiedBy="klavimx"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/foundation/components/parsys">
-                                    <image_copy
-                                        jcr:created="{Date}2024-12-09T05:30:33.725-05:00"
-                                        jcr:createdBy="klavimx"
-                                        jcr:lastModified="{Date}2025-06-27T06:06:08.623-04:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="abbvie-com2/components/image/v2/image"
-                                        alt="website"
-                                        altValueFromDAM="false"
-                                        displayPopupTitle="true"
-                                        fileReference="/content/dam/abbvie-com2/at/images/patientenseite/LebenmitRheuma-Homepage.png"
-                                        isDecorative="false"
-                                        openInNewWindow="false"
-                                        titleValueFromDAM="true"/>
-                                </par_12>
-                                <par_13
+                                    jcr:title="lebenmitrheuma.at"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="noh"/>
+                                <button_copy_copy
+                                    cq:styleIds="[1659997777274]"
+                                    jcr:created="{Date}2024-06-12T13:12:37.950-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2025-06-27T06:04:35.280-04:00"
+                                    jcr:lastModifiedBy="klavimx"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/foundation/components/parsys"/>
-                                <columns jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        jcr:primaryType="nt:unstructured"
-                                        columnWidth="6"
-                                        dataPriority="1"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        columnWidth="6"
-                                        dataPriority="2"/>
-                                </columns>
-                            </grid_copy_copy>
-                        </container_1293850164_1165578219>
-                    </container2>
+                                    jcr:title="Zur Website"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Zu den wichtigsten Fakten über AbbVie"
+                                    linkTarget="_blank"
+                                    linkURL="https://www.lebenmitrheuma.at/"/>
+                                <text_copy_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-06-12T13:13:19.963-04:00"
+                                    jcr:createdBy="washidx10"
+                                    jcr:lastModified="{Date}2025-06-27T06:03:57.006-04:00"
+                                    jcr:lastModifiedBy="klavimx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p>Diese Plattform bietet Wissenswertes über entzündliches Rheuma, moderne Therapien, aber ebenso hilfreiche Tipps und Videos. Patient:innen finden hier auch einen Selbsttest und viele Expertenvideos zu Themen wie Schmerz, Remission und Krankheitskontrolle.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </par_11>
+                            <par_12
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <image_copy
+                                    jcr:created="{Date}2024-12-09T05:30:33.725-05:00"
+                                    jcr:createdBy="klavimx"
+                                    jcr:lastModified="{Date}2025-06-27T06:06:08.623-04:00"
+                                    jcr:lastModifiedBy="klavimx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="website"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    fileReference="/content/dam/abbvie-com2/at/images/patientenseite/LebenmitRheuma-Homepage.png"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="true"/>
+                            </par_12>
+                            <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys"/>
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="2"/>
+                            </columns>
+                        </grid_copy_copy>
+                        <separator_copy
+                            cq:styleIds="[1662756515133]"
+                            jcr:created="{Date}2023-01-17T10:44:00.021-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2023-01-17T10:44:00.021-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                    </container_1293850164_272162998>
                 </responsivegrid1>
                 <experiencefragmentFooter
                     jcr:primaryType="nt:unstructured"

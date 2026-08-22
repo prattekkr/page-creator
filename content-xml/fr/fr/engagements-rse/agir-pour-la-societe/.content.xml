@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-10-01T05:36:43.785-04:00"
-        cq:lastModifiedBy="BROINYX"
+        cq:lastModified="{Date}2026-07-16T06:31:28.463-04:00"
+        cq:lastModifiedBy="llobesx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="Agir pour une société plus juste et plus inclusive. Découvrez le deuxième pilier de la démarche RSE d ‘AbbVie. Parce que la responsabilité sociale de notre entreprise est au coeur de nos engagements."
         jcr:isCheckedOut="{Boolean}true"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Agir pour la société"
-        jcr:uuid="11e11b38-55b7-4338-a7cd-9763e9d0c09d"
+        jcr:uuid="4aa6e446-772b-43d1-9056-b21dc9129937"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="En savoir plus"
         ctaText="En savoir plus"
@@ -40,11 +40,15 @@
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <container
                         cq:styleIds="[1653545835859,1653545825683,1653545847148,1653545835879]"
-                        jcr:lastModified="{Date}2024-05-23T04:58:12.755-04:00"
+                        jcr:lastModified="{Date}2026-07-15T03:49:09.256-04:00"
                         jcr:lastModifiedBy="BROINYX"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/fr/engagement-rse/photo-groupe-wop-2023.jpg"/>
+                        backgroundImageReference="/content/dam/abbvie-com2/fr/engagement-rse/agir-pour-la-societe-Pringy.png"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
                     <container2
                         cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
                         jcr:lastModified="{Date}2024-05-07T08:32:16.359-04:00"
@@ -113,11 +117,12 @@
                                 cq:styleIds="[1659545825678]"
                                 jcr:created="{Date}2024-02-09T17:18:30.245-05:00"
                                 jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-06-28T09:47:33.014-04:00"
-                                jcr:lastModifiedBy="BROINYX"
+                                jcr:lastModified="{Date}2026-07-16T03:36:17.156-04:00"
+                                jcr:lastModifiedBy="llobesx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Par leur expertise de la vie avec la maladie, les associations de patients sont un acteur clé de notre écosystème. Les soutenir dans leur mission de sensibilisation et d’aide aux malades est une évidence. Avec elles, nous avons à cœur de co-construire des projets qui améliorent les parcours de soins et apportent aux malades une meilleure qualité de vie.&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>Par leur expertise de la vie avec la maladie, les associations de patients sont un acteur clé de notre écosystème. Les soutenir dans leur mission de sensibilisation et d’aide aux malades est une évidence. Avec elles, nous avons à cœur de co-construire des projets qui améliorent les parcours de soins et apportent aux patients une meilleure qualité de vie.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <separator
                                 jcr:created="{Date}2024-05-07T10:07:59.618-04:00"
@@ -131,15 +136,18 @@
                     <container_481305309
                         jcr:created="{Date}2024-05-07T08:28:32.592-04:00"
                         jcr:createdBy="BROINYX"
-                        jcr:lastModified="{Date}2024-10-31T07:00:22.366-04:00"
+                        jcr:lastModified="{Date}2026-05-05T11:46:18.155-04:00"
                         jcr:lastModifiedBy="BROINYX"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container">
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none">
                         <carousel
-                            cq:styleIds="[4,4]"
+                            cq:styleIds="[2]"
                             jcr:created="{Date}2024-05-07T03:40:19.203-04:00"
                             jcr:createdBy="BROINYX"
-                            jcr:lastModified="{Date}2025-07-24T10:43:14.789-04:00"
+                            jcr:lastModified="{Date}2026-07-16T05:33:05.365-04:00"
                             jcr:lastModifiedBy="BROINYX"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
@@ -155,7 +163,8 @@
                             carouselType="static"
                             delay="5000">
                             <item_1715067685836
-                                cq:panelTitle="Diabete"
+                                cq:panelTitle="Mettez votre migraine sur pause"
+                                cq:styleIds="[1653545835879]"
                                 jcr:lastModified="{Date}2024-10-31T06:59:49.122-04:00"
                                 jcr:lastModifiedBy="BROINYX"
                                 jcr:primaryType="nt:unstructured"
@@ -189,103 +198,119 @@
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2024-05-07T03:55:59.879-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2024-05-07T08:29:51.032-04:00"
+                                    jcr:lastModified="{Date}2026-07-16T05:08:34.842-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>Depuis 2020, AbbVie s’est engagé aux côtés d’associations de patients : Laurette Fugain, EllyE, AF3M, puis CCM pour co-construire une campagne de sensibilisation intitulée #Moisdescancersdusang qui s'adresse à tous les patients atteints d'hémopathie maligne, à leurs proches et aux aidants. Cette approche commune a donné naissance au podcast « Cancers du sang, nos vies », puis en 2024 à un studio mobile pour recueillir les témoignages de professionnels de santé et de patients au cœur d’établissements de soins spécialisés en hématologie.&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p>Depuis 2020, AbbVie s’est mobilisé aux côtés d’associations de patients : Laurette Fugain, EllyE, AF3M, puis CCM pour coconstruire une campagne de sensibilisation intitulée #Moisdescancersdusang qui s'adresse à tous les patients atteints d'hémopathie maligne et à leurs proches. Cette collaboration a donné naissance au podcast « Cancers du sang, nos vies », qui comporte aujourd'hui 38 épisodes et donne la parole aux malades et à tous ceux qui se battent à leur côté : proches, médecins et soignants, associations. Ils ont tous un rôle à jouer pour que la vie continue. Leurs histoires racontent leur combat, leurs victoires et leurs émotions à chaque étape de la maladie.&lt;/p>&#xd;&#xa;&lt;p>Découvrez les podcasts : &lt;a title=&quot;Podcast cancers-du-sang-nos-vies&quot; href=&quot;https://podcast.ausha.co/cancers-du-sang-nos-vies&quot; target=&quot;_blank&quot;>https://podcast.ausha.co/cancers-du-sang-nos-vies&lt;/a>&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <button
                                     cq:styleIds="[1659997777274]"
                                     jcr:created="{Date}2024-05-07T03:54:50.058-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2024-05-07T03:55:53.362-04:00"
+                                    jcr:lastModified="{Date}2026-04-02T05:02:26.806-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
                                     jcr:title="En savoir plus"
                                     sling:resourceType="abbvie-com2/components/button/v2/button"
                                     accessibilityLabel="En savoir plus sur le mois du cancer du sang - AbbVie"
+                                    langAttribute="none"
                                     linkTarget="_blank"
                                     linkURL="https://presse.abbvie.fr/septembre-cest-le-mois-des-cancers-du-sang-faisons-le-savoir-tousenrouge/"/>
                             </item_1715067685836>
                             <item_1715067700623
-                                cq:panelTitle="Roadtrip"
+                                cq:panelTitle="Pas de demi-mesuRe"
+                                cq:styleIds="[1653545835879]"
+                                jcr:lastModified="{Date}2026-07-15T03:58:25.150-04:00"
+                                jcr:lastModifiedBy="BROINYX"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/container/v2/container">
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false"
+                                langAttribute="none">
                                 <image
                                     jcr:created="{Date}2024-05-07T03:43:00.035-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2024-05-07T08:19:58.575-04:00"
+                                    jcr:lastModified="{Date}2026-07-15T03:55:39.002-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/image/v2/image"
-                                    alt="Campagne Diabète ouvrez l'oeil"
+                                    alt="Campagne Pas de demi-mesure"
                                     altValueFromDAM="false"
                                     displayPopupTitle="true"
                                     dmPresetType="imagePreset"
-                                    fileReference="/content/dam/abbvie-com2/fr/engagement-rse/diabete-ouvrez-l-oeil.png"
+                                    fileReference="/content/dam/abbvie-com2/fr/patients/Cover-Pas-de-Demi-Mesure-AbbVie.jpeg"
                                     isDecorative="false"
+                                    openInNewWindow="false"
                                     titleValueFromDAM="true"/>
                                 <title
                                     cq:styleIds="[1659545825678,1651545825693]"
                                     jcr:created="{Date}2024-05-07T03:48:47.161-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2025-07-24T10:43:52.159-04:00"
+                                    jcr:lastModified="{Date}2026-07-16T05:08:53.993-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="Diabète ouvrez l'oeil, notre campagne de sensibilisation"
+                                    jcr:title="Pas de demi-mesuRe"
                                     sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
                                     type="h3"
                                     variant="h"/>
                                 <text
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2024-05-07T03:50:42.734-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2024-05-07T08:29:36.273-04:00"
+                                    jcr:lastModified="{Date}2026-07-16T05:09:29.585-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>La vue est l’un des sens les plus précieux, la préserver est essentielle. C’est pourquoi, AbbVie s’engage auprès des personnes atteintes de diabète en sensibilisant le grand public aux complication oculaires liées au diabète. A travers la campagne « Diabète, ouvrez l’oeil », nous donnons la parole aux patients et aux médecins pour témoigner de l’importance de faire contrôler régulièrement sa vue lorsqu’on est atteint de diabète, pour dépister ou suivre les pathologies oculaires liées au diabète.&lt;/p>&#xd;&#xa;&lt;p>&lt;a title=&quot;https://diabeteouvrezloeil.com/&quot; href=&quot;https://diabeteouvrezloeil.com/&quot; target=&quot;_blank&quot;>https://diabeteouvrezloeil.com/&lt;/a>&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p>Cette campagne de sensibilisation, coconstruite entre AbbVie et l’Association Nationale de Défense contre l'Arthrite Rhumatoïde (ANDAR) vise à aider les patients atteints de polyarthrite rhumatoïde à garder le contrôle sur leur maladie, en lien avec leur rhumatologue. Cette campagne propose des supports, des témoignages, des espaces et des temps d’échanges pour permettre aux patients et aux rhumatologues d’avancer ensemble vers cet objectif.&lt;/p>&#xd;&#xa;&lt;p>Pour en savoir plus : &lt;a title=&quot; https://www.abbviecare.fr/polyarthrite-rhumatoide/mon-quotidien/communiquer-avec-mon-medecin.html&quot; href=&quot;https://www.abbviecare.fr/polyarthrite-rhumatoide/mon-quotidien/communiquer-avec-mon-medecin.html&quot; target=&quot;_blank&quot;>cliquez ici&lt;/a>&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                             </item_1715067700623>
                             <item_1715067707647
                                 cq:panelTitle="Mois des cancers"
+                                cq:styleIds="[1653545835879]"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/container/v2/container">
                                 <image
                                     jcr:created="{Date}2024-05-07T03:53:48.642-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2024-05-07T08:20:11.982-04:00"
+                                    jcr:lastModified="{Date}2026-07-15T03:51:27.753-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/image/v2/image"
-                                    alt="Roadtrip Hépatant"
+                                    alt="Stop migraine"
                                     altValueFromDAM="false"
                                     displayPopupTitle="true"
                                     dmPresetType="imagePreset"
-                                    fileReference="/content/dam/abbvie-com2/fr/engagement-rse/road-trip-hepatant.png"
+                                    fileReference="/content/dam/abbvie-com2/fr/patients/Stop-migraine.jpg"
                                     isDecorative="false"
+                                    openInNewWindow="false"
                                     titleValueFromDAM="true"/>
                                 <title
                                     cq:styleIds="[1659545825678,1651545825693]"
                                     jcr:created="{Date}2024-05-07T03:53:29.160-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2025-07-24T10:44:07.222-04:00"
+                                    jcr:lastModified="{Date}2026-07-15T03:51:47.847-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="RoadTrip &quot;Hépatant&quot;"
+                                    jcr:title="Mettez votre migraine sur pause"
                                     sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
                                     type="h3"
                                     variant="h"/>
                                 <text
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2024-05-07T03:53:12.134-04:00"
                                     jcr:createdBy="BROINYX"
-                                    jcr:lastModified="{Date}2024-05-07T08:29:43.981-04:00"
+                                    jcr:lastModified="{Date}2026-07-16T05:04:08.476-04:00"
                                     jcr:lastModifiedBy="BROINYX"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>AbbVie est partenaire du roadtrip « Hépatant » de SOS Hépatites Bourgogne-Franche-Comté, une campagne de dépistage de l’hépatite C dans les CSAPA/CAARUD (centres d'accompagnement et de prévention et d'accompagnement à la réduction des risques des usagers de drogues) en addictologie et autres lieux d’accueil dans cette région.&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p>Cette campagne, construite avec le soutien de deux neurologues et l'association La Voix des Migraineux, vise à sensibiliser au fardeau de la migraine et à encourager les patients à consulter un professionnel de santé. Le site Stopmigraine.fr propose des informations, contenus et témoignages pour aider les migraineux à mieux comprendre leur pathologie et mettre des mots sur leurs maux.&lt;/p>&#xd;&#xa;&lt;p>Pour en savoir plus : &lt;a title=&quot;www.stopmigraine.fr&quot; href=&quot;http://www.stopmigraine.fr&quot; target=&quot;_blank&quot;>www.stopmigraine.fr&lt;/a>&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                             </item_1715067707647>
                         </carousel>
@@ -331,7 +356,7 @@
                             cq:styleIds="[2,8]"
                             jcr:created="{Date}2024-05-03T08:43:00.312-04:00"
                             jcr:createdBy="BROINYX"
-                            jcr:lastModified="{Date}2024-05-07T04:24:07.044-04:00"
+                            jcr:lastModified="{Date}2026-04-03T09:05:51.740-04:00"
                             jcr:lastModifiedBy="BROINYX"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
@@ -339,20 +364,22 @@
                             <item_1714740266605
                                 cq:panelTitle="Week of possibilities, une semaine dédiée au bénévolat"
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-08-22T22:45:01.049-04:00"
-                                jcr:lastModifiedBy="jewitca"
+                                jcr:lastModified="{Date}2026-07-16T05:13:49.777-04:00"
+                                jcr:lastModifiedBy="BROINYX"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Tous les ans, fin juin et pendant une semaine entière les collaborateurs ont la possibilité de donner une demi-journée de leur temps de travail. Ils peuvent en effet participer à des actions solidaires auprès d'associations engagées dans le soutien aux personnes fragiles ou actives dans la préservation de l’environnement. En 2024, plus de 480 collaborateurs se sont ainsi portés bénévoles.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://presse.abbvie.fr/la-solidarite-en-action-reportage-video-sur-la-week-of-possibilities-2024/&quot; target=&quot;_blank&quot; title=&quot;https://presse.abbvie.fr/la-solidarite-en-action-reportage-video-sur-la-week-of-possibilities-2024/&quot;>Visionnez le reportage vidéo&lt;/a>&amp;nbsp;de la dernière Week of Possibilities avec le témoignage des collaborateurs qui y ont participé.&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>Tous les ans, fin juin et pendant une semaine entière les collaborateurs ont la possibilité de donner une demi-journée de leur temps de travail. Ils peuvent en effet participer à des actions solidaires auprès d'associations engagées dans le soutien aux personnes fragiles ou actives dans la préservation de l’environnement. En 2025, plus de 600 collaborateurs se sont ainsi portés bénévoles.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.youtube.com/watch?v=cdw5r9xyOHE&amp;amp;list=PLb9nJR3xIz9PrtbqCUyXBYn6VlF0WNqQh&quot; target=&quot;_blank&quot; title=&quot;Reportage vidéo Week of possibilities 2026 sur Youtube&quot;>Visionnez le reportage vidéo&lt;/a>&amp;nbsp;de la dernière Week of Possibilities avec le témoignage des collaborateurs qui y ont participé.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <item_1714740320845
                                 cq:panelTitle="Giving et Matching : AbbVie abonde les dons des collaborateurs aux associations qu’ils ont choisies"
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-05-07T04:24:17.977-04:00"
+                                jcr:lastModified="{Date}2026-07-16T05:15:01.534-04:00"
                                 jcr:lastModifiedBy="BROINYX"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Depuis 2020, chaque collaborateur du Groupe a la possibilité de faire un don à une association, à tout moment, à travers une plateforme mise en place par AbbVie. L’entreprise abonde la somme à hauteur de 100%. En 2022, 21,7 millions de dollars ont été versés à 12 600 organisations caritatives dans le monde. Depuis la création d'AbbVie, plus de 100 millions de dollars ont ainsi été réunis grâce à ce programme au travers de la Fondation AbbVie.&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>Depuis 2020, chaque collaborateur du Groupe a la possibilité de faire un don à une association, à tout moment, à travers une plateforme mise en place par AbbVie. L’entreprise abonde la somme à hauteur de 100%.&amp;nbsp;En 2025, ~25 millions de dollars ont été versés à près de 13 000 associations dans le monde. Depuis la création d'AbbVie, plus de 185 millions de dollars ont ainsi été réunis grâce à ce programme au travers de la Fondation AbbVie.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <item_1714740329020
                                 cq:panelTitle="Arrondi Solidaire : chaque centime compte"
@@ -375,11 +402,12 @@
                             <item_1714740351820
                                 cq:panelTitle="Aider les jeunes à s’insérer sur le marché de l’emploi"
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-08-22T22:45:52.230-04:00"
-                                jcr:lastModifiedBy="jewitca"
+                                jcr:lastModified="{Date}2026-07-16T05:15:36.608-04:00"
+                                jcr:lastModifiedBy="BROINYX"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Chaque année, l’entreprise accueille des étudiants en stage ou en alternance pour ouvrir à ces jeunes les portes du marché de l’emploi. Nous soutenons également l’Ecole de la 2&lt;sup>ème&lt;/sup> Chance du Val-de-Marne (E2C94), qui agit en faveur de l’insertion sociale et professionnelle de jeunes sortis du système scolaire.&lt;br>&#xd;&#xa;&lt;a href=&quot;https://presse.abbvie.fr/etre-alternant-chez-abbvie-cest-propulser-sa-carriere/&quot;>Ecoutez les témoignages des jeunes&lt;/a> qui ont ou sont en train de réaliser leur alternance chez AbbVie.&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>Chaque année, l’entreprise accueille des étudiants en stage ou en alternance pour ouvrir à ces jeunes les portes du marché de l’emploi. Nous soutenons également l’Ecole de la 2&lt;sup>e&lt;/sup> Chance, qui agit en faveur de l’insertion sociale et professionnelle de jeunes sortis du système scolaire.&lt;br>&#xd;&#xa;&lt;a href=&quot;https://presse.abbvie.fr/vous-cherchez-une-alternance-integrez-une-entreprise-qui-vous-offre-un-tremplin/?lang=fra&quot; target=&quot;_blank&quot; title=&quot;Ecoutez le témoignages des jeunes&quot;>Ecoutez les témoignages des jeunes&lt;/a> qui ont ou sont en train de réaliser leur alternance chez AbbVie.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </accordion>
                     </container_609531818_>
@@ -572,11 +600,12 @@
                         cq:styleIds="[1659545825678]"
                         jcr:created="{Date}2024-04-21T10:13:00.989-04:00"
                         jcr:createdBy="jewitca"
-                        jcr:lastModified="{Date}2024-05-28T05:50:53.867-04:00"
-                        jcr:lastModifiedBy="BROINYX"
+                        jcr:lastModified="{Date}2026-07-16T06:31:28.454-04:00"
+                        jcr:lastModifiedBy="llobesx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/text/v2/text"
-                        text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-16-reg&quot;>FR-ABBV-240158 - 07/2024&lt;/span>&lt;/p>&#xd;&#xa;"
+                        langAttribute="none"
+                        text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-16-reg&quot;>FR-ABBV-260169 - juillet 2026&lt;/span>&lt;/p>&#xd;&#xa;"
                         textIsRich="true"/>
                     <separator
                         cq:styleIds="[1662756555361]"

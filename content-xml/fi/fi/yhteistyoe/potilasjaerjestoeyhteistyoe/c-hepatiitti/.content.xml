@@ -2,14 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-04-13T10:31:30.019-04:00"
+        cq:lastModified="{Date}2026-06-29T02:52:54.762-04:00"
         cq:lastModifiedBy="valiksx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="C-hepatiitti"
-        jcr:uuid="704736a1-fd6e-46fb-a97f-9dd819a508cf"
+        jcr:uuid="c0c9b523-11be-45db-a34b-3f471064b66b"
         sling:resourceType="abbvie-com2/components/remotepage"
         navTitle="C-hepatiitti"
         pageTitle="C-hepatiitti">
@@ -26,13 +26,25 @@
                 <responsivegrid1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <container2_copy
-                        cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
+                    <container
+                        cq:styleIds="[1653545835855,1653545835860,1653545825687,1653242825678,1653545835879]"
+                        jcr:created="{Date}2026-06-09T07:19:44.476-04:00"
+                        jcr:createdBy="valiksx"
+                        jcr:lastModified="{Date}2026-06-09T07:19:44.476-04:00"
+                        jcr:lastModifiedBy="valiksx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundColor="#FFFFFF">
-                        <container3
-                            cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835982,1653545835879]"
+                        backgroundColor="#FFFFFF"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none">
+                        <container
+                            cq:styleIds="[1653545847150,1653242825678,1653545835879,1653545835982,1653545825683]"
+                            jcr:created="{Date}2026-06-09T07:20:36.131-04:00"
+                            jcr:createdBy="valiksx"
+                            jcr:lastModified="{Date}2026-06-09T07:20:36.131-04:00"
+                            jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/container/v2/container">
                             <breadcrumb
@@ -42,33 +54,63 @@
                                 hideCurrent="false"
                                 showHidden="true"
                                 startLevel="4"/>
+                            <title_1487340662
+                                cq:styleIds="[1659545825678,1661545829678,1651242825678]"
+                                jcr:created="{Date}2026-06-09T07:21:32.068-04:00"
+                                jcr:createdBy="valiksx"
+                                jcr:lastModified="{Date}2026-06-09T07:21:32.068-04:00"
+                                jcr:lastModifiedBy="valiksx"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="6 faktaa C-hepatiitista"
+                                sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
+                                type="h2"
+                                variant="h"/>
+                            <text
+                                cq:styleIds="[1659545825678,1659545847147]"
+                                jcr:created="{Date}2026-06-09T07:21:31.070-04:00"
+                                jcr:createdBy="valiksx"
+                                jcr:lastModified="{Date}2026-06-15T04:00:39.361-04:00"
+                                jcr:lastModifiedBy="valiksx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>Tämän sivuston tarkoituksena on jakaa ajantasaista tietoa&lt;br>&#xd;&#xa;C-hepatiitin riskiryhmään kuuluville, sitä sairastaville ja heidän läheisilleen sekä&lt;br>&#xd;&#xa;päättäjille ja terveydenhuollon ammattilaisille.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>&lt;a>&lt;/a>&lt;a href=&quot;#Eliminaatio&quot; target=&quot;_top&quot;>Katso tästä&lt;/a>, miten C-hepatiitin eliminaatio etenee alueellasi.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Sivusto tarjoaa lyhyen tietopaketin C-hepatiitista ja 6 faktaa tautiin liittyen.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>Suojele itseäsi ja läheisiäsi.&lt;br>&#xd;&#xa; &lt;a href=&quot;#FAKTA3&quot;>Selvitä, kuulutko riskiryhmään&lt;/a> ja käy testissä.&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        behavior="none"
+                                        offset="1"
+                                        width="10"/>
+                                </cq:responsive>
+                            </text>
                             <container_copy
-                                cq:styleIds="[1653545825686]"
-                                jcr:created="{Date}2023-09-29T11:42:27.796-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2023-09-29T11:43:53.121-04:00"
-                                jcr:lastModifiedBy="jewitca"
+                                cq:styleIds="1653545825685"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/container/v2/container"
-                                backgroundColor="#F1F3FF">
+                                backgroundColor="#F1F3FF"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false"
+                                langAttribute="none">
                                 <title_237251642
                                     cq:styleIds="[1659545825678,1651242825678]"
-                                    jcr:created="{Date}2023-09-29T11:41:09.761-04:00"
-                                    jcr:createdBy="jewitca"
-                                    jcr:lastModified="{Date}2024-03-28T01:57:07.229-04:00"
-                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:lastModified="{Date}2026-06-09T07:37:33.495-04:00"
+                                    jcr:lastModifiedBy="valiksx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="7 faktaa C-hepatiitista"
+                                    jcr:title="C-hepatiitti lyhyesti"
                                     sling:resourceType="abbvie-com2/components/title/v2/title"
-                                    type="h4"
+                                    langAttribute="none"
+                                    type="h2"
                                     variant="h"/>
                                 <text_copy
                                     cq:styleIds="[1659545847147]"
-                                    jcr:lastModified="{Date}2026-02-18T06:25:53.371-05:00"
+                                    jcr:lastModified="{Date}2026-06-24T03:12:59.850-04:00"
                                     jcr:lastModifiedBy="valiksx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p style=&quot;text-align: center;&quot;>Tämän sivuston tarkoituksena on jakaa ajantasaista tietoa&lt;br />&#xd;&#xa;C-hepatiitin riskiryhmään kuuluville, sitä sairastaville ja heidän läheisilleen sekä päättäjille ja terveydenhuollon ammattilaisille.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Tautiin liittyy ennakkoluuloja ja väärää tietoa. Sivusto tarjoaa lyhyen tietopaketin C-hepatiitista ja 7 faktaa tautiin liittyen.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>Suojele itseäsi ja läheisiäsi.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>Selvitä, kuulutko riskiryhmään ja käy testissä.&lt;/b>&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti on viruksen aiheuttama maksatulehdus, joka &lt;b>tarttuu veren kautta.&lt;/b> (1)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Suomessa C-hepatiittiin sairastuvat useimmin &lt;b>20–39-vuotiaat, pistohuumeita käyttävät nuoret aikuiset.&lt;/b> Kaksi kolmesta sairastuneesta on miehiä. Tartuntaan vaaditaan aina verikontakti. (1)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti on&lt;b> yleensä oireeton&lt;/b>, mutta infektion alkuvaiheessa voi esiintyä ruokahaluttomuutta, väsymystä, kuumeilua, lihas- ja nivelkipuja sekä ihon ja silmänvalkuaisten keltaisuutta. Hoitamattomana C-hepatiitti &lt;b>voi kroonistua ja johtaa maksakirroosiin ja maksasyöpään.&lt;/b> (1)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>C-hepatiittitestissä kannattaa käydä,&lt;/b> jos kuuluu riskiryhmään. Suurin tartuntariski on henkilöillä, jotka ovat käyttäneet huumeita pistämällä tai olleet verikontaktissa pistohuumeita käyttävän henkilön kanssa. (2)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>Testaus ja hoito on potilaalle maksutonta.&lt;/b> Testiin pääsee esimerkiksi terveyskeskuksen, päihdeklinikan tai matalan kynnyksen &lt;a href=&quot;https://paihdelinkki.fi/tietopankki/huumehaittojen-vahentaminen/neulanvaihtopisteet/&quot;>terveysneuvontapisteen kautta (ks. listaus)&lt;/a>. (3) (5)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>C-hepatiitti hoidetaan tablettikuurilla&lt;/b>. Hoidon tavoite on parantaa infektio, vähentää&lt;br>&#xd;&#xa;C-hepatiitin aiheuttamaa sairastavuutta ja estää taudin leviäminen.&lt;br>&#xd;&#xa;&lt;b>Tautia vastaan ei ole rokotetta.&lt;/b> (2)&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitille ei tule immuuniksi eli &lt;b>tartunnan voi saada parantumisen jälkeen uudelleen&lt;/b>. (2)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Suomessa hoidetaan keskimäärin 1 900 kantajaa vuosittain.&lt;br>&#xd;&#xa;&lt;b>Hoitoa odottaa silti noin 10 000 – 15 000 tartunnan kantajaa.&lt;/b>&amp;nbsp;Uusia tartuntoja raportoidaan vuosittain noin 1 150. (5)&amp;nbsp;&lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/server/api/core/bitstreams/43d0f69e-91d2-4e2e-9c79-9fef82167d89/content&quot;>Hoidon toteutuminen ei saa riippua hyvinvointialueen koosta tai sen taloustilanteesta&lt;/a>. (6)&lt;/p>&#xd;&#xa;"
                                     textIsRich="true">
                                     <cq:responsive jcr:primaryType="nt:unstructured">
                                         <default
@@ -78,22 +120,36 @@
                                     </cq:responsive>
                                 </text_copy>
                             </container_copy>
-                            <title_copy
-                                cq:styleIds="[1659545825678,1661545829678,1651242825678]"
-                                jcr:lastModified="{Date}2024-03-28T02:00:25.924-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                            <text_2005604799
+                                cq:styleIds="1659545847147"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="C-hepatiitti lyhyesti"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 1&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                            <title
+                                cq:styleIds="[1661545829678,1651242825678,1651545825691,1659545825678]"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="C-hepatiitti on mahdollista eliminoida Suomesta terveysongelmana"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h1"
-                                variant="h"/>
+                                langAttribute="none"
+                                type="h2"
+                                variant="h">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="12"/>
+                                </cq:responsive>
+                            </title>
                             <text_copy_copy_10811
                                 cq:styleIds="[1659545847147]"
-                                jcr:lastModified="{Date}2026-02-12T01:45:05.472-05:00"
+                                jcr:lastModified="{Date}2026-06-15T03:36:36.284-04:00"
                                 jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti on krooninen maksatulehdus, joka&lt;br>&#xa;&lt;b>tarttuu veren kautta.&lt;/b> (1)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>Suomessa C-hepatiittiin sairastuvat useimmin&amp;nbsp;&lt;b>20–39-vuotiaat, pistohuumeita käyttävät nuoret aikuiset.&lt;/b>&amp;nbsp;Kaksi kolmesta sairastuneesta on miehiä. (6)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>&lt;a href=&quot;https://thl.fi/fi/web/infektiotaudit-ja-rokotukset/taudit-ja-torjunta/taudit-ja-taudinaiheuttajat-a-o/hepatiitti-c/hepatiitti-c-tapausten-esiintyvyys-suomessa&quot; target=&quot;_blank&quot;>Suomessa C-hepatiitti tarttuu useimmiten (n. 83 %*) huumeiden pistovälineiden yhteiskäytössä.&lt;/a>&amp;nbsp;&lt;/b>(6) Se voi tarttua myös seksistä, synnytyksestä, likaisista tatuointivälineistä, lävistyksistä ja ulkomailla jopa verensiirroista. Tartuntaan vaaditaan aina verikontakti.&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti on&lt;b>&amp;nbsp;yleensä oireeton&lt;/b>, mutta infektion alkuvaiheessa oireina saattavat olla ruokahaluttomuus, väsymys, kuumeilu, nivel- ja lihaskivut sekä ihon ja silmänvalkuaisten keltaisuus. (1)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>Suurimmalla osalla tartunnan saaneista infektio kroonistuu. Hoitamattomana C-hepatiitti&amp;nbsp;&lt;b>voi johtaa maksakirroosiin ja jopa maksasyöpään.&lt;/b> (1)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>C-hepatiittitestissä kannattaa käydä,&lt;/b> jos kuuluu riskiryhmään, eli on käyttänyt huumeita pistämällä tai ollut verikontaktissa pistohuumeita käyttävän henkilön kanssa. (5)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiittia&amp;nbsp;&lt;b>testataan ja hoidetaan monessa paikassa&lt;/b>: terveyskeskuksissa, terveysneuvontapisteessä, työterveyshuollossa, vankiloissa ja erikoissairaanhoidossa. (5)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti&amp;nbsp;&lt;b>hoidetaan nykyisin tablettikuurilla&lt;/b>. Hoidon tavoite on parantaa infektio ja estää C-hepatiitin aiheuttama maksakirroosi. Tautia vastaan ei ole rokotetta. (5)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitille ei tule immuuniksi eli&amp;nbsp;&lt;b>tartunnan voi saada parantumisen jälkeen uudelleen&lt;/b>.&amp;nbsp;(5)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>Suomessa hoitoa tarvitsevia arvioidaan olevan noin 10 000&amp;nbsp;–&amp;nbsp;15 000 C-hepatiitin kantajaa. Vuosittain todetaan&amp;nbsp;&lt;b>noin 1 150 uutta tartuntaa&lt;/b>. (10)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;Suomessa on&amp;nbsp;&lt;b>hoidettu keskimäärin 1900 kantajaa vuosittain&lt;/b>. Hoitoa odottaa silti noin&amp;nbsp;10 000&amp;nbsp;–&amp;nbsp;15 000 tartunnan kantajaa. (10)&amp;nbsp;&lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/bitstream/handle/10024/78923/C-hepatiittistrategia_.pdf?sequence=1&amp;amp;isAllowed=y&quot; target=&quot;_blank&quot;>Hoidon toteutuminen ei saa riippua hyvinvointialueen koosta tai sen taloustilanteesta&lt;/a>. (4)&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;i>&lt;sub>* Vuonna 2023 huumeiden pistoskäyttö ilmoitettiin tartuntatavaksi 42 %:ssa tapauksista. Seksi ilmoitettiin tartuntatavaksi 9 %:ssa tapauksista. Tieto tartuntatavasta puuttui 50 %:ssa tapauksista. Yleisin tartuntapa (n. 83 % tiedossa olevista tartuntatavoista) oli huumeiden pistoskäyttö.&amp;nbsp;&lt;br>&#xa; &amp;nbsp;&lt;/sub>&lt;/i>&lt;/p>&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>Suomi on sitoutunut &lt;a href=&quot;https://iris.who.int/server/api/core/bitstreams/6f6caedc-37a0-49ee-a02a-df9c3b78ff42/content&quot;>WHO:n tavoitteeseen&lt;/a> eliminoida C-hepatiitti maailmasta merkittävänä terveysongelmana vuoteen 2030 mennessä. Eliminaatiotavoite tarkoittaa sitä, että 90% kantajista on tunnistettu ja 80% infektioista hoidetaan. (7)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Osoitus siitä on myös &lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/server/api/core/bitstreams/a89b334b-2f1e-4b41-bd97-ff91a7449a7a/content&quot;>hallitusohjelmaan kirjattu hanke C-hepatiitin eliminointiohjelmasta&lt;/a>, joka tähtää taudin eliminointiin Suomesta terveysongelmana vuoteen 2027 mennessä. (8) Myös &lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/server/api/core/bitstreams/43d0f69e-91d2-4e2e-9c79-9fef82167d89/content&quot;>Suomen kansallinen C-hepatiittistrategia&lt;/a> ja &lt;a href=&quot;https://www.julkari.fi/server/api/core/bitstreams/05c18fd9-9a3c-453b-a763-da626a3c6442/content&quot;>C-hepatiitin hoitosuositukset&lt;/a> edellyttävät testauksen ja hoidon laajentamista. (2) (6)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;Tavoitteen saavuttaminen vaatii sitä, että tautia torjutaan siellä, missä se leviää eniten, eli pistohuumeiden käyttäjien keskuudessa. Tartuntojen ehkäisemiseksi on tärkeää varmistaa, että kaikilla paikkakunnilla on tarjolla riittävästi puhtaiden pistovälineiden vaihtopisteitä. Jotta tartuntojen kierre saadaan katkaistua, C-hepatiitin testausta ja hoitoa tulee tarjota etenkin riskiryhmiin kuuluville. (6)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;a id=&quot;Eliminaatio&quot;>&lt;/a>Vain tartunnan saaneita testaamalla ja hoitamalla voidaan estää jatkotartunnat ja päästä taudista kokonaan eroon. (6)&lt;/p>&#xd;&#xa;"
                                 textIsRich="true">
                                 <cq:responsive jcr:primaryType="nt:unstructured">
                                     <default
@@ -102,119 +158,141 @@
                                         width="9"/>
                                 </cq:responsive>
                             </text_copy_copy_10811>
+                            <image
+                                jcr:created="{Date}2026-06-09T07:26:08.121-04:00"
+                                jcr:createdBy="valiksx"
+                                jcr:lastModified="{Date}2026-06-15T03:30:39.037-04:00"
+                                jcr:lastModifiedBy="valiksx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                alt="Celiminator_FI"
+                                altValueFromDAM="false"
+                                displayPopupTitle="false"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/abbvie-com2/fi/images/2880/HCV_eliminaatio_2026.png"
+                                isDecorative="false"
+                                openInNewWindow="false"
+                                titleValueFromDAM="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="12"/>
+                                </cq:responsive>
+                            </image>
+                            <text_1025129242
+                                cq:styleIds="[1659545847147]"
+                                jcr:created="{Date}2026-06-09T07:27:40.690-04:00"
+                                jcr:createdBy="valiksx"
+                                jcr:lastModified="{Date}2026-06-15T03:36:18.226-04:00"
+                                jcr:lastModifiedBy="valiksx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>Monet hyvinvointialueista ovat pääsemässä lähelle WHO:n eliminaatiotavoitetta 2030. Alueet ovat lähteneet kehittämään C-hepatiitin eliminaatiota eri lähtökohdista, joten eroavaisuuksia alueiden välillä vielä löytyy.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;i>&lt;sub>* Arvio perustuu AbbVien kehittämään ennustemalliin, joka pohjautuu julkisiin tietolähteisiin sekä C-hepatiittivalmisteiden IQVIA-myyntitietoihin.&lt;/sub>&lt;/i>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
                             <container_copy_copy
-                                cq:styleIds="[1653545825686]"
-                                jcr:created="{Date}2023-09-29T11:42:27.796-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2023-09-29T11:43:53.121-04:00"
-                                jcr:lastModifiedBy="jewitca"
+                                cq:styleIds="1653545825686"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/container/v2/container"
                                 backgroundColor="#F1F3FF">
                                 <text
                                     cq:styleIds="[1659545825678]"
-                                    jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                                    jcr:createdBy="kumarvx60"
-                                    jcr:lastModified="{Date}2024-03-28T02:17:05.637-04:00"
-                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:lastModified="{Date}2026-06-09T07:24:55.363-04:00"
+                                    jcr:lastModifiedBy="valiksx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 1&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 2&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <title_237251642
                                     cq:styleIds="[1659545825678,1651242825678]"
-                                    jcr:created="{Date}2023-09-29T11:41:09.761-04:00"
-                                    jcr:createdBy="jewitca"
-                                    jcr:lastModified="{Date}2024-03-28T02:13:20.468-04:00"
-                                    jcr:lastModifiedBy="kumarvx60"
+                                    jcr:lastModified="{Date}2026-06-09T07:37:47.430-04:00"
+                                    jcr:lastModifiedBy="valiksx"
                                     jcr:primaryType="nt:unstructured"
                                     jcr:title="C-hepatiitti on vakava sairaus"
                                     sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
                                     type="h3"
                                     variant="h"/>
                                 <text_copy
                                     cq:styleIds="[1659545847147]"
-                                    jcr:lastModified="{Date}2026-02-12T01:44:53.564-05:00"
+                                    jcr:lastModified="{Date}2026-06-24T03:16:43.395-04:00"
                                     jcr:lastModifiedBy="valiksx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti on vakava tauti. Sitä ei aina ymmärretä, koska tauti on usein pitkään oireeton. Infektion alkuvaiheessa oireina saattavat kuitenkin olla ruokahaluttomuus, väsymys, kuumeilu, nivel- ja lihaskivut sekä ihon ja silmänvalkuaisten keltaisuus. (1) Hoitamaton C-hepatiitti vaurioittaa maksaa ja voi aiheuttaa maksakirroosin tai jopa maksasyövän.  &lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;a href=&quot;https://www.terveyskirjasto.fi/dlk00451#s5&quot; title=&quot;Noin joka kymmenes C-hepatiitin kantaja saa maksakirroosin 20 vuodessa. Noin joka sadas kirroosiin sairastunut saa vuosittain maksasyövän&quot; target=&quot;_blank&quot;>Noin joka kymmenes C-hepatiitin kantaja saa maksakirroosin 20 vuodessa. Noin joka sadas kirroosiin sairastunut saa vuosittain maksasyövän&lt;/a>.(2) C-hepatiitin kantaja voi myös tartuttaa ja sairastuttaa muita. (4)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;a href=&quot;https://thl.fi/fi/web/infektiotaudit-ja-rokotukset/taudit-ja-torjunta/taudit-ja-taudinaiheuttajat-a-o/hepatiitti-c&quot; target=&quot;_blank&quot;>Suomessa C-hepatiitti tarttuu useimmiten (n. 83 %*) huumeiden pistovälineiden yhteiskäytössä&lt;/a>.(6) Se voi tarttua myös seksistä, synnytyksestä, likaisista tatuointivälineistä, lävistyksistä ja ulkomailla jopa verensiirroista. Tartuntaan vaaditaan aina verikontakti. (1)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiittitestissä kannattaa käydä, jos kuuluu riskiryhmään, eli on käyttänyt huumeita pistämällä tai ollut verikontaktissa pistohuumeita käyttävän henkilön kanssa. Testiin pääsee esimerkiksi terveyskeskuksen, työterveyshuollon tai matalan kynnyksen &lt;a href=&quot;https://www.vinkki.info/terveysneuvontapisteet&quot; title=&quot;terveysneuvontapisteen (ks. listaus)&quot; target=&quot;_blank&quot;>terveysneuvontapisteen (ks. listaus)&lt;/a>(3) kautta. &lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Tartuntojen ehkäisemiseksi on tärkeää varmistaa, että kaikilla paikkakunnilla on tarjolla riittävästi puhtaiden pistovälineiden vaihtopisteitä. Jotta tartuntojen kierre saadaan katkaistua, C-hepatiitin testausta ja hoitoa tulee tarjota etenkin riskiryhmiin kuuluville.(4)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;i>&lt;sub>* Vuonna 2023 huumeiden pistoskäyttö ilmoitettiin tartuntatavaksi 42 %:ssa tapauksista. Seksi ilmoitettiin tartuntatavaksi 9 %:ssa tapauksista. Tieto tartuntatavasta puuttui 50 %:ssa tapauksista. Yleisin tartuntapa (n. 83 % tiedossa olevista tartuntatavoista) oli huumeiden pistoskäyttö. &lt;/sub>&lt;/i>&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti on vakava tauti. Sitä ei aina ymmärretä, koska tauti on usein pitkään oireeton. Infektion alkuvaiheessa oireina saattavat kuitenkin olla ruokahaluttomuus, väsymys, kuumeilu, nivel- ja lihaskivut sekä ihon ja silmänvalkuaisten keltaisuus. (1)&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Suurimmalla osalla tartunnan saaneista infektio kroonistuu. Hoitamaton C-hepatiitti vaurioittaa maksaa ja voi aiheuttaa maksakirroosin tai jopa maksasyövän:&amp;nbsp;&lt;a href=&quot;https://www.terveyskirjasto.fi/dlk00451#s5&quot; title=&quot;Noin joka kymmenes C-hepatiitin kantaja saa maksakirroosin 20 vuodessa. Noin joka sadas kirroosiin sairastunut saa vuosittain maksasyövän&quot; target=&quot;_blank&quot;>noin joka kymmenes C-hepatiitin kantaja saa maksakirroosin 20 vuodessa. ja noin joka sadas kirroosiin sairastunut saa vuosittain maksasyövän&lt;/a>. (1)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitin kantaja voi myös tartuttaa ja sairastuttaa muita. Arvioidaan, että &lt;a href=&quot;https://nida.nih.gov/research-topics/viral-hepatitis&quot;>yksi C-hepatiittia sairastava ja huumeita pistämällä käyttävä henkilö voi tartuttaa kolmen vuoden aikana jopa 20 muuta.&lt;/a> (9)&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                             </container_copy_copy>
                             <text_copy_196805174
                                 cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                                jcr:createdBy="kumarvx60"
-                                jcr:lastModified="{Date}2024-03-28T02:18:33.414-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:lastModified="{Date}2026-06-15T03:43:54.799-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 2&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>&lt;a id=&quot;FAKTA3&quot;>&lt;/a>FAKTA 3&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <title_copy_copy
                                 cq:styleIds="[1659545825678,1661545829678,1651242825678]"
-                                jcr:lastModified="{Date}2024-03-28T02:18:52.694-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:lastModified="{Date}2026-06-15T03:43:26.537-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 jcr:title="C-hepatiitti tarttuu vain veren kautta"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h1"
+                                langAttribute="none"
+                                type="h2"
                                 variant="h"/>
                             <text_copy_copy_copy
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-11-11T07:35:25.761-05:00"
-                                jcr:lastModifiedBy="COLLINX1"
+                                jcr:lastModified="{Date}2026-06-24T05:34:01.105-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiittiin liittyy monia pelkoja. Läheiset saattavat pelätä esimerkiksi, että C-hepatiitti tarttuu kotona yhteisiä ruokailuvälineitä käytettäessä, pyykkiä pestessä, saniteettitilojen välityksellä tai halatessa. Näin helposti C-hepatiitti ei tartu. Esimerkiksi hammasharja ja partakone on kuitenkin hyvä pitää henkilökohtaisina. (1)&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;a href=&quot;https://www.terveyskirjasto.fi/dlk00451#s5&quot; title=&quot;C-hepatiitti tarttuu&quot; target=&quot;_blank&quot;>C-hepatiitti tarttuu&lt;/a>(2) Suomessa useimmiten likaisista huumeiden pistovälineistä. Se voi tarttua myös seksissä ja synnytyksessä, mutta tämä on Suomessa harvinaista. Tartuntaan vaaditaan pääosin aina verikontakti, kuten verta vuotava haava. (1)&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Etenkin ulkomailla tartuntoja voi tulla likaisilla välineillä tehdyistä tatuoinneista, lävistyksistä ja jopa verensiirroista. Monissa maissa tauti on paljon yleisempi kuin Suomessa, eikä hygieniataso ole yhtä hyvä. Myös Suomessa tartunnan on voinut saada 1990-luvulle asti verensiirrosta. (2)&lt;br />&#xd;&#xa;C-hepatiitille ei tule immuuniksi eli tartunnan voi saada parantumisen jälkeen uudelleen. (5)&lt;br />&#xd;&#xa;C-hepatiittia vastaan ei ole rokotetta. (1)&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;C-hepatiittitestissä kannattaa käydä, jos on käyttänyt huumeita pistämällä tai ollut verikontaktissa huumeita pistämällä käyttävän henkilön kanssa tai jos haluaa varmistua siitä, ettei tietämättään kanna virusta. Testiin pääsee esimerkiksi terveyskeskuksen, työterveyshuollon tai matalan kynnyksen &lt;a href=&quot;https://www.vinkki.info/terveysneuvontapisteet&quot; title=&quot;terveysneuvontapisteen (ks. listaus)&quot; target=&quot;_blank&quot;>terveysneuvontapisteen (ks. listaus)&lt;/a>(3) kautta.&lt;br />&#xd;&#xa; &lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiittiin liittyy monia pelkoja. Läheiset saattavat pelätä esimerkiksi, että C-hepatiitti tarttuu kotona yhteisiä ruokailuvälineitä käytettäessä, pyykkiä pestessä, saniteettitilojen välityksellä tai halatessa. Näin helposti C-hepatiitti ei tartu. (1) Esimerkiksi hammasharja ja partakone on kuitenkin hyvä pitää henkilökohtaisina.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;a href=&quot;https://www.julkari.fi/server/api/core/bitstreams/c9dc1521-0e86-4f14-90e7-dd59b2da1e08/content&quot;>Suomessa C-hepatiitti tarttuu useimmiten (n. 83 %*) huumeiden pistovälineiden yhteiskäytössä&lt;/a>. (10) Se voi tarttua myös seksissä tai synnytyksessä, mutta tämä on Suomessa harvinaisempaa. Tartuntaan vaaditaan aina verikontakti. (1)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Etenkin ulkomailla tartuntoja voi tulla likaisilla välineillä tehdyistä tatuoinneista, lävistyksistä ja jopa verensiirroista. Monissa maissa tauti on paljon yleisempi kuin Suomessa, koska hygieniataso ei ole yhtä hyvä. Myös Suomessa tartunnan on voinut saada 1990-luvulle asti verensiirrosta. (1)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;br>&#xd;&#xa;&lt;i>&lt;sub>* Vuonna 2023 huumeiden pistoskäyttö ilmoitettiin tartuntatavaksi 42 %:ssa tapauksista. Seksi ilmoitettiin tartuntatavaksi 9 %:ssa tapauksista. Tieto tartuntatavasta puuttui 50 %:ssa tapauksista. Yleisin tartuntapa (n. 83 % tiedossa olevista tartuntatavoista) oli huumeiden pistoskäyttö.&amp;nbsp;&lt;/sub>&lt;/i>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
-                        </container3>
+                        </container>
                         <container_copy_copy_
-                            cq:styleIds="[1653545825686]"
-                            jcr:created="{Date}2023-09-29T11:42:27.796-04:00"
-                            jcr:createdBy="jewitca"
-                            jcr:lastModified="{Date}2023-09-29T11:43:53.121-04:00"
-                            jcr:lastModifiedBy="jewitca"
+                            cq:styleIds="[1653545825685]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/container/v2/container"
                             backgroundColor="#F1F3FF">
                             <text
                                 cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                                jcr:createdBy="kumarvx60"
-                                jcr:lastModified="{Date}2024-03-28T02:25:40.468-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:lastModified="{Date}2026-06-09T07:31:39.953-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 3&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 4&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <title_237251642
                                 cq:styleIds="[1659545825678,1651242825678]"
-                                jcr:created="{Date}2023-09-29T11:41:09.761-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-03-28T02:25:56.843-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:lastModified="{Date}2026-06-11T03:58:04.113-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="C-hepatiitti on tärkeää hoitaa"
+                                jcr:title="C-hepatiitti tulee hoitaa"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
                                 type="h3"
                                 variant="h"/>
                             <text_copy
                                 cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2023-09-29T11:37:15.579-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-11-11T07:34:42.329-05:00"
-                                jcr:lastModifiedBy="COLLINX1"
+                                jcr:lastModified="{Date}2026-06-24T03:17:18.941-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>&lt;a href=&quot;https://www.terveyskirjasto.fi/dlk00451#s5&quot; title=&quot;C-hepatiitin hoito &quot; target=&quot;_blank&quot;>C-hepatiitin hoito&lt;/a>&amp;nbsp;(2) on muuttunut. C-hepatiitti hoidettiin aiemmin interferonihoidolla, mutta nykyisin hoitovaihtoehdot ovat tablettikuureja.&amp;nbsp;&lt;a href=&quot;https://thl.fi/fi/web/infektiotaudit-ja-rokotukset/taudit-ja-torjunta/taudit-ja-taudinaiheuttajat-a-o/hepatiitti-c&quot; title=&quot;Yli 90 prosenttia hoidoista onnistuu&quot; target=&quot;_blank&quot;>Yli 90 prosenttia hoidoista onnistuu&lt;/a>.(1)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Jokaisella on oikeus hoitoon ja se on jokaisen saatavilla.(5) Päihdepotilaiden&lt;br>&#xd;&#xa;C-hepatiittitartuntojen seulontaa toteutetaan päihdehoidossa,&amp;nbsp;&lt;a href=&quot;https://www.vinkki.info/terveysneuvontapisteet&quot; title=&quot;terveysneuvontapisteessä (ks. listaus)&quot; target=&quot;_blank&quot;>terveysneuvontapisteissä (ks. listaus)&lt;/a>(3) tai muussa yksikössä, jossa päihdepotilaat asioivat. Muussa tapauksessa henkilö testataan ja hoidetaan omalla terveysasemalla. Joissakin tapauksissa hoitoa annetaan erikoissairaanhoidossa, esimerkiksi, jos potilaan maksa on jo pahasti vaurioitunut tai hänellä on muita sairauksia.(5)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Ennen hoidon aloittamista potilaalle kerrotaan mm. miten C-hepatiitti tarttuu ja miten tartunnan voi välttää. Potilaalle kerrotaan myös hoidon kulusta.(5)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Sopiva hoito valitaan aina yksilöllisesti terveydenhuollon ammattilaisen kanssa. Terveysneuvontapisteissä hoitoa räätälöidään potilaan tarpeen mukaan niin, että hän saa siihen tarvitsemansa tuen. Hoitoon pääsemiseksi ei useilla paikkakunnilla vaadita päihteettömyyttä. Halutessaan päihteettömyyteen saa tukea.(5)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;C-hepatiitin hoidon jälkeistä maksan tilan seurantaa ei tarvita, jos henkilöllä ei ole todettu edennyttä maksavauriota.(5)&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>Jos tartunnan on saanut, tauti on tärkeää hoitaa. Vain tartuntoja hoitamalla voidaan estää taudin leviäminen eteenpäin. C-hepatiitti leviää tällä hetkellä erityisesti nuorten&lt;br>&#xd;&#xa;(20–39-vuotiaat) keskuudessa ja johtaa hoitamattomana vakaviin sairauksiin. (2)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Jokaisella on oikeus hoitoon ja se tulee olla jokaisen saatavilla. Hoidon toteutuminen ei saa riippua hyvinvointialueen koosta tai sen taloustilanteesta. (6)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiittitestissä kannattaa käydä, jos on käyttänyt huumeita pistämällä tai ollut verikontaktissa huumeita pistämällä käyttävän henkilön kanssa tai jos haluaa varmistua siitä, ettei tietämättään kanna virusta. (2)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Testaus ja hoito toteutetaan terveyskeskuksissa, päihdeklinikoilla tai matalan kynnyksen&amp;nbsp;&lt;a href=&quot;https://paihdelinkki.fi/tietopankki/huumehaittojen-vahentaminen/neulanvaihtopisteet/&quot; title=&quot;terveysneuvontapisteen (ks. listaus)&quot;>terveysneuvontapisteissä (ks. listaus)&lt;/a>. (2) (3) Joillain alueilla on nykyään saatavilla myös liikkuvia testaus- ja hoitopalveluita. Tietyissä tapauksissa hoitoa annetaan erikoissairaanhoidossa, esimerkiksi jos potilaan maksa on jo pahasti vaurioitunut tai hänellä on muita sairauksia. (2)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitille ei tule immuuniksi eli tartunnan voi saada parantumisen jälkeen uudelleen. (2) C-hepatiittia vastaan ei ole rokotetta. (1)&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </container_copy_copy_>
                         <image
-                            jcr:created="{Date}2024-03-28T02:41:14.203-04:00"
-                            jcr:createdBy="kumarvx60"
-                            jcr:lastModified="{Date}2024-03-28T02:41:58.262-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
+                            jcr:created="{Date}2026-06-15T03:25:12.448-04:00"
+                            jcr:createdBy="valiksx"
+                            jcr:lastModified="{Date}2026-06-15T03:25:42.544-04:00"
+                            jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/image/v2/image"
                             altValueFromDAM="true"
@@ -222,170 +300,105 @@
                             dmPresetType="imagePreset"
                             fileReference="/content/dam/abbvie-com2/fi/images/2880/nainen-pesee-kasvoja.jpg"
                             isDecorative="false"
+                            openInNewWindow="false"
                             titleValueFromDAM="true"/>
                         <container_copy_copy__741624361
-                            cq:styleIds="[1653545825686]"
-                            jcr:created="{Date}2023-09-29T11:42:27.796-04:00"
-                            jcr:createdBy="jewitca"
-                            jcr:lastModified="{Date}2023-09-29T11:43:53.121-04:00"
-                            jcr:lastModifiedBy="jewitca"
+                            cq:styleIds="[1653545825685,1653545847150]"
+                            jcr:lastModified="{Date}2026-06-09T08:15:10.441-04:00"
+                            jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/container/v2/container"
-                            backgroundColor="#F1F3FF">
-                            <text
-                                cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                                jcr:createdBy="kumarvx60"
-                                jcr:lastModified="{Date}2024-03-28T02:44:29.541-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 4&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                            <title_237251642
-                                cq:styleIds="[1659545825678,1651242825678]"
-                                jcr:created="{Date}2023-09-29T11:41:09.761-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-03-28T02:45:34.708-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
-                                jcr:primaryType="nt:unstructured"
-                                jcr:title="C-hepatiitti kannattaa hoitaa"
-                                sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h3"
-                                variant="h"/>
+                            backgroundColor="#F1F3FF"
+                            dmPresetType="imagePreset"
+                            enableFetchPriority="false"
+                            enableLazyLoading="false"
+                            langAttribute="none">
                             <text_copy
                                 cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2023-09-29T11:37:15.579-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-03-28T02:45:55.101-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:lastModified="{Date}2026-06-11T04:19:56.136-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti on vakava sairaus. Se voi hoitamattomana lisätä maksakirroosin ja maksasyövän riskiä.(2)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Jos tartunta on tullut, tauti kannattaa hoitaa. Vain tartuntoja hoitamalla voidaan estää taudin leviäminen eteenpäin.(5)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;C-hepatiitti leviää tällä hetkellä erityisesti nuorten (20–39-vuotiaat) keskuudessa ja johtaa hoitamattomana vakaviin sairauksiin.(5)&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiitti hoidetaan tablettikuurilla. &lt;a href=&quot;https://www.terveyskirjasto.fi/dlk00451#s5&quot; title=&quot;Yli 90 prosenttia hoidoista onnistuu&quot;>Yli 90 prosenttia hoidoista onnistuu&lt;/a>. (1)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Ennen hoidon aloittamista potilaalle kerrotaan mm. miten C-hepatiitti tarttuu ja miten tartunnan voi välttää. Potilaalle kerrotaan myös hoidon kulusta. (2)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>C-hepatiitin hoidon jälkeistä maksan tilan seurantaa ei tarvita, jos henkilöllä ei ole todettu edennyttä maksavauriota. (2)&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </container_copy_copy__741624361>
                         <text_copy_196805174_
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                            jcr:createdBy="kumarvx60"
-                            jcr:lastModified="{Date}2024-03-28T02:47:03.686-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
+                            cq:styleIds="1659545825678"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 5&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <title_copy_copy_copy
                             cq:styleIds="[1659545825678,1661545829678,1651242825678]"
-                            jcr:lastModified="{Date}2024-03-28T02:47:23.872-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
+                            jcr:lastModified="{Date}2026-06-09T07:37:16.911-04:00"
+                            jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
                             jcr:title="C-hepatiitin hoito ei vaadi päihteettömyyttä"
                             sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h1"
+                            langAttribute="none"
+                            type="h2"
                             variant="h"/>
                         <text_copy_copy_copy_
                             cq:styleIds="[1659545825678]"
-                            jcr:lastModified="{Date}2024-03-28T02:47:51.386-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
+                            jcr:lastModified="{Date}2026-06-24T03:17:42.200-04:00"
+                            jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: center;&quot;>Aikaisemmin Suomessa on vaadittu C-hepatiittihoitoon tulevilta päihteettömyyttä, mutta tästä on jo monin paikoin luovuttu.(7) Monilla paikkakunnilla hoidetaan nykyisin sekä korvaushoidossa olevia että päihteitä käyttäviä.&amp;nbsp;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Huumeita käyttävillä saattaa olla korkea kynnys mennä terveyskeskukseen tai sairaalaan tautiin liittyvän leiman vuoksi. Matalan kynnyksen terveysneuvontapisteissä asiointi on helpompaa, ja siellä osataan tukea asiakkaita hoidon läpiviennissä. Hoitoa pystytään räätälöimään niin, että asiakas saa siihen tarvitsemansa tuen. (9)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Hoitokokemusten mukaan asiakkaat yleisesti sitoutuvat hyvin hoitoon ja haluavat viedä sen loppuun. Moni on saanut taudin vuosia sitten, ja se on aiheuttanut paljon huolta ja häpeää. (9)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Monelle saattaa olla tärkeää, että terveystiedoista poistetaan keltainen tartuntavaaratarra, joka kertoo C-hepatiittitartunnasta. Tämä voi helpottaa lääkäriin menoa&lt;br>&#xd;&#xa;muidenkin vaivojen kanssa. (9)&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                            langAttribute="none"
+                            text="&lt;p style=&quot;text-align: center;&quot;>Aikaisemmin Suomessa on vaadittu C-hepatiittihoitoon tulevilta päihteettömyyttä, mutta tästä on luovuttu. Päihteiden käyttö ei nykyään ole este hoidolle, ja potilaita hoidetaan sekä opioidikorvaushoidossa että terveysneuvontapisteissä.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Huumeita käyttävillä saattaa olla korkea kynnys mennä terveyskeskukseen tai sairaalaan tautiin liittyvän leiman vuoksi. Matalan kynnyksen terveysneuvontapisteissä asiointi on helpompaa, ja siellä osataan tukea asiakkaita hoidon läpiviennissä. Hoitoa pystytään räätälöimään niin, että asiakas saa siihen tarvitsemansa tuen. Halutessaan päihteettömyyteen saa tukea. (2) (11)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Hoitokokemusten mukaan asiakkaat yleisesti sitoutuvat hyvin hoitoon ja haluavat viedä sen loppuun. Moni on saanut taudin vuosia sitten, ja se on aiheuttanut paljon huolta ja häpeää. (11)&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <container_copy_copy__431825747
-                            cq:styleIds="[1653545825686]"
-                            jcr:created="{Date}2023-09-29T11:42:27.796-04:00"
-                            jcr:createdBy="jewitca"
-                            jcr:lastModified="{Date}2023-09-29T11:43:53.121-04:00"
-                            jcr:lastModifiedBy="jewitca"
+                            cq:styleIds="[1653545825685]"
+                            jcr:lastModified="{Date}2026-06-09T08:09:04.076-04:00"
+                            jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/container/v2/container"
-                            backgroundColor="#F1F3FF">
+                            backgroundColor="#F1F3FF"
+                            dmPresetType="imagePreset"
+                            enableFetchPriority="false"
+                            enableLazyLoading="false"
+                            langAttribute="none">
                             <text
-                                cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                                jcr:createdBy="kumarvx60"
-                                jcr:lastModified="{Date}2024-03-28T02:48:28.976-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                cq:styleIds="1659545825678"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
                                 text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 6&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <title_237251642
                                 cq:styleIds="[1659545825678,1651242825678]"
-                                jcr:created="{Date}2023-09-29T11:41:09.761-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-03-28T02:49:34.215-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:lastModified="{Date}2026-06-09T07:38:08.962-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 jcr:title="C-hepatiitti ei aina kerro huumeidenkäytöstä"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h3"
+                                langAttribute="none"
+                                type="h2"
                                 variant="h"/>
                             <text_copy
                                 cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2023-09-29T11:37:15.579-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-03-28T02:49:55.724-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
+                                jcr:lastModified="{Date}2026-06-24T07:50:10.167-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiittiin liittyy paljon stigmaa eli häpeäleimaa, koska tauti liitetään huumeiden käyttöön.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;C-hepatiittitartunnan saanut on voinut saada taudin vuosia sitten, jos on vaikka aiemmin käyttänyt huumeita, mutta lopettanut. Tartunnan voi saada myös seksistä, synnytyksestä, likaisilla välineillä tehdystä tatuoinnista tai lävistyksestä ja jopa verensiirrosta, mutta nämä ovat harvinaisia tartuntatapoja.(6)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Aina ei selviä, mistä tartunta on tullut. C-hepatiitti voi olla vuosia oireeton ja tulla esiin terveydenhuollon rutiinikäynnillä. Tartuntaan vaaditaan kuitenkin aina verikontakti.(1)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Olipa tartunnan syy mikä hyvänsä, jokainen on oikeutettu hoitoon. On kaikkien etu, että sairaus hoidetaan, ennen kuin se tarttuu muille ja voi johtaa vakaviin seurauksiin.(4)&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p style=&quot;text-align: center;&quot;>C-hepatiittiin liittyy paljon stigmaa eli häpeäleimaa, koska tauti liitetään huumeiden käyttöön.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;C-hepatiittia sairastava on voinut saada taudin vuosia sitten, jos on aiemmin käyttänyt huumeita, mutta lopettanut. Muita Suomessa harvinaisempia tartuntatapoja ovat esimerkiksi seksi, synnytys ja likaisilla välineillä tehdyt tatuoinnit. Aina ei selviä, mistä tartunta on tullut. C-hepatiitti voi olla vuosia oireeton ja tulla esiin terveydenhuollon rutiinikäynnillä. (1)&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Olipa tartunnan syy mikä hyvänsä, jokainen on oikeutettu hoitoon. On kaikkien etu, että sairaus hoidetaan, ennen kuin se tarttuu muille ja voi johtaa vakaviin seurauksiin.(5)&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </container_copy_copy__431825747>
-                        <text_copy_196805174__1172400681
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                            jcr:createdBy="kumarvx60"
-                            jcr:lastModified="{Date}2024-03-28T02:50:46.703-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
+                        <title
+                            cq:styleIds="[1659545825678,1651242825678]"
+                            jcr:created="{Date}2026-06-09T07:38:27.173-04:00"
+                            jcr:createdBy="valiksx"
+                            jcr:lastModified="{Date}2026-06-09T07:39:16.307-04:00"
+                            jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: center;&quot;>FAKTA 7&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <title_copy_copy_copy_1433785833
-                            cq:styleIds="[1659545825678,1661545829678,1651242825678]"
-                            jcr:lastModified="{Date}2024-11-11T07:24:35.689-05:00"
-                            jcr:lastModifiedBy="COLLINX1"
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="C-hepatiitti on mahdollista eliminoida Suomesta terveysongelmana"
+                            jcr:title="Tutustu terveydenhuollon ammattilaisten ja potilaiden kokemuksiin"
                             sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h1"
+                            langAttribute="none"
+                            type="h4"
                             variant="h"/>
-                        <text_copy_copy_copy__1590277072
-                            cq:styleIds="[1659545825678]"
-                            jcr:lastModified="{Date}2024-11-11T07:25:06.512-05:00"
-                            jcr:lastModifiedBy="COLLINX1"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: center;&quot;>Suomi on sitoutunut&amp;nbsp;&lt;a href=&quot;https://www.who.int/news-room/fact-sheets/detail/hepatitis-c&quot; title=&quot;WHO:n tavoitteeseen&quot; target=&quot;_blank&quot;>WHO:n tavoitteeseen&lt;/a>&amp;nbsp;eliminoida C-hepatiitti maailmasta merkittävänä terveysongelmana vuoteen 2030 mennessä. Osoitus siitä on myös &lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/bitstream/handle/10024/165042/Paaministeri-Petteri-Orpon-hallituksen-ohjelma-20062023.pdf?sequence=1&amp;amp;isAllowed=y&quot; target=&quot;_blank&quot;>hallitusohjelmaan kirjattu hanke C-hepatiitin eliminointiohjelmasta&lt;/a>, joka tähtää taudin eliminointiin Suomesta terveysongelmana vuoteen 2027 mennessä. Myös&amp;nbsp;&lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/bitstream/handle/10024/78923/C-hepatiittistrategia_.pdf?sequence=1&amp;amp;isAllowed=y&quot; title=&quot;Suomen kansallinen C-hepatiittistrategia&quot; target=&quot;_blank&quot;>Suomen kansallinen C-hepatiittistrategia&lt;/a>&amp;nbsp;ja&amp;nbsp;&lt;a href=&quot;https://www.julkari.fi/bitstream/handle/10024/138094/THL%20Ohjaus%204_2019_C-hepatiitin%20hoitopolku.pdf?sequence=1&amp;amp;isAllowed=y&quot; title=&quot;C-hepatiitin hoitosuositukset&quot; target=&quot;_blank&quot;>C-hepatiitin hoitosuositukset&lt;/a>&amp;nbsp;edellyttävät testauksen ja hoidon laajentamista.(4) (5) (7) (8) (11)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Tavoitteen saavuttaminen vaatii sitä, että tautia torjutaan siellä, missä se leviää eniten, eli pistohuumeiden käyttäjien keskuudessa.&amp;nbsp;Testausta ja hoitoa on tarjottava kaikille tartunnan saaneille, mutta erityisesti riskiryhmään kuuluville ihmisille.(4)&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Vain tartunnan saaneita testaamalla ja hoitamalla voidaan estää jatkotartunnat ja päästä taudista kokonaan eroon.(4)&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <container_copy_copy__1195946025
-                            cq:styleIds="[1653545825686,1653545847150]"
-                            jcr:created="{Date}2023-09-29T11:42:27.796-04:00"
-                            jcr:createdBy="jewitca"
-                            jcr:lastModified="{Date}2023-09-29T11:43:53.121-04:00"
-                            jcr:lastModifiedBy="jewitca"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/container/v2/container"
-                            backgroundColor="#F1F3FF">
-                            <title_237251642
-                                cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2023-09-29T11:41:09.761-04:00"
-                                jcr:createdBy="jewitca"
-                                jcr:lastModified="{Date}2024-03-28T02:53:02.246-04:00"
-                                jcr:lastModifiedBy="kumarvx60"
-                                jcr:primaryType="nt:unstructured"
-                                jcr:title="Tutustu terveydenhuollon ammattilaisten ja potilaiden kokemuksiin"
-                                sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h3"
-                                variant="h"/>
-                        </container_copy_copy__1195946025>
                         <video
-                            cq:styleIds="[1]"
-                            jcr:created="{Date}2024-03-28T02:54:25.863-04:00"
-                            jcr:createdBy="kumarvx60"
-                            jcr:lastModified="{Date}2024-03-28T02:59:08.054-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
+                            cq:styleIds="1"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/video/v2/video"
                             brightcoveAutoPlay="false"
@@ -402,73 +415,22 @@
                             videoType="youtube"
                             youtubeAutoPlay="true"
                             youtubeUrl="https://www.youtube-nocookie.com/embed/KZ_jeeYe2qk"/>
-                        <title_copy_copy_copy_1139606493
-                            cq:styleIds="[1659545825678,1661545829678,1651242825678]"
-                            jcr:lastModified="{Date}2024-03-28T03:05:39.531-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Jäähyväiset C-hepatiitille – iso pyörä pyörii Lahdessa"
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h1"
-                            variant="h"/>
-                        <text_copy_copy_copy__2074606423
-                            cq:styleIds="[1659545825678]"
-                            jcr:lastModified="{Date}2024-03-28T06:43:15.132-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;i>Kaikki hoidetaan. Niin päätettiin Lahdessa, jossa alettiin toteuttaa C-hepatiitin hoitopilottia terveysneuvontapiste Jelpissä. Konsepti on helppo sekä hoitavalle lääkärille että potilaalle.&lt;/i>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Valtaosa C-hepatiittiin sairastuneista on pistohuumeiden käyttäjiä. Potilaat eivät useimmiten saavu laboratoriotutkimuksiin tai lääkärin&amp;nbsp;vastaanotolle sovittuna aikana, eivätkä he hakeudu perussairaanhoidon tai erikoissairaanhoidon piiriin. Liian monella on kielteisiä&amp;nbsp;kokemuksia saamastaan kohtelusta. Tässä piilee ongelman ydin.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Päijät-Hämeen hyvinvointialueella toimiva ylilääkäri&amp;nbsp;on seurannut C-hepatiitin hoitoa koko työuransa ajan. Häntä&amp;nbsp;on askarruttanut se, miten Suomessa päästään eroon C-hepatiitista. Maailman terveysjärjestö WHO haluaa nitistää veriteitse leviävän virustaudin vuoteen 2030 mennessä.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>– Suomessa on reilu tuhat tartuntaa vuodessa, ja määrä on pysynyt hämmästyttävän samalla tasolla vuosittain. On keskeistä, että hoito&amp;nbsp;siirretään katutasolle, sillä ongelmaa ei ratkaista, ennen kuin pistohuumeiden käyttäjiä hoidetaan, hän sanoo.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>YHTEISTYÖ JA ASENNE – ONNISTUMISEN AVAIMET&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Ylilääkäri informoi C-hepatiittiongelmasta esimiehiään ja sai ison pyörän pyörimään. Lahti haluaa eliminoida C-hepatiittiviruksen WHO:n&amp;nbsp;asettamassa aikataulussa. Yhteistyötä aloitettiin toteuttamaan silloisen PHHYKY:n (Päijät-Hämeen hyvinvointikuntayhtymän) ja ViaDia Lahti ry:n kesken. Avainroolissa toimii ViaDian terveysneuvontapiste Jelppi, jossa viruksen kantajat asioivat arjessaan.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>– Tällainen toiminta vaatii yhteistyötä ja asennetta. Ilman tukea emme olisi saaneet Jelppiin testauslaitteita, emmekä budjettia läpi. Jos vain halutaan, päätetään ja tehdään, asiat ovat mahdollisia, ylilääkäri korostaa.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Jelpin ilmoitustaululle ilmestyi puhutteleva kutsu: ”Tule nyt C-hepatiitin virustestiin! Hoidamme sut kondikseen!” Se tehosi. Testeihin osallistui 147 asiakasta. Heistä 95 oli HCV-positiivisia ja 48 HCV-negatiivisia. Vuoden 2022 toukokuusta juhannukseen kestänyt pilotti ylitti odotukset.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Onnistumisen takasi Jelpin innostunut ja sitoutunut henkilökunta.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Lahden keskustassa sijaitseva terveysneuvontapiste Jelppi on helppo löytää. Jelpissä asioi päivittäin nelisenkymmentä asiakasta. Pistohuumeiden käyttäjät käyvät vaihtamassa käytetyt ruiskut ja neulat uusiin, he saavat inhimillistä kohtelua ja pientä purtavaa.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>– Olemme aloittaneet C-hepatiittihoidon jo 62 potilaalle, kertoo vastaava terveydenhoitaja.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Se on hieno saavutus ja osoitus siitä, että pilottiin osallistuneilla on ollut erittäin korkea motivaatio päästä eroon C-hepatiitista. Jelpissä työskentelevä terveydenhoitaja on työskennellyt pistohuumeidenkäyttäjien parissa vuosia, ja kun hänelle vihdoin avautui mahdollisuus C-hepatiitin eliminoimiseen ruohonjuuritasolla, hän innostui todella. Innostus on avainsana, kun asiakaskunta koostuu yhteiskunnan heikoimmista. Jelpissä he saavat ystävällistä, asiallista kohtelua ja heitä tuetaan yksilöllisesti.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>– Asiakkaat ovat voimaantuneita ja haluavat parantua. He tottuvat hakemaan lääkkeitä ja toimivat ennakoivasti. En ole ennen nähnyt sellaista vastuullisuutta.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>KAIKILLA ON OIKEUS HOITOON&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Pilotin alussa asiakkaat haastateltiin Jelpissä, heille tehtiin HCV-testi, HIV:n pikatesti ja maksan kunto mitattiin. B-hepatiittitesti piti tehdä laboratoriossa. Sen jälkeen silloisen PHHYKY:n perusterveydenhuollon tartuntataudeista vastaava lääkäri kävi tiedot läpi.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>– Hoitavan lääkärin näkökulmasta C-hepatiitin hoito on yksinkertaista. Vain harvoin on esteitä lääkehoidolle. Jelpistä tuli erittäin hyvät esitiedot, eikä hoitopäätöksen tekoon mennyt kauan, ylilääkäri toteaa.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Lahden pilotti on hänelle ylpeyden aihe.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>– Oli kauhean pysäyttävää kuulla, kun potilaat ihmettelivät, että aiotaanko heitäkin testata ja hoitaa. Ajattelin, että totta kai, olemme palveluammatissa. Jos haluamme, että tartuntojen määrä saadaan alaspäin, meidän on hoidettava pistohuumeringit, ei vain yksittäiset&amp;nbsp;käyttäjät. Paras ratkaisu olisi tehdä C-hepatiitin matalan kynnyksen hoidosta jatkuva käytäntö pilottien sijaan.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;i>Artikkelissa kuvailtu C-hepatiitin mikroeliminaatioprojekti toteuttiin Lahdessa vuonna 2022 yhteistyössä silloisen PHHYKY:n, ViaDia Lahti ry:n, THL:n ja AbbVien kanssa. Projektit ovat edelleen käynnissä Päijät-Hämeen hyvinvointialueella.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/i>&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
                         <text_copy_196805174__819927295
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-03-28T02:16:38.538-04:00"
-                            jcr:createdBy="kumarvx60"
-                            jcr:lastModified="{Date}2024-03-28T03:08:41.487-04:00"
-                            jcr:lastModifiedBy="kumarvx60"
+                            cq:styleIds="1659545825678"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p style=&quot;text-align: center;&quot;>LÄHTEET&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_copy_copy
                             cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2023-09-29T11:37:15.579-04:00"
-                            jcr:createdBy="jewitca"
-                            jcr:lastModified="{Date}2026-04-10T08:35:57.946-04:00"
+                            jcr:lastModified="{Date}2026-06-11T03:44:29.915-04:00"
                             jcr:lastModifiedBy="valiksx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: center;&quot;>(1) &lt;a href=&quot;https://thl.fi/aiheet/infektiotaudit-ja-rokotukset/taudit-ja-torjunta/taudit-ja-taudinaiheuttajat-a-o/hepatiitti-c&quot; target=&quot;_blank&quot;>THL: Hepatiitti C&lt;/a>&amp;nbsp;Viitattu 18.02.2026&lt;a title=&quot;THL:Hepatiitti C&quot; href=&quot;https://thl.fi/aiheet/infektiotaudit-ja-rokotukset/taudit-ja-torjunta/taudit-ja-taudinaiheuttajat-a-o/hepatiitti-c&quot; target=&quot;_blank&quot;>&lt;br>&#xa; &lt;/a>(2)&amp;nbsp;&lt;a href=&quot;https://www.terveyskirjasto.fi/dlk00451#s5&quot; target=&quot;_blank&quot;>Terveyskirjasto: Maksatulehdus (hepatiitti) aikuisilla&lt;/a>&lt;u>&amp;nbsp;&lt;/u>Viitattu 18.02.2026.&lt;br>&#xa;(3) &lt;a href=&quot;https://paihdelinkki.fi/tietopankki/huumehaittojen-vahentaminen/neulanvaihtopisteet/&quot; target=&quot;_blank&quot;>Päihdelinkki.fi: Neulanvaihtopisteet&lt;/a> Viitattu 18.02.2026.&lt;br>&#xa;(4)&amp;nbsp;&lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/handle/10024/78923&quot; target=&quot;_blank&quot;>Valtioneuvosto: Suomen C-hepatiittistrategia 2017–2019&lt;/a>&lt;u>&amp;nbsp;&lt;/u>Viitattu 18.02.2026.&lt;br>&#xa;(5)&amp;nbsp;&lt;a href=&quot;https://www.julkari.fi/bitstream/handle/10024/138094/THL%20Ohjaus%204_2019_C-hepatiitin%20hoitopolku.pdf?sequence=1&amp;amp;isAllowed=y&quot; target=&quot;_blank&quot;>THL: C-hepatiitin hoitopolku&lt;/a>&lt;u>&amp;nbsp;&lt;/u>Viitattu 18.02.2026.&lt;br>&#xa;(6)&amp;nbsp;&lt;a href=&quot;https://thl.fi/aiheet/infektiotaudit-ja-rokotukset/taudit-ja-torjunta/taudit-ja-taudinaiheuttajat-a-o/hepatiitti-c/hepatiitti-c-tapausten-esiintyvyys-suomessa&quot; target=&quot;_blank&quot;>THL: Hepatiitti C-tapausten esiintyvyys Suomessa&lt;/a>&lt;u>&amp;nbsp;&lt;/u>Viitattu 18.02.2026.&lt;br>&#xa;(7)&amp;nbsp;&lt;a href=&quot;https://www.who.int/news-room/fact-sheets/detail/hepatitis-c&quot; target=&quot;_blank&quot;>WHO: Hepatitis C&lt;/a>&lt;u>&amp;nbsp;&lt;/u>Viitattu 18.02.2026.&lt;br>&#xa;(8)&amp;nbsp;&lt;a href=&quot;https://www.epressi.com/tiedotteet/terveys/c-hepatiitti-on-yleisin-nuorilla-maailman-hepatiittipaiva-28.7..html&quot; target=&quot;_blank&quot;>Munuais- ja maksaliitto: C-hepatiitti on yleisin nuorilla – Maailman hepatiittipäivä 28.7.&lt;/a>&amp;nbsp;18.02.2026.&lt;br>&#xa;(9)&amp;nbsp;&lt;a href=&quot;https://www.youtube.com/watch?v=KZ_jeeYe2qk&quot; target=&quot;_blank&quot;>Video potilaiden ja terveydenhuollon ammattilaisen kokemuksista&lt;/a>&amp;nbsp;Viitattu 18.02.2026.&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>(10)&amp;nbsp;Sosiaali- ja terveysministeriö: Hallitusneuvottelut 2023 - STM:n hallitusneuvotteluihin toimittamat aineistot:&amp;nbsp;&lt;a href=&quot;https://stm.fi/documents/1271139/162762228/Tietopyynt%C3%B6+-+C-hepatiitin+eradikaatio+STM+ja+THL.pdf/20f774d7-6c3e-cdb4-8e99-f5782d943839/Tietopyynt%C3%B6+-+C-hepatiitin+eradikaatio+STM+ja+THL.pdf?version=1.0&amp;amp;t=1684942714082&quot; target=&quot;_blank&quot;>Tietopyyntö - C-hepatiitin eradikaatio STM ja THL Hallitusneuvottelu 2023 - Sosiaali- ja terveysministeriö (stm.fi)&lt;/a>&amp;nbsp;Viitattu&amp;nbsp;18.02.2026&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>(11) Valtioneuvosto:&amp;nbsp;&lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/handle/10024/165042&quot; target=&quot;_blank&quot;>Vahva ja välittävä Suomi : Pääministeri Petteri Orpon hallituksen ohjelma 20.6.2023&lt;/a>. s. 24. Viitattu 18.02.2026&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xa;"
+                            langAttribute="none"
+                            text="&lt;p style=&quot;text-align: center;&quot;>(1) &lt;a href=&quot;https://www.terveyskirjasto.fi/dlk00451#s5&quot;>Terveyskirjasto: Maksatulehdus (hepatiitti) aikuisilla&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;(2) &lt;a href=&quot;https://www.julkari.fi/server/api/core/bitstreams/05c18fd9-9a3c-453b-a763-da626a3c6442/content&quot;>THL: C-hepatiitin hoitopolku&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;(3) &lt;a href=&quot;https://paihdelinkki.fi/tietopankki/huumehaittojen-vahentaminen/neulanvaihtopisteet/&quot;>Päihdelinkki.fi: Neulanvaihtopisteet&lt;/a>&amp;nbsp;Viitattu 09.06.2026&lt;br>&#xd;&#xa;(4)&amp;nbsp;&amp;nbsp;&lt;a href=&quot;https://stm.fi/-/hallitus-kaynnistaa-ohjelman-c-hepatiitin-eliminoimiseksi&quot;>Sosiaali- ja terveysministeriö: Hallitus käynnistää ohjelman C-hepatiitin eliminoimiseksi&lt;/a>. Tiedote 4.2.2025. Viitattu 09.06.2026&lt;br>&#xd;&#xa;(5) Sosiaali- ja terveysministeriö: Hallitusneuvottelut 2023 - STM:n hallitusneuvotteluihin toimittamat aineistot: &lt;a href=&quot;https://stm.fi/documents/1271139/162762228/Tietopyynt%C3%B6+-+C-hepatiitin+eradikaatio+STM+ja+THL.pdf/20f774d7-6c3e-cdb4-8e99-f5782d943839/Tietopyynt%C3%B6+-+C-hepatiitin+eradikaatio+STM+ja+THL.pdf?version=1.0&amp;amp;t=1684942714082&quot;>Tietopyyntö - C-hepatiitin eradikaatio STM ja THL&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;(6) &lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/server/api/core/bitstreams/43d0f69e-91d2-4e2e-9c79-9fef82167d89/content&quot;>Valtioneuvosto: Suomen C-hepatiittistrategia 2017–2019&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;(7) &lt;a href=&quot;https://iris.who.int/server/api/core/bitstreams/6f6caedc-37a0-49ee-a02a-df9c3b78ff42/content&quot;>WHO: Global hepatitis report 2026&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;(8) &lt;a href=&quot;https://julkaisut.valtioneuvosto.fi/server/api/core/bitstreams/a89b334b-2f1e-4b41-bd97-ff91a7449a7a/content&quot;>Valtioneuvosto: Vahva ja välittävä Suomi&lt;/a>: Pääministeri Petteri Orpon hallituksen ohjelma 20.6.2023. s. 24. Viitattu 09.06.2026&lt;br>&#xd;&#xa;(9) &lt;a href=&quot;https://nida.nih.gov/research-topics/viral-hepatitis&quot;>NIH National Institute on Drug Abuse: Viral Hepatitis&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;(10) &lt;a href=&quot;https://www.julkari.fi/server/api/core/bitstreams/c9dc1521-0e86-4f14-90e7-dd59b2da1e08/content&quot;>THL: Tartuntataudit Suomessa 2023&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;(11) &lt;a href=&quot;https://www.youtube.com/watch?v=KZ_jeeYe2qk&quot;>Video potilaiden ja terveydenhuollon ammattilaisen kokemuksista&lt;/a> Viitattu 09.06.2026&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                    </container2_copy>
-                    <grid_1839283064_copy
-                        jcr:created="{Date}2022-11-21T16:08:15.932-05:00"
-                        jcr:createdBy="chiucx"
-                        jcr:lastModified="{Date}2022-11-21T16:08:39.533-05:00"
-                        jcr:lastModifiedBy="chiucx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                        rowCount="1">
-                        <columns jcr:primaryType="nt:unstructured">
-                            <item0
-                                jcr:primaryType="nt:unstructured"
-                                columnWidth="6"
-                                dataPriority="1"/>
-                            <item1
-                                jcr:primaryType="nt:unstructured"
-                                columnWidth="1"
-                                dataPriority="1"/>
-                            <item2
-                                jcr:primaryType="nt:unstructured"
-                                columnWidth="5"
-                                dataPriority="1"/>
-                        </columns>
-                        <par_11
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="wcm/foundation/components/parsys"/>
-                        <par_13
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="wcm/foundation/components/parsys"/>
-                    </grid_1839283064_copy>
+                    </container>
                     <grid_1839283064_copy_2044451935
                         jcr:created="{Date}2022-11-21T16:08:15.932-05:00"
                         jcr:createdBy="chiucx"
@@ -573,11 +535,12 @@
                                 cq:styleIds="[1659545825678]"
                                 jcr:created="{Date}2022-11-07T18:20:48.523-05:00"
                                 jcr:createdBy="chiucx"
-                                jcr:lastModified="{Date}2024-11-11T06:51:05.156-05:00"
-                                jcr:lastModifiedBy="COLLINX1"
+                                jcr:lastModified="{Date}2026-06-15T03:56:39.071-04:00"
+                                jcr:lastModifiedBy="valiksx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;b>AbbVie&amp;nbsp;&lt;/b>kehittää uusia hoitoja vakaviin sairauksiin. Teemme töitä sen eteen, että jokainen C-hepatiittia sairastava hoidetaan ja kohdataan aina ihmisenä – huolineen, tunteineen ja toiveineen. Parasta potilaskeskeisyyttä on ihmiskeskeisyys.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.fi/&quot;>www.abbvie.fi&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>FI-VHCV-220065/11.2024&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>&lt;b>AbbVie&amp;nbsp;&lt;/b>kehittää uusia hoitoja vakaviin sairauksiin. Teemme töitä sen eteen, että jokainen C-hepatiittia sairastava hoidetaan ja kohdataan aina ihmisenä – huolineen, tunteineen ja toiveineen. Parasta potilaskeskeisyyttä on ihmiskeskeisyys.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://www.abbvie.fi/&quot;>www.abbvie.fi&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>FI-VHCV-220065/6.2026&lt;/sup>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </par_13>
                     </grid_1839283064_copy_1728061076>

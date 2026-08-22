@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-05-26T02:36:29.935-04:00"
-        cq:lastModifiedBy="klavimx"
+        cq:lastModified="{Date}2026-06-29T11:50:19.866-04:00"
+        cq:lastModifiedBy="singarx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
         jcr:lastModified="{Date}2024-10-14T11:57:18.494-04:00"
@@ -11,7 +11,7 @@
         jcr:mixinTypes="[mix:lockable,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Presse"
-        jcr:uuid="62f16b06-a4de-4cd3-9f79-47519def30d2"
+        jcr:uuid="25990c45-70ff-4964-a8c7-2bab3865a310"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Presse"
         description="Willkommen im Newsbereich! Hier finden Sie aktuelle Pressemeldungen, Bilder sowie den Pressekontakt des Biopharma-Unternehmens AbbVie in Österreich."
@@ -74,333 +74,36 @@
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
                                 text="&lt;p>Willkommen in unserem Pressebereich! Hier findet ihr Medienkontakte, aktuelle News und weiterführende Dokumente.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
-                            <separator
-                                cq:styleIds="[1662756486159]"
-                                jcr:created="{Date}2024-07-17T15:22:29.686-04:00"
-                                jcr:createdBy="washidx10"
-                                jcr:lastModified="{Date}2024-07-17T15:22:29.686-04:00"
-                                jcr:lastModifiedBy="washidx10"
+                            <separator_1313990998
+                                jcr:created="{Date}2026-06-29T10:57:22.188-04:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-06-29T10:57:22.188-04:00"
+                                jcr:lastModifiedBy="singarx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <header
-                                jcr:created="{Date}2024-12-16T09:04:16.933-05:00"
-                                jcr:createdBy="klavimx"
-                                jcr:lastModified="{Date}2024-12-16T09:04:24.616-05:00"
-                                jcr:lastModifiedBy="klavimx"
+                            <tagsutilitynavcomp
+                                jcr:created="{Date}2026-06-29T10:57:36.097-04:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-06-29T11:47:48.152-04:00"
+                                jcr:lastModifiedBy="singarx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/header/v2/header"
-                                eyebrow="Pressemitteilungen nach Jahren"/>
-                            <title_1355699557_cop_1807507909
-                                cq:styleIds="[1659545825678,1661545829678,1651545825694]"
-                                jcr:created="{Date}2024-08-06T02:04:20.983-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2026-03-30T03:46:31.502-04:00"
-                                jcr:lastModifiedBy="klavimx"
+                                sling:resourceType="abbvie-com2/components/tagsutilitynavcomp"
+                                searchIcon="/content/dam/abbvie-com2/icons/Icon Search.svg"/>
+                            <editorialfeed
+                                jcr:created="{Date}2026-06-29T10:57:52.120-04:00"
+                                jcr:createdBy="singarx"
+                                jcr:lastModified="{Date}2026-06-29T10:59:07.856-04:00"
+                                jcr:lastModifiedBy="singarx"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="2026"
-                                sling:resourceType="abbvie-com2/components/title/v2/title"
-                                langAttribute="none"
-                                type="h2"
-                                variant="h"/>
-                            <linklist_copy_copy_c
-                                cq:panelTitle="2024"
-                                cq:styleIds="[1663000046218,1]"
-                                jcr:created="{Date}2024-08-07T08:04:42.048-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2026-05-26T02:36:29.897-04:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
-                                childDepth="1"
-                                excludeCurrentPage="true"
-                                linkItems="true"
-                                linksTarget="_self"
-                                listFrom="children"
-                                orderBy="tree"
-                                parentPage="/content/abbvie-com2/at/de/wer-wir-sind/presse/2026"
-                                showDate="false"
-                                showDesc="false"
-                                showSubtitle="false"
-                                showTags="false"
-                                sortOrder="desc"
-                                tagsMatch="any"
-                                textIsRich="[true,true,true,true,true,true,true]">
-                                <pages jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/oegr-publikationspreis"
-                                        oneTrustEnabled="false"
-                                        text="ÖGR Publikationspreis 2024"
-                                        textIconTarget="_self"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/abbvie-wurde-mit-dem-auva-guetesiegel-ausgezeichnet"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie wurde mit dem AUVA-Gütesiegel ausgezeichnet"
-                                        textIconTarget="_self"/>
-                                    <item2
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/abbvie-unterschreibt-charta-der-vielfalt"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie unterschreibt Charta der Vielfalt"
-                                        textIconTarget="_self"/>
-                                    <item3
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/neurodermitis-umfrage-2024"
-                                        oneTrustEnabled="false"
-                                        text="Ergebnisse aus einer österreichweiten Neurodermitis-Umfrage"
-                                        textIconTarget="_self"/>
-                                    <item4
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/great-place-to-work-2024"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie ist und bleibt ein &quot;Great Place to Work®&quot;"
-                                        textIconTarget="_self"/>
-                                    <item5
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/josef-smolle-abbvie-2024"
-                                        oneTrustEnabled="false"
-                                        text="NAbg. und ÖVP Gesundheitssprecher Josef Smolle besucht AbbVie"
-                                        textIconTarget="_self"/>
-                                    <item6
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/parkinson-2024"
-                                        oneTrustEnabled="false"
-                                        text="Morbus Parkinson - Handlungsbedarf bei fortgeschrittener Erkrankung"
-                                        textIconTarget="_self"/>
-                                </pages>
-                            </linklist_copy_copy_c>
-                            <separator_1247284048_335129381
-                                cq:styleIds="[1662756423318]"
-                                jcr:created="{Date}2024-12-16T09:04:55.373-05:00"
-                                jcr:createdBy="klavimx"
-                                jcr:lastModified="{Date}2024-12-16T09:04:55.373-05:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <title_1355699557_cop_208605235
-                                cq:styleIds="[1659545825678,1661545829678,1651545825694]"
-                                jcr:created="{Date}2024-08-06T02:04:20.983-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2025-01-17T06:14:19.355-05:00"
-                                jcr:lastModifiedBy="CATEMJX"
-                                jcr:primaryType="nt:unstructured"
-                                jcr:title="2025"
-                                sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h2"
-                                variant="h"/>
-                            <linklist_copy_copy
-                                cq:panelTitle="2024"
-                                cq:styleIds="[1663000046218,1]"
-                                jcr:created="{Date}2024-08-07T08:04:42.048-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2025-11-06T12:21:14.574-05:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
-                                childDepth="1"
-                                excludeCurrentPage="true"
-                                linkItems="true"
-                                listFrom="children"
-                                orderBy="tree"
-                                parentPage="/content/abbvie-com2/at/de/wer-wir-sind/presse/2025"
-                                sortOrder="desc"
-                                tagsMatch="any"
-                                textIsRich="[true,true,true,true,true,true,true]">
-                                <pages jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/oegr-publikationspreis"
-                                        oneTrustEnabled="false"
-                                        text="ÖGR Publikationspreis 2024"
-                                        textIconTarget="_self"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/abbvie-wurde-mit-dem-auva-guetesiegel-ausgezeichnet"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie wurde mit dem AUVA-Gütesiegel ausgezeichnet"
-                                        textIconTarget="_self"/>
-                                    <item2
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/abbvie-unterschreibt-charta-der-vielfalt"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie unterschreibt Charta der Vielfalt"
-                                        textIconTarget="_self"/>
-                                    <item3
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/neurodermitis-umfrage-2024"
-                                        oneTrustEnabled="false"
-                                        text="Ergebnisse aus einer österreichweiten Neurodermitis-Umfrage"
-                                        textIconTarget="_self"/>
-                                    <item4
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/great-place-to-work-2024"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie ist und bleibt ein &quot;Great Place to Work®&quot;"
-                                        textIconTarget="_self"/>
-                                    <item5
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/josef-smolle-abbvie-2024"
-                                        oneTrustEnabled="false"
-                                        text="NAbg. und ÖVP Gesundheitssprecher Josef Smolle besucht AbbVie"
-                                        textIconTarget="_self"/>
-                                    <item6
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/parkinson-2024"
-                                        oneTrustEnabled="false"
-                                        text="Morbus Parkinson - Handlungsbedarf bei fortgeschrittener Erkrankung"
-                                        textIconTarget="_self"/>
-                                </pages>
-                            </linklist_copy_copy>
-                            <separator_1247284048_1149766500
-                                cq:styleIds="[1662756423318]"
-                                jcr:created="{Date}2024-12-16T09:04:55.373-05:00"
-                                jcr:createdBy="klavimx"
-                                jcr:lastModified="{Date}2024-12-16T09:04:55.373-05:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <title_1355699557_cop_173277797
-                                cq:styleIds="[1659545825678,1661545829678,1651545825694]"
-                                jcr:created="{Date}2024-08-06T02:04:20.983-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2024-12-16T09:04:41.494-05:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                jcr:title="2024"
-                                sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h2"
-                                variant="h"/>
-                            <linklist_copy
-                                cq:panelTitle="2024"
-                                cq:styleIds="[1663000046218,1]"
-                                jcr:created="{Date}2024-08-07T08:04:42.048-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2025-11-06T12:19:22.967-05:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
-                                childDepth="1"
-                                excludeCurrentPage="true"
-                                linkItems="true"
-                                listFrom="children"
-                                parentPage="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024"
-                                sortOrder="asc"
-                                tagsMatch="any"
-                                textIsRich="[true,true,true,true,true,true,true]">
-                                <pages jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/oegr-publikationspreis"
-                                        oneTrustEnabled="false"
-                                        text="ÖGR Publikationspreis 2024"
-                                        textIconTarget="_self"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/abbvie-wurde-mit-dem-auva-guetesiegel-ausgezeichnet"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie wurde mit dem AUVA-Gütesiegel ausgezeichnet"
-                                        textIconTarget="_self"/>
-                                    <item2
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/abbvie-unterschreibt-charta-der-vielfalt"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie unterschreibt Charta der Vielfalt"
-                                        textIconTarget="_self"/>
-                                    <item3
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/neurodermitis-umfrage-2024"
-                                        oneTrustEnabled="false"
-                                        text="Ergebnisse aus einer österreichweiten Neurodermitis-Umfrage"
-                                        textIconTarget="_self"/>
-                                    <item4
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/great-place-to-work-2024"
-                                        oneTrustEnabled="false"
-                                        text="AbbVie ist und bleibt ein &quot;Great Place to Work®&quot;"
-                                        textIconTarget="_self"/>
-                                    <item5
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/josef-smolle-abbvie-2024"
-                                        oneTrustEnabled="false"
-                                        text="NAbg. und ÖVP Gesundheitssprecher Josef Smolle besucht AbbVie"
-                                        textIconTarget="_self"/>
-                                    <item6
-                                        jcr:primaryType="nt:unstructured"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2024/parkinson-2024"
-                                        oneTrustEnabled="false"
-                                        text="Morbus Parkinson - Handlungsbedarf bei fortgeschrittener Erkrankung"
-                                        textIconTarget="_self"/>
-                                </pages>
-                            </linklist_copy>
-                            <separator_1247284048_247679979
-                                cq:styleIds="[1662756423318]"
-                                jcr:created="{Date}2024-12-16T09:04:55.373-05:00"
-                                jcr:createdBy="klavimx"
-                                jcr:lastModified="{Date}2024-12-16T09:04:55.373-05:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <separator_copy
-                                cq:styleIds="[1662756502570]"
-                                jcr:created="{Date}2024-07-17T15:22:29.686-04:00"
-                                jcr:createdBy="washidx10"
-                                jcr:lastModified="{Date}2024-10-14T09:57:30.345-04:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <title_1355699557_cop
-                                cq:styleIds="[1659545825678,1651545825693]"
-                                jcr:created="{Date}2024-08-06T02:04:20.983-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2024-10-14T09:54:15.128-04:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                jcr:title="Pressekontakt AbbVie Österreich"
-                                sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h2"
-                                variant="h"/>
-                            <title_1355699557_cop_168776117
-                                cq:styleIds="[1659545825678,1661545829678,1651545825694]"
-                                jcr:created="{Date}2024-08-06T02:04:20.983-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2024-10-14T09:56:17.727-04:00"
-                                jcr:lastModifiedBy="klavimx"
-                                jcr:primaryType="nt:unstructured"
-                                jcr:title="Mag. Judith Kunczier"
-                                sling:resourceType="abbvie-com2/components/title/v2/title"
-                                type="h2"
-                                variant="h"/>
-                            <text_723103843
-                                jcr:created="{Date}2024-08-07T09:30:49.711-04:00"
-                                jcr:createdBy="HERZOBW"
-                                jcr:lastModified="{Date}2024-08-13T09:10:28.137-04:00"
-                                jcr:lastModifiedBy="HERZOBW"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>External Affairs Director&lt;br>&#xd;&#xa;E-mail:&amp;nbsp;&lt;a href=&quot;mailto:presse.at@abbvie.com&quot;>presse.at@abbvie.com&lt;/a>&lt;br>&#xd;&#xa;Mobil: +43 664 60589 340&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
+                                sling:resourceType="abbvie-com2/components/editorialfeed/v1/editorialfeed"
+                                hideDate="false"
+                                hideDesc="false"
+                                hideImage="false"
+                                hideTags="false"
+                                id="link-news-pr-section"
+                                listFrom="newsPR"
+                                newsParentPage="/content/abbvie-com2/at/de/wer-wir-sind/presse"
+                                tagsMatch="any"/>
                         </container3>
                     </container2>
                     <separator_copy
@@ -421,7 +124,21 @@
             </responsivegrid>
         </root>
     </jcr:content>
-    <_x0032_024/>
-    <_x0032_025/>
-    <_x0032_026/>
+    <archive/>
+    <oegr-publikationspreis/>
+    <neurodermitis-umfrage-2024/>
+    <great-place-to-work-2024/>
+    <josef-smolle-abbvie-2024/>
+    <parkinson-2024/>
+    <abbvie-unterschreibt-charta-der-vielfalt/>
+    <abbvie-wurde-mit-dem-auva-guetesiegel-ausgezeichnet/>
+    <versorgung-und-lebensqualitaet-bei-psoriasis/>
+    <rheuma-in-oesterreich/>
+    <great-place-to-work-2025/>
+    <welt-ced-tag/>
+    <vortrag-leben-mit-parkinson/>
+    <gptw-for-women/>
+    <geschaeftsfuehrung/>
+    <great-place-to-work/>
+    <geraetetherapieoptionen-kommen-zu-spaet/>
 </jcr:root>

@@ -900,6 +900,24 @@ function containerHasWidthStyle(node) {
   return ids.some(id => WIDTH_STYLE_IDS.has(id));
 }
 
+// Returns true when a container holds BOTH a direct teaser component AND a direct grid,
+// at any depth through layout wrappers (but not through nested containers).
+// Used in `scan` to detect the pattern: bg-color container { teaser + grid_953894820 }
+// where the teaser must become its own standalone section before the grid runs.
+function containerHasTeaserAndGrid(node) {
+  let hasTeaser = false, hasGrid = false;
+  (function walk(n) {
+    for (const [, child] of childEntries(n)) {
+      const rt = RT(child);
+      if (isGrid(rt)) { hasGrid = true; continue; }
+      if (!rt || isLayoutWrapper(rt)) { walk(child); continue; }
+      if (isContainer(rt)) continue; // don't cross nested containers
+      if (componentMap[rt]?.edsType === 'teaser') { hasTeaser = true; continue; }
+    }
+  })(node);
+  return hasTeaser && hasGrid;
+}
+
 const bgClass = node => {
   const c = (node['@backgroundColor'] || '').replace('#', '').toLowerCase();
   return (c && c !== 'ffffff') ? `bg-${c}` : '';
@@ -1845,6 +1863,30 @@ function emitNode(node, sections) {
       }
       const secProps = { style_customDynamicClass: secClasses.join(',') };
       Object.assign(secProps, bgImageProps(node));
+      // Rule 7: before emitting the card/fact grid as a section, emit any direct leaf
+      // components (e.g. teaser) that are siblings of the grid as their own standalone
+      // sections — they were authored before the grid and must appear in document order.
+      // These leaf sections must NOT carry the prebuilt grid template class (grid-full-page-*)
+      // since that class belongs only on the card/fact-card grid section itself.
+      const GRID_TEMPLATE_RE_LEAF = /^grid-(?:full-page|half-page|meganav)-/;
+      const leafSecClasses = splitCls([secProps.style_customDynamicClass])
+        .filter(c => !GRID_TEMPLATE_RE_LEAF.test(c));
+      // Rule: single-block section with bg-color → ensure section-padding
+      const leafHasBg = leafSecClasses.some(c => /^bg-/.test(c));
+      if (leafHasBg && !leafSecClasses.includes('section-padding')) leafSecClasses.push('section-padding');
+      const leafSecProps = { style_customDynamicClass: leafSecClasses.join(',') };
+      (function emitRule7DirectLeaves(n) {
+        for (const [, child] of childEntries(n)) {
+          const crt = RT(child);
+          if (isGrid(crt)) continue; // grids handled separately below
+          if (!crt || isLayoutWrapper(crt)) { emitRule7DirectLeaves(child); continue; }
+          if (isXF(crt)) continue;
+          if (isContainer(crt)) continue; // nested containers — skip
+          const leafBlocks = mapLeafExpanded(child);
+          if (leafBlocks.length) sections.push({ type: 'section', props: leafSecProps, blocks: leafBlocks });
+        }
+      })(node);
+
       // Rule 7: flatten all grid cells into plain sibling blocks (NO inner-grid controller).
       // The EDS twin places card/fact blocks as direct children of the section, with the
       // grid-full-page-* template class on the section itself — not wrapped in an inner-grid.
@@ -2097,6 +2139,12 @@ function emitNode(node, sections) {
               const igBlocks = [];
               collectCellLeaves(child, igBlocks, 0, '');
               trailing.push(...igBlocks);
+            } else if (containerHasTeaserAndGrid(child)) {
+              // A nested bg-color container that holds BOTH a teaser AND a grid:
+              // recurse into scan so the teaser gets emitted as its own standalone
+              // section (the teaser branch fires correctly), then the grid is handled.
+              flushGridBand();
+              scan(child, scopes);
             } else {
               collectLeaves(child, buf());
             }

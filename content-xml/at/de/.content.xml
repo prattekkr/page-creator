@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="/conf/abbvie-com2/settings/wcm/templates/(?!(xf-|home-)).*"
-        cq:lastModified="{Date}2026-05-21T03:50:19.684-04:00"
+        cq:lastModified="{Date}2026-08-13T04:18:50.092-04:00"
         cq:lastModifiedBy="klavimx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/home-page-template"
         jcr:description="AbbVie ist ein globales BioPharma-Unternehmen, das auf die Erforschung und Entwicklung innovativer Therapien spezialisiert ist."
@@ -11,7 +11,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="DE"
-        jcr:uuid="4ddf42c8-59a1-4698-8cf1-3ab63131fb52"
+        jcr:uuid="3752f10d-b169-4830-8317-3070311a040e"
         sling:resourceType="abbvie-com2/components/homepage"
         dateFormat="dd MMMM YYYY"
         gtmid="GTM-K9C974N"
@@ -71,150 +71,6 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
                         backgroundColor="#FFFFFF">
-                        <grid
-                            cq:styleIds="[0,1653545835880]"
-                            jcr:lastModified="{Date}2024-12-13T03:24:21.679-05:00"
-                            jcr:lastModifiedBy="klavimx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                            rowCount="1">
-                            <par_11
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/foundation/components/parsys">
-                                <header_copy
-                                    jcr:created="{Date}2022-12-20T20:02:08.777-05:00"
-                                    jcr:createdBy="millicx"
-                                    jcr:lastModified="{Date}2024-05-15T13:26:30.114-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/header/v2/header"
-                                    eyebrow="PRESSEMITTEILUNGEN"/>
-                                <separator_copy
-                                    cq:styleIds="[1662756756047]"
-                                    jcr:created="{Date}2022-12-20T20:03:13.486-05:00"
-                                    jcr:createdBy="millicx"
-                                    jcr:lastModified="{Date}2022-12-20T20:03:13.486-05:00"
-                                    jcr:lastModifiedBy="millicx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                                <separator_299972972_
-                                    cq:styleIds="[1662756423318]"
-                                    jcr:created="{Date}2022-12-20T20:03:49.717-05:00"
-                                    jcr:createdBy="millicx"
-                                    jcr:lastModified="{Date}2022-12-20T20:03:49.717-05:00"
-                                    jcr:lastModifiedBy="millicx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                                <carousel
-                                    cq:styleIds="[3]"
-                                    jcr:created="{Date}2024-08-07T08:17:01.641-04:00"
-                                    jcr:createdBy="HERZOBW"
-                                    jcr:lastModified="{Date}2026-05-21T03:50:01.213-04:00"
-                                    jcr:lastModifiedBy="klavimx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
-                                    accessibilityAutoItemTitles="false"
-                                    autopauseDisabled="false"
-                                    autoplay="false"
-                                    carouselType="static"
-                                    delay="5000"
-                                    noOfItems="6"
-                                    rssFeedUrl="/content/abbvie-com2/at/de/wer-wir-sind/presse/2025">
-                                    <item_1779349716898
-                                        cq:panelTitle="Great Place to Work "
-                                        jcr:lastModified="{Date}2026-05-21T03:50:19.666-04:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                        hideImage="true"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2026/great-place-to-work"
-                                        openInNewTab="false"/>
-                                    <item_1774857281113
-                                        cq:panelTitle="Ger�tegest�tzte Therapieoptionen kommen oft zu sp�t ins Spiel"
-                                        jcr:lastModified="{Date}2026-03-30T03:56:08.197-04:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                        hideImage="true"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2026/geraetetherapieoptionen-kommen-zu-spaet"
-                                        openInNewTab="false"/>
-                                    <item_1760620062714
-                                        cq:panelTitle="Versorgung und Lebensqualit?t bei Psoriasis"
-                                        jcr:lastModified="{Date}2026-03-30T03:55:55.939-04:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                        hideImage="true"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2025/versorgung-und-Lebensqualitaet-bei-psoriasis"
-                                        openInNewTab="false"/>
-                                    <item_1762780465233
-                                        cq:panelTitle="Rheuma in �sterreich"
-                                        jcr:lastModified="{Date}2025-11-10T08:14:51.756-05:00"
-                                        jcr:lastModifiedBy="klavimx"
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                        hideImage="true"
-                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/presse/2025/rheuma-in-oesterreich"
-                                        openInNewTab="false"/>
-                                </carousel>
-                            </par_11>
-                            <par_12
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/foundation/components/parsys"/>
-                            <par_13
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/foundation/components/parsys">
-                                <header_copy_copy
-                                    jcr:created="{Date}2022-12-20T20:02:08.777-05:00"
-                                    jcr:createdBy="millicx"
-                                    jcr:lastModified="{Date}2024-05-15T13:26:21.233-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/header/v2/header"
-                                    eyebrow="NEUES"/>
-                                <separator_copy_copy
-                                    cq:styleIds="[1662756756047]"
-                                    jcr:created="{Date}2022-12-20T20:03:13.486-05:00"
-                                    jcr:createdBy="millicx"
-                                    jcr:lastModified="{Date}2022-12-20T20:03:13.486-05:00"
-                                    jcr:lastModifiedBy="millicx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                                <separator_299972972_
-                                    cq:styleIds="[1662756423318]"
-                                    jcr:created="{Date}2022-12-20T20:03:49.717-05:00"
-                                    jcr:createdBy="millicx"
-                                    jcr:lastModified="{Date}2022-12-20T20:03:49.717-05:00"
-                                    jcr:lastModifiedBy="millicx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                                <cardpagestory_copy
-                                    cq:styleIds="[1111111111110,1111111111113,1111111111119,1111111111119,1111111111120,1111111111128]"
-                                    jcr:created="{Date}2022-12-20T20:05:16.533-05:00"
-                                    jcr:createdBy="millicx"
-                                    jcr:lastModified="{Date}2025-11-06T09:34:02.622-05:00"
-                                    jcr:lastModifiedBy="klavimx"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
-                                    hideImage="true"
-                                    linkURL="/content/abbvie-com2/at/de/wer-wir-sind/neues/week-of-possibilities-2024"
-                                    openInNewTab="false"/>
-                            </par_13>
-                            <columns jcr:primaryType="nt:unstructured">
-                                <item0
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="4"
-                                    dataPriority="1"/>
-                                <item1
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="1"
-                                    dataPriority="3"/>
-                                <item2
-                                    jcr:primaryType="nt:unstructured"
-                                    columnWidth="7"
-                                    dataPriority="2"/>
-                            </columns>
-                        </grid>
                         <separator_1773126831
                             cq:styleIds="[1662756409908]"
                             jcr:created="{Date}2023-01-31T16:39:18.862-05:00"
@@ -224,6 +80,108 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/separator/v2/separator"
                             id="section01"/>
+                        <grid_1971954928
+                            cq:styleIds="[1653545835880]"
+                            jcr:created="{Date}2026-06-29T11:59:50.474-04:00"
+                            jcr:createdBy="singarx"
+                            jcr:lastModified="{Date}2026-06-29T12:00:16.734-04:00"
+                            jcr:lastModifiedBy="singarx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="6"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_12
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <header_copy_copy_cop
+                                    jcr:created="{Date}2022-12-20T20:02:08.777-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2024-05-15T13:26:21.233-04:00"
+                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="NEUES"/>
+                                <carousel
+                                    cq:styleIds="[3,4]"
+                                    jcr:created="{Date}2026-08-13T04:13:19.746-04:00"
+                                    jcr:createdBy="klavimx"
+                                    jcr:lastModified="{Date}2026-08-13T04:17:18.767-04:00"
+                                    jcr:lastModifiedBy="klavimx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/carousel/v2/carousel"
+                                    accessibilityAutoItemTitles="false"
+                                    autopauseDisabled="false"
+                                    autoplay="false"
+                                    carouselType="static"
+                                    delay="5000"
+                                    noOfItems="3">
+                                    <cardpagestory_copy_c
+                                        cq:panelTitle="GPTW"
+                                        cq:styleIds="[1111111111110,1111111111113,1111111111119,1111111111119,1111111111120,1111111111128]"
+                                        jcr:created="{Date}2022-12-20T20:05:16.533-05:00"
+                                        jcr:createdBy="millicx"
+                                        jcr:lastModified="{Date}2026-08-13T04:17:37.312-04:00"
+                                        jcr:lastModifiedBy="klavimx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                        hideImage="true"
+                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/neues/gptw-2026"
+                                        openInNewTab="false"/>
+                                    <item_1786608855154
+                                        cq:panelTitle="MY LIFE-Darmgesundheitstag"
+                                        jcr:lastModified="{Date}2026-08-13T04:15:24.862-04:00"
+                                        jcr:lastModifiedBy="klavimx"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                        hideImage="true"
+                                        linkURL="/content/abbvie-com2/at/de/wer-wir-sind/neues/my-life-darmgesundheitstag"
+                                        openInNewTab="false"/>
+                                </carousel>
+                            </par_12>
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <header_copy_copy
+                                    jcr:created="{Date}2022-12-20T20:02:08.777-05:00"
+                                    jcr:createdBy="millicx"
+                                    jcr:lastModified="{Date}2024-05-15T13:26:30.114-04:00"
+                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/header/v2/header"
+                                    eyebrow="PRESSEMITTEILUNGEN"/>
+                                <linklist
+                                    cq:styleIds="[1761288114980,1]"
+                                    jcr:created="{Date}2026-06-29T12:01:12.749-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-08-13T04:16:02.520-04:00"
+                                    jcr:lastModifiedBy="klavimx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                    childDepth="1"
+                                    excludeCurrentPage="true"
+                                    linkItems="true"
+                                    linksTarget="_self"
+                                    listFrom="children"
+                                    maxItems="5"
+                                    orderBy="published"
+                                    parentPage="/content/abbvie-com2/at/de/wer-wir-sind/presse"
+                                    showDate="true"
+                                    showDesc="false"
+                                    showSubtitle="false"
+                                    showTags="false"
+                                    sortOrder="desc"
+                                    tagsMatch="any"/>
+                            </par_11>
+                        </grid_1971954928>
                     </container>
                     <teaser_copy
                         jcr:created="{Date}2022-12-20T20:12:05.395-05:00"
@@ -788,6 +746,7 @@
     </jcr:content>
     <privacy/>
     <contact-us/>
+    <impressium0/>
     <wer-wir-sind/>
     <forschung/>
     <patient-innen/>

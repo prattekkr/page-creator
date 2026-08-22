@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-06-17T10:34:02.160-04:00"
+        cq:lastModified="{Date}2026-08-14T14:30:16.557-04:00"
         cq:lastModifiedBy="VALENSX5"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="Learn more about who we are through captivating stories, videos and key perspectives from our leaders. "
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Our Stories"
-        jcr:uuid="2a5e04c3-da55-40e3-bd1e-c2465a024a96"
+        jcr:uuid="dd95d31d-9a2e-4e59-b73c-c31d705faa63"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Read more"
         ctaText="Read more"
@@ -56,7 +56,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
                             hideImage="false"
-                            linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/the-answer-is-Inside-you-the-complexities-of-autoimmune-research"
+                            linkURL="/content/abbvie-com2/us/en/who-we-are/our-stories/the-answer-is-inside-you-the-complexities-of-autoimmune-research"
                             openInNewTab="false"/>
                     </carousel>
                     <separator_656126203__489585343
@@ -230,10 +230,14 @@
                             <editorialfeed_copy
                                 jcr:created="{Date}2023-01-09T11:57:57.009-05:00"
                                 jcr:createdBy="chiucx"
-                                jcr:lastModified="{Date}2024-09-25T11:01:20.788-04:00"
-                                jcr:lastModifiedBy="chiucx"
+                                jcr:lastModified="{Date}2026-08-14T14:30:16.539-04:00"
+                                jcr:lastModifiedBy="VALENSX5"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/editorialfeed/v1/editorialfeed"
+                                hideDate="false"
+                                hideDesc="false"
+                                hideImage="false"
+                                hideTags="false"
                                 listFrom="children"
                                 parentPage="/content/abbvie-com2/us/en/who-we-are/our-stories"
                                 tagsMatch="any">
@@ -249,7 +253,7 @@
                                         storyPath="/content/abbvie-com2/us/en/who-we-are/our-stories/specialized-research-in-chaotic-systems-sparcs"/>
                                     <item3
                                         jcr:primaryType="nt:unstructured"
-                                        storyPath="/content/abbvie-com2/us/en/who-we-are/our-stories/a-legacy-of-leadership-in-mental-health"/>
+                                        storyPath="/content/abbvie-com2/us/en/who-we-are/our-stories/why-rheumatoid-arthritis-patients-need-more-options"/>
                                 </excludedStories>
                             </editorialfeed_copy>
                         </par_11>
@@ -480,6 +484,7 @@
             </responsivegrid>
         </root>
     </jcr:content>
+    <the-answer-is-inside-you-the-complexities-of-autoimmune-research/>
     <i-am/>
     <future-of-adcs/>
     <five-technologies-transforming-how-we-make-medicines/>
@@ -521,7 +526,6 @@
     <magnified-featuring-darin-messina/>
     <day-in-life-government-affairs-director-educates-and-empowers/>
     <day-in-life-meet-engineer-promoting-diversity-within-manufacturing/>
-    <precision-medicine-its-not-just-for-oncology-anymore/>
     <the-hardest-hit-how-nonprofits-rise-to-challenge-covid-19/>
     <how-abbvie-is-bringing-antiviral-expertise-to-covid-19-battle/>
     <make-complicated-simple-inside-world-human-factors-engineers/>
@@ -579,7 +583,6 @@
     <advice-from-scientist-turned-physician-turned-robot-builder-be-curious/>
     <why-you-cant-wait-with-rheumatoid-arthritis/>
     <five-reasons-why-small-cell-lung-cancer-is-tough-to-treat/>
-    <immunologys-next-frontier/>
     <change-from-within/>
     <more-than-a-stiff-neck-the-impact-of-living-with-cervical-dyston/>
     <a-legacy-of-leadership-in-mental-health/>
@@ -616,4 +619,6 @@
     <the-persistence-lab-podcasts/>
     <five-technologies-supporting-progress-in-challenging-diseases/>
     <the-answer-is-Inside-you-the-complexities-of-autoimmune-research/>
+    <more-than-just-a-headache-living-with-the-impact-of-migraine/>
+    <why-rheumatoid-arthritis-patients-need-more-options/>
 </jcr:root>

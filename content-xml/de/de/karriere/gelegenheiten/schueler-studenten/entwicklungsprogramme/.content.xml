@@ -2,25 +2,26 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2024-12-06T03:26:18.041-05:00"
-        cq:lastModifiedBy="WINTELX"
+        cq:lastModified="{Date}2026-07-20T07:56:26.802-04:00"
+        cq:lastModifiedBy="LENNIAM"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2024-11-22T08:32:08.314-05:00"
-        jcr:lastModifiedBy="ZEMSCJX"
+        jcr:lastModified="{Date}2026-07-20T07:56:26.771-04:00"
+        jcr:lastModifiedBy="LENNIAM"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Entwicklungsprogramme"
-        jcr:uuid="ae6d1c60-4ba2-442f-b7b0-4b6bfb688b27"
+        jcr:title="Einstiegsprogramme"
+        jcr:uuid="1f033c1c-b666-4523-9a83-a2c0fc0acd29"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Erfahre mehr"
         ctaText="Erfahre mehr"
         description="AbbVie bietet erstklassige Trainee- und Entwicklungsprogramme für talentierte Hochschulabsolvent*innen."
         eyebrow="Schüler &amp; Studenten"
         fileReference="/content/dam/abbvie-com2/de/images/archiv/karriere/header-entwicklungsprogramme.jpg"
-        navTitle="Entwicklungsprogramme"
-        pageTitle="Entwicklungsprogramme"
-        title="Trainee- und Entwicklungsprogramme">
+        navTitle="Einstiegsprogramme"
+        ogimage="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme/abbvie-de-entwicklungsprogramme-og.jpg"
+        pageTitle="Einstiegsprogramme"
+        title="Einstiegsprogramme">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -42,7 +43,7 @@
                         jcr:lastModifiedBy="singarx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/de/images/archiv/karriere/header-entwicklungsprogramme.jpg"/>
+                        backgroundImageReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme/abbvie-de-entwicklungsprogramme-header.jpg"/>
                     <container2
                         cq:styleIds="[1653545835855,1653545835860,1653545825685,1653242825678,1653545835879]"
                         jcr:primaryType="nt:unstructured"
@@ -61,20 +62,22 @@
                                 startLevel="4"/>
                             <title
                                 cq:styleIds="[1659545825678,1661545829678]"
-                                jcr:lastModified="{Date}2024-11-22T08:31:10.322-05:00"
-                                jcr:lastModifiedBy="ZEMSCJX"
+                                jcr:lastModified="{Date}2026-07-02T03:41:46.960-04:00"
+                                jcr:lastModifiedBy="LENNIAM"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="Trainee- und Entwicklungsprogramme"
+                                jcr:title="Einstiegsprogramme für Hochschulabsolvent*innen"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
+                                langAttribute="none"
                                 type="h1"
                                 variant="h"/>
                             <text
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-10-24T03:49:13.866-04:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-06-09T04:48:19.688-04:00"
+                                jcr:lastModifiedBy="LENNIAM"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>AbbVie bietet erstklassige Trainee- und Entwicklungsprogramme für talentierte Hochschulabsolvent*innen.&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>AbbVie bietet erstklassige Trainee- und Entwicklungsprogramme für ambitionierte Absolvent*innen, die ihre Karriere gezielt starten und weiterentwickeln möchten.&amp;nbsp;&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <separator
                                 cq:styleIds="[1662756486159]"
@@ -88,75 +91,866 @@
                                 cq:styleIds="[1659545825678]"
                                 jcr:created="{Date}2024-10-24T03:50:50.234-04:00"
                                 jcr:createdBy="singarx"
-                                jcr:lastModified="{Date}2024-12-06T03:25:44.772-05:00"
-                                jcr:lastModifiedBy="WINTELX"
+                                jcr:lastModified="{Date}2026-07-02T03:42:24.273-04:00"
+                                jcr:lastModifiedBy="LENNIAM"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Wir freuen uns über Bewerbungen für unsere Trainee- und Entwicklungsprogramme. Aktuelle Stellenausschreibungen findest du im&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; title=&quot;AbbVie-Stellenportal&quot; target=&quot;_blank&quot;>AbbVie-Stellenportal&lt;/a>. Bei Fragen erreichst du uns über&amp;nbsp;&lt;a href=&quot;mailto:TalentAcquisition.de@abbvie.com&quot; title=&quot;Mail an Talent Acquisition&quot;>TalentAcquisition.de@abbvie.com&lt;/a>.&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Wir freuen uns über Bewerbungen für unsere Einstiegsprogramme. Aktuelle Stellenausschreibungen findest du im&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; title=&quot;AbbVie-Stellenportal&quot; target=&quot;_blank&quot;>AbbVie-Stellenportal&lt;/a>. Bei Fragen erreichst du uns über&amp;nbsp;&lt;a href=&quot;mailto:TalentAcquisition.de@abbvie.com&quot; title=&quot;Mail an Talent Acquisition&quot;>TalentAcquisition.de@abbvie.com&lt;/a>.&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
+                            <separator_1408051520
+                                cq:styleIds="[1662756502570]"
+                                jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                jcr:createdBy="LENNIAM"
+                                jcr:lastModified="{Date}2026-02-24T08:23:18.737-05:00"
+                                jcr:lastModifiedBy="LENNIAM"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                         </container3>
                     </container2>
-                    <container_40078993
-                        cq:styleIds="[1653545825687,1653545847150]"
-                        jcr:created="{Date}2024-10-24T03:52:18.763-04:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-10-24T03:52:41.246-04:00"
-                        jcr:lastModifiedBy="singarx"
+                    <grid_copy
+                        jcr:created="{Date}2026-02-24T06:05:22.440-05:00"
+                        jcr:createdBy="kunkefx"
+                        jcr:lastModified="{Date}2026-02-24T06:05:35.434-05:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container">
-                        <title
-                            cq:styleIds="[1659545825678,1661545829678]"
-                            jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T03:53:46.455-04:00"
-                            jcr:lastModifiedBy="singarx"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="9"
+                                dataPriority="1"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Wecke dein Potenzial"
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h4"
-                            variant="h"/>
-                        <text
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-24T03:53:53.086-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T03:55:33.368-04:00"
-                            jcr:lastModifiedBy="singarx"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                                jcr:created="{Date}2026-02-24T06:05:47.396-05:00"
+                                jcr:createdBy="kunkefx"
+                                jcr:lastModified="{Date}2026-02-24T06:07:02.814-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false">
+                                <title_copy
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T03:42:37.652-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Trainee- und Entwicklungsprogramme"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T03:53:53.086-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-06-09T04:51:22.231-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Unsere Traineeprogramme bieten dir eine einmalige Gelegenheit, deine Karriere auf das nächste Level zu bringen und dich optimal auf eine Fach- oder Führungsrolle vorzubereiten.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Du hast vor Kurzem dein Studium abgeschlossen und möchtest als Young Professional den Grundstein für eine erfolgreiche Karriere legen? Dann ist unser Traineeprogramm bei AbbVie genau der richtige Einstieg. Gestalte deine Zukunft aktiv mit, finde deinen eigenen Weg – und werde Teil eines global führenden Biopharma-Unternehmens.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1408051520
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-02-24T07:39:23.834-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:53:46.229-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Wecke dein Potenzial "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T03:53:53.086-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T03:43:21.746-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Unsere Trainee- und Entwicklungsprogramme bieten dir eine einmalige Gelegenheit, deine Karriere auf das nächste Level zu bringen und dich optimal auf eine Fach- oder Führungsrolle vorzubereiten.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Wecke dein Potenzial&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Als Trainee bei AbbVie hast du die Möglichkeit, verschiedene Abteilungen kennenzulernen und wertvolle Erfahrungen zu sammeln. Unsere Programme ermöglichen dir:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Rotationen&lt;/b> durch verschiedene Geschäftsbereiche&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Eigenverantwortliche&lt;/b> Projekte zur Förderung deiner Entwicklung&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Mentoring &amp;amp; Onboarding&lt;/b> durch erfahrene Führungskräfte&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Individuelle Karriereplanung&lt;/b> für deine Zukunft&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1408051520_1589408211
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-02-24T07:39:23.834-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:54:02.842-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Warum ein Trainee-Programm bei AbbVie? "
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h4"
+                                    variant="h"/>
+                                <text_copy_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T03:53:53.086-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T03:43:56.375-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Strukturierte Karriereentwicklung&lt;/b> mit einem individuellen Entwicklungsplan&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Vielfältige Projekte&lt;/b> und funktionsübergreifende Einblicke&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Internationales Arbeitsumfeld&amp;nbsp;&lt;/b>&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Mentoring&lt;/b> durch erfahrene Führungskräfte&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Attraktive Vergütung&lt;/b> und umfangreiche Benefits&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Flexible Arbeitsmodelle&lt;/b> für eine gesunde Work-Life-Balance&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Exklusive Networking-Events&lt;/b> mit Top-Führungskräften&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Teilnahme an Innovationsprojekten&lt;/b>, die die Zukunft der Pharmaindustrie gestalten&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Wir bieten Trainee- und Entwicklungsprogramme in verschiedenen Bereichen an. Informiere dich unten über die vielfältigen Möglichkeiten und Details der Programme.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1408051520_933862430
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-02-24T07:39:23.834-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <copy_of_container_co
+                                    cq:styleIds="[1653545835859,1653545825683,1653545847148]"
+                                    jcr:created="{Date}2022-11-28T14:38:18.752-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-05-12T06:22:37.465-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container"
+                                    backgroundColor="#071D49"
+                                    enableFetchPriority="false"
+                                    enableLazyLoading="false"
+                                    langAttribute="none">
+                                    <grid_copy_copy
+                                        cq:styleIds="[0,1653545835880]"
+                                        jcr:created="{Date}2022-11-28T14:55:37.084-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-05-12T07:48:14.354-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <par_12
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote_copy
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-06-09T08:00:43.786-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Julia Benzel"
+                                                attributionTitle="ehemalige Trainee"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Das Trainee-Programm hat mir einen hervorragenden Einstieg ins Unternehmen ermöglicht. Durch die Kombination aus praktischer Erfahrung, spannenden Projekten sowie dem engen Austausch mit verschiedenen Teams und Kolleg*innen konnte ich wertvolle Einblicke in unterschiedliche Funktionen und Abteilungen gewinnen.   Gleichzeitig hatte ich die Möglichkeit, mein Netzwerk im Unternehmen gezielt auszubauen und mich sowohl fachlich als auch persönlich stark weiterzuentwickeln.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_12>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <separator_copy
+                                                cq:styleIds="[1662756515133]"
+                                                jcr:created="{Date}2024-10-24T02:12:37.454-04:00"
+                                                jcr:createdBy="singarx"
+                                                jcr:lastModified="{Date}2026-05-12T07:49:22.125-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                            <image_84741686_copy
+                                                cq:styleIds="[1402843082813,1402843082822,1402843082832]"
+                                                jcr:created="{Date}2024-08-01T08:36:59.572-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-07-02T08:03:59.433-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                                alt="Julia Benzel"
+                                                altValueFromDAM="false"
+                                                displayPopupTitle="true"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme/abbvie-de-entwicklungsprogramme-julia-benzel.jpg"
+                                                isDecorative="false"
+                                                openInNewWindow="false"
+                                                titleValueFromDAM="false"/>
+                                        </par_11>
+                                        <par_13
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys"/>
+                                        <quote_1661374647
+                                            cq:styleIds="[1000000000021,1000000000033,1000000000040,1000000000000]"
+                                            jcr:created="{Date}2022-12-10T14:46:52.954-05:00"
+                                            jcr:createdBy="chiucx"
+                                            jcr:lastModified="{Date}2024-08-22T04:57:59.401-04:00"
+                                            jcr:lastModifiedBy="HERZOBW"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/quote"
+                                            attributionName="Mag. Ingo Raimon "
+                                            attributionTitle="General Manager AbbVie Österreich "
+                                            quote="Wir haben einen klaren Auftrag: durch medizinischen Fortschritt das Leben von Patient:innen zu verbessern. Dabei kommt der klinischen Forschung eine Schlüsselrolle zu: durch intensive Forschung können wir höhere Standards in der Behandlung und Patient:innenversorgung erzielen. Unsere Mitarbeiter:innen arbeiten in starken Teams, um Herausforderungen zu meistern. Die offene Arbeitskultur auf Augenhöhe ist wichtig für unseren gemeinsamen Unternehmenserfolg. "
+                                            quoteType="regular"
+                                            textSize="h0"/>
+                                        <par_14
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T07:45:04.892-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Anna Chlipala"
+                                                attributionTitle="ehemalige Auszubildende zur Biologielaborantin"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Ausbildung zur Biologielaborantin war unglaublich vielseitig. Ich habe mit unterschiedlichsten biologischen Systemen gearbeitet – von einzelnen Zellen bis hin zu komplexeren Organismen – und konnte viele Inhalte direkt praktisch im Labor anwenden. Besonders begeistert hat mich die enge Verbindung von Theorie und Praxis. Genau diese Mischung hat die Ausbildung für mich so spannend und abwechslungsreich gemacht.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_14>
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="3"
+                                                dataPriority="1"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="9"
+                                                dataPriority="2"/>
+                                        </columns>
+                                    </grid_copy_copy>
+                                </copy_of_container_co>
+                                <separator_1408051520_723221904
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-02-24T07:39:23.834-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <accordion_copy_copy__1498510541
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-10-24T03:08:00.144-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T04:03:55.549-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <item_1781004689367
+                                        cq:panelTitle="Operations Development Program (ODP) "
+                                        jcr:lastModified="{Date}2026-06-09T07:32:10.369-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="11"
+                                                dataPriority="1"/>
+                                        </columns>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <text
+                                                cq:styleIds="[1659545825678]"
+                                                jcr:created="{Date}2026-06-09T07:32:15.371-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-07-17T09:58:24.540-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                                langAttribute="none"
+                                                text="&lt;p>&lt;b>Standort: Ludwigshafen am Rhein&amp;nbsp;&lt;br>&#xd;&#xa; Dauer: 3 Jahre&lt;br>&#xd;&#xa;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Was dich erwartet: Praxisnahe Einblicke mit technischer Tiefe&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Das Operations Development Program richtet sich an Absolvent*innen mit technischem, naturwissenschaftlichem oder pharmazeutischem Hintergrund, die tiefe Einblicke in die pharmazeutische Produktion und angrenzende Funktionen gewinnen möchten.&lt;/p>&#xd;&#xa;&lt;p>Während des Programms arbeitest du an zentralen Schnittstellen der pharmazeutischen Wertschöpfungskette und sammelst fundierte Erfahrungen in technischen, regulatorischen und operativen Themen. Dabei übernimmst du Verantwortung in interdisziplinären Projekten und lernst die Abläufe von der Produktion bis zur Versorgung unserer Märkte kennen.&lt;/p>&#xd;&#xa;&lt;p>Du sammelst wertvolle Erfahrungen in Bereichen wie:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Produktion: Einblicke in moderne Herstellungsverfahren und GMP-Prozesse&lt;/li>&#xd;&#xa;&lt;li>Technik &amp;amp; Engineering: Arbeit an Optimierungsprojekten, Digitalisierung und technischer Anlagenverfügbarkeit&lt;/li>&#xd;&#xa;&lt;li>Wissenschaft &amp;amp; Technologie: Prozessentwicklung, Scale-up und Einführung neuer Produkte&lt;/li>&#xd;&#xa;&lt;li>Qualität: Schnittstellenarbeit mit QA/QC, regulatorische Anforderungen und Validierung&lt;/li>&#xd;&#xa;&lt;li>Supply Chain: Planung, Steuerung und globale Koordination von Lieferketten&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Beispielhafte Einsatzbereiche:&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Produktion&lt;br>&#xd;&#xa; &lt;/b>Lerne moderne Herstellungsprozesse kennen und erhalte Einblicke in GMP-konforme Produktionsabläufe. Du erlebst hautnah, wie innovative Arzneimittel effizient und in höchster Qualität hergestellt werden.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Technik &amp;amp; Engineering&lt;br>&#xd;&#xa; &lt;/b>Arbeite an Optimierungs- und Digitalisierungsprojekten mit und unterstütze die Sicherstellung einer hohen technischen Anlagenverfügbarkeit. Dabei gestaltest du die Zukunft moderner Produktionsstandorte aktiv mit.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Wissenschaft &amp;amp; Technologie&lt;br>&#xd;&#xa; &lt;/b>Begleite die Entwicklung und Skalierung neuer Prozesse und Produkte. Du erhältst Einblicke in die Überführung innovativer Ideen von der Entwicklung in die industrielle Produktion.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Quality&lt;br>&#xd;&#xa; &lt;/b>Verstehe die Bedeutung von Qualität entlang der gesamten Wertschöpfungskette. Du arbeitest an der Schnittstelle zu Quality Assurance und Quality Control, lernst regulatorische Anforderungen kennen und unterstützt Validierungsaktivitäten.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Supply Chain&lt;br>&#xd;&#xa; &lt;/b>Erhalte Einblicke in die Planung, Steuerung und globale Koordination komplexer Lieferketten. Du trägst dazu bei, dass wichtige Produkte zuverlässig und termingerecht verfügbar sind.&lt;/p>&#xd;&#xa;&lt;p>Durch die verschiedenen Rotationen entwickelst du ein ganzheitliches Verständnis für die pharmazeutische Industrie und legst die Grundlage für deine weitere Karriere im Unternehmen.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Für wen das Programm geeignet ist&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Masterabsolvent*innen in Ingenieurwissenschaften, Chemie, Pharmazie, Biotechnologie oder verwandten Naturwissenschaften&lt;/li>&#xd;&#xa;&lt;li>Mindestens ein Praktikum oder eine ähnliche Berufserfahrung in einem Produktionsumfeld ist erforderlich&lt;/li>&#xd;&#xa;&lt;li>Interesse an produktionsnahen Aufgaben und Prozessoptimierung, sowie analytisches Denken, technische Neugier und Freude an Verantwortung&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                                textIsRich="true"/>
+                                            <video_copy_copy_copy
+                                                cq:styleIds="[1]"
+                                                jcr:created="{Date}2026-04-08T10:12:42.884-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-06-09T08:05:52.882-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                                autoPlayBrightcovePlaylistvideo="false"
+                                                brightcoveAccount="2157889328001"
+                                                brightcoveAutoPlay="false"
+                                                brightcovePlayerId="dhCKg22Lp8"
+                                                brightcoveVideoId="6397972558112"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme/abbvie-de-entwicklungsprogramme-video-sara-tomic-thumbnail.jpg"
+                                                imgAlt="Thumbnail Video Sara Tomic"
+                                                loopBrightcovePlaylistVideo="false"
+                                                loopVideo="false"
+                                                showBrightcoveControls="true"
+                                                showBrightcovePlaylistControls="false"
+                                                showPlayerControls="false"
+                                                textIsRich="[true,true]"
+                                                videoId="6397972558112"
+                                                videoType="brightcove"
+                                                youtubeAutoPlay="true"/>
+                                        </par_11>
+                                    </item_1781004689367>
+                                    <item_1729753723015
+                                        cq:panelTitle="Finance Development Program (FDP) "
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-17T09:59:13.475-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>Standort: Ludwigshafen und Wiesbaden&lt;br>&#xd;&#xa; Dauer: 2 Jahre&lt;br>&#xd;&#xa;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Zwei Jahre, vier Rotationen, unzählige Chancen – entdecke, was in dir steckt und gestalte die Finanzwelt von AbbVie aktiv mit.&lt;/p>&#xd;&#xa;&lt;p>Das Finance Development Program bietet dir die Möglichkeit, die Finanzwelt von AbbVie aktiv mitzugestalten und dich in einem internationalen Umfeld gezielt weiterzuentwickeln.&lt;/p>&#xd;&#xa;&lt;p>Mit vier Rotationen à sechs Monate erhältst du umfassende Einblicke in zentrale Finanzbereiche – von Controlling und Financial Planning &amp;amp; Analysis bis hin zu internationalen Projekteinheiten. Eine Rotation im Finance Shared Service Center in Krakau ist fester Bestandteil des Programms. Darüber hinaus kannst du weitere internationale Erfahrungen in einer europäischen Finance-Organisation sammeln.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Arbeit an realen Finanzstrategien&lt;br>&#xd;&#xa; &lt;/b>Von Tag eins an bist du Teil des Teams – und arbeitest aktiv an entscheidungsrelevanten Themen, die den Kurs eines globalen Unternehmens mitbestimmen.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Internationaler Fokus – fest integriert&lt;br>&#xd;&#xa; &lt;/b>Eine Rotation im Finance Shared Service Center in Krakau (Polen) ist fester Bestandteil des Programms. Darüber hinaus hast du die Möglichkeit für einen zusätzlichen Auslandseinsatz in einer weiteren europäischen Finance-Organisation von AbbVie.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Individuelles Mentoring &amp;amp; Executive Exposure&lt;br>&#xd;&#xa; &lt;/b>Profitiere von direktem Sparring mit erfahrenen Führungskräften und wachse mit persönlicher Begleitung durch dein eigenes Mentoring-Team.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Exzellente Learning &amp;amp; Development Formate&lt;br>&#xd;&#xa; &lt;/b>Wir investieren in dich: Mit gezielten Trainings, Coaching und vielen Möglichkeiten zum Netzwerken entwickelst du dich stetig weiter.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Arbeit an realen Finanzstrategien&lt;br>&#xd;&#xa; &lt;/b>Von Tag eins an bist du Teil des Teams – und arbeitest aktiv an entscheidungsrelevanten Themen, die den Kurs eines globalen Unternehmens mitbestimmen.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Netzwerk mit Impact&lt;br>&#xd;&#xa; &lt;/b>Baue dir ein starkes Netzwerk im internationalen AbbVie Finance-Team auf und profitiere vom Austausch mit Kolleg*innen aus über 70 Ländern.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Deine Stationen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Jahr 1:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>1. Rotation: Ludwigshafen – Operations Controlling: Du lernst die operative Steuerung im Produktionsumfeld kennen und arbeitest an Analysen, Reports und Entscheidungsgrundlagen mit.&lt;/li>&#xd;&#xa;&lt;li>2. Rotation: Wiesbaden – Commercial Affiliate FP&amp;amp;A: Du unterstützt die finanzielle Planung und Forecasting-Prozesse im kommerziellen Umfeld und erhältst Einblicke in das Business Partnering.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Jahr 2:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>3. Rotation: Krakau (Polen) – Finance Shared Services (fester Bestandteil): Diese feste Rotation gibt dir Einblicke in internationale Finance-Prozesse, Standards und effiziente Service-Strukturen&lt;/li>&#xd;&#xa;&lt;li>4. Rotation: Weitere mögliche Rotation im europäischen Ausland (z. B. Commercial oder Corporate Finance): Hier vertiefst du dein Know-how in einem weiteren europäischen Finance-Bereich und baust deine internationale Perspektive weiter aus,&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Mögliche Einsatzorte der 4. Rotation&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Krakau, Polen&lt;/li>&#xd;&#xa;&lt;li>UK&lt;/li>&#xd;&#xa;&lt;li>Frankreich&lt;/li>&#xd;&#xa;&lt;li>Niederlande&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Für wen das Programm geeignet ist&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Bachelor- oder Masterabschluss (bevorzugt) in Finance und/oder Accounting&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Mindestens ein Praktikum im Finanz- und/oder Rechnungswesen&lt;/li>&#xd;&#xa;&lt;li>Interesse an analytischen Aufgaben und strategischen Finanzthemen&lt;/li>&#xd;&#xa;&lt;li>Offenheit für internationale Zusammenarbeit und Weiterentwicklung&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1781004812652
+                                        cq:panelTitle="Technical Development Program (TDP) "
+                                        jcr:lastModified="{Date}2026-06-09T07:34:15.761-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="11"
+                                                dataPriority="1"/>
+                                        </columns>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <text
+                                                cq:styleIds="[1659545825678]"
+                                                jcr:created="{Date}2026-06-09T07:34:20.664-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-07-17T09:58:12.854-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                                langAttribute="none"
+                                                text="&lt;p>&lt;b>Standort: Ludwigshafen&lt;br>&#xd;&#xa; Dauer: 3 Jahre&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Das Technical Development Program richtet sich an Absolvent*innen mit technischem oder pharmazeutischem Hintergrund, die sich gezielt auf eine zukünftige Führungsrolle bei AbbVie vorbereiten möchten.&lt;b>&lt;br>&#xd;&#xa;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Das Programm verbindet operative Nähe mit strategischer Entwicklung. Du lernst zentrale Bereiche unserer Produktionswelt kennen, übernimmst früh Verantwortung und entwickelst deine fachlichen, methodischen und persönlichen Fähigkeiten kontinuierlich weiter.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich:&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Breite Einblicke in unsere Produktionswelt&lt;br>&#xd;&#xa; &lt;/b>Du rotierst durch zentrale Bereiche wie Bulk-Fertigung, Verpackung, Engineering, Qualitätssicherung, technische Services, Operational Excellence und Supply Chain.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Führungsverantwortung von Anfang an&lt;br>&#xd;&#xa; &lt;/b>Du wirst gezielt auf eine Rolle mit Führungs-Potenzial vorbereitet – fachlich, methodisch und persönlich.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Strukturiertes 3-Jahres-Programm mit Tiefgang&lt;br>&#xd;&#xa; &lt;/b>Davon 18 Monate im Schichtsystem – du lernst unsere Prozesse nicht nur kennen, sondern verstehst sie im Detail und gestaltest aktiv mit.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Hands-on-Projekte mit echtem Einfluss&lt;br>&#xd;&#xa; &lt;/b>Du arbeitest an herausfordernden Projekten mit direktem Mehrwert – für unsere Produktion und letztlich für unsere Patient*innen weltweit.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Mentoring &amp;amp; individuelles Karriere-Coaching&lt;br>&#xd;&#xa; &lt;/b>Erfahrene Führungskräfte begleiten dich mit maßgeschneidertem Mentoring, Trainings und regelmäßigem Feedback – für deine langfristige Entwicklung.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Dein persönlicher Entwicklungsplan&lt;br>&#xd;&#xa; &lt;/b>Gemeinsam mit dir entwickeln wir einen klaren Fahrplan, der dich Schritt für Schritt an deine beruflichen Ziele bei AbbVie heranführt.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Deine Stationen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Unser Trainee-Programm bietet dir die Möglichkeit, verschiedene Unternehmensbereiche der Pharmabranche kennenzulernen und dich gezielt auf eine zukünftige Führungsrolle vorzubereiten. Durch klar strukturierte Rotationen erhältst du tiefgehende Einblicke in Forschung, Entwicklung und operative Prozesse.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Aufbau der Rotationen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>1. Rotation – 18 Monate: Team Lead Position&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Übernahme einer Führungsrolle im Produktionsbereich&lt;/li>&#xd;&#xa;&lt;li>Verantwortung für Teamsteuerung, Projektmanagement und Prozessoptimierung&lt;/li>&#xd;&#xa;&lt;li>Erste Erfahrung in Führung und Entscheidungsfindung&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>2. Rotation – 9 Monate: Fachbereichsassignment&lt;/p>&#xd;&#xa;&lt;p>Möglichkeit zur Spezialisierung in verschiedenen Funktionsbereichen, z. B.:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Maintenance &amp;amp; Engineering&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Operational Excellence / Technical Operations&lt;/li>&#xd;&#xa;&lt;li>Supply Chain Management&lt;/li>&#xd;&#xa;&lt;li>Quality&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>3. Rotation – 9 Monate: Weiterführendes Assignment&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Vertiefung in einem weiteren Bereich aus den oben genannten Funktionsfeldern&lt;/li>&#xd;&#xa;&lt;li>Förderung deines interdisziplinären Verständnisses und strategischen Denkens&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Für wen das Programm geeignet ist:&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Du verfügst über einen erfolgreichen Hochschulabschluss (vorzugsweise Master) in einem technischen Studiengang (z. B. Ingenieurwesen, Verpackungstechnik o.ä.)&lt;/li>&#xd;&#xa;&lt;li>Idealerweise hast du während deines Studiums mindestens ein Praktikum (oder vergleichbar) in einem produzierenden Umfeld mit GMP-Umfeld (Good Manufacturing Practice) absolviert&lt;/li>&#xd;&#xa;&lt;li>Du verfügst über außergewöhnliche zwischenmenschliche Fähigkeiten und zeigst starke Kompetenzen in Teamarbeit, Anpassungsfähigkeit, Innovation, Initiative, Integrität und beruflicher Reife. Du bist außerdem ehrgeizig und hast den starken Anspruch, dich in eine Führungsrolle zu entwickeln&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                                textIsRich="true"/>
+                                            <video_copy_copy_copy
+                                                cq:styleIds="[1]"
+                                                jcr:created="{Date}2026-04-08T10:12:42.884-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-06-09T08:06:10.701-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                                autoPlayBrightcovePlaylistvideo="false"
+                                                brightcoveAccount="2157889328001"
+                                                brightcoveAutoPlay="false"
+                                                brightcovePlayerId="dhCKg22Lp8"
+                                                brightcoveVideoId="6397975395112"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme/abbvie-de-entwicklungsprogramme-video-jan-dessila-thumbnail.jpg"
+                                                imgAlt="Thumbnail Video Jan Dessila"
+                                                loopBrightcovePlaylistVideo="false"
+                                                loopVideo="false"
+                                                showBrightcoveControls="true"
+                                                showBrightcovePlaylistControls="false"
+                                                showPlayerControls="false"
+                                                textIsRich="[true,true]"
+                                                videoId="6397975395112"
+                                                videoType="brightcove"
+                                                youtubeAutoPlay="true"/>
+                                        </par_11>
+                                    </item_1781004812652>
+                                </accordion_copy_copy__1498510541>
+                                <separator_1408051520_1039374557
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-02-24T07:39:23.834-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy_1283805984
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T04:04:31.586-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Commercial Trainee Programme"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h4"
+                                    variant="h"/>
+                                <text_copy_27667375
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2026-06-09T07:25:03.817-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-07-17T09:58:46.347-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>&lt;b>Einstieg in die Commercial Welt bei AbbVie&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Unsere Commercial Trainee Programs richten sich an ambitionierte Absolvent*innen, die ihre Karriere in einem internationalen, dynamischen und strategisch geprägten Umfeld starten möchten.&lt;/p>&#xd;&#xa;&lt;p>Du lernst bei AbbVie die unterschiedlichen Facetten unserer Commercial Bereiche kennen und erhältst die Möglichkeit, dich fachlich, persönlich und beruflich gezielt weiterzuentwickeln. Dabei arbeitest du von Beginn an an realen Themen mit und übernimmst Schritt für Schritt Verantwortung in interdisziplinären Teams.&lt;/p>&#xd;&#xa;&lt;p>Alle Programme verbinden strukturierte Entwicklung, individuelle Begleitung und intensive Einblicke in die tägliche Arbeit – mit klarer Perspektive für deine weitere Karriere bei AbbVie.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Was dich in allen Commercial Programmen erwartet&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>eine strukturierte Einarbeitung mit individuellem Entwicklungsplan&lt;/li>&#xd;&#xa;&lt;li>praxisnahe Einblicke in zentrale Commercial- und Schnittstellenbereiche&lt;/li>&#xd;&#xa;&lt;li>eigenverantwortliche Mitarbeit an anspruchsvollen Projekten und Aufgaben&lt;/li>&#xd;&#xa;&lt;li>enge Zusammenarbeit mit erfahrenen Kolleg*innen und Führungskräften&lt;/li>&#xd;&#xa;&lt;li>regelmäßiges Feedback, Mentoring und individuelle Trainings&lt;/li>&#xd;&#xa;&lt;li>ein internationales Arbeitsumfeld mit bereichsübergreifender Zusammenarbeit&lt;/li>&#xd;&#xa;&lt;li>die Möglichkeit, früh ein professionelles Netzwerk aufzubauen&lt;/li>&#xd;&#xa;&lt;li>gute Karriereperspektiven nach erfolgreichem Programmabschluss&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <video_copy_copy_copy
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2026-04-08T10:12:42.884-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-06-09T08:06:25.981-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/video/v2/video"
+                                    autoPlayBrightcovePlaylistvideo="false"
+                                    brightcoveAccount="2157889328001"
+                                    brightcoveAutoPlay="false"
+                                    brightcovePlayerId="dhCKg22Lp8"
+                                    brightcoveVideoId="6397970639112"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme/abbvie-de-entwicklungsprogramme-video-tina-strauch-thumbnail.jpg"
+                                    loopBrightcovePlaylistVideo="false"
+                                    loopVideo="false"
+                                    showBrightcoveControls="true"
+                                    showBrightcovePlaylistControls="false"
+                                    showPlayerControls="false"
+                                    textIsRich="[true,true]"
+                                    videoId="6397970639112"
+                                    videoType="brightcove"
+                                    youtubeAutoPlay="true"/>
+                                <accordion_copy_copy_
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-10-24T03:08:00.144-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T04:06:06.529-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <item_1780996603686
+                                        cq:panelTitle="Trainee Market Access"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-02T04:08:36.846-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>Dauer: 2 Jahre&lt;br>&#xd;&#xa; Standort: Wiesbaden&lt;/b>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Das Market Access Traineeprogramm bietet dir einen umfassenden Einstieg in die Welt des Marktzugangs und der Erstattung innovativer Arzneimittel.&lt;/p>&#xd;&#xa;&lt;p>Du lernst die zentralen Themen rund um Health Technology Assessment, Preisbildung, Erstattungsverhandlungen und regionale Versorgungsperspektiven kennen und arbeitest an Fragestellungen, die entscheidend dafür sind, wie unsere Produkte den Weg zu Patient*innen finden.&lt;/p>&#xd;&#xa;&lt;p>Während des Programms bist du in verschiedene Teams eingebunden und erhältst einen breiten Überblick über die strategischen und operativen Aufgaben innerhalb von Market Access. Du unterstützt die Teams aktiv bei der Entwicklung, Abstimmung und Umsetzung ihrer Arbeit und entwickelst ein tiefes Verständnis für die Zusammenhänge zwischen medizinischem Nutzen, gesundheitspolitischen Rahmenbedingungen und Marktzugang.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Einblicke in die strategische Entwicklung von Market Access Konzepten&lt;/li>&#xd;&#xa;&lt;li>Mitarbeit im AMNOG-Prozess und in der frühen Nutzenbewertung innovativer Arzneimittel&lt;/li>&#xd;&#xa;&lt;li>Verständnis für Preisbildung, Erstattungsverhandlungen und regionale Marktmechanismen&lt;/li>&#xd;&#xa;&lt;li>Mitarbeit in unterschiedlichen Fokusteams innerhalb von Market Access&lt;/li>&#xd;&#xa;&lt;li>Einblicke in die Zusammenarbeit mit Brand Teams und der Positionierung einzelner Produkte&lt;/li>&#xd;&#xa;&lt;li>Stationen in Bereichen wie Market Access Value Proposition, Health Technology Assessment (HTA) &amp;amp; Health Economics and Outcomes Research (HEOR), Negotiation, Pricing, Contracting, Regional Market Access und Patient Engagement&lt;/li>&#xd;&#xa;&lt;li>aktive Unterstützung bei Analyse, Strategieentwicklung und Materialerstellung&lt;/li>&#xd;&#xa;&lt;li>individuelle Begleitung durch Manager*in, Feedbackgespräche und gezielte Weiterentwicklung&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Deine Entwicklung im Programm&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Du lernst, Market Access nicht nur theoretisch zu verstehen, sondern aktiv mitzugestalten. Durch die verschiedenen Stationen entwickelst du ein breites Verständnis dafür, wie wissenschaftliche Evidenz, ökonomische Argumente und gesundheitspolitische Anforderungen zusammenwirken, um den Marktzugang unserer Produkte zu ermöglichen. Während des gesamten Traineeprogramms wirst du durch regelmäßiges Feedback sowie bedarfsorientierte Trainings und Weiterbildungen begleitet. So kannst du dich fachlich und persönlich kontinuierlich weiterentwickeln&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Deine Rotationen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Unser Market Access Trainee Program ist auf 24 Monate ausgelegt und kombiniert strukturierte Pflichtstationen mit individuellen Wahlstationen. So erhältst du einen umfassenden Überblick über zentrale Themen im Market Access und kannst dein Profil gezielt weiterentwickeln.&lt;/p>&#xd;&#xa;&lt;p>In den 24 Monaten durchläufst du vier Stationen à sechs Monate (Die Reihenfolge der Rotationen kann variieren):&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Market Access&lt;br>&#xd;&#xa;Du lernst die strategischen und operativen Grundlagen des Marktzugangs kennen und erhältst Einblicke in zentrale Fragestellungen rund um Erstattung, Positionierung und Marktbearbeitung.&lt;/li>&#xd;&#xa;&lt;li>Health Technology Assessment (HTA)&lt;br>&#xd;&#xa;In dieser Station beschäftigst du dich mit Health Technology Assessment, der frühen Nutzenbewertung und den wissenschaftlich-ökonomischen Grundlagen für den Marktzugang innovativer Arzneimittel.&lt;/li>&#xd;&#xa;&lt;li>Pricing&lt;br>&#xd;&#xa;In dieser Station lernst du die strategischen und operativen Grundlagen der Preisgestaltung kennen und erhältst Einblicke in zentrale Fragestellungen rund um Preisstrategie, Markt- und Wettbewerbsanalyse sowie die wirtschaftliche Positionierung unserer Produkte.&lt;/li>&#xd;&#xa;&lt;li>Patient Engagement&lt;br>&#xd;&#xa;In dieser Station lernst du die Grundlagen des Patient Engagement kennen und erhältst Einblicke in die Entwicklung und Umsetzung patientenzentrierter Maßnahmen. Dabei steht im Fokus, wie wir den Austausch mit Patientinnen und Patienten gestalten und ihre Perspektiven in unsere Arbeit einbeziehen.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Für wen das Programm geeignet ist&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Du verfügst über ein überdurchschnittlich abgeschlossenes Masterstudium oder Promotion im Bereich der Natur- oder Wirtschaftswissenschaften oder im Bereich Gesundheitsökonomie&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Idealerweise hast du bereits erste relevante Praktika absolviert, zum Beispiel bei einem Pharmaunternehmen, einer Krankenkasse, einer Kassenärztlichen Vereinigung oder in einer Agentur im Bereich Market Access&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Du überzeugst durch analytisches, konzeptionelles und organisatorisches Denken, kombiniert mit hoher Motivation, Eigeninitiative und Zielorientierung sowie einer ausgeprägten Kommunikations- und Teamfähigkeit. Gleichzeitig zeichnest du dich durch Lernbereitschaft und eine leistungsorientierte Arbeitsweise aus.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1780996886647
+                                        cq:panelTitle="Trainee Medical Affairs"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-06-09T05:25:13.061-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>Standort: Wiesbaden&lt;br>&#xd;&#xa;Dauer: 2 Jahre&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Das Medical Affairs Traineeprogramm bietet dir einen fundierten Einstieg in die wissenschaftliche Arbeit innerhalb eines internationalen Pharmaunternehmens.&lt;/p>&#xd;&#xa;&lt;p>Du beschäftigst dich mit den medizinischen Fragestellungen rund um unser Produktportfolio und erhältst Einblicke in die Rolle von Medical Affairs als wissenschaftliche Schnittstelle zwischen Forschung, internen Fachbereichen und externen Stakeholdern.&lt;/p>&#xd;&#xa;&lt;p>Während des Programms arbeitest du an wissenschaftlich geprägten Aufgaben, lernst die Zusammenarbeit mit Ärzt*innen, Fachgesellschaften, Forschungseinrichtungen und Expert*innen kennen und entwickelst ein Verständnis dafür, wie medizinische Inhalte intern und extern vermittelt werden. Du wirst von Anfang an in das Tagesgeschäft eingebunden und lernst, wie Medical Affairs die evidenzbasierte Positionierung unserer Produkte unterstützt.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Mitarbeit an medizinischen und wissenschaftlichen Fragestellungen zu unserem Produktportfolio&lt;/li>&#xd;&#xa;&lt;li>Einblicke in verschiedene Medical-Bereiche und deren Zusammenarbeit mit kommerziellen Schnittstellen&lt;/li>&#xd;&#xa;&lt;li>enge Kooperation mit universitären Einrichtungen, wissenschaftlichen Fachgesellschaften und externen Expert*innen&lt;/li>&#xd;&#xa;&lt;li>Unterstützung bei der Planung und Durchführung von Produktschulungen&lt;/li>&#xd;&#xa;&lt;li>Mitarbeit an internen und externen Fortbildungen&lt;/li>&#xd;&#xa;&lt;li>Einblicke in wissenschaftliche Kommunikation und medizinische Informationsarbeit&lt;/li>&#xd;&#xa;&lt;li>strukturierte Begleitung durch Führungskraft, Feedback und individuelle Entwicklung&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Deine Entwicklung im Programm&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Du entwickelst ein tiefes Verständnis für die Rolle von Medical Affairs im Unternehmen und lernst, wissenschaftliche Inhalte zielgruppengerecht aufzubereiten und in interne wie externe Kontexte einzuordnen.&lt;/p>&#xd;&#xa;&lt;p>Das Programm stärkt deine Fähigkeit, wissenschaftlich zu denken, bereichsübergreifend zu arbeiten und dich in einem komplexen, dynamischen Umfeld sicher zu bewegen.&lt;/p>&#xd;&#xa;&lt;p>Während des gesamten Traineeprogramms wirst du durch regelmäßiges Feedback sowie bedarfsorientierte Trainings und Weiterbildungen begleitet. So kannst du dich fachlich und persönlich kontinuierlich weiterentwickeln&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Deine Rotationen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>In den 24 Monaten durchläufst du vier Stationen à sechs Monate (Die Reihenfolge der Rotationen kann variieren):&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Medical Affairs&lt;br>&#xd;&#xa;Du lernst die wissenschaftliche Arbeit im direkten Zusammenhang mit unserem Produktportfolio kennen und erhältst Einblicke in die medizinische Positionierung und interne Zusammenarbeit.&lt;/li>&#xd;&#xa;&lt;li>Medical Excellence &amp;amp; Operations&lt;br>&#xd;&#xa;In dieser Station erhältst du Einblicke in medizinische Prozesse, operative Abläufe und die Unterstützung medizinischer Aktivitäten. Du lernst, wie medizinische Inhalte strukturiert aufbereitet, koordiniert und in der täglichen Zusammenarbeit wirksam umgesetzt werden.&lt;/li>&#xd;&#xa;&lt;li>Market Access oder Marketing&lt;br>&#xd;&#xa;Je nach Programmverlauf lernst du in dieser Station angrenzende Bereiche wie Market Access oder Marketing kennen. Dabei bekommst du ein Verständnis dafür, wie medizinische Inhalte mit strategischen, kommerziellen und marktrelevanten Themen verbunden werden und wie diese in die praktische Arbeit einfließen.&lt;/li>&#xd;&#xa;&lt;li>Patient Engagement&lt;br>&#xd;&#xa;In dieser Station lernst du die Grundlagen des Patient Engagement kennen und erhältst Einblicke in die Entwicklung und Umsetzung patientenzentrierter Maßnahmen. Dabei steht im Fokus, wie wir den Austausch mit Patientinnen und Patienten gestalten und ihre Perspektiven in unsere Arbeit einbeziehen.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Für wen das Programm geeignet ist&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Abgeschlossenes Hochschulstudium der Medizin/Pharmazie oder Naturwissenschaften und abgeschlossene Promotion (bevorzugt)&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Während des Studiums konntest Du bereits erste praktische Erfahrungen im Rahmen von Praktika oder Werkstudententätigkeit in der Pharmabranche sammeln&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Du überzeugst durch ausgeprägte analytische, konzeptionelle und organisatorische Fähigkeiten, eine starke Kommunikations- und Teamfähigkeit sowie hohe Selbstmotivation, Eigeninitiative und Zielorientierung. Zudem zeichnest du dich durch große Lernbereitschaft und eine leistungsorientierte Arbeitsweise aus.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1780997155552
+                                        cq:panelTitle="Trainee Marketing / Sales"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-06-09T05:28:15.289-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>Standort: Wiesbaden&lt;br>&#xd;&#xa;Dauer: 2 Jahre&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Das Traineeprogramm Marketing / Sales bietet dir einen breiten und praxisnahen Einstieg in die kommerzielle Welt von AbbVie.&lt;/p>&#xd;&#xa;&lt;p>Du lernst, wie Marketing-, Vertriebs- und angrenzende Funktionen zusammenwirken, um Produkte erfolgreich zu positionieren, Märkte zu verstehen und nachhaltige Kundenbeziehungen aufzubauen.&lt;/p>&#xd;&#xa;&lt;p>Im Verlauf des Programms durchläufst du vier Stationen und bekommst Einblicke in verschiedene Perspektiven des Commercial Bereichs. Dabei arbeitest du an Aufgaben aus Brand Management, Marktforschung, Projektmanagement, Controlling und Vertriebsunterstützung und entwickelst ein fundiertes Verständnis für die Vermarktung von Produkten in einem komplexen Gesundheitsmarkt.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Einblicke in Marketing, Market Access, Patient Engagement und Sales&lt;/li>&#xd;&#xa;&lt;li>eigenverantwortliche Arbeit an anspruchsvollen Aufgaben und Projekten&lt;/li>&#xd;&#xa;&lt;li>aktive Mitarbeit in funktionsübergreifenden Teams&lt;/li>&#xd;&#xa;&lt;li>Aufbau eines Netzwerks innerhalb von AbbVie&lt;/li>&#xd;&#xa;&lt;li>Perspektive auf den Einstieg in Sales oder Marketing nach dem Programm&lt;/li>&#xd;&#xa;&lt;li>individuelle Begleitung durch Führungskraft, Feedback und Weiterentwicklung&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Deine Entwicklung im Programm&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Du lernst, Marken ganzheitlich zu denken, Marktpotenziale zu analysieren und kommerzielle Maßnahmen im Team zu entwickeln.&lt;/p>&#xd;&#xa;&lt;p>Das Programm bereitet dich gezielt darauf vor, nach Abschluss eine verantwortungsvolle Rolle im Sales oder Marketing zu übernehmen.&lt;/p>&#xd;&#xa;&lt;p>Während des gesamten Traineeprogramms wirst du durch regelmäßiges Feedback sowie bedarfsorientierte Trainings und Weiterbildungen begleitet. So kannst du dich fachlich und persönlich kontinuierlich weiterentwickeln&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Deine Rotationen&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>In den 24 Monaten durchläufst du vier Stationen à sechs Monate (Die Reihenfolge der Rotationen kann variieren):&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Marketing&lt;br>&#xd;&#xa;In dieser Station lernst du die Grundlagen des Marketings kennen und erhältst Einblicke in die strategische Markenarbeit, Zielgruppenansprache und die Umsetzung kommerzieller Maßnahmen.&lt;/li>&#xd;&#xa;&lt;li>Market Access oder Customer Excellence&lt;br>&#xd;&#xa;In dieser Station vertiefst du dein Verständnis für marktrelevante Prozesse und lernst, wie kommerzielle und versorgungsbezogene Themen miteinander verknüpft sind. Je nach Programmverlauf erhältst du dabei Einblicke in Market Access oder Customer Excellence.&lt;/li>&#xd;&#xa;&lt;li>Patient Engagement &lt;br>&#xd;&#xa;In dieser Station lernst du die Grundlagen des Patient Engagement kennen und erhältst Einblicke in die Entwicklung und Umsetzung patientenzentrierter Maßnahmen. Dabei steht im Fokus, wie wir den Austausch mit Patientinnen und Patienten gestalten und ihre Perspektiven in unsere Arbeit einbeziehen.&lt;/li>&#xd;&#xa;&lt;li>Sales&lt;br>&#xd;&#xa;In dieser Station lernst du die Grundlagen des Vertriebs kennen und erhältst Einblicke in die tägliche Zusammenarbeit mit Kundinnen und Kunden. Dabei wirst du schrittweise auf den Außendienst vorbereitet und kannst dein Wissen in der Praxis anwenden.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Für wen das Programm geeignet ist&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Du verfügst über ein überdurchschnittlich abgeschlossenes Hochschulstudium, idealerweise Master oder Promotion in Natur-, Wirtschafts- oder Betriebswissenschaften&lt;/li>&#xd;&#xa;&lt;li>Du bringst erste praktische Erfahrung in Vertrieb, Marketing oder Brand Management mit, sowie Interesse an unseren Indikationsgebieten, z. B. Onkologie, Immunologie, Neurologie, Augenheilkunde oder Ästhetik&lt;/li>&#xd;&#xa;&lt;li>Du überzeugst durch analytisches Denken, konzeptionelle Stärke und Organisationsfähigkeit, Kommunikationsstärke und Teamfähigkeit sowie hohe Motivation, Eigeninitiative und eine ausgeprägte Hands-on-Mentalität, verbunden mit Mobilität innerhalb Deutschlands.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1780997324630
+                                        cq:panelTitle="Trainee Regulatory Affairs"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-07-15T09:35:22.805-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>&lt;b>Standort: Ludwigshafen&lt;br>&#xd;&#xa; Dauer: 2 Jahre&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Das Regulatory Affairs Traineeprogramm bietet dir einen intensiven und praxisorientierten Einstieg in ein hochrelevantes Feld an der Schnittstelle zwischen Entwicklung, Marktzugang und Produktpflege.&lt;/p>&#xd;&#xa;&lt;p>Am Forschungs- und Produktionsstandort Ludwigshafen lernst du, wie regulatorische Anforderungen über den gesamten Produktlebenszyklus hinweg umgesetzt werden und wie Regulatory Affairs dazu beiträgt, dass Arzneimittel und Medizinprodukte sicher, wirksam und regelkonform auf den Markt kommen.&lt;/p>&#xd;&#xa;&lt;p>Du wirst früh in das Tagesgeschäft eingebunden, arbeitest an regulatorischen Fragestellungen mit und erhältst Einblicke in die Zusammenarbeit mit angrenzenden Fachbereichen wie Market Access, Pharmakovigilanz und weiteren internen Partnern. Dabei wirst du durch eine*n Mentor*in begleitet und entwickelst dich Schritt für Schritt in ein anspruchsvolles, international vernetztes Arbeitsumfeld hinein.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Das erwartet dich&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Intensive Einarbeitung in regulatorische Prozesse und Themen&lt;/li>&#xd;&#xa;&lt;li>Mitarbeit an Fragestellungen rund um Entwicklung, Marktzugang und Produktpflege&lt;/li>&#xd;&#xa;&lt;li>Einblicke in die Erstellung von Packmitteln und Gebrauchsinformationen&lt;/li>&#xd;&#xa;&lt;li>Zusammenarbeit mit angrenzenden Fachbereichen und internationalen Schnittstellen&lt;/li>&#xd;&#xa;&lt;li>Kennenlernen der Organisationsstruktur und interdisziplinärer Zusammenarbeit&lt;/li>&#xd;&#xa;&lt;li>Unterstützung durch Mentor*in und regelmäßige Feedbackgespräche&lt;/li>&#xd;&#xa;&lt;li>Individuelle Entwicklung durch gezielte Fortbildungsmaßnahmen&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Deine Entwicklung im Programm&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Du lernst die regulatorische Arbeit in der Tiefe kennen und entwickelst ein Verständnis dafür, wie komplexe Vorgaben, interne Abstimmungen und Produktverantwortung zusammenwirken.&lt;/p>&#xd;&#xa;&lt;p>Das Programm gibt dir die Möglichkeit, Verantwortung zu übernehmen, fachlich zu wachsen und dich auf eine langfristige Karriere im Unternehmen vorzubereiten.&lt;/p>&#xd;&#xa;&lt;p>Während des gesamten Traineeprogramms wirst du durch regelmäßiges Feedback sowie bedarfsorientierte Trainings und Weiterbildungen begleitet. So kannst du dich fachlich und persönlich kontinuierlich weiterentwickeln&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Deine Rotationen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Unser Regulatory Affairs Trainee Program ist auf 24 Monate ausgelegt und verbindet strukturierte Einarbeitung, fachliche Vertiefung und praxisnahe Entwicklung in einem international vernetzten Umfeld.&lt;/p>&#xd;&#xa;&lt;p>Du erhältst einen umfassenden Einblick in die regulatorische Arbeit rund um unsere Produkte und lernst Schritt für Schritt, wie Regulatory Affairs entlang des gesamten Produktlebenszyklus wirkt.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Monat 1-12: Einstieg und Grundlagen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>In der ersten Programmphase lernst du die zentralen Abläufe und Verantwortlichkeiten im Regulatory Affairs Umfeld kennen.&lt;/p>&#xd;&#xa;&lt;p>Das erwartet dich:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>strukturiertes Onboarding inklusive Buddy-System&lt;/li>&#xd;&#xa;&lt;li>Einblicke in die tägliche Arbeit des deutschen RA-Teams&lt;/li>&#xd;&#xa;&lt;li>Erstellung regelmäßiger Wettbewerbs- und Marktupdates für Commercial&lt;/li>&#xd;&#xa;&lt;li>Produktverantwortung für zugelassene Produkte und Pipeline-Produkte&lt;/li>&#xd;&#xa;&lt;li>Prüfung von Parallelimport- und Parallelhandelssamples&lt;/li>&#xd;&#xa;&lt;li>erste Einblicke in Labeling und regulatorische Dokumentation&lt;/li>&#xd;&#xa;&lt;li>Shadowing in relevanten Fachbereichen&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Monat 13-24: Vertiefung und Schnittstellen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>In der zweiten Programmphase vertiefst du dein Wissen und lernst weitere regulatorische und angrenzende Bereiche kennen.&lt;/p>&#xd;&#xa;&lt;p>Das erwartet dich:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>fortlaufende Produktverantwortung für Marketed und Pipeline Products&lt;/li>&#xd;&#xa;&lt;li>weitere Einblicke in Wettbewerbs- und Marktinformationen&lt;/li>&#xd;&#xa;&lt;li>Einführung in die Freigabe von Werbematerialien&lt;/li>&#xd;&#xa;&lt;li>Shadowing in Bereichen wie Pharmacovigilance, Market Access und weiteren RA-Teams&lt;/li>&#xd;&#xa;&lt;li>vertiefte Zusammenarbeit mit internen und externen Stakeholdern&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Für wen das Programm geeignet ist&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Du verfügst über ein abgeschlossenes Hochschulstudium der Pharmazie, Biologie, Biotechnologie, Arzneimittelwissenschaften (oder vergleichbare Studiengänge)- vorzugsweise mit Promotion&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>Du konntest idealerweise bereits erste Erfahrungen im Rahmen von Praktika oder Werkstudententätigkeit in der Pharmazeutischen Industrie sammeln&lt;/li>&#xd;&#xa;&lt;li>Du überzeugst durch ausgeprägte analytische, konzeptionelle und organisatorische Fähigkeiten, eine starke Kommunikations- und Teamfähigkeit sowie hohe Selbstmotivation, Eigeninitiative und Zielorientierung. Zudem zeichnest du dich durch große Lernbereitschaft und eine leistungsorientierte Arbeitsweise aus.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion_copy_copy_>
+                                <separator_copy_copy_
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-10-24T03:55:44.539-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-24T03:55:44.539-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <copy_of_container_co_642333755
+                                    cq:styleIds="[1653545835859,1653545825683,1653545847148]"
+                                    jcr:created="{Date}2022-11-28T14:38:18.752-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-05-12T06:22:37.465-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container"
+                                    backgroundColor="#071D49"
+                                    enableFetchPriority="false"
+                                    enableLazyLoading="false"
+                                    langAttribute="none">
+                                    <grid_copy_copy
+                                        cq:styleIds="[0,1653545835880]"
+                                        jcr:created="{Date}2022-11-28T14:55:37.084-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-05-12T07:48:14.354-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <par_12
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote_copy
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-07-02T08:04:36.813-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Burhan Topalli"
+                                                attributionTitle="ehemaliger Marketing and Sales Trainee"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Zeit im Trainee-Programm bei AbbVie war eine großartige Möglichkeit, unterschiedliche Abteilungen wie Marketing, Market Access und Customer Excellence kennenzulernen und mich intensiv mit Kolleg:innen zu vernetzen. Dadurch habe ich ein deutlich besseres Verständnis dafür gewonnen, wie die einzelnen Funktionen zusammenarbeiten und wie die Prozesse im Unternehmen insgesamt ineinandergreifen.  Besonders geschätzt habe ich die hohe Wertschätzung, die mir als Trainee entgegengebracht wurde. Ich durfte an spannenden Projekten mit echtem Impact arbeiten und früh Verantwortung übernehmen. Durch Learning by Doing konnte ich mich fachlich und persönlich in kurzer Zeit stark weiterentwickeln.  Insgesamt hat mir das Programm ein sehr klares Bild davon vermittelt, welche Möglichkeiten mir bei AbbVie offenstehen und welche Wege ich einschlagen kann, um meine Karriere dort gezielt weiterzuentwickeln.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_12>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <separator_copy
+                                                cq:styleIds="[1662756515133]"
+                                                jcr:created="{Date}2024-10-24T02:12:37.454-04:00"
+                                                jcr:createdBy="singarx"
+                                                jcr:lastModified="{Date}2026-05-12T07:49:22.125-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                            <image_84741686_copy
+                                                cq:styleIds="[1402843082813,1402843082822,1402843082832]"
+                                                jcr:created="{Date}2024-08-01T08:36:59.572-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-07-02T08:03:50.025-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                                alt="Burhan Topalli"
+                                                altValueFromDAM="false"
+                                                displayPopupTitle="true"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/entwicklungsprogramme/abbvie-de-entwicklungsprogramme-burhan-topalli.jpg"
+                                                isDecorative="false"
+                                                openInNewWindow="false"
+                                                titleValueFromDAM="false"/>
+                                        </par_11>
+                                        <par_13
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys"/>
+                                        <quote_1661374647
+                                            cq:styleIds="[1000000000021,1000000000033,1000000000040,1000000000000]"
+                                            jcr:created="{Date}2022-12-10T14:46:52.954-05:00"
+                                            jcr:createdBy="chiucx"
+                                            jcr:lastModified="{Date}2024-08-22T04:57:59.401-04:00"
+                                            jcr:lastModifiedBy="HERZOBW"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/quote"
+                                            attributionName="Mag. Ingo Raimon "
+                                            attributionTitle="General Manager AbbVie Österreich "
+                                            quote="Wir haben einen klaren Auftrag: durch medizinischen Fortschritt das Leben von Patient:innen zu verbessern. Dabei kommt der klinischen Forschung eine Schlüsselrolle zu: durch intensive Forschung können wir höhere Standards in der Behandlung und Patient:innenversorgung erzielen. Unsere Mitarbeiter:innen arbeiten in starken Teams, um Herausforderungen zu meistern. Die offene Arbeitskultur auf Augenhöhe ist wichtig für unseren gemeinsamen Unternehmenserfolg. "
+                                            quoteType="regular"
+                                            textSize="h0"/>
+                                        <par_14
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T07:45:04.892-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Anna Chlipala"
+                                                attributionTitle="ehemalige Auszubildende zur Biologielaborantin"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Ausbildung zur Biologielaborantin war unglaublich vielseitig. Ich habe mit unterschiedlichsten biologischen Systemen gearbeitet – von einzelnen Zellen bis hin zu komplexeren Organismen – und konnte viele Inhalte direkt praktisch im Labor anwenden. Besonders begeistert hat mich die enge Verbindung von Theorie und Praxis. Genau diese Mischung hat die Ausbildung für mich so spannend und abwechslungsreich gemacht.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_14>
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="3"
+                                                dataPriority="1"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="9"
+                                                dataPriority="2"/>
+                                        </columns>
+                                    </grid_copy_copy>
+                                </copy_of_container_co_642333755>
+                                <separator_copy_copy__351449296
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-10-24T03:55:44.539-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-24T03:55:44.539-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_28178812_
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:54:16.896-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Dein Weg ins AbbVie Traineeprogramm"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_copy_936749837_
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T03:53:53.086-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-06-09T05:34:36.672-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Bewirb dich dort, wo Entwicklung auf Innovation trifft und Talente echte Perspektiven finden.&lt;/p>&#xd;&#xa;&lt;p>Wir suchen motivierte Absolvent*innen, die Verantwortung übernehmen, über den Tellerrand hinausblicken und ihre Karriere aktiv gestalten möchten. Ganz gleich, für welches Programm du dich interessierst: Dein Einstieg bei AbbVie ist strukturiert, transparent und individuell.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1408051520_936498516
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-02-24T07:39:23.834-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_1833
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:54:25.619-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="So läuft der Bewerbungsprozess ab"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text_copy_copy_18008
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T03:53:53.086-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T04:13:29.802-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>&lt;b>1. Online-Bewerbung&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Reiche deinen Lebenslauf (Minimum), ein kurzes Motivationsschreiben (optional, aber gern gesehen) sowie relevante Zeugnisse (z. B. Abschlusszeugnisse, Praktikumsbescheinigungen, Arbeitsnachweise) über unsere Karriereseite ein.&lt;/p>&#xd;&#xa;&lt;p>Tipp: Zeige uns, wofür du brennst – und warum AbbVie der richtige nächste Schritt für dich ist.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>2.&amp;nbsp;Interviews mit HR &amp;amp; ggf. auch Fachbereichen&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>In virtuellen Kennenlerngesprächen möchten wir dich besser kennenlernen – fachlich wie menschlich. Gleichzeitig erhältst du einen realistischen Einblick in das Programm, unsere Teams und deine Entwicklungsmöglichkeiten.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>3.&amp;nbsp;Assessment Center&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Im Rahmen eines strukturierten Auswahltags (Assessment Center) lernst du weitere Trainees und Stakeholder kennen. In praxisnahen Übungen und Gesprächen prüfen wir gemeinsam, wie gut du und das Programm zueinander passen.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>4. Finales Gespräch &amp;amp; Vertragsangebot&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Du hast überzeugt – wir klären gemeinsam die letzten Details. Im Abschlussgespräch mit HR sprechen wir über deinen möglichen Karriereweg bei AbbVie. Danach erhältst du zeitnah dein Vertragsangebot.&lt;/p>&#xd;&#xa;&lt;p>Bitte beachte, dass sich der Bewerbungsprozess je nach Stelle in einzelnen Schritten leicht unterscheiden kann.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1408051520_1536779683
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-02-24T07:39:04.754-05:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-02-24T07:39:23.834-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_1833_949545376
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T03:53:00.897-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:54:36.955-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Starttermine &amp; Bewerbung"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <text_copy_copy_18008_1267100145
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T03:53:53.086-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-17T10:00:10.324-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Die Starttermine unserer Programme variieren je nach Fachbereich:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>ODP: Start am 15. Juli&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>TDP: Starttermine variabel&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>FDP: Start am 1. September&lt;/li>&#xd;&#xa;&lt;li>Commercial Traineeprogramme: Start am 1. Oktober&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>Tipp:&amp;nbsp;Die Stellenausschreibungen für unsere Entwicklungs- und Traineeprogramme werden teilweise bis zu 1 Jahr im Voraus geschaltet. Halte daher stets die Augen auf und bewirb dich, sobald die Stelle online ist.&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Aktuelle Ausschreibungen findest du jederzeit in unserem &lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Zum Stellenportal&quot;>Stellenportal&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_copy
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-10-24T03:55:44.539-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-24T03:55:44.539-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_2041122930_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T03:55:51.480-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-12-05T04:52:06.456-05:00"
+                                    jcr:lastModifiedBy="MURRARX3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p style=&quot;text-align: right;&quot;>DE-ABBV-240802&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                        </par_12>
+                        <par_13
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Als Trainee bei AbbVie hast du die Möglichkeit, durch eine Rotation verschiedene Abteilungen kennenzulernen und schnell einen Erfahrungsschatz in unterschiedlichen Bereichen des Unternehmens aufzubauen. Du lernst unsere Standorte kennen, arbeitest eigenverantwortlich an Projekten mit und unterstützt im Alltagsgeschäft. So entwickelst du ein funktionsübergreifendes Verständnis von der Pharma-Branche, von AbbVie und unserer Kultur und stellst dich damit optimal für eine Karriere als Fach- oder Führungskraft auf.&lt;/p>&#xd;&#xa;&lt;p>In unseren Trainee- und Entwicklungsprogrammen steht deine Weiterentwicklung im Vordergrund. Deine Fortschritte und Ziele werden in einem persönlichen Entwicklungsplan festgehalten. Darüber hinaus stehen dir deine jeweilige Führungskraft und ein*e Onboarding-Pat*in mit Rat und Tat zur Seite.&lt;/p>&#xd;&#xa;&lt;p>Wir entwickeln gezielt qualifizierte Fach- und Führungskräfte von morgen. Daher suchen wir hoch motivierte Nachwuchskräfte, die ausgezeichnete Ergebnisse erzielen wollen und zu unserer offenen Unternehmenskultur passen. Der Großteil unserer ehemaligen Trainees hat nach Abschluss des Programms eine feste, verantwortungsvolle Position im Unternehmen übernommen.&lt;/p>&#xd;&#xa;&lt;p>Die Entwicklungsprogramme dauern im Regelfall 2 - 3 Jahre und bestehen aus drei bis vier Stationen in unterschiedlichen Fachabteilungen. Das Startdatum variiert je nach Trainee- und Entwicklungsprogramm (siehe hierzu die individuellen Stellenausschreibungen).&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <separator
-                            cq:styleIds="[1662756486159]"
-                            jcr:created="{Date}2024-10-24T03:55:44.539-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T03:55:44.539-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <text_2041122930
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-24T03:55:51.480-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-12-05T04:52:06.456-05:00"
-                            jcr:lastModifiedBy="MURRARX3"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: right;&quot;>DE-ABBV-240802&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                    </container_40078993>
-                    <container_841656783
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <cardpagestory_copy_c
+                                cq:styleIds="[1111111111110,1111111111112,1111111111117]"
+                                jcr:created="{Date}2022-12-16T17:58:51.417-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:52:46.340-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                hideImage="false"
+                                linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"
+                                openInNewTab="false"/>
+                            <separator_1294049852
+                                cq:styleIds="[1662756423318,1662756756047]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-24T03:52:34.800-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1294049852_209947265
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:55:18.142-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1294049852_712449948
+                                cq:styleIds="[1662756387452]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-24T03:53:18.557-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <header_1821235473_co
+                                cq:styleIds="[3]"
+                                jcr:created="{Date}2022-12-14T13:11:04.446-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-05-10T07:52:25.568-04:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="THEMEN"/>
+                            <linklist_copy_copy_c
+                                jcr:created="{Date}2022-12-14T13:11:54.007-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:55:01.055-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                childDepth="1"
+                                excludeCurrentPage="true"
+                                linkItems="true"
+                                linksTarget="_self"
+                                listFrom="children"
+                                parentPage="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"
+                                showDate="false"
+                                showDesc="false"
+                                showSubtitle="false"
+                                showTags="false"
+                                sortOrder="asc"
+                                tagsMatch="any"
+                                textIsRich="[true,true,true,true,true]">
+                                <pages jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Onkologie  "
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/de/de/wissenschaft/schwerpunktbereiche/onkologie"
+                                        oneTrustEnabled="false"
+                                        text="Onkologie  "
+                                        textIconTarget="_self"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Neuroscience"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/de/de/wissenschaft/schwerpunktbereiche/neurologie"
+                                        oneTrustEnabled="false"
+                                        text="Neuroscience"
+                                        textIconTarget="_self"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Eye Care"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/eye-care"
+                                        oneTrustEnabled="false"
+                                        text="Eye Care"
+                                        textIconTarget="_self"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Aesthetics"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/aesthetics"
+                                        oneTrustEnabled="false"
+                                        text="Aesthetics"
+                                        textIconTarget="_self"/>
+                                    <item4
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Other Specialties"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/other-specialties"
+                                        oneTrustEnabled="false"
+                                        text="Other Specialties"
+                                        textIconTarget="_self"/>
+                                </pages>
+                            </linklist_copy_copy_c>
+                        </par_13>
+                    </grid_copy>
+                    <container_840033068_
                         cq:styleIds="[1653545825683,1653545847150]"
-                        jcr:created="{Date}2024-10-24T03:57:15.773-04:00"
+                        jcr:created="{Date}2024-10-23T05:50:34.224-04:00"
                         jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-10-24T03:58:43.018-04:00"
-                        jcr:lastModifiedBy="singarx"
+                        jcr:lastModified="{Date}2026-02-24T04:53:26.147-05:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundColor="#F4F4F4">
+                        backgroundColor="#A6B5E0"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false">
                         <grid
-                            jcr:created="{Date}2024-10-24T03:58:03.987-04:00"
+                            jcr:created="{Date}2024-10-23T05:50:47.655-04:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T03:58:20.246-04:00"
+                            jcr:lastModified="{Date}2024-10-23T05:51:05.146-04:00"
                             jcr:lastModifiedBy="singarx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/grid/v2/grid"
@@ -174,39 +968,91 @@
                             <par_11
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/foundation/components/parsys">
-                                <teaser_copy_337191228
-                                    cq:styleIds="[6]"
-                                    jcr:created="{Date}2024-10-24T03:16:51.950-04:00"
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1651545825678,1661545829678,1651545825694]"
+                                    jcr:created="{Date}2024-10-23T05:23:35.216-04:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2024-12-06T03:26:02.433-05:00"
-                                    jcr:lastModifiedBy="WINTELX"
+                                    jcr:lastModified="{Date}2026-02-24T05:21:31.850-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="&lt;p>&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Finde den Job, der zu Dir passt&amp;nbsp;&lt;/a>&lt;/p>&#xd;&#xa;"
-                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
-                                    ctaLink="https://abbvie.taleo.net/careersection/2/jobsearch.ftl?location=10140125194&amp;lang=de"
-                                    ctaTarget="_self"
-                                    pretitle="Offene Stellen"
-                                    textIsRich="[true,true]"/>
+                                    jcr:title="Offene Stellen"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="noh"/>
+                                <separator_1891304686_855153986
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686_816419786
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686_978224001
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <button
+                                    cq:styleIds="[1659997740832,1659997787460]"
+                                    jcr:created="{Date}2026-02-24T04:54:25.788-05:00"
+                                    jcr:createdBy="kunkefx"
+                                    jcr:lastModified="{Date}2026-02-24T05:16:26.453-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Finde den Job, der zu Dir passt"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Stellenangebote ansehen"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com/de/"/>
                             </par_11>
                             <par_12
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/foundation/components/parsys">
-                                <teaser_copy
-                                    cq:styleIds="[6]"
-                                    jcr:created="{Date}2024-10-24T03:16:57.478-04:00"
+                                <title_copy
+                                    cq:styleIds="[1651545825678,1661545829678,1651545825694,1659545825678]"
+                                    jcr:created="{Date}2024-10-23T05:23:35.216-04:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2024-12-06T03:26:18.036-05:00"
-                                    jcr:lastModifiedBy="WINTELX"
+                                    jcr:lastModified="{Date}2026-02-24T05:19:14.852-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="&lt;p>&lt;a href=&quot;https://careers.abbvie.com/de/talent-community&quot; target=&quot;_blank&quot; title=&quot;Talent Community&quot;>Werde Teil der Talent Community&lt;/a>&lt;/p>&#xd;&#xa;"
-                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
-                                    ctaLink="http://abbvie.avature.net/talent?source=Talent+Community&amp;tags=abbviecareers%20"
-                                    ctaTarget="_self"
-                                    pretitle="Interessierst du dich für eine Karriere bei AbbVie?"
-                                    textIsRich="[true,true]"/>
+                                    jcr:title="Interessierst du dich für eine Karriere bei AbbVie?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="noh"/>
+                                <button_copy
+                                    cq:styleIds="[1659997740832,1659997787460]"
+                                    jcr:created="{Date}2026-02-24T04:54:25.788-05:00"
+                                    jcr:createdBy="kunkefx"
+                                    jcr:lastModified="{Date}2026-02-24T05:16:20.687-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Werde Teil der Talent Community"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Werde Teil der Talent Community"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com/de/talent-community"/>
                             </par_12>
                         </grid>
-                    </container_841656783>
+                    </container_840033068_>
                     <separator
                         cq:styleIds="[1662756542862]"
                         jcr:created="{Date}2024-10-24T04:04:18.920-04:00"

@@ -2,26 +2,26 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-02-10T08:47:46.296-05:00"
-        cq:lastModifiedBy="autzeax"
+        cq:lastModified="{Date}2026-08-10T07:17:47.022-04:00"
+        cq:lastModifiedBy="kunkefx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="AbbVie bietet Karrieremöglichkeiten in den Bereichen Forschung und Entwicklung, Unternehmen, Handel, Betrieb, Ästhetik und IT. Sehen Sie, wo Ihre Fähigkeiten Anwendung finden können."
         jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2025-02-10T08:47:46.286-05:00"
-        jcr:lastModifiedBy="autzeax"
+        jcr:lastModified="{Date}2026-08-10T07:17:47.002-04:00"
+        jcr:lastModifiedBy="kunkefx"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Einstieg bei AbbVie"
-        jcr:uuid="15ba2e29-ff26-4952-af7f-6bc448e572d2"
+        jcr:uuid="83c282db-516b-46b9-82ad-4a11e09bf3f9"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Erfahre mehr über die Möglichkeiten bei AbbVie"
         ctaText="Erfahre mehr"
-        description="Echte Innovation ist ohne ein vielfältiges und kollaboratives Team nicht möglich. Lernen Sie uns kennen. "
+        description="Echte Innovation ist ohne ein vielfältiges und kollaboratives Team nicht möglich. Lernt uns kennen. "
         eyebrow="Begleite uns"
         fileReference="/content/dam/abbvie-com2/images/employee/molly-sarah-in-conference-hero.jpg"
         navTitle="Einstieg bei AbbVie"
         pageTitle="Einstieg bei AbbVie"
-        title="Gelegenheiten"
+        title="Einstieg bei AbbVie"
         warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/de/de/site/popups/warn-on-departure/master">
         <root
             jcr:primaryType="nt:unstructured"
@@ -39,12 +39,16 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <container
-                        cq:styleIds="[1653545835859,1653545825683,1653545835879,1653545847149]"
-                        jcr:lastModified="{Date}2022-12-10T16:13:35.627-05:00"
-                        jcr:lastModifiedBy="chiucx"
+                        cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
+                        jcr:lastModified="{Date}2026-08-06T07:01:38.117-04:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/images/employee/molly-sarah-in-conference-hero.jpg"/>
+                        backgroundImageReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/abbvie-de-zwei-frauen-konferenzraum.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
                     <container2
                         cq:styleIds="[1653545835855,1653545835860,1653545825685,1653545847150,1653242825678]"
                         jcr:primaryType="nt:unstructured"
@@ -162,6 +166,61 @@
                                     accessibilityLabel="Mehr erfahren"
                                     linkTarget="_blank"
                                     linkURL="https://careers.abbvie.com/de/"/>
+                                <separator
+                                    cq:styleIds="[1662756387452,1662756756047]"
+                                    jcr:created="{Date}2026-08-06T06:47:17.173-04:00"
+                                    jcr:createdBy="kunkefx"
+                                    jcr:lastModified="{Date}2026-08-06T06:49:34.178-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1294049852
+                                    cq:styleIds="[1662756423318]"
+                                    jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2022-12-14T13:11:13.090-05:00"
+                                    jcr:lastModifiedBy="chiucx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <image_copy
+                                    jcr:created="{Date}2022-12-10T16:23:08.734-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-08-06T07:05:00.948-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="Rothaarige Frau mit Brille lächelt in die Kamera. Im Hintergrund eine türkisfarbene Wand mit einem Schriftzug rauf"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="true"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/abbvie-de-teaser-schueler-und-studenten-500px-399px-260806.jpg"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="false"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2022-12-10T16:23:13.561-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-08-06T07:05:23.192-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Start ins Berufsleben&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <button_copy
+                                    cq:styleIds="[1659997756584]"
+                                    jcr:created="{Date}2022-12-10T16:23:19.091-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-08-06T09:14:50.842-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Jetzt informieren"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Mehr erfahren"
+                                    langAttribute="none"
+                                    linkTarget="_self"
+                                    linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"/>
                             </container_copy>
                         </par_11>
                         <par_13
@@ -328,33 +387,35 @@
                                 <header_copy
                                     jcr:created="{Date}2022-12-05T17:56:57.364-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-05-08T12:14:34.855-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:lastModified="{Date}2026-08-06T07:10:49.640-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/header/v2/header"
-                                    eyebrow="Studierende und Hochschulabsolvent*innen"/>
+                                    eyebrow="Schüler*innen"/>
                                 <text_copy
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2022-12-05T17:51:25.819-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-11-28T03:14:14.565-05:00"
-                                    jcr:lastModifiedBy="MURRARX3"
+                                    jcr:lastModified="{Date}2026-08-06T07:11:08.556-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>Beginne deine Karriere durch verschiedene Praktika und Weiterbildungsmöglichkeiten.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p>Lege mit einem Schülerpraktikum, einer Ausbildung oder einem dualen Studium den Grundstein für deine Zukunft.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <button
-                                    cq:styleIds="[1659997777274]"
+                                    cq:styleIds="[1659997756584]"
                                     jcr:created="{Date}2022-12-10T16:17:56.932-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-09-17T17:59:20.623-04:00"
-                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:lastModified="{Date}2026-08-06T07:19:51.382-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     jcr:title="ERKUNDEN"
                                     sling:resourceType="abbvie-com2/components/button/v2/button"
                                     accessibilityLabel="Entdecken Sie die Möglichkeiten für Studierende und neue Absolventen"
-                                    linkTarget="_blank"
-                                    linkURL="https://www.abbvie.com/join-us/opportunities/student-programs.html"/>
+                                    langAttribute="none"
+                                    linkTarget="_self"
+                                    linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten.html#schuelerinnen"/>
                             </par_11>
                             <par_12
                                 jcr:primaryType="nt:unstructured"
@@ -362,46 +423,50 @@
                                 <image_copy_copy
                                     jcr:created="{Date}2022-12-05T17:51:18.295-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-05-08T12:14:00.224-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:lastModified="{Date}2026-08-06T08:25:56.941-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/image/v2/image"
-                                    altValueFromDAM="true"
+                                    alt="Mann vor dem Laptop"
+                                    altValueFromDAM="false"
                                     displayPopupTitle="true"
                                     dmPresetType="imagePreset"
-                                    fileReference="/content/dam/abbvie-com2/images/employee/male/man-scientist-in-lab-feature-small.jpg"
+                                    fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/abbvie-de-teaser-studentinnen-840-470px-260806.jpg"
                                     isDecorative="false"
+                                    openInNewWindow="false"
                                     titleValueFromDAM="true"/>
                                 <header_copy_copy
                                     jcr:created="{Date}2022-12-05T17:56:57.364-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-05-08T12:15:10.249-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:lastModified="{Date}2026-08-06T07:26:22.769-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/header/v2/header"
-                                    eyebrow="Postdoktorand*innen "/>
+                                    eyebrow="Student*innen"/>
                                 <text_copy_copy
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2022-12-05T17:51:25.819-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-05-08T12:16:29.792-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:lastModified="{Date}2026-08-06T07:26:52.069-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>Löse im Rahmen unseres Postdoktorandenprogramms zusammen mit weltweit führenden Wissenschaftler*innen komplexe Herausforderungen.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p>Im Rahmen eines Praktikums oder als Werkstudent*in kannst du dein Wissen aus dem Studium anwenden und wertvolle Praxiserfahrung sammeln.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <button_copy
                                     cq:styleIds="[1659997756584]"
                                     jcr:created="{Date}2022-12-10T16:17:56.932-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-09-17T17:59:34.647-04:00"
-                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:lastModified="{Date}2026-08-06T08:13:19.154-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="WEITERE INFORMATIONEN "
+                                    jcr:title="ERKUNDEN"
                                     sling:resourceType="abbvie-com2/components/button/v2/button"
                                     accessibilityLabel="Lern mehr"
-                                    linkTarget="_blank"
-                                    linkURL="https://www.abbvie.com/join-us/opportunities/postdoctoral-program.html"/>
+                                    langAttribute="none"
+                                    linkTarget="_self"
+                                    linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten.html#studentinnen"/>
                             </par_12>
                             <par_13
                                 jcr:primaryType="nt:unstructured"
@@ -422,33 +487,35 @@
                                 <header_copy_copy_cop
                                     jcr:created="{Date}2022-12-05T17:56:57.364-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-05-08T12:15:41.511-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:lastModified="{Date}2026-08-06T08:14:00.821-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/header/v2/header"
-                                    eyebrow="Ärzt*innen "/>
+                                    eyebrow="Absolvent*innen"/>
                                 <text_copy_copy_copy
                                     cq:styleIds="[1659545825678]"
                                     jcr:created="{Date}2022-12-05T17:51:25.819-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-05-08T12:15:49.539-04:00"
-                                    jcr:lastModifiedBy="ABDELAX6"
+                                    jcr:lastModified="{Date}2026-08-06T08:13:42.881-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="abbvie-com2/components/text/v2/text"
-                                    text="&lt;p>Eigne dir durch die Teilnahme an unserem zweijährigen Weiterbildungsprogramm die Führungskompetenzen an, die du als künftige Führungskraft in der Forschung und Entwicklung benötigst&lt;/p>&#xd;&#xa;"
+                                    langAttribute="none"
+                                    text="&lt;p>Starte deine Karriere als Hochschulabsolvent*in mit strukturierten Einstiegsprogrammen oder Ph.D.- und Post-Doc-Programmen.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <button_copy_copy
                                     cq:styleIds="[1659997756584]"
                                     jcr:created="{Date}2022-12-10T16:17:56.932-05:00"
                                     jcr:createdBy="chiucx"
-                                    jcr:lastModified="{Date}2024-09-17T17:59:43.645-04:00"
-                                    jcr:lastModifiedBy="jewitca"
+                                    jcr:lastModified="{Date}2026-08-06T08:42:57.975-04:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="OFFENE STELLEN ANSEHEN "
+                                    jcr:title="ERKUNDEN"
                                     sling:resourceType="abbvie-com2/components/button/v2/button"
                                     accessibilityLabel="SUCHEN SIE NACH EINER OFFENEN ROLLE"
-                                    linkTarget="_blank"
-                                    linkURL="https://careers.abbvie.com/en/search-jobs/physician%20development%20program/14/1"/>
+                                    langAttribute="none"
+                                    linkTarget="_self"
+                                    linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten.html#absolventinnen"/>
                             </par_13>
                             <columns jcr:primaryType="nt:unstructured">
                                 <item0

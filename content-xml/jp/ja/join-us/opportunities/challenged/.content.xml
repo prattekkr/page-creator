@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <employment-situation/>
     <jcr:content
-        cq:lastModified="{Date}2026-05-25T22:12:20.072-04:00"
+        cq:lastModified="{Date}2026-07-22T03:38:43.930-04:00"
         cq:lastModifiedBy="tadankx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="アッヴィは、社員の多様性を尊重し、多くの雇用機会を設けています。"
@@ -13,7 +13,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="障がい者採用"
-        jcr:uuid="47669def-bbe9-4317-b928-00171e387af9"
+        jcr:uuid="84675667-20ca-4848-a61d-c4f9afb101ae"
         sling:resourceType="abbvie-com2/components/remotepage"
         description="アッヴィは、社員の多様性を尊重し、多くの雇用機会を設けています。"
         eyebrow="採用・求人案内"
@@ -305,7 +305,87 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
                         </par_21>
+                        <par_23
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/foundation/components/parsys"/>
                     </grid_926132615>
+                    <container_829993285_
+                        cq:styleIds="[1653545835860,1653545825684,1653545847150]"
+                        jcr:created="{Date}2022-12-10T14:52:43.800-05:00"
+                        jcr:createdBy="chiucx"
+                        jcr:lastModified="{Date}2022-12-10T14:52:54.749-05:00"
+                        jcr:lastModifiedBy="chiucx"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="abbvie-com2/components/container/v2/container"
+                        backgroundColor="#0066F5">
+                        <grid
+                            cq:styleIds="[0,1653545835880]"
+                            jcr:created="{Date}2022-12-10T14:54:19.535-05:00"
+                            jcr:createdBy="chiucx"
+                            jcr:lastModified="{Date}2022-12-10T14:55:03.005-05:00"
+                            jcr:lastModifiedBy="chiucx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                            rowCount="1">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="8"
+                                    dataPriority="1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="2"
+                                    dataPriority="1"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    columnWidth="2"
+                                    dataPriority="1"/>
+                            </columns>
+                            <par_11
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <title
+                                    cq:styleIds="[1651545824668,1659545825678]"
+                                    jcr:created="{Date}2022-12-10T14:53:27.324-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2024-03-08T00:06:42.113-05:00"
+                                    jcr:lastModifiedBy="tadankx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="アッヴィの求人情報について"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h4"
+                                    variant="h"/>
+                                <text
+                                    cq:styleIds="[1659545825678,1659545835859]"
+                                    jcr:created="{Date}2022-12-10T15:01:55.584-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-07-22T03:38:19.515-04:00"
+                                    jcr:lastModifiedBy="tadankx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>キャリア採用と障がい者採用の両方の求人を掲載しています。&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </par_11>
+                            <par_13
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/parsys">
+                                <button
+                                    cq:styleIds="[1659997740832,1659997787461]"
+                                    jcr:created="{Date}2022-12-10T14:55:13.693-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-07-22T03:38:43.914-04:00"
+                                    jcr:lastModifiedBy="tadankx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="求人情報を見る"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="求人を参照する"
+                                    langAttribute="none"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com/ja"/>
+                            </par_13>
+                        </grid>
+                    </container_829993285_>
                     <separator
                         cq:styleIds="[1662756456518]"
                         jcr:created="{Date}2022-12-10T15:57:10.390-05:00"

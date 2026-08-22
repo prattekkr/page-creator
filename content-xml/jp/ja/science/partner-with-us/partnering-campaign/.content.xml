@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <campaign-details/>
     <jcr:content
-        cq:lastModified="{Date}2026-05-12T21:46:25.207-04:00"
+        cq:lastModified="{Date}2026-07-30T21:39:57.015-04:00"
         cq:lastModifiedBy="tadankx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:description="Partner with AbbVie Japan to bring your late-stage asset to patients in Japan"
@@ -13,7 +13,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="AbbVie Japan Partnering Campaign 2026"
-        jcr:uuid="0666ceeb-259a-4d77-b65a-931bed495b5c"
+        jcr:uuid="46c8dd75-b055-4f5d-a867-3dcdb40f56c9"
         sling:resourceType="abbvie-com2/components/remotepage"
         description="Partner with AbbVie Japan to bring your late-stage asset to patients in Japan"
         eyebrow="サイエンス"
@@ -156,53 +156,92 @@
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <grid
-                                cq:styleIds="[1653545835880]"
-                                jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                            <container_copy_copy__1660737530
+                                cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                                jcr:created="{Date}2026-07-24T04:12:50.617-04:00"
                                 jcr:createdBy="tadankx"
-                                jcr:lastModified="{Date}2026-04-10T01:08:32.399-04:00"
+                                jcr:lastModified="{Date}2026-07-29T01:33:16.919-04:00"
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                                rowCount="1">
-                                <par_12
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#071D49"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false"
+                                langAttribute="none">
+                                <grid
+                                    cq:styleIds="[1653545835880]"
+                                    jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                                    jcr:createdBy="tadankx"
+                                    jcr:lastModified="{Date}2026-07-29T19:51:42.350-04:00"
+                                    jcr:lastModifiedBy="tadankx"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/foundation/components/parsys">
-                                    <button
-                                        cq:styleIds="[1659997756584,1659997787460]"
-                                        jcr:created="{Date}2026-04-08T02:23:38.162-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-19T20:17:14.483-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                    sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                    rowCount="1">
+                                    <par_12
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="　VIEW DETAILS"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details"/>
-                                    <button_1124068677
-                                        jcr:created="{Date}2026-04-08T04:57:25.094-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-13T03:59:25.016-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T19:48:52.258-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Rolling review - 1st deadline: Aug 31&lt;/b>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_12>
+                                    <par_13
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="APPLY NOW"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie Japan Partnering - Your name&amp;body=Thank you for your interest. Please send items 1 to 4 via email. 1. Company name 2. Contact person's name 3. Program summary 4. Non-confidential deck (PDF)"/>
-                                </par_12>
-                                <columns jcr:primaryType="nt:unstructured">
-                                    <item0
+                                        sling:resourceType="wcm/foundation/components/parsys"/>
+                                    <par_14
                                         jcr:primaryType="nt:unstructured"
-                                        columnWidth="5"
-                                        dataPriority="1"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        columnWidth="7"
-                                        dataPriority="1"/>
-                                </columns>
-                            </grid>
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:31:51.087-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;a href=&quot;/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details.html&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>VIEW DETAILS &amp;gt;&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                        <text_copy_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:33:41.103-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie%20Japan%20Partnering%20-%20Your%20name&amp;amp;body=Thank%20you%20for%20your%20interest.%20Please%20send%20items%201%20to%204%20via%20email.%201.%20Company%20name%202.%20Contact%20person%27s%20name%203.%20Program%20summary%204.%20Non-confidential%20deck%20(PDF)&quot;>APPLY NOW&amp;nbsp;&amp;gt;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_14>
+                                    <columns jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="5"
+                                            dataPriority="1"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="4"
+                                            dataPriority="1"/>
+                                    </columns>
+                                </grid>
+                            </container_copy_copy__1660737530>
                             <separator_copy_copy__1188352413
                                 cq:styleIds="[1662756756047,1662756486159]"
                                 jcr:created="{Date}2025-05-20T23:06:59.641-04:00"
@@ -590,53 +629,92 @@
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <grid_copy
-                                cq:styleIds="[1653545835880]"
-                                jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                                jcr:created="{Date}2026-07-24T04:12:50.617-04:00"
                                 jcr:createdBy="tadankx"
-                                jcr:lastModified="{Date}2026-04-10T01:08:32.399-04:00"
+                                jcr:lastModified="{Date}2026-07-29T01:33:16.919-04:00"
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                                rowCount="1">
-                                <par_12
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#071D49"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false"
+                                langAttribute="none">
+                                <grid
+                                    cq:styleIds="[1653545835880]"
+                                    jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                                    jcr:createdBy="tadankx"
+                                    jcr:lastModified="{Date}2026-07-29T19:51:42.350-04:00"
+                                    jcr:lastModifiedBy="tadankx"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/foundation/components/parsys">
-                                    <button
-                                        cq:styleIds="[1659997756584,1659997787460]"
-                                        jcr:created="{Date}2026-04-08T02:23:38.162-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-19T20:17:26.927-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                    sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                    rowCount="1">
+                                    <par_12
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="　VIEW DETAILS"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details"/>
-                                    <button_1124068677
-                                        jcr:created="{Date}2026-04-08T04:57:25.094-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-13T03:59:36.623-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T19:48:52.258-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Rolling review - 1st deadline: Aug 31&lt;/b>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_12>
+                                    <par_13
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="APPLY NOW"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie Japan Partnering - Your name&amp;body=Thank you for your interest. Please send items 1 to 4 via email. 1. Company name 2. Contact person's name 3. Program summary 4. Non-confidential deck (PDF)"/>
-                                </par_12>
-                                <columns jcr:primaryType="nt:unstructured">
-                                    <item0
+                                        sling:resourceType="wcm/foundation/components/parsys"/>
+                                    <par_14
                                         jcr:primaryType="nt:unstructured"
-                                        columnWidth="5"
-                                        dataPriority="1"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        columnWidth="7"
-                                        dataPriority="1"/>
-                                </columns>
-                            </grid_copy>
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:31:51.087-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;a href=&quot;/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details.html&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>VIEW DETAILS &amp;gt;&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                        <text_copy_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:33:41.103-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie%20Japan%20Partnering%20-%20Your%20name&amp;amp;body=Thank%20you%20for%20your%20interest.%20Please%20send%20items%201%20to%204%20via%20email.%201.%20Company%20name%202.%20Contact%20person%27s%20name%203.%20Program%20summary%204.%20Non-confidential%20deck%20(PDF)&quot;>APPLY NOW&amp;nbsp;&amp;gt;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_14>
+                                    <columns jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="5"
+                                            dataPriority="1"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="4"
+                                            dataPriority="1"/>
+                                    </columns>
+                                </grid>
+                            </container_copy_copy_>
                             <separator_copy
                                 cq:styleIds="[1662756756047,1662756502570]"
                                 jcr:created="{Date}2025-05-20T23:06:59.641-04:00"
@@ -1010,53 +1088,92 @@
                                 isDecorative="false"
                                 openInNewWindow="false"
                                 titleValueFromDAM="true"/>
-                            <grid_copy_617873345
-                                cq:styleIds="[1653545835880]"
-                                jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                            <container_copy_copy__962170124
+                                cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                                jcr:created="{Date}2026-07-24T04:12:50.617-04:00"
                                 jcr:createdBy="tadankx"
-                                jcr:lastModified="{Date}2026-04-10T01:08:32.399-04:00"
+                                jcr:lastModified="{Date}2026-07-29T01:33:16.919-04:00"
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                                rowCount="1">
-                                <par_12
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#071D49"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false"
+                                langAttribute="none">
+                                <grid
+                                    cq:styleIds="[1653545835880]"
+                                    jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                                    jcr:createdBy="tadankx"
+                                    jcr:lastModified="{Date}2026-07-29T19:51:42.350-04:00"
+                                    jcr:lastModifiedBy="tadankx"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/foundation/components/parsys">
-                                    <button
-                                        cq:styleIds="[1659997756584,1659997787460]"
-                                        jcr:created="{Date}2026-04-08T02:23:38.162-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-19T20:17:39.444-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                    sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                    rowCount="1">
+                                    <par_12
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="　VIEW DETAILS"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details"/>
-                                    <button_1124068677
-                                        jcr:created="{Date}2026-04-08T04:57:25.094-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-13T03:59:50.206-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T19:48:52.258-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Rolling review - 1st deadline: Aug 31&lt;/b>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_12>
+                                    <par_13
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="APPLY NOW"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie Japan Partnering - Your name&amp;body=Thank you for your interest. Please send items 1 to 4 via email. 1. Company name 2. Contact person's name 3. Program summary 4. Non-confidential deck (PDF)"/>
-                                </par_12>
-                                <columns jcr:primaryType="nt:unstructured">
-                                    <item0
+                                        sling:resourceType="wcm/foundation/components/parsys"/>
+                                    <par_14
                                         jcr:primaryType="nt:unstructured"
-                                        columnWidth="5"
-                                        dataPriority="1"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        columnWidth="7"
-                                        dataPriority="1"/>
-                                </columns>
-                            </grid_copy_617873345>
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:31:51.087-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;a href=&quot;/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details.html&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>VIEW DETAILS &amp;gt;&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                        <text_copy_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:33:41.103-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie%20Japan%20Partnering%20-%20Your%20name&amp;amp;body=Thank%20you%20for%20your%20interest.%20Please%20send%20items%201%20to%204%20via%20email.%201.%20Company%20name%202.%20Contact%20person%27s%20name%203.%20Program%20summary%204.%20Non-confidential%20deck%20(PDF)&quot;>APPLY NOW&amp;nbsp;&amp;gt;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_14>
+                                    <columns jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="5"
+                                            dataPriority="1"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="4"
+                                            dataPriority="1"/>
+                                    </columns>
+                                </grid>
+                            </container_copy_copy__962170124>
                         </par_12>
                         <text_copy_1536542192
                             cq:styleIds="[1659545825678]"
@@ -1636,53 +1753,92 @@
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <grid_copy_919791093
-                                cq:styleIds="[1653545835880]"
-                                jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                            <container_copy_copy_
+                                cq:styleIds="[1653545835859,1653545825683,1653545847150,1653545835879]"
+                                jcr:created="{Date}2026-07-24T04:12:50.617-04:00"
                                 jcr:createdBy="tadankx"
-                                jcr:lastModified="{Date}2026-04-10T01:08:32.399-04:00"
+                                jcr:lastModified="{Date}2026-07-29T01:33:16.919-04:00"
                                 jcr:lastModifiedBy="tadankx"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/grid/v2/grid"
-                                rowCount="1">
-                                <par_12
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                backgroundColor="#071D49"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false"
+                                langAttribute="none">
+                                <grid
+                                    cq:styleIds="[1653545835880]"
+                                    jcr:created="{Date}2026-04-08T04:50:51.478-04:00"
+                                    jcr:createdBy="tadankx"
+                                    jcr:lastModified="{Date}2026-07-29T19:51:42.350-04:00"
+                                    jcr:lastModifiedBy="tadankx"
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/foundation/components/parsys">
-                                    <button
-                                        cq:styleIds="[1659997756584,1659997787460]"
-                                        jcr:created="{Date}2026-04-08T02:23:38.162-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-19T20:17:55.438-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                    sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                    rowCount="1">
+                                    <par_12
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="　VIEW DETAILS"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details"/>
-                                    <button_1124068677
-                                        jcr:created="{Date}2026-04-08T04:57:25.094-04:00"
-                                        jcr:createdBy="tadankx"
-                                        jcr:lastModified="{Date}2026-04-13T04:00:02.912-04:00"
-                                        jcr:lastModifiedBy="tadankx"
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T19:48:52.258-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-20-reg&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>&lt;b>Rolling review - 1st deadline: Aug 31&lt;/b>&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_12>
+                                    <par_13
                                         jcr:primaryType="nt:unstructured"
-                                        jcr:title="APPLY NOW"
-                                        sling:resourceType="abbvie-com2/components/button/v2/button"
-                                        langAttribute="none"
-                                        linkTarget="_self"
-                                        linkURL="mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie Japan Partnering - Your name&amp;body=Thank you for your interest. Please send items 1 to 4 via email. 1. Company name 2. Contact person's name 3. Program summary 4. Non-confidential deck (PDF)"/>
-                                </par_12>
-                                <columns jcr:primaryType="nt:unstructured">
-                                    <item0
+                                        sling:resourceType="wcm/foundation/components/parsys"/>
+                                    <par_14
                                         jcr:primaryType="nt:unstructured"
-                                        columnWidth="5"
-                                        dataPriority="1"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        columnWidth="7"
-                                        dataPriority="1"/>
-                                </columns>
-                            </grid_copy_919791093>
+                                        sling:resourceType="wcm/foundation/components/parsys">
+                                        <text_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:31:51.087-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;a href=&quot;/content/abbvie-com2/jp/ja/science/partner-with-us/partnering-campaign/campaign-details.html&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>VIEW DETAILS &amp;gt;&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                        <text_copy_copy
+                                            cq:styleIds="[1659545825678,1659545835859]"
+                                            jcr:created="{Date}2026-07-22T00:07:04.594-04:00"
+                                            jcr:createdBy="tadankx"
+                                            jcr:lastModified="{Date}2026-07-29T04:33:41.103-04:00"
+                                            jcr:lastModifiedBy="tadankx"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                                            langAttribute="none"
+                                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>&lt;a href=&quot;mailto:AbbVie_Japan_Partnering_Campaign@abbvie.com?subject=AbbVie%20Japan%20Partnering%20-%20Your%20name&amp;amp;body=Thank%20you%20for%20your%20interest.%20Please%20send%20items%201%20to%204%20via%20email.%201.%20Company%20name%202.%20Contact%20person%27s%20name%203.%20Program%20summary%204.%20Non-confidential%20deck%20(PDF)&quot;>APPLY NOW&amp;nbsp;&amp;gt;&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par_14>
+                                    <columns jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="5"
+                                            dataPriority="1"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="1"
+                                            dataPriority="1"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            columnWidth="4"
+                                            dataPriority="1"/>
+                                    </columns>
+                                </grid>
+                            </container_copy_copy_>
                             <separator_copy_copy_
                                 cq:styleIds="[1662756486159,1662756756047]"
                                 jcr:created="{Date}2025-05-20T23:06:59.641-04:00"

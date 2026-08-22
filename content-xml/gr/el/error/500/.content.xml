@@ -2,8 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-09-29T06:19:46.514-04:00"
-        cq:lastModifiedBy="feerosx"
+        cq:lastModified="{Date}2026-07-07T09:53:56.204-04:00"
+        cq:lastModifiedBy="SHARMRX18"
         cq:robotsTags="noindex"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
@@ -12,7 +12,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="500"
-        jcr:uuid="809bdae5-0526-42cf-ab86-197e0442fc51"
+        jcr:uuid="5d11bfdb-ce81-4db3-b362-503518c4b83f"
         sling:resourceType="abbvie-com2/components/remotepage"
         sling:sitemapRoot="excludeSitemapNoCanonical"
         hideInNav="true"
@@ -25,9 +25,11 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <experiencefragmentHeader
+                    jcr:lastModified="{Date}2026-07-07T09:53:21.325-04:00"
+                    jcr:lastModifiedBy="SHARMRX18"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="abbvie-com2/components/experiencefragment"
-                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/header/master"/>
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/header/greece-header"/>
                 <responsivegrid1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -77,20 +79,22 @@
                         <searchinput
                             jcr:created="{Date}2023-02-06T13:41:28.079-05:00"
                             jcr:createdBy="chiucx"
-                            jcr:lastModified="{Date}2023-02-06T13:42:50.675-05:00"
-                            jcr:lastModifiedBy="chiucx"
+                            jcr:lastModified="{Date}2026-07-07T09:53:40.072-04:00"
+                            jcr:lastModifiedBy="SHARMRX18"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/search/searchinput/v2/searchinput"
                             buttonLabel="Search"
                             buttonLabelMobile="Search AbbVie.com"
-                            searchResultsPath="/content/abbvie-com2/us/en/search-results"
+                            searchResultsPath="/content/abbvie-com2/gr/el/search-results"
                             searchType="coveo"/>
                     </container_2110719308>
                 </responsivegrid1>
                 <experiencefragmentFooter
+                    jcr:lastModified="{Date}2026-07-07T09:53:56.201-04:00"
+                    jcr:lastModifiedBy="SHARMRX18"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="abbvie-com2/components/experiencefragment"
-                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/us/en/site/footer/master"/>
+                    fragmentVariationPath="/content/experience-fragments/abbvie-com2/gr/el/site/footer/greece-footer"/>
             </responsivegrid>
         </root>
     </jcr:content>

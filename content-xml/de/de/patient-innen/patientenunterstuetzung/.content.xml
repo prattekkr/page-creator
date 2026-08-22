@@ -2,16 +2,16 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-02-13T04:55:12.703-05:00"
+        cq:lastModified="{Date}2026-08-10T06:20:55.996-04:00"
         cq:lastModifiedBy="kunkefx"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2025-02-13T04:55:12.682-05:00"
+        jcr:lastModified="{Date}2026-08-10T06:20:55.974-04:00"
         jcr:lastModifiedBy="kunkefx"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Patientenunterstützung"
-        jcr:uuid="27758243-d555-43c1-aadf-4fe14f189e7f"
+        jcr:uuid="b975ebe5-d4a9-49f3-8bd9-8085c32b7bfb"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Weitere Informationen "
         ctaText="Weitere Informationen "
@@ -149,6 +149,19 @@
                             sling:resourceType="abbvie-com2/components/text/v2/text"
                             text="&lt;p>„GI 4.0“ ist ein digitales Angebot von Vertretern der pharmazeutischen Industrie, den Behörden BfArM und PEI, Patienten- und Apothekerorganisationen, den Verbänden vfa und BPI sowie der Rote Liste Service GmbH. AbbVie arbeitet seit Start des Projekts im Jahr 2016 aktiv an der Entwicklung und Optimierung mit.&amp;nbsp;&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
+                        <button_copy
+                            cq:styleIds="[1659997756584]"
+                            jcr:created="{Date}2026-08-07T06:17:05.972-04:00"
+                            jcr:createdBy="kunkefx"
+                            jcr:lastModified="{Date}2026-08-10T06:05:24.076-04:00"
+                            jcr:lastModifiedBy="kunkefx"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Mehr erfahren"
+                            sling:resourceType="abbvie-com2/components/button/v2/button"
+                            accessibilityLabel="Mehr erfahren"
+                            langAttribute="none"
+                            linkTarget="_blank"
+                            linkURL="#gi4-0"/>
                         <separator_copy_75082
                             cq:styleIds="[1662756756047,1662756486159]"
                             jcr:created="{Date}2024-08-26T14:56:07.675-04:00"
@@ -592,6 +605,16 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/separator/v2/separator"
                             id="arzneimittelsuche"/>
+                        <text
+                            jcr:created="{Date}2026-08-07T06:18:29.884-04:00"
+                            jcr:createdBy="kunkefx"
+                            jcr:lastModified="{Date}2026-08-07T06:23:40.565-04:00"
+                            jcr:lastModifiedBy="kunkefx"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="abbvie-com2/components/text/v2/text"
+                            langAttribute="none"
+                            text="&lt;p>&amp;nbsp;&amp;nbsp;&lt;a id=&quot;gi4-0&quot;>&lt;/a>&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
                         <title_1012922891
                             cq:styleIds="[1651545825694]"
                             jcr:created="{Date}2024-08-26T12:31:03.798-04:00"
@@ -607,11 +630,12 @@
                             cq:styleIds="[1659545825678,1659545825676]"
                             jcr:created="{Date}2024-06-06T03:06:41.780-04:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-08-26T14:46:57.290-04:00"
-                            jcr:lastModifiedBy="jewitca"
+                            jcr:lastModified="{Date}2026-08-07T07:08:12.429-04:00"
+                            jcr:lastModifiedBy="kunkefx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Die Gebrauchsinformationen unserer Arzneimittel sind jederzeit online über „Gebrauchsinformation 4.0®“ – kurz „GI 4.0®“ einfach, schnell und immer aktuell per App oder Webseite (https://www.gebrauchsinformation4-0.de/) abrufbar. Patient*innen erhalten über dieses Angebot behördlich genehmigte Informationen zur sicheren und korrekten Anwendung, ohne die beigepackte Gebrauchsinformation in Papierform, auch Beipackzettel oder Packungsbeilage genannt, zu benötigen. Neben der Gebrauchsinformation ist für bestimmte Arzneimittel auch behördlich genehmigtes Schulungsmaterial digital verfügbar.&lt;/p>&#xd;&#xa;&lt;p>Dieser Service ist für Patient*innen kostenlos und werbefrei.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Um die aktuelle Gebrauchsinformation abzurufen, kann einfach der Datamatrix Code oder der Barcode auf der Arzneimittelpackung mit der App „Gebrauchsinformation 4.0“ gescannt werden. Patient*innen gelangen somit direkt zur entsprechenden Gebrauchsinformation. Alternativ ist auch eine Suche mit dem Arzneimittelnamen möglich. Patient*innen können somit auch aktuelle Informationen zu Arzneimitteln erhalten, die in Arztpraxen oder in einer Klinik verabreicht werden.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Die digitale Version bietet Patient*innen einige Vorteile. Die Darstellung ist benutzerfreundlich und erlaubt z.B. das Anpassen der Schriftgröße und das Vergrößern von Abbildungen. Die Inhalte sind klar gegliedert und können nach Stichworten durchsucht werden. Falls sich in der Gebrauchsinformation etwas ändert, finden Patient*innen Hinweise, welche Abschnitte im Vergleich zur Vorversion geändert wurden. Ein Herunterladen von PDF-Dateien zum Ausdrucken ist ebenfalls möglich. Patient*innen mit Sehbehinderungen und Blinde können sich die Texte mit einer Screenreader-Software vorlesen lassen.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Die App „GI 4.0®“ kann kostenlos aus den App-Stores heruntergeladen werden:&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                            langAttribute="none"
+                            text="&lt;p>Die Gebrauchsinformationen unserer Arzneimittel sind jederzeit online über „Gebrauchsinformation 4.0®“ – kurz „GI 4.0®“ einfach, schnell und immer aktuell per App oder Webseite (&lt;a title=&quot;Zur Website&quot; href=&quot;https://www.gebrauchsinformation4-0.de/&quot; target=&quot;_blank&quot;>https://www.gebrauchsinformation4-0.de/&lt;/a>) abrufbar. Patient*innen erhalten über dieses Angebot behördlich genehmigte Informationen zur sicheren und korrekten Anwendung, ohne die beigepackte Gebrauchsinformation in Papierform, auch Beipackzettel oder Packungsbeilage genannt, zu benötigen. Neben der Gebrauchsinformation ist für bestimmte Arzneimittel auch behördlich genehmigtes Schulungsmaterial digital verfügbar.&lt;/p>&#xd;&#xa;&lt;p>Dieser Service ist für Patient*innen kostenlos und werbefrei.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Um die aktuelle Gebrauchsinformation abzurufen, kann einfach der Datamatrix Code oder der Barcode auf der Arzneimittelpackung mit der App „Gebrauchsinformation 4.0“ gescannt werden. Patient*innen gelangen somit direkt zur entsprechenden Gebrauchsinformation. Alternativ ist auch eine Suche mit dem Arzneimittelnamen möglich. Patient*innen können somit auch aktuelle Informationen zu Arzneimitteln erhalten, die in Arztpraxen oder in einer Klinik verabreicht werden.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Die digitale Version bietet Patient*innen einige Vorteile. Die Darstellung ist benutzerfreundlich und erlaubt z.B. das Anpassen der Schriftgröße und das Vergrößern von Abbildungen. Die Inhalte sind klar gegliedert und können nach Stichworten durchsucht werden. Falls sich in der Gebrauchsinformation etwas ändert, finden Patient*innen Hinweise, welche Abschnitte im Vergleich zur Vorversion geändert wurden. Ein Herunterladen von PDF-Dateien zum Ausdrucken ist ebenfalls möglich. Patient*innen mit Sehbehinderungen und Blinde können sich die Texte mit einer Screenreader-Software vorlesen lassen.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Die App „GI 4.0®“ kann kostenlos aus den App-Stores heruntergeladen werden:&amp;nbsp;&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <grid
                             jcr:created="{Date}2024-06-06T03:09:45.524-04:00"

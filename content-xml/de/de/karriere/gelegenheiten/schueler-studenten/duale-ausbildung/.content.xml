@@ -2,23 +2,25 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-01-24T08:49:49.686-05:00"
-        cq:lastModifiedBy="kunkefx"
+        cq:lastModified="{Date}2026-07-22T03:54:48.032-04:00"
+        cq:lastModifiedBy="autzeax"
         cq:template="/conf/abbvie-com2/settings/wcm/templates/secondary-tertiary-page-template"
+        jcr:description="Duale Ausbildung bei AbbVie: Vielfältige Ausbildungsberufe in einem internationalen Biopharmaunternehmen. Verbinde Theorie und Praxis, erhalte individuelle Betreuung und starte mit besten Karrierechancen ins Berufsleben."
         jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2024-11-22T08:28:22.461-05:00"
-        jcr:lastModifiedBy="ZEMSCJX"
+        jcr:lastModified="{Date}2026-07-20T07:53:03.345-04:00"
+        jcr:lastModifiedBy="LENNIAM"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Duale Ausbildung"
-        jcr:uuid="5530fd02-dce6-4ac5-a7a8-caefbff67440"
+        jcr:title="Ausbildung"
+        jcr:uuid="b972c1f3-ee4c-4f7a-a7f3-0751c0546501"
         sling:resourceType="abbvie-com2/components/remotepage"
         ctaAltText="Erfahre mehr"
         ctaText="Erfahre mehr"
         description="Unsere Ausbildungsangebote richten sich an Realschüler*innen und Abiturient*innen."
         eyebrow="Schüler &amp; Studenten"
-        navTitle="Duale Ausbildung"
-        pageTitle="Duale Ausbildung"
+        navTitle="Ausbildung"
+        ogimage="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/header-duale-ausbildung-og.jpg"
+        pageTitle="Ausbildung"
         title="Duale Ausbildung"
         warnOnDeparturePopUpXfPath="/content/experience-fragments/abbvie-com2/de/de/site/popups/warn-on-departure/master">
         <root
@@ -38,11 +40,15 @@
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <container
                         cq:styleIds="[1653545835859,1653545825683,1653545847149,1653545835879]"
-                        jcr:lastModified="{Date}2024-10-24T02:39:33.429-04:00"
-                        jcr:lastModifiedBy="singarx"
+                        jcr:lastModified="{Date}2026-03-27T10:19:03.241-04:00"
+                        jcr:lastModifiedBy="LENNIAM"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundImageReference="/content/dam/abbvie-com2/de/images/archiv/karriere/header-duale-ausbildung.jpg"/>
+                        backgroundImageReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/header-duale-ausbildung-neu.jpg"
+                        dmPresetType="imagePreset"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false"
+                        langAttribute="none"/>
                     <container2
                         cq:styleIds="[1653545835855,1653545825685,1653242825678,1653545835860]"
                         jcr:primaryType="nt:unstructured"
@@ -61,20 +67,21 @@
                                 startLevel="4"/>
                             <title
                                 cq:styleIds="[1659545825678,1661545829678]"
-                                jcr:lastModified="{Date}2024-10-24T01:31:45.091-04:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-02-24T08:44:31.919-05:00"
+                                jcr:lastModifiedBy="kunkefx"
                                 jcr:primaryType="nt:unstructured"
-                                jcr:title="Duale Ausbildung"
+                                jcr:title="Ausbildung"
                                 sling:resourceType="abbvie-com2/components/title/v2/title"
                                 type="h1"
                                 variant="h"/>
                             <text
                                 cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-10-24T01:32:46.916-04:00"
-                                jcr:lastModifiedBy="singarx"
+                                jcr:lastModified="{Date}2026-05-12T03:11:55.556-04:00"
+                                jcr:lastModifiedBy="LENNIAM"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Unsere Ausbildungsangebote richten sich an Realschüler*innen und Abiturient*innen, die in der Gesundheitsbranche einen echten Unterschied im Leben von Menschen machen möchten. Bei AbbVie haben unterschiedliche Persönlichkeiten und Profile ihren Platz.&amp;nbsp;&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
+                                langAttribute="none"
+                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-32-reg&quot;>Du möchtest nach der Schule direkt ins Arbeitsleben starten und Theorie und Praxis verbinden? Dann bist Du bei AbbVie genau richtig! Wir bieten Dir vielfältige Ausbildungsberufe mit besten Perspektiven in einem internationalen Biopharmaunternehmen.&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                             <separator
                                 cq:styleIds="[1662756486159]"
@@ -84,205 +91,777 @@
                                 jcr:lastModifiedBy="singarx"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                            <text_copy
-                                cq:styleIds="[1659545825678]"
-                                jcr:created="{Date}2024-10-24T01:35:01.510-04:00"
-                                jcr:createdBy="singarx"
-                                jcr:lastModified="{Date}2024-12-06T03:13:23.615-05:00"
-                                jcr:lastModifiedBy="WINTELX"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>&lt;sup>&lt;span class=&quot;light-font&quot;>&lt;span class=&quot;body-unica-26-reg&quot;>Wir freuen uns über Bewerbungen für unsere Ausbildungsberufe. Wenn es im jeweiligen Bereich aktuelle Stellenausschreibungen gibt, findest du diese in unserem&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Stellenportal&lt;/a>. Bei Fragen erreichst du uns über&amp;nbsp;&lt;a href=&quot;mailto:TalentAcquisition.de@abbvie.com&quot;>TalentAcquisition.de@abbvie.com&lt;/a>.&lt;/span>&lt;/span>&lt;/sup>&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
                         </container3>
                     </container2>
-                    <container_1842377860
-                        cq:styleIds="[1653545825688,1653545847150]"
-                        jcr:created="{Date}2024-10-24T01:34:26.104-04:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-10-24T01:34:47.873-04:00"
-                        jcr:lastModifiedBy="singarx"
+                    <grid_copy
+                        jcr:created="{Date}2026-02-24T06:05:22.440-05:00"
+                        jcr:createdBy="kunkefx"
+                        jcr:lastModified="{Date}2026-02-24T06:05:35.434-05:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container">
-                        <title
-                            cq:styleIds="[1659545825678,1661545829678]"
-                            jcr:created="{Date}2024-10-24T01:38:28.232-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T01:40:51.823-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Kreative Denker*innen gesucht"
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h4"
-                            variant="h"/>
-                        <text
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-24T01:38:33.856-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-12-06T03:15:26.336-05:00"
-                            jcr:lastModifiedBy="WINTELX"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Wir bei AbbVie glauben daran, dass jeder von uns Einfluss auf unsere Arbeit, unsere Kultur, unseren Erfolg und die Lebensqualität von Patient*innen nehmen kann – auch als Student*in, Auszubildende*r oder Berufseinsteiger*in. Bei AbbVie haben Auszubildende die Möglichkeit, sich fachlich und persönlich weiterzuentwickeln, sich mit ihren Ideen einzubringen und dabei Neues zu entdecken – in Deutschland an unserem Standort Ludwigshafen (&lt;a href=&quot;/content/abbvie-com2/de/de/ueber-uns/standorte-in-deutschland.html&quot; title=&quot;Unsere Standorte&quot;>mehr&lt;/a>).&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Quer über unsere verschiedenen Tätigkeitsfelder hinweg bieten wir verschiedene Berufsausbildungen für Realschüler*innen und Gymnasiast*innen an, bei denen du mit sinnvollen Tätigkeiten integriert bist und so deinen Teil dazu beiträgst, die Lebensqualität von Patienten auf der ganzen Welt zu verbessern. Bei AbbVie haben unterschiedliche Persönlichkeiten und Profile ihren Platz: Laborant*innen, Mechatroniker*innen, Naturwissenschaftler*innen und Betriebswirt*innen arbeiten bei uns zusammen.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Unsere Auszubildenden und Teilnehmer*innen der praktischen Studiengänge werden jeden Tag gefördert und gefordert. Sie lernen von Expert*innen und erhalten ein fundiertes Fachwissen, mit dem sie für eine weiterführende Karriere im Unternehmen gut gerüstet sind. Dazu bieten wir umfangreiche Weiterbildungs- und Entwicklungsprogramme an.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Wir sehen unsere Auszubildenden als Erfolgsgaranten von morgen. Deshalb ist es unser Ziel, möglichst jede*n Auszubildende*n zu übernehmen und ihr oder ihm individuelle Entwicklungsmöglichkeiten zu bieten. Wer sich engagiert und Verantwortung übernimmt, ist bei uns richtig.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                    </container_1842377860>
-                    <container_490758743
-                        cq:styleIds="[1653545825688,1653545847150]"
-                        jcr:created="{Date}2024-10-24T01:42:39.878-04:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-10-24T01:45:37.738-04:00"
-                        jcr:lastModifiedBy="singarx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundColor="#F4F4F4">
-                        <title
-                            cq:styleIds="[1659545825678,1661545829678]"
-                            jcr:created="{Date}2024-10-24T01:43:21.065-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T01:44:40.176-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Unsere Ausbildungsberufe"
-                            sling:resourceType="abbvie-com2/components/title/v2/title"
-                            type="h4"
-                            variant="h"/>
-                        <text
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-24T01:43:29.666-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T01:45:17.611-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p>Wir legen großen Wert darauf, Mitarbeiter*innen selbst auszubilden. Daher bietet AbbVie in Deutschland Ausbildungsplätze in unterschiedlichen Ausbildungsberufen an, orientiert an unserem zukünftigen Bedarf. Informiere dich hier über die einzelnen Ausbildungsberufe.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                    </container_490758743>
-                    <container_118032577
-                        cq:styleIds="[1653545825687,1653545847150]"
-                        jcr:created="{Date}2024-10-24T01:46:39.272-04:00"
-                        jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-10-24T01:47:00.539-04:00"
-                        jcr:lastModifiedBy="singarx"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="abbvie-com2/components/container/v2/container">
-                        <accordion
-                            cq:styleIds="[1]"
-                            jcr:created="{Date}2024-10-24T01:47:10.720-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T01:50:38.683-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
-                            singleExpansion="false">
-                            <item_1729748861299
-                                cq:panelTitle="Pharmakant*in (all genders)"
-                                cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-12-06T03:16:28.706-05:00"
-                                jcr:lastModifiedBy="WINTELX"
+                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                        rowCount="1">
+                        <columns jcr:primaryType="nt:unstructured">
+                            <item0
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Ein Wirkstoff allein macht noch kein Arzneimittel. Erst gemischt mit Hilfsstoffen und in die richtige Form gebracht, kann er seine Wirkung entfalten. Unentbehrlich bei der Herstellung von Tabletten, Salben, Infusionslösungen etc. sind Pharmakanten. Sie arbeiten an computergesteuerten Produktionsanlagen, dosieren Vor- und Zwischenprodukte und prüfen deren Qualität.Unsere Pharmakanten in Ludwigshafen werden in Kooperation mit Provadis in Frankfurt/Höchst ausgebildet.&lt;br>&#xd;&#xa;&lt;b>Bewerbung als Pharmakant&amp;nbsp;(m/w/d)&lt;br>&#xd;&#xa; Voraussetzung&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Mittlere Reife sowie gute Noten in den Haupt- und naturwissenschaftlichen Fächern&lt;/li>&#xd;&#xa;&lt;li>Technischer Sachverstand und handwerkliches Geschick&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsbeginn&lt;/b>&lt;br>&#xd;&#xa;1. September&lt;br>&#xd;&#xa;&lt;b>Ausbildungsdauer&lt;/b>&lt;br>&#xd;&#xa;3,5 Jahre&amp;nbsp;– verkürzt 3 Jahre&lt;br>&#xd;&#xa;&lt;b>Standort&lt;/b>&lt;br>&#xd;&#xa;Ludwigshafen, Frankfurt/Höchst&lt;br>&#xd;&#xa;&lt;b>Bewerbung&lt;br>&#xd;&#xa; &lt;/b>Die Ausbildung zum Pharmakanten ist genau das Richtige für dich?&amp;nbsp;Dann bewirb dich über unser&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Stellenportal&lt;/a>&amp;nbsp;auf unsere aktuellen Stellen.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&amp;quot;&lt;b>Durch meine Funktion als Jugend- und Auszubildendenvertreter kann ich jedes Jahr wunderbar mit ansehen, wie junge Menschen eine Ausbildung beginnen und sich zu einer vollwertigen Fachkraft weiterentwickeln&amp;quot;&lt;/b>&lt;br>&#xd;&#xa;&lt;i>Dennis Schmoeller, ehem. Auszubildender bei AbbVie Deutschland&lt;/i>&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                            <item_1729748912454
-                                cq:panelTitle="Biologielaborant*in (all genders)"
-                                cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-12-06T03:16:49.364-05:00"
-                                jcr:lastModifiedBy="WINTELX"
+                                columnWidth="1"
+                                dataPriority="1"/>
+                            <item1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Um die Wirksamkeit von neuen Wirkstoffen zu testen oder diese zu verbessern, müssen sie gründlich geprüft werden. Auszubildende zum Biologielaborant planen Versuche, führen sie durch und werten sie aus. Als Bewerber solltest du dich nicht nur für Biologie und biotechnische Verfahren interessieren, sondern auch technisches Interesse mitbringen: Biologielaboranten bedienen im Arbeitsalltag komplexe Analysegeräte und erstellen Computerauswertungen von biologischen Daten. Dabei ist eine besondere Sorgfalt notwendig, denn Versuchsreihen müssen ordnungsgerecht durchgeführt und protokolliert werden, damit ein Produkt für den Markt zugelassen wird.Wir legen Wert auf Teamfähigkeit, Handlungskompetenz und den respektvollen Umgang mit deinen Kollegen.&lt;br>&#xd;&#xa;&lt;b>Bewerbung als Biologielaborant&amp;nbsp;(m/w/d)&lt;/b>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Voraussetzungen&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Mittlere Reife oder Abitur/Fachhochschulreife sowie gute Noten in den Haupt- und naturwissenschaftlichen Fächern&lt;/li>&#xd;&#xa;&lt;li>Großes Interesse an Naturwissenschaften und Mathematik&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsbeginn&lt;/b>&lt;br>&#xd;&#xa;1. September&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsdauer&lt;/b>&lt;br>&#xd;&#xa;3,5 Jahre&amp;nbsp;– verkürzt 3 Jahre&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Standort&lt;/b>&lt;br>&#xd;&#xa;Ludwigshafen&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Bewerbung&lt;/b>&lt;br>&#xd;&#xa;Die Ausbildung zum Biologielaborant ist genau das Richtige für dich?&amp;nbsp;Dann bewirb dich über unser&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Stellenportal&lt;/a>&amp;nbsp;auf unsere aktuellen Stellen.&amp;nbsp;&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>&amp;quot;In jeder Abteilung wurde ich sofort ein Teil der Gemeinschaft. Die Kollegen und Kolleginnen haben mich aufgenommen und standen mir für Rat und Tat zur Seite&amp;quot;&lt;/b>&lt;br>&#xd;&#xa;&lt;i>Carmen Beckmann, ehem. Auszubildende bei AbbVie Deutschland&lt;/i>&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                            <item_1729748916066
-                                cq:panelTitle="Chemielaborant*in (all genders)"
-                                jcr:lastModified="{Date}2024-12-06T03:17:06.142-05:00"
-                                jcr:lastModifiedBy="WINTELX"
+                                columnWidth="9"
+                                dataPriority="1"/>
+                            <item2
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Einsatzort Labor: Chemielaborant*innen leisten einen wichtigen Beitrag zur Entwicklung von neuen Produkten. Sie stellen Wirkstoffe her, untersuchen diese und arbeiten dabei eng mit vielen anderen Abteilungen in der Forschung und Entwicklung zusammen.Wenn du gute Noten auf dem Abschlusszeugnis von Realschule oder Gymnasium vorweist und dich für Elemente und Verbindungen sowie sorgfältig geplante Versuchsanordnungen begeisterst, stehst du vielleicht schon demnächst in einem AbbVie-Labor. Dort entwickelst du gemeinsam mit unseren Chemiker*innen und Labormitarbeiter*innen neue Stoffe, verbesserst Produktionsverfahren und hältst die Ergebnisse in detaillierten Berichten fest.Umweltrechtliche Bestimmungen stehen während der Ausbildung genauso auf dem Lehrplan wie moderne Verfahrenstechniken. Wir legen Wert auf Teamfähigkeit, Handlungskompetenz und den respektvollen Umgang miteinander.&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                            <item_1729748919085
-                                cq:panelTitle="Mechatroniker*in (all genders)"
-                                cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-12-06T03:17:50.276-05:00"
-                                jcr:lastModifiedBy="WINTELX"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Bei der Herstellung von innovativen Medikamenten läuft nichts ohne komplexe Anlagen. Mechatroniker*innen bauen, montieren und bedienen diese Anlagen und Systeme fachgerecht und halten sie instand.&lt;/p>&#xd;&#xa;&lt;p>Als Mechatroniker*in bist du sowohl Elektro- als auch Metallfachkraft. Du wirst dazu ausgebildet, selbstständig an elektrischen und mechanischen Anlagen zu arbeiten. Dazu solltest du verschiedenste Qualifikationen mitbringen: Fähigkeiten in der Metallbearbeitung und Elektrotechnik sind ebenso erforderlich wie die Grundlagen der Hydraulik, der Pneumatik und der Steuerungstechnik. Messen, Prüfen und Programmieren von Komponenten stehen ebenfalls auf dem Lehrplan.&lt;/p>&#xd;&#xa;&lt;p>Bei AbbVie findet die Berufsausbildung zum/zur Mechatroniker*in im dualen System statt. Als Auszubildende*r verbringst du den größeren Teil deiner Zeit im Betrieb. Ergänzt wird dieser praktische Teil durch die Berufsschule und jede Menge theoretisches Fachwissen. Für den Berufseinstieg erwarten wir neben guten Noten in den mathematisch-technischen Fächern und einem hohen technischen Sachverstand auch handwerkliches Geschick. Wir legen Wert auf Teamfähigkeit, Handlungskompetenz und einen respektvollen Umgang miteinander.&lt;/p>&#xd;&#xa;&lt;p>Unsere Mechatroniker*innen in Ludwigshafen werden in Kooperation mit der BASF SE in Ludwigshafen ausgebildet.&lt;br>&#xd;&#xa;&lt;b>Bewerbung als Mechatroniker*in&amp;nbsp; (all genders)&lt;/b>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Voraussetzungen&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Mittlere Reife sowie gute Noten in den Haupt- und naturwissenschaftlichen Fächern&lt;/li>&#xd;&#xa;&lt;li>Technischer Sachverstand und handwerkliches Geschick&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsbeginn&lt;/b>&lt;br>&#xd;&#xa;1. September&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsdauer&lt;/b>&lt;br>&#xd;&#xa;3,5 Jahre&amp;nbsp;– verkürzt 3 Jahre&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Standort&lt;/b>&lt;br>&#xd;&#xa;Ludwigshafen&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Bewerbung&lt;/b>&lt;br>&#xd;&#xa;Die Ausbildung zum/zur Mechatroniker*in ist genau das Richtige für dich?&amp;nbsp;Dann bewirb dich über unser&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Stellenportal&lt;/a>&amp;nbsp;auf unsere aktuellen Stellen.&lt;/p>&#xd;&#xa;&lt;p>&amp;quot; &lt;b>Ich habe mich aufgrund von vielfältigen Aufgaben, die ich übernommen und bewältigt habe, auch persönlich weiterentwickelt.&amp;quot;&lt;br>&#xd;&#xa; &lt;/b>&lt;i>Karolina Izbicka, ehem. Auszubildende bei AbbVie Deutschland&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>&amp;nbsp;&lt;/i>&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                            <item_1729748922959
-                                cq:panelTitle="Fachkraft für Lagerlogistik (all genders)"
-                                cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-12-06T03:18:19.281-05:00"
-                                jcr:lastModifiedBy="WINTELX"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Jedes Medikament, das wir an Apotheken versenden, hat schon viele Wege hinter sich. Rohstoffe müssen gelagert werden, Verpackungen müssen bereitstehen und das fertige Arzneimittel muss termingerecht ausgeliefert werden. Das alles muss funktionieren, damit den Patient*innen unsere Medikamente zur Verfügung stehen.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Als Fachkraft für Lagerlogistik begleitest du die gesamte Entstehung unserer Produkte vom Wareneingang über die fachgerechte Lagerung bis zum pünktlichen Versand. Du arbeitest mit moderner Technologie und hast auf diese Weise den gesamten Prozess im Griff. Du wertest Daten aus und überprüfst, ob alle Vorschriften eingehalten wurden. Außerdem wirst du bei uns den Staplerführerschein machen. Damit das alles auch reibungslos funktioniert, bist du sorgfältig, gut organisiert und kannst auch mit Kolleg*innen aus unterschiedlichen Abteilungen gut zusammenarbeiten.&lt;/p>&#xd;&#xa;&lt;p>Dabei stehen Aufgabengebiete wie Wareneingang, Lagerung von Gütern, Kommissionierung und Versand auf dem Lehrplan deiner 3-jährigen Ausbildung.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Bewerbung als Fachkraft für Lagerlogistk&amp;nbsp;(m/w/d)&lt;br>&#xd;&#xa; Voraussetzungen&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Mittlere Reife sowie gute Noten in den Hauptfächern&lt;/li>&#xd;&#xa;&lt;li>Interesse an Organisation und Technik&lt;/li>&#xd;&#xa;&lt;li>Gewissenhafte Arbeitsweise&lt;/li>&#xd;&#xa;&lt;li>körperliche Belastbarkeit&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsbeginn&lt;/b>&lt;br>&#xd;&#xa;1. September&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsdauer&lt;/b>&lt;br>&#xd;&#xa;3 Jahre&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Standort&lt;/b>&lt;br>&#xd;&#xa;Ludwigshafen&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Bewerbung&lt;/b>&lt;br>&#xd;&#xa;Die Ausbildung zur Fachkraft für Lagerlogistk ist genau das Richtige für dich?&amp;nbsp;Dann bewirb dich über unser&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Stellenportal&lt;/a>&amp;nbsp;auf unsere aktuellen Stellen.&lt;/p>&#xd;&#xa;&lt;p>&lt;br>&#xd;&#xa;&amp;quot;&lt;b> Sehr spannend finde ich den alltäglichen Umgang mit verschiedenen Wirkstoffen und Hilfsstoffen. Dabei sind gleichermaßen Fingerspitzengefühl und Köpfchen gefragt und ich kann dazu beitragen, anderen ein besseres Leben zu ermöglichen.&amp;quot;&lt;br>&#xd;&#xa; &lt;/b>&lt;i>Mike Weinberg, Auszubildender bei AbbVie Deutschland&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>&amp;nbsp;&lt;/i>&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                            <item_1729748930036
-                                cq:panelTitle="Elektroniker*in Automatisierungstechnik (all genders)"
-                                cq:styleIds="[1659545825678]"
-                                jcr:lastModified="{Date}2024-12-06T03:18:47.355-05:00"
-                                jcr:lastModifiedBy="WINTELX"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="abbvie-com2/components/text/v2/text"
-                                text="&lt;p>Für die Herstellung von innovativen Medikamenten werden komplexe Anlagen und Maschinen benötigt. Als Elektroniker*in für Automatisierungstechnik bist du verantwortlich dafür, dass unsere Anlagen funktionieren und produzieren. Ohne deinen Einsatz wäre die Herstellung wichtiger Medikamente nicht möglich. Du steuerst, wartest und programmierst diese Anlagen, sodass ein reibungsloser Produktionsablauf garantiert werden kann.&lt;/p>&#xd;&#xa;&lt;p>Du hast keine Angst vor hoher Spannung? Du tüftelst so lange, bis die Maschinensteuerung genau das macht, was du willst? Du möchtest die Anlagen verstehen und technisch verbessern? Du willst lernen, Pläne zu lesen und zu erkennen, wohin die Energie im Unternehmen fließt?&amp;nbsp;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;In deiner Ausbildung wirst du darin geschult, selbstständig an der Elektronik von Produktionsanlagen zu arbeiten, Schaltpläne zu lesen und Fehler zu beheben. Messen, Prüfen und Programmieren von Komponenten stehen ebenfalls auf dem Lehrplan deiner Ausbildung.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Bei AbbVie findet die Berufsausbildung im dualen System statt. Das theoretische Fachwissen wirst du in der Berufsschule erlernen. Die Praxis lernst du bei Abbvie im Betrieb kennen, wobei unsere Elektroniker*innen für Automatisierungstechnik in Kooperation mit der BASF SE in Ludwigshafen oder ggf. mit Provadis in Frankfurt/Höchst&amp;nbsp;ausgebildet werden.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Bewerbung als&amp;nbsp;Elektroniker*in Automatisierungstechnik&amp;nbsp;&lt;br>&#xd;&#xa; (all genders)&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Voraussetzungen&lt;/b>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Mindestens Mittlere Reife sowie gute Noten in den Haupt- und naturwissenschaftlichen Fächern&lt;/li>&#xd;&#xa;&lt;li>Technischer Sachverstand und handwerkliches Geschick&lt;/li>&#xd;&#xa;&lt;li>Interesse für Elektrotechnik und die Technik von Maschinen und Anlagen.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsbeginn&lt;/b>&lt;br>&#xd;&#xa;1. September&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Ausbildungsdauer&lt;/b>&lt;br>&#xd;&#xa;3,5 Jahre&amp;nbsp;– verkürzt 3 Jahre&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Standort&lt;/b>&lt;br>&#xd;&#xa;Ludwigshafen, Frankfurt/Höchst&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Bewerbung&lt;/b>&lt;br>&#xd;&#xa;Ist die Ausbildung zum/zur Elektroniker für Automatisierungstechnik&amp;nbsp; genau das richtige für dich?&amp;nbsp;Dann bewirb dich über unser&amp;nbsp;&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Stellenportal&lt;/a>&amp;nbsp;auf unsere aktuellen Stellen.&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                        </accordion>
-                        <separator
-                            cq:styleIds="[1662756486159]"
-                            jcr:created="{Date}2024-10-24T02:12:37.454-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T02:12:37.454-04:00"
-                            jcr:lastModifiedBy="singarx"
+                                columnWidth="2"
+                                dataPriority="1"/>
+                        </columns>
+                        <par_12
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <quote
-                            cq:styleIds="[1000000000000]"
-                            jcr:created="{Date}2024-10-24T02:13:07.800-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T02:14:13.551-04:00"
-                            jcr:lastModifiedBy="singarx"
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <container
+                                cq:styleIds="[1653545825686,1653545847150,1653242825678,1653545835879,1653545835982]"
+                                jcr:created="{Date}2026-02-24T06:05:47.396-05:00"
+                                jcr:createdBy="kunkefx"
+                                jcr:lastModified="{Date}2026-02-24T06:07:02.814-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/container/v2/container"
+                                dmPresetType="imagePreset"
+                                enableFetchPriority="false"
+                                enableLazyLoading="false">
+                                <title
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T01:38:28.232-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-05-12T03:12:23.987-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Mit einer Berufsausbildung durchstarten"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h2"
+                                    variant="h"/>
+                                <text
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T01:38:33.856-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-06-08T10:02:44.308-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Du brennst darauf, nach der Schule in die Arbeitswelt einzusteigen, dein theoretisches Fachwissen in einem bestimmten Gebiet auszubauen und dabei gleichzeitig einen anerkannten IHK-Abschluss zu erwerben? Dann ist eine Ausbildung bei AbbVie genau das Richtige für dich!&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Quer über unsere verschiedenen Tätigkeitsfelder hinweg bieten wir verschiedene Berufsausbildungen für&amp;nbsp;Realschüler*innen und&amp;nbsp;Gymnasiast*innen an, bei denen du in sinnstiftende Aufgaben eingebunden bist und so deinen Teil dazu beiträgst, die Lebensqualität von Patient*innen auf der ganzen Welt zu verbessern. Bei AbbVie haben unterschiedliche Persönlichkeiten und Profile ihren Platz.&lt;/p>&#xd;&#xa;&lt;p>Unsere Auszubildenden werden jeden Tag individuell unterstützt und gezielt weiterentwickelt. Sie lernen von Expert*innen und erhalten fundiertes Fachwissen, mit dem sie für eine weiterführende Karriere im Unternehmen gut gerüstet sind. Dazu bieten wir Weiterbildungs- und Entwicklungsprogramme an.&lt;/p>&#xd;&#xa;&lt;p>Wir sehen unsere Auszubildenden als wichtige Talente und Zukunftsträger*innen. Daher bilden wir bedarfsgerecht aus und bieten großartige Chancen für eine Übernahme an. Wer sich engagiert und Verantwortung übernimmt, ist bei uns richtig und wird langfristig mit AbbVie wachsen.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <image
+                                    jcr:created="{Date}2026-04-08T09:24:08.657-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-21T03:40:34.283-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="„Gut genug“ reicht uns nicht: Wir erforschen und entwickeln innovative Arzneimittel und Therapien für Menschen, die darauf angewiesen sind"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="false"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/abbvie-de-duale-ausbildung-kreative-denker.jpg"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="false"/>
+                                <separator_1811313167
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-08T09:38:03.821-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-08T09:38:15.429-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_175254602
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T01:43:21.065-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-23T10:06:56.726-05:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Unsere Ausbildungsberufe"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h2"
+                                    variant="h"/>
+                                <text_copy_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T01:43:29.666-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-05-12T03:14:27.606-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;p>Die langfristige Entwicklung und Bindung von Talenten, die am Beginn ihrer Karriere stehen, ist uns sehr wichtig. Ihr seid unsere Zukunft! Deshalb bieten wir in Deutschland vielfältige Ausbildungsberufe an – orientiert an unserem zukünftigen Bedarf und den Anforderungen eines internationalen Unternehmens. Entdecke hier die verschiedenen Einstiegsmöglichkeiten bei AbbVie.&lt;/p>&#xd;&#xa;&lt;p>Unsere Ausbildungsangebote haben dein Interesse geweckt? Sehr gut! Abhängig von unseren aktuellen und zukünftigen Bedarfen findest du passende Stellenausschreibungen auf unserem Stellenportal. Bitte beachte, dass wir nicht jedes Jahr Plätze für alle hier dargestellten Studiengänge besetzen. Bei Fragen wende dich gerne jederzeit an &lt;a href=&quot;mailto:%20TalentAcquisition.de@abbvie.com&quot;>TalentAcquisition.de@abbvie.com&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <separator_1811313167_30716601
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-08T09:38:03.821-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-08T09:38:15.429-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T01:43:21.065-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:55:57.801-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Naturwissenschaftliche Ausbildungsberufe"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <accordion_copy_copy
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-10-24T01:47:10.720-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T07:45:09.954-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <item_1775717232240
+                                        cq:panelTitle="Biologielaborant*in"
+                                        jcr:lastModified="{Date}2026-04-09T02:47:33.742-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="11"
+                                                dataPriority="1"/>
+                                        </columns>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <text
+                                                cq:styleIds="[1659545825678]"
+                                                jcr:created="{Date}2026-04-09T02:47:40.212-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-05-12T03:15:46.676-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                                langAttribute="none"
+                                                text="&lt;p>Neue Wirkstoffe sind spannend – gleichzeitig erfordern sie umfangreiche Tests und höchste Sorgfalt. Damit sie sicher und wirksam sind, müssen sie gründlich geprüft und kontinuierlich verbessert werden. Genau hier kommst du ins Spiel.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung planst du Versuche, führst sie eigenständig durch und wertest die Ergebnisse aus. Du arbeitest mit modernen Analysegeräten, untersuchst biologische Prozesse und dokumentierst deine Ergebnisse sorgfältig am Computer. So leistest du einen wichtigen Beitrag dazu, neue Therapien zu entwickeln und die Lebensqualität von Patient*innen weltweit zu verbessern.&lt;/p>&#xd;&#xa;&lt;p>Im Labor ist Präzision entscheidend: Du achtest darauf, dass alle Versuchsabläufe exakt eingehalten und dokumentiert werden – eine wichtige Voraussetzung dafür, dass neue Produkte später zugelassen werden können. Gleichzeitig arbeitest du eng im Team und tauschst dich mit Kolleg*innen aus unterschiedlichen Fachbereichen aus.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>: Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>: 3,5 Jahre (Verkürzung auf 3 Jahre möglich bei guter Leistung)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>: Berufsbildende Schule - Naturwissenschaften, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife oder Fachabitur&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                                textIsRich="true"/>
+                                        </par_11>
+                                    </item_1775717232240>
+                                    <item_1729748912454
+                                        cq:panelTitle="Chemielaborant*in"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-06-08T10:03:11.384-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Die Entwicklung neuer Wirkstoffe und Produkte ist spannend – und oft wie das Lösen eines komplexen molekularen Puzzles. Als angehende*r Chemielaborant*in bist du mittendrin: Du trägst aktiv dazu bei, neue Substanzen zu entwickeln, zu analysieren und bestehende Verfahren zu verbessern.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung arbeitest du im Labor an der Herstellung und Untersuchung von Wirkstoffen. Du planst Versuche, führst sie sorgfältig durch und wertest die Ergebnisse aus. Dabei nutzt du moderne Labortechnik und dokumentierst deine Erkenntnisse in präzisen Berichten. Gemeinsam mit Kolleg*innen aus verschiedenen Abteilungen arbeitest du daran, innovative Lösungen zu entwickeln – von der Forschung bis zur Anwendung.&lt;/p>&#xd;&#xa;&lt;p>Neben praktischen Laborarbeiten lernst du auch wichtige Grundlagen kennen, etwa zu modernen Verfahrenstechniken und umweltrechtlichen Vorgaben. Sorgfalt, Struktur und Verantwortungsbewusstsein sind dabei entscheidend, denn nur so entstehen verlässliche Ergebnisse.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>:&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>:&amp;nbsp;3,5 Jahre (Verkürzung auf 3 Jahre möglich bei guter Leistung)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>: Berufsbildende Schule - Naturwissenschaften, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife oder Fachabitur&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1729748916066
+                                        cq:panelTitle="Pharmakant*in"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-04-10T10:11:11.264-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Ein Wirkstoff allein macht noch kein Arzneimittel – erst durch die richtige Verarbeitung, Mischung und Darreichungsform kann er seine Wirkung entfalten. Als angehende*r Pharmakant*in sorgst du dafür, dass aus einzelnen Bestandteilen sichere und wirksame Medikamente entstehen.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung arbeitest du an modernen, computergesteuerten Produktionsanlagen und begleitest den gesamten Herstellungsprozess. Du dosierst Roh-, Vor- und Zwischenprodukte, überwachst die Abläufe und prüfst die Qualität der hergestellten Arzneimittel. Ob Tabletten, Salben oder Infusionslösungen – du stellst sicher, dass jedes Produkt den höchsten Qualitätsstandards entspricht.&lt;/p>&#xd;&#xa;&lt;p>Dabei lernst du Schritt für Schritt alle wichtigen Prozesse kennen: Von der Mischung der Rohstoffe über die Qualitätskontrolle bis hin zur Verpackung, die strengen Vorschriften unterliegt. Du baust dir ein fundiertes Wissen über Wirkstoffe, Herstellungsverfahren und Qualitätsanforderungen auf und trägst aktiv dazu bei, dass Patient*innen zuverlässig mit Medikamenten versorgt werden.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>:&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>:&amp;nbsp;3,5 Jahre (Verkürzung möglich auf 3 Jahre bei guter Leistung)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>: Heinrich-Lanz-Schule, Mannheim&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Externer Kooperationspartner:&amp;nbsp;&lt;/b>Provadis Frankfurt&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1729748912454_c
+                                        cq:panelTitle="Tierpfleger*in"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-05-12T03:22:43.275-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;div>&lt;b>&amp;nbsp;&lt;/b>&lt;/div>&#xd;&#xa;&lt;p>In der Ausbildung lernst du, Tiere verantwortungsvoll und fachgerecht zu betreuen. Du unterstützt die Pflege und Versorgung unserer Tiere, sorgst für saubere Unterkünfte und überwachst die Lebensbedingungen, damit die Tiere gesund bleiben und artgerecht gehalten werden. Gleichzeitig wirst du in alle organisatorischen Abläufe eingebunden: Du lernst Material- und Lagerverwaltung, arbeitest in der Käfigwaschanlage, kümmerst dich um Trinkwasserflaschen und Einstreu und führst Hygiene- und Reinigungsmaßnahmen sorgfältig durch.&lt;/p>&#xd;&#xa;&lt;p>Ein weiterer Schwerpunkt ist die Assistenz bei tierärztlichen Untersuchungen. Du beurteilst den Gesundheitszustand der Tiere, kennzeichnest sie eindeutig und unterstützt bei Behandlungen und Eingriffen. Außerdem arbeitest du mit modernen Datenprogrammen, dokumentierst Pflege und Pflegepläne und übernimmst Aufgaben im Rahmen von Studienunterstützung, auch außerhalb der regulären Arbeitszeiten und an Wochenenden. So übernimmst du schon früh Verantwortung und lernst, professionell und zuverlässig zu arbeiten.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung entwickelst du nicht nur Fachwissen über Pflege, Gesundheit und Hygiene von Tieren, sondern auch Organisationstalent, Teamfähigkeit und Verantwortungsbewusstsein. Damit legst du den Grundstein für eine vielseitige Karriere in der Tierpflege und im wissenschaftlichen Umfeld.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start:&lt;/b>&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer:&lt;/b>&amp;nbsp;3 Jahre (Verkürzung auf 2.5 Jahre bei guter Leistung möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule:&amp;nbsp;&lt;/b>Bertha-von-Suttner-Schule, Ettlingen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Externer Kooperationspartner:&lt;/b> Universität Heidelberg&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung:&amp;nbsp;&lt;/b>Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht:&lt;/b>&amp;nbsp;Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion_copy_copy>
+                                <copy_of_container_co
+                                    cq:styleIds="[1653545835859,1653545825683,1653545847148]"
+                                    jcr:created="{Date}2022-11-28T14:38:18.752-05:00"
+                                    jcr:createdBy="chiucx"
+                                    jcr:lastModified="{Date}2026-05-12T06:22:37.465-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/container/v2/container"
+                                    backgroundColor="#071D49"
+                                    enableFetchPriority="false"
+                                    enableLazyLoading="false"
+                                    langAttribute="none">
+                                    <grid_copy_copy
+                                        cq:styleIds="[0,1653545835880]"
+                                        jcr:created="{Date}2022-11-28T14:55:37.084-05:00"
+                                        jcr:createdBy="chiucx"
+                                        jcr:lastModified="{Date}2026-05-12T07:48:14.354-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <par_12
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote_copy
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T07:45:04.892-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Anna Chlipala"
+                                                attributionTitle="ehemalige Auszubildende zur Biologielaborantin"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Ausbildung zur Biologielaborantin war unglaublich vielseitig. Ich habe mit unterschiedlichsten biologischen Systemen gearbeitet – von einzelnen Zellen bis hin zu komplexeren Organismen – und konnte viele Inhalte direkt praktisch im Labor anwenden. Besonders begeistert hat mich die enge Verbindung von Theorie und Praxis. Genau diese Mischung hat die Ausbildung für mich so spannend und abwechslungsreich gemacht.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_12>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <separator_copy
+                                                cq:styleIds="[1662756515133]"
+                                                jcr:created="{Date}2024-10-24T02:12:37.454-04:00"
+                                                jcr:createdBy="singarx"
+                                                jcr:lastModified="{Date}2026-05-12T07:49:22.125-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                            <image_84741686_copy
+                                                cq:styleIds="[1402843082813,1402843082822,1402843082832]"
+                                                jcr:created="{Date}2024-08-01T08:36:59.572-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-06-05T02:46:11.361-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/image/v2/image"
+                                                alt="Anna Chlipala"
+                                                altValueFromDAM="false"
+                                                displayPopupTitle="true"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/abbvie-de-duale-ausbildung-anna-chlipala.jpg"
+                                                isDecorative="false"
+                                                openInNewWindow="false"
+                                                titleValueFromDAM="false"/>
+                                        </par_11>
+                                        <par_13
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys"/>
+                                        <quote_1661374647
+                                            cq:styleIds="[1000000000021,1000000000033,1000000000040,1000000000000]"
+                                            jcr:created="{Date}2022-12-10T14:46:52.954-05:00"
+                                            jcr:createdBy="chiucx"
+                                            jcr:lastModified="{Date}2024-08-22T04:57:59.401-04:00"
+                                            jcr:lastModifiedBy="HERZOBW"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="abbvie-com2/components/quote"
+                                            attributionName="Mag. Ingo Raimon "
+                                            attributionTitle="General Manager AbbVie Österreich "
+                                            quote="Wir haben einen klaren Auftrag: durch medizinischen Fortschritt das Leben von Patient:innen zu verbessern. Dabei kommt der klinischen Forschung eine Schlüsselrolle zu: durch intensive Forschung können wir höhere Standards in der Behandlung und Patient:innenversorgung erzielen. Unsere Mitarbeiter:innen arbeiten in starken Teams, um Herausforderungen zu meistern. Die offene Arbeitskultur auf Augenhöhe ist wichtig für unseren gemeinsamen Unternehmenserfolg. "
+                                            quoteType="regular"
+                                            textSize="h0"/>
+                                        <par_14
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <quote
+                                                cq:styleIds="[1000000000000,1000000000033,1000000000021]"
+                                                jcr:created="{Date}2024-09-03T06:59:08.381-04:00"
+                                                jcr:createdBy="HERZOBW"
+                                                jcr:lastModified="{Date}2026-05-12T07:45:04.892-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/quote"
+                                                attributionName="Anna Chlipala"
+                                                attributionTitle="ehemalige Auszubildende zur Biologielaborantin"
+                                                bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                imageModifiers="resMode=sharp2&amp;op_sharpen=1"
+                                                quote="„Meine Ausbildung zur Biologielaborantin war unglaublich vielseitig. Ich habe mit unterschiedlichsten biologischen Systemen gearbeitet – von einzelnen Zellen bis hin zu komplexeren Organismen – und konnte viele Inhalte direkt praktisch im Labor anwenden. Besonders begeistert hat mich die enge Verbindung von Theorie und Praxis. Genau diese Mischung hat die Ausbildung für mich so spannend und abwechslungsreich gemacht.“"
+                                                quoteType="regular"
+                                                textSize="h0"/>
+                                        </par_14>
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="3"
+                                                dataPriority="1"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="9"
+                                                dataPriority="2"/>
+                                        </columns>
+                                    </grid_copy_copy>
+                                </copy_of_container_co>
+                                <separator_1811313167_947281748
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-08T09:38:03.821-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-08T09:38:15.429-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <image_copy_109529931
+                                    jcr:created="{Date}2026-04-08T09:24:08.657-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-21T03:40:53.885-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="Wir stehen für Innovation: Unsere Forschungs-Pipeline ist breit aufgestellt und gut gefüllt – am AbbVie-Standort Ludwigshafen sind wir an 80% aller AbbVie-Pipelineprojekte beteiligt"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="false"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/abbvie-de-duale-ausbildung-naturwissenschaftliche-berufe.jpg"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="false"/>
+                                <separator_1811313167_1496170894
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-08T09:38:03.821-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-08T09:38:15.429-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T01:43:21.065-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:56:06.627-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Technische Ausbildungsberufe"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <accordion_copy_copy_
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-10-24T01:47:10.720-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T07:46:00.815-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <item_1729748861299
+                                        cq:panelTitle="Mechatroniker*in"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-05-12T03:18:33.845-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Bei der Herstellung innovativer Medikamente läuft nichts ohne komplexe Anlagen und hochmoderne Technik. Als angehende*r Mechatroniker*in sorgst du dafür, dass genau diese Systeme reibungslos funktionieren.&lt;/p>&#xd;&#xa;&lt;p>In deiner Ausbildung wirst du zur echten Allround-Fachkraft: Du arbeitest sowohl an mechanischen als auch an elektrischen und elektronischen Komponenten. Du montierst Anlagen, nimmst sie in Betrieb, wartest sie regelmäßig und führst Reparaturen durch. Außerdem misst und prüfst du Systeme, programmierst Steuerungen und stellst sicher, dass alle Prozesse zuverlässig ablaufen.&lt;/p>&#xd;&#xa;&lt;p>Dabei lernst du wichtige Grundlagen aus verschiedenen Bereichen kennen – von Metallbearbeitung und Elektrotechnik über Hydraulik und Pneumatik bis hin zur Steuerungstechnik. Schritt für Schritt entwickelst du ein umfassendes Verständnis für komplexe Produktionsanlagen und deren Zusammenspiel.&lt;/p>&#xd;&#xa;&lt;p>Das theoretische Fachwissen erhältst du in der Berufsschule „Technik 1“, die praktische Erfahrung sammelst du direkt im Betrieb. Unsere Ausbildung erfolgt in Kooperation mit der DB in Ludwigshafen – hier wirst du optimal auf deine späteren Aufgaben vorbereitet.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>:&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>:&amp;nbsp;3,5 Jahre (Verkürzung möglich auf 3 Jahre bei guter Leistung)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>:&amp;nbsp;Berufsbildenden Schule Technik 1, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Externer Kooperationspartner&lt;/b>: DB Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1729748916066
+                                        cq:panelTitle="Elektroniker*in für Betriebstechnik"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-05-12T03:19:30.950-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Ohne funktionierende Produktionsanlagen läuft in der Medikamentenherstellung nichts – und genau hier kommst du ins Spiel. Als angehende*r Elektroniker*in für Betriebstechnik sorgst du dafür, dass unsere Maschinen und Systeme zuverlässig arbeiten und Produktionsabläufe reibungslos funktionieren.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung lernst du, Anlagen eigenständig zu steuern, zu warten und zu programmieren. Du analysierst Störungen, behebst Fehler und optimierst Prozesse, damit alles genau so läuft, wie es sein soll. Dabei arbeitest du sowohl mit Schaltplänen als auch direkt an der Elektronik der Produktionsanlagen. Messen, Prüfen und Programmieren gehören genauso zu deinem Alltag wie das Verständnis der gesamten Energie- und Steuerungssysteme.&lt;/p>&#xd;&#xa;&lt;p>Das theoretische Fachwissen erhältst du in der Berufsschule „Technik 1“, die praktische Erfahrung sammelst du direkt im Betrieb. Unsere Ausbildung erfolgt in Kooperation mit den Pfalzwerken in Maxdorf.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start:&lt;/b>&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer:&lt;/b>&amp;nbsp;3,5 Jahre (Verkürzung auf 3 Jahre bei guter Leistung möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule:&lt;/b> Berufsbildenden Schule Technik 1, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Externer Kooperationspartner:&lt;/b> Pfalzwerke, Maxdorf&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung:&lt;/b> Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht:&lt;/b> Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1771920412868
+                                        cq:panelTitle="Industriemechaniker*in"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-05-12T03:20:05.619-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;div>&amp;nbsp;&lt;/div>&#xd;&#xa;&lt;p>Als Industriemechaniker*in bei AbbVie bist du ein echtes Allround-Talent: Dein Aufgabenbereich ist vielfältig, und kein Arbeitstag gleicht dem anderen. Du installierst und wartest maschinentechnische Anlagen, überwachst Produktionsabläufe und sorgst dafür, dass alles reibungslos funktioniert. Dabei erkennst du Verschleiß frühzeitig, führst Wartungsarbeiten durch und bearbeitest Werkstoffe – sowohl manuell als auch maschinell.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung lernst du Schritt für Schritt alles, was du für diese abwechslungsreiche Tätigkeit brauchst: Du montierst und demontierst Maschinen und Anlagen, führst Reparaturen durch und bist in Projekte zur Prozessoptimierung und Qualitätssteigerung involviert. Dabei behältst du immer Sicherheits- und Umweltvorgaben im Blick.&lt;/p>&#xd;&#xa;&lt;p>Du lernst technische Zeichnungen und Pläne zu lesen und anzuwenden, sodass du Aufgaben selbstständig planen und umsetzen kannst. Das theoretische Fachwissen erhältst du in der Berufsschule „Technik 1“, die praktische Erfahrung sammelst du direkt im Betrieb. Unsere Ausbildung erfolgt in Kooperation mit der DB in Ludwigshafen – hier wirst du optimal auf deine späteren Aufgaben vorbereitet.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>: Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>: 3,5 Jahre (Verkürzung auf 3 Jahre bei guter Leistung möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>: Berufsbildenden Schule Technik 1, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Externer Kooperationspartner&lt;/b>: DB Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1780927563756
+                                        cq:panelTitle="Elektroniker*in für Automatisierungstechnik"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-06-08T10:08:55.884-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;p>Für die Herstellung innovativer Medikamente werden hochkomplexe Anlagen und Maschinen benötigt – und genau hier kommst du ins Spiel. Als angehender Elektroniker*in für Automatisierungstechnik stellst du sicher, dass unsere Produktionsanlagen zuverlässig funktionieren und wichtige Medikamente überhaupt erst hergestellt werden können.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung lernst du, Automatisierungs- und Steuerungssysteme zu steuern, zu warten und zu programmieren, damit Produktionsprozesse reibungslos ablaufen. Du arbeitest selbstständig an der Elektronik moderner Anlagen, liest Schaltpläne, analysierst Störungen und behebst Fehler direkt vor Ort. Messen, Prüfen und Programmieren von Komponenten gehören ebenso zu deinem Alltag wie das Verständnis komplexer Anlagen- und Prozesssteuerungen.&lt;/p>&#xd;&#xa;&lt;p>Die Ausbildung erfolgt im dualen System: Das theoretische Wissen erwirbst du in der Berufsschule „Technik 1“ in Ludwigshafen, die praktische Erfahrung sammelst du bei AbbVie im Betrieb sowie teilweise bei unseren Kooperationspartnern.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start:&lt;/b> Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer:&lt;/b> 3,5 Jahre (Verkürzung auf 3 Jahre bei guten Leistungen möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule:&lt;/b> Berufsbildende Schule Technik 1, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Externer Ausbildungspartner&lt;/b>: BASF&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht:&lt;/b> Blockunterricht&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                </accordion_copy_copy_>
+                                <image_copy_copy
+                                    jcr:created="{Date}2026-04-08T09:24:08.657-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-21T03:41:04.885-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/image/v2/image"
+                                    alt="Unsere Expertise reicht von innovativen Technologien bis hin zu Produktions- und Verpackungsanlagen mit höchstem technischem Standard"
+                                    altValueFromDAM="false"
+                                    displayPopupTitle="false"
+                                    dmPresetType="imagePreset"
+                                    fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/abbvie-de-duale-ausbildung-technische-berufe.jpg"
+                                    isDecorative="false"
+                                    openInNewWindow="false"
+                                    titleValueFromDAM="false"/>
+                                <separator_1811313167_1301348907
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2026-05-08T09:38:03.821-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-08T09:38:15.429-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <title_copy_copy_copy_27801392
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T01:43:21.065-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T08:56:12.370-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Logistik, Büro &amp; Gastronomie"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h3"
+                                    variant="h"/>
+                                <accordion_copy_copy__152679555
+                                    cq:styleIds="[1]"
+                                    jcr:created="{Date}2024-10-24T01:47:10.720-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-07-02T07:48:51.378-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/accordion/v2/accordion"
+                                    singleExpansion="false">
+                                    <item_1775717393289
+                                        cq:panelTitle="Fachkraft für Lagerlogistik"
+                                        jcr:lastModified="{Date}2026-04-09T02:50:08.874-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="11"
+                                                dataPriority="1"/>
+                                        </columns>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <text
+                                                cq:styleIds="[1659545825678]"
+                                                jcr:created="{Date}2026-04-09T02:50:47.947-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-05-12T03:20:41.102-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                                langAttribute="none"
+                                                text="&lt;p>Sorge dafür, dass unsere Medikamente pünktlich bei Patient*innen ankommen. Bevor ein Medikament in der Apotheke landet, durchläuft es viele Stationen: Rohstoffe müssen gelagert, Verpackungen vorbereitet und fertige Produkte termingerecht verschickt werden. Als Fachkraft für Lagerlogistik behältst du diesen gesamten Prozess im Blick und sorgst dafür, dass alles reibungslos funktioniert.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung lernst du, den Warenfluss zu planen und zu überwachen – vom Wareneingang über die fachgerechte Lagerung bis zum Versand. Du arbeitest mit moderner Technik, wertest Daten aus und prüfst, ob alle Vorschriften eingehalten werden. Außerdem erwirbst du bei uns den Staplerführerschein, um im Lager mobil zu sein&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>:&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>:&amp;nbsp;3 Jahre (Verkürzung auf 2.5 Jahre bei guter Leistung möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>: Berufsbildende Schule Wirtschaft II, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Tageweise&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                                textIsRich="true"/>
+                                        </par_11>
+                                    </item_1775717393289>
+                                    <item_1729748861299_c
+                                        cq:panelTitle="Fachangestellte*r für Medien- und Informationsdienste"
+                                        cq:styleIds="[1659545825678]"
+                                        jcr:lastModified="{Date}2026-04-08T09:43:11.881-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/text/v2/text"
+                                        langAttribute="none"
+                                        text="&lt;div>&lt;b>&amp;nbsp;&lt;/b>&lt;/div>&#xd;&#xa;&lt;p>Die digitale Welt entwickelt sich rasant – und mit ihr wächst die Bedeutung von Informationen und Daten. Als Fachangestellte*r für Medien- und Informationsdienste bist du dafür verantwortlich, dass wichtige Dokumente korrekt archiviert, verwaltet und jederzeit verfügbar sind. Ohne deine Arbeit würden Geschäftsprozesse ins Stocken geraten und wichtige Daten wären schwer zugänglich.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung lernst du, Ablagesysteme und Dokumentationen professionell zu organisieren, Datenbanken effizient zu nutzen und den Zugriff auf Informationen zu gewährleisten. Du erhältst Einblicke in moderne Medien und den Umgang mit digitalen Informationssystemen, sodass du eine Expertin für Informationsmanagement wirst. Gleichzeitig lernst du, wie du Kolleg*innen unterstützt und Prozesse optimierst, damit der Informationsfluss im Unternehmen reibungslos funktioniert.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>:&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>:&amp;nbsp;3 Jahre (Verkürzung auf 2.5 Jahre bei guter Leistung möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>:&amp;nbsp;Hermann Gundert Schule Calw&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Tageweise&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <item_1775717546704
+                                        cq:panelTitle="Kaufleute für Büromanagement"
+                                        jcr:lastModified="{Date}2026-04-09T02:52:45.194-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="1">
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="11"
+                                                dataPriority="1"/>
+                                        </columns>
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <text
+                                                cq:styleIds="[1659545825678]"
+                                                jcr:created="{Date}2026-04-09T02:53:38.503-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-05-12T03:21:15.539-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                                langAttribute="none"
+                                                text="&lt;p>Ausbildung bei AbbVie bedeutet: Von Anfang an Verantwortung übernehmen und aktiv mitgestalten. Als Kauffrau oder Kaufmann für Büromanagement bist du ein zentraler Teil unseres Teams und lernst, wie ein internationales Pharmaunternehmen funktioniert. Du erhältst Einblicke in alle wichtigen Büro- und Geschäftsprozesse – von der Auftragsbearbeitung über die Organisation von Workshops bis hin zur Beschaffungswirtschaft. So bekommst du ein umfassendes Verständnis dafür, wie Abläufe gesteuert, koordiniert und optimiert werden.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung übernimmst du vielfältige Aufgaben: Du organisierst und koordinierst Projekte, unterstützt bei Sekretariats- und Assistenzaufgaben, managst digitale Prozesse und steuerst abteilungsübergreifende administrative Abläufe. Du lernst, das große Ganze im Blick zu behalten, Details sorgfältig zu bearbeiten und moderne Informationssysteme sicher anzuwenden. Dabei bist du von Anfang an vollwertiger Teil des Teams und trägst dazu bei, dass unsere Prozesse reibungslos funktionieren.&lt;/p>&#xd;&#xa;&lt;p>Für diese Ausbildung solltest du Interesse an Organisation, Verwaltung und digitalen Prozessen mitbringen. Eine strukturierte und sorgfältige Arbeitsweise, Eigeninitiative sowie Teamgeist sind ebenso wichtig wie Freude an Kommunikation und Koordination. Mit deiner Ausbildung zur Kauffrau oder zum Kaufmann für Büromanagement bei AbbVie legst du den Grundstein für eine vielseitige Karriere in einem internationalen Unternehmen.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>: Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>: 3 Jahre (Verkürzung auf 2.5 Jahre bei guter Leistung möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>: Berufsbildende Schule Wirtschaft I, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Tageweise&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                                textIsRich="true"/>
+                                        </par_11>
+                                    </item_1775717546704>
+                                    <item_1775656801733
+                                        cq:panelTitle="Koch/Köchin"
+                                        jcr:lastModified="{Date}2026-04-08T10:12:03.363-04:00"
+                                        jcr:lastModifiedBy="LENNIAM"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="abbvie-com2/components/grid/v2/grid"
+                                        rowCount="2">
+                                        <par_11
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <text
+                                                cq:styleIds="[1659545825678]"
+                                                jcr:created="{Date}2026-04-08T10:01:12.359-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-05-12T03:21:52.663-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/text/v2/text"
+                                                langAttribute="none"
+                                                text="&lt;p>Du liebst es, zu kochen, neue Rezepte auszuprobieren und Menschen mit deinen Kreationen zu begeistern? Dann ist die Ausbildung zum Koch oder zur Köchin bei AbbVie genau der richtige Start für dich! In unserem modernen Mitarbeiterrestaurant lernst du die vielseitige Welt der Gastronomie kennen und wirst Schritt für Schritt zu einer kreativen und kompetenten Fachkraft ausgebildet.&lt;/p>&#xd;&#xa;&lt;p>Während deiner Ausbildung lernst du die komplette Zubereitung und das fachgerechte Anrichten unterschiedlicher Gerichte – vom Frühstück über Mittagessen bis hin zu „à la carte“-Speisen, BBQ und Catering. Du erfährst, wie man Speisepläne erstellt, Lebensmittel einkauft und die Abläufe in einer Großküche sowie in Werkrestaurants effizient organisiert. Dabei gehört auch das Planen und Durchführen von Veranstaltungen im und außerhalb unseres Betriebsrestaurants zu deinen Aufgaben, ebenso wie der direkte Kontakt mit Gästen und professionelles Serviceverhalten.&lt;/p>&#xd;&#xa;&lt;p>Ein wichtiger Bestandteil deiner Ausbildung ist außerdem die Organisation von Warenannahme und Lagerung sowie das Erlernen von Hygienestandards und Reinigungsprozessen in der Küche. Darüber hinaus bekommst du durch Schulungen im Betrieb vertiefte Einblicke in spezielle Fachbereiche, die dir helfen, dich optimal weiterzuentwickeln und deine kulinarischen Fähigkeiten auszubauen.&lt;/p>&#xd;&#xa;&lt;p>So bist du am Ende deiner Ausbildung nicht nur ein*e versierter*te Koch/Köchin, sondern auch Profi*in in Planung, Organisation, Hygiene und Gästekommunikation – und bestens vorbereitet für eine kreative Karriere in der Gastronomie.&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;b>Start&lt;/b>:&amp;nbsp;Jährlich zum 01. September&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Dauer&lt;/b>:&amp;nbsp;3 Jahre (Verkürzung auf 2.5 Jahre bei guter Leistung möglich)&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Berufsschule&lt;/b>: Berufsbildende Schule - Technik 2, Ludwigshafen&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Voraussetzung&lt;/b>: Mittlere Reife&lt;/li>&#xd;&#xa;&lt;li>&lt;b>Unterricht&lt;/b>: Tageweise&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                                                textIsRich="true"/>
+                                        </par_11>
+                                        <columns jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                columnWidth="11"
+                                                dataPriority="1"/>
+                                        </columns>
+                                        <par_21
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/foundation/components/parsys">
+                                            <video
+                                                cq:styleIds="[1]"
+                                                jcr:created="{Date}2026-04-08T10:12:42.884-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-05-19T04:17:25.356-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                                autoPlayBrightcovePlaylistvideo="false"
+                                                brightcoveAccount="2157889328001"
+                                                brightcoveAutoPlay="false"
+                                                brightcovePlayerId="dhCKg22Lp8"
+                                                brightcoveVideoId="6396025053112"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/abbvie-de-duale-ausbildung-video-marco-stern-thumbnail.png"
+                                                loopBrightcovePlaylistVideo="false"
+                                                loopVideo="false"
+                                                showBrightcoveControls="true"
+                                                showBrightcovePlaylistControls="false"
+                                                showPlayerControls="false"
+                                                textIsRich="[true,true]"
+                                                videoId="6396025053112"
+                                                videoType="brightcove"
+                                                youtubeAutoPlay="true"/>
+                                            <video_copy
+                                                cq:styleIds="[10,1]"
+                                                jcr:created="{Date}2026-04-08T10:12:42.884-04:00"
+                                                jcr:createdBy="LENNIAM"
+                                                jcr:lastModified="{Date}2026-05-19T03:50:14.514-04:00"
+                                                jcr:lastModifiedBy="LENNIAM"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="abbvie-com2/components/video/v2/video"
+                                                autoPlayBrightcovePlaylistvideo="false"
+                                                brightcoveAccount="2157889328001"
+                                                brightcoveAutoPlay="false"
+                                                brightcovePlayerId="dhCKg22Lp8"
+                                                brightcoveVideoId="6396027050112"
+                                                dmPresetType="imagePreset"
+                                                fileReference="/content/dam/abbvie-com2/de/images/karriere/gelegenheiten/schueler-studenten/duale-ausbildung/abbvie-de-duale-ausbildung-video-lea-bode-thumbnail.png"
+                                                loopBrightcovePlaylistVideo="false"
+                                                loopVideo="false"
+                                                showBrightcoveControls="true"
+                                                showBrightcovePlaylistControls="false"
+                                                showPlayerControls="false"
+                                                textIsRich="[true,true]"
+                                                videoId="6396027050112"
+                                                videoType="brightcove"
+                                                youtubeAutoPlay="true"/>
+                                        </par_21>
+                                    </item_1775656801733>
+                                </accordion_copy_copy__152679555>
+                                <title_copy_copy_copy_2050324186
+                                    cq:styleIds="[1659545825678,1661545829678]"
+                                    jcr:created="{Date}2024-10-24T01:43:21.065-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-04-08T09:45:21.070-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Was wir Dir bieten"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    langAttribute="none"
+                                    type="h3"
+                                    variant="h"/>
+                                <item_1729748912454_c
+                                    cq:panelTitle="Tierpfleger*in"
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:lastModified="{Date}2026-07-22T03:54:48.016-04:00"
+                                    jcr:lastModifiedBy="autzeax"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    langAttribute="none"
+                                    text="&lt;ul>&#xa;&lt;li>Flexible Arbeitszeiten im Rahmen der Praxisphasen (37,5 Stunden/Woche, abgestimmt auf Schul- und Einsatzplanung sowie teilweise feste Team- oder Projektzeiten)&lt;/li>&#xa;&lt;li>Überdurchschnittliche Vergütung nach dem Chemietarifvertrag&lt;/li>&#xa;&lt;li>Zusätzliche Ausbildungspauschale&lt;/li>&#xa;&lt;li>Unterstützung bei längeren Wegen zwischen Berufsschule und Einsatzstandort (z. B. Fahrtkostenpauschale)&lt;/li>&#xa;&lt;li>Kostenübernahme bzw. Budget für schulbezogene Materialien und Unterlagen&lt;/li>&#xa;&lt;li>Laptop zur privaten Nutzung&lt;/li>&#xa;&lt;li>Sicherer Arbeitsplatz in einem internationalen Unternehmensumfeld&lt;/li>&#xa;&lt;li>Sehr gute Übernahmechancen nach der Ausbildung&lt;/li>&#xa;&lt;li>Betriebliche Altersvorsorge nach erfolgreicher Übernahme&lt;/li>&#xa;&lt;li>Ausgezeichnete betriebsärztliche Versorgung&lt;/li>&#xa;&lt;li>Zusammenarbeit mit motivierten, erfahrenen Kolleg*innen in einem starken Team&lt;/li>&#xa;&lt;li>Erfahrene Ausbilder*innen begleiten dich während deiner Praxisphasen und vermitteln dir alle wichtigen Grundlagen für deinen erfolgreichen Karrierestart&lt;/li>&#xa;&lt;/ul>&#xa;"
+                                    textIsRich="true"/>
+                                <separator_877528496_
+                                    cq:styleIds="[1662756502570]"
+                                    jcr:created="{Date}2026-05-12T08:31:13.895-04:00"
+                                    jcr:createdBy="LENNIAM"
+                                    jcr:lastModified="{Date}2026-05-12T08:31:21.636-04:00"
+                                    jcr:lastModifiedBy="LENNIAM"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_608994401_
+                                    cq:styleIds="[1662756486159]"
+                                    jcr:created="{Date}2024-10-24T02:15:09.385-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-10-24T02:15:09.385-04:00"
+                                    jcr:lastModifiedBy="singarx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <text_copy
+                                    cq:styleIds="[1659545825678]"
+                                    jcr:created="{Date}2024-10-24T02:15:21.818-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2024-12-05T04:50:12.645-05:00"
+                                    jcr:lastModifiedBy="MURRARX3"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/text/v2/text"
+                                    text="&lt;p style=&quot;text-align: right;&quot;>DE-ABBV-240800&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container>
+                        </par_12>
+                        <par_13
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/quote"
-                            attributionName="Jonas Hoppe"
-                            attributionTitle="ehem. Auszubildender bei AbbVie Deutschland"
-                            bgImageModifiers="resMode=sharp2&amp;op_sharpen=1"
-                            imageModifiers="resMode=sharp2&amp;op_sharpen=1"
-                            quote="Besonders hat mir die umfangreiche Auswahl an Abteilungen gefallen. Wer aktiv an seiner Jahresplanung mitwirkt, hat die Möglichkeit, wirklich viele Themengebiete kennen zu lernen. "
-                            quoteType="regular"
-                            textSize="h0"/>
-                        <separator_608994401
-                            cq:styleIds="[1662756486159]"
-                            jcr:created="{Date}2024-10-24T02:15:09.385-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T02:15:09.385-04:00"
-                            jcr:lastModifiedBy="singarx"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
-                        <text
-                            cq:styleIds="[1659545825678]"
-                            jcr:created="{Date}2024-10-24T02:15:21.818-04:00"
-                            jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-12-05T04:50:12.645-05:00"
-                            jcr:lastModifiedBy="MURRARX3"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="abbvie-com2/components/text/v2/text"
-                            text="&lt;p style=&quot;text-align: right;&quot;>DE-ABBV-240800&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                    </container_118032577>
-                    <container_1851205024
+                            sling:resourceType="wcm/foundation/components/parsys">
+                            <cardpagestory_copy_c
+                                cq:styleIds="[1111111111110,1111111111112,1111111111117]"
+                                jcr:created="{Date}2022-12-16T17:58:51.417-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:52:46.340-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/cardpagestory/v1/cardpagestory"
+                                hideImage="false"
+                                linkURL="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"
+                                openInNewTab="false"/>
+                            <separator_1294049852
+                                cq:styleIds="[1662756387452]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-24T03:53:11.126-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1294049852_319357372
+                                cq:styleIds="[1662756423318,1662756756047]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-24T03:52:34.800-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <separator_1294049852_1055165046
+                                cq:styleIds="[1662756423318]"
+                                jcr:created="{Date}2022-12-14T13:11:13.090-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:55:18.142-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                            <header_1821235473_co
+                                cq:styleIds="[3]"
+                                jcr:created="{Date}2022-12-14T13:11:04.446-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2024-05-10T07:52:25.568-04:00"
+                                jcr:lastModifiedBy="kanchrx3"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/header/v2/header"
+                                eyebrow="THEMEN"/>
+                            <linklist_copy_copy_c
+                                jcr:created="{Date}2022-12-14T13:11:54.007-05:00"
+                                jcr:createdBy="chiucx"
+                                jcr:lastModified="{Date}2026-02-23T09:55:01.055-05:00"
+                                jcr:lastModifiedBy="kunkefx"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="abbvie-com2/components/linklist/v2/linklist"
+                                childDepth="1"
+                                excludeCurrentPage="true"
+                                linkItems="true"
+                                linksTarget="_self"
+                                listFrom="children"
+                                parentPage="/content/abbvie-com2/de/de/karriere/gelegenheiten/schueler-studenten"
+                                showDate="false"
+                                showDesc="false"
+                                showSubtitle="false"
+                                showTags="false"
+                                sortOrder="asc"
+                                tagsMatch="any"
+                                textIsRich="[true,true,true,true,true]">
+                                <pages jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Onkologie  "
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/de/de/wissenschaft/schwerpunktbereiche/onkologie"
+                                        oneTrustEnabled="false"
+                                        text="Onkologie  "
+                                        textIconTarget="_self"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Neuroscience"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/de/de/wissenschaft/schwerpunktbereiche/neurologie"
+                                        oneTrustEnabled="false"
+                                        text="Neuroscience"
+                                        textIconTarget="_self"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Eye Care"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/eye-care"
+                                        oneTrustEnabled="false"
+                                        text="Eye Care"
+                                        textIconTarget="_self"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Aesthetics"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/aesthetics"
+                                        oneTrustEnabled="false"
+                                        text="Aesthetics"
+                                        textIconTarget="_self"/>
+                                    <item4
+                                        jcr:primaryType="nt:unstructured"
+                                        alt="Other Specialties"
+                                        linkTarget="_self"
+                                        linkURL="/content/abbvie-com2/us/en/science/areas-of-focus/other-specialties"
+                                        oneTrustEnabled="false"
+                                        text="Other Specialties"
+                                        textIconTarget="_self"/>
+                                </pages>
+                            </linklist_copy_copy_c>
+                        </par_13>
+                    </grid_copy>
+                    <container_840033068_
                         cq:styleIds="[1653545825683,1653545847150]"
-                        jcr:created="{Date}2024-10-24T02:16:34.876-04:00"
+                        jcr:created="{Date}2024-10-23T05:50:34.224-04:00"
                         jcr:createdBy="singarx"
-                        jcr:lastModified="{Date}2024-10-24T02:18:43.355-04:00"
-                        jcr:lastModifiedBy="singarx"
+                        jcr:lastModified="{Date}2026-02-24T04:53:26.147-05:00"
+                        jcr:lastModifiedBy="kunkefx"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="abbvie-com2/components/container/v2/container"
-                        backgroundColor="#F4F4F4">
+                        backgroundColor="#A6B5E0"
+                        enableFetchPriority="false"
+                        enableLazyLoading="false">
                         <grid
-                            jcr:created="{Date}2024-10-24T02:17:01.311-04:00"
+                            jcr:created="{Date}2024-10-23T05:50:47.655-04:00"
                             jcr:createdBy="singarx"
-                            jcr:lastModified="{Date}2024-10-24T02:17:18.325-04:00"
+                            jcr:lastModified="{Date}2024-10-23T05:51:05.146-04:00"
                             jcr:lastModifiedBy="singarx"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="abbvie-com2/components/grid/v2/grid"
@@ -300,39 +879,91 @@
                             <par_11
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/foundation/components/parsys">
-                                <teaser
-                                    cq:styleIds="[1,6]"
-                                    jcr:created="{Date}2024-10-24T02:17:28.013-04:00"
+                                <title_copy_copy
+                                    cq:styleIds="[1659545825678,1651545825678,1661545829678,1651545825694]"
+                                    jcr:created="{Date}2024-10-23T05:23:35.216-04:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2024-12-06T03:19:06.293-05:00"
-                                    jcr:lastModifiedBy="WINTELX"
+                                    jcr:lastModified="{Date}2026-02-24T05:21:31.850-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="&lt;p>&lt;a href=&quot;https://careers.abbvie.com/de/&quot; target=&quot;_blank&quot; title=&quot;Stellenportal&quot;>Finde den Job, der zu Dir passt&lt;/a>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
-                                    ctaLink="https://abbvie.taleo.net/careersection/2/jobsearch.ftl?location=10140125194&amp;lang=de"
-                                    ctaTarget="_self"
-                                    pretitle="Offene Stellen"
-                                    textIsRich="[true,true]"/>
+                                    jcr:title="Offene Stellen"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="noh"/>
+                                <separator_1891304686_855153986
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686_816419786
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686_978224001
+                                    cq:styleIds="[1662756279166]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <separator_1891304686
+                                    cq:styleIds="[1662756456518]"
+                                    jcr:created="{Date}2024-10-23T07:31:19.135-04:00"
+                                    jcr:createdBy="singarx"
+                                    jcr:lastModified="{Date}2026-02-24T05:24:16.495-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="abbvie-com2/components/separator/v2/separator"/>
+                                <button
+                                    cq:styleIds="[1659997740832,1659997787460]"
+                                    jcr:created="{Date}2026-02-24T04:54:25.788-05:00"
+                                    jcr:createdBy="kunkefx"
+                                    jcr:lastModified="{Date}2026-02-24T05:16:26.453-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Finde den Job, der zu Dir passt"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Stellenangebote ansehen"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com/de/"/>
                             </par_11>
                             <par_12
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/foundation/components/parsys">
-                                <teaser
-                                    cq:styleIds="[6]"
-                                    jcr:created="{Date}2024-10-24T02:17:33.577-04:00"
+                                <title_copy
+                                    cq:styleIds="[1651545825678,1661545829678,1651545825694,1659545825678]"
+                                    jcr:created="{Date}2024-10-23T05:23:35.216-04:00"
                                     jcr:createdBy="singarx"
-                                    jcr:lastModified="{Date}2024-12-06T03:19:27.599-05:00"
-                                    jcr:lastModifiedBy="WINTELX"
+                                    jcr:lastModified="{Date}2026-02-24T05:19:14.852-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="&lt;p>&lt;a href=&quot;https://careers.abbvie.com/de/talent-community&quot; target=&quot;_blank&quot; title=&quot;Talent Community&quot;>Werde Teil der Talent Community&lt;/a>&lt;/p>&#xd;&#xa;"
-                                    sling:resourceType="abbvie-com2/components/teaser/v2/teaser"
-                                    ctaLink="http://abbvie.avature.net/talent?source=Talent+Community&amp;tags=abbviecareers%20"
-                                    ctaTarget="_self"
-                                    pretitle="Interessierst du dich für eine Karriere bei AbbVie?"
-                                    textIsRich="[true,true]"/>
+                                    jcr:title="Interessierst du dich für eine Karriere bei AbbVie?"
+                                    sling:resourceType="abbvie-com2/components/title/v2/title"
+                                    type="h5"
+                                    variant="noh"/>
+                                <button_copy
+                                    cq:styleIds="[1659997740832,1659997787460]"
+                                    jcr:created="{Date}2026-02-24T04:54:25.788-05:00"
+                                    jcr:createdBy="kunkefx"
+                                    jcr:lastModified="{Date}2026-02-24T05:16:20.687-05:00"
+                                    jcr:lastModifiedBy="kunkefx"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Werde Teil der Talent Community"
+                                    sling:resourceType="abbvie-com2/components/button/v2/button"
+                                    accessibilityLabel="Werde Teil der Talent Community"
+                                    linkTarget="_blank"
+                                    linkURL="https://careers.abbvie.com/de/talent-community"/>
                             </par_12>
                         </grid>
-                    </container_1851205024>
+                    </container_840033068_>
                     <separator
                         cq:styleIds="[1662756542862]"
                         jcr:created="{Date}2024-10-24T02:28:51.764-04:00"
