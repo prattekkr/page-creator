@@ -1214,9 +1214,31 @@ function gridContainerProps(containers, grid = null) {
   // Only actual AEM grid nodes carry a bottom margin (`.grid { @include large-margin }`).
   // Containers converted to grid-containers do NOT have this CSS default in AEM, so
   // section-bottom-margin should only be added when a real AEM grid node is present (grid != null).
-  const gcMerged = mergeDefaults('grid-container', derived, hasBg)
-    .map(c => (grid && c === 'no-bottom-margin') ? 'section-bottom-margin' : c);
-  if (grid && !gcMerged.includes('section-bottom-margin')) gcMerged.push('section-bottom-margin');
+  // AEM-authored margin wins: if the container already has no-bottom-margin or section-bottom-margin
+  // in its derived styles, honour that — do NOT override no-bottom-margin → section-bottom-margin.
+  // Only fall back to section-bottom-margin when no margin class was authored at all.
+  // AEM margin style IDs may live in the 'section' namespace (not 'grid-container'),
+  // so check ALL namespaces when detecting whether an explicit margin was authored.
+  const MARGIN_CLS = new Set(['no-bottom-margin', 'section-bottom-margin']);
+  const aemAuthoredMargin = derived.some(c => MARGIN_CLS.has(c)) ||
+    chain.some(n => {
+      const raw = String(n?.['@cq:styleIds'] || '').replace(/[\[\]\s]/g, '').split(',').filter(Boolean);
+      return raw.some(id => {
+        for (const ns of ['section', 'grid-container', '_shared', null]) {
+          const entry = ns ? styleMap[ns]?.[id] : (styleMap[id] && typeof styleMap[id] === 'object' && 'edsClass' in styleMap[id] ? styleMap[id] : null);
+          if (entry && MARGIN_CLS.has(entry.edsClass)) return true;
+        }
+        return false;
+      });
+    });
+  const gcMerged = mergeDefaults('grid-container', derived, hasBg);
+  // Also check gcMerged itself — mergeDefaults may have added no-bottom-margin as a
+  // fallback (when derived is empty). Only add section-bottom-margin when neither
+  // an AEM-authored nor a default-injected margin already exists.
+  const mergedHasMargin = gcMerged.some(c => MARGIN_CLS.has(c));
+  if (grid && !aemAuthoredMargin && !mergedHasMargin) {
+    gcMerged.push('section-bottom-margin');
+  }
   const classes = ['grid-container', ...gcMerged].join(',');
   return { style_container: 'grid-container', style_customDynamicClass: classes, ...bgImageProps(container) };
 }
@@ -1790,11 +1812,19 @@ function applySplitContainerRules(outputs) {
     if (!out.props) continue;
     const cls = splitCls([out.props.style_customDynamicClass]);
 
-    // Margin rule: non-last grid-containers use no-bottom-margin instead of section-bottom-margin
-    if (out.type === 'grid-container' && i < last) {
-      const idx = cls.indexOf('section-bottom-margin');
-      if (idx >= 0) cls[idx] = 'no-bottom-margin';
-      else if (!cls.includes('no-bottom-margin')) cls.push('no-bottom-margin');
+    // Margin rule:
+    //   • non-last grid-containers: section-bottom-margin → no-bottom-margin
+    //   • non-last sections (split section + grid): add no-bottom-margin
+    //     (when an AEM container is split into a leading section + trailing grid-container(s),
+    //     the section must carry no-bottom-margin so it seams into the grid-container band)
+    if (i < last) {
+      if (out.type === 'grid-container') {
+        const idx = cls.indexOf('section-bottom-margin');
+        if (idx >= 0) cls[idx] = 'no-bottom-margin';
+        else if (!cls.includes('no-bottom-margin')) cls.push('no-bottom-margin');
+      } else if (out.type === 'section') {
+        if (!cls.includes('no-bottom-margin')) cls.push('no-bottom-margin');
+      }
     }
 
     // Padding rule: keep section-padding, add directional overrides for seam sides only.
