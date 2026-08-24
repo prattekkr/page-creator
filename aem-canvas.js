@@ -899,17 +899,17 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   const outCls = [...nonBody, ...(topBody ? [topBody[0]] : [])];
   if (outCls.length) props.classes_commonCustomClass = outCls.join(',');
 
-  // Text-container: convert <b> / </b> tags to <strong> / </strong> for semantic HTML.
+  // Convert <b> / </b> tags to <strong> / </strong> for semantic HTML across ALL block types.
   // AEM richtext editors frequently emit <b> for bold text; EDS expects <strong>.
-  if (type === 'text-container') {
-    for (const k of Object.keys(props)) {
-      if (typeof props[k] === 'string' && /<b[\s>]/i.test(props[k])) {
-        props[k] = props[k].replace(/<b(\s[^>]*)?>/gi, '<strong$1>').replace(/<\/b>/gi, '</strong>');
+  // Applied universally here so every component (title, text, quote, teaser, accordion, etc.) is covered.
+  const convertBtoStrong = obj => {
+    for (const k of Object.keys(obj)) {
+      if (typeof obj[k] === 'string' && /<b[\s>]/i.test(obj[k])) {
+        obj[k] = obj[k].replace(/<b(\s[^>]*)?>/gi, '<strong$1>').replace(/<\/b>/gi, '</strong>');
       }
     }
-    // Also convert in child text nodes
-    for (const child of []) { /* children handled below via childProp */ }
-  }
+  };
+  convertBtoStrong(props);
 
   // Text alignment lives INLINE in the richtext (`text-align: left|center|right`); EDS lifts it to
   // an `align-*` class on the text-container. Use the dominant alignment across the block's markup.
@@ -942,6 +942,8 @@ function mapLeaf(node, inheritedBlockWidth = '') {
           ip[mapping.childPropRenames[bk]] = transformPath(cv, pathMap);
         }
       }
+      // Apply <b>→<strong> on child item props (e.g. accordion-item text)
+      convertBtoStrong(ip);
       items.push({ type: mapping.childType, props: ip, children: [] });
     }
     // NOTE: a dynamic linklist (listFrom=children) legitimately has no static items —
@@ -2869,6 +2871,24 @@ function aemToCanvas(jcrContent, opts) {
         }
       }
       stripHeroWidthClasses(blocks);
+      // Strip <sup>/<sub> tags from richtext in hero text-container blocks.
+      // AEM authors sometimes accidentally apply superscript to entire paragraphs
+      // in the hero overlay text; <sup> is not meaningful there and renders visually
+      // broken (text shifts up and shrinks). Only hero blocks are affected — all
+      // other sections preserve <sup>/<sub> for legitimate footnote/trademark uses.
+      for (const hblk of blocks) {
+        if (hblk.type !== 'text-container') continue;
+        const stripSupSub = str => typeof str === 'string'
+          ? str.replace(/<\/?su[pb](\s[^>]*)?>/gi, '') : str;
+        for (const k of Object.keys(hblk.props || {})) {
+          if (typeof hblk.props[k] === 'string') hblk.props[k] = stripSupSub(hblk.props[k]);
+        }
+        for (const child of hblk.children || []) {
+          for (const k of Object.keys(child.props || {})) {
+            if (typeof child.props[k] === 'string') child.props[k] = stripSupSub(child.props[k]);
+          }
+        }
+      }
       sections.push({ type: 'section', props: sectionProps(node, true, overlapNode), blocks });
       for (const group of bodyGroups) {
         // Hero-continuation body that carries a grid: emit per-grid / per-nested-container
