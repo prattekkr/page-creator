@@ -1746,11 +1746,9 @@ async function doBuildMigratePlan() {
     else {
       d.rows.forEach(r2 => {
         r2.selIdx = 0;
-        // Homepage canon is "country/lang" (2 segments) → target must be .../country/lang/index
-        const canonSlug = r2.canon && r2.canon.split('/').filter(Boolean).length <= 2
-          ? r2.canon + '/index'
-          : r2.canon;
-        r2.targetPath = ms.targetRoot ? `${ms.targetRoot}/${canonSlug}` : '';
+        // canon is already relative to country/lang (e.g. "index", "science", "who-we-are/mission")
+        // Homepage pages have canon="index" naturally — no /index suffix needed.
+        r2.targetPath = ms.targetRoot ? `${ms.targetRoot}/${r2.canon}` : '';
         r2.customPath = ''; r2.status = null; r2.filled = 0; r2.skipped = 0;
       });
       ms.plan = d;

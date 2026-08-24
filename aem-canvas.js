@@ -780,6 +780,22 @@ function mapLeaf(node, inheritedBlockWidth = '') {
       if (!dedupedClasses.some(c => QUOTE_VARIANTS.has(c))) dedupedClasses.unshift('quote-standard');
       props.classes_customDynamicClass = dedupedClasses.join(',');
     }
+    // Derive backgroundImageMimeType and backgroundImageAlt from backgroundImage when not already set.
+    // These are required by the EDS quote model for the background photo to display correctly.
+    if (props.backgroundImage && !props.backgroundImageMimeType) {
+      const bgExt = (String(props.backgroundImage).split('?')[0].split('.').pop() || '').toLowerCase();
+      props.backgroundImageMimeType = MIME[bgExt] || 'image/jpeg';
+    }
+    if (props.backgroundImage && !props.backgroundImageAlt) {
+      props.backgroundImageAlt = String(props.backgroundImage).split('/').pop()
+        .replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
+    }
+    // Derive attributionImageMimeType from attributionImage when not already set.
+    // The EDS quote model requires this companion field for the author photo to display.
+    if (props.attributionImage && !props.attributionImageMimeType) {
+      const attrExt = (String(props.attributionImage).split('?')[0].split('.').pop() || '').toLowerCase();
+      props.attributionImageMimeType = MIME[attrExt] || 'image/jpeg';
+    }
   }
   
   
@@ -1069,7 +1085,33 @@ function collectLeaves(node, out, inheritedBlockWidth = '', applyContainerWidth 
       }
       // Always flatten container contents regardless of width style — grids inside containers
       // are treated as section-level grids, not inner-grids.
+      const bgRef = String(child['@backgroundImageReference'] || '').trim();
+      const prevLen = out.length;
       collectLeaves(child, out, width, applyContainerWidth);
+      // If the flattened container had a backgroundImageReference, inject it as
+      // backgroundImage onto any quote blocks that were collected from inside it
+      // (the quote component uses backgroundImage for its photo overlay).
+      if (bgRef) {
+        const imgPath = transformPath(bgRef);
+        const bgExt = (bgRef.split('?')[0].split('.').pop() || '').toLowerCase();
+        const bgMime = MIME[bgExt] || 'image/jpeg';
+        const bgAlt = bgRef.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
+        // Derive section props from the bg-image container so the quote can be
+        // split into its own section with those styles as a post-processing step.
+        const quoteSectionProps = sectionProps(child);
+        // Also propagate bgImageProps from the container onto the section.
+        Object.assign(quoteSectionProps, bgImageProps(child));
+        for (let qi = prevLen; qi < out.length; qi++) {
+          if (out[qi] && out[qi].type === 'quote' && !out[qi].props.backgroundImage) {
+            out[qi].props.backgroundImage = imgPath;
+            out[qi].props.backgroundImageMimeType = bgMime;
+            if (!out[qi].props.backgroundImageAlt) out[qi].props.backgroundImageAlt = bgAlt;
+            // Stamp the derived section props so splitQuoteSections() can hoist
+            // this block into its own dedicated section.
+            Object.defineProperty(out[qi], '_quoteSection', { value: quoteSectionProps, enumerable: false, configurable: true });
+          }
+        }
+      }
       continue;
     }
     out.push(...mapLeafExpanded(child, width));
@@ -2736,7 +2778,7 @@ function aemToCanvas(jcrContent, opts) {
     // Emit remaining tops (after the white container, or after the controller if no white container)
     const skipUntilIdx = whiteContainerNode ? tops.indexOf(whiteContainerNode) : hpHeroIdx;
     for (let k = skipUntilIdx + 1; k < tops.length; k++) emitNode(tops[k], sections);
-    return appendRelatedContentFooterSeparator(stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections))))));
+    return appendRelatedContentFooterSeparator(stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(splitQuoteSections(sections)))))));
   }
   // Hero merge: EDS wraps the hero image + the following intro content into ONE section
   // (see sections/hero-*.json templates). AEM authors it as an empty bg-image container
@@ -2874,7 +2916,7 @@ function aemToCanvas(jcrContent, opts) {
     }
     emitNode(node, sections);
   }
-  return appendRelatedContentFooterSeparator(stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(sections))))));
+  return appendRelatedContentFooterSeparator(stripWidthClasses(applySectionBlockPadding(applyQuoteTransparencyRule(validateCanvasStyles(hoistTrailingSeparator(splitQuoteSections(sections)))))));
 }
 
 // Strip width-* / video-* classes from every block in the canvas EXCEPT custom-image and accordion.
@@ -3121,6 +3163,36 @@ function applyQuoteTransparencyRule(sections) {
     }
   }
   return sections;
+}
+
+// Post-processing: quote blocks stamped with _quoteSection (from collectLeaves when the quote's
+// parent container has backgroundImageReference) are hoisted into their own dedicated sections.
+// The new section uses the styles derived from that bg-image container. The quote block is
+// removed from its original position and inserted as the sole block of the new section,
+// placed immediately after the section that was hosting it.
+function splitQuoteSections(sections) {
+  const result = [];
+  for (const sec of sections || []) {
+    if (sec.type !== 'section' || !sec.blocks) { result.push(sec); continue; }
+    // Check if any block in this section has _quoteSection set
+    const hasQuoteSplit = sec.blocks.some(b => b._quoteSection);
+    if (!hasQuoteSplit) { result.push(sec); continue; }
+    // Split: keep non-_quoteSection blocks in the original section, hoist quotes
+    const remaining = [];
+    const quoteSections = [];
+    for (const blk of sec.blocks) {
+      if (blk._quoteSection) {
+        quoteSections.push({ type: 'section', props: { ...blk._quoteSection }, blocks: [blk] });
+      } else {
+        remaining.push(blk);
+      }
+    }
+    if (remaining.length) {
+      result.push({ ...sec, blocks: remaining });
+    }
+    result.push(...quoteSections);
+  }
+  return result;
 }
 
 // Post-processing: for every regular section that has blocks with an inherited container width
