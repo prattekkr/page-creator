@@ -2534,8 +2534,11 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
 
     let jcr = null;
     try {
-      const { compMap, modelFieldsMap, contentDefaults } = loadConfig();
-      jcr = buildJcr(meta, sections, compMap, modelFieldsMap, contentDefaults);
+      const { compMap, modelFieldsMap } = loadConfig();
+      // Auto-build: never apply content-defaults — migrated props come exclusively from
+      // AEM XML. Passing {} ensures no placeholder values (images, titles, links, etc.)
+      // are injected into blocks that have no corresponding AEM-authored data.
+      jcr = buildJcr(meta, sections, compMap, modelFieldsMap, {});
     } catch (e) { /* config missing — sections[] still returned */ }
 
     res.json({

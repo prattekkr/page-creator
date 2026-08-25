@@ -598,6 +598,27 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     const localePath = _ctxRel.split('/').slice(0, keep).join('/');
     if (localePath) props.homePagePath = transformPath('/content/abbvie-com2/' + localePath, pathMap);
   }
+  // Editorial-feed: value-transform listSource (AEM listFrom values → EDS listSource values)
+  // and categoryTags format (AEM `abbvie-com-2:categories/X` → EDS `corporate:abbvie-com-2/categories/X`).
+  if (type === 'editorial-feed') {
+    // listFrom → listSource value map
+    const LISTSOURCE_MAP_EF = { tags: 'category-tag', children: 'child-pages', query: 'query' };
+    if (props.listSource) props.listSource = LISTSOURCE_MAP_EF[props.listSource] || props.listSource;
+    // categoryTags format: AEM uses `abbvie-com-2:categories/X` (namespace:path form)
+    // EDS expects `corporate:abbvie-com-2/categories/X` (corporate:namespace/path form)
+    if (props.categoryTags) {
+      props.categoryTags = String(props.categoryTags)
+        .split(',').map(tag => {
+          // Match: abbvie-com-2:categories/X or abbvie-com-2:categories/X/Y
+          const m = tag.trim().match(/^(abbvie-com-2):(.+)$/);
+          return m ? `corporate:${m[1]}/${m[2]}` : tag.trim();
+        }).join(',');
+    }
+    // tagsSearchRoot was renamed to parentPage by propRenames; transformPath already converted
+    // the /content/abbvie-com2/... path to /content/abbvie-nextgen-eds/corporate/abbvie-com/...
+    // No further action needed for parentPage.
+  }
+
   // Video: overlay the content ON the poster (content-default is "bottom" = below the block),
   // and set the poster mime type (poster URL is mapped fileReference→placeholderImage). Applies to
   // both youtube (`video`) and `brightcove-video` — EDS uses "none" for ~80% of each.
@@ -1750,7 +1771,26 @@ function isUnwrapGrid(grid) {
   // Card unwrap requires BOTH the all-4-columns shape AND an explicit card-band
   // template style ID. A plain 3×4 content grid must NOT be unwrapped.
   const card   = rowCount === 1 && g.allFour && gridHasCards(grid) && gridHasCardTemplate(grid);
-  const band   = maxW >= 10 && g.cols.every(w => w === maxW || w <= 2) && !g.cols.includes(1);
+  // Band unwrap: one dominant column (≥10) with only ≤2-wide gutters AND those narrow columns
+  // are actually empty (no authored content in their parsys cells). A 10/2 split where the
+  // col-2 parsys has real content (eyebrow + story-card etc.) must NOT be unwrapped — it is
+  // a legitimate two-column layout and must emit as a grid-container with grid-sections.
+  const narrowColsEmpty = g.cols.every((w, ci) => {
+    if (w === maxW) return true; // dominant column — always OK
+    if (w > 2) return false;    // wider than gutter — not a gutter
+    // Check if the parsys for this column (1-indexed) has any children
+    const rowCount2 = parseInt(grid['@rowCount'] || '1') || 1;
+    for (let r = 1; r <= rowCount2; r++) {
+      const par = grid[`par_${r}${ci + 1}`];
+      if (par && typeof par === 'object') {
+        for (const [pk, pv] of Object.entries(par)) {
+          if (!pk.startsWith('@') && pv && typeof pv === 'object') return false; // has content
+        }
+      }
+    }
+    return true; // empty
+  });
+  const band   = maxW >= 10 && g.cols.every(w => w === maxW || w <= 2) && !g.cols.includes(1) && narrowColsEmpty;
   const spacer = g.cols.length > 0 && g.cols.every(w => w <= 1);
   if (_R === 'none') return false;
   if (_R === 'filler') return g.isFiller;             // aggressive (drops 1,11) — measurement only
@@ -2239,6 +2279,25 @@ function emitNode(node, sections) {
               // gather grids inside nested container
               const nestedGrids = directGrids(gc);
               if (nestedGrids.length) {
+                // Collect any direct leaf components (title, text, etc.) that sit alongside
+                // the grid inside this nested container. These siblings must be emitted as
+                // their own section BEFORE the grid-container so document order is preserved.
+                // Without this, leaves like "Raum für Wachstum und Entfaltung" + body text
+                // are silently dropped when a nested container holds both leaves and a grid.
+                const nestedLeafBlocks = [];
+                (function collectNestedLeaves(n) {
+                  for (const [, child] of childEntries(n)) {
+                    const crtL = RT(child);
+                    if (!crtL || isLayoutWrapper(crtL)) { collectNestedLeaves(child); continue; }
+                    if (isGrid(crtL) || isXF(crtL)) continue;
+                    if (isContainer(crtL)) continue; // nested containers are separate scopes
+                    nestedLeafBlocks.push(...mapLeafExpanded(child));
+                  }
+                })(gc);
+                if (nestedLeafBlocks.length) {
+                  const leafSecCls = mergeDefaults('section', combinedCls.filter(c => !NOOP_CLASS.has(c) && c !== 'no-padding' && c !== 'container-full-width'));
+                  sections.push({ type: 'section', props: { style_customDynamicClass: leafSecCls.join(',') }, blocks: nestedLeafBlocks });
+                }
                 for (const grid of nestedGrids) {
               const gcBlock = { type: 'grid-container', props: gridContainerProps([node, gc], grid), blocks: [] };
               expandGrid(grid, gcBlock.blocks, [node, gc]);
@@ -2282,6 +2341,23 @@ function emitNode(node, sections) {
           const hasBg = !!(nestedBg || outerBg);
           const nestedGrids = directGrids(child);
           if (nestedGrids.length) {
+            // Collect any direct leaf components (title, text, etc.) that sit alongside
+            // the grid inside this nested container and emit them as their own section
+            // BEFORE the grid-container so document order is preserved.
+            const directNestedLeafBlocks = [];
+            (function collectDirectNestedLeaves(n) {
+              for (const [, lchild] of childEntries(n)) {
+                const lrt = RT(lchild);
+                if (!lrt || isLayoutWrapper(lrt)) { collectDirectNestedLeaves(lchild); continue; }
+                if (isGrid(lrt) || isXF(lrt)) continue;
+                if (isContainer(lrt)) continue;
+                directNestedLeafBlocks.push(...mapLeafExpanded(lchild));
+              }
+            })(child);
+            if (directNestedLeafBlocks.length) {
+              const leafSecCls = mergeDefaults('section', combinedCls.filter(c => !NOOP_CLASS.has(c) && c !== 'no-padding' && c !== 'container-full-width'));
+              sections.push({ type: 'section', props: { style_customDynamicClass: leafSecCls.join(',') }, blocks: directNestedLeafBlocks });
+            }
             for (const grid of nestedGrids) {
               const gcBlock = { type: 'grid-container', props: gridContainerProps([node, child], grid), blocks: [] };
               expandGrid(grid, gcBlock.blocks, [node, child]);
@@ -2845,7 +2921,25 @@ function aemToCanvas(jcrContent, opts) {
             j++;
             break;
           }
-          collectLeaves(nx, blocks, '', false); j++;
+          // When the overlap container has no split (no breadcrumb+H1 pair), collect its
+          // leaves but split off any "body-only" blocks (editorial-feed, video, accordion,
+          // quote) into their own sections rather than absorbing them into the hero.
+          // These blocks are layout-breaking inside the hero overlay and must land after it.
+          const BODY_ONLY_TYPES = new Set(['editorial-feed', 'video', 'brightcove-video', 'accordion', 'quote', 'carousel', 'newsfeed', 'linklist']);
+          const heroLeaves = [], bodyLeaves = [];
+          const tempBuf = [];
+          collectLeaves(nx, tempBuf, '', false);
+          let seenBodyOnly = false;
+          for (const blk of tempBuf) {
+            if (BODY_ONLY_TYPES.has(blk.type)) seenBodyOnly = true;
+            if (seenBodyOnly) bodyLeaves.push(blk);
+            else heroLeaves.push(blk);
+          }
+          blocks.push(...heroLeaves);
+          if (bodyLeaves.length) {
+            bodyGroups.push({ wrapper: nx, nodes: bodyLeaves, split: false, _flatBlocks: bodyLeaves });
+          }
+          j++;
         }
         else break;
       }
@@ -2897,6 +2991,17 @@ function aemToCanvas(jcrContent, opts) {
         // (not inner-grids). group.split is true for both standard and mixed-header cases;
         // the mixedSplit flag distinguishes which grid emission path to use.
         if (group.split) { emitHeroContinuationSections(group.nodes, group.wrapper, sections, !!group.mixedSplit); continue; }
+        // _flatBlocks: the group nodes are already-mapped EDS blocks (body-only blocks split
+        // off from the hero absorption fallback). Emit them directly as their own section
+        // with the overlap container's styles, rather than trying to re-walk them as AEM nodes.
+        if (group._flatBlocks) {
+          const bp = sectionProps(group.wrapper);
+          const bClasses = splitCls([bp.style_customDynamicClass]).filter(c => !EXCL_RADIUS.has(c));
+          bp.style_customDynamicClass = bClasses.join(',');
+          delete bp.style_borderRadius;
+          sections.push({ type: 'section', props: bp, blocks: group._flatBlocks });
+          continue;
+        }
         const bodyBlocks = [];
         for (const bodyNode of group.nodes) {
           const brt = RT(bodyNode);
