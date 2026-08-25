@@ -619,6 +619,41 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     // No further action needed for parentPage.
   }
 
+  // StoryInfo: self-referential story-card that displays metadata about the current page.
+  // The AEM component computes categoryPath at runtime as:
+  //   {currentPage.parent.path}/{categoryTagName}.html
+  // We replicate this by:
+  //   1. Extracting the abbvie-com-2:categories/* tag from the current page's cq:tags
+  //   2. Computing: {parent-of-_ctxRel}/{categoryName}
+  //   3. Applying transformPath() to convert content paths to EDS paths
+  // Fixed prop: storyCardVariant = 'storyCardInfo'
+  if (rt === 'abbvie-com2/components/storyinfo/v2/storyinfo') {
+    // Always set the storyCardInfo variant
+    props.storyCardVariant = 'storyCardInfo';
+
+    // Derive the category page path from current page's tags
+    // jcrContent attributes are prefixed with '@' by fast-xml-parser
+    const rawTags = _ctxMeta && (_ctxMeta['@cq:tags'] || _ctxMeta['cq:tags']);
+    const pageTags = rawTags
+      ? (Array.isArray(rawTags) ? rawTags : String(rawTags).split(','))
+      : [];
+    const categoryTag = pageTags
+      .map(t => String(t).trim())
+      .find(t => t.startsWith('abbvie-com-2:categories/'));
+
+    if (categoryTag) {
+      // Extract category name: "abbvie-com-2:categories/company-stories" → "company-stories"
+      const categoryName = categoryTag.replace('abbvie-com-2:categories/', '').split('/')[0];
+      // Parent path: strip last segment from current page rel path
+      const pathParts = (_ctxRel || '').replace(/^\/+|\/+$/g, '').split('/');
+      const parentRelPath = pathParts.slice(0, -1).join('/');
+      // Build the content path (parentRelPath is relative like "nl/nl/nieuws" —
+      // prepend /content/abbvie-com2/ so transformPath() can map it correctly)
+      const rawPath = '/content/abbvie-com2/' + parentRelPath + '/' + categoryName;
+      props.page = transformPath(rawPath);
+    }
+  }
+
   // Video: overlay the content ON the poster (content-default is "bottom" = below the block),
   // and set the poster mime type (poster URL is mapped fileReference→placeholderImage). Applies to
   // both youtube (`video`) and `brightcove-video` — EDS uses "none" for ~80% of each.
@@ -2621,6 +2656,8 @@ function emitNode(node, sections) {
 
 // current page's content-xml rel path (country/lang/…), used for breadcrumb homePagePath
 let _ctxRel = null;
+// current page's jcr:content props (page-level metadata, e.g. cq:tags), used for storyinfo categoryPath
+let _ctxMeta = null;
 
 // A common AEM page shell is an image-only hero followed by an overlapping
 // container. Its first nested container holds the breadcrumb + H1, while later
@@ -2821,6 +2858,7 @@ function validateCanvasStyles(sections) {
 // find the content root (jcr:content) and walk its top-level content nodes
 function aemToCanvas(jcrContent, opts) {
   _ctxRel = (opts && opts.rel) ? String(opts.rel).replace(/^\/+|\/+$/g, '') : null;
+  _ctxMeta = jcrContent || null;
   const sections = [];
   // gather top-level content nodes: descend through layout wrappers, skip XF chrome
   const tops = [];
