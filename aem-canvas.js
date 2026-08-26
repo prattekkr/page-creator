@@ -619,6 +619,13 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     // No further action needed for parentPage.
   }
 
+  // cardpagestory: a manually authored story card pointing at a specific page.
+  // The AEM component has no variant prop — EDS model default is 'cardInfo'.
+  // Set it explicitly so the JCR output is unambiguous and does not rely on model defaults.
+  if (rt === 'abbvie-com2/components/cardpagestory/v1/cardpagestory') {
+    props.storyCardVariant = 'cardInfo';
+  }
+
   // StoryInfo: self-referential story-card that displays metadata about the current page.
   // The AEM component computes categoryPath at runtime as:
   //   {currentPage.parent.path}/{categoryTagName}.html
@@ -631,11 +638,14 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     // Always set the storyCardInfo variant
     props.storyCardVariant = 'storyCardInfo';
 
-    // Derive the category page path from current page's tags
-    // jcrContent attributes are prefixed with '@' by fast-xml-parser
+    // Derive the category page path from current page's tags.
+    // jcrContent attributes are prefixed with '@' by fast-xml-parser.
+    // AEM stores multi-value props as "[val1,val2]" — strip the JCR array brackets before splitting.
     const rawTags = _ctxMeta && (_ctxMeta['@cq:tags'] || _ctxMeta['cq:tags']);
     const pageTags = rawTags
-      ? (Array.isArray(rawTags) ? rawTags : String(rawTags).split(','))
+      ? (Array.isArray(rawTags)
+          ? rawTags
+          : String(rawTags).replace(/^\[|\]$/g, '').split(','))
       : [];
     const categoryTag = pageTags
       .map(t => String(t).trim())
@@ -1746,6 +1756,21 @@ function gridHasCards(grid) {
   return found;
 }
 
+// Post-processing: story-card blocks inside a narrow sidebar grid-section (grid-cols ≤ 3)
+// that have the default 'cardInfo' variant should use 'sidePanel' instead.
+// A narrow column (2 or 3 grid units out of 12) is visually a sidebar — the EDS sidePanel
+// variant renders the card in a compact sidebar layout, not the full card-info layout.
+function applySidePanelCardProps(blocks) {
+  for (const block of blocks || []) {
+    if (block.type !== 'story-card') continue;
+    const props = block.props || (block.props = {});
+    // Only upgrade cardInfo → sidePanel (never touch storyCardInfo, relatedContent, leaderInfo)
+    if (!props.storyCardVariant || props.storyCardVariant === 'cardInfo') {
+      props.storyCardVariant = 'sidePanel';
+    }
+  }
+}
+
 function applyRelatedContentCardProps(blocks) {
   for (const block of blocks || []) {
     if (block.type !== 'story-card') continue;
@@ -1866,6 +1891,9 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
       Object.defineProperty(gs, '_sourceScopes', { value: sourceScopes, enumerable: false });
       if (par && typeof par === 'object') collectCellLeaves(par, gs.children, 0, containerWidth);
       if (relatedContent) applyRelatedContentCardProps(gs.children);
+      // sidePanel variant: story-cards in narrow sidebar columns (grid-cols ≤ 3)
+      // use 'sidePanel' instead of the default 'cardInfo'.
+      if (!relatedContent && parseInt(col.width || '0') <= 3) applySidePanelCardProps(gs.children);
       // Strip width-* / video-* classes from all grid-section blocks EXCEPT custom-image and accordion.
       // Width classes on image and accordion are meaningful (image size variants, accordion width).
       // On title, text, cta, eyebrow, teaser, separator etc. the width class is redundant —

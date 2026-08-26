@@ -60,13 +60,29 @@
     "eds": "cardTitle"
   },
   {
+    "aem": "readWatchTimeSel",
+    "eds": "readWatchTime"
+  },
+  {
+    "aem": "readTime",
+    "eds": "storyReadTime"
+  },
+  {
+    "aem": "watchTime",
+    "eds": "storyWatchTime"
+  },
+  {
     "aem": "warnOnDeparturePopUpXfPath",
     "eds": "warndeparturemodalpath",
     "transform": "xf-warn-departure"
   },
   {
+    "aem": "cq:template",
     "eds": "pageVariant",
-    "value": "otherPage",
-    "valueType": "String"
+    "transform": "aem-template-to-variant",
+    "templateVariantMap": {
+      "story-landing-page": "storyPage"
+    },
+    "defaultValue": "otherPage"
   }
 ]

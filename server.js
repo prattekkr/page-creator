@@ -210,6 +210,16 @@ function extractPageMeta(jcrContent, mapping, pm) {
         val = tags.join(',');
       }
       meta[rule.eds] = val;
+    } else if (rule.transform === 'aem-template-to-variant') {
+      // Derive pageVariant from the AEM cq:template path.
+      // The last segment of the template path (e.g. "story-landing-page") is looked up
+      // in rule.templateVariantMap. Falls back to rule.defaultValue when no match.
+      // e.g. /conf/abbvie-com2/settings/wcm/templates/story-landing-page → "storyPage"
+      //      any other template path → "otherPage"
+      const raw = aemAttrs[rule.aem];
+      const templateName = raw ? raw.split('/').filter(Boolean).pop() : '';
+      const variantMap = rule.templateVariantMap || {};
+      meta[rule.eds] = variantMap[templateName] || rule.defaultValue || 'otherPage';
     } else if (rule.eds && rule.value !== undefined) {
       // Static value — always inject (e.g. pageVariant: "otherPage")
       meta[rule.eds] = String(rule.value);
