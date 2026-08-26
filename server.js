@@ -208,19 +208,26 @@ function extractPageMeta(jcrContent, mapping, pm) {
           });
         if (!tags.length) continue;
         val = tags.join(',');
+      } else if (rule.transform === 'aem-template-to-variant') {
+        // Derive pageVariant from the AEM cq:template path.
+        // Extracts last segment of the template path and looks it up in templateVariantMap.
+        // e.g. /conf/abbvie-com2/settings/wcm/templates/story-landing-page → "storyPage"
+        //      any other template path → rule.defaultValue ("otherPage")
+        const templateName = raw.split('/').filter(Boolean).pop() || '';
+        const variantMap = rule.templateVariantMap || {};
+        meta[rule.eds] = variantMap[templateName] || rule.defaultValue || 'otherPage';
+        continue;  // skip the raw meta[rule.eds] = val write below
       }
       meta[rule.eds] = val;
-    } else if (rule.transform === 'aem-template-to-variant') {
-      // Derive pageVariant from the AEM cq:template path.
-      // The last segment of the template path (e.g. "story-landing-page") is looked up
-      // in rule.templateVariantMap. Falls back to rule.defaultValue when no match.
-      // e.g. /conf/abbvie-com2/settings/wcm/templates/story-landing-page → "storyPage"
-      //      any other template path → "otherPage"
-      const raw = aemAttrs[rule.aem];
-      const templateName = raw ? raw.split('/').filter(Boolean).pop() : '';
-      const variantMap = rule.templateVariantMap || {};
-      meta[rule.eds] = variantMap[templateName] || rule.defaultValue || 'otherPage';
-    } else if (rule.eds && rule.value !== undefined) {
+      } else if (rule.transform === 'aem-template-to-variant') {
+        // Derive pageVariant from the AEM cq:template path.
+        // Handled inside the if(rule.aem) block below — this branch is a safety fallback
+        // for rules that omit rule.aem (should not occur in practice).
+        const rawFb = aemAttrs[rule.aem];
+        const tplFb = rawFb ? rawFb.split('/').filter(Boolean).pop() : '';
+        const vmFb = rule.templateVariantMap || {};
+        meta[rule.eds] = vmFb[tplFb] || rule.defaultValue || 'otherPage';
+      } else if (rule.eds && rule.value !== undefined) {
       // Static value — always inject (e.g. pageVariant: "otherPage")
       meta[rule.eds] = String(rule.value);
     }
