@@ -1294,6 +1294,87 @@ app.post('/api/bulk-parse-folder', (req, res) => {
   res.json({ ok: true, folder: rel, count: results.length, results });
 });
 
+// ── DAM path → DM Open API URL resolver (for assets missing from assetMap) ────
+// Derives delivery host from author host:
+//   https://author-p157365-e1665873.adobeaemcloud.com → delivery-p157365-e1665873.adobeaemcloud.com
+function authorToDeliveryHost(aemHost) {
+  // Extract from existing DM URLs in assetMap first (most reliable)
+  const assetMap = pathMap.assetMap || {};
+  for (const v of Object.values(assetMap)) {
+    if (v && v.startsWith('https://delivery-')) {
+      try { return new URL(v).origin; } catch (_) {}
+    }
+  }
+  // Fallback: transform author host string
+  const m = aemHost.replace(/\/+$/, '').match(/^https?:\/\/author-(.+)$/i);
+  return m ? `https://delivery-${m[1]}` : null;
+}
+
+// Fetch jcr:uuid for a DAM path from AEM and construct DM Open API URL.
+// Returns null if the asset is not found or has no uuid.
+async function resolveDamAsset(damPath, aemHost, auth) {
+  const host = aemHost.replace(/\/+$/, '');
+  const deliveryOrigin = authorToDeliveryHost(host);
+  if (!deliveryOrigin) return null;
+  try {
+    const url = `${host}${damPath}.5.json`;
+    const r = await fetch(url, {
+      headers: { Authorization: auth },
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!r.ok) return null;
+    const json = await r.json();
+    const uuid = json['jcr:uuid'] || json['jcr:content']?.['jcr:uuid'];
+    if (!uuid) return null;
+    const filename = damPath.split('/').pop();
+    return `${deliveryOrigin}/adobe/assets/urn:aaid:aem:${uuid}/as/${filename}`;
+  } catch (_) { return null; }
+}
+
+// ── POST /api/path-map/resolve-dam ───────────────────────────────────────────
+// Resolves a batch of DAM paths missing from assetMap by fetching jcr:uuid from
+// AEM and constructing DM Open API URLs. Saves results back to path-map.json.
+// Body: { aemHost, username, password, paths: ['/content/dam/...', …] }
+// Returns: { resolved: N, failed: N, results: [{path, dmUrl, ok}] }
+app.post('/api/path-map/resolve-dam', express.json({ limit: '1mb' }), async (req, res) => {
+  const { aemHost, username, password, paths } = req.body || {};
+  if (!aemHost || !username || !password || !Array.isArray(paths) || !paths.length)
+    return res.status(400).json({ error: 'aemHost, username, password and paths[] required' });
+  const auth = `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`;
+  const results = [];
+  const existing = (pathMap.assetMap && !Array.isArray(pathMap.assetMap)) ? pathMap.assetMap : {};
+  let resolved = 0, failed = 0;
+  for (const rawPath of paths) {
+    // Apply DAM prefix rule first (same as transformPath)
+    let damPath = rawPath;
+    for (const rule of (pathMap.damPrefixRules || [])) {
+      if (rule.aemPrefix && rawPath.startsWith(rule.aemPrefix)) {
+        damPath = (rule.edsPrefix || '') + rawPath.slice(rule.aemPrefix.length);
+        break;
+      }
+    }
+    // Skip content fragments
+    if (damPath.includes('content-fragments')) { results.push({ path: damPath, ok: false, reason: 'content-fragment' }); failed++; continue; }
+    // Skip if already mapped with a DM URL
+    if (existing[damPath] && existing[damPath].startsWith('https://')) {
+      results.push({ path: damPath, dmUrl: existing[damPath], ok: true, reason: 'already-mapped' }); resolved++; continue;
+    }
+    const dmUrl = await resolveDamAsset(damPath, aemHost, auth);
+    if (dmUrl) {
+      existing[damPath] = dmUrl;
+      results.push({ path: damPath, dmUrl, ok: true });
+      resolved++;
+    } else {
+      existing[damPath] = existing[damPath] || '';  // keep empty entry so transformPath falls back gracefully
+      results.push({ path: damPath, ok: false, reason: 'uuid-not-found' });
+      failed++;
+    }
+  }
+  pathMap.assetMap = existing;
+  try { fs.writeFileSync(path.join(__dirname, 'path-map.json'), JSON.stringify(pathMap, null, 2), 'utf8'); } catch (_) {}
+  res.json({ ok: true, resolved, failed, total: paths.length, results });
+});
+
 // ── Path map endpoints ────────────────────────────────────────────────────────
 app.get('/api/path-map', (_req, res) => res.json(pathMap));
 
@@ -2520,11 +2601,87 @@ app.post('/api/aem-to-canvas', express.json({ limit: '4mb' }), async (req, res) 
     let damStats = {};
     if (aemHostAuto && usernameAuto && passwordAuto) {
       const authAuto = 'Basic ' + Buffer.from(`${usernameAuto}:${passwordAuto}`).toString('base64');
+
+      // ── Auto-resolve DAM images missing from assetMap ──────────────────────
+      // Collect all DAM paths used as image props that still lack a DM Open API URL.
+      // For each, fetch jcr:uuid from AEM and construct the delivery URL on the fly.
+      // The resolved URLs are saved to path-map.json so subsequent pages are instant.
+      const IMAGE_PROP_NAMES = new Set(['image','fileReference','backgroundImage','posterImage','placeholderImage','attributionImage','cardImage','ogimage','thumbnail']);
+      const missingDamPaths = new Set();
+      const assetMap = pathMap.assetMap || {};
+      const collectMissing = (b) => {
+        for (const [k, v] of Object.entries(b.props || {})) {
+          if (!IMAGE_PROP_NAMES.has(k)) continue;
+          if (typeof v !== 'string' || !v.startsWith('/content/dam/')) continue;
+          if (v.includes('content-fragments')) continue;
+          if (assetMap[v] && assetMap[v].startsWith('https://')) continue;  // already mapped
+          missingDamPaths.add(v);
+        }
+        for (const c of (b.children || [])) collectMissing(c);
+        for (const c of (b.blocks   || [])) collectMissing(c);
+      };
+      for (const s of sections) {
+        collectMissing(s);
+        for (const b of (s.blocks || [])) collectMissing(b);
+      }
+      // Also collect missing DAM paths from page meta (cardImage, ogimage, thumbnail, etc.)
+      const META_IMAGE_KEYS = new Set(['cardImage','ogimage','thumbnail','image','fileReference','backgroundImage','posterImage']);
+      for (const [k, v] of Object.entries(meta)) {
+        if (!META_IMAGE_KEYS.has(k)) continue;
+        if (typeof v !== 'string' || !v.startsWith('/content/dam/')) continue;
+        if (v.includes('content-fragments')) continue;
+        if (assetMap[v] && assetMap[v].startsWith('https://')) continue;
+        missingDamPaths.add(v);
+      }
+
+      if (missingDamPaths.size > 0) {
+        console.log(`[aem-to-canvas] resolving ${missingDamPaths.size} DAM paths missing from assetMap`);
+        let resolvedCount = 0;
+        for (const damPath of missingDamPaths) {
+          const dmUrl = await resolveDamAsset(damPath, aemHostAuto, authAuto);
+          if (dmUrl) {
+            assetMap[damPath] = dmUrl;
+            resolvedCount++;
+          }
+        }
+        if (resolvedCount > 0) {
+          pathMap.assetMap = assetMap;
+          try { fs.writeFileSync(path.join(__dirname, 'path-map.json'), JSON.stringify(pathMap, null, 2), 'utf8'); } catch (_) {}
+          console.log(`[aem-to-canvas] resolved ${resolvedCount}/${missingDamPaths.size} missing DAM assets — rewriting props and meta`);
+          // Rewrite block props in-place now that assetMap is updated
+          const rewriteAssets = (b) => {
+            for (const [k, v] of Object.entries(b.props || {})) {
+              if (!IMAGE_PROP_NAMES.has(k)) continue;
+              if (typeof v !== 'string' || !v.startsWith('/content/dam/')) continue;
+              const dm = assetMap[v];
+              if (dm && dm.startsWith('https://')) b.props[k] = dm;
+            }
+            for (const c of (b.children || [])) rewriteAssets(c);
+            for (const c of (b.blocks   || [])) rewriteAssets(c);
+          };
+          for (const s of sections) {
+            rewriteAssets(s);
+            for (const b of (s.blocks || [])) rewriteAssets(b);
+          }
+          // Also rewrite page meta image props (cardImage, ogimage, etc.)
+          for (const k of Object.keys(meta)) {
+            const v = meta[k];
+            if (typeof v !== 'string' || !v.startsWith('/content/dam/')) continue;
+            const dm = assetMap[v];
+            if (dm && dm.startsWith('https://')) {
+              console.log(`[aem-to-canvas] rewrote meta.${k}: ${v} → ${dm}`);
+              meta[k] = dm;
+            }
+          }
+          damStats.damAssetsResolved = resolvedCount;
+        }
+      }
+
       try {
-        damStats = await backfillCaptionsFromDam(sections, aemHostAuto, authAuto);
+        damStats = { ...damStats, ...await backfillCaptionsFromDam(sections, aemHostAuto, authAuto) };
         console.log('[aem-to-canvas] DAM caption backfill:', JSON.stringify(damStats));
       } catch (e) {
-        damStats = { captionFromDam: 0, damError: e.message };
+        damStats = { ...damStats, captionFromDam: 0, damError: e.message };
         console.warn('[aem-to-canvas] DAM caption backfill failed:', e.message);
       }
     }
