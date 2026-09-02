@@ -2632,7 +2632,22 @@ function fillSectionsFromPool(sections, xmlPool) {
         if (idx < arr.length) src = arr[idx];
       }
       if (src) {
+        // Preserve EDS styling props from the matched page (e.g. ch/de classes) —
+        // only content props (text, images, links) come from the AEM source XML.
+        // Style class props are already correct on the imported EDS canvas and
+        // must not be overwritten by whatever styleIds the source locale had.
+        const STYLE_PROPS = new Set(['classes_customDynamicClass', 'classes_commonCustomClass']);
+        const savedStyles = {};
+        for (const sp of STYLE_PROPS) {
+          if (blk.props?.[sp] !== undefined) savedStyles[sp] = blk.props[sp];
+        }
         Object.assign(blk.props, { ...src.props });
+        // Restore preserved style classes
+        for (const [sp, val] of Object.entries(savedStyles)) blk.props[sp] = val;
+        // Also strip any style classes the source XML may have injected
+        for (const sp of STYLE_PROPS) {
+          if (!(sp in savedStyles) && sp in blk.props) delete blk.props[sp];
+        }
         if (src.children.length > 0)
           blk.children = src.children.map(ch => ({ ...ch, props: { ...ch.props }, id: uid(), children: [] }));
         filled++;

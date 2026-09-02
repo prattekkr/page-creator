@@ -2346,11 +2346,11 @@ function buildSimIndex(force = false) {
       else if (e.name === '.content.xml') {
         const rel = path.relative(SIM_ROOT, path.dirname(f)).split(path.sep).join('/');
         const seg = rel.split('/');
-        if (seg.length < 3) continue;                      // need country/lang/rest
+        if (seg.length < 2) continue;                      // need at least country/lang
         let xml = ''; try { xml = fs.readFileSync(f, 'utf8'); } catch (_) { continue; }
         const sig = pageStructureSig(xml);
         if (sig.length < 3) continue;
-        pages.push({ rel, region: seg.slice(0, 2).join('/'), canon: seg.slice(2).join('/'), sig });
+        pages.push({ rel, region: seg.slice(0, 2).join('/'), canon: seg.slice(2).join('/') || 'index', sig });
       }
     }
   })(SIM_ROOT);

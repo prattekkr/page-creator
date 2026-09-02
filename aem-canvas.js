@@ -1704,6 +1704,26 @@ function collectCellLeaves(node, out, innerDepth = 0, inheritedBlockWidth = '') 
     if (isXF(rt)) continue;
     if (isGrid(rt)) { emitInnerGrid(child, out, innerDepth); continue; }
     if (isContainer(rt)) {
+      // ── NEW RULE: bg-color container (no grid child) → inner-grid wrapper ──────────
+      // An AEM container inside a grid-section cell that has a backgroundColor but
+      // contains no sub-grid (just plain content blocks) should be emitted as an
+      // inner-grid block carrying the bg-color class. This preserves the visual
+      // background band without needing a grid-column layout.
+      // EDS classes: bg-{hex}, regular-padding, cols-12, section-bottom-margin
+      const cellBg = bgClass(child);
+      const hasGridChild = (() => { for (const [, gc] of childEntries(child)) { if (isGrid(RT(gc))) return true; } return false; })();
+      if (cellBg && !hasGridChild) {
+        const igClasses = [cellBg, 'regular-padding', 'cols-12', 'section-bottom-margin'].join(',');
+        const igChildren = [];
+        collectCellLeaves(child, igChildren, innerDepth + 1, width);
+        if (igChildren.length) {
+          out.push({ type: 'inner-grid', props: { classes_customDynamicClass: igClasses }, children: igChildren });
+        } else {
+          // No mappable children — fall through to normal recursion
+          collectCellLeaves(child, out, innerDepth, width);
+        }
+        continue;
+      }
       // A nested container with a width style becomes a single-column inner-grid ONLY
       // when the inner grid is genuinely multi-column (cols != cols-12). A container-*
       // width that wraps a single-column (cols-12) grid is purely a width-constraint —

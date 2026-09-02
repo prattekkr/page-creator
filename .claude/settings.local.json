@@ -46,7 +46,12 @@
       "Bash(curl -s -X POST http://localhost:3200/api/health -H \"Content-Type: application/json\" -d '{\"aemHost\":\"bad\",\"username\":\"u\",\"password\":\"p\"}')",
       "Bash(curl -s -o /dev/null -w \"server HTTP %{http_code}\\\\n\" http://localhost:3200/)",
       "Bash(curl -s -X POST http://localhost:4000/api/a11y-backfill -H \"Content-Type: application/json\" -d '{\"sections\":[{\"type\":\"section\",\"props\":{},\"blocks\":[{\"type\":\"separator\",\"props\":{\"classes_customDynamicClass\":\"separator-height-8,separator-divider\"}},{\"type\":\"eyebrow-text\",\"props\":{\"classes_customDynamicClass\":\"regular-font,mini,dark-theme\"},\"children\":[]}]}]}')",
-      "Bash(node -e 'let d=\"\";process.stdin.on\\(\"data\",c=>d+=c\\).on\\(\"end\",\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\(\"ok:\",j.ok,\"stats:\",JSON.stringify\\(j.stats\\),\"a11y:\",JSON.stringify\\(j.a11y\\)\\);const b=j.sections[0].blocks;console.log\\(\"separator →\",JSON.stringify\\(b[0].props\\)\\);console.log\\(\"eyebrow →\",JSON.stringify\\(b[1].props.classes_customDynamicClass\\)\\);}\\)')"
+      "Bash(node -e 'let d=\"\";process.stdin.on\\(\"data\",c=>d+=c\\).on\\(\"end\",\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\(\"ok:\",j.ok,\"stats:\",JSON.stringify\\(j.stats\\),\"a11y:\",JSON.stringify\\(j.a11y\\)\\);const b=j.sections[0].blocks;console.log\\(\"separator →\",JSON.stringify\\(b[0].props\\)\\);console.log\\(\"eyebrow →\",JSON.stringify\\(b[1].props.classes_customDynamicClass\\)\\);}\\)')",
+      "Bash(python -c \"import pypdf; print\\('ok'\\)\")",
+      "Bash(python -c \"import pdfplumber; print\\('pdfplumber ok'\\)\")",
+      "Bash(python -c \"import fitz; print\\('fitz ok'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -c ' *)"
     ]
   }
 }
