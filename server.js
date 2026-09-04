@@ -218,6 +218,8 @@ function extractPageMeta(jcrContent, mapping, pm) {
         meta[rule.eds] = variantMap[templateName] || rule.defaultValue || 'otherPage';
         continue;  // skip the raw meta[rule.eds] = val write below
       }
+      // Apply valueMap if present: translate AEM picklist value to EDS value
+      if (rule.valueMap && rule.valueMap[val] !== undefined) val = rule.valueMap[val];
       meta[rule.eds] = val;
       } else if (rule.transform === 'aem-template-to-variant') {
         // Derive pageVariant from the AEM cq:template path.

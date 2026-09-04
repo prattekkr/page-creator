@@ -651,17 +651,19 @@ function mapLeaf(node, inheritedBlockWidth = '') {
       .map(t => String(t).trim())
       .find(t => t.startsWith('abbvie-com-2:categories/'));
 
-    if (categoryTag) {
-      // Extract category name: "abbvie-com-2:categories/company-stories" → "company-stories"
-      const categoryName = categoryTag.replace('abbvie-com-2:categories/', '').split('/')[0];
-      // Parent path: strip last segment from current page rel path
-      const pathParts = (_ctxRel || '').replace(/^\/+|\/+$/g, '').split('/');
-      const parentRelPath = pathParts.slice(0, -1).join('/');
-      // Build the content path (parentRelPath is relative like "nl/nl/nieuws" —
-      // prepend /content/abbvie-com2/ so transformPath() can map it correctly)
-      const rawPath = '/content/abbvie-com2/' + parentRelPath + '/' + categoryName;
-      props.page = transformPath(rawPath);
-    }
+    // Extract category name — empty string when no tag (matches AEM's orElse(""))
+    const categoryName = categoryTag
+      ? categoryTag.replace('abbvie-com-2:categories/', '').split('/')[0]
+      : '';
+    // Parent path: strip last segment from current page rel path
+    const pathParts = (_ctxRel || '').replace(/^\/+|\/+$/g, '').split('/');
+    const parentRelPath = pathParts.slice(0, -1).join('/');
+    // Build the content path (parentRelPath is relative like "nl/nl/nieuws" —
+    // prepend /content/abbvie-com2/ so transformPath() can map it correctly).
+    // Matches AEM: currentPage.getParent().getPath() + "/" + categoryTag.getName()
+    // Strip any trailing slash (produced when categoryName is empty).
+    const rawPath = ('/content/abbvie-com2/' + parentRelPath + '/' + categoryName).replace(/\/+$/, '');
+    props.page = transformPath(rawPath);
   }
 
   // Video: overlay the content ON the poster (content-default is "bottom" = below the block),
@@ -2642,7 +2644,8 @@ function emitNode(node, sections) {
     // UNLESS the container also has no-padding (styleId 1653545835982) authored, in which case
     // width is still stripped but NO padding signal is set on the blocks.
     const NO_PADDING_STYLE_ID = '1653545835982';
-    if (!isHero && containerBlockWidth(node, '') !== '') {
+    const _cw = containerBlockWidth(node, '');
+    if (!isHero && _cw !== '') {
       const WIDTH_STRIP_RE = /^(?:width|video)-(?:x{0,3}-)?(?:small|large|medium)$/;
       const sectionHasNoPadding = hasStyleId(node, NO_PADDING_STYLE_ID);
       for (const b of blocks) {
@@ -3409,13 +3412,17 @@ function splitQuoteSections(sections) {
 // Post-processing: for every regular section that has blocks with an inherited container width
 // (_hasInheritedWidth), add section-padding to the first such block and section-padding +
 // no-top-padding to all subsequent ones. Non-width-inherited blocks are untouched.
+// Block types that must NEVER receive section-padding from the inherited-width padding hoist.
+// custom-image has its own size vocabulary; cta is a standalone action element.
+// Neither carries section-padding in any hand-corrected EDS twin.
+const SECTION_PAD_EXCL = new Set(['custom-image', 'cta']);
 function applySectionBlockPadding(sections) {
   for (const sec of sections || []) {
     if (sec.type !== 'section') continue;
-    const widthBlocks = (sec.blocks || []).filter(b => b._hasInheritedWidth);
+    const widthBlocks = (sec.blocks || []).filter(b => b._hasInheritedWidth && !SECTION_PAD_EXCL.has(b.type));
     if (!widthBlocks.length) continue;
     for (const block of sec.blocks) {
-      if (!block._hasInheritedWidth) continue;
+      if (!block._hasInheritedWidth || SECTION_PAD_EXCL.has(block.type)) continue;
       if (!block.props) block.props = {};
       const classes = String(block.props.classes_customDynamicClass || '')
         .split(',').map(c => c.trim()).filter(Boolean);
