@@ -967,7 +967,7 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   const outCls = [...nonBody, ...(topBody ? [topBody[0]] : [])];
   if (outCls.length) props.classes_commonCustomClass = outCls.join(',');
 
- // Convert <b> / </b> tags to <strong> / </strong> for semantic HTML across ALL block types.
+  // Convert <b> / </b> tags to <strong> / </strong> for semantic HTML across ALL block types.
   // AEM richtext editors frequently emit <b> for bold text; EDS expects <strong>.
   // Applied universally here so every component (title, text, quote, teaser, accordion, etc.) is covered.
   const convertBtoStrong = obj => {
@@ -990,7 +990,7 @@ function mapLeaf(node, inheritedBlockWidth = '') {
     const topAlign = Object.entries(alignFreq).sort((a, b) => b[1] - a[1])[0];
     if (topAlign) {
       const cls = new Set(String(props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean));
-      if (![...cls].some(c => /^(?:align-|text-align-)/.test(c))) cls.add('text-align-' + topAlign[0]);
+      if (![...cls].some(c => /^align-/.test(c))) cls.add('align-' + topAlign[0]);
       props.classes_customDynamicClass = [...cls].join(',');
     }
   }
@@ -1010,8 +1010,9 @@ function mapLeaf(node, inheritedBlockWidth = '') {
           ip[mapping.childPropRenames[bk]] = transformPath(cv, pathMap);
         }
       }
- // Apply <b>→<strong> on child item props (e.g. accordion-item text)
-      convertBtoStrong(ip);      items.push({ type: mapping.childType, props: ip, children: [] });
+      // Apply <b>→<strong> on child item props (e.g. accordion-item text)
+      convertBtoStrong(ip);
+      items.push({ type: mapping.childType, props: ip, children: [] });
     }
     // NOTE: a dynamic linklist (listFrom=children) legitimately has no static items —
     // EDS renders it from parentPage/linkSource at request time, so we keep the config
@@ -1652,21 +1653,6 @@ function addCommonClass(block, cls) {
   block.props.classes_commonCustomClass = [...set].join(',');
 }
 
-// For col-N / ncol-N inner-grid column assignments: CTA blocks keep all their
-// dynamic classes in classes_customDynamicClass (col-N goes there too), while
-// all other block types receive the column class in classes_commonCustomClass.
-function addColClass(block, cls) {
-  if (!block || !cls) return;
-  block.props = block.props || {};
-  if (block.type === 'cta') {
-    const existing = String(block.props.classes_customDynamicClass || '').split(',').map(s => s.trim()).filter(Boolean);
-    if (!existing.includes(cls)) existing.push(cls);
-    block.props.classes_customDynamicClass = existing.join(',');
-  } else {
-    addCommonClass(block, cls);
-  }
-}
-
 // EDS inner-grid is a controller block followed by its sibling content blocks.
 // The child blocks are assigned to columns with `col-N`; unlike a grid-section,
 // the inner-grid itself does not own the children in JCR. This preserves the
@@ -1699,7 +1685,7 @@ function emitInnerGrid(grid, out, depth = 0) {
       const columnClass = `${depth === 0 ? 'col' : 'ncol'}-${c}`;
       cellBlocks.forEach(block => {
         if (block._innerManaged) return;
-        addColClass(block, columnClass);
+        addCommonClass(block, columnClass);
         markInnerManaged(block);
       });
       temp.push(...cellBlocks);
@@ -1927,17 +1913,9 @@ function expandGrid(grid, blocks, sourceScopes = [], relatedContent = false) {
       Object.defineProperty(gs, '_sourceScopes', { value: sourceScopes, enumerable: false });
       if (par && typeof par === 'object') collectCellLeaves(par, gs.children, 0, containerWidth);
       if (relatedContent) applyRelatedContentCardProps(gs.children);
-      // sidePanel variant: story-cards in a GENUINE narrow sidebar column (grid-cols ≤ 3)
-      // AND the grid has at least one wider column (i.e. it's not a uniform 4-up card grid).
-      // Without the wider-column guard, a 4×grid-cols-3 layout would incorrectly get sidePanel.
-      const colWidthInt = parseInt(col.width || '0');
-      const hasWiderCol = cols.some(oc => parseInt(oc.width || '0') > colWidthInt);
-      // Any grid-section whose grid has card components (cardpagestory/storyinfo) is a
-      // Related Content band — always apply relatedContent variant on those story-cards.
-      // This covers both the Rule 9 (custom-title before grid) and the plain card grid case.
-      if (!relatedContent && gridHasCards(grid)) applyRelatedContentCardProps(gs.children);
-      // sidePanel: genuine narrow sidebar (col ≤3 with wider sibling col), but NOT card grids
-      else if (!relatedContent && colWidthInt <= 3 && hasWiderCol) applySidePanelCardProps(gs.children);
+      // sidePanel variant: story-cards in narrow sidebar columns (grid-cols ≤ 3)
+      // use 'sidePanel' instead of the default 'cardInfo'.
+      if (!relatedContent && parseInt(col.width || '0') <= 3) applySidePanelCardProps(gs.children);
       // Strip width-* / video-* classes from all grid-section blocks EXCEPT custom-image and accordion.
       // Width classes on image and accordion are meaningful (image size variants, accordion width).
       // On title, text, cta, eyebrow, teaser, separator etc. the width class is redundant —
@@ -2447,27 +2425,6 @@ function emitNode(node, sections) {
           const combinedCls = [...new Set([...outerStyleClasses, ...nestedCls, nestedBg].filter(Boolean))];
           const hasBg = !!(nestedBg || outerBg);
           const nestedGrids = directGrids(child);
-          // ── Width-style container + direct grid → section + inner-grid ──
-          // e.g. container_copy_copy_ (container-x-large + no-bottom-margin) wrapping a card grid:
-          // → section { style_customDynamicClass: derived classes }
-          //     inner-grid { cols-4-4-4 } + col-N blocks
-          if (containerHasWidthStyle(child) && nestedGrids.length) {
-            const igSecCls = mergeDefaults('section', combinedCls.filter(c => !NOOP_CLASS.has(c) && c !== 'no-padding' && c !== 'container-full-width'), hasBg);
-            const igBlocks = [];
-            // Emit any direct leaf siblings of the grid first
-            (function collectWidthContainerLeaves(n) {
-              for (const [, lchild] of childEntries(n)) {
-                const lrt = RT(lchild);
-                if (!lrt || isLayoutWrapper(lrt)) { collectWidthContainerLeaves(lchild); continue; }
-                if (isGrid(lrt) || isXF(lrt)) continue;
-                if (isContainer(lrt)) continue;
-                igBlocks.push(...mapLeafExpanded(lchild));
-              }
-            })(child);
-            for (const grid of nestedGrids) emitInnerGrid(grid, igBlocks, 0);
-            if (igBlocks.length) sections.push({ type: 'section', props: { style_customDynamicClass: igSecCls.join(',') }, blocks: igBlocks });
-            continue;
-          }
           if (nestedGrids.length) {
             // Collect any direct leaf components (title, text, etc.) that sit alongside
             // the grid inside this nested container and emit them as their own section
@@ -3122,62 +3079,7 @@ function aemToCanvas(jcrContent, opts) {
         // Pass mixedSplit flag so grids from a mixed-header overlap emit as grid-containers
         // (not inner-grids). group.split is true for both standard and mixed-header cases;
         // the mixedSplit flag distinguishes which grid emission path to use.
-        if (group.mixedSplit) {
-          // Mixed-header continuation: grids live inside the overlap container alongside
-          // breadcrumb+H1. In EDS these emit as inner-grid blocks appended to the hero
-          // section (not as new top-level grid-container sections). This matches the
-          // corrected authoring pattern where inner-grid + col-N blocks are siblings
-          // inside the same section as the hero content.
-          //
-          // Rule: if a body node is a container with a width style AND contains grids,
-          // emit each grid as inner-grid with the container's width class prepended.
-          // e.g. container3 { container-x-large + grid(cols-4-4-4) }
-          //   → inner-grid { cols-4-4-4, content-x-large }
-          const heroSection = sections[sections.length - 1];
-          for (const bodyNode of group.nodes) {
-            const brt = RT(bodyNode);
-            if (isGrid(brt)) {
-              emitInnerGrid(bodyNode, heroSection.blocks, 0);
-            } else if (isContainer(brt)) {
-              if (containerHasWidthStyle(bodyNode) && containerHasDirectGrid(bodyNode)) {
-                // Container with width style + grid(s) inside → emit grids as inner-grids
-                // with the container's width class added to each inner-grid controller.
-                const containerWidth = layoutStyleClasses(bodyNode);
-                (function emitWidthContainerGrids(n) {
-                  for (const [, child] of childEntries(n)) {
-                    const crt = RT(child);
-                    if (isGrid(crt)) {
-                      // Emit the inner-grid into a temp buffer, then prepend width class
-                      const temp = [];
-                      emitInnerGrid(child, temp, 0);
-                      // temp[0] is the inner-grid controller — prepend container width class
-                      if (temp.length && temp[0].type === 'inner-grid' && containerWidth) {
-                        const existing = String(temp[0].props.classes_customDynamicClass || '');
-                        const merged = [containerWidth, ...splitCls([existing]).filter(c => c !== containerWidth)].join(',');
-                        temp[0].props.classes_customDynamicClass = merged;
-                      }
-                      heroSection.blocks.push(...temp);
-                    } else if (!crt || isLayoutWrapper(crt)) {
-                      emitWidthContainerGrids(child);
-                    } else if (isContainer(crt)) {
-                      // nested container — recurse
-                      emitWidthContainerGrids(child);
-                    } else if (!isXF(crt)) {
-                      // non-grid leaf inside the width container
-                      heroSection.blocks.push(...mapLeafExpanded(child, ''));
-                    }
-                  }
-                })(bodyNode);
-              } else {
-                collectLeaves(bodyNode, heroSection.blocks, '', false);
-              }
-            } else if (!isXF(brt)) {
-              heroSection.blocks.push(...mapLeafExpanded(bodyNode, ''));
-            }
-          }
-          continue;
-        }
-        if (group.split) { emitHeroContinuationSections(group.nodes, group.wrapper, sections, false); continue; }
+        if (group.split) { emitHeroContinuationSections(group.nodes, group.wrapper, sections, !!group.mixedSplit); continue; }
         // _flatBlocks: the group nodes are already-mapped EDS blocks (body-only blocks split
         // off from the hero absorption fallback). Emit them directly as their own section
         // with the overlap container's styles, rather than trying to re-walk them as AEM nodes.
@@ -3252,7 +3154,7 @@ function stripWidthFromBlock(block) {
     }
     if (block.props.classes_commonCustomClass) {
       const cleaned = String(block.props.classes_commonCustomClass)
-        .split(/[\s,]+/).map(s => s.trim()).filter(c => c && !WIDTH_GLOBAL_STRIP_RE.test(c)).join(',');
+        .split(/[\s,]+/).map(s => s.trim()).filter(c => c && !WIDTH_GLOBAL_STRIP_RE.test(c)).join(' ');
       if (cleaned) block.props.classes_commonCustomClass = cleaned;
       else delete block.props.classes_commonCustomClass;
     }
