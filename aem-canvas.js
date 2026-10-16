@@ -620,10 +620,10 @@ function mapLeaf(node, inheritedBlockWidth = '') {
   }
 
   // cardpagestory: a manually authored story card pointing at a specific page.
-  // The AEM component has no variant prop — EDS model default is 'cardInfo'.
-  // Set it explicitly so the JCR output is unambiguous and does not rely on model defaults.
+  // Default EDS variant is 'sidePanel' (compact layout). Only relatedContent and
+  // storyCardInfo are set by post-processing when a non-sidePanel context is detected.
   if (rt === 'abbvie-com2/components/cardpagestory/v1/cardpagestory') {
-    props.storyCardVariant = 'cardInfo';
+    props.storyCardVariant = 'sidePanel';
   }
 
   // StoryInfo: self-referential story-card that displays metadata about the current page.
@@ -1319,14 +1319,20 @@ function mergeDefaults(kind, derived, hasBg = false) {
     if (has.has(d) || (isWidthCls(d) && hasW) || (EXCL_RADIUS.has(d) && hasR)) continue;
     out.push(d); has.add(d);
   } };
-  // No background → skip padding defaults; add no-bottom-margin instead.
+  // No background → skip padding defaults; add margin default instead.
   // Background present → apply padding defaults as usual.
+  // grid-container (no bg): default to section-bottom-margin (space below the grid band).
+  // section (no bg): default to no-bottom-margin (sections sit flush against the next band).
   const always = STYLE_DEFAULTS_ALWAYS[kind] || [];
   if (hasBg) {
     add(always);
   } else {
     add(always.filter(c => !/padding/.test(c)));  // skip section-padding / regular-padding
-    if (!has.has('no-bottom-margin')) { out.push('no-bottom-margin'); has.add('no-bottom-margin'); }
+    const MARGIN_CLS = new Set(['no-bottom-margin', 'section-bottom-margin']);
+    if (!deduped.some(c => MARGIN_CLS.has(c))) {
+      const defaultMargin = kind === 'grid-container' ? 'section-bottom-margin' : 'no-bottom-margin';
+      out.push(defaultMargin); has.add(defaultMargin);
+    }
   }
   if (!deduped.length) add(STYLE_DEFAULTS_FALLBACK[kind] || []);   // nothing inferred from AEM → backfill
   return out;
